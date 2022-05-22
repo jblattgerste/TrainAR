@@ -83,7 +83,10 @@
   
   <h1 id="Interaction_AudioController" data-uid="Interaction.AudioController" class="text-break">Class AudioController
   </h1>
-  <div class="markdown level0 summary"><p>Handles the object specific interaction sounds.</p>
+  <div class="markdown level0 summary"><p>The AudioController is a behaviour automatically attached to a TrainAR Object on conversion. It triggers
+its sounds for selection, deselection, grabbing, releasing and correct/incorrect interactions/combinations
+specific to this object.</p>
+<p>When attached, it holds default sounds. Those can be replaced in the Unity Editor Inspector.</p>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
@@ -101,13 +104,14 @@
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/Vapopo/TrainAR/new/main/apiSpec/new?filename=Interaction_AudioController_CombineSound.md&amp;value=---%0Auid%3A%20Interaction.AudioController.CombineSound%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/jblattgerste/TrainAR/new/main/apiSpec/new?filename=Interaction_AudioController_CombineSound.md&amp;value=---%0Auid%3A%20Interaction.AudioController.CombineSound%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Vapopo/TrainAR/blob/main/Assets/Scripts/Interaction/AudioController.cs/#L45">View Source</a>
+    <a href="https://github.com/jblattgerste/TrainAR/blob/main/Assets/Scripts/Interaction/AudioController.cs/#L54">View Source</a>
   </span>
   <h4 id="Interaction_AudioController_CombineSound" data-uid="Interaction.AudioController.CombineSound">CombineSound</h4>
-  <div class="markdown level1 summary"><p>The audioclip that is played when a TrainAR Object is combined with.</p>
+  <div class="markdown level1 summary"><p>The audioclip that is played when a TrainAR Object is combined with.
+This only plays when the statemachine accepts the statechange.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -132,10 +136,10 @@
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/Vapopo/TrainAR/new/main/apiSpec/new?filename=Interaction_AudioController_DeselectSound.md&amp;value=---%0Auid%3A%20Interaction.AudioController.DeselectSound%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/jblattgerste/TrainAR/new/main/apiSpec/new?filename=Interaction_AudioController_DeselectSound.md&amp;value=---%0Auid%3A%20Interaction.AudioController.DeselectSound%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Vapopo/TrainAR/blob/main/Assets/Scripts/Interaction/AudioController.cs/#L21">View Source</a>
+    <a href="https://github.com/jblattgerste/TrainAR/blob/main/Assets/Scripts/Interaction/AudioController.cs/#L28">View Source</a>
   </span>
   <h4 id="Interaction_AudioController_DeselectSound" data-uid="Interaction.AudioController.DeselectSound">DeselectSound</h4>
   <div class="markdown level1 summary"><p>The audioclip that is played when a TrainAR Object is deselected.</p>
@@ -163,13 +167,13 @@
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/Vapopo/TrainAR/new/main/apiSpec/new?filename=Interaction_AudioController_ErrorSound.md&amp;value=---%0Auid%3A%20Interaction.AudioController.ErrorSound%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/jblattgerste/TrainAR/new/main/apiSpec/new?filename=Interaction_AudioController_ErrorSound.md&amp;value=---%0Auid%3A%20Interaction.AudioController.ErrorSound%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Vapopo/TrainAR/blob/main/Assets/Scripts/Interaction/AudioController.cs/#L51">View Source</a>
+    <a href="https://github.com/jblattgerste/TrainAR/blob/main/Assets/Scripts/Interaction/AudioController.cs/#L60">View Source</a>
   </span>
   <h4 id="Interaction_AudioController_ErrorSound" data-uid="Interaction.AudioController.ErrorSound">ErrorSound</h4>
-  <div class="markdown level1 summary"><p>The audioclip that is played when a interaction was false.</p>
+  <div class="markdown level1 summary"><p>The audioclip that is played when a requested interaction with this object was denied by the statemachine.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -194,10 +198,10 @@
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/Vapopo/TrainAR/new/main/apiSpec/new?filename=Interaction_AudioController_GrabSound.md&amp;value=---%0Auid%3A%20Interaction.AudioController.GrabSound%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/jblattgerste/TrainAR/new/main/apiSpec/new?filename=Interaction_AudioController_GrabSound.md&amp;value=---%0Auid%3A%20Interaction.AudioController.GrabSound%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Vapopo/TrainAR/blob/main/Assets/Scripts/Interaction/AudioController.cs/#L27">View Source</a>
+    <a href="https://github.com/jblattgerste/TrainAR/blob/main/Assets/Scripts/Interaction/AudioController.cs/#L34">View Source</a>
   </span>
   <h4 id="Interaction_AudioController_GrabSound" data-uid="Interaction.AudioController.GrabSound">GrabSound</h4>
   <div class="markdown level1 summary"><p>The audioclip that is played when a TrainAR Object is grabbed.</p>
@@ -225,13 +229,14 @@
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/Vapopo/TrainAR/new/main/apiSpec/new?filename=Interaction_AudioController_InteractSound.md&amp;value=---%0Auid%3A%20Interaction.AudioController.InteractSound%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/jblattgerste/TrainAR/new/main/apiSpec/new?filename=Interaction_AudioController_InteractSound.md&amp;value=---%0Auid%3A%20Interaction.AudioController.InteractSound%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Vapopo/TrainAR/blob/main/Assets/Scripts/Interaction/AudioController.cs/#L39">View Source</a>
+    <a href="https://github.com/jblattgerste/TrainAR/blob/main/Assets/Scripts/Interaction/AudioController.cs/#L47">View Source</a>
   </span>
   <h4 id="Interaction_AudioController_InteractSound" data-uid="Interaction.AudioController.InteractSound">InteractSound</h4>
-  <div class="markdown level1 summary"><p>The audioclip that is played when a TrainAR Object is interacted with.</p>
+  <div class="markdown level1 summary"><p>The audioclip that is played when a TrainAR Object is interacted with.
+This only plays when the statemachine accepts the statechange.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -256,10 +261,10 @@
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/Vapopo/TrainAR/new/main/apiSpec/new?filename=Interaction_AudioController_ReleaseSound.md&amp;value=---%0Auid%3A%20Interaction.AudioController.ReleaseSound%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/jblattgerste/TrainAR/new/main/apiSpec/new?filename=Interaction_AudioController_ReleaseSound.md&amp;value=---%0Auid%3A%20Interaction.AudioController.ReleaseSound%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Vapopo/TrainAR/blob/main/Assets/Scripts/Interaction/AudioController.cs/#L33">View Source</a>
+    <a href="https://github.com/jblattgerste/TrainAR/blob/main/Assets/Scripts/Interaction/AudioController.cs/#L40">View Source</a>
   </span>
   <h4 id="Interaction_AudioController_ReleaseSound" data-uid="Interaction.AudioController.ReleaseSound">ReleaseSound</h4>
   <div class="markdown level1 summary"><p>The audioclip that is played when a TrainAR Object is released.</p>
@@ -287,10 +292,10 @@
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/Vapopo/TrainAR/new/main/apiSpec/new?filename=Interaction_AudioController_SelectSound.md&amp;value=---%0Auid%3A%20Interaction.AudioController.SelectSound%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/jblattgerste/TrainAR/new/main/apiSpec/new?filename=Interaction_AudioController_SelectSound.md&amp;value=---%0Auid%3A%20Interaction.AudioController.SelectSound%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Vapopo/TrainAR/blob/main/Assets/Scripts/Interaction/AudioController.cs/#L15">View Source</a>
+    <a href="https://github.com/jblattgerste/TrainAR/blob/main/Assets/Scripts/Interaction/AudioController.cs/#L22">View Source</a>
   </span>
   <h4 id="Interaction_AudioController_SelectSound" data-uid="Interaction.AudioController.SelectSound">SelectSound</h4>
   <div class="markdown level1 summary"><p>The audioclip that is played when a TrainAR Object is selected.</p>
@@ -316,24 +321,6 @@
       </tr>
     </tbody>
   </table>
-  <h3 id="methods">Methods
-  </h3>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/Vapopo/TrainAR/new/main/apiSpec/new?filename=Interaction_AudioController_Start.md&amp;value=---%0Auid%3A%20Interaction.AudioController.Start%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Vapopo/TrainAR/blob/main/Assets/Scripts/Interaction/AudioController.cs/#L62">View Source</a>
-  </span>
-  <a id="Interaction_AudioController_Start_" data-uid="Interaction.AudioController.Start*"></a>
-  <h4 id="Interaction_AudioController_Start" data-uid="Interaction.AudioController.Start">Start()</h4>
-  <div class="markdown level1 summary"><p>The AudioController of a TrainAR object adds listener to trainar events to play the specific audioclips.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void Start()</code></pre>
-  </div>
 </article>
           </div>
           
@@ -342,10 +329,10 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/Vapopo/TrainAR/new/main/apiSpec/new?filename=Interaction_AudioController.md&amp;value=---%0Auid%3A%20Interaction.AudioController%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/jblattgerste/TrainAR/new/main/apiSpec/new?filename=Interaction_AudioController.md&amp;value=---%0Auid%3A%20Interaction.AudioController%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/Vapopo/TrainAR/blob/main/Assets/Scripts/Interaction/AudioController.cs/#L8" class="contribution-link">View Source</a>
+                    <a href="https://github.com/jblattgerste/TrainAR/blob/main/Assets/Scripts/Interaction/AudioController.cs/#L15" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

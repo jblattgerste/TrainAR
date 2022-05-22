@@ -90,40 +90,44 @@
       <h4><a class="xref" href="Visual_Scripting.Action.html">Action</a></h4>
       <section><p>Implements the &quot;Interacting&quot;, &quot;Combining&quot; and &quot;Custom&quot; Action functionality of the TrainAR Framework,
 therefore it checks if the  user triggered the &quot;Interact&quot;, &quot;Combine&quot; Buttons or triggered a CustomAction through
-scripts and allows to check this against the stored state in the visual script machine</p>
+scripts and allows to check this against the stored state in the visual statemachine.</p>
 </section>
       <h4><a class="xref" href="Visual_Scripting.ActionFork.html">ActionFork</a></h4>
       <section><p>Implements the &quot;Interacting&quot;, &quot;Combining&quot; and &quot;Custom&quot; Action functionality of the TrainAR Framework,
 therefore it checks if the  user triggered the &quot;Interact&quot;, &quot;Combine&quot; Buttons or triggered a CustomAction through
-scripts and allows to check this against the stored state in the visual script machine</p>
+scripts and allows to check this against the stored state in the visual statemachine.</p>
+<p>This is the fork version of the action node. Therefore there are multiple correct answers and the stateflow enters a fork
+depending on which one is selected.</p>
 </section>
       <h4><a class="xref" href="Visual_Scripting.ActionMulti.html">ActionMulti</a></h4>
       <section><p>Implements the &quot;Interacting&quot;, &quot;Combining&quot; and &quot;Custom&quot; Action functionality of the TrainAR Framework,
 therefore it checks if the  user triggered the &quot;Interact&quot;, &quot;Combine&quot; Buttons or triggered a CustomAction through
-scripts and allows to check this against the stored state in the visual script machine</p>
+scripts and allows to check this against the stored state in the visual statemachine.</p>
+<p>This is the multi version of the action node. Therefore all specified actions in this node have to be completed before advancing.</p>
 </section>
       <h4><a class="xref" href="Visual_Scripting.ActionUI.html">ActionUI</a></h4>
-      <section><p>Implements the &quot;Interacting&quot;, &quot;Combining&quot; and &quot;Custom&quot; Action functionality of the TrainAR Framework,
-therefore it checks if the  user triggered the &quot;Interact&quot;, &quot;Combine&quot; Buttons or triggered a CustomAction through
-scripts and allows to check this against the stored state in the visual script machine</p>
+      <section><p>Implements the UI questionnaire functionality of TrainAR, therefore it triggers and checks against UI questions like
+text input fields, questionnaires, and question lists.</p>
 </section>
       <h4><a class="xref" href="Visual_Scripting.Conclusion.html">Conclusion</a></h4>
-      <section><p>Triggers the Completion overlay of the scenario and ends the stategraph.</p>
+      <section><p>Triggers the Completion overlay that shows the training assessment of the scenario and ends the stateflow/training.</p>
 </section>
       <h4><a class="xref" href="Visual_Scripting.Feedback.html">Feedback</a></h4>
       <section><p>Implements the &quot;Feedback&quot; functionality of the TrainAR Framework, therefore it triggers
 the error overlay modality to show feedback (e.g. for an incorrect important action).</p>
 </section>
       <h4><a class="xref" href="Visual_Scripting.Insights.html">Insights</a></h4>
-      <section><p>Implements the &quot;Insights&quot; functionality of the TrainAR Framework, therefore it triggers.
-the expert input modality to show additional insights</p>
+      <section><p>Implements the &quot;Insights&quot; functionality of the TrainAR Framework, therefore it triggers
+the expert input modality to show additional insights and tips and optionally plays audio clips.</p>
 </section>
       <h4><a class="xref" href="Visual_Scripting.Instructions.html">Instructions</a></h4>
-      <section><p>Implements the &quot;Feedback&quot; functionality of the TrainAR Framework, therefore it updates.
-the Top panel.</p>
+      <section><p>Implements the &quot;Instruction&quot; functionality of the TrainAR Framework, therefore it updates the isntrutions and progress percentage of the Top panel.</p>
+</section>
+      <h4><a class="xref" href="Visual_Scripting.ObjectHelper.html">ObjectHelper</a></h4>
+      <section><p>The Object helper provides utility methods to toggle visibility, grabbability, interactability, and combinability of TrainAR objects, to destroy them, to get GameObject references to TrainAR object in the stateflow and many other utility functions.</p>
 </section>
       <h4><a class="xref" href="Visual_Scripting.OnboardingSetup.html">OnboardingSetup</a></h4>
-      <section><p>Adds the EventHook for the onboarding setup.</p>
+      <section><p>Adds an EventHook for the onboarding setup that is used to trigger the start of the visual scripting stateflow after the onboarding was completed.</p>
 </section>
       <h4><a class="xref" href="Visual_Scripting.VisualScriptingEventNames.html">VisualScriptingEventNames</a></h4>
       <section><p>Registering a string name for your custom event to hook it to an event. You can save this class in a separated file and add multiple events to it as public static strings.</p>
@@ -131,13 +135,20 @@ the Top panel.</p>
     <h3 id="enums">Enums
   </h3>
       <h4><a class="xref" href="Visual_Scripting.Action.TrainARActionChoices.html">Action.TrainARActionChoices</a></h4>
-      <section></section>
+      <section><p>The type of interaction to check against.</p>
+</section>
       <h4><a class="xref" href="Visual_Scripting.ActionFork.TrainARActionChoices.html">ActionFork.TrainARActionChoices</a></h4>
-      <section></section>
+      <section><p>The type of interaction to check against.</p>
+</section>
       <h4><a class="xref" href="Visual_Scripting.ActionMulti.TrainARActionChoices.html">ActionMulti.TrainARActionChoices</a></h4>
-      <section></section>
+      <section><p>The type of interaction to check against.</p>
+</section>
       <h4><a class="xref" href="Visual_Scripting.ActionUI.TrainARUIActionChoices.html">ActionUI.TrainARUIActionChoices</a></h4>
-      <section></section>
+      <section><p>The type of UI questionnaire triggered and check against.</p>
+</section>
+      <h4><a class="xref" href="Visual_Scripting.ObjectHelper.TrainARHelperChoices.html">ObjectHelper.TrainARHelperChoices</a></h4>
+      <section><p>The available helper utility to select on the &quot;TrainAR: Object Helper&quot; nodes menu.</p>
+</section>
 </article>
           </div>
           

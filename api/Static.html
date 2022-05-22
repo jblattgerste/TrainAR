@@ -90,22 +90,27 @@
       <h4><a class="xref" href="Static.CustomAction.html">CustomAction</a></h4>
       <section><p>Custom actions are actions triggered by events outside of Interacting or combining (e.g. UI quizes) and can send parameters
 that are then checked against the statemachine.</p>
+<p>This class is also what authors can use to trigger actions beyond the scope of TrainAR and can be handled by the statemachine
+by using the Action Node and the &quot;Custom Action&quot; type.</p>
+<p>CustomAction can either be triggered form the instantiated or static context.</p>
 </section>
       <h4><a class="xref" href="Static.StatemachineConnector.html">StatemachineConnector</a></h4>
-      <section><p>The StatemachineConnector connects the visual scripting with the gamelogic.</p>
+      <section><p>The StatemachineConnector connects interaction inputs with the visual scripting flow and outputs 
+with the instruction, error and insight controller through events. It therefore functions as a funnel
+between the Visual Statemachine and the rest of the logic.</p>
 <p>Either the visual statemachien decides whether actions are correct or wrong (default) or the connection
 can also be commented out and the decisions on wrong/correct actions can be made manually in the
-RequestStateChange method.</p>
+RequestStateChange method by using C# programming.</p>
 </section>
     <h3 id="structs">Structs
   </h3>
       <h4><a class="xref" href="Static.StateInformation.html">StateInformation</a></h4>
-      <section><p>The information stored for ever state that is registered</p>
+      <section><p>The StateInformation is a struct created for state change requests. It holds the information of the request to the statemachine.</p>
 </section>
     <h3 id="enums">Enums
   </h3>
       <h4><a class="xref" href="Static.InteractionType.html">InteractionType</a></h4>
-      <section><p>The Interaction type that was used with a state change.</p>
+      <section><p>The type of interaction that is used in a StateInformation struct through a state change request.</p>
 </section>
 </article>
           </div>

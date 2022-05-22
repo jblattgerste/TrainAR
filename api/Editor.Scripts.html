@@ -88,15 +88,17 @@
     <h3 id="classes">Classes
   </h3>
       <h4><a class="xref" href="Editor.Scripts.ConvertToTrainARObject.html">ConvertToTrainARObject</a></h4>
-      <section><p>ConvertARInteractable is an Editor script that adds a context menu to GameObjects in the hierarchy named
-&quot;Convert to TrainAR Object&quot; when the object is eligible (therefore has a transform, MeshFilter and MeshRenderer).</p>
+      <section><p>ConvertARInteractable is an Editor script that adds a right-click context menu to GameObjects in the hierarchy named
+&quot;Convert to TrainAR Object&quot;. When the object is eligible (therefore has a transform, MeshFilter and MeshRenderer), this can
+be used to convert GameObjects to TrainAR Objects, where behaviours (e.g. TrainAR Object) are automatically added and the mesh
+is combined an simplyfied.</p>
 </section>
       <h4><a class="xref" href="Editor.Scripts.EditorTrainARObjectToolbar.html">EditorTrainARObjectToolbar</a></h4>
-      <section><p>The EditorTrainARObjectToolbar is the toolbar in the sceneview that allows setting inspector options like
-without active/inactive, grabbable, interactable, combinable without opening an inspector.</p>
+      <section><p>The EditorTrainARObjectToolbar is the toolbar in the sceneview when using the TrainAR authoring overlay. It allows
+setting TrainAR Object states like active/inactive, grabbable, interactable, or combinable without opening an inspector.</p>
 </section>
       <h4><a class="xref" href="Editor.Scripts.MeshCombinerEditor.html">MeshCombinerEditor</a></h4>
-      <section><p>The MeshCombinerEditor script adds an inspector GUI to combine multiple meshes into a single mesh and saves this at a desired location.</p>
+      <section><p>The MeshCombinerEditor is a utility class that helps to combine meshes. It is called by the ConvertToTrainARObject class.</p>
 </section>
       <h4><a class="xref" href="Editor.Scripts.OpenAuthoringToolOnLoad.html">OpenAuthoringToolOnLoad</a></h4>
       <section><p>Every time the editor is started, trigger switching to the TrainAR authoring tool.</p>
@@ -104,16 +106,17 @@ without active/inactive, grabbable, interactable, combinable without opening an 
       <h4><a class="xref" href="Editor.Scripts.PlayModeButtonOverride.html">PlayModeButtonOverride</a></h4>
       <section><p>The PlayModeButtonOverride editor script implements utility for the unity editor play buttons that overrides
 its functionality with TrainAR specific functionality to either switch the build target if there is an
-unsupported one currently selected or allow building through it.</p>
+unsupported one currently selected or allow building to a device by clicking the play button.</p>
 <p>This is done for convenience of building and also to prevent the playmode execution, as this is
-currently is not supported by the framework anyway.</p>
+currently not supported by the framework.</p>
 </section>
       <h4><a class="xref" href="Editor.Scripts.StateRequestSimulatorEditor.html">StateRequestSimulatorEditor</a></h4>
-      <section><p>Add the GUI to the inspector to simulate stateRequests to test the statemachine in the editor.</p>
+      <section><p>Adds the GUI to the inspector to simulate stateRequests to test the statemachine in the editor.
+This is an Unity Editor Utility Class for the &quot;StateRequestSimulator&quot; class.</p>
 </section>
       <h4><a class="xref" href="Editor.Scripts.TrainAREditorMenu.html">TrainAREditorMenu</a></h4>
-      <section><p>The TrainAREditorMenu adds a top menu for trainAR specific funtionallity like building, switching plattform or
-switching the mode (layout) of the editor.</p>
+      <section><p>The TrainAREditorMenu adds a top menu with options called &quot;TrainAR&quot; for trainAR specific funtionallity like
+building, switching plattform, switching the mode (TrainAR/Unity Editor), and other options.</p>
 </section>
 </article>
           </div>

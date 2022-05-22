@@ -88,50 +88,65 @@
     <h3 id="classes">Classes
   </h3>
       <h4><a class="xref" href="Interaction.AudioController.html">AudioController</a></h4>
-      <section><p>Handles the object specific interaction sounds.</p>
+      <section><p>The AudioController is a behaviour automatically attached to a TrainAR Object on conversion. It triggers
+its sounds for selection, deselection, grabbing, releasing and correct/incorrect interactions/combinations
+specific to this object.</p>
+<p>When attached, it holds default sounds. Those can be replaced in the Unity Editor Inspector.</p>
 </section>
       <h4><a class="xref" href="Interaction.CollisionController.html">CollisionController</a></h4>
-      <section><p>Detects and handles collisions used for combining GameObjects.</p>
+      <section><p>Detects and handles collisions of TrainAR Objects. This is e.g. used for combining GameObjects and
+visualizing interseted states through outlining and shading.</p>
 </section>
       <h4><a class="xref" href="Interaction.CrosshairController.html">CrosshairController</a></h4>
-      <section><p>The CrosshairController activates/deactivates the crosshair which is positioned in the middle of the screen.</p>
+      <section><p>The CrosshairController activates/deactivates the crosshair which is positioned in the middle of the screen.
+This can e.g. happen when an object is grabbed or an overlay is active.</p>
 </section>
       <h4><a class="xref" href="Interaction.InteractionController.html">InteractionController</a></h4>
       <section><p>Handles the interactions, i.e. grabbing, releasing, interacting and combining of the TrainARObjects.</p>
 </section>
       <h4><a class="xref" href="Interaction.MaterialController.html">MaterialController</a></h4>
-      <section><p>Handles material related functionality for one TrainAR object.</p>
+      <section><p>Handles material related functionality for TrainAR objects.</p>
 </section>
       <h4><a class="xref" href="Interaction.ObjectLerpingController.html">ObjectLerpingController</a></h4>
-      <section><p>Handles the lerping towards the camera when an object is grabbed.</p>
+      <section><p>When TrainAR objects are grabbed, they lerp towards to correct position attached to the camera instead of appearing there. 
+The ObjectLerpingController handles the lerping towards the camera when the object is grabbed.</p>
 </section>
       <h4><a class="xref" href="Interaction.Outline.html">Outline</a></h4>
-      <section></section>
+      <section><p>The Outline script is automatically attached to TrainAR objects on conversion and handles the outlining
+for e.g. selection, success or failure. It is called and handled by the MaterialController.</p>
+</section>
       <h4><a class="xref" href="Interaction.ResetLostObjectController.html">ResetLostObjectController</a></h4>
-      <section><p>Component that resets the TrainAR object back to the original spawn point when its to far away.</p>
+      <section><p>The ResetLostObjectController resets TrainAR objects back to the original spawn point when they are released
+too far away of the assembly. This is to prevent objects from falling through the infinityPlane or disapearing
+when release while the training assembly has tracking problems and &quot;flaots&quot; away.</p>
 </section>
       <h4><a class="xref" href="Interaction.RigidbodyController.html">RigidbodyController</a></h4>
-      <section><p>The RigidbodyController handles the activation and deactivation of physics.</p>
+      <section><p>The RigidbodyController is attached to TrainAR object on conversion. It handles the activation and
+deactivation of physics, as we do want TrainAR objects to elicit physics when released but not when
+stationary as this could e.g. cause users to &quot;knock over&quot; the assembly with grabbed objects.</p>
 </section>
       <h4><a class="xref" href="Interaction.TrainARObject.html">TrainARObject</a></h4>
-      <section><p>The main class for a TrainAR object.
+      <section><p>The main behaviour script for a TrainAR object.
+This is automatically added when converting GameObject to TrainAR objects
 After adding this script all following RequiredComponents are added.
 SelectionBase, MeshCollider, BoxCollider, RigidbodyController,
 MaterialController, AudioController, Rigidbody, Outline,
-CollisionController, AudioSource.
-The TrainAR events are also defined in this script.</p>
+CollisionController.
+The TrainAR events that are triggered on actions are also defined in this script.</p>
 </section>
       <h4><a class="xref" href="Interaction.TrainARObject.CustomUnityEvent.html">TrainARObject.CustomUnityEvent</a></h4>
-      <section></section>
+      <section><p>The CustomUnityEvent that is used for the OnCombination event. This Event also passes a string with
+its invocation indicating the other to be combined with TrainAR objects name.</p>
+</section>
     <h3 id="structs">Structs
   </h3>
       <h4><a class="xref" href="Interaction.CollisionController.Intersection.html">CollisionController.Intersection</a></h4>
-      <section><p>Holds references for intersections.</p>
+      <section><p>The struct that holds references of intersections.</p>
 </section>
     <h3 id="enums">Enums
   </h3>
       <h4><a class="xref" href="Interaction.Outline.Mode.html">Outline.Mode</a></h4>
-      <section><p>Different types for the outlines.</p>
+      <section><p>Differentiates the type of the outlines used.</p>
 </section>
 </article>
           </div>

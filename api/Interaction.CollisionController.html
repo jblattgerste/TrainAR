@@ -83,7 +83,8 @@
   
   <h1 id="Interaction_CollisionController" data-uid="Interaction.CollisionController" class="text-break">Class CollisionController
   </h1>
-  <div class="markdown level0 summary"><p>Detects and handles collisions used for combining GameObjects.</p>
+  <div class="markdown level0 summary"><p>Detects and handles collisions of TrainAR Objects. This is e.g. used for combining GameObjects and
+visualizing interseted states through outlining and shading.</p>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
@@ -101,13 +102,13 @@
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/Vapopo/TrainAR/new/main/apiSpec/new?filename=Interaction_CollisionController_boxCollider.md&amp;value=---%0Auid%3A%20Interaction.CollisionController.boxCollider%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/jblattgerste/TrainAR/new/main/apiSpec/new?filename=Interaction_CollisionController_boxCollider.md&amp;value=---%0Auid%3A%20Interaction.CollisionController.boxCollider%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Vapopo/TrainAR/blob/main/Assets/Scripts/Interaction/CollisionController.cs/#L17">View Source</a>
+    <a href="https://github.com/jblattgerste/TrainAR/blob/main/Assets/Scripts/Interaction/CollisionController.cs/#L17">View Source</a>
   </span>
   <h4 id="Interaction_CollisionController_boxCollider" data-uid="Interaction.CollisionController.boxCollider">boxCollider</h4>
-  <div class="markdown level1 summary"><p>Holds the Boxcollider of the attached Gameobject.</p>
+  <div class="markdown level1 summary"><p>Holds a reference to the BoxCollider of the attached Gameobject.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -132,13 +133,13 @@
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/Vapopo/TrainAR/new/main/apiSpec/new?filename=Interaction_CollisionController_grabbedObject.md&amp;value=---%0Auid%3A%20Interaction.CollisionController.grabbedObject%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/jblattgerste/TrainAR/new/main/apiSpec/new?filename=Interaction_CollisionController_grabbedObject.md&amp;value=---%0Auid%3A%20Interaction.CollisionController.grabbedObject%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Vapopo/TrainAR/blob/main/Assets/Scripts/Interaction/CollisionController.cs/#L24">View Source</a>
+    <a href="https://github.com/jblattgerste/TrainAR/blob/main/Assets/Scripts/Interaction/CollisionController.cs/#L25">View Source</a>
   </span>
   <h4 id="Interaction_CollisionController_grabbedObject" data-uid="Interaction.CollisionController.grabbedObject">grabbedObject</h4>
-  <div class="markdown level1 summary"><p>Holds a reference to the current grabbed TrainAR object.</p>
+  <div class="markdown level1 summary"><p>Holds a reference to the currently grabbed TrainAR object.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -161,24 +162,6 @@
       </tr>
     </tbody>
   </table>
-  <h3 id="methods">Methods
-  </h3>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/Vapopo/TrainAR/new/main/apiSpec/new?filename=Interaction_CollisionController_Awake.md&amp;value=---%0Auid%3A%20Interaction.CollisionController.Awake%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Vapopo/TrainAR/blob/main/Assets/Scripts/Interaction/CollisionController.cs/#L29">View Source</a>
-  </span>
-  <a id="Interaction_CollisionController_Awake_" data-uid="Interaction.CollisionController.Awake*"></a>
-  <h4 id="Interaction_CollisionController_Awake" data-uid="Interaction.CollisionController.Awake">Awake()</h4>
-  <div class="markdown level1 summary"><p>Sets script references to GameObjects on Awake</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void Awake()</code></pre>
-  </div>
 </article>
           </div>
           
@@ -187,10 +170,10 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/Vapopo/TrainAR/new/main/apiSpec/new?filename=Interaction_CollisionController.md&amp;value=---%0Auid%3A%20Interaction.CollisionController%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/jblattgerste/TrainAR/new/main/apiSpec/new?filename=Interaction_CollisionController.md&amp;value=---%0Auid%3A%20Interaction.CollisionController%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/Vapopo/TrainAR/blob/main/Assets/Scripts/Interaction/CollisionController.cs/#L9" class="contribution-link">View Source</a>
+                    <a href="https://github.com/jblattgerste/TrainAR/blob/main/Assets/Scripts/Interaction/CollisionController.cs/#L9" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

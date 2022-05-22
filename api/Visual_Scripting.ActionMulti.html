@@ -85,7 +85,8 @@
   </h1>
   <div class="markdown level0 summary"><p>Implements the &quot;Interacting&quot;, &quot;Combining&quot; and &quot;Custom&quot; Action functionality of the TrainAR Framework,
 therefore it checks if the  user triggered the &quot;Interact&quot;, &quot;Combine&quot; Buttons or triggered a CustomAction through
-scripts and allows to check this against the stored state in the visual script machine</p>
+scripts and allows to check this against the stored state in the visual statemachine.</p>
+<p>This is the multi version of the action node. Therefore all specified actions in this node have to be completed before advancing.</p>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
@@ -103,13 +104,14 @@ scripts and allows to check this against the stored state in the visual script m
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/Vapopo/TrainAR/new/main/apiSpec/new?filename=Visual_Scripting_ActionMulti_actionChoice.md&amp;value=---%0Auid%3A%20Visual_Scripting.ActionMulti.actionChoice%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/jblattgerste/TrainAR/new/main/apiSpec/new?filename=Visual_Scripting_ActionMulti_actionChoice.md&amp;value=---%0Auid%3A%20Visual_Scripting.ActionMulti.actionChoice%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Vapopo/TrainAR/blob/main/Assets/Scripts/Visual Scripting/ActionMulti.cs/#L28">View Source</a>
+    <a href="https://github.com/jblattgerste/TrainAR/blob/main/Assets/Scripts/Visual Scripting/ActionMulti.cs/#L37">View Source</a>
   </span>
   <h4 id="Visual_Scripting_ActionMulti_actionChoice" data-uid="Visual_Scripting.ActionMulti.actionChoice">actionChoice</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>What type of actions are accepted by this node.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -126,19 +128,21 @@ scripts and allows to check this against the stored state in the visual script m
     <tbody>
       <tr>
         <td><a class="xref" href="Visual_Scripting.ActionMulti.TrainARActionChoices.html">ActionMulti.TrainARActionChoices</a></td>
-        <td></td>
+        <td><p>Set in node in the editor. Default is Interaction.</p>
+</td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/Vapopo/TrainAR/new/main/apiSpec/new?filename=Visual_Scripting_ActionMulti_actionCount.md&amp;value=---%0Auid%3A%20Visual_Scripting.ActionMulti.actionCount%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/jblattgerste/TrainAR/new/main/apiSpec/new?filename=Visual_Scripting_ActionMulti_actionCount.md&amp;value=---%0Auid%3A%20Visual_Scripting.ActionMulti.actionCount%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Vapopo/TrainAR/blob/main/Assets/Scripts/Visual Scripting/ActionMulti.cs/#L31">View Source</a>
+    <a href="https://github.com/jblattgerste/TrainAR/blob/main/Assets/Scripts/Visual Scripting/ActionMulti.cs/#L44">View Source</a>
   </span>
   <h4 id="Visual_Scripting_ActionMulti_actionCount" data-uid="Visual_Scripting.ActionMulti.actionCount">actionCount</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>How many actions are in this node.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -155,7 +159,8 @@ scripts and allows to check this against the stored state in the visual script m
     <tbody>
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
-        <td></td>
+        <td><p>Set in node in the editor.Default is 1.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -163,10 +168,10 @@ scripts and allows to check this against the stored state in the visual script m
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/Vapopo/TrainAR/new/main/apiSpec/new?filename=Visual_Scripting_ActionMulti_AllActionsCorrect.md&amp;value=---%0Auid%3A%20Visual_Scripting.ActionMulti.AllActionsCorrect%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/jblattgerste/TrainAR/new/main/apiSpec/new?filename=Visual_Scripting_ActionMulti_AllActionsCorrect.md&amp;value=---%0Auid%3A%20Visual_Scripting.ActionMulti.AllActionsCorrect%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Vapopo/TrainAR/blob/main/Assets/Scripts/Visual Scripting/ActionMulti.cs/#L50">View Source</a>
+    <a href="https://github.com/jblattgerste/TrainAR/blob/main/Assets/Scripts/Visual Scripting/ActionMulti.cs/#L63">View Source</a>
   </span>
   <a id="Visual_Scripting_ActionMulti_AllActionsCorrect_" data-uid="Visual_Scripting.ActionMulti.AllActionsCorrect*"></a>
   <h4 id="Visual_Scripting_ActionMulti_AllActionsCorrect" data-uid="Visual_Scripting.ActionMulti.AllActionsCorrect">AllActionsCorrect</h4>
@@ -195,10 +200,10 @@ scripts and allows to check this against the stored state in the visual script m
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/Vapopo/TrainAR/new/main/apiSpec/new?filename=Visual_Scripting_ActionMulti_ARCombinableName1s.md&amp;value=---%0Auid%3A%20Visual_Scripting.ActionMulti.ARCombinableName1s%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/jblattgerste/TrainAR/new/main/apiSpec/new?filename=Visual_Scripting_ActionMulti_ARCombinableName1s.md&amp;value=---%0Auid%3A%20Visual_Scripting.ActionMulti.ARCombinableName1s%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Vapopo/TrainAR/blob/main/Assets/Scripts/Visual Scripting/ActionMulti.cs/#L64">View Source</a>
+    <a href="https://github.com/jblattgerste/TrainAR/blob/main/Assets/Scripts/Visual Scripting/ActionMulti.cs/#L77">View Source</a>
   </span>
   <a id="Visual_Scripting_ActionMulti_ARCombinableName1s_" data-uid="Visual_Scripting.ActionMulti.ARCombinableName1s*"></a>
   <h4 id="Visual_Scripting_ActionMulti_ARCombinableName1s" data-uid="Visual_Scripting.ActionMulti.ARCombinableName1s">ARCombinableName1s</h4>
@@ -227,10 +232,10 @@ scripts and allows to check this against the stored state in the visual script m
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/Vapopo/TrainAR/new/main/apiSpec/new?filename=Visual_Scripting_ActionMulti_ARCombinableName2s.md&amp;value=---%0Auid%3A%20Visual_Scripting.ActionMulti.ARCombinableName2s%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/jblattgerste/TrainAR/new/main/apiSpec/new?filename=Visual_Scripting_ActionMulti_ARCombinableName2s.md&amp;value=---%0Auid%3A%20Visual_Scripting.ActionMulti.ARCombinableName2s%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Vapopo/TrainAR/blob/main/Assets/Scripts/Visual Scripting/ActionMulti.cs/#L71">View Source</a>
+    <a href="https://github.com/jblattgerste/TrainAR/blob/main/Assets/Scripts/Visual Scripting/ActionMulti.cs/#L84">View Source</a>
   </span>
   <a id="Visual_Scripting_ActionMulti_ARCombinableName2s_" data-uid="Visual_Scripting.ActionMulti.ARCombinableName2s*"></a>
   <h4 id="Visual_Scripting_ActionMulti_ARCombinableName2s" data-uid="Visual_Scripting.ActionMulti.ARCombinableName2s">ARCombinableName2s</h4>
@@ -259,10 +264,10 @@ scripts and allows to check this against the stored state in the visual script m
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/Vapopo/TrainAR/new/main/apiSpec/new?filename=Visual_Scripting_ActionMulti_ARInteractableNames.md&amp;value=---%0Auid%3A%20Visual_Scripting.ActionMulti.ARInteractableNames%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/jblattgerste/TrainAR/new/main/apiSpec/new?filename=Visual_Scripting_ActionMulti_ARInteractableNames.md&amp;value=---%0Auid%3A%20Visual_Scripting.ActionMulti.ARInteractableNames%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Vapopo/TrainAR/blob/main/Assets/Scripts/Visual Scripting/ActionMulti.cs/#L96">View Source</a>
+    <a href="https://github.com/jblattgerste/TrainAR/blob/main/Assets/Scripts/Visual Scripting/ActionMulti.cs/#L109">View Source</a>
   </span>
   <a id="Visual_Scripting_ActionMulti_ARInteractableNames_" data-uid="Visual_Scripting.ActionMulti.ARInteractableNames*"></a>
   <h4 id="Visual_Scripting_ActionMulti_ARInteractableNames" data-uid="Visual_Scripting.ActionMulti.ARInteractableNames">ARInteractableNames</h4>
@@ -291,10 +296,10 @@ scripts and allows to check this against the stored state in the visual script m
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/Vapopo/TrainAR/new/main/apiSpec/new?filename=Visual_Scripting_ActionMulti_CorrectParameterTexts.md&amp;value=---%0Auid%3A%20Visual_Scripting.ActionMulti.CorrectParameterTexts%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/jblattgerste/TrainAR/new/main/apiSpec/new?filename=Visual_Scripting_ActionMulti_CorrectParameterTexts.md&amp;value=---%0Auid%3A%20Visual_Scripting.ActionMulti.CorrectParameterTexts%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Vapopo/TrainAR/blob/main/Assets/Scripts/Visual Scripting/ActionMulti.cs/#L109">View Source</a>
+    <a href="https://github.com/jblattgerste/TrainAR/blob/main/Assets/Scripts/Visual Scripting/ActionMulti.cs/#L122">View Source</a>
   </span>
   <a id="Visual_Scripting_ActionMulti_CorrectParameterTexts_" data-uid="Visual_Scripting.ActionMulti.CorrectParameterTexts*"></a>
   <h4 id="Visual_Scripting_ActionMulti_CorrectParameterTexts" data-uid="Visual_Scripting.ActionMulti.CorrectParameterTexts">CorrectParameterTexts</h4>
@@ -323,10 +328,10 @@ scripts and allows to check this against the stored state in the visual script m
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/Vapopo/TrainAR/new/main/apiSpec/new?filename=Visual_Scripting_ActionMulti_graphReference.md&amp;value=---%0Auid%3A%20Visual_Scripting.ActionMulti.graphReference%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/jblattgerste/TrainAR/new/main/apiSpec/new?filename=Visual_Scripting_ActionMulti_graphReference.md&amp;value=---%0Auid%3A%20Visual_Scripting.ActionMulti.graphReference%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Vapopo/TrainAR/blob/main/Assets/Scripts/Visual Scripting/ActionMulti.cs/#L78">View Source</a>
+    <a href="https://github.com/jblattgerste/TrainAR/blob/main/Assets/Scripts/Visual Scripting/ActionMulti.cs/#L91">View Source</a>
   </span>
   <a id="Visual_Scripting_ActionMulti_graphReference_" data-uid="Visual_Scripting.ActionMulti.graphReference*"></a>
   <h4 id="Visual_Scripting_ActionMulti_graphReference" data-uid="Visual_Scripting.ActionMulti.graphReference">graphReference</h4>
@@ -355,10 +360,10 @@ scripts and allows to check this against the stored state in the visual script m
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/Vapopo/TrainAR/new/main/apiSpec/new?filename=Visual_Scripting_ActionMulti_IncorrectAction.md&amp;value=---%0Auid%3A%20Visual_Scripting.ActionMulti.IncorrectAction%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/jblattgerste/TrainAR/new/main/apiSpec/new?filename=Visual_Scripting_ActionMulti_IncorrectAction.md&amp;value=---%0Auid%3A%20Visual_Scripting.ActionMulti.IncorrectAction%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Vapopo/TrainAR/blob/main/Assets/Scripts/Visual Scripting/ActionMulti.cs/#L57">View Source</a>
+    <a href="https://github.com/jblattgerste/TrainAR/blob/main/Assets/Scripts/Visual Scripting/ActionMulti.cs/#L70">View Source</a>
   </span>
   <a id="Visual_Scripting_ActionMulti_IncorrectAction_" data-uid="Visual_Scripting.ActionMulti.IncorrectAction*"></a>
   <h4 id="Visual_Scripting_ActionMulti_IncorrectAction" data-uid="Visual_Scripting.ActionMulti.IncorrectAction">IncorrectAction</h4>
@@ -387,10 +392,10 @@ scripts and allows to check this against the stored state in the visual script m
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/Vapopo/TrainAR/new/main/apiSpec/new?filename=Visual_Scripting_ActionMulti_InputFlow.md&amp;value=---%0Auid%3A%20Visual_Scripting.ActionMulti.InputFlow%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/jblattgerste/TrainAR/new/main/apiSpec/new?filename=Visual_Scripting_ActionMulti_InputFlow.md&amp;value=---%0Auid%3A%20Visual_Scripting.ActionMulti.InputFlow%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Vapopo/TrainAR/blob/main/Assets/Scripts/Visual Scripting/ActionMulti.cs/#L43">View Source</a>
+    <a href="https://github.com/jblattgerste/TrainAR/blob/main/Assets/Scripts/Visual Scripting/ActionMulti.cs/#L56">View Source</a>
   </span>
   <a id="Visual_Scripting_ActionMulti_InputFlow_" data-uid="Visual_Scripting.ActionMulti.InputFlow*"></a>
   <h4 id="Visual_Scripting_ActionMulti_InputFlow" data-uid="Visual_Scripting.ActionMulti.InputFlow">InputFlow</h4>
@@ -421,10 +426,10 @@ scripts and allows to check this against the stored state in the visual script m
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/Vapopo/TrainAR/new/main/apiSpec/new?filename=Visual_Scripting_ActionMulti_Definition.md&amp;value=---%0Auid%3A%20Visual_Scripting.ActionMulti.Definition%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/jblattgerste/TrainAR/new/main/apiSpec/new?filename=Visual_Scripting_ActionMulti_Definition.md&amp;value=---%0Auid%3A%20Visual_Scripting.ActionMulti.Definition%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Vapopo/TrainAR/blob/main/Assets/Scripts/Visual Scripting/ActionMulti.cs/#L121">View Source</a>
+    <a href="https://github.com/jblattgerste/TrainAR/blob/main/Assets/Scripts/Visual Scripting/ActionMulti.cs/#L134">View Source</a>
   </span>
   <a id="Visual_Scripting_ActionMulti_Definition_" data-uid="Visual_Scripting.ActionMulti.Definition*"></a>
   <h4 id="Visual_Scripting_ActionMulti_Definition" data-uid="Visual_Scripting.ActionMulti.Definition">Definition()</h4>
@@ -443,10 +448,10 @@ scripts and allows to check this against the stored state in the visual script m
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/Vapopo/TrainAR/new/main/apiSpec/new?filename=Visual_Scripting_ActionMulti.md&amp;value=---%0Auid%3A%20Visual_Scripting.ActionMulti%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/jblattgerste/TrainAR/new/main/apiSpec/new?filename=Visual_Scripting_ActionMulti.md&amp;value=---%0Auid%3A%20Visual_Scripting.ActionMulti%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/Vapopo/TrainAR/blob/main/Assets/Scripts/Visual Scripting/ActionMulti.cs/#L13" class="contribution-link">View Source</a>
+                    <a href="https://github.com/jblattgerste/TrainAR/blob/main/Assets/Scripts/Visual Scripting/ActionMulti.cs/#L15" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

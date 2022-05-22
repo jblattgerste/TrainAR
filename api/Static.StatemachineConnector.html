@@ -83,10 +83,12 @@
   
   <h1 id="Static_StatemachineConnector" data-uid="Static.StatemachineConnector" class="text-break">Class StatemachineConnector
   </h1>
-  <div class="markdown level0 summary"><p>The StatemachineConnector connects the visual scripting with the gamelogic.</p>
+  <div class="markdown level0 summary"><p>The StatemachineConnector connects interaction inputs with the visual scripting flow and outputs 
+with the instruction, error and insight controller through events. It therefore functions as a funnel
+between the Visual Statemachine and the rest of the logic.</p>
 <p>Either the visual statemachien decides whether actions are correct or wrong (default) or the connection
 can also be commented out and the decisions on wrong/correct actions can be made manually in the
-RequestStateChange method.</p>
+RequestStateChange method by using C# programming.</p>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
@@ -104,13 +106,13 @@ RequestStateChange method.</p>
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/Vapopo/TrainAR/new/main/apiSpec/new?filename=Static_StatemachineConnector_errorCounter.md&amp;value=---%0Auid%3A%20Static.StatemachineConnector.errorCounter%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/jblattgerste/TrainAR/new/main/apiSpec/new?filename=Static_StatemachineConnector_errorCounter.md&amp;value=---%0Auid%3A%20Static.StatemachineConnector.errorCounter%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Vapopo/TrainAR/blob/main/Assets/Scripts/Static/StatemachineConnector.cs/#L64">View Source</a>
+    <a href="https://github.com/jblattgerste/TrainAR/blob/main/Assets/Scripts/Static/StatemachineConnector.cs/#L88">View Source</a>
   </span>
   <h4 id="Static_StatemachineConnector_errorCounter" data-uid="Static.StatemachineConnector.errorCounter">errorCounter</h4>
-  <div class="markdown level1 summary"><p>The total errors</p>
+  <div class="markdown level1 summary"><p>The amount of errors performed by the user of the training.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -134,13 +136,13 @@ RequestStateChange method.</p>
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/Vapopo/TrainAR/new/main/apiSpec/new?filename=Static_StatemachineConnector_Instance.md&amp;value=---%0Auid%3A%20Static.StatemachineConnector.Instance%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/jblattgerste/TrainAR/new/main/apiSpec/new?filename=Static_StatemachineConnector_Instance.md&amp;value=---%0Auid%3A%20Static.StatemachineConnector.Instance%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Vapopo/TrainAR/blob/main/Assets/Scripts/Static/StatemachineConnector.cs/#L59">View Source</a>
+    <a href="https://github.com/jblattgerste/TrainAR/blob/main/Assets/Scripts/Static/StatemachineConnector.cs/#L83">View Source</a>
   </span>
   <h4 id="Static_StatemachineConnector_Instance" data-uid="Static.StatemachineConnector.Instance">Instance</h4>
-  <div class="markdown level1 summary"><p>The static instance of this statemachineConnector</p>
+  <div class="markdown level1 summary"><p>The static instance of this StatemachineConnector.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -166,14 +168,14 @@ RequestStateChange method.</p>
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/Vapopo/TrainAR/new/main/apiSpec/new?filename=Static_StatemachineConnector_AcceptedStateChange_System_Boolean_.md&amp;value=---%0Auid%3A%20Static.StatemachineConnector.AcceptedStateChange(System.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/jblattgerste/TrainAR/new/main/apiSpec/new?filename=Static_StatemachineConnector_AcceptedStateChange_System_Boolean_.md&amp;value=---%0Auid%3A%20Static.StatemachineConnector.AcceptedStateChange(System.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Vapopo/TrainAR/blob/main/Assets/Scripts/Static/StatemachineConnector.cs/#L206">View Source</a>
+    <a href="https://github.com/jblattgerste/TrainAR/blob/main/Assets/Scripts/Static/StatemachineConnector.cs/#L231">View Source</a>
   </span>
   <a id="Static_StatemachineConnector_AcceptedStateChange_" data-uid="Static.StatemachineConnector.AcceptedStateChange*"></a>
   <h4 id="Static_StatemachineConnector_AcceptedStateChange_System_Boolean_" data-uid="Static.StatemachineConnector.AcceptedStateChange(System.Boolean)">AcceptedStateChange(Boolean)</h4>
-  <div class="markdown level1 summary"><p>Called by the state machine, triggers an Action that indicates if the state change was accepted.</p>
+  <div class="markdown level1 summary"><p>Called by the state machine. Triggers an Action that indicates if the state change was accepted.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -200,14 +202,15 @@ RequestStateChange method.</p>
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/Vapopo/TrainAR/new/main/apiSpec/new?filename=Static_StatemachineConnector_RegisterNewStateChangeTrigger_System_Func_Static_StateInformation_System_Boolean__.md&amp;value=---%0Auid%3A%20Static.StatemachineConnector.RegisterNewStateChangeTrigger(System.Func%7BStatic.StateInformation%2CSystem.Boolean%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/jblattgerste/TrainAR/new/main/apiSpec/new?filename=Static_StatemachineConnector_RegisterNewStateChangeTrigger_System_Func_Static_StateInformation_System_Boolean__.md&amp;value=---%0Auid%3A%20Static.StatemachineConnector.RegisterNewStateChangeTrigger(System.Func%7BStatic.StateInformation%2CSystem.Boolean%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Vapopo/TrainAR/blob/main/Assets/Scripts/Static/StatemachineConnector.cs/#L82">View Source</a>
+    <a href="https://github.com/jblattgerste/TrainAR/blob/main/Assets/Scripts/Static/StatemachineConnector.cs/#L107">View Source</a>
   </span>
   <a id="Static_StatemachineConnector_RegisterNewStateChangeTrigger_" data-uid="Static.StatemachineConnector.RegisterNewStateChangeTrigger*"></a>
   <h4 id="Static_StatemachineConnector_RegisterNewStateChangeTrigger_System_Func_Static_StateInformation_System_Boolean__" data-uid="Static.StatemachineConnector.RegisterNewStateChangeTrigger(System.Func{Static.StateInformation,System.Boolean})">RegisterNewStateChangeTrigger(Func&lt;StateInformation, Boolean&gt;)</h4>
-  <div class="markdown level1 summary"><p>Registers a new state change trigger from the visual state flow</p>
+  <div class="markdown level1 summary"><p>Registers a new state change trigger from the visual state flow. This trigger
+determines which node in the visual scripting graph is handling the state change request.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -227,21 +230,21 @@ RequestStateChange method.</p>
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;<a class="xref" href="Static.StateInformation.html">StateInformation</a>, <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a>&gt;</td>
         <td><span class="parametername">action</span></td>
-        <td><p>The Func to that is registered</p>
+        <td><p>The Func to that is registered.</p>
 </td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/Vapopo/TrainAR/new/main/apiSpec/new?filename=Static_StatemachineConnector_RequestStateChange_Static_StateInformation_.md&amp;value=---%0Auid%3A%20Static.StatemachineConnector.RequestStateChange(Static.StateInformation)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/jblattgerste/TrainAR/new/main/apiSpec/new?filename=Static_StatemachineConnector_RequestStateChange_Static_StateInformation_.md&amp;value=---%0Auid%3A%20Static.StatemachineConnector.RequestStateChange(Static.StateInformation)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Vapopo/TrainAR/blob/main/Assets/Scripts/Static/StatemachineConnector.cs/#L93">View Source</a>
+    <a href="https://github.com/jblattgerste/TrainAR/blob/main/Assets/Scripts/Static/StatemachineConnector.cs/#L118">View Source</a>
   </span>
   <a id="Static_StatemachineConnector_RequestStateChange_" data-uid="Static.StatemachineConnector.RequestStateChange*"></a>
   <h4 id="Static_StatemachineConnector_RequestStateChange_Static_StateInformation_" data-uid="Static.StatemachineConnector.RequestStateChange(Static.StateInformation)">RequestStateChange(StateInformation)</h4>
-  <div class="markdown level1 summary"><p>Request a statechange from the statemachine</p>
+  <div class="markdown level1 summary"><p>Request a statechange from the statemachine.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -282,14 +285,14 @@ RequestStateChange method.</p>
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/Vapopo/TrainAR/new/main/apiSpec/new?filename=Static_StatemachineConnector_Reset.md&amp;value=---%0Auid%3A%20Static.StatemachineConnector.Reset%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/jblattgerste/TrainAR/new/main/apiSpec/new?filename=Static_StatemachineConnector_Reset.md&amp;value=---%0Auid%3A%20Static.StatemachineConnector.Reset%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Vapopo/TrainAR/blob/main/Assets/Scripts/Static/StatemachineConnector.cs/#L260">View Source</a>
+    <a href="https://github.com/jblattgerste/TrainAR/blob/main/Assets/Scripts/Static/StatemachineConnector.cs/#L285">View Source</a>
   </span>
   <a id="Static_StatemachineConnector_Reset_" data-uid="Static.StatemachineConnector.Reset*"></a>
   <h4 id="Static_StatemachineConnector_Reset" data-uid="Static.StatemachineConnector.Reset">Reset()</h4>
-  <div class="markdown level1 summary"><p>Resets the instance of this static instance</p>
+  <div class="markdown level1 summary"><p>Resets the instance of this static instance.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -298,10 +301,10 @@ RequestStateChange method.</p>
   </div>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/Vapopo/TrainAR/new/main/apiSpec/new?filename=Static_StatemachineConnector_ShowCompletionOverlay.md&amp;value=---%0Auid%3A%20Static.StatemachineConnector.ShowCompletionOverlay%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/jblattgerste/TrainAR/new/main/apiSpec/new?filename=Static_StatemachineConnector_ShowCompletionOverlay.md&amp;value=---%0Auid%3A%20Static.StatemachineConnector.ShowCompletionOverlay%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Vapopo/TrainAR/blob/main/Assets/Scripts/Static/StatemachineConnector.cs/#L238">View Source</a>
+    <a href="https://github.com/jblattgerste/TrainAR/blob/main/Assets/Scripts/Static/StatemachineConnector.cs/#L263">View Source</a>
   </span>
   <a id="Static_StatemachineConnector_ShowCompletionOverlay_" data-uid="Static.StatemachineConnector.ShowCompletionOverlay*"></a>
   <h4 id="Static_StatemachineConnector_ShowCompletionOverlay" data-uid="Static.StatemachineConnector.ShowCompletionOverlay">ShowCompletionOverlay()</h4>
@@ -314,14 +317,14 @@ RequestStateChange method.</p>
   </div>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/Vapopo/TrainAR/new/main/apiSpec/new?filename=Static_StatemachineConnector_ShowErrorOverlay_System_String_System_String_.md&amp;value=---%0Auid%3A%20Static.StatemachineConnector.ShowErrorOverlay(System.String%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/jblattgerste/TrainAR/new/main/apiSpec/new?filename=Static_StatemachineConnector_ShowErrorOverlay_System_String_System_String_.md&amp;value=---%0Auid%3A%20Static.StatemachineConnector.ShowErrorOverlay(System.String%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Vapopo/TrainAR/blob/main/Assets/Scripts/Static/StatemachineConnector.cs/#L217">View Source</a>
+    <a href="https://github.com/jblattgerste/TrainAR/blob/main/Assets/Scripts/Static/StatemachineConnector.cs/#L242">View Source</a>
   </span>
   <a id="Static_StatemachineConnector_ShowErrorOverlay_" data-uid="Static.StatemachineConnector.ShowErrorOverlay*"></a>
   <h4 id="Static_StatemachineConnector_ShowErrorOverlay_System_String_System_String_" data-uid="Static.StatemachineConnector.ShowErrorOverlay(System.String,System.String)">ShowErrorOverlay(String, String)</h4>
-  <div class="markdown level1 summary"><p>Called by the visual state machine, triggers an Action that shows the error overlay</p>
+  <div class="markdown level1 summary"><p>Called by the visual state machine. Triggers an Action that shows the error overlay.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -354,14 +357,14 @@ RequestStateChange method.</p>
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/Vapopo/TrainAR/new/main/apiSpec/new?filename=Static_StatemachineConnector_ShowExpertInsights_AudioClip_Sprite_System_String_.md&amp;value=---%0Auid%3A%20Static.StatemachineConnector.ShowExpertInsights(AudioClip%2CSprite%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/jblattgerste/TrainAR/new/main/apiSpec/new?filename=Static_StatemachineConnector_ShowExpertInsights_AudioClip_Sprite_System_String_.md&amp;value=---%0Auid%3A%20Static.StatemachineConnector.ShowExpertInsights(AudioClip%2CSprite%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Vapopo/TrainAR/blob/main/Assets/Scripts/Static/StatemachineConnector.cs/#L229">View Source</a>
+    <a href="https://github.com/jblattgerste/TrainAR/blob/main/Assets/Scripts/Static/StatemachineConnector.cs/#L254">View Source</a>
   </span>
   <a id="Static_StatemachineConnector_ShowExpertInsights_" data-uid="Static.StatemachineConnector.ShowExpertInsights*"></a>
   <h4 id="Static_StatemachineConnector_ShowExpertInsights_AudioClip_Sprite_System_String_" data-uid="Static.StatemachineConnector.ShowExpertInsights(AudioClip,Sprite,System.String)">ShowExpertInsights(AudioClip, Sprite, String)</h4>
-  <div class="markdown level1 summary"><p>Called by the visual state machine, triggers an Action that shows the expert insight modality and plays an audio clip</p>
+  <div class="markdown level1 summary"><p>Called by the visual state machine. Triggers an Action that shows the expert insight modality and plays and audio clip.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -400,14 +403,14 @@ RequestStateChange method.</p>
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/Vapopo/TrainAR/new/main/apiSpec/new?filename=Static_StatemachineConnector_StartQuestionUI_UI_QuestionnaireController_QuestionUITypes_System_String_System_Collections_Generic_List_UI_QuestionnaireController_Answer__.md&amp;value=---%0Auid%3A%20Static.StatemachineConnector.StartQuestionUI(UI.QuestionnaireController.QuestionUITypes%2CSystem.String%2CSystem.Collections.Generic.List%7BUI.QuestionnaireController.Answer%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/jblattgerste/TrainAR/new/main/apiSpec/new?filename=Static_StatemachineConnector_StartQuestionUI_UI_QuestionnaireController_QuestionUITypes_System_String_System_Collections_Generic_List_UI_QuestionnaireController_Answer__.md&amp;value=---%0Auid%3A%20Static.StatemachineConnector.StartQuestionUI(UI.QuestionnaireController.QuestionUITypes%2CSystem.String%2CSystem.Collections.Generic.List%7BUI.QuestionnaireController.Answer%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Vapopo/TrainAR/blob/main/Assets/Scripts/Static/StatemachineConnector.cs/#L251">View Source</a>
+    <a href="https://github.com/jblattgerste/TrainAR/blob/main/Assets/Scripts/Static/StatemachineConnector.cs/#L276">View Source</a>
   </span>
   <a id="Static_StatemachineConnector_StartQuestionUI_" data-uid="Static.StatemachineConnector.StartQuestionUI*"></a>
   <h4 id="Static_StatemachineConnector_StartQuestionUI_UI_QuestionnaireController_QuestionUITypes_System_String_System_Collections_Generic_List_UI_QuestionnaireController_Answer__" data-uid="Static.StatemachineConnector.StartQuestionUI(UI.QuestionnaireController.QuestionUITypes,System.String,System.Collections.Generic.List{UI.QuestionnaireController.Answer})">StartQuestionUI(QuestionnaireController.QuestionUITypes, String, List&lt;QuestionnaireController.Answer&gt;)</h4>
-  <div class="markdown level1 summary"><p>Triggers a Questiontype on the UI.</p>
+  <div class="markdown level1 summary"><p>Triggers a new Questionnaire to be answered by the user on the UI.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -446,15 +449,15 @@ RequestStateChange method.</p>
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/Vapopo/TrainAR/new/main/apiSpec/new?filename=Static_StatemachineConnector_UpdateTopPanel_System_String_System_Int32_.md&amp;value=---%0Auid%3A%20Static.StatemachineConnector.UpdateTopPanel(System.String%2CSystem.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/jblattgerste/TrainAR/new/main/apiSpec/new?filename=Static_StatemachineConnector_UpdateTopPanel_System_String_System_Int32_.md&amp;value=---%0Auid%3A%20Static.StatemachineConnector.UpdateTopPanel(System.String%2CSystem.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Vapopo/TrainAR/blob/main/Assets/Scripts/Static/StatemachineConnector.cs/#L196">View Source</a>
+    <a href="https://github.com/jblattgerste/TrainAR/blob/main/Assets/Scripts/Static/StatemachineConnector.cs/#L221">View Source</a>
   </span>
   <a id="Static_StatemachineConnector_UpdateTopPanel_" data-uid="Static.StatemachineConnector.UpdateTopPanel*"></a>
   <h4 id="Static_StatemachineConnector_UpdateTopPanel_System_String_System_Int32_" data-uid="Static.StatemachineConnector.UpdateTopPanel(System.String,System.Int32)">UpdateTopPanel(String, Int32)</h4>
   <div class="markdown level1 summary"><p>Called by the visual state machine, triggers an Action that updates the instruction text and completion percentage
-of the top panel</p>
+of the top panel.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -489,10 +492,10 @@ of the top panel</p>
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/Vapopo/TrainAR/new/main/apiSpec/new?filename=Static_StatemachineConnector_TriggerAcceptedStateChange.md&amp;value=---%0Auid%3A%20Static.StatemachineConnector.TriggerAcceptedStateChange%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/jblattgerste/TrainAR/new/main/apiSpec/new?filename=Static_StatemachineConnector_TriggerAcceptedStateChange.md&amp;value=---%0Auid%3A%20Static.StatemachineConnector.TriggerAcceptedStateChange%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Vapopo/TrainAR/blob/main/Assets/Scripts/Static/StatemachineConnector.cs/#L67">View Source</a>
+    <a href="https://github.com/jblattgerste/TrainAR/blob/main/Assets/Scripts/Static/StatemachineConnector.cs/#L91">View Source</a>
   </span>
   <h4 id="Static_StatemachineConnector_TriggerAcceptedStateChange" data-uid="Static.StatemachineConnector.TriggerAcceptedStateChange">TriggerAcceptedStateChange</h4>
   <div class="markdown level1 summary"></div>
@@ -518,10 +521,10 @@ of the top panel</p>
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/Vapopo/TrainAR/new/main/apiSpec/new?filename=Static_StatemachineConnector_TriggerErrorOverlay.md&amp;value=---%0Auid%3A%20Static.StatemachineConnector.TriggerErrorOverlay%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/jblattgerste/TrainAR/new/main/apiSpec/new?filename=Static_StatemachineConnector_TriggerErrorOverlay.md&amp;value=---%0Auid%3A%20Static.StatemachineConnector.TriggerErrorOverlay%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Vapopo/TrainAR/blob/main/Assets/Scripts/Static/StatemachineConnector.cs/#L68">View Source</a>
+    <a href="https://github.com/jblattgerste/TrainAR/blob/main/Assets/Scripts/Static/StatemachineConnector.cs/#L92">View Source</a>
   </span>
   <h4 id="Static_StatemachineConnector_TriggerErrorOverlay" data-uid="Static.StatemachineConnector.TriggerErrorOverlay">TriggerErrorOverlay</h4>
   <div class="markdown level1 summary"></div>
@@ -547,10 +550,10 @@ of the top panel</p>
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/Vapopo/TrainAR/new/main/apiSpec/new?filename=Static_StatemachineConnector_TriggerExpertInsights.md&amp;value=---%0Auid%3A%20Static.StatemachineConnector.TriggerExpertInsights%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/jblattgerste/TrainAR/new/main/apiSpec/new?filename=Static_StatemachineConnector_TriggerExpertInsights.md&amp;value=---%0Auid%3A%20Static.StatemachineConnector.TriggerExpertInsights%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Vapopo/TrainAR/blob/main/Assets/Scripts/Static/StatemachineConnector.cs/#L69">View Source</a>
+    <a href="https://github.com/jblattgerste/TrainAR/blob/main/Assets/Scripts/Static/StatemachineConnector.cs/#L93">View Source</a>
   </span>
   <h4 id="Static_StatemachineConnector_TriggerExpertInsights" data-uid="Static.StatemachineConnector.TriggerExpertInsights">TriggerExpertInsights</h4>
   <div class="markdown level1 summary"></div>
@@ -576,10 +579,10 @@ of the top panel</p>
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/Vapopo/TrainAR/new/main/apiSpec/new?filename=Static_StatemachineConnector_TriggerScenarioCompletionOverlay.md&amp;value=---%0Auid%3A%20Static.StatemachineConnector.TriggerScenarioCompletionOverlay%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/jblattgerste/TrainAR/new/main/apiSpec/new?filename=Static_StatemachineConnector_TriggerScenarioCompletionOverlay.md&amp;value=---%0Auid%3A%20Static.StatemachineConnector.TriggerScenarioCompletionOverlay%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Vapopo/TrainAR/blob/main/Assets/Scripts/Static/StatemachineConnector.cs/#L70">View Source</a>
+    <a href="https://github.com/jblattgerste/TrainAR/blob/main/Assets/Scripts/Static/StatemachineConnector.cs/#L94">View Source</a>
   </span>
   <h4 id="Static_StatemachineConnector_TriggerScenarioCompletionOverlay" data-uid="Static.StatemachineConnector.TriggerScenarioCompletionOverlay">TriggerScenarioCompletionOverlay</h4>
   <div class="markdown level1 summary"></div>
@@ -605,10 +608,10 @@ of the top panel</p>
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/Vapopo/TrainAR/new/main/apiSpec/new?filename=Static_StatemachineConnector_TriggerTopPanelChange.md&amp;value=---%0Auid%3A%20Static.StatemachineConnector.TriggerTopPanelChange%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/jblattgerste/TrainAR/new/main/apiSpec/new?filename=Static_StatemachineConnector_TriggerTopPanelChange.md&amp;value=---%0Auid%3A%20Static.StatemachineConnector.TriggerTopPanelChange%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Vapopo/TrainAR/blob/main/Assets/Scripts/Static/StatemachineConnector.cs/#L66">View Source</a>
+    <a href="https://github.com/jblattgerste/TrainAR/blob/main/Assets/Scripts/Static/StatemachineConnector.cs/#L90">View Source</a>
   </span>
   <h4 id="Static_StatemachineConnector_TriggerTopPanelChange" data-uid="Static.StatemachineConnector.TriggerTopPanelChange">TriggerTopPanelChange</h4>
   <div class="markdown level1 summary"></div>
@@ -634,10 +637,10 @@ of the top panel</p>
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/Vapopo/TrainAR/new/main/apiSpec/new?filename=Static_StatemachineConnector_TriggerUIQuestion.md&amp;value=---%0Auid%3A%20Static.StatemachineConnector.TriggerUIQuestion%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/jblattgerste/TrainAR/new/main/apiSpec/new?filename=Static_StatemachineConnector_TriggerUIQuestion.md&amp;value=---%0Auid%3A%20Static.StatemachineConnector.TriggerUIQuestion%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Vapopo/TrainAR/blob/main/Assets/Scripts/Static/StatemachineConnector.cs/#L71">View Source</a>
+    <a href="https://github.com/jblattgerste/TrainAR/blob/main/Assets/Scripts/Static/StatemachineConnector.cs/#L95">View Source</a>
   </span>
   <h4 id="Static_StatemachineConnector_TriggerUIQuestion" data-uid="Static.StatemachineConnector.TriggerUIQuestion">TriggerUIQuestion</h4>
   <div class="markdown level1 summary"></div>
@@ -669,10 +672,10 @@ of the top panel</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/Vapopo/TrainAR/new/main/apiSpec/new?filename=Static_StatemachineConnector.md&amp;value=---%0Auid%3A%20Static.StatemachineConnector%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/jblattgerste/TrainAR/new/main/apiSpec/new?filename=Static_StatemachineConnector.md&amp;value=---%0Auid%3A%20Static.StatemachineConnector%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/Vapopo/TrainAR/blob/main/Assets/Scripts/Static/StatemachineConnector.cs/#L54" class="contribution-link">View Source</a>
+                    <a href="https://github.com/jblattgerste/TrainAR/blob/main/Assets/Scripts/Static/StatemachineConnector.cs/#L78" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

@@ -79,27 +79,40 @@
             <article class="content wrap" id="_content" data-uid="">
 <h1 id="object-helper-node">Object Helper Node</h1>
 
-<p>TrainAR: Object Helper node give you various options to configure specific TrainAR Objects. In the <strong>Helper</strong> dropwodn menu you can view the different configuration options. To specifiy which <strong>TrainAR Object</strong> in the scene you want to configure, specify the <strong>Object name</strong> in the node.</p>
-<p><img src="../resources/ObjectHelper.png" alt=""></p>
+<p>As specified in the <a href="TrainArObjects.html">TrainAR Objects</a> documentation, TrainAR Objects have states and behaviours. The Object Helper nodeprovides various options to access and modify these from within the TrainAR Stateflow at runtime of the TrainAR training. In the <strong>Helper</strong> dropwodn menu you can select from the different options. To specifiy which <strong>TrainAR Object</strong> in the scene you want to modify, specify the exact <strong>Object name</strong> in the node.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">TrainAR Node</th>
+<th style="text-align:center">Result</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><img src="../resources/ObjectHelper.png" alt=""></td>
+<td style="text-align:center"><img src="../resources/TrainAR_Training_ObjectHelper.png" alt="drawing" width="250"></td>
+</tr>
+</tbody>
+</table>
 <h2 id="toggle-visibility">Toggle Visibility</h2>
-<p>Check or unech the <strong>Visible</strong> field to make the specified <strong>TrainAR Object</strong> invisible or visible.</p>
+<p>Check or uncheck the <strong>Visible</strong> field to make the specified <strong>TrainAR Object</strong> visible or invisible.</p>
 <h2 id="toggle-grabbable">Toggle Grabbable</h2>
-<p>Check or uncheck the <strong>Grabbable</strong> field to make the specified <strong>TrainAR Object</strong> grabbable or ungrabbable.</p>
+<p>Check or uncheck the <strong>Grabbable</strong> field to make the specified <strong>TrainAR Object</strong> grabbable or not grabbable.</p>
 <h2 id="toggle-interactable">Toggle Interactable</h2>
 <p>Check or uncheck the <strong>Interactable</strong> field to make the specified <strong>TrainAR Object</strong> interactable or not interactable.</p>
 <h2 id="toggle-combinable">Toggle Combinable</h2>
 <p>Check or uncheck the <strong>Combinable</strong> field to make the specified <strong>TrainAR Object</strong> combinable or not combinable.</p>
 <h2 id="change-interaction-text">Change Interaction text</h2>
 <p>Changes the labeling of the interaction button when selecting an TrainAR Object. A TrainAR Object is selected when you aim at a TrainAR Object and move close to it.</p>
-<p>By default the labeling is simply <em>Interact</em>. </p>
+<p>By default the labeling is simply <em>Interact</em> for every TrainAR Object.</p>
 <h2 id="change-lerping-distance">Change Lerping distance</h2>
-<p>This changes the distance with which an <strong>grabbed TrainAR Object</strong> floats away from the screen. Generally, you probably want to have bigger TrainAR Objects float at a larger distance than smaller ones. That way they don&#39;t cover the whole screen while grabbing them.</p>
+<p>This changes the distance with which a <strong>grabbed TrainAR Object</strong> floats away from the screen. Generally, you probably want to have bigger TrainAR Objects float at a larger distance than smaller ones. That way, they don&#39;t cover the whole screen while grabbing them.</p>
 <h2 id="change-mesh-and-texture">Change Mesh and Texture</h2>
-<p>With this node you can change what a <strong>TrainAR Object</strong> looks like by changing it&#39;s mesh and material. This is for example useful if as a result of a combination or interaction an object is supposed to be altered.</p>
+<p>With this option, you can change what a <strong>TrainAR Object</strong> looks like by changing it&#39;s mesh and/or material. This is for example useful if as a result of a combination or interaction an object is supposed to be altered.</p>
 <h2 id="get-object-reference">Get Object Reference</h2>
-<p>This node returns the <strong>Unity GameObject</strong> Reference of the specified <strong>TrainAR Object</strong>. For more information about Unity GameObjects refer to the <a href="https://docs.unity3d.com/ScriptReference/GameObject.html">Unity Documentation</a>. </p>
+<p>This node returns the <strong>Unity GameObject</strong> Reference of the specified <strong>TrainAR Object</strong>. For more information about Unity GameObjects, refer to the <a href="https://docs.unity3d.com/ScriptReference/GameObject.html">Unity Documentation</a>. This is mainly useful if you want to utilize Unitys Visual Scripting nodes in the Stateflow as specified in the <a href="https://jblattgerste.github.io/TrainAR/manual/NoVisualScripting.html#unity-visual-scripting-nodes">Advanced Options</a>.</p>
 <h2 id="fuse-two-objects">Fuse Two Objects</h2>
-<p>This attaches one <strong>TrainAR Object</strong> to another, making them one. The <strong>Object name</strong> field specifies the object that is fused unto another object, which is specified in the <strong>Fuse to Object</strong> field. In the <strong>Offset Position and Rotation</strong> field the position and rotation relative to the fused to TrainAR Object is specified.</p>
+<p>This attaches one <strong>TrainAR Object</strong> to another, making them one. The <strong>Object name</strong> field specifies the object that is fused onto the object, which is specified in the <strong>Fuse to Object</strong> field. In the <strong>Offset Position and Rotation</strong> field the position and rotation relative to the fused with TrainAR Object is specified.</p>
 <h2 id="destroy-object">Destroy Object</h2>
 <p>Destroys and removes the specified TrainAR Object from the scene. </p>
 </article>
@@ -110,7 +123,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/Vapopo/TrainAR/blob/main/Documentation/manual/ObjectHelperNode.md/#L1" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/jblattgerste/TrainAR/blob/main/Documentation/manual/ObjectHelperNode.md/#L1" class="contribution-link">Improve this Doc</a>
                   </li>
                 </ul>
               </div>

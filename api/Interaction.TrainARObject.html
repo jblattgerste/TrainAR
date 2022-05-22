@@ -83,12 +83,13 @@
   
   <h1 id="Interaction_TrainARObject" data-uid="Interaction.TrainARObject" class="text-break">Class TrainARObject
   </h1>
-  <div class="markdown level0 summary"><p>The main class for a TrainAR object.
+  <div class="markdown level0 summary"><p>The main behaviour script for a TrainAR object.
+This is automatically added when converting GameObject to TrainAR objects
 After adding this script all following RequiredComponents are added.
 SelectionBase, MeshCollider, BoxCollider, RigidbodyController,
 MaterialController, AudioController, Rigidbody, Outline,
-CollisionController, AudioSource.
-The TrainAR events are also defined in this script.</p>
+CollisionController.
+The TrainAR events that are triggered on actions are also defined in this script.</p>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
@@ -106,13 +107,13 @@ The TrainAR events are also defined in this script.</p>
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/Vapopo/TrainAR/new/main/apiSpec/new?filename=Interaction_TrainARObject_error.md&amp;value=---%0Auid%3A%20Interaction.TrainARObject.error%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/jblattgerste/TrainAR/new/main/apiSpec/new?filename=Interaction_TrainARObject_error.md&amp;value=---%0Auid%3A%20Interaction.TrainARObject.error%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Vapopo/TrainAR/blob/main/Assets/Scripts/Interaction/TrainARObject.cs/#L145">View Source</a>
+    <a href="https://github.com/jblattgerste/TrainAR/blob/main/Assets/Scripts/Interaction/TrainARObject.cs/#L150">View Source</a>
   </span>
   <h4 id="Interaction_TrainARObject_error" data-uid="Interaction.TrainARObject.error">error</h4>
-  <div class="markdown level1 summary"><p>Error</p>
+  <div class="markdown level1 summary"><p>Error event. Triggered when an action is triggered on this TrainAR object that was not accepted by the statemachine.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -136,13 +137,14 @@ The TrainAR events are also defined in this script.</p>
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/Vapopo/TrainAR/new/main/apiSpec/new?filename=Interaction_TrainARObject_interactableName.md&amp;value=---%0Auid%3A%20Interaction.TrainARObject.interactableName%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/jblattgerste/TrainAR/new/main/apiSpec/new?filename=Interaction_TrainARObject_interactableName.md&amp;value=---%0Auid%3A%20Interaction.TrainARObject.interactableName%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Vapopo/TrainAR/blob/main/Assets/Scripts/Interaction/TrainARObject.cs/#L49">View Source</a>
+    <a href="https://github.com/jblattgerste/TrainAR/blob/main/Assets/Scripts/Interaction/TrainARObject.cs/#L50">View Source</a>
   </span>
   <h4 id="Interaction_TrainARObject_interactableName" data-uid="Interaction.TrainARObject.interactableName">interactableName</h4>
-  <div class="markdown level1 summary"><p>The name of the TrainAR object that is used for the statemachine check.</p>
+  <div class="markdown level1 summary"><p>The name of the TrainAR object that is used for the statemachine check.
+By default, this is the name of the TrainAR object.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -167,13 +169,13 @@ The TrainAR events are also defined in this script.</p>
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/Vapopo/TrainAR/new/main/apiSpec/new?filename=Interaction_TrainARObject_Intersection.md&amp;value=---%0Auid%3A%20Interaction.TrainARObject.Intersection%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/jblattgerste/TrainAR/new/main/apiSpec/new?filename=Interaction_TrainARObject_Intersection.md&amp;value=---%0Auid%3A%20Interaction.TrainARObject.Intersection%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Vapopo/TrainAR/blob/main/Assets/Scripts/Interaction/TrainARObject.cs/#L78">View Source</a>
+    <a href="https://github.com/jblattgerste/TrainAR/blob/main/Assets/Scripts/Interaction/TrainARObject.cs/#L80">View Source</a>
   </span>
   <h4 id="Interaction_TrainARObject_Intersection" data-uid="Interaction.TrainARObject.Intersection">Intersection</h4>
-  <div class="markdown level1 summary"><p>The Object this object is intersecting with.</p>
+  <div class="markdown level1 summary"><p>The Object this object is currently intersecting with.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -198,13 +200,13 @@ The TrainAR events are also defined in this script.</p>
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/Vapopo/TrainAR/new/main/apiSpec/new?filename=Interaction_TrainARObject_isCombineable.md&amp;value=---%0Auid%3A%20Interaction.TrainARObject.isCombineable%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/jblattgerste/TrainAR/new/main/apiSpec/new?filename=Interaction_TrainARObject_isCombineable.md&amp;value=---%0Auid%3A%20Interaction.TrainARObject.isCombineable%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Vapopo/TrainAR/blob/main/Assets/Scripts/Interaction/TrainARObject.cs/#L44">View Source</a>
+    <a href="https://github.com/jblattgerste/TrainAR/blob/main/Assets/Scripts/Interaction/TrainARObject.cs/#L44">View Source</a>
   </span>
   <h4 id="Interaction_TrainARObject_isCombineable" data-uid="Interaction.TrainARObject.isCombineable">isCombineable</h4>
-  <div class="markdown level1 summary"><p>Is the object combineable.</p>
+  <div class="markdown level1 summary"><p>Is the object combineable?</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -229,13 +231,13 @@ The TrainAR events are also defined in this script.</p>
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/Vapopo/TrainAR/new/main/apiSpec/new?filename=Interaction_TrainARObject_isGrabbable.md&amp;value=---%0Auid%3A%20Interaction.TrainARObject.isGrabbable%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/jblattgerste/TrainAR/new/main/apiSpec/new?filename=Interaction_TrainARObject_isGrabbable.md&amp;value=---%0Auid%3A%20Interaction.TrainARObject.isGrabbable%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Vapopo/TrainAR/blob/main/Assets/Scripts/Interaction/TrainARObject.cs/#L34">View Source</a>
+    <a href="https://github.com/jblattgerste/TrainAR/blob/main/Assets/Scripts/Interaction/TrainARObject.cs/#L34">View Source</a>
   </span>
   <h4 id="Interaction_TrainARObject_isGrabbable" data-uid="Interaction.TrainARObject.isGrabbable">isGrabbable</h4>
-  <div class="markdown level1 summary"><p>Is the object grabbable.</p>
+  <div class="markdown level1 summary"><p>Is the object grabbable?</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -260,10 +262,10 @@ The TrainAR events are also defined in this script.</p>
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/Vapopo/TrainAR/new/main/apiSpec/new?filename=Interaction_TrainARObject_isGrabbed.md&amp;value=---%0Auid%3A%20Interaction.TrainARObject.isGrabbed%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/jblattgerste/TrainAR/new/main/apiSpec/new?filename=Interaction_TrainARObject_isGrabbed.md&amp;value=---%0Auid%3A%20Interaction.TrainARObject.isGrabbed%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Vapopo/TrainAR/blob/main/Assets/Scripts/Interaction/TrainARObject.cs/#L113">View Source</a>
+    <a href="https://github.com/jblattgerste/TrainAR/blob/main/Assets/Scripts/Interaction/TrainARObject.cs/#L115">View Source</a>
   </span>
   <h4 id="Interaction_TrainARObject_isGrabbed" data-uid="Interaction.TrainARObject.isGrabbed">isGrabbed</h4>
   <div class="markdown level1 summary"></div>
@@ -289,13 +291,13 @@ The TrainAR events are also defined in this script.</p>
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/Vapopo/TrainAR/new/main/apiSpec/new?filename=Interaction_TrainARObject_isInteractable.md&amp;value=---%0Auid%3A%20Interaction.TrainARObject.isInteractable%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/jblattgerste/TrainAR/new/main/apiSpec/new?filename=Interaction_TrainARObject_isInteractable.md&amp;value=---%0Auid%3A%20Interaction.TrainARObject.isInteractable%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Vapopo/TrainAR/blob/main/Assets/Scripts/Interaction/TrainARObject.cs/#L39">View Source</a>
+    <a href="https://github.com/jblattgerste/TrainAR/blob/main/Assets/Scripts/Interaction/TrainARObject.cs/#L39">View Source</a>
   </span>
   <h4 id="Interaction_TrainARObject_isInteractable" data-uid="Interaction.TrainARObject.isInteractable">isInteractable</h4>
-  <div class="markdown level1 summary"><p>Is the object interactable.</p>
+  <div class="markdown level1 summary"><p>Is the object interactable?</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -320,10 +322,10 @@ The TrainAR events are also defined in this script.</p>
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/Vapopo/TrainAR/new/main/apiSpec/new?filename=Interaction_TrainARObject_isSelected.md&amp;value=---%0Auid%3A%20Interaction.TrainARObject.isSelected%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/jblattgerste/TrainAR/new/main/apiSpec/new?filename=Interaction_TrainARObject_isSelected.md&amp;value=---%0Auid%3A%20Interaction.TrainARObject.isSelected%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Vapopo/TrainAR/blob/main/Assets/Scripts/Interaction/TrainARObject.cs/#L95">View Source</a>
+    <a href="https://github.com/jblattgerste/TrainAR/blob/main/Assets/Scripts/Interaction/TrainARObject.cs/#L97">View Source</a>
   </span>
   <h4 id="Interaction_TrainARObject_isSelected" data-uid="Interaction.TrainARObject.isSelected">isSelected</h4>
   <div class="markdown level1 summary"></div>
@@ -349,13 +351,14 @@ The TrainAR events are also defined in this script.</p>
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/Vapopo/TrainAR/new/main/apiSpec/new?filename=Interaction_TrainARObject_lerpingDistance.md&amp;value=---%0Auid%3A%20Interaction.TrainARObject.lerpingDistance%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/jblattgerste/TrainAR/new/main/apiSpec/new?filename=Interaction_TrainARObject_lerpingDistance.md&amp;value=---%0Auid%3A%20Interaction.TrainARObject.lerpingDistance%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Vapopo/TrainAR/blob/main/Assets/Scripts/Interaction/TrainARObject.cs/#L60">View Source</a>
+    <a href="https://github.com/jblattgerste/TrainAR/blob/main/Assets/Scripts/Interaction/TrainARObject.cs/#L62">View Source</a>
   </span>
   <h4 id="Interaction_TrainARObject_lerpingDistance" data-uid="Interaction.TrainARObject.lerpingDistance">lerpingDistance</h4>
-  <div class="markdown level1 summary"><p>The distance to the camera where the object is lerped to.</p>
+  <div class="markdown level1 summary"><p>The distance in front of the camera, where the object is lerped to.
+This can e.g. be useful, if objects are larger than usual.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -380,10 +383,10 @@ The TrainAR events are also defined in this script.</p>
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/Vapopo/TrainAR/new/main/apiSpec/new?filename=Interaction_TrainARObject_OnCombination.md&amp;value=---%0Auid%3A%20Interaction.TrainARObject.OnCombination%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/jblattgerste/TrainAR/new/main/apiSpec/new?filename=Interaction_TrainARObject_OnCombination.md&amp;value=---%0Auid%3A%20Interaction.TrainARObject.OnCombination%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Vapopo/TrainAR/blob/main/Assets/Scripts/Interaction/TrainARObject.cs/#L134">View Source</a>
+    <a href="https://github.com/jblattgerste/TrainAR/blob/main/Assets/Scripts/Interaction/TrainARObject.cs/#L139">View Source</a>
   </span>
   <h4 id="Interaction_TrainARObject_OnCombination" data-uid="Interaction.TrainARObject.OnCombination">OnCombination</h4>
   <div class="markdown level1 summary"></div>
@@ -409,10 +412,10 @@ The TrainAR events are also defined in this script.</p>
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/Vapopo/TrainAR/new/main/apiSpec/new?filename=Interaction_TrainARObject_OnDeselect.md&amp;value=---%0Auid%3A%20Interaction.TrainARObject.OnDeselect%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/jblattgerste/TrainAR/new/main/apiSpec/new?filename=Interaction_TrainARObject_OnDeselect.md&amp;value=---%0Auid%3A%20Interaction.TrainARObject.OnDeselect%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Vapopo/TrainAR/blob/main/Assets/Scripts/Interaction/TrainARObject.cs/#L92">View Source</a>
+    <a href="https://github.com/jblattgerste/TrainAR/blob/main/Assets/Scripts/Interaction/TrainARObject.cs/#L94">View Source</a>
   </span>
   <h4 id="Interaction_TrainARObject_OnDeselect" data-uid="Interaction.TrainARObject.OnDeselect">OnDeselect</h4>
   <div class="markdown level1 summary"></div>
@@ -438,10 +441,10 @@ The TrainAR events are also defined in this script.</p>
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/Vapopo/TrainAR/new/main/apiSpec/new?filename=Interaction_TrainARObject_OnGrabbed.md&amp;value=---%0Auid%3A%20Interaction.TrainARObject.OnGrabbed%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/jblattgerste/TrainAR/new/main/apiSpec/new?filename=Interaction_TrainARObject_OnGrabbed.md&amp;value=---%0Auid%3A%20Interaction.TrainARObject.OnGrabbed%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Vapopo/TrainAR/blob/main/Assets/Scripts/Interaction/TrainARObject.cs/#L104">View Source</a>
+    <a href="https://github.com/jblattgerste/TrainAR/blob/main/Assets/Scripts/Interaction/TrainARObject.cs/#L106">View Source</a>
   </span>
   <h4 id="Interaction_TrainARObject_OnGrabbed" data-uid="Interaction.TrainARObject.OnGrabbed">OnGrabbed</h4>
   <div class="markdown level1 summary"></div>
@@ -467,10 +470,10 @@ The TrainAR events are also defined in this script.</p>
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/Vapopo/TrainAR/new/main/apiSpec/new?filename=Interaction_TrainARObject_OnInteraction.md&amp;value=---%0Auid%3A%20Interaction.TrainARObject.OnInteraction%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/jblattgerste/TrainAR/new/main/apiSpec/new?filename=Interaction_TrainARObject_OnInteraction.md&amp;value=---%0Auid%3A%20Interaction.TrainARObject.OnInteraction%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Vapopo/TrainAR/blob/main/Assets/Scripts/Interaction/TrainARObject.cs/#L122">View Source</a>
+    <a href="https://github.com/jblattgerste/TrainAR/blob/main/Assets/Scripts/Interaction/TrainARObject.cs/#L124">View Source</a>
   </span>
   <h4 id="Interaction_TrainARObject_OnInteraction" data-uid="Interaction.TrainARObject.OnInteraction">OnInteraction</h4>
   <div class="markdown level1 summary"></div>
@@ -496,10 +499,10 @@ The TrainAR events are also defined in this script.</p>
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/Vapopo/TrainAR/new/main/apiSpec/new?filename=Interaction_TrainARObject_OnReleased.md&amp;value=---%0Auid%3A%20Interaction.TrainARObject.OnReleased%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/jblattgerste/TrainAR/new/main/apiSpec/new?filename=Interaction_TrainARObject_OnReleased.md&amp;value=---%0Auid%3A%20Interaction.TrainARObject.OnReleased%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Vapopo/TrainAR/blob/main/Assets/Scripts/Interaction/TrainARObject.cs/#L110">View Source</a>
+    <a href="https://github.com/jblattgerste/TrainAR/blob/main/Assets/Scripts/Interaction/TrainARObject.cs/#L112">View Source</a>
   </span>
   <h4 id="Interaction_TrainARObject_OnReleased" data-uid="Interaction.TrainARObject.OnReleased">OnReleased</h4>
   <div class="markdown level1 summary"></div>
@@ -525,10 +528,10 @@ The TrainAR events are also defined in this script.</p>
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/Vapopo/TrainAR/new/main/apiSpec/new?filename=Interaction_TrainARObject_OnSelect.md&amp;value=---%0Auid%3A%20Interaction.TrainARObject.OnSelect%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/jblattgerste/TrainAR/new/main/apiSpec/new?filename=Interaction_TrainARObject_OnSelect.md&amp;value=---%0Auid%3A%20Interaction.TrainARObject.OnSelect%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Vapopo/TrainAR/blob/main/Assets/Scripts/Interaction/TrainARObject.cs/#L86">View Source</a>
+    <a href="https://github.com/jblattgerste/TrainAR/blob/main/Assets/Scripts/Interaction/TrainARObject.cs/#L88">View Source</a>
   </span>
   <h4 id="Interaction_TrainARObject_OnSelect" data-uid="Interaction.TrainARObject.OnSelect">OnSelect</h4>
   <div class="markdown level1 summary"></div>
@@ -554,13 +557,13 @@ The TrainAR events are also defined in this script.</p>
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/Vapopo/TrainAR/new/main/apiSpec/new?filename=Interaction_TrainARObject_pivotOffsetPosition.md&amp;value=---%0Auid%3A%20Interaction.TrainARObject.pivotOffsetPosition%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/jblattgerste/TrainAR/new/main/apiSpec/new?filename=Interaction_TrainARObject_pivotOffsetPosition.md&amp;value=---%0Auid%3A%20Interaction.TrainARObject.pivotOffsetPosition%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Vapopo/TrainAR/blob/main/Assets/Scripts/Interaction/TrainARObject.cs/#L66">View Source</a>
+    <a href="https://github.com/jblattgerste/TrainAR/blob/main/Assets/Scripts/Interaction/TrainARObject.cs/#L68">View Source</a>
   </span>
   <h4 id="Interaction_TrainARObject_pivotOffsetPosition" data-uid="Interaction.TrainARObject.pivotOffsetPosition">pivotOffsetPosition</h4>
-  <div class="markdown level1 summary"><p>Offset the pivot point.</p>
+  <div class="markdown level1 summary"><p>Offset of the pivot point. Use this, if the given pivot point by the model is weird.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -585,13 +588,13 @@ The TrainAR events are also defined in this script.</p>
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/Vapopo/TrainAR/new/main/apiSpec/new?filename=Interaction_TrainARObject_pivotOffsetRotation.md&amp;value=---%0Auid%3A%20Interaction.TrainARObject.pivotOffsetRotation%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/jblattgerste/TrainAR/new/main/apiSpec/new?filename=Interaction_TrainARObject_pivotOffsetRotation.md&amp;value=---%0Auid%3A%20Interaction.TrainARObject.pivotOffsetRotation%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Vapopo/TrainAR/blob/main/Assets/Scripts/Interaction/TrainARObject.cs/#L72">View Source</a>
+    <a href="https://github.com/jblattgerste/TrainAR/blob/main/Assets/Scripts/Interaction/TrainARObject.cs/#L74">View Source</a>
   </span>
   <h4 id="Interaction_TrainARObject_pivotOffsetRotation" data-uid="Interaction.TrainARObject.pivotOffsetRotation">pivotOffsetRotation</h4>
-  <div class="markdown level1 summary"><p>Offset the pivot rotation.</p>
+  <div class="markdown level1 summary"><p>Offset of the pivot rotation. Use this, if the given pivot point by the model is weird.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -616,13 +619,13 @@ The TrainAR events are also defined in this script.</p>
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/Vapopo/TrainAR/new/main/apiSpec/new?filename=Interaction_TrainARObject_TrainARObjectDisabled.md&amp;value=---%0Auid%3A%20Interaction.TrainARObject.TrainARObjectDisabled%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/jblattgerste/TrainAR/new/main/apiSpec/new?filename=Interaction_TrainARObject_TrainARObjectDisabled.md&amp;value=---%0Auid%3A%20Interaction.TrainARObject.TrainARObjectDisabled%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Vapopo/TrainAR/blob/main/Assets/Scripts/Interaction/TrainARObject.cs/#L54">View Source</a>
+    <a href="https://github.com/jblattgerste/TrainAR/blob/main/Assets/Scripts/Interaction/TrainARObject.cs/#L55">View Source</a>
   </span>
   <h4 id="Interaction_TrainARObject_TrainARObjectDisabled" data-uid="Interaction.TrainARObject.TrainARObjectDisabled">TrainARObjectDisabled</h4>
-  <div class="markdown level1 summary"><p>If true the object is not selectable, grabbable, interactable, combineable.</p>
+  <div class="markdown level1 summary"><p>If true the object is not selectable, grabbable, interactable, combineable but might be visible.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -649,10 +652,10 @@ The TrainAR events are also defined in this script.</p>
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/Vapopo/TrainAR/new/main/apiSpec/new?filename=Interaction_TrainARObject_Combine_System_String_GameObject_.md&amp;value=---%0Auid%3A%20Interaction.TrainARObject.Combine(System.String%2CGameObject)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/jblattgerste/TrainAR/new/main/apiSpec/new?filename=Interaction_TrainARObject_Combine_System_String_GameObject_.md&amp;value=---%0Auid%3A%20Interaction.TrainARObject.Combine(System.String%2CGameObject)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Vapopo/TrainAR/blob/main/Assets/Scripts/Interaction/TrainARObject.cs/#L232">View Source</a>
+    <a href="https://github.com/jblattgerste/TrainAR/blob/main/Assets/Scripts/Interaction/TrainARObject.cs/#L237">View Source</a>
   </span>
   <a id="Interaction_TrainARObject_Combine_" data-uid="Interaction.TrainARObject.Combine*"></a>
   <h4 id="Interaction_TrainARObject_Combine_System_String_GameObject_" data-uid="Interaction.TrainARObject.Combine(System.String,GameObject)">Combine(String, GameObject)</h4>
@@ -691,10 +694,10 @@ helper in the visual scripting.</p>
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/Vapopo/TrainAR/new/main/apiSpec/new?filename=Interaction_TrainARObject_Deselect.md&amp;value=---%0Auid%3A%20Interaction.TrainARObject.Deselect%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/jblattgerste/TrainAR/new/main/apiSpec/new?filename=Interaction_TrainARObject_Deselect.md&amp;value=---%0Auid%3A%20Interaction.TrainARObject.Deselect%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Vapopo/TrainAR/blob/main/Assets/Scripts/Interaction/TrainARObject.cs/#L183">View Source</a>
+    <a href="https://github.com/jblattgerste/TrainAR/blob/main/Assets/Scripts/Interaction/TrainARObject.cs/#L188">View Source</a>
   </span>
   <a id="Interaction_TrainARObject_Deselect_" data-uid="Interaction.TrainARObject.Deselect*"></a>
   <h4 id="Interaction_TrainARObject_Deselect" data-uid="Interaction.TrainARObject.Deselect">Deselect()</h4>
@@ -707,10 +710,10 @@ helper in the visual scripting.</p>
   </div>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/Vapopo/TrainAR/new/main/apiSpec/new?filename=Interaction_TrainARObject_DisableTrainARObject.md&amp;value=---%0Auid%3A%20Interaction.TrainARObject.DisableTrainARObject%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/jblattgerste/TrainAR/new/main/apiSpec/new?filename=Interaction_TrainARObject_DisableTrainARObject.md&amp;value=---%0Auid%3A%20Interaction.TrainARObject.DisableTrainARObject%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Vapopo/TrainAR/blob/main/Assets/Scripts/Interaction/TrainARObject.cs/#L329">View Source</a>
+    <a href="https://github.com/jblattgerste/TrainAR/blob/main/Assets/Scripts/Interaction/TrainARObject.cs/#L334">View Source</a>
   </span>
   <a id="Interaction_TrainARObject_DisableTrainARObject_" data-uid="Interaction.TrainARObject.DisableTrainARObject*"></a>
   <h4 id="Interaction_TrainARObject_DisableTrainARObject" data-uid="Interaction.TrainARObject.DisableTrainARObject">DisableTrainARObject()</h4>
@@ -723,10 +726,10 @@ helper in the visual scripting.</p>
   </div>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/Vapopo/TrainAR/new/main/apiSpec/new?filename=Interaction_TrainARObject_EnableTrainARObject.md&amp;value=---%0Auid%3A%20Interaction.TrainARObject.EnableTrainARObject%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/jblattgerste/TrainAR/new/main/apiSpec/new?filename=Interaction_TrainARObject_EnableTrainARObject.md&amp;value=---%0Auid%3A%20Interaction.TrainARObject.EnableTrainARObject%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Vapopo/TrainAR/blob/main/Assets/Scripts/Interaction/TrainARObject.cs/#L340">View Source</a>
+    <a href="https://github.com/jblattgerste/TrainAR/blob/main/Assets/Scripts/Interaction/TrainARObject.cs/#L345">View Source</a>
   </span>
   <a id="Interaction_TrainARObject_EnableTrainARObject_" data-uid="Interaction.TrainARObject.EnableTrainARObject*"></a>
   <h4 id="Interaction_TrainARObject_EnableTrainARObject" data-uid="Interaction.TrainARObject.EnableTrainARObject">EnableTrainARObject()</h4>
@@ -739,10 +742,10 @@ helper in the visual scripting.</p>
   </div>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/Vapopo/TrainAR/new/main/apiSpec/new?filename=Interaction_TrainARObject_Error.md&amp;value=---%0Auid%3A%20Interaction.TrainARObject.Error%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/jblattgerste/TrainAR/new/main/apiSpec/new?filename=Interaction_TrainARObject_Error.md&amp;value=---%0Auid%3A%20Interaction.TrainARObject.Error%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Vapopo/TrainAR/blob/main/Assets/Scripts/Interaction/TrainARObject.cs/#L321">View Source</a>
+    <a href="https://github.com/jblattgerste/TrainAR/blob/main/Assets/Scripts/Interaction/TrainARObject.cs/#L326">View Source</a>
   </span>
   <a id="Interaction_TrainARObject_Error_" data-uid="Interaction.TrainARObject.Error*"></a>
   <h4 id="Interaction_TrainARObject_Error" data-uid="Interaction.TrainARObject.Error">Error()</h4>
@@ -755,10 +758,10 @@ helper in the visual scripting.</p>
   </div>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/Vapopo/TrainAR/new/main/apiSpec/new?filename=Interaction_TrainARObject_Grab.md&amp;value=---%0Auid%3A%20Interaction.TrainARObject.Grab%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/jblattgerste/TrainAR/new/main/apiSpec/new?filename=Interaction_TrainARObject_Grab.md&amp;value=---%0Auid%3A%20Interaction.TrainARObject.Grab%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Vapopo/TrainAR/blob/main/Assets/Scripts/Interaction/TrainARObject.cs/#L278">View Source</a>
+    <a href="https://github.com/jblattgerste/TrainAR/blob/main/Assets/Scripts/Interaction/TrainARObject.cs/#L283">View Source</a>
   </span>
   <a id="Interaction_TrainARObject_Grab_" data-uid="Interaction.TrainARObject.Grab*"></a>
   <h4 id="Interaction_TrainARObject_Grab" data-uid="Interaction.TrainARObject.Grab">Grab()</h4>
@@ -789,10 +792,10 @@ otherwise the error event is invoked instead.</p>
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/Vapopo/TrainAR/new/main/apiSpec/new?filename=Interaction_TrainARObject_Interact_System_String_.md&amp;value=---%0Auid%3A%20Interaction.TrainARObject.Interact(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/jblattgerste/TrainAR/new/main/apiSpec/new?filename=Interaction_TrainARObject_Interact_System_String_.md&amp;value=---%0Auid%3A%20Interaction.TrainARObject.Interact(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Vapopo/TrainAR/blob/main/Assets/Scripts/Interaction/TrainARObject.cs/#L199">View Source</a>
+    <a href="https://github.com/jblattgerste/TrainAR/blob/main/Assets/Scripts/Interaction/TrainARObject.cs/#L204">View Source</a>
   </span>
   <a id="Interaction_TrainARObject_Interact_" data-uid="Interaction.TrainARObject.Interact*"></a>
   <h4 id="Interaction_TrainARObject_Interact_System_String_" data-uid="Interaction.TrainARObject.Interact(System.String)">Interact(String)</h4>
@@ -825,10 +828,10 @@ otherwise the error event is invoked instead.</p>
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/Vapopo/TrainAR/new/main/apiSpec/new?filename=Interaction_TrainARObject_Release.md&amp;value=---%0Auid%3A%20Interaction.TrainARObject.Release%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/jblattgerste/TrainAR/new/main/apiSpec/new?filename=Interaction_TrainARObject_Release.md&amp;value=---%0Auid%3A%20Interaction.TrainARObject.Release%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Vapopo/TrainAR/blob/main/Assets/Scripts/Interaction/TrainARObject.cs/#L308">View Source</a>
+    <a href="https://github.com/jblattgerste/TrainAR/blob/main/Assets/Scripts/Interaction/TrainARObject.cs/#L313">View Source</a>
   </span>
   <a id="Interaction_TrainARObject_Release_" data-uid="Interaction.TrainARObject.Release*"></a>
   <h4 id="Interaction_TrainARObject_Release" data-uid="Interaction.TrainARObject.Release">Release()</h4>
@@ -842,10 +845,10 @@ otherwise the error event is invoked instead.</p>
   </div>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/Vapopo/TrainAR/new/main/apiSpec/new?filename=Interaction_TrainARObject_Select.md&amp;value=---%0Auid%3A%20Interaction.TrainARObject.Select%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/jblattgerste/TrainAR/new/main/apiSpec/new?filename=Interaction_TrainARObject_Select.md&amp;value=---%0Auid%3A%20Interaction.TrainARObject.Select%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Vapopo/TrainAR/blob/main/Assets/Scripts/Interaction/TrainARObject.cs/#L170">View Source</a>
+    <a href="https://github.com/jblattgerste/TrainAR/blob/main/Assets/Scripts/Interaction/TrainARObject.cs/#L175">View Source</a>
   </span>
   <a id="Interaction_TrainARObject_Select_" data-uid="Interaction.TrainARObject.Select*"></a>
   <h4 id="Interaction_TrainARObject_Select" data-uid="Interaction.TrainARObject.Select">Select()</h4>
@@ -864,10 +867,10 @@ otherwise the error event is invoked instead.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/Vapopo/TrainAR/new/main/apiSpec/new?filename=Interaction_TrainARObject.md&amp;value=---%0Auid%3A%20Interaction.TrainARObject%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/jblattgerste/TrainAR/new/main/apiSpec/new?filename=Interaction_TrainARObject.md&amp;value=---%0Auid%3A%20Interaction.TrainARObject%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/Vapopo/TrainAR/blob/main/Assets/Scripts/Interaction/TrainARObject.cs/#L16" class="contribution-link">View Source</a>
+                    <a href="https://github.com/jblattgerste/TrainAR/blob/main/Assets/Scripts/Interaction/TrainARObject.cs/#L17" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

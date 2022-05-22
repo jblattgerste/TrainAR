@@ -79,8 +79,23 @@
             <article class="content wrap" id="_content" data-uid="">
 <h1 id="start-training-node">Start Training Node</h1>
 
-<p>This node acts as a starting point for a TrainAR training. The stateflow initiates from this point, as soon as the training assembly has been placed.</p>
-<p><img src="../resources/StartEvent.png" alt=""></p>
+<p>The (green) Visual Scripting node called &quot;TrainAR: Onboarding completed and training assembly placed&quot; is an event node that is automically executed when the TrainAR framework recognizes that the user of the training finished watching the onboarding, a surface was found and the training assembly was placed by the user. It acts as a starting point for a TrainAR training created by the author.</p>
+<p>There should be only one &quot;TrainAR: Onboarding completed and training assembly placed&quot; node present in a TrainAR Stateflow.</p>
+<p><em>Note: While all other TrainAR nodes can be found under Right Click -&gt; &quot;TrainAR&quot;, the starting node is located under Right Click -&gt; &quot;Events&quot;.</em></p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">TrainAR Node</th>
+<th style="text-align:center">Result</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><img src="../resources/StartEvent.png" alt=""></td>
+<td style="text-align:center"><img src="../resources/TrainAR_Training_Onboarding.png" alt="drawing" width="300"></td>
+</tr>
+</tbody>
+</table>
 </article>
           </div>
           
@@ -89,7 +104,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/Vapopo/TrainAR/blob/main/Documentation/manual/StartTrainingNode.md/#L1" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/jblattgerste/TrainAR/blob/main/Documentation/manual/StartTrainingNode.md/#L1" class="contribution-link">Improve this Doc</a>
                   </li>
                 </ul>
               </div>

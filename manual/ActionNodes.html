@@ -79,18 +79,18 @@
             <article class="content wrap" id="_content" data-uid="">
 <h1 id="action-nodes">Action Nodes</h1>
 
-<p><strong>TrainAR: Action nodes</strong> define which are the correct steps to take for the user in the AR-Training. There are Action Nodes that require an input in the AR-Context, so interactions with the TrainAR Objects, but their are also action nodes which require input of the user on the user interface (UI Action Nodes), which are documented separately <a href="../manual/UIActionNodes.html">here</a>. </p>
+<p><strong>TrainAR: Action</strong> nodes define, which are the correct actions to take for the user in the AR-Training. There are action nodes that require an input in the AR-Context, so interactions with or combination of TrainAR Objects, but there are also action nodes which require input of the user on the user interface (UI Action Nodes), which are documented separately in the <a href="../manual/UIActionNodes.html">UI Action Node</a> documentation.</p>
 <h2 id="ar-interactions-with-action-nodes">AR interactions with Action Nodes</h2>
-<p>Interacting with TrainAR Objects is possible in two ways: interacting and combining. The node can be set to the type of interaction via the drop down menu.</p>
+<p>Interacting with TrainAR Objects in the AR context is possible in two ways: <strong>interacting</strong> and <strong>combining</strong>. The node can be set to the type of interaction via the &quot;Action&quot; drop down menu.</p>
 <p><img src="../resources/Action.png" alt=""></p>
-<p>This node is set to Interaction. If the stateflow is at this node, it waits for actions by the user. If the user triggers an interact with the TrainAR Object specified in <strong>Correct object</strong>, the stateflow continues according to the <strong>Correct</strong>-Output of the node. Consequently, if any other action is taken by the user, the stateflow continues according to the <strong>Incorrect</strong>-Output of the node.</p>
+<p>This node is set to Interaction. If the stateflow reaches this point, the node waits for an action by the user. If the user triggers an interact with the TrainAR Object specified in <strong>Correct object</strong>, the stateflow continues according to the <strong>Correct</strong>-Output of the node. Consequently, if any other action is taken by the user, the stateflow continues according to the <strong>Incorrect</strong>-Output of the node.</p>
 <p><img src="../resources/TrainAR_Action_Combine.PNG" alt=""></p>
 <p>For <strong>Combinations</strong> the node works similarly, though two objects have to be specfied: the grabbed objects, so the one the user is currently holding, and the object the grabbed object is supposed to be combined with.</p>
 <h2 id="custom-action">Custom Action</h2>
-<p>With the Action Node set to <strong>Custom Action</strong> it is also possible to control the stateflow with your own custom actions. In that case, you need to request a state change to the StatemachineConnector with a parameter. This parameter is checked against the parameter defined in the node and then determined as either <strong>Correct</strong> or <strong>Incorrect</strong> - the stateflow then resumes accordingly.</p>
+<p>With the Action Node set to <strong>Custom Action</strong> it is also possible to control the stateflow with your own custom actions/triggers as described in the <a href="https://jblattgerste.github.io/TrainAR/manual/NoVisualScripting.html#using-custom-actions-for-advanced-behaviours">Advanced Options</a>. In that case, you need to request a state change to the StatemachineConnector with a parameter. This parameter is checked against the parameter defined in the node and then determined as either <strong>Correct</strong> or <strong>Incorrect</strong> - the stateflow then resumes accordingly.</p>
 <p><img src="../resources/CustomAction.PNG" alt=""></p>
 <p>In this example the correct parameter is defined as &quot;correctParameter&quot;.</p>
-<p>The following example describes how to request a state change to the StatemachineConnector:</p>
+<p>The following example describes how to request a state change to the StatemachineConnector through C# scripting:</p>
 <pre><code class="lang-cs">parameterToCheck = &quot;correctParameter&quot;;
 
 StatemachineConnector.Instance.RequestStateChange(new StateInformation(parameter: parameterToCheck));
@@ -98,18 +98,18 @@ StatemachineConnector.Instance.RequestStateChange(new StateInformation(parameter
 parameterToCheck = &quot;wrongParameter&quot;;
 
 StatemachineConnector.Instance.RequestStateChange(new StateInformation(parameter: parameterToCheck));
-</code></pre><p>The first call to the StatemachineConnector the stateflow continues according to the <strong>Correct</strong>-output of the node, since parameterToCheck is set to the the correct parameter. The second call to the StatemachineConnector results consequently according to the <strong>Incorrect</strong>-output of the node.</p>
+</code></pre><p>In the first call to the StatemachineConnector the stateflow continues according to the <strong>Correct</strong>-output of the node, since parameterToCheck is set to the the correct parameter. The second call to the StatemachineConnector results in triggering the <strong>Incorrect</strong>-output of the node, since this is not the parameter specified in the node.</p>
 <h3 id="trainar-action-fork">TrainAR: Action (Fork)</h3>
-<p>Sometimes you may run into situations where the training procedure you&#39;re creating has multiple correct actions at one point. TrainAR: Action (Fork) let you specify multiple correct actions and the stateflow these action are supposed to result in. </p>
+<p>Sometimes you may run into situations where the training procedure you&#39;re creating has multiple correct actions at one point. Maybe those actions might even result in a different stateflow after this point. e.g. because there is multiple orders for sub-sequences of the procedure. <strong>TrainAR: Action (Fork)</strong> let you specify multiple correct actions and the stateflow these actions are supposed to result in. </p>
 <p><img src="../resources/ActionFork.png" alt=""></p>
-<p>The number specified in the <strong>Action count</strong> field defines the number of TrainAR Objects with whom an action is considered correct. Consequently, if the number is changed, the node adjusts itself, so the specified number of <strong>Correct objects</strong> and their stateflows may be defined.</p>
+<p>The number specified in the <strong>Action count</strong> field defines the number of TrainAR Objects with whom an action is considered correct. Consequently, if the number is changed, the node adjusts itself, so the specified number of <strong>Correct objects</strong> and their stateflows can be defined.</p>
 <p><img src="../resources/ActionFork_2.PNG" alt=""></p>
 <p>This of course also works analogous with <strong>Combinations</strong>.</p>
 <p><img src="../resources/ActionFork_Combine.PNG" alt=""></p>
 <h3 id="trainar-action-multi">TrainAR Action (Multi)</h3>
-<p>In other cases when creating your training you might run into situations, where multiple actions have to happen, but you don&#39;t care about the sequence in which they happen. These cases can be modeled with the <strong>TrainAR: Action (Fork)</strong> node. </p>
+<p>In other cases when creating your training you might run into situations, where multiple actions have to happen, but it doesn&#39;t necessarily have to be in in a strict order (e.g. combining multiple TrainAR Objects like vegetables with a soup bowl). These cases can be modeled with the <strong>TrainAR: Action (Multi)</strong> node. </p>
 <p><img src="../resources/ActionMulti_2.png" alt=""></p>
-<p>The <strong>All correct</strong> stateflow is triggered once, when <strong>all</strong> of the defined actions have been performed. If any other actions is registered, the incorrect stateflow is triggered.</p>
+<p>The <strong>All correct</strong> stateflow is triggered once, when <strong>all</strong> of the defined actions have been performed. If any other actions is registered, the incorrect stateflow is triggered repeatedly on each incorrect action.</p>
 </article>
           </div>
           
@@ -118,7 +118,7 @@ StatemachineConnector.Instance.RequestStateChange(new StateInformation(parameter
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/Vapopo/TrainAR/blob/main/Documentation/manual/ActionNodes.md/#L1" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/jblattgerste/TrainAR/blob/main/Documentation/manual/ActionNodes.md/#L1" class="contribution-link">Improve this Doc</a>
                   </li>
                 </ul>
               </div>

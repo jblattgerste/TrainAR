@@ -5,9 +5,9 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Create and Configure TrainAR Objects | TrainAR Documentation </title>
+    <title>Creating and Converting TrainAR Objects | TrainAR Documentation </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Create and Configure TrainAR Objects | TrainAR Documentation ">
+    <meta name="title" content="Creating and Converting TrainAR Objects | TrainAR Documentation ">
     <meta name="generator" content="docfx 2.59.2.0">
     
     <link rel="shortcut icon" href="../resources/favicon.ico">
@@ -77,29 +77,31 @@
         <div class="article row grid-right">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="">
-<h1 id="create-and-configure-trainar-objects">Create and Configure TrainAR Objects</h1>
+<h1 id="creating-and-converting-trainar-objects">Creating and Converting TrainAR Objects</h1>
 
-<p>To be able to use your assets for interactions in TrainAR, you need to convert them to <strong>TrainAR Objects</strong> first.</p>
-<p>To convert an object into an <strong>TrainAR Object</strong> simply drag-and-drop it from the project tab into the hierarchy tab. Then right click on it in the hierarchy tab and select <em>Convert to TrainAR Object</em>. </p>
-<p>If the asset you&#39;re trying to convert is packed as a prefab, you&#39;ll also have to unpack it.</p>
+<p>To be able to use 3D assets/models for interactions in TrainAR trainings, you need to convert them to <strong>TrainAR Objects</strong> first. This gives them default TrainAR functionality/behaviours and makes them usable in the TrainAR Stateflow.</p>
+<p>To convert a 3D model into a <strong>TrainAR Object</strong>, simply drag-and-drop it from the project tab into the hierarchy tab. Then right click on it in the hierarchy tab and select <em>Convert to TrainAR Object</em>. If the 3D model you&#39;re trying to convert is packed as a so-called &quot;Prefab&quot; (this is the case if they appear blue in the Hierarchy), you&#39;ll also have to &quot;Unpack Completely&quot; it first. This is often the case for 3D models from the Unity Assetstore. 3D models from 3D scanners or third-party 3D model libraries are rarely packed as Prefabs.</p>
 <p><img src="../resources/CreateObject.gif" alt=""></p>
-<p><strong>Note: An object may only be converted to a TrainAR Object, if it has a transform, MeshFilter and a MeshRenderer applied to it.</strong></p>
-<h2 id="trainar-object-states">TrainAR Object States</h2>
-<p>A <strong>TrainAR Object</strong> has certain state attribute with which you can control in which kinds of ways the object can be interacted with. These states are:</p>
-<p><strong>Visible:</strong> Whether or not this TrainAR Object is visible.</p>
-<p><strong>Grabbable:</strong> If this is enabled, objects may be grabbed and moved around. Therefore this should be disabled, in case of stationary objects.</p>
+<p>Note: An object may only be converted to a TrainAR Object, if was not already converted and it has a Transform, MeshFilter and a MeshRenderer applied to it. SkinnedMeshRenderers are currently not supported.</p>
+<h2 id="object-states">Object States</h2>
+<p>A <strong>TrainAR Object</strong> has certain state attributes with which you can control in which kinds of ways the object can be interacted with. These states are:</p>
+<p><strong>Visible:</strong> Whether or not this TrainAR Object is visible or invisible.</p>
+<p><strong>Grabbable:</strong> If this is enabled, objects may be grabbed and moved around by the user. Therefore this should be disabled, in case of stationary objects.</p>
 <p><strong>Interactable:</strong> Whether or not it is possible to trigger interactions on this object.</p>
-<p><strong>Combineable:</strong> Whether or not it is possible to trigger combines on this object.</p>
-<p>If you have selected an TrainAR Object in the Authoring Tool, you can toggle these states by clicking on them in the <strong>Object State Toolbar</strong>.</p>
+<p><strong>Combineable:</strong> Whether or not it is possible to combine other TrainAR objects with it.</p>
+<p>If you have selected a TrainAR Object in the Authoring Tool, you can alter the state TrainAR objects start the training with by clicking on them in the <strong>Object State Toolbar</strong>. Note: You can also change TrainAR object states during the training through the <a href="https://jblattgerste.github.io/TrainAR/manual/ObjectHelperNode.html">Object Helper Node</a> in the TrainAR Stateflow.</p>
 <p><img src="../resources/ToggleStates.gif" alt=""></p>
-<h2 id="tool-bar">Tool bar</h2>
-<p>With the Tools bar you can configure your TrainAR Objects further. For example, you can move, rotate and scale objects.</p>
+<h2 id="transform-tools">Transform Tools</h2>
+<p>With the Transform Tools you can configure your TrainAR Objects further. For example, you can move, rotate, or scale objects and alter their Bounding Box.</p>
 <p><img src="../resources/MoveRotateScale.gif" alt=""></p>
-<p>The Transform tool is a combination of the previous tools.</p>
+<p>The Transform tool is a convenient combination of the previous tools.</p>
 <p><img src="../resources/TransformTool.gif" alt=""></p>
 <p>With the Bounding Box Tool you can configure the bounding box of the object, which among other things, defines at what point TrainAR Objects are overlapping, so they can be combined with each other.</p>
-<p>Holding alt and clicking pins the center in place and clicking shift makes it possible to scale the bounding box uniformly.</p>
+<p>Tip: Holding alt and clicking pins the center in place and clicking shift makes it possible to scale the bounding box uniformly.</p>
 <p><img src="../resources/BoundingBox.gif" alt=""></p>
+<h2 id="object-level-behaviours">Object-level Behaviours</h2>
+<p>Nothing to do here for now. </p>
+<p>TrainAR Objects automatically inherit all necessary behaviours like physics, collisions, outlining, sounds, shadows, interactions and many more for TrainAR to work consistently. There might be cases where you want more than what is provided. E.g. playing a specific sound on a specific combination of two objects, outlining this specific object on selection in pink (for some reason) or showing a cat GIF when this object is interacted with. How to accomplish these object-level behaviours by listening to TrainAR Object interaction events is described in the <a href="https://jblattgerste.github.io/TrainAR/manual/NoVisualScripting.html#switching-to-the-default-unity-editor">Advanced Options</a>.</p>
 </article>
           </div>
           
@@ -108,7 +110,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/Vapopo/TrainAR/blob/main/Documentation/manual/TrainArObjects.md/#L1" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/jblattgerste/TrainAR/blob/main/Documentation/manual/TrainArObjects.md/#L1" class="contribution-link">Improve this Doc</a>
                   </li>
                 </ul>
               </div>

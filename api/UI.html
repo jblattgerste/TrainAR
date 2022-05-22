@@ -88,48 +88,55 @@
     <h3 id="classes">Classes
   </h3>
       <h4><a class="xref" href="UI.CrosshairOnOff.html">CrosshairOnOff</a></h4>
-      <section><p>Controls the dynamic transformations of the crosshair.</p>
+      <section><p>Controls the dynamic transformations of the crosshair. It activates and deactivates the crosshair
+but also visualizes the distance to a grabbable TrainAR object by converging the crosshairs size until
+the object would be selected (e.g. if the user is too far away from an object to grab it).</p>
 </section>
       <h4><a class="xref" href="UI.DirectInfoController.html">DirectInfoController</a></h4>
-      <section><p>Handles the displaying of direct info boxes.</p>
+      <section><p>The DirectInfoBoxController handles the displaying of direct info boxes that are used to display insishgts to the user.
+It is triggerd through invocation of an action in the StatemachineConnector and therefore has no public methods.</p>
 </section>
       <h4><a class="xref" href="UI.ErrorOverlayController.html">ErrorOverlayController</a></h4>
-      <section><p>Handles the Error overlay, triggers it on actions from the statemachine and sets its texts</p>
+      <section><p>The error overlay controller handles the error overlay, triggers it on actions from the statemachine and sets its texts.
+It is triggerd through invocation of an action in the StatemachineConnector and therefore has no public methods.</p>
 </section>
       <h4><a class="xref" href="UI.InputFieldAdjust.html">InputFieldAdjust</a></h4>
-      <section><p>Adjusts the UI of the Input field when opened</p>
+      <section><p>InputFieldAdjust Adjusts the UI of the Input field when the keyboard is opened.
+This is mostly problematic on Android otherwise.</p>
 </section>
       <h4><a class="xref" href="UI.InteractButton.html">InteractButton</a></h4>
       <section><p>Handles interactions with the interact button.</p>
 </section>
       <h4><a class="xref" href="UI.InteractionButtonController.html">InteractionButtonController</a></h4>
       <section><p>Handles the behaviour of the interaction buttons, such as enabling and disabling when appropriate
-or highlighting when a combine is possible.</p>
+or highlighting the combine button in orange when a combination would be possible.</p>
+<p>It also allows for grabbed objects to be rotatable.</p>
 </section>
       <h4><a class="xref" href="UI.OnBoardingController.html">OnBoardingController</a></h4>
-      <section><p>Handles the displaying of the Onboarding animations for placing the Setup-Prefab.</p>
+      <section><p>The OnBoardingController handles displaying the onboarding animations for scanning the environment and placing the
+training assembly by automaticaly detecting at which point and where sufficient feature points for a plane were detected.</p>
 </section>
       <h4><a class="xref" href="UI.OpenSidePanel.html">OpenSidePanel</a></h4>
-      <section><p>Handles opening or closing of the side panel.</p>
+      <section><p>Handles opening or closing of the side panel (burger menu) wiht options for help, quitting and replacing the assembly.</p>
 </section>
       <h4><a class="xref" href="UI.Question.html">Question</a></h4>
-      <section><p>Abstract class for questions to share same ui functions.</p>
+      <section><p>The abstract class for questions to share the same UI functions.</p>
 </section>
       <h4><a class="xref" href="UI.QuestionnaireController.html">QuestionnaireController</a></h4>
-      <section><p>The QuestionaireController implements the functions to control the input field questions, reqular question and question lists.
-The input field question opens the keyboard and recives any given input.
-The regular question opens a question with up to four answers.
-the question list opens a list with answers and continues when all right answer are taken.</p>
+      <section><p>The QuestionaireController provides the functionality to control the input field questions, reqular question and question lists.
+The input field question opens the keyboard and recives any given string input from the user.
+The regular question opens a question with up to four possible pre-defined awnsers.
+The question list opens a list with n possible items and continues when all right items were selected.</p>
 </section>
       <h4><a class="xref" href="UI.SaveArea.html">SaveArea</a></h4>
-      <section><p>The safeArea scripts moves UI components when they would otherwise be occluded by e.g. cutout cameras or speakers
-on some newer smartphone models.</p>
+      <section><p>The SafeArea scripts moves UI components when they would otherwise be occluded by e.g. cutout cameras or speakers
+on some newer smartphone devices. </p>
 </section>
       <h4><a class="xref" href="UI.StreamVideo.html">StreamVideo</a></h4>
-      <section><p>Handles playing of the onboarding animations.</p>
+      <section><p>StreamVideo is a wrapper for the Videoplayer class and handles playing of the onboarding animations.</p>
 </section>
       <h4><a class="xref" href="UI.TopPanelController.html">TopPanelController</a></h4>
-      <section><p>Handles Updates to the TopPanel showing the instructions and progress of the training</p>
+      <section><p>The TopPanelController handpes updates to the UI panel of the trainign scenario, showing the instructions and progress percentage of the training.</p>
 </section>
     <h3 id="structs">Structs
   </h3>
@@ -139,7 +146,8 @@ on some newer smartphone models.</p>
     <h3 id="enums">Enums
   </h3>
       <h4><a class="xref" href="UI.QuestionnaireController.QuestionUITypes.html">QuestionnaireController.QuestionUITypes</a></h4>
-      <section></section>
+      <section><p>The type of the UI custom action/question.</p>
+</section>
 </article>
           </div>
           
