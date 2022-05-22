@@ -1,0 +1,144 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Object Helper Node | TrainAR Documentation </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Object Helper Node | TrainAR Documentation ">
+    <meta name="generator" content="docfx 2.59.2.0">
+    
+    <link rel="shortcut icon" href="../resources/favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../resources/logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list">Search Results for <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="object-helper-node">Object Helper Node</h1>
+
+<p>TrainAR: Object Helper node give you various options to configure specific TrainAR Objects. In the <strong>Helper</strong> dropwodn menu you can view the different configuration options. To specifiy which <strong>TrainAR Object</strong> in the scene you want to configure, specify the <strong>Object name</strong> in the node.</p>
+<p><img src="../resources/ObjectHelper.png" alt=""></p>
+<h2 id="toggle-visibility">Toggle Visibility</h2>
+<p>Check or unech the <strong>Visible</strong> field to make the specified <strong>TrainAR Object</strong> invisible or visible.</p>
+<h2 id="toggle-grabbable">Toggle Grabbable</h2>
+<p>Check or uncheck the <strong>Grabbable</strong> field to make the specified <strong>TrainAR Object</strong> grabbable or ungrabbable.</p>
+<h2 id="toggle-interactable">Toggle Interactable</h2>
+<p>Check or uncheck the <strong>Interactable</strong> field to make the specified <strong>TrainAR Object</strong> interactable or not interactable.</p>
+<h2 id="toggle-combinable">Toggle Combinable</h2>
+<p>Check or uncheck the <strong>Combinable</strong> field to make the specified <strong>TrainAR Object</strong> combinable or not combinable.</p>
+<h2 id="change-interaction-text">Change Interaction text</h2>
+<p>Changes the labeling of the interaction button when selecting an TrainAR Object. A TrainAR Object is selected when you aim at a TrainAR Object and move close to it.</p>
+<p>By default the labeling is simply <em>Interact</em>. </p>
+<h2 id="change-lerping-distance">Change Lerping distance</h2>
+<p>This changes the distance with which an <strong>grabbed TrainAR Object</strong> floats away from the screen. Generally, you probably want to have bigger TrainAR Objects float at a larger distance than smaller ones. That way they don&#39;t cover the whole screen while grabbing them.</p>
+<h2 id="change-mesh-and-texture">Change Mesh and Texture</h2>
+<p>With this node you can change what a <strong>TrainAR Object</strong> looks like by changing it&#39;s mesh and material. This is for example useful if as a result of a combination or interaction an object is supposed to be altered.</p>
+<h2 id="get-object-reference">Get Object Reference</h2>
+<p>This node returns the <strong>Unity GameObject</strong> Reference of the specified <strong>TrainAR Object</strong>. For more information about Unity GameObjects refer to the <a href="https://docs.unity3d.com/ScriptReference/GameObject.html">Unity Documentation</a>. </p>
+<h2 id="fuse-two-objects">Fuse Two Objects</h2>
+<p>This attaches one <strong>TrainAR Object</strong> to another, making them one. The <strong>Object name</strong> field specifies the object that is fused unto another object, which is specified in the <strong>Fuse to Object</strong> field. In the <strong>Offset Position and Rotation</strong> field the position and rotation relative to the fused to TrainAR Object is specified.</p>
+<h2 id="destroy-object">Destroy Object</h2>
+<p>Destroys and removes the specified TrainAR Object from the scene. </p>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/Vapopo/TrainAR/blob/main/Documentation/manual/ObjectHelperNode.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            TrainAR Documentation
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

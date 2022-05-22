@@ -1,0 +1,183 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Getting Started | TrainAR Documentation </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Getting Started | TrainAR Documentation ">
+    <meta name="generator" content="docfx 2.59.2.0">
+    
+    <link rel="shortcut icon" href="../resources/favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../resources/logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list">Search Results for <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="getting-started">Getting Started</h1>
+
+<h2 id="1-install-unity">1. Install Unity</h2>
+<p>Download and install <a href="https://unity3d.com/de/get-unity/download">Unity</a>. To use TrainAR you&#39;ll need atleast Unity Version 2022.1.0.
+When installing Unity make sure you check the correct modules, depending on which kind of device you want to create trainings for: </p>
+<p>For Android choose Android Build Support. Make sure to have also Android SDK &amp; NDK Tools and OpenJDK checked. If you do not already have an IDE installed, we recommend also installing Microsoft Visual Studio Community 2019.</p>
+<p><img src="../resources/Install_Modules_Android.PNG" alt=""></p>
+<p>For iOS choose iOS Build Support
+<img src="../resources/Install_Modules_iOS.PNG" alt=""></p>
+<h2 id="2-open-trainar-in-unity">2. Open TrainAR in Unity</h2>
+<p>Clone the TrainAR Repository to your Computer. </p>
+<p>Open Unity and add TrainAR as a new Project. Open the TrainAR Project. </p>
+<p>The Authoring Tool should open.</p>
+<p><img src="../resources/TrainAR_Overview.PNG" alt=""></p>
+<p>In the scene window you should now see a reference assembly of the current Workspace. This assembly should give you an idea of the size of objects in regards to the real world when viewed in AR mode.</p>
+<h2 id="3-create-a-trainar-object">3. Create a TrainAR Object</h2>
+<p>On the left in the Hierarchy tab is a currently empty list of the  objects in the scene.
+On the Bottom Left, in the Project Tab open the Prefabs folder. There is a Prefab named <em>Spoon_Prefab</em>.</p>
+<p>Click on this Prefab and drag-and-drop it into the Hierarchy Tab. The spoon should appear on the table.</p>
+<p>To interact with this object You&#39;ll need to unpack the prefab and then convert it to a TrainAR Object.
+You do this by right-clicking on it in the Hierarchy Tab and select <em>Prefab</em> and in the submenu <em>Unpack Completely</em>. Then right-click on it again and select <em>Convert to TrainAR Object</em>. You may then change the name of the object. </p>
+<p>You can move the newly created TrainAR object around, rotate it or change the size. To do this, you can switch between different tools in the Tools tab in the Scene View. For now make sure the Move tool is selected and move the object in a fitting position on the table.</p>
+<p><img src="../resources/GettingStarted_CreateObject.gif" alt=""></p>
+<p>Now add <em>Coffee_Tin_Prefab</em> from the Prefabs folder, unpack it and convert it to an TrainARObject, then position it. Your setup should now look kind of like this:</p>
+<p><img src="../resources/TrainARObject_Setup.PNG" alt=""></p>
+<h2 id="4-create-a-trainar-stateflow">4. Create a TrainAR Stateflow</h2>
+<p>In the Bottom of the Unity window you should see the window with the Script Graph Tab. </p>
+<p><img src="../resources/TrainAR_Overview_ScriptGraphTab.PNG" alt=""></p>
+<p>Here you can create the flow of your training by creating nodes and connecting them. There already is one node in the Script Graph with the description <em>TrainAR: Onboarding completed and training assembly placed</em>.</p>
+<p>This is the entry point of your training flow.</p>
+<p>Right click into the Script Graph Window and select <em>TrainAR</em> from the Node Menu. From there, select <em>TrainAR: Action</em>. </p>
+<p>The <em>TrainAR Action</em> node should appear in the Stateflow. There are two types of action you can define: Interaction and Combine. For now leave the chosen action to Interaction. In the <em>TrainAR: Action</em> node under the <em>Correct Action</em> textfield type in <em>Spoon</em>.</p>
+<p>Now connect the two nodes by clicking on the output of the <em>TrainAR: Onboarding completed and training assembly placed</em> node and connecting the line with the input of the <em>TrainAR: Action</em> node.</p>
+<p><img src="../resources/GettingStarted_CreateNodeAndConnect.gif" alt=""></p>
+<p>You have now defined that, at this point in the stateflow, the correct next step is to trigger an Interaction on <em>Spoon</em>.</p>
+<p>Right click again in the Script Graph window to open the node menu and select the <em>TrainAR: Feedback</em> node in the TrainAR nodes folder. This node opens an error overlay. Type a fitting error messages in the textfield and connect the Incorrect output of the <em>TrainAR: Action</em> node with the Input of the <em>TrainAR: Feedback</em> node.</p>
+<p><img src="../resources/GettingStarted_WrongFeedback.gif" alt=""></p>
+<p>You have now defined what happens if an incorrect action is taken at this point in the stateflow. Now define what should happens if the correct action is taken.</p>
+<p>Create another <em>TrainAR: Feedback</em> node and type in feedback for the correct action taken and connect it to the correct output of the <em>TrainAR: Action</em> node.</p>
+<p><img src="../resources/TrainAR_ScriptingGraph_CorrectFeedback.PNG" alt=""></p>
+<p>Now create another <em>TrainAR: Action</em> node and connect it to the <em>TrainAR Feedback</em> for the correct feedback. Select <em>Combination</em> as an Action in the node. Under <em>Correct Grabbed Object</em> type in <em>Spoon</em> and under <em>Correct stationary Object</em> type in <em>Coffee_Tin</em>. Connect the nodes.</p>
+<p><img src="../resources/GettingStarted_CombineNode.gif" alt=""></p>
+<p>You have now defined, that at this point in the stateflow, the correct step is to combine the spoon with the coffee tin. Next you&#39;ll have to define what happens as a result. Let&#39;s make the combine fill up the spoon.</p>
+<p>To do this add a <em>TrainAR: Object Helper</em> node to the stateflow. In the node, set the dropdown menu to <em>Replace Mesh</em> and type in the <em>Object Name</em> field <em>Spoon</em>. In the Project Tab navigate to the Meshes folder and drag-and-drop the <em>SpoonFilled</em> mesh into the mesh field of the node. Then, drag-and-drop the <em>SpoonFilled</em> material from the Materials folder into the material field. Finally, connect the stateflow.</p>
+<p><img src="../resources/GettingStarted_ObjectHelper.gif" alt=""></p>
+<p>Now add a <em>TrainAR: Action (UI)</em> node. Set the dropdown menu in the node you just created to <em>Questionnaire</em>. A UI action node waits for user input on the UI before it continues in a stateflow. In this example, we&#39;ll simply ask the user whether or not he want&#39;s to finish the training. Therefore write a fitting Questiontext in the <em>Question</em> field of the node and add some chooseable answers.
+Don&#39;t forget to connect the stateflow of the previous node.</p>
+<p><img src="../resources/GettingStarted_QuestionnaireNode.gif" alt=""></p>
+<p>Finally, create a <em>TrainAR: Training Conclusion</em> node and connect the node from the previous step with it.</p>
+<p><img src="../resources/TrainAR_ScriptingGraph_TrainingComplete.PNG" alt=""></p>
+<p>Here is the full procedure in one go:</p>
+<p><img src="../resources/FullTraining.gif" alt=""></p>
+<h2 id="5-deploy-your-training-to-your-phone">5. Deploy your training to your phone</h2>
+<p>Connect your Phone to your Computer.</p>
+<p>Make sure you have USB Debugging activated on your phone.</p>
+<p>Press the play button in the Unity Editor to deploy your training to your device.</p>
+<p><img src="../resources/TrainAR_Overview_PressPlay.png" alt=""></p>
+<p>Your Training should now be deployed to your phone and appear as TrainAR on your device.</p>
+<h2 id="6-test-your-training">6. Test your training</h2>
+<p>Open the now deployed application on your phone. Your phone might ask you if the TrainAR app should be allowed to use your phones camera. Confirm this.</p>
+<p>A short tutorial that describes the general actions in TrainAR should appear. Navigate through the tutorial. </p>
+<p>The camera feed of your device should start and you&#39;re asked to find a flat surface to scan. Follow these instructions. This should result in the setup you just created being placed.</p>
+<p>[TBD Image of placed setup]</p>
+<p>Now you can go through the actions you just as you programmed them into the stateflow.</p>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/Vapopo/TrainAR/blob/main/Documentation/manual/GettingStarted.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            TrainAR Documentation
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

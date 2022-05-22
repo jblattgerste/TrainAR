@@ -1,0 +1,142 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Create and Configure TrainAR Objects | TrainAR Documentation </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Create and Configure TrainAR Objects | TrainAR Documentation ">
+    <meta name="generator" content="docfx 2.59.2.0">
+    
+    <link rel="shortcut icon" href="../resources/favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../resources/logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list">Search Results for <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="create-and-configure-trainar-objects">Create and Configure TrainAR Objects</h1>
+
+<p>To be able to use your assets for interactions in TrainAR, you need to convert them to <strong>TrainAR Objects</strong> first.</p>
+<p>To convert an object into an <strong>TrainAR Object</strong> simply drag-and-drop it from the project tab into the hierarchy tab. Then right click on it in the hierarchy tab and select <em>Convert to TrainAR Object</em>. </p>
+<p>If the asset you&#39;re trying to convert is packed as a prefab, you&#39;ll also have to unpack it.</p>
+<p><img src="../resources/CreateObject.gif" alt=""></p>
+<p><strong>Note: An object may only be converted to a TrainAR Object, if it has a transform, MeshFilter and a MeshRenderer applied to it.</strong></p>
+<h2 id="trainar-object-states">TrainAR Object States</h2>
+<p>A <strong>TrainAR Object</strong> has certain state attribute with which you can control in which kinds of ways the object can be interacted with. These states are:</p>
+<p><strong>Visible:</strong> Whether or not this TrainAR Object is visible.</p>
+<p><strong>Grabbable:</strong> If this is enabled, objects may be grabbed and moved around. Therefore this should be disabled, in case of stationary objects.</p>
+<p><strong>Interactable:</strong> Whether or not it is possible to trigger interactions on this object.</p>
+<p><strong>Combineable:</strong> Whether or not it is possible to trigger combines on this object.</p>
+<p>If you have selected an TrainAR Object in the Authoring Tool, you can toggle these states by clicking on them in the <strong>Object State Toolbar</strong>.</p>
+<p><img src="../resources/ToggleStates.gif" alt=""></p>
+<h2 id="tool-bar">Tool bar</h2>
+<p>With the Tools bar you can configure your TrainAR Objects further. For example, you can move, rotate and scale objects.</p>
+<p><img src="../resources/MoveRotateScale.gif" alt=""></p>
+<p>The Transform tool is a combination of the previous tools.</p>
+<p><img src="../resources/TransformTool.gif" alt=""></p>
+<p>With the Bounding Box Tool you can configure the bounding box of the object, which among other things, defines at what point TrainAR Objects are overlapping, so they can be combined with each other.</p>
+<p>Holding alt and clicking pins the center in place and clicking shift makes it possible to scale the bounding box uniformly.</p>
+<p><img src="../resources/BoundingBox.gif" alt=""></p>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/Vapopo/TrainAR/blob/main/Documentation/manual/TrainArObjects.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            TrainAR Documentation
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>
