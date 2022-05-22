@@ -1,0 +1,192 @@
+### YamlMime:ManagedReference
+items:
+- uid: UI.InteractionButtonController
+  commentId: T:UI.InteractionButtonController
+  id: InteractionButtonController
+  parent: UI
+  children:
+  - UI.InteractionButtonController.ActivateInteractButtons
+  - UI.InteractionButtonController.DeactivateInteractButtons
+  - UI.InteractionButtonController.grabbedObjectRotationSpeed
+  - UI.InteractionButtonController.GrabRelease
+  langs:
+  - csharp
+  - vb
+  name: InteractionButtonController
+  nameWithType: InteractionButtonController
+  fullName: UI.InteractionButtonController
+  type: Class
+  source:
+    id: InteractionButtonController
+    path: ''
+    startLine: 5275
+  assemblies:
+  - cs.temp.dll
+  namespace: UI
+  summary: "\nHandles the behaviour of the interaction buttons, such as enabling and disabling when appropriate\nor highlighting when a combine is possible.\n"
+  example: []
+  syntax:
+    content: 'public class InteractionButtonController : MonoBehaviour'
+    content.vb: >-
+      Public Class InteractionButtonController
+          Inherits MonoBehaviour
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: UI.InteractionButtonController.grabbedObjectRotationSpeed
+  commentId: F:UI.InteractionButtonController.grabbedObjectRotationSpeed
+  id: grabbedObjectRotationSpeed
+  parent: UI.InteractionButtonController
+  langs:
+  - csharp
+  - vb
+  name: grabbedObjectRotationSpeed
+  nameWithType: InteractionButtonController.grabbedObjectRotationSpeed
+  fullName: UI.InteractionButtonController.grabbedObjectRotationSpeed
+  type: Field
+  source:
+    id: grabbedObjectRotationSpeed
+    path: ''
+    startLine: 5297
+  assemblies:
+  - cs.temp.dll
+  namespace: UI
+  syntax:
+    content: public float grabbedObjectRotationSpeed
+    return:
+      type: System.Single
+    content.vb: Public grabbedObjectRotationSpeed As Single
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: UI.InteractionButtonController.ActivateInteractButtons
+  commentId: M:UI.InteractionButtonController.ActivateInteractButtons
+  id: ActivateInteractButtons
+  parent: UI.InteractionButtonController
+  langs:
+  - csharp
+  - vb
+  name: ActivateInteractButtons()
+  nameWithType: InteractionButtonController.ActivateInteractButtons()
+  fullName: UI.InteractionButtonController.ActivateInteractButtons()
+  type: Method
+  source:
+    id: ActivateInteractButtons
+    path: ''
+    startLine: 5322
+  assemblies:
+  - cs.temp.dll
+  namespace: UI
+  summary: "\nMakes the buttons visible.\n"
+  example: []
+  syntax:
+    content: public void ActivateInteractButtons()
+    content.vb: Public Sub ActivateInteractButtons
+  overload: UI.InteractionButtonController.ActivateInteractButtons*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: UI.InteractionButtonController.DeactivateInteractButtons
+  commentId: M:UI.InteractionButtonController.DeactivateInteractButtons
+  id: DeactivateInteractButtons
+  parent: UI.InteractionButtonController
+  langs:
+  - csharp
+  - vb
+  name: DeactivateInteractButtons()
+  nameWithType: InteractionButtonController.DeactivateInteractButtons()
+  fullName: UI.InteractionButtonController.DeactivateInteractButtons()
+  type: Method
+  source:
+    id: DeactivateInteractButtons
+    path: ''
+    startLine: 5330
+  assemblies:
+  - cs.temp.dll
+  namespace: UI
+  summary: "\nMakes the buttons invisible.\n"
+  example: []
+  syntax:
+    content: public void DeactivateInteractButtons()
+    content.vb: Public Sub DeactivateInteractButtons
+  overload: UI.InteractionButtonController.DeactivateInteractButtons*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: UI.InteractionButtonController.GrabRelease
+  commentId: M:UI.InteractionButtonController.GrabRelease
+  id: GrabRelease
+  parent: UI.InteractionButtonController
+  langs:
+  - csharp
+  - vb
+  name: GrabRelease()
+  nameWithType: InteractionButtonController.GrabRelease()
+  fullName: UI.InteractionButtonController.GrabRelease()
+  type: Method
+  source:
+    id: GrabRelease
+    path: ''
+    startLine: 5393
+  assemblies:
+  - cs.temp.dll
+  namespace: UI
+  summary: "\nWhat happens when the &quot;Grab&quot;-Button is pressed.\n"
+  example: []
+  syntax:
+    content: public void GrabRelease()
+    content.vb: Public Sub GrabRelease
+  overload: UI.InteractionButtonController.GrabRelease*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: UI
+  commentId: N:UI
+  name: UI
+  nameWithType: UI
+  fullName: UI
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.Single
+  commentId: T:System.Single
+  parent: System
+  isExternal: true
+  name: Single
+  nameWithType: Single
+  fullName: System.Single
+- uid: UI.InteractionButtonController.ActivateInteractButtons*
+  commentId: Overload:UI.InteractionButtonController.ActivateInteractButtons
+  name: ActivateInteractButtons
+  nameWithType: InteractionButtonController.ActivateInteractButtons
+  fullName: UI.InteractionButtonController.ActivateInteractButtons
+- uid: UI.InteractionButtonController.DeactivateInteractButtons*
+  commentId: Overload:UI.InteractionButtonController.DeactivateInteractButtons
+  name: DeactivateInteractButtons
+  nameWithType: InteractionButtonController.DeactivateInteractButtons
+  fullName: UI.InteractionButtonController.DeactivateInteractButtons
+- uid: UI.InteractionButtonController.GrabRelease*
+  commentId: Overload:UI.InteractionButtonController.GrabRelease
+  name: GrabRelease
+  nameWithType: InteractionButtonController.GrabRelease
+  fullName: UI.InteractionButtonController.GrabRelease

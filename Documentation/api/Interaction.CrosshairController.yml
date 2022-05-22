@@ -1,0 +1,230 @@
+### YamlMime:ManagedReference
+items:
+- uid: Interaction.CrosshairController
+  commentId: T:Interaction.CrosshairController
+  id: CrosshairController
+  parent: Interaction
+  children:
+  - Interaction.CrosshairController.ActivateContextButtons
+  - Interaction.CrosshairController.ActivateCrosshair
+  - Interaction.CrosshairController.contextButtonsAreActive
+  - Interaction.CrosshairController.DeactivateContextButtons
+  - Interaction.CrosshairController.DeactivateCrosshair
+  langs:
+  - csharp
+  - vb
+  name: CrosshairController
+  nameWithType: CrosshairController
+  fullName: Interaction.CrosshairController
+  type: Class
+  source:
+    id: CrosshairController
+    path: ''
+    startLine: 1461
+  assemblies:
+  - cs.temp.dll
+  namespace: Interaction
+  summary: "\nThe CrosshairController activates/deactivates the crosshair which is positioned in the middle of the screen.\n"
+  example: []
+  syntax:
+    content: 'public class CrosshairController : MonoBehaviour'
+    content.vb: >-
+      Public Class CrosshairController
+          Inherits MonoBehaviour
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Interaction.CrosshairController.contextButtonsAreActive
+  commentId: F:Interaction.CrosshairController.contextButtonsAreActive
+  id: contextButtonsAreActive
+  parent: Interaction.CrosshairController
+  langs:
+  - csharp
+  - vb
+  name: contextButtonsAreActive
+  nameWithType: CrosshairController.contextButtonsAreActive
+  fullName: Interaction.CrosshairController.contextButtonsAreActive
+  type: Field
+  source:
+    id: contextButtonsAreActive
+    path: ''
+    startLine: 1477
+  assemblies:
+  - cs.temp.dll
+  namespace: Interaction
+  summary: "\nIch bin eine summary\n"
+  remarks: remark geht vll auch
+  example: []
+  syntax:
+    content: public bool contextButtonsAreActive
+    return:
+      type: System.Boolean
+      description: Funktioniert vll value
+    content.vb: Public contextButtonsAreActive As Boolean
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Interaction.CrosshairController.ActivateCrosshair
+  commentId: M:Interaction.CrosshairController.ActivateCrosshair
+  id: ActivateCrosshair
+  parent: Interaction.CrosshairController
+  langs:
+  - csharp
+  - vb
+  name: ActivateCrosshair()
+  nameWithType: CrosshairController.ActivateCrosshair()
+  fullName: Interaction.CrosshairController.ActivateCrosshair()
+  type: Method
+  source:
+    id: ActivateCrosshair
+    path: ''
+    startLine: 1508
+  assemblies:
+  - cs.temp.dll
+  namespace: Interaction
+  summary: "\nActivate the crosshair.\n"
+  example: []
+  syntax:
+    content: public void ActivateCrosshair()
+    content.vb: Public Sub ActivateCrosshair
+  overload: Interaction.CrosshairController.ActivateCrosshair*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Interaction.CrosshairController.DeactivateCrosshair
+  commentId: M:Interaction.CrosshairController.DeactivateCrosshair
+  id: DeactivateCrosshair
+  parent: Interaction.CrosshairController
+  langs:
+  - csharp
+  - vb
+  name: DeactivateCrosshair()
+  nameWithType: CrosshairController.DeactivateCrosshair()
+  fullName: Interaction.CrosshairController.DeactivateCrosshair()
+  type: Method
+  source:
+    id: DeactivateCrosshair
+    path: ''
+    startLine: 1516
+  assemblies:
+  - cs.temp.dll
+  namespace: Interaction
+  summary: "\nDeactivates the crosshair.\n"
+  example: []
+  syntax:
+    content: public void DeactivateCrosshair()
+    content.vb: Public Sub DeactivateCrosshair
+  overload: Interaction.CrosshairController.DeactivateCrosshair*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Interaction.CrosshairController.DeactivateContextButtons
+  commentId: M:Interaction.CrosshairController.DeactivateContextButtons
+  id: DeactivateContextButtons
+  parent: Interaction.CrosshairController
+  langs:
+  - csharp
+  - vb
+  name: DeactivateContextButtons()
+  nameWithType: CrosshairController.DeactivateContextButtons()
+  fullName: Interaction.CrosshairController.DeactivateContextButtons()
+  type: Method
+  source:
+    id: DeactivateContextButtons
+    path: ''
+    startLine: 1523
+  assemblies:
+  - cs.temp.dll
+  namespace: Interaction
+  summary: "\nDeactivates the context buttons.\n"
+  example: []
+  syntax:
+    content: public void DeactivateContextButtons()
+    content.vb: Public Sub DeactivateContextButtons
+  overload: Interaction.CrosshairController.DeactivateContextButtons*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Interaction.CrosshairController.ActivateContextButtons
+  commentId: M:Interaction.CrosshairController.ActivateContextButtons
+  id: ActivateContextButtons
+  parent: Interaction.CrosshairController
+  langs:
+  - csharp
+  - vb
+  name: ActivateContextButtons()
+  nameWithType: CrosshairController.ActivateContextButtons()
+  fullName: Interaction.CrosshairController.ActivateContextButtons()
+  type: Method
+  source:
+    id: ActivateContextButtons
+    path: ''
+    startLine: 1532
+  assemblies:
+  - cs.temp.dll
+  namespace: Interaction
+  summary: "\nActivates the context buttons.\n"
+  example: []
+  syntax:
+    content: public void ActivateContextButtons()
+    content.vb: Public Sub ActivateContextButtons
+  overload: Interaction.CrosshairController.ActivateContextButtons*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: Interaction
+  commentId: N:Interaction
+  name: Interaction
+  nameWithType: Interaction
+  fullName: Interaction
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: Interaction.CrosshairController.ActivateCrosshair*
+  commentId: Overload:Interaction.CrosshairController.ActivateCrosshair
+  name: ActivateCrosshair
+  nameWithType: CrosshairController.ActivateCrosshair
+  fullName: Interaction.CrosshairController.ActivateCrosshair
+- uid: Interaction.CrosshairController.DeactivateCrosshair*
+  commentId: Overload:Interaction.CrosshairController.DeactivateCrosshair
+  name: DeactivateCrosshair
+  nameWithType: CrosshairController.DeactivateCrosshair
+  fullName: Interaction.CrosshairController.DeactivateCrosshair
+- uid: Interaction.CrosshairController.DeactivateContextButtons*
+  commentId: Overload:Interaction.CrosshairController.DeactivateContextButtons
+  name: DeactivateContextButtons
+  nameWithType: CrosshairController.DeactivateContextButtons
+  fullName: Interaction.CrosshairController.DeactivateContextButtons
+- uid: Interaction.CrosshairController.ActivateContextButtons*
+  commentId: Overload:Interaction.CrosshairController.ActivateContextButtons
+  name: ActivateContextButtons
+  nameWithType: CrosshairController.ActivateContextButtons
+  fullName: Interaction.CrosshairController.ActivateContextButtons

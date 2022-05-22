@@ -1,0 +1,55 @@
+### YamlMime:ManagedReference
+items:
+- uid: UI.ErrorOverlayController
+  commentId: T:UI.ErrorOverlayController
+  id: ErrorOverlayController
+  parent: UI
+  children: []
+  langs:
+  - csharp
+  - vb
+  name: ErrorOverlayController
+  nameWithType: ErrorOverlayController
+  fullName: UI.ErrorOverlayController
+  type: Class
+  source:
+    id: ErrorOverlayController
+    path: ''
+    startLine: 5025
+  assemblies:
+  - cs.temp.dll
+  namespace: UI
+  summary: "\nHandles the Error overlay, triggers it on actions from the statemachine and sets its texts\n"
+  example: []
+  syntax:
+    content: 'public class ErrorOverlayController : MonoBehaviour'
+    content.vb: >-
+      Public Class ErrorOverlayController
+          Inherits MonoBehaviour
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+references:
+- uid: UI
+  commentId: N:UI
+  name: UI
+  nameWithType: UI
+  fullName: UI
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System

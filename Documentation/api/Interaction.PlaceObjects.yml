@@ -1,0 +1,242 @@
+### YamlMime:ManagedReference
+items:
+- uid: Interaction.PlaceObjects
+  commentId: T:Interaction.PlaceObjects
+  id: PlaceObjects
+  parent: Interaction
+  children:
+  - Interaction.PlaceObjects.contructIsReady
+  - Interaction.PlaceObjects.getSpawnedObject
+  - Interaction.PlaceObjects.onPlacedObject
+  - Interaction.PlaceObjects.placedPrefab
+  - Interaction.PlaceObjects.spawnedObject
+  langs:
+  - csharp
+  - vb
+  name: PlaceObjects
+  nameWithType: PlaceObjects
+  fullName: Interaction.PlaceObjects
+  type: Class
+  source:
+    id: PlaceObjects
+    path: ''
+    startLine: 2816
+  assemblies:
+  - cs.temp.dll
+  namespace: Interaction
+  syntax:
+    content: 'public class PlaceObjects : MonoBehaviour'
+    content.vb: >-
+      Public Class PlaceObjects
+          Inherits MonoBehaviour
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Interaction.PlaceObjects.contructIsReady
+  commentId: F:Interaction.PlaceObjects.contructIsReady
+  id: contructIsReady
+  parent: Interaction.PlaceObjects
+  langs:
+  - csharp
+  - vb
+  name: contructIsReady
+  nameWithType: PlaceObjects.contructIsReady
+  fullName: Interaction.PlaceObjects.contructIsReady
+  type: Field
+  source:
+    id: contructIsReady
+    path: ''
+    startLine: 2829
+  assemblies:
+  - cs.temp.dll
+  namespace: Interaction
+  syntax:
+    content: public bool contructIsReady
+    return:
+      type: System.Boolean
+    content.vb: Public contructIsReady As Boolean
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Interaction.PlaceObjects.placedPrefab
+  commentId: P:Interaction.PlaceObjects.placedPrefab
+  id: placedPrefab
+  parent: Interaction.PlaceObjects
+  langs:
+  - csharp
+  - vb
+  name: placedPrefab
+  nameWithType: PlaceObjects.placedPrefab
+  fullName: Interaction.PlaceObjects.placedPrefab
+  type: Property
+  source:
+    id: placedPrefab
+    path: ''
+    startLine: 2837
+  assemblies:
+  - cs.temp.dll
+  namespace: Interaction
+  summary: "\nThe prefab to instantiate on touch.\n"
+  example: []
+  syntax:
+    content: public GameObject placedPrefab { get; set; }
+    parameters: []
+    return:
+      type: Global.GameObject
+    content.vb: Public Property placedPrefab As GameObject
+  overload: Interaction.PlaceObjects.placedPrefab*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Interaction.PlaceObjects.spawnedObject
+  commentId: P:Interaction.PlaceObjects.spawnedObject
+  id: spawnedObject
+  parent: Interaction.PlaceObjects
+  langs:
+  - csharp
+  - vb
+  name: spawnedObject
+  nameWithType: PlaceObjects.spawnedObject
+  fullName: Interaction.PlaceObjects.spawnedObject
+  type: Property
+  source:
+    id: spawnedObject
+    path: ''
+    startLine: 2846
+  assemblies:
+  - cs.temp.dll
+  namespace: Interaction
+  summary: "\nThe object instantiated as a result of a successful raycast intersection with a plane.\n"
+  example: []
+  syntax:
+    content: public GameObject spawnedObject { get; }
+    parameters: []
+    return:
+      type: Global.GameObject
+    content.vb: Public ReadOnly Property spawnedObject As GameObject
+  overload: Interaction.PlaceObjects.spawnedObject*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Interaction.PlaceObjects.onPlacedObject
+  commentId: E:Interaction.PlaceObjects.onPlacedObject
+  id: onPlacedObject
+  parent: Interaction.PlaceObjects
+  langs:
+  - csharp
+  - vb
+  name: onPlacedObject
+  nameWithType: PlaceObjects.onPlacedObject
+  fullName: Interaction.PlaceObjects.onPlacedObject
+  type: Event
+  source:
+    id: onPlacedObject
+    path: ''
+    startLine: 2851
+  assemblies:
+  - cs.temp.dll
+  namespace: Interaction
+  summary: "\nInvoked whenever an object is placed in on a plane.\n"
+  example: []
+  syntax:
+    content: public static event Action onPlacedObject
+    return:
+      type: Global.Action
+    content.vb: Public Shared Event onPlacedObject As Action
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Interaction.PlaceObjects.getSpawnedObject
+  commentId: M:Interaction.PlaceObjects.getSpawnedObject
+  id: getSpawnedObject
+  parent: Interaction.PlaceObjects
+  langs:
+  - csharp
+  - vb
+  name: getSpawnedObject()
+  nameWithType: PlaceObjects.getSpawnedObject()
+  fullName: Interaction.PlaceObjects.getSpawnedObject()
+  type: Method
+  source:
+    id: getSpawnedObject
+    path: ''
+    startLine: 2904
+  assemblies:
+  - cs.temp.dll
+  namespace: Interaction
+  syntax:
+    content: public GameObject getSpawnedObject()
+    return:
+      type: Global.GameObject
+    content.vb: Public Function getSpawnedObject As GameObject
+  overload: Interaction.PlaceObjects.getSpawnedObject*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: Interaction
+  commentId: N:Interaction
+  name: Interaction
+  nameWithType: Interaction
+  fullName: Interaction
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: Interaction.PlaceObjects.placedPrefab*
+  commentId: Overload:Interaction.PlaceObjects.placedPrefab
+  name: placedPrefab
+  nameWithType: PlaceObjects.placedPrefab
+  fullName: Interaction.PlaceObjects.placedPrefab
+- uid: Global.GameObject
+  isExternal: true
+  name: GameObject
+  nameWithType: GameObject
+  fullName: GameObject
+- uid: Interaction.PlaceObjects.spawnedObject*
+  commentId: Overload:Interaction.PlaceObjects.spawnedObject
+  name: spawnedObject
+  nameWithType: PlaceObjects.spawnedObject
+  fullName: Interaction.PlaceObjects.spawnedObject
+- uid: Global.Action
+  isExternal: true
+  name: Action
+  nameWithType: Action
+  fullName: Action
+- uid: Interaction.PlaceObjects.getSpawnedObject*
+  commentId: Overload:Interaction.PlaceObjects.getSpawnedObject
+  name: getSpawnedObject
+  nameWithType: PlaceObjects.getSpawnedObject
+  fullName: Interaction.PlaceObjects.getSpawnedObject

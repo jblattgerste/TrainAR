@@ -1,0 +1,55 @@
+### YamlMime:ManagedReference
+items:
+- uid: Interaction.ResetLostObjectController
+  commentId: T:Interaction.ResetLostObjectController
+  id: ResetLostObjectController
+  parent: Interaction
+  children: []
+  langs:
+  - csharp
+  - vb
+  name: ResetLostObjectController
+  nameWithType: ResetLostObjectController
+  fullName: Interaction.ResetLostObjectController
+  type: Class
+  source:
+    id: ResetLostObjectController
+    path: ''
+    startLine: 2921
+  assemblies:
+  - cs.temp.dll
+  namespace: Interaction
+  summary: "\nComponent that resets the TrainAR object back to the original spawn point when its to far away.\n"
+  example: []
+  syntax:
+    content: 'public class ResetLostObjectController : MonoBehaviour'
+    content.vb: >-
+      Public Class ResetLostObjectController
+          Inherits MonoBehaviour
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+references:
+- uid: Interaction
+  commentId: N:Interaction
+  name: Interaction
+  nameWithType: Interaction
+  fullName: Interaction
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System

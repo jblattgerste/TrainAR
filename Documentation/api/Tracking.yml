@@ -1,0 +1,34 @@
+### YamlMime:ManagedReference
+items:
+- uid: Tracking
+  commentId: N:Tracking
+  id: Tracking
+  children:
+  - Tracking.FetchAspectRatioFromARCamera
+  - Tracking.infinityPlaneManager
+  - Tracking.ManualTrackingPositioningHelper
+  langs:
+  - csharp
+  - vb
+  name: Tracking
+  nameWithType: Tracking
+  fullName: Tracking
+  type: Namespace
+  assemblies:
+  - cs.temp.dll
+references:
+- uid: Tracking.FetchAspectRatioFromARCamera
+  commentId: T:Tracking.FetchAspectRatioFromARCamera
+  name: FetchAspectRatioFromARCamera
+  nameWithType: FetchAspectRatioFromARCamera
+  fullName: Tracking.FetchAspectRatioFromARCamera
+- uid: Tracking.infinityPlaneManager
+  commentId: T:Tracking.infinityPlaneManager
+  name: infinityPlaneManager
+  nameWithType: infinityPlaneManager
+  fullName: Tracking.infinityPlaneManager
+- uid: Tracking.ManualTrackingPositioningHelper
+  commentId: T:Tracking.ManualTrackingPositioningHelper
+  name: ManualTrackingPositioningHelper
+  nameWithType: ManualTrackingPositioningHelper
+  fullName: Tracking.ManualTrackingPositioningHelper

@@ -1,0 +1,28 @@
+apiRules:
+- include:
+    uidRegex: ^DocFxForUnity
+    type: Namespace
+- include:
+    uidRegex: ^Interaction
+    type: Namespace
+- include:
+    uidRegex: ^Tracking
+    type: Namespace
+- include:
+    uidRegex: ^Static
+    type: Namespace
+- include:
+    uidRegex: ^UI
+    type: Namespace
+- include:
+    uidRegex: ^Others
+    type: Namespace
+- include:
+    uidRegex: ^Visual_Scripting
+    type: Namespace
+- include:
+    uidRegex: ^Editor.Scripts
+    type: Namespace
+- exclude:
+    uidRegex: .*
+    type: Namespace

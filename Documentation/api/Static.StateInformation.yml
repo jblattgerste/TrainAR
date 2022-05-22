@@ -1,0 +1,275 @@
+### YamlMime:ManagedReference
+items:
+- uid: Static.StateInformation
+  commentId: T:Static.StateInformation
+  id: StateInformation
+  parent: Static
+  children:
+  - Static.StateInformation.#ctor(System.String,System.String,Static.InteractionType,System.String,GameObject,GameObject)
+  - Static.StateInformation.firstGameObject
+  - Static.StateInformation.interactionType
+  - Static.StateInformation.parameter
+  - Static.StateInformation.primaryObjectName
+  - Static.StateInformation.secondaryObjectName
+  - Static.StateInformation.secondGameObject
+  langs:
+  - csharp
+  - vb
+  name: StateInformation
+  nameWithType: StateInformation
+  fullName: Static.StateInformation
+  type: Struct
+  source:
+    id: StateInformation
+    path: ''
+    startLine: 4491
+  assemblies:
+  - cs.temp.dll
+  namespace: Static
+  summary: "\nThe information stored for ever state that is registered\n"
+  example: []
+  syntax:
+    content: public struct StateInformation
+    content.vb: Public Structure StateInformation
+  modifiers.csharp:
+  - public
+  - struct
+  modifiers.vb:
+  - Public
+  - Structure
+- uid: Static.StateInformation.primaryObjectName
+  commentId: F:Static.StateInformation.primaryObjectName
+  id: primaryObjectName
+  parent: Static.StateInformation
+  langs:
+  - csharp
+  - vb
+  name: primaryObjectName
+  nameWithType: StateInformation.primaryObjectName
+  fullName: Static.StateInformation.primaryObjectName
+  type: Field
+  source:
+    id: primaryObjectName
+    path: ''
+    startLine: 4493
+  assemblies:
+  - cs.temp.dll
+  namespace: Static
+  syntax:
+    content: public string primaryObjectName
+    return:
+      type: System.String
+    content.vb: Public primaryObjectName As String
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Static.StateInformation.secondaryObjectName
+  commentId: F:Static.StateInformation.secondaryObjectName
+  id: secondaryObjectName
+  parent: Static.StateInformation
+  langs:
+  - csharp
+  - vb
+  name: secondaryObjectName
+  nameWithType: StateInformation.secondaryObjectName
+  fullName: Static.StateInformation.secondaryObjectName
+  type: Field
+  source:
+    id: secondaryObjectName
+    path: ''
+    startLine: 4494
+  assemblies:
+  - cs.temp.dll
+  namespace: Static
+  syntax:
+    content: public string secondaryObjectName
+    return:
+      type: System.String
+    content.vb: Public secondaryObjectName As String
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Static.StateInformation.interactionType
+  commentId: F:Static.StateInformation.interactionType
+  id: interactionType
+  parent: Static.StateInformation
+  langs:
+  - csharp
+  - vb
+  name: interactionType
+  nameWithType: StateInformation.interactionType
+  fullName: Static.StateInformation.interactionType
+  type: Field
+  source:
+    id: interactionType
+    path: ''
+    startLine: 4495
+  assemblies:
+  - cs.temp.dll
+  namespace: Static
+  syntax:
+    content: public InteractionType interactionType
+    return:
+      type: Static.InteractionType
+    content.vb: Public interactionType As InteractionType
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Static.StateInformation.parameter
+  commentId: F:Static.StateInformation.parameter
+  id: parameter
+  parent: Static.StateInformation
+  langs:
+  - csharp
+  - vb
+  name: parameter
+  nameWithType: StateInformation.parameter
+  fullName: Static.StateInformation.parameter
+  type: Field
+  source:
+    id: parameter
+    path: ''
+    startLine: 4496
+  assemblies:
+  - cs.temp.dll
+  namespace: Static
+  syntax:
+    content: public string parameter
+    return:
+      type: System.String
+    content.vb: Public parameter As String
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Static.StateInformation.firstGameObject
+  commentId: F:Static.StateInformation.firstGameObject
+  id: firstGameObject
+  parent: Static.StateInformation
+  langs:
+  - csharp
+  - vb
+  name: firstGameObject
+  nameWithType: StateInformation.firstGameObject
+  fullName: Static.StateInformation.firstGameObject
+  type: Field
+  source:
+    id: firstGameObject
+    path: ''
+    startLine: 4497
+  assemblies:
+  - cs.temp.dll
+  namespace: Static
+  syntax:
+    content: public GameObject firstGameObject
+    return:
+      type: Global.GameObject
+    content.vb: Public firstGameObject As GameObject
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Static.StateInformation.secondGameObject
+  commentId: F:Static.StateInformation.secondGameObject
+  id: secondGameObject
+  parent: Static.StateInformation
+  langs:
+  - csharp
+  - vb
+  name: secondGameObject
+  nameWithType: StateInformation.secondGameObject
+  fullName: Static.StateInformation.secondGameObject
+  type: Field
+  source:
+    id: secondGameObject
+    path: ''
+    startLine: 4498
+  assemblies:
+  - cs.temp.dll
+  namespace: Static
+  syntax:
+    content: public GameObject secondGameObject
+    return:
+      type: Global.GameObject
+    content.vb: Public secondGameObject As GameObject
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Static.StateInformation.#ctor(System.String,System.String,Static.InteractionType,System.String,GameObject,GameObject)
+  commentId: M:Static.StateInformation.#ctor(System.String,System.String,Static.InteractionType,System.String,GameObject,GameObject)
+  id: '#ctor(System.String,System.String,Static.InteractionType,System.String,GameObject,GameObject)'
+  parent: Static.StateInformation
+  langs:
+  - csharp
+  - vb
+  name: StateInformation(String, String, InteractionType, String, GameObject, GameObject)
+  nameWithType: StateInformation.StateInformation(String, String, InteractionType, String, GameObject, GameObject)
+  fullName: Static.StateInformation.StateInformation(System.String, System.String, Static.InteractionType, System.String, GameObject, GameObject)
+  type: Constructor
+  source:
+    id: .ctor
+    path: ''
+    startLine: 4500
+  assemblies:
+  - cs.temp.dll
+  namespace: Static
+  syntax:
+    content: public StateInformation(string primaryObjectName = "", string secondaryObjectName = "", InteractionType interactionType = InteractionType.Custom, string parameter = " ", GameObject firstGameObject = null, GameObject secondGameObject = null)
+    parameters:
+    - id: primaryObjectName
+      type: System.String
+    - id: secondaryObjectName
+      type: System.String
+    - id: interactionType
+      type: Static.InteractionType
+    - id: parameter
+      type: System.String
+    - id: firstGameObject
+      type: Global.GameObject
+    - id: secondGameObject
+      type: Global.GameObject
+    content.vb: Public Sub New(primaryObjectName As String = "", secondaryObjectName As String = "", interactionType As InteractionType = InteractionType.Custom, parameter As String = " ", firstGameObject As GameObject = Nothing, secondGameObject As GameObject = Nothing)
+  overload: Static.StateInformation.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: Static
+  commentId: N:Static
+  name: Static
+  nameWithType: Static
+  fullName: Static
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Static.InteractionType
+  commentId: T:Static.InteractionType
+  parent: Static
+  name: InteractionType
+  nameWithType: InteractionType
+  fullName: Static.InteractionType
+- uid: Global.GameObject
+  isExternal: true
+  name: GameObject
+  nameWithType: GameObject
+  fullName: GameObject
+- uid: Static.StateInformation.#ctor*
+  commentId: Overload:Static.StateInformation.#ctor
+  name: StateInformation
+  nameWithType: StateInformation.StateInformation
+  fullName: Static.StateInformation.StateInformation

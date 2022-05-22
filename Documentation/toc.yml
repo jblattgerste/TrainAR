@@ -1,0 +1,8 @@
+- name: Overview
+  href: https://jblattgerste.github.io/TrainAR/index.html
+- name: Manual & Tutorials
+  href: manual/
+- name: API Documentation
+  href: api/
+- name: Source Code
+  href: https://github.com/jblattgerste/TrainAR

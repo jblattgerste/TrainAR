@@ -1,0 +1,309 @@
+### YamlMime:ManagedReference
+items:
+- uid: Tracking.ManualTrackingPositioningHelper
+  commentId: T:Tracking.ManualTrackingPositioningHelper
+  id: ManualTrackingPositioningHelper
+  parent: Tracking
+  children:
+  - Tracking.ManualTrackingPositioningHelper.MoveAssemblyBackwards
+  - Tracking.ManualTrackingPositioningHelper.MoveAssemblyDown
+  - Tracking.ManualTrackingPositioningHelper.MoveAssemblyForwards
+  - Tracking.ManualTrackingPositioningHelper.MoveAssemblyLeft
+  - Tracking.ManualTrackingPositioningHelper.MoveAssemblyRight
+  - Tracking.ManualTrackingPositioningHelper.MoveAssemblyUp
+  - Tracking.ManualTrackingPositioningHelper.RotateAssemblyLeft
+  - Tracking.ManualTrackingPositioningHelper.RotateAssemblyRight
+  langs:
+  - csharp
+  - vb
+  name: ManualTrackingPositioningHelper
+  nameWithType: ManualTrackingPositioningHelper
+  fullName: Tracking.ManualTrackingPositioningHelper
+  type: Class
+  source:
+    id: ManualTrackingPositioningHelper
+    path: ''
+    startLine: 4813
+  assemblies:
+  - cs.temp.dll
+  namespace: Tracking
+  syntax:
+    content: 'public class ManualTrackingPositioningHelper : MonoBehaviour'
+    content.vb: >-
+      Public Class ManualTrackingPositioningHelper
+          Inherits MonoBehaviour
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Tracking.ManualTrackingPositioningHelper.MoveAssemblyBackwards
+  commentId: M:Tracking.ManualTrackingPositioningHelper.MoveAssemblyBackwards
+  id: MoveAssemblyBackwards
+  parent: Tracking.ManualTrackingPositioningHelper
+  langs:
+  - csharp
+  - vb
+  name: MoveAssemblyBackwards()
+  nameWithType: ManualTrackingPositioningHelper.MoveAssemblyBackwards()
+  fullName: Tracking.ManualTrackingPositioningHelper.MoveAssemblyBackwards()
+  type: Method
+  source:
+    id: MoveAssemblyBackwards
+    path: ''
+    startLine: 4819
+  assemblies:
+  - cs.temp.dll
+  namespace: Tracking
+  syntax:
+    content: public void MoveAssemblyBackwards()
+    content.vb: Public Sub MoveAssemblyBackwards
+  overload: Tracking.ManualTrackingPositioningHelper.MoveAssemblyBackwards*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Tracking.ManualTrackingPositioningHelper.MoveAssemblyForwards
+  commentId: M:Tracking.ManualTrackingPositioningHelper.MoveAssemblyForwards
+  id: MoveAssemblyForwards
+  parent: Tracking.ManualTrackingPositioningHelper
+  langs:
+  - csharp
+  - vb
+  name: MoveAssemblyForwards()
+  nameWithType: ManualTrackingPositioningHelper.MoveAssemblyForwards()
+  fullName: Tracking.ManualTrackingPositioningHelper.MoveAssemblyForwards()
+  type: Method
+  source:
+    id: MoveAssemblyForwards
+    path: ''
+    startLine: 4824
+  assemblies:
+  - cs.temp.dll
+  namespace: Tracking
+  syntax:
+    content: public void MoveAssemblyForwards()
+    content.vb: Public Sub MoveAssemblyForwards
+  overload: Tracking.ManualTrackingPositioningHelper.MoveAssemblyForwards*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Tracking.ManualTrackingPositioningHelper.MoveAssemblyLeft
+  commentId: M:Tracking.ManualTrackingPositioningHelper.MoveAssemblyLeft
+  id: MoveAssemblyLeft
+  parent: Tracking.ManualTrackingPositioningHelper
+  langs:
+  - csharp
+  - vb
+  name: MoveAssemblyLeft()
+  nameWithType: ManualTrackingPositioningHelper.MoveAssemblyLeft()
+  fullName: Tracking.ManualTrackingPositioningHelper.MoveAssemblyLeft()
+  type: Method
+  source:
+    id: MoveAssemblyLeft
+    path: ''
+    startLine: 4829
+  assemblies:
+  - cs.temp.dll
+  namespace: Tracking
+  syntax:
+    content: public void MoveAssemblyLeft()
+    content.vb: Public Sub MoveAssemblyLeft
+  overload: Tracking.ManualTrackingPositioningHelper.MoveAssemblyLeft*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Tracking.ManualTrackingPositioningHelper.MoveAssemblyRight
+  commentId: M:Tracking.ManualTrackingPositioningHelper.MoveAssemblyRight
+  id: MoveAssemblyRight
+  parent: Tracking.ManualTrackingPositioningHelper
+  langs:
+  - csharp
+  - vb
+  name: MoveAssemblyRight()
+  nameWithType: ManualTrackingPositioningHelper.MoveAssemblyRight()
+  fullName: Tracking.ManualTrackingPositioningHelper.MoveAssemblyRight()
+  type: Method
+  source:
+    id: MoveAssemblyRight
+    path: ''
+    startLine: 4834
+  assemblies:
+  - cs.temp.dll
+  namespace: Tracking
+  syntax:
+    content: public void MoveAssemblyRight()
+    content.vb: Public Sub MoveAssemblyRight
+  overload: Tracking.ManualTrackingPositioningHelper.MoveAssemblyRight*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Tracking.ManualTrackingPositioningHelper.MoveAssemblyUp
+  commentId: M:Tracking.ManualTrackingPositioningHelper.MoveAssemblyUp
+  id: MoveAssemblyUp
+  parent: Tracking.ManualTrackingPositioningHelper
+  langs:
+  - csharp
+  - vb
+  name: MoveAssemblyUp()
+  nameWithType: ManualTrackingPositioningHelper.MoveAssemblyUp()
+  fullName: Tracking.ManualTrackingPositioningHelper.MoveAssemblyUp()
+  type: Method
+  source:
+    id: MoveAssemblyUp
+    path: ''
+    startLine: 4839
+  assemblies:
+  - cs.temp.dll
+  namespace: Tracking
+  syntax:
+    content: public void MoveAssemblyUp()
+    content.vb: Public Sub MoveAssemblyUp
+  overload: Tracking.ManualTrackingPositioningHelper.MoveAssemblyUp*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Tracking.ManualTrackingPositioningHelper.MoveAssemblyDown
+  commentId: M:Tracking.ManualTrackingPositioningHelper.MoveAssemblyDown
+  id: MoveAssemblyDown
+  parent: Tracking.ManualTrackingPositioningHelper
+  langs:
+  - csharp
+  - vb
+  name: MoveAssemblyDown()
+  nameWithType: ManualTrackingPositioningHelper.MoveAssemblyDown()
+  fullName: Tracking.ManualTrackingPositioningHelper.MoveAssemblyDown()
+  type: Method
+  source:
+    id: MoveAssemblyDown
+    path: ''
+    startLine: 4844
+  assemblies:
+  - cs.temp.dll
+  namespace: Tracking
+  syntax:
+    content: public void MoveAssemblyDown()
+    content.vb: Public Sub MoveAssemblyDown
+  overload: Tracking.ManualTrackingPositioningHelper.MoveAssemblyDown*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Tracking.ManualTrackingPositioningHelper.RotateAssemblyRight
+  commentId: M:Tracking.ManualTrackingPositioningHelper.RotateAssemblyRight
+  id: RotateAssemblyRight
+  parent: Tracking.ManualTrackingPositioningHelper
+  langs:
+  - csharp
+  - vb
+  name: RotateAssemblyRight()
+  nameWithType: ManualTrackingPositioningHelper.RotateAssemblyRight()
+  fullName: Tracking.ManualTrackingPositioningHelper.RotateAssemblyRight()
+  type: Method
+  source:
+    id: RotateAssemblyRight
+    path: ''
+    startLine: 4849
+  assemblies:
+  - cs.temp.dll
+  namespace: Tracking
+  syntax:
+    content: public void RotateAssemblyRight()
+    content.vb: Public Sub RotateAssemblyRight
+  overload: Tracking.ManualTrackingPositioningHelper.RotateAssemblyRight*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Tracking.ManualTrackingPositioningHelper.RotateAssemblyLeft
+  commentId: M:Tracking.ManualTrackingPositioningHelper.RotateAssemblyLeft
+  id: RotateAssemblyLeft
+  parent: Tracking.ManualTrackingPositioningHelper
+  langs:
+  - csharp
+  - vb
+  name: RotateAssemblyLeft()
+  nameWithType: ManualTrackingPositioningHelper.RotateAssemblyLeft()
+  fullName: Tracking.ManualTrackingPositioningHelper.RotateAssemblyLeft()
+  type: Method
+  source:
+    id: RotateAssemblyLeft
+    path: ''
+    startLine: 4854
+  assemblies:
+  - cs.temp.dll
+  namespace: Tracking
+  syntax:
+    content: public void RotateAssemblyLeft()
+    content.vb: Public Sub RotateAssemblyLeft
+  overload: Tracking.ManualTrackingPositioningHelper.RotateAssemblyLeft*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: Tracking
+  commentId: N:Tracking
+  name: Tracking
+  nameWithType: Tracking
+  fullName: Tracking
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Tracking.ManualTrackingPositioningHelper.MoveAssemblyBackwards*
+  commentId: Overload:Tracking.ManualTrackingPositioningHelper.MoveAssemblyBackwards
+  name: MoveAssemblyBackwards
+  nameWithType: ManualTrackingPositioningHelper.MoveAssemblyBackwards
+  fullName: Tracking.ManualTrackingPositioningHelper.MoveAssemblyBackwards
+- uid: Tracking.ManualTrackingPositioningHelper.MoveAssemblyForwards*
+  commentId: Overload:Tracking.ManualTrackingPositioningHelper.MoveAssemblyForwards
+  name: MoveAssemblyForwards
+  nameWithType: ManualTrackingPositioningHelper.MoveAssemblyForwards
+  fullName: Tracking.ManualTrackingPositioningHelper.MoveAssemblyForwards
+- uid: Tracking.ManualTrackingPositioningHelper.MoveAssemblyLeft*
+  commentId: Overload:Tracking.ManualTrackingPositioningHelper.MoveAssemblyLeft
+  name: MoveAssemblyLeft
+  nameWithType: ManualTrackingPositioningHelper.MoveAssemblyLeft
+  fullName: Tracking.ManualTrackingPositioningHelper.MoveAssemblyLeft
+- uid: Tracking.ManualTrackingPositioningHelper.MoveAssemblyRight*
+  commentId: Overload:Tracking.ManualTrackingPositioningHelper.MoveAssemblyRight
+  name: MoveAssemblyRight
+  nameWithType: ManualTrackingPositioningHelper.MoveAssemblyRight
+  fullName: Tracking.ManualTrackingPositioningHelper.MoveAssemblyRight
+- uid: Tracking.ManualTrackingPositioningHelper.MoveAssemblyUp*
+  commentId: Overload:Tracking.ManualTrackingPositioningHelper.MoveAssemblyUp
+  name: MoveAssemblyUp
+  nameWithType: ManualTrackingPositioningHelper.MoveAssemblyUp
+  fullName: Tracking.ManualTrackingPositioningHelper.MoveAssemblyUp
+- uid: Tracking.ManualTrackingPositioningHelper.MoveAssemblyDown*
+  commentId: Overload:Tracking.ManualTrackingPositioningHelper.MoveAssemblyDown
+  name: MoveAssemblyDown
+  nameWithType: ManualTrackingPositioningHelper.MoveAssemblyDown
+  fullName: Tracking.ManualTrackingPositioningHelper.MoveAssemblyDown
+- uid: Tracking.ManualTrackingPositioningHelper.RotateAssemblyRight*
+  commentId: Overload:Tracking.ManualTrackingPositioningHelper.RotateAssemblyRight
+  name: RotateAssemblyRight
+  nameWithType: ManualTrackingPositioningHelper.RotateAssemblyRight
+  fullName: Tracking.ManualTrackingPositioningHelper.RotateAssemblyRight
+- uid: Tracking.ManualTrackingPositioningHelper.RotateAssemblyLeft*
+  commentId: Overload:Tracking.ManualTrackingPositioningHelper.RotateAssemblyLeft
+  name: RotateAssemblyLeft
+  nameWithType: ManualTrackingPositioningHelper.RotateAssemblyLeft
+  fullName: Tracking.ManualTrackingPositioningHelper.RotateAssemblyLeft

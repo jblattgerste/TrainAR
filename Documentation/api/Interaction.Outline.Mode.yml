@@ -1,0 +1,187 @@
+### YamlMime:ManagedReference
+items:
+- uid: Interaction.Outline.Mode
+  commentId: T:Interaction.Outline.Mode
+  id: Outline.Mode
+  parent: Interaction
+  children:
+  - Interaction.Outline.Mode.OutlineAll
+  - Interaction.Outline.Mode.OutlineAndSilhouette
+  - Interaction.Outline.Mode.OutlineHidden
+  - Interaction.Outline.Mode.OutlineVisible
+  - Interaction.Outline.Mode.SilhouetteOnly
+  langs:
+  - csharp
+  - vb
+  name: Outline.Mode
+  nameWithType: Outline.Mode
+  fullName: Interaction.Outline.Mode
+  type: Enum
+  source:
+    id: Mode
+    path: ''
+    startLine: 2329
+  assemblies:
+  - cs.temp.dll
+  namespace: Interaction
+  syntax:
+    content: public enum Mode
+    content.vb: Public Enum Mode
+  modifiers.csharp:
+  - public
+  - enum
+  modifiers.vb:
+  - Public
+  - Enum
+- uid: Interaction.Outline.Mode.OutlineAll
+  commentId: F:Interaction.Outline.Mode.OutlineAll
+  id: OutlineAll
+  parent: Interaction.Outline.Mode
+  langs:
+  - csharp
+  - vb
+  name: OutlineAll
+  nameWithType: Outline.Mode.OutlineAll
+  fullName: Interaction.Outline.Mode.OutlineAll
+  type: Field
+  source:
+    id: OutlineAll
+    path: ''
+    startLine: 2330
+  assemblies:
+  - cs.temp.dll
+  namespace: Interaction
+  syntax:
+    content: OutlineAll = 0
+    return:
+      type: Interaction.Outline.Mode
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Interaction.Outline.Mode.OutlineVisible
+  commentId: F:Interaction.Outline.Mode.OutlineVisible
+  id: OutlineVisible
+  parent: Interaction.Outline.Mode
+  langs:
+  - csharp
+  - vb
+  name: OutlineVisible
+  nameWithType: Outline.Mode.OutlineVisible
+  fullName: Interaction.Outline.Mode.OutlineVisible
+  type: Field
+  source:
+    id: OutlineVisible
+    path: ''
+    startLine: 2331
+  assemblies:
+  - cs.temp.dll
+  namespace: Interaction
+  syntax:
+    content: OutlineVisible = 1
+    return:
+      type: Interaction.Outline.Mode
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Interaction.Outline.Mode.OutlineHidden
+  commentId: F:Interaction.Outline.Mode.OutlineHidden
+  id: OutlineHidden
+  parent: Interaction.Outline.Mode
+  langs:
+  - csharp
+  - vb
+  name: OutlineHidden
+  nameWithType: Outline.Mode.OutlineHidden
+  fullName: Interaction.Outline.Mode.OutlineHidden
+  type: Field
+  source:
+    id: OutlineHidden
+    path: ''
+    startLine: 2332
+  assemblies:
+  - cs.temp.dll
+  namespace: Interaction
+  syntax:
+    content: OutlineHidden = 2
+    return:
+      type: Interaction.Outline.Mode
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Interaction.Outline.Mode.OutlineAndSilhouette
+  commentId: F:Interaction.Outline.Mode.OutlineAndSilhouette
+  id: OutlineAndSilhouette
+  parent: Interaction.Outline.Mode
+  langs:
+  - csharp
+  - vb
+  name: OutlineAndSilhouette
+  nameWithType: Outline.Mode.OutlineAndSilhouette
+  fullName: Interaction.Outline.Mode.OutlineAndSilhouette
+  type: Field
+  source:
+    id: OutlineAndSilhouette
+    path: ''
+    startLine: 2333
+  assemblies:
+  - cs.temp.dll
+  namespace: Interaction
+  syntax:
+    content: OutlineAndSilhouette = 3
+    return:
+      type: Interaction.Outline.Mode
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Interaction.Outline.Mode.SilhouetteOnly
+  commentId: F:Interaction.Outline.Mode.SilhouetteOnly
+  id: SilhouetteOnly
+  parent: Interaction.Outline.Mode
+  langs:
+  - csharp
+  - vb
+  name: SilhouetteOnly
+  nameWithType: Outline.Mode.SilhouetteOnly
+  fullName: Interaction.Outline.Mode.SilhouetteOnly
+  type: Field
+  source:
+    id: SilhouetteOnly
+    path: ''
+    startLine: 2334
+  assemblies:
+  - cs.temp.dll
+  namespace: Interaction
+  syntax:
+    content: SilhouetteOnly = 4
+    return:
+      type: Interaction.Outline.Mode
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+references:
+- uid: Interaction
+  commentId: N:Interaction
+  name: Interaction
+  nameWithType: Interaction
+  fullName: Interaction
+- uid: Interaction.Outline.Mode
+  commentId: T:Interaction.Outline.Mode
+  parent: Interaction
+  name: Outline.Mode
+  nameWithType: Outline.Mode
+  fullName: Interaction.Outline.Mode

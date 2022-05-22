@@ -1,0 +1,89 @@
+### YamlMime:ManagedReference
+items:
+- uid: UI.InteractButton
+  commentId: T:UI.InteractButton
+  id: InteractButton
+  parent: UI
+  children:
+  - UI.InteractButton.ReleaseInteract
+  langs:
+  - csharp
+  - vb
+  name: InteractButton
+  nameWithType: InteractButton
+  fullName: UI.InteractButton
+  type: Class
+  source:
+    id: InteractButton
+    path: ''
+    startLine: 5209
+  assemblies:
+  - cs.temp.dll
+  namespace: UI
+  summary: "\nHandles interactions with the interact button.\n"
+  example: []
+  syntax:
+    content: 'public class InteractButton : MonoBehaviour'
+    content.vb: >-
+      Public Class InteractButton
+          Inherits MonoBehaviour
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: UI.InteractButton.ReleaseInteract
+  commentId: M:UI.InteractButton.ReleaseInteract
+  id: ReleaseInteract
+  parent: UI.InteractButton
+  langs:
+  - csharp
+  - vb
+  name: ReleaseInteract()
+  nameWithType: InteractButton.ReleaseInteract()
+  fullName: UI.InteractButton.ReleaseInteract()
+  type: Method
+  source:
+    id: ReleaseInteract
+    path: ''
+    startLine: 5239
+  assemblies:
+  - cs.temp.dll
+  namespace: UI
+  summary: "\nCalls either an interact or an combine, depending on the interactioncontroller context.\n"
+  example: []
+  syntax:
+    content: public void ReleaseInteract()
+    content.vb: Public Sub ReleaseInteract
+  overload: UI.InteractButton.ReleaseInteract*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: UI
+  commentId: N:UI
+  name: UI
+  nameWithType: UI
+  fullName: UI
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: UI.InteractButton.ReleaseInteract*
+  commentId: Overload:UI.InteractButton.ReleaseInteract
+  name: ReleaseInteract
+  nameWithType: InteractButton.ReleaseInteract
+  fullName: UI.InteractButton.ReleaseInteract

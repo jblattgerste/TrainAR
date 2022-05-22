@@ -1,0 +1,461 @@
+### YamlMime:ManagedReference
+items:
+- uid: Interaction.InteractionController
+  commentId: T:Interaction.InteractionController
+  id: InteractionController
+  parent: Interaction
+  children:
+  - Interaction.InteractionController.Combine
+  - Interaction.InteractionController.grabbedObject
+  - Interaction.InteractionController.grabber
+  - Interaction.InteractionController.GrabObject
+  - Interaction.InteractionController.hit
+  - Interaction.InteractionController.Interact
+  - Interaction.InteractionController.intersectedObject
+  - Interaction.InteractionController.isGrabbingObject
+  - Interaction.InteractionController.isIntersecting
+  - Interaction.InteractionController.isSelectingObject
+  - Interaction.InteractionController.ReleaseGrabbedObject
+  - Interaction.InteractionController.selectedObject
+  - Interaction.InteractionController.tryedGrabbingObjectUnsuccessfully
+  langs:
+  - csharp
+  - vb
+  name: InteractionController
+  nameWithType: InteractionController
+  fullName: Interaction.InteractionController
+  type: Class
+  source:
+    id: InteractionController
+    path: ''
+    startLine: 1549
+  assemblies:
+  - cs.temp.dll
+  namespace: Interaction
+  summary: "\nHandles the interactions, i.e. grabbing, releasing, interacting and combining of the TrainARObjects.\n"
+  example: []
+  syntax:
+    content: 'public class InteractionController : MonoBehaviour'
+    content.vb: >-
+      Public Class InteractionController
+          Inherits MonoBehaviour
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Interaction.InteractionController.grabber
+  commentId: F:Interaction.InteractionController.grabber
+  id: grabber
+  parent: Interaction.InteractionController
+  langs:
+  - csharp
+  - vb
+  name: grabber
+  nameWithType: InteractionController.grabber
+  fullName: Interaction.InteractionController.grabber
+  type: Field
+  source:
+    id: grabber
+    path: ''
+    startLine: 1566
+  assemblies:
+  - cs.temp.dll
+  namespace: Interaction
+  syntax:
+    content: public GameObject grabber
+    return:
+      type: Global.GameObject
+    content.vb: Public grabber As GameObject
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Interaction.InteractionController.grabbedObject
+  commentId: F:Interaction.InteractionController.grabbedObject
+  id: grabbedObject
+  parent: Interaction.InteractionController
+  langs:
+  - csharp
+  - vb
+  name: grabbedObject
+  nameWithType: InteractionController.grabbedObject
+  fullName: Interaction.InteractionController.grabbedObject
+  type: Field
+  source:
+    id: grabbedObject
+    path: ''
+    startLine: 1570
+  assemblies:
+  - cs.temp.dll
+  namespace: Interaction
+  syntax:
+    content: public GameObject grabbedObject
+    return:
+      type: Global.GameObject
+    content.vb: Public grabbedObject As GameObject
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Interaction.InteractionController.isGrabbingObject
+  commentId: F:Interaction.InteractionController.isGrabbingObject
+  id: isGrabbingObject
+  parent: Interaction.InteractionController
+  langs:
+  - csharp
+  - vb
+  name: isGrabbingObject
+  nameWithType: InteractionController.isGrabbingObject
+  fullName: Interaction.InteractionController.isGrabbingObject
+  type: Field
+  source:
+    id: isGrabbingObject
+    path: ''
+    startLine: 1573
+  assemblies:
+  - cs.temp.dll
+  namespace: Interaction
+  syntax:
+    content: public bool isGrabbingObject
+    return:
+      type: System.Boolean
+    content.vb: Public isGrabbingObject As Boolean
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Interaction.InteractionController.tryedGrabbingObjectUnsuccessfully
+  commentId: F:Interaction.InteractionController.tryedGrabbingObjectUnsuccessfully
+  id: tryedGrabbingObjectUnsuccessfully
+  parent: Interaction.InteractionController
+  langs:
+  - csharp
+  - vb
+  name: tryedGrabbingObjectUnsuccessfully
+  nameWithType: InteractionController.tryedGrabbingObjectUnsuccessfully
+  fullName: Interaction.InteractionController.tryedGrabbingObjectUnsuccessfully
+  type: Field
+  source:
+    id: tryedGrabbingObjectUnsuccessfully
+    path: ''
+    startLine: 1576
+  assemblies:
+  - cs.temp.dll
+  namespace: Interaction
+  syntax:
+    content: public bool tryedGrabbingObjectUnsuccessfully
+    return:
+      type: System.Boolean
+    content.vb: Public tryedGrabbingObjectUnsuccessfully As Boolean
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Interaction.InteractionController.selectedObject
+  commentId: F:Interaction.InteractionController.selectedObject
+  id: selectedObject
+  parent: Interaction.InteractionController
+  langs:
+  - csharp
+  - vb
+  name: selectedObject
+  nameWithType: InteractionController.selectedObject
+  fullName: Interaction.InteractionController.selectedObject
+  type: Field
+  source:
+    id: selectedObject
+    path: ''
+    startLine: 1579
+  assemblies:
+  - cs.temp.dll
+  namespace: Interaction
+  syntax:
+    content: public GameObject selectedObject
+    return:
+      type: Global.GameObject
+    content.vb: Public selectedObject As GameObject
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Interaction.InteractionController.isSelectingObject
+  commentId: F:Interaction.InteractionController.isSelectingObject
+  id: isSelectingObject
+  parent: Interaction.InteractionController
+  langs:
+  - csharp
+  - vb
+  name: isSelectingObject
+  nameWithType: InteractionController.isSelectingObject
+  fullName: Interaction.InteractionController.isSelectingObject
+  type: Field
+  source:
+    id: isSelectingObject
+    path: ''
+    startLine: 1584
+  assemblies:
+  - cs.temp.dll
+  namespace: Interaction
+  syntax:
+    content: public bool isSelectingObject
+    return:
+      type: System.Boolean
+    content.vb: Public isSelectingObject As Boolean
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Interaction.InteractionController.intersectedObject
+  commentId: F:Interaction.InteractionController.intersectedObject
+  id: intersectedObject
+  parent: Interaction.InteractionController
+  langs:
+  - csharp
+  - vb
+  name: intersectedObject
+  nameWithType: InteractionController.intersectedObject
+  fullName: Interaction.InteractionController.intersectedObject
+  type: Field
+  source:
+    id: intersectedObject
+    path: ''
+    startLine: 1587
+  assemblies:
+  - cs.temp.dll
+  namespace: Interaction
+  syntax:
+    content: public GameObject intersectedObject
+    return:
+      type: Global.GameObject
+    content.vb: Public intersectedObject As GameObject
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Interaction.InteractionController.isIntersecting
+  commentId: F:Interaction.InteractionController.isIntersecting
+  id: isIntersecting
+  parent: Interaction.InteractionController
+  langs:
+  - csharp
+  - vb
+  name: isIntersecting
+  nameWithType: InteractionController.isIntersecting
+  fullName: Interaction.InteractionController.isIntersecting
+  type: Field
+  source:
+    id: isIntersecting
+    path: ''
+    startLine: 1590
+  assemblies:
+  - cs.temp.dll
+  namespace: Interaction
+  syntax:
+    content: public bool isIntersecting
+    return:
+      type: System.Boolean
+    content.vb: Public isIntersecting As Boolean
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Interaction.InteractionController.hit
+  commentId: F:Interaction.InteractionController.hit
+  id: hit
+  parent: Interaction.InteractionController
+  langs:
+  - csharp
+  - vb
+  name: hit
+  nameWithType: InteractionController.hit
+  fullName: Interaction.InteractionController.hit
+  type: Field
+  source:
+    id: hit
+    path: ''
+    startLine: 1592
+  assemblies:
+  - cs.temp.dll
+  namespace: Interaction
+  syntax:
+    content: public RaycastHit hit
+    return:
+      type: Global.RaycastHit
+    content.vb: Public hit As RaycastHit
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Interaction.InteractionController.GrabObject
+  commentId: M:Interaction.InteractionController.GrabObject
+  id: GrabObject
+  parent: Interaction.InteractionController
+  langs:
+  - csharp
+  - vb
+  name: GrabObject()
+  nameWithType: InteractionController.GrabObject()
+  fullName: Interaction.InteractionController.GrabObject()
+  type: Method
+  source:
+    id: GrabObject
+    path: ''
+    startLine: 1704
+  assemblies:
+  - cs.temp.dll
+  namespace: Interaction
+  summary: "\nGrab the object that is currently selected by the raycast.\n"
+  example: []
+  syntax:
+    content: public void GrabObject()
+    content.vb: Public Sub GrabObject
+  overload: Interaction.InteractionController.GrabObject*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Interaction.InteractionController.ReleaseGrabbedObject
+  commentId: M:Interaction.InteractionController.ReleaseGrabbedObject
+  id: ReleaseGrabbedObject
+  parent: Interaction.InteractionController
+  langs:
+  - csharp
+  - vb
+  name: ReleaseGrabbedObject()
+  nameWithType: InteractionController.ReleaseGrabbedObject()
+  fullName: Interaction.InteractionController.ReleaseGrabbedObject()
+  type: Method
+  source:
+    id: ReleaseGrabbedObject
+    path: ''
+    startLine: 1739
+  assemblies:
+  - cs.temp.dll
+  namespace: Interaction
+  summary: "\nRelease the currently grabbed object.\n"
+  example: []
+  syntax:
+    content: public void ReleaseGrabbedObject()
+    content.vb: Public Sub ReleaseGrabbedObject
+  overload: Interaction.InteractionController.ReleaseGrabbedObject*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Interaction.InteractionController.Interact
+  commentId: M:Interaction.InteractionController.Interact
+  id: Interact
+  parent: Interaction.InteractionController
+  langs:
+  - csharp
+  - vb
+  name: Interact()
+  nameWithType: InteractionController.Interact()
+  fullName: Interaction.InteractionController.Interact()
+  type: Method
+  source:
+    id: Interact
+    path: ''
+    startLine: 1771
+  assemblies:
+  - cs.temp.dll
+  namespace: Interaction
+  summary: "\nInvokes the Interact on the TrainARObject\nImportant: This method assumes there is an object selected!\nIt also assumes that ARInteractables have an ObjectInteraktionhandler\n"
+  example: []
+  syntax:
+    content: public void Interact()
+    content.vb: Public Sub Interact
+  overload: Interaction.InteractionController.Interact*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Interaction.InteractionController.Combine
+  commentId: M:Interaction.InteractionController.Combine
+  id: Combine
+  parent: Interaction.InteractionController
+  langs:
+  - csharp
+  - vb
+  name: Combine()
+  nameWithType: InteractionController.Combine()
+  fullName: Interaction.InteractionController.Combine()
+  type: Method
+  source:
+    id: Combine
+    path: ''
+    startLine: 1780
+  assemblies:
+  - cs.temp.dll
+  namespace: Interaction
+  summary: "\nInvokes the Combine on the TrainARObject\nImportant: This method assumes there is an object selected and it is currently intersecting with another.\nIt also assumes that ARInteractables have an ObjectInteraktionhandler\n"
+  example: []
+  syntax:
+    content: public void Combine()
+    content.vb: Public Sub Combine
+  overload: Interaction.InteractionController.Combine*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: Interaction
+  commentId: N:Interaction
+  name: Interaction
+  nameWithType: Interaction
+  fullName: Interaction
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Global.GameObject
+  isExternal: true
+  name: GameObject
+  nameWithType: GameObject
+  fullName: GameObject
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: Global.RaycastHit
+  commentId: '!:Global.RaycastHit'
+  isExternal: true
+  name: RaycastHit
+  nameWithType: RaycastHit
+  fullName: RaycastHit
+- uid: Interaction.InteractionController.GrabObject*
+  commentId: Overload:Interaction.InteractionController.GrabObject
+  name: GrabObject
+  nameWithType: InteractionController.GrabObject
+  fullName: Interaction.InteractionController.GrabObject
+- uid: Interaction.InteractionController.ReleaseGrabbedObject*
+  commentId: Overload:Interaction.InteractionController.ReleaseGrabbedObject
+  name: ReleaseGrabbedObject
+  nameWithType: InteractionController.ReleaseGrabbedObject
+  fullName: Interaction.InteractionController.ReleaseGrabbedObject
+- uid: Interaction.InteractionController.Interact*
+  commentId: Overload:Interaction.InteractionController.Interact
+  name: Interact
+  nameWithType: InteractionController.Interact
+  fullName: Interaction.InteractionController.Interact
+- uid: Interaction.InteractionController.Combine*
+  commentId: Overload:Interaction.InteractionController.Combine
+  name: Combine
+  nameWithType: InteractionController.Combine
+  fullName: Interaction.InteractionController.Combine

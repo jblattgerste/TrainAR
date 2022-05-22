@@ -1,0 +1,88 @@
+{
+    "metadata": [
+      {
+        "src": [
+          {
+            "src": "..",
+            "files": [
+              "**.csproj"
+            ],
+            "exclude": [
+              "Assets/Plugins/**"
+            ]
+          }
+        ],
+        "globalNamespaceId": "Global",
+        "filter": "filterConfig.yml",
+        "dest": "api",
+        "disableGitFeatures": false
+      }
+    ],
+  "build": {
+    "globalMetadata": {
+      "_appTitle": "TrainAR Documentation",
+      "_appFooter": "TrainAR Documentation",
+      "_appLogoPath": "resources/logo.svg",
+      "_appFaviconPath": "resources/favicon.ico",
+      "_enableSearch": true,
+      "_disableContribution": false,
+      "_disableAffix": false
+    },
+    "content": [
+      {
+        "files": [
+          "toc.yml",
+          "index.md"
+        ]
+      },
+      {
+        "src": "api",
+        "files": [
+          "*.yml"
+        ],
+        "dest": "api"
+      },
+      {
+        "src": "manual",
+        "files": [
+          "toc.yml",
+          "*.md"
+        ],
+        "dest": "manual"
+      }
+    ],
+    "overwrite": [
+      {
+        "src": "..",
+        "files": [
+          "Assets/Scripts/**/*.md"
+        ]
+      }
+    ],
+    "resource": [
+      {
+        "files": [
+          "resources/**/*",
+          "resources/logo.svg",
+          "resources/favicon.ico"
+        ]
+      }
+    ],
+    "sitemap": {
+      "baseUrl": "https://jblattgerste.github.io/TrainAR",
+      "changefreq": "weekly",
+      "fileOptions": {
+        "api/*": {
+          "changefreq": "daily"
+        }
+      }
+    },
+    "xref": [
+      "https://normanderwan.github.io/UnityXrefMaps/xrefmap.yml"
+    ],
+    "xrefService": [
+      "https://xref.docs.microsoft.com/query?uid={uid}"
+    ],
+    "dest": "../_site"
+  }
+}
