@@ -4,7 +4,7 @@
 
 First, [download](https://unity3d.com/de/get-unity/download) and install the [Unity Hub](https://docs.unity3d.com/hub/manual/InstallHub.html). The Unity Hub allows you to easily install the correct Unity Editor version and corresponding packages that are needed for platform specific deployments.
 
-After installing Unity HUB, install **Unity Version 2022.1.0b16** as described in the [Unity Hub Documentation](https://docs.unity3d.com/hub/manual/InstallEditors.html).
+After installing Unity HUB, install **Unity Version 2022.1.3f1** as described in the [Unity Hub Documentation](https://docs.unity3d.com/hub/manual/InstallEditors.html).
 When installing Unity, make sure to also indlude the correct modules, depending on which kind of device you want to deploy the TrainAR trainings to: 
 
 For Android choose Android Build Support. Make sure to have also Android SDK & NDK Tools and OpenJDK checked:
