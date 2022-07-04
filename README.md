@@ -32,6 +32,7 @@ for Procedural Mobile Augmented Reality Trainings_.
 - Blattgerste, J., Luksch, K., Lewa, C., & Pfeiffer, T. (2021). [TrainAR: A Scalable Interaction Concept and Didactic Framework for Procedural Trainings Using Handheld Augmented Reality](https://www.mdpi.com/2414-4088/5/7/30). Multimodal Technologies and Interaction, 5(7), 30.
 
 #### TrainAR Trainings:
+- Arztmann, M., Domínguez Alfaro, J. L., Blattgerste, J., Jeuring, J., Van Puyvelde, P. (2022). [Marie’s ChemLab: a Mobile Augmented Reality Game to Teach Basic Chemistry to Children](https://mixality.de/wp-content/uploads/2022/07/Arztmann2022MariesChemLab.pdf).European Conference on Games Based Learning.
 - Domínguez Alfaro, J. L., Gantois, S., Blattgerste, J., De Croon, R., Verbert, K., Pfeiffer, T., & Van Puyvelde, P. (2022). [Mobile Augmented Reality Laboratory for Learning Acid–Base Titration](https://pubs.acs.org/doi/abs/10.1021/acs.jchemed.1c00894). Journal of Chemical Education, 99(2), 531–537.
 - Blattgerste, J., Luksch, K., Lewa, C., Kunzendorf, M., Bauer, N. H., Bernloehr, A., ... & Pfeiffer, T. (2020). [Project Heb@AR: Exploring handheld Augmented Reality training to supplement academic midwifery education](https://dl.gi.de/handle/20.500.12116/34147). DELFI 2020–Die 18. Fachtagung Bildungstechnologien der Gesellschaft für Informatik eV.
 
