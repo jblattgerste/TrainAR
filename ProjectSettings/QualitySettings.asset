@@ -81,8 +81,8 @@ QualitySettings:
   - serializedVersion: 2
     name: Medium
     pixelLightCount: 1
-    shadows: 1
-    shadowResolution: 1
+    shadows: 2
+    shadowResolution: 3
     shadowProjection: 0
     shadowCascades: 1
     shadowDistance: 3
@@ -98,7 +98,7 @@ QualitySettings:
     softVegetation: 0
     realtimeReflectionProbes: 0
     billboardsFaceCameraPosition: 0
-    vSyncCount: 1
+    vSyncCount: 0
     lodBias: 0.7
     maximumLODLevel: 0
     streamingMipmapsActive: 0
@@ -190,7 +190,7 @@ QualitySettings:
     name: Ultra
     pixelLightCount: 4
     shadows: 2
-    shadowResolution: 2
+    shadowResolution: 1
     shadowProjection: 1
     shadowCascades: 4
     shadowDistance: 150
