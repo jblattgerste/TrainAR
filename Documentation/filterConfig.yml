@@ -3,7 +3,16 @@ apiRules:
     uidRegex: ^DocFxForUnity
     type: Namespace
 - include:
+    uidRegex: ^Interaction
+    type: Namespace
+- include:
     uidRegex: ^Tracking
+    type: Namespace
+- include:
+    uidRegex: ^Static
+    type: Namespace
+- include:
+    uidRegex: ^UI
     type: Namespace
 - include:
     uidRegex: ^Others
