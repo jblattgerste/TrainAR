@@ -1,0 +1,121 @@
+### YamlMime:ManagedReference
+items:
+- uid: Others.StartARScene
+  commentId: T:Others.StartARScene
+  id: StartARScene
+  parent: Others
+  children:
+  - Others.StartARScene.LoadArScene
+  - Others.StartARScene.QuitApplication
+  langs:
+  - csharp
+  - vb
+  name: StartARScene
+  nameWithType: StartARScene
+  fullName: Others.StartARScene
+  type: Class
+  source:
+    id: StartARScene
+    path: ''
+    startLine: 4385
+  assemblies:
+  - cs.temp.dll
+  namespace: Others
+  syntax:
+    content: 'public class StartARScene : MonoBehaviour'
+    content.vb: >-
+      Public Class StartARScene
+          Inherits MonoBehaviour
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Others.StartARScene.LoadArScene
+  commentId: M:Others.StartARScene.LoadArScene
+  id: LoadArScene
+  parent: Others.StartARScene
+  langs:
+  - csharp
+  - vb
+  name: LoadArScene()
+  nameWithType: StartARScene.LoadArScene()
+  fullName: Others.StartARScene.LoadArScene()
+  type: Method
+  source:
+    id: LoadArScene
+    path: ''
+    startLine: 4392
+  assemblies:
+  - cs.temp.dll
+  namespace: Others
+  summary: "\nLoads the (main) AR scene\n"
+  example: []
+  syntax:
+    content: public void LoadArScene()
+    content.vb: Public Sub LoadArScene
+  overload: Others.StartARScene.LoadArScene*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Others.StartARScene.QuitApplication
+  commentId: M:Others.StartARScene.QuitApplication
+  id: QuitApplication
+  parent: Others.StartARScene
+  langs:
+  - csharp
+  - vb
+  name: QuitApplication()
+  nameWithType: StartARScene.QuitApplication()
+  fullName: Others.StartARScene.QuitApplication()
+  type: Method
+  source:
+    id: QuitApplication
+    path: ''
+    startLine: 4406
+  assemblies:
+  - cs.temp.dll
+  namespace: Others
+  summary: "\nCloses the Application.\n"
+  example: []
+  syntax:
+    content: public void QuitApplication()
+    content.vb: Public Sub QuitApplication
+  overload: Others.StartARScene.QuitApplication*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: Others
+  commentId: N:Others
+  name: Others
+  nameWithType: Others
+  fullName: Others
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Others.StartARScene.LoadArScene*
+  commentId: Overload:Others.StartARScene.LoadArScene
+  name: LoadArScene
+  nameWithType: StartARScene.LoadArScene
+  fullName: Others.StartARScene.LoadArScene
+- uid: Others.StartARScene.QuitApplication*
+  commentId: Overload:Others.StartARScene.QuitApplication
+  name: QuitApplication
+  nameWithType: StartARScene.QuitApplication
+  fullName: Others.StartARScene.QuitApplication

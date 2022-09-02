@@ -1,0 +1,119 @@
+### YamlMime:ManagedReference
+items:
+- uid: UI.CrosshairOnOff
+  commentId: T:UI.CrosshairOnOff
+  id: CrosshairOnOff
+  parent: UI
+  children:
+  - UI.CrosshairOnOff.Start
+  - UI.CrosshairOnOff.Update
+  langs:
+  - csharp
+  - vb
+  name: CrosshairOnOff
+  nameWithType: CrosshairOnOff
+  fullName: UI.CrosshairOnOff
+  type: Class
+  source:
+    id: CrosshairOnOff
+    path: ''
+    startLine: 4870
+  assemblies:
+  - cs.temp.dll
+  namespace: UI
+  summary: "\nControls the dynamic transformations of the crosshair.\n"
+  example: []
+  syntax:
+    content: 'public class CrosshairOnOff : MonoBehaviour'
+    content.vb: >-
+      Public Class CrosshairOnOff
+          Inherits MonoBehaviour
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: UI.CrosshairOnOff.Start
+  commentId: M:UI.CrosshairOnOff.Start
+  id: Start
+  parent: UI.CrosshairOnOff
+  langs:
+  - csharp
+  - vb
+  name: Start()
+  nameWithType: CrosshairOnOff.Start()
+  fullName: UI.CrosshairOnOff.Start()
+  type: Method
+  source:
+    id: Start
+    path: ''
+    startLine: 4884
+  assemblies:
+  - cs.temp.dll
+  namespace: UI
+  syntax:
+    content: public void Start()
+    content.vb: Public Sub Start
+  overload: UI.CrosshairOnOff.Start*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: UI.CrosshairOnOff.Update
+  commentId: M:UI.CrosshairOnOff.Update
+  id: Update
+  parent: UI.CrosshairOnOff
+  langs:
+  - csharp
+  - vb
+  name: Update()
+  nameWithType: CrosshairOnOff.Update()
+  fullName: UI.CrosshairOnOff.Update()
+  type: Method
+  source:
+    id: Update
+    path: ''
+    startLine: 4890
+  assemblies:
+  - cs.temp.dll
+  namespace: UI
+  syntax:
+    content: public void Update()
+    content.vb: Public Sub Update
+  overload: UI.CrosshairOnOff.Update*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: UI
+  commentId: N:UI
+  name: UI
+  nameWithType: UI
+  fullName: UI
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: UI.CrosshairOnOff.Start*
+  commentId: Overload:UI.CrosshairOnOff.Start
+  name: Start
+  nameWithType: CrosshairOnOff.Start
+  fullName: UI.CrosshairOnOff.Start
+- uid: UI.CrosshairOnOff.Update*
+  commentId: Overload:UI.CrosshairOnOff.Update
+  name: Update
+  nameWithType: CrosshairOnOff.Update
+  fullName: UI.CrosshairOnOff.Update

@@ -1,0 +1,247 @@
+### YamlMime:ManagedReference
+items:
+- uid: Static.InteractionType
+  commentId: T:Static.InteractionType
+  id: InteractionType
+  parent: Static
+  children:
+  - Static.InteractionType.Combine
+  - Static.InteractionType.Custom
+  - Static.InteractionType.Deselect
+  - Static.InteractionType.Grab
+  - Static.InteractionType.Interact
+  - Static.InteractionType.Release
+  - Static.InteractionType.Select
+  langs:
+  - csharp
+  - vb
+  name: InteractionType
+  nameWithType: InteractionType
+  fullName: Static.InteractionType
+  type: Enum
+  source:
+    id: InteractionType
+    path: ''
+    startLine: 4477
+  assemblies:
+  - cs.temp.dll
+  namespace: Static
+  summary: "\nThe Interaction type that was used with a state change\n"
+  example: []
+  syntax:
+    content: public enum InteractionType
+    content.vb: Public Enum InteractionType
+  modifiers.csharp:
+  - public
+  - enum
+  modifiers.vb:
+  - Public
+  - Enum
+- uid: Static.InteractionType.Select
+  commentId: F:Static.InteractionType.Select
+  id: Select
+  parent: Static.InteractionType
+  langs:
+  - csharp
+  - vb
+  name: Select
+  nameWithType: InteractionType.Select
+  fullName: Static.InteractionType.Select
+  type: Field
+  source:
+    id: Select
+    path: ''
+    startLine: 4479
+  assemblies:
+  - cs.temp.dll
+  namespace: Static
+  syntax:
+    content: Select = 0
+    return:
+      type: Static.InteractionType
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Static.InteractionType.Deselect
+  commentId: F:Static.InteractionType.Deselect
+  id: Deselect
+  parent: Static.InteractionType
+  langs:
+  - csharp
+  - vb
+  name: Deselect
+  nameWithType: InteractionType.Deselect
+  fullName: Static.InteractionType.Deselect
+  type: Field
+  source:
+    id: Deselect
+    path: ''
+    startLine: 4480
+  assemblies:
+  - cs.temp.dll
+  namespace: Static
+  syntax:
+    content: Deselect = 1
+    return:
+      type: Static.InteractionType
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Static.InteractionType.Grab
+  commentId: F:Static.InteractionType.Grab
+  id: Grab
+  parent: Static.InteractionType
+  langs:
+  - csharp
+  - vb
+  name: Grab
+  nameWithType: InteractionType.Grab
+  fullName: Static.InteractionType.Grab
+  type: Field
+  source:
+    id: Grab
+    path: ''
+    startLine: 4481
+  assemblies:
+  - cs.temp.dll
+  namespace: Static
+  syntax:
+    content: Grab = 2
+    return:
+      type: Static.InteractionType
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Static.InteractionType.Release
+  commentId: F:Static.InteractionType.Release
+  id: Release
+  parent: Static.InteractionType
+  langs:
+  - csharp
+  - vb
+  name: Release
+  nameWithType: InteractionType.Release
+  fullName: Static.InteractionType.Release
+  type: Field
+  source:
+    id: Release
+    path: ''
+    startLine: 4482
+  assemblies:
+  - cs.temp.dll
+  namespace: Static
+  syntax:
+    content: Release = 3
+    return:
+      type: Static.InteractionType
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Static.InteractionType.Interact
+  commentId: F:Static.InteractionType.Interact
+  id: Interact
+  parent: Static.InteractionType
+  langs:
+  - csharp
+  - vb
+  name: Interact
+  nameWithType: InteractionType.Interact
+  fullName: Static.InteractionType.Interact
+  type: Field
+  source:
+    id: Interact
+    path: ''
+    startLine: 4483
+  assemblies:
+  - cs.temp.dll
+  namespace: Static
+  syntax:
+    content: Interact = 4
+    return:
+      type: Static.InteractionType
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Static.InteractionType.Combine
+  commentId: F:Static.InteractionType.Combine
+  id: Combine
+  parent: Static.InteractionType
+  langs:
+  - csharp
+  - vb
+  name: Combine
+  nameWithType: InteractionType.Combine
+  fullName: Static.InteractionType.Combine
+  type: Field
+  source:
+    id: Combine
+    path: ''
+    startLine: 4484
+  assemblies:
+  - cs.temp.dll
+  namespace: Static
+  syntax:
+    content: Combine = 5
+    return:
+      type: Static.InteractionType
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Static.InteractionType.Custom
+  commentId: F:Static.InteractionType.Custom
+  id: Custom
+  parent: Static.InteractionType
+  langs:
+  - csharp
+  - vb
+  name: Custom
+  nameWithType: InteractionType.Custom
+  fullName: Static.InteractionType.Custom
+  type: Field
+  source:
+    id: Custom
+    path: ''
+    startLine: 4485
+  assemblies:
+  - cs.temp.dll
+  namespace: Static
+  syntax:
+    content: Custom = 6
+    return:
+      type: Static.InteractionType
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+references:
+- uid: Static
+  commentId: N:Static
+  name: Static
+  nameWithType: Static
+  fullName: Static
+- uid: Static.InteractionType
+  commentId: T:Static.InteractionType
+  parent: Static
+  name: InteractionType
+  nameWithType: InteractionType
+  fullName: Static.InteractionType

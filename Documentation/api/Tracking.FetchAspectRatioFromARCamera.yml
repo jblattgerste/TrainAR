@@ -1,0 +1,55 @@
+### YamlMime:ManagedReference
+items:
+- uid: Tracking.FetchAspectRatioFromARCamera
+  commentId: T:Tracking.FetchAspectRatioFromARCamera
+  id: FetchAspectRatioFromARCamera
+  parent: Tracking
+  children: []
+  langs:
+  - csharp
+  - vb
+  name: FetchAspectRatioFromARCamera
+  nameWithType: FetchAspectRatioFromARCamera
+  fullName: Tracking.FetchAspectRatioFromARCamera
+  type: Class
+  source:
+    id: FetchAspectRatioFromARCamera
+    path: ''
+    startLine: 4738
+  assemblies:
+  - cs.temp.dll
+  namespace: Tracking
+  summary: "\nFetches the projectionmatrix from one camera and diretly applies it to another one\n"
+  example: []
+  syntax:
+    content: 'public class FetchAspectRatioFromARCamera : MonoBehaviour'
+    content.vb: >-
+      Public Class FetchAspectRatioFromARCamera
+          Inherits MonoBehaviour
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+references:
+- uid: Tracking
+  commentId: N:Tracking
+  name: Tracking
+  nameWithType: Tracking
+  fullName: Tracking
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System

@@ -1,0 +1,55 @@
+### YamlMime:ManagedReference
+items:
+- uid: UI.SaveArea
+  commentId: T:UI.SaveArea
+  id: SaveArea
+  parent: UI
+  children: []
+  langs:
+  - csharp
+  - vb
+  name: SaveArea
+  nameWithType: SaveArea
+  fullName: UI.SaveArea
+  type: Class
+  source:
+    id: SaveArea
+    path: ''
+    startLine: 6313
+  assemblies:
+  - cs.temp.dll
+  namespace: UI
+  summary: "\nThe safeArea scripts moves UI components when they would otherwise be occluded by e.g. cutout cameras or speakers\non some newer smartphone models.\n"
+  example: []
+  syntax:
+    content: 'public class SaveArea : MonoBehaviour'
+    content.vb: >-
+      Public Class SaveArea
+          Inherits MonoBehaviour
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+references:
+- uid: UI
+  commentId: N:UI
+  name: UI
+  nameWithType: UI
+  fullName: UI
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System

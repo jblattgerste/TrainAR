@@ -1,0 +1,182 @@
+### YamlMime:ManagedReference
+items:
+- uid: Interaction.Outline
+  commentId: T:Interaction.Outline
+  id: Outline
+  parent: Interaction
+  children:
+  - Interaction.Outline.OutlineColor
+  - Interaction.Outline.OutlineMode
+  - Interaction.Outline.OutlineWidth
+  langs:
+  - csharp
+  - vb
+  name: Outline
+  nameWithType: Outline
+  fullName: Interaction.Outline
+  type: Class
+  source:
+    id: Outline
+    path: ''
+    startLine: 2324
+  assemblies:
+  - cs.temp.dll
+  namespace: Interaction
+  syntax:
+    content: 'public class Outline : MonoBehaviour'
+    content.vb: >-
+      Public Class Outline
+          Inherits MonoBehaviour
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Interaction.Outline.OutlineMode
+  commentId: P:Interaction.Outline.OutlineMode
+  id: OutlineMode
+  parent: Interaction.Outline
+  langs:
+  - csharp
+  - vb
+  name: OutlineMode
+  nameWithType: Outline.OutlineMode
+  fullName: Interaction.Outline.OutlineMode
+  type: Property
+  source:
+    id: OutlineMode
+    path: ''
+    startLine: 2337
+  assemblies:
+  - cs.temp.dll
+  namespace: Interaction
+  syntax:
+    content: public Outline.Mode OutlineMode { get; set; }
+    parameters: []
+    return:
+      type: Interaction.Outline.Mode
+    content.vb: Public Property OutlineMode As Outline.Mode
+  overload: Interaction.Outline.OutlineMode*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Interaction.Outline.OutlineColor
+  commentId: P:Interaction.Outline.OutlineColor
+  id: OutlineColor
+  parent: Interaction.Outline
+  langs:
+  - csharp
+  - vb
+  name: OutlineColor
+  nameWithType: Outline.OutlineColor
+  fullName: Interaction.Outline.OutlineColor
+  type: Property
+  source:
+    id: OutlineColor
+    path: ''
+    startLine: 2345
+  assemblies:
+  - cs.temp.dll
+  namespace: Interaction
+  syntax:
+    content: public Color OutlineColor { get; set; }
+    parameters: []
+    return:
+      type: Global.Color
+    content.vb: Public Property OutlineColor As Color
+  overload: Interaction.Outline.OutlineColor*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Interaction.Outline.OutlineWidth
+  commentId: P:Interaction.Outline.OutlineWidth
+  id: OutlineWidth
+  parent: Interaction.Outline
+  langs:
+  - csharp
+  - vb
+  name: OutlineWidth
+  nameWithType: Outline.OutlineWidth
+  fullName: Interaction.Outline.OutlineWidth
+  type: Property
+  source:
+    id: OutlineWidth
+    path: ''
+    startLine: 2353
+  assemblies:
+  - cs.temp.dll
+  namespace: Interaction
+  syntax:
+    content: public float OutlineWidth { get; set; }
+    parameters: []
+    return:
+      type: System.Single
+    content.vb: Public Property OutlineWidth As Single
+  overload: Interaction.Outline.OutlineWidth*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+references:
+- uid: Interaction
+  commentId: N:Interaction
+  name: Interaction
+  nameWithType: Interaction
+  fullName: Interaction
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Interaction.Outline.OutlineMode*
+  commentId: Overload:Interaction.Outline.OutlineMode
+  name: OutlineMode
+  nameWithType: Outline.OutlineMode
+  fullName: Interaction.Outline.OutlineMode
+- uid: Interaction.Outline.Mode
+  commentId: T:Interaction.Outline.Mode
+  parent: Interaction
+  name: Outline.Mode
+  nameWithType: Outline.Mode
+  fullName: Interaction.Outline.Mode
+- uid: Interaction.Outline.OutlineColor*
+  commentId: Overload:Interaction.Outline.OutlineColor
+  name: OutlineColor
+  nameWithType: Outline.OutlineColor
+  fullName: Interaction.Outline.OutlineColor
+- uid: Global.Color
+  isExternal: true
+  name: Color
+  nameWithType: Color
+  fullName: Color
+- uid: Interaction.Outline.OutlineWidth*
+  commentId: Overload:Interaction.Outline.OutlineWidth
+  name: OutlineWidth
+  nameWithType: Outline.OutlineWidth
+  fullName: Interaction.Outline.OutlineWidth
+- uid: System.Single
+  commentId: T:System.Single
+  parent: System
+  isExternal: true
+  name: Single
+  nameWithType: Single
+  fullName: System.Single

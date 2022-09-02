@@ -1,0 +1,156 @@
+### YamlMime:ManagedReference
+items:
+- uid: Interaction.CollisionController
+  commentId: T:Interaction.CollisionController
+  id: CollisionController
+  parent: Interaction
+  children:
+  - Interaction.CollisionController.Awake
+  - Interaction.CollisionController.boxCollider
+  - Interaction.CollisionController.grabbedObject
+  langs:
+  - csharp
+  - vb
+  name: CollisionController
+  nameWithType: CollisionController
+  fullName: Interaction.CollisionController
+  type: Class
+  source:
+    id: CollisionController
+    path: ''
+    startLine: 1345
+  assemblies:
+  - cs.temp.dll
+  namespace: Interaction
+  summary: "\nDetects and handles collisions used for combining GameObjects.\n"
+  example: []
+  syntax:
+    content: 'public class CollisionController : MonoBehaviour'
+    content.vb: >-
+      Public Class CollisionController
+          Inherits MonoBehaviour
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Interaction.CollisionController.boxCollider
+  commentId: F:Interaction.CollisionController.boxCollider
+  id: boxCollider
+  parent: Interaction.CollisionController
+  langs:
+  - csharp
+  - vb
+  name: boxCollider
+  nameWithType: CollisionController.boxCollider
+  fullName: Interaction.CollisionController.boxCollider
+  type: Field
+  source:
+    id: boxCollider
+    path: ''
+    startLine: 1349
+  assemblies:
+  - cs.temp.dll
+  namespace: Interaction
+  syntax:
+    content: public BoxCollider boxCollider
+    return:
+      type: Global.BoxCollider
+    content.vb: Public boxCollider As BoxCollider
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Interaction.CollisionController.grabbedObject
+  commentId: F:Interaction.CollisionController.grabbedObject
+  id: grabbedObject
+  parent: Interaction.CollisionController
+  langs:
+  - csharp
+  - vb
+  name: grabbedObject
+  nameWithType: CollisionController.grabbedObject
+  fullName: Interaction.CollisionController.grabbedObject
+  type: Field
+  source:
+    id: grabbedObject
+    path: ''
+    startLine: 1352
+  assemblies:
+  - cs.temp.dll
+  namespace: Interaction
+  syntax:
+    content: public GameObject grabbedObject
+    return:
+      type: Global.GameObject
+    content.vb: Public grabbedObject As GameObject
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Interaction.CollisionController.Awake
+  commentId: M:Interaction.CollisionController.Awake
+  id: Awake
+  parent: Interaction.CollisionController
+  langs:
+  - csharp
+  - vb
+  name: Awake()
+  nameWithType: CollisionController.Awake()
+  fullName: Interaction.CollisionController.Awake()
+  type: Method
+  source:
+    id: Awake
+    path: ''
+    startLine: 1357
+  assemblies:
+  - cs.temp.dll
+  namespace: Interaction
+  summary: "\nSets script references to GameObjects on Awake\n"
+  example: []
+  syntax:
+    content: public void Awake()
+    content.vb: Public Sub Awake
+  overload: Interaction.CollisionController.Awake*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: Interaction
+  commentId: N:Interaction
+  name: Interaction
+  nameWithType: Interaction
+  fullName: Interaction
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Global.BoxCollider
+  commentId: '!:Global.BoxCollider'
+  isExternal: true
+  name: BoxCollider
+  nameWithType: BoxCollider
+  fullName: BoxCollider
+- uid: Global.GameObject
+  isExternal: true
+  name: GameObject
+  nameWithType: GameObject
+  fullName: GameObject
+- uid: Interaction.CollisionController.Awake*
+  commentId: Overload:Interaction.CollisionController.Awake
+  name: Awake
+  nameWithType: CollisionController.Awake
+  fullName: Interaction.CollisionController.Awake

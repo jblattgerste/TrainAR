@@ -1,0 +1,71 @@
+### YamlMime:ManagedReference
+items:
+- uid: Others.StateForPlacement
+  commentId: T:Others.StateForPlacement
+  id: StateForPlacement
+  parent: Others
+  children:
+  - Others.StateForPlacement.nothing
+  langs:
+  - csharp
+  - vb
+  name: StateForPlacement
+  nameWithType: StateForPlacement
+  fullName: Others.StateForPlacement
+  type: Enum
+  source:
+    id: StateForPlacement
+    path: ''
+    startLine: 3896
+  assemblies:
+  - cs.temp.dll
+  namespace: Others
+  syntax:
+    content: public enum StateForPlacement
+    content.vb: Public Enum StateForPlacement
+  modifiers.csharp:
+  - public
+  - enum
+  modifiers.vb:
+  - Public
+  - Enum
+- uid: Others.StateForPlacement.nothing
+  commentId: F:Others.StateForPlacement.nothing
+  id: nothing
+  parent: Others.StateForPlacement
+  langs:
+  - csharp
+  - vb
+  name: nothing
+  nameWithType: StateForPlacement.nothing
+  fullName: Others.StateForPlacement.nothing
+  type: Field
+  source:
+    id: nothing
+    path: ''
+    startLine: 3898
+  assemblies:
+  - cs.temp.dll
+  namespace: Others
+  syntax:
+    content: nothing = 0
+    return:
+      type: Others.StateForPlacement
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+references:
+- uid: Others
+  commentId: N:Others
+  name: Others
+  nameWithType: Others
+  fullName: Others
+- uid: Others.StateForPlacement
+  commentId: T:Others.StateForPlacement
+  parent: Others
+  name: StateForPlacement
+  nameWithType: StateForPlacement
+  fullName: Others.StateForPlacement

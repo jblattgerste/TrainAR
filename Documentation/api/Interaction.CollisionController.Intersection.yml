@@ -1,0 +1,247 @@
+### YamlMime:ManagedReference
+items:
+- uid: Interaction.CollisionController.Intersection
+  commentId: T:Interaction.CollisionController.Intersection
+  id: CollisionController.Intersection
+  parent: Interaction
+  children:
+  - Interaction.CollisionController.Intersection.#ctor(GameObject,System.Boolean)
+  - Interaction.CollisionController.Intersection.GetIntersectedObject
+  - Interaction.CollisionController.Intersection.GetIntersectionDetected
+  - Interaction.CollisionController.Intersection.SetIntersectedObject(GameObject)
+  - Interaction.CollisionController.Intersection.SetIntersectionDetected(System.Boolean)
+  langs:
+  - csharp
+  - vb
+  name: CollisionController.Intersection
+  nameWithType: CollisionController.Intersection
+  fullName: Interaction.CollisionController.Intersection
+  type: Struct
+  source:
+    id: Intersection
+    path: ''
+    startLine: 1401
+  assemblies:
+  - cs.temp.dll
+  namespace: Interaction
+  summary: "\nHolds references for intersections.\n"
+  example: []
+  syntax:
+    content: public struct Intersection
+    content.vb: Public Structure Intersection
+  modifiers.csharp:
+  - public
+  - struct
+  modifiers.vb:
+  - Public
+  - Structure
+- uid: Interaction.CollisionController.Intersection.#ctor(GameObject,System.Boolean)
+  commentId: M:Interaction.CollisionController.Intersection.#ctor(GameObject,System.Boolean)
+  id: '#ctor(GameObject,System.Boolean)'
+  parent: Interaction.CollisionController.Intersection
+  langs:
+  - csharp
+  - vb
+  name: Intersection(GameObject, Boolean)
+  nameWithType: CollisionController.Intersection.Intersection(GameObject, Boolean)
+  fullName: Interaction.CollisionController.Intersection.Intersection(GameObject, System.Boolean)
+  type: Constructor
+  source:
+    id: .ctor
+    path: ''
+    startLine: 1411
+  assemblies:
+  - cs.temp.dll
+  namespace: Interaction
+  summary: "\nConstructer to create a struct to store references for a detected intersection.\n"
+  example: []
+  syntax:
+    content: public Intersection(GameObject intersectedObject, bool intersectionDetected)
+    parameters:
+    - id: intersectedObject
+      type: Global.GameObject
+      description: The intersected TrainAR object.
+    - id: intersectionDetected
+      type: System.Boolean
+      description: If a intersection is detected
+    content.vb: Public Sub New(intersectedObject As GameObject, intersectionDetected As Boolean)
+  overload: Interaction.CollisionController.Intersection.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Interaction.CollisionController.Intersection.SetIntersectedObject(GameObject)
+  commentId: M:Interaction.CollisionController.Intersection.SetIntersectedObject(GameObject)
+  id: SetIntersectedObject(GameObject)
+  parent: Interaction.CollisionController.Intersection
+  langs:
+  - csharp
+  - vb
+  name: SetIntersectedObject(GameObject)
+  nameWithType: CollisionController.Intersection.SetIntersectedObject(GameObject)
+  fullName: Interaction.CollisionController.Intersection.SetIntersectedObject(GameObject)
+  type: Method
+  source:
+    id: SetIntersectedObject
+    path: ''
+    startLine: 1420
+  assemblies:
+  - cs.temp.dll
+  namespace: Interaction
+  summary: "\nSet the intersected TrainAR object reference in the struct.\n"
+  example: []
+  syntax:
+    content: public void SetIntersectedObject(GameObject intersectedObject)
+    parameters:
+    - id: intersectedObject
+      type: Global.GameObject
+      description: The intersected Object.
+    content.vb: Public Sub SetIntersectedObject(intersectedObject As GameObject)
+  overload: Interaction.CollisionController.Intersection.SetIntersectedObject*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Interaction.CollisionController.Intersection.SetIntersectionDetected(System.Boolean)
+  commentId: M:Interaction.CollisionController.Intersection.SetIntersectionDetected(System.Boolean)
+  id: SetIntersectionDetected(System.Boolean)
+  parent: Interaction.CollisionController.Intersection
+  langs:
+  - csharp
+  - vb
+  name: SetIntersectionDetected(Boolean)
+  nameWithType: CollisionController.Intersection.SetIntersectionDetected(Boolean)
+  fullName: Interaction.CollisionController.Intersection.SetIntersectionDetected(System.Boolean)
+  type: Method
+  source:
+    id: SetIntersectionDetected
+    path: ''
+    startLine: 1428
+  assemblies:
+  - cs.temp.dll
+  namespace: Interaction
+  summary: "\nSet if a intersection is detected.\n"
+  example: []
+  syntax:
+    content: public void SetIntersectionDetected(bool intersectionDetected)
+    parameters:
+    - id: intersectionDetected
+      type: System.Boolean
+      description: True if intersection is detected.
+    content.vb: Public Sub SetIntersectionDetected(intersectionDetected As Boolean)
+  overload: Interaction.CollisionController.Intersection.SetIntersectionDetected*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Interaction.CollisionController.Intersection.GetIntersectedObject
+  commentId: M:Interaction.CollisionController.Intersection.GetIntersectedObject
+  id: GetIntersectedObject
+  parent: Interaction.CollisionController.Intersection
+  langs:
+  - csharp
+  - vb
+  name: GetIntersectedObject()
+  nameWithType: CollisionController.Intersection.GetIntersectedObject()
+  fullName: Interaction.CollisionController.Intersection.GetIntersectedObject()
+  type: Method
+  source:
+    id: GetIntersectedObject
+    path: ''
+    startLine: 1436
+  assemblies:
+  - cs.temp.dll
+  namespace: Interaction
+  summary: "\nGet the intersected TrainAR object reference in the struct.\n"
+  example: []
+  syntax:
+    content: public GameObject GetIntersectedObject()
+    return:
+      type: Global.GameObject
+      description: The TrainAR gameobject.
+    content.vb: Public Function GetIntersectedObject As GameObject
+  overload: Interaction.CollisionController.Intersection.GetIntersectedObject*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Interaction.CollisionController.Intersection.GetIntersectionDetected
+  commentId: M:Interaction.CollisionController.Intersection.GetIntersectionDetected
+  id: GetIntersectionDetected
+  parent: Interaction.CollisionController.Intersection
+  langs:
+  - csharp
+  - vb
+  name: GetIntersectionDetected()
+  nameWithType: CollisionController.Intersection.GetIntersectionDetected()
+  fullName: Interaction.CollisionController.Intersection.GetIntersectionDetected()
+  type: Method
+  source:
+    id: GetIntersectionDetected
+    path: ''
+    startLine: 1444
+  assemblies:
+  - cs.temp.dll
+  namespace: Interaction
+  summary: "\nGet if a intersection is detected.\n"
+  example: []
+  syntax:
+    content: public bool GetIntersectionDetected()
+    return:
+      type: System.Boolean
+      description: If a intersection is detected.
+    content.vb: Public Function GetIntersectionDetected As Boolean
+  overload: Interaction.CollisionController.Intersection.GetIntersectionDetected*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: Interaction
+  commentId: N:Interaction
+  name: Interaction
+  nameWithType: Interaction
+  fullName: Interaction
+- uid: Interaction.CollisionController.Intersection.#ctor*
+  commentId: Overload:Interaction.CollisionController.Intersection.#ctor
+  name: Intersection
+  nameWithType: CollisionController.Intersection.Intersection
+  fullName: Interaction.CollisionController.Intersection.Intersection
+- uid: Global.GameObject
+  isExternal: true
+  name: GameObject
+  nameWithType: GameObject
+  fullName: GameObject
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Interaction.CollisionController.Intersection.SetIntersectedObject*
+  commentId: Overload:Interaction.CollisionController.Intersection.SetIntersectedObject
+  name: SetIntersectedObject
+  nameWithType: CollisionController.Intersection.SetIntersectedObject
+  fullName: Interaction.CollisionController.Intersection.SetIntersectedObject
+- uid: Interaction.CollisionController.Intersection.SetIntersectionDetected*
+  commentId: Overload:Interaction.CollisionController.Intersection.SetIntersectionDetected
+  name: SetIntersectionDetected
+  nameWithType: CollisionController.Intersection.SetIntersectionDetected
+  fullName: Interaction.CollisionController.Intersection.SetIntersectionDetected
+- uid: Interaction.CollisionController.Intersection.GetIntersectedObject*
+  commentId: Overload:Interaction.CollisionController.Intersection.GetIntersectedObject
+  name: GetIntersectedObject
+  nameWithType: CollisionController.Intersection.GetIntersectedObject
+  fullName: Interaction.CollisionController.Intersection.GetIntersectedObject
+- uid: Interaction.CollisionController.Intersection.GetIntersectionDetected*
+  commentId: Overload:Interaction.CollisionController.Intersection.GetIntersectionDetected
+  name: GetIntersectionDetected
+  nameWithType: CollisionController.Intersection.GetIntersectionDetected
+  fullName: Interaction.CollisionController.Intersection.GetIntersectionDetected
