@@ -5,7 +5,8 @@
           {
             "src": "..",
             "files": [
-              "**.csproj"
+              "**.csproj",
+              "Assets/**/*.cs"
             ],
             "exclude": [
               "Assets/Plugins/**"
@@ -69,7 +70,7 @@
       }
     ],
     "sitemap": {
-      "baseUrl": "https://jblattgerste.github.io/TrainAR",
+      "baseUrl": "https://vapopo.github.io/TrainAR-1/",
       "changefreq": "weekly",
       "fileOptions": {
         "api/*": {
