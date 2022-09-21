@@ -47,3 +47,8 @@ This attaches one **TrainAR Object** to another, making them one. The **Object n
 ## Destroy Object
 
 Destroys and removes the specified TrainAR Object from the scene. 
+
+## Replace TrainAR Object
+Replaces a to be **replaced TrainAR Object** with another **replacing TrainAR Object**. The replaced **TrainAR Object** is set to invisible. The **replacing TrainAR Object** is also placed at the same position as the **replaced TrainAR Object**.
+
+In case the **replaced TrainAR Object** is **grabbed** during replacement, the **replacing TrainAR Object** is also **grabbed**.
