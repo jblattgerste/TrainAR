@@ -113,8 +113,10 @@
      <Compile Include="Assets\Scripts\UI\InteractButton.cs" />
      <Compile Include="Assets\Scripts\UI\InteractionButtonController.cs" />
      <Compile Include="Assets\Scripts\Interaction\AudioController.cs" />
+     <Compile Include="Assets\Unity.VisualScripting.Generated\VisualScripting.Core\AotStubs.cs" />
      <None Include="Assets\Shaders\OutlineMask.shader" />
      <None Include="Assets\Shaders\InvisibleOcclusion.shader" />
+     <None Include="Assets\Unity.VisualScripting.Generated\VisualScripting.Core\link.xml" />
      <None Include="Assets\Shaders\TransparentShadow.shader" />
      <None Include="Assets\Shaders\MixedRealityStandard.shader" />
      <None Include="Assets\Shaders\OutlineFill.shader" />

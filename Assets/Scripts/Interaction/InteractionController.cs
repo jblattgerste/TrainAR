@@ -249,19 +249,24 @@ namespace Interaction
         /// <summary>
         /// Release the currently grabbed object.
         /// </summary>
-        public void ReleaseGrabbedObject()
+        public void ReleaseGrabbedObject(bool fusedObject=false)
         {
             //Return if no object is currently grabbed
             if (!isGrabbingObject) return;
 
             //Deactivate the trigger for the BoxColliders
             ActivateAllBoxColliderTrigger(grabbedObject);
+            
+            //In case this is called in the context of fusing objects via the Object Helper, these steps have be skipped
+            if (!fusedObject)
+            {
+                //Set the parent back to be a child of the anchored object that was originally spawned
+                grabbedObject.transform.parent = objectPlacementController.GetSpawnedObject().transform;
 
-            //Set the parent back to be a child of the anchored object that was originally spawned
-            grabbedObject.transform.parent = objectPlacementController.GetSpawnedObject().transform;
+                //Invokes the Release events on the grabbed object
+                grabbedObject.GetComponent<TrainARObject>().Release();
+            }
 
-            //Invokes the Release events on the grabbed object
-            grabbedObject.GetComponent<TrainARObject>().Release();
 
             //Is no longer grabbing an object
             isGrabbingObject = false;
