@@ -4,7 +4,7 @@ This software incorporates source code from third parties. The licenses of these
 
 ----
 
-## QuickOutline Shader
+## QuickOutline
 
 MIT License
 
