@@ -70,7 +70,7 @@
       }
     ],
     "sitemap": {
-      "baseUrl": "https://vapopo.github.io/TrainAR-1/",
+      "baseUrl": "https://jblattgerste.github.io/TrainAR",
       "changefreq": "weekly",
       "fileOptions": {
         "api/*": {
