@@ -29,6 +29,7 @@ TrainAR is envisioned as a participatory project, continously improving and expa
 #### TrainAR Framework: 
 - Blattgerste, J., Janßen, S., Behrends, J., & Pfeiffer, T. (Forthcoming). _TrainAR: An Open Source Visual Scripting-based Authoring Tool
 for Procedural Mobile Augmented Reality Trainings_.
+- Blattgerste, J., & Pfeiffer, T. (2022). [TrainAR: Ein Augmented Reality Training Autorensystem](https://dl.gi.de/bitstream/handle/20.500.12116/39383/AVRiL2022_Proceedings_06_3182.pdf?sequence=1&isAllowed=y). Wettbewerbsband AVRiL 2022.
 - Blattgerste, J., Luksch, K., Lewa, C., & Pfeiffer, T. (2021). [TrainAR: A Scalable Interaction Concept and Didactic Framework for Procedural Trainings Using Handheld Augmented Reality](https://www.mdpi.com/2414-4088/5/7/30). Multimodal Technologies and Interaction, 5(7), 30.
 
 #### TrainAR Trainings:
