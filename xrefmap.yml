@@ -603,12 +603,12 @@ references:
   commentId: F:Interaction.InteractionController.isSelectingObject
   fullName: Interaction.InteractionController.isSelectingObject
   nameWithType: InteractionController.isSelectingObject
-- uid: Interaction.InteractionController.ReleaseGrabbedObject
-  name: ReleaseGrabbedObject()
-  href: api/Interaction.InteractionController.html#Interaction_InteractionController_ReleaseGrabbedObject
-  commentId: M:Interaction.InteractionController.ReleaseGrabbedObject
-  fullName: Interaction.InteractionController.ReleaseGrabbedObject()
-  nameWithType: InteractionController.ReleaseGrabbedObject()
+- uid: Interaction.InteractionController.ReleaseGrabbedObject(System.Boolean)
+  name: ReleaseGrabbedObject(Boolean)
+  href: api/Interaction.InteractionController.html#Interaction_InteractionController_ReleaseGrabbedObject_System_Boolean_
+  commentId: M:Interaction.InteractionController.ReleaseGrabbedObject(System.Boolean)
+  fullName: Interaction.InteractionController.ReleaseGrabbedObject(System.Boolean)
+  nameWithType: InteractionController.ReleaseGrabbedObject(Boolean)
 - uid: Interaction.InteractionController.ReleaseGrabbedObject*
   name: ReleaseGrabbedObject
   href: api/Interaction.InteractionController.html#Interaction_InteractionController_ReleaseGrabbedObject_
@@ -3146,19 +3146,6 @@ references:
   isSpec: "True"
   fullName: Visual_Scripting.ObjectHelper.Definition
   nameWithType: ObjectHelper.Definition
-- uid: Visual_Scripting.ObjectHelper.FuseObjectTwo
-  name: FuseObjectTwo
-  href: api/Visual_Scripting.ObjectHelper.html#Visual_Scripting_ObjectHelper_FuseObjectTwo
-  commentId: P:Visual_Scripting.ObjectHelper.FuseObjectTwo
-  fullName: Visual_Scripting.ObjectHelper.FuseObjectTwo
-  nameWithType: ObjectHelper.FuseObjectTwo
-- uid: Visual_Scripting.ObjectHelper.FuseObjectTwo*
-  name: FuseObjectTwo
-  href: api/Visual_Scripting.ObjectHelper.html#Visual_Scripting_ObjectHelper_FuseObjectTwo_
-  commentId: Overload:Visual_Scripting.ObjectHelper.FuseObjectTwo
-  isSpec: "True"
-  fullName: Visual_Scripting.ObjectHelper.FuseObjectTwo
-  nameWithType: ObjectHelper.FuseObjectTwo
 - uid: Visual_Scripting.ObjectHelper.FusionOffsetPosition
   name: FusionOffsetPosition
   href: api/Visual_Scripting.ObjectHelper.html#Visual_Scripting_ObjectHelper_FusionOffsetPosition
@@ -3295,6 +3282,19 @@ references:
   isSpec: "True"
   fullName: Visual_Scripting.ObjectHelper.objectReference
   nameWithType: ObjectHelper.objectReference
+- uid: Visual_Scripting.ObjectHelper.ObjectTwo
+  name: ObjectTwo
+  href: api/Visual_Scripting.ObjectHelper.html#Visual_Scripting_ObjectHelper_ObjectTwo
+  commentId: P:Visual_Scripting.ObjectHelper.ObjectTwo
+  fullName: Visual_Scripting.ObjectHelper.ObjectTwo
+  nameWithType: ObjectHelper.ObjectTwo
+- uid: Visual_Scripting.ObjectHelper.ObjectTwo*
+  name: ObjectTwo
+  href: api/Visual_Scripting.ObjectHelper.html#Visual_Scripting_ObjectHelper_ObjectTwo_
+  commentId: Overload:Visual_Scripting.ObjectHelper.ObjectTwo
+  isSpec: "True"
+  fullName: Visual_Scripting.ObjectHelper.ObjectTwo
+  nameWithType: ObjectHelper.ObjectTwo
 - uid: Visual_Scripting.ObjectHelper.OutputFlow
   name: OutputFlow
   href: api/Visual_Scripting.ObjectHelper.html#Visual_Scripting_ObjectHelper_OutputFlow
@@ -3350,6 +3350,12 @@ references:
   commentId: F:Visual_Scripting.ObjectHelper.TrainARHelperChoices.ReplaceMeshAndTexture
   fullName: Visual_Scripting.ObjectHelper.TrainARHelperChoices.ReplaceMeshAndTexture
   nameWithType: ObjectHelper.TrainARHelperChoices.ReplaceMeshAndTexture
+- uid: Visual_Scripting.ObjectHelper.TrainARHelperChoices.ReplaceTrainARObject
+  name: ReplaceTrainARObject
+  href: api/Visual_Scripting.ObjectHelper.TrainARHelperChoices.html#Visual_Scripting_ObjectHelper_TrainARHelperChoices_ReplaceTrainARObject
+  commentId: F:Visual_Scripting.ObjectHelper.TrainARHelperChoices.ReplaceTrainARObject
+  fullName: Visual_Scripting.ObjectHelper.TrainARHelperChoices.ReplaceTrainARObject
+  nameWithType: ObjectHelper.TrainARHelperChoices.ReplaceTrainARObject
 - uid: Visual_Scripting.ObjectHelper.TrainARHelperChoices.ToggleCombinable
   name: ToggleCombinable
   href: api/Visual_Scripting.ObjectHelper.TrainARHelperChoices.html#Visual_Scripting_ObjectHelper_TrainARHelperChoices_ToggleCombinable

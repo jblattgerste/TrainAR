@@ -172,7 +172,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Interaction.InteractionController.html",
-          "hash": "e2UJJPHo6E9+OGet0BeoO7g5JxWVkHFtEmBIxWXeqBw="
+          "hash": "rt/w6DKpcptKnuAgp+x0YBPTbd+dwJxVGPVhRJJuByw="
         }
       },
       "is_incremental": false,
@@ -844,7 +844,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Visual_Scripting.ObjectHelper.TrainARHelperChoices.html",
-          "hash": "IbuuHcSAd82w5ip+NGXFYv3n3RE89hXSJqajjDyFgeI="
+          "hash": "M7x2jQ4M8VKLGYXtiW0njXRxE8bAWaEDOoC+b6j1xhQ="
         }
       },
       "is_incremental": false,
@@ -856,7 +856,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Visual_Scripting.ObjectHelper.html",
-          "hash": "cmgePMptxiUEXbcg6hUWnuMV1rHsf0IjXKwfcSAMibQ="
+          "hash": "Nw0wH6NONLIksl76teQdZEgofPlCjEsLAS2JzuqRvec="
         }
       },
       "is_incremental": false,
@@ -1006,7 +1006,7 @@
       "output": {
         ".html": {
           "relative_path": "manual/ObjectHelperNode.html",
-          "hash": "BbS95GRADY2z/kcTn4B9ouTPAH7Rj0SrBm856HDidSM="
+          "hash": "U1VEPV0WAl21NxFjbrukcA7PPbDISO23UVe9TEp0WJc="
         }
       },
       "is_incremental": false,
@@ -1064,12 +1064,15 @@
       "version": ""
     },
     {
+      "log_codes": [
+        "InvalidFileLink"
+      ],
       "type": "Conceptual",
       "source_relative_path": "manual/TrainArObjects.md",
       "output": {
         ".html": {
           "relative_path": "manual/TrainArObjects.html",
-          "hash": "LpGL1oQkao9zzvT5hxgzXm/l94d7rtzjWbSBl9d0JBI="
+          "hash": "0B9atmGv8MASTj7/YNI3E146KuRqMJGstwOLJDKQWPg="
         }
       },
       "is_incremental": false,
@@ -1616,6 +1619,39 @@
       "output": {
         "resource": {
           "relative_path": "resources/StartEvent.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "resources/SwapTrainArObjects_AddObjects.gif",
+      "output": {
+        "resource": {
+          "relative_path": "resources/SwapTrainArObjects_AddObjects.gif"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "resources/SwapTrainArObjects_SwapAndToggleInvisibleStateflow.gif",
+      "output": {
+        "resource": {
+          "relative_path": "resources/SwapTrainArObjects_SwapAndToggleInvisibleStateflow.gif"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "resources/SwapTrainArObjects_SwapStateflow.gif",
+      "output": {
+        "resource": {
+          "relative_path": "resources/SwapTrainArObjects_SwapStateflow.gif"
         }
       },
       "is_incremental": false,
