@@ -32,7 +32,8 @@ namespace Visual_Scripting
             ReplaceMeshAndTexture,
             GetObjectReference,
             FuseTwoObjects,
-            DestroyObject
+            DestroyObject,
+            ReplaceTrainARObject,
         }
         
         [UnitHeaderInspectable("Helper: ")]
@@ -132,7 +133,7 @@ namespace Visual_Scripting
         /// </summary>
         /// <value>Set in node in the editor.</value>
         [DoNotSerialize]
-        public ValueInput FuseObjectTwo { get; private set; }
+        public ValueInput ObjectTwo { get; private set; }
 
         /// <summary>
         /// The positional offset of the fusion of the objects.
@@ -193,9 +194,12 @@ namespace Visual_Scripting
                     Lerpingdistance = ValueInput<float>("Lerping distance", 0.2f);
                     break;
                 case TrainARHelperChoices.FuseTwoObjects:
-                    FuseObjectTwo = ValueInput<string>("Fuse to Object", string.Empty);
+                    ObjectTwo = ValueInput<string>("Fuse to Object", string.Empty);
                     FusionOffsetPosition = ValueInput<Vector3>("Offset Position", Vector3.zero);
                     FusionOffsetRotation = ValueInput<Vector3>("Offset Rotation", Vector3.zero);
+                    break;
+                case TrainARHelperChoices.ReplaceTrainARObject:
+                    ObjectTwo = ValueInput<string>("Replace with", string.Empty);
                     break;
                 default:
                     throw new ArgumentOutOfRangeException();
@@ -233,86 +237,108 @@ namespace Visual_Scripting
                     break;
                 }
             }    
-                //perform the selected option on the object
-                switch (helperChoice)
-                {
-                    case TrainARHelperChoices.ToggleVisibility:
-                        //If the object to have visibility disabled is currently grabbed, call Release on the InteractionController
+            //perform the selected option on the object
+            switch (helperChoice)
+            {
+                case TrainARHelperChoices.ToggleVisibility:
+                    //If the object to have visibility disabled is currently grabbed, call Release on the InteractionController
+                    if (trainARObject.gameObject.GetComponent<TrainARObject>().isGrabbed)
+                    {
+                        //Yea this is probably not best practise but will be alright
+                        Object.FindObjectOfType<InteractionController>().ReleaseGrabbedObject();
+                    }
+                    trainARObject.gameObject.SetActive(flow.GetValue<bool>(VisibilityToggle));
+                    break;
+                case TrainARHelperChoices.ToggleGrabbable:
+                    //If the object to have grabbing disabled is currently grabbed, call Release on the InteractionController
+                    if (trainARObject.gameObject.GetComponent<TrainARObject>().isGrabbed)
+                    {
+                        //Yea this is probably not best practise but will be alright
+                        Object.FindObjectOfType<InteractionController>().ReleaseGrabbedObject();
+                    }
+                    trainARObject.gameObject.GetComponent<TrainARObject>().isGrabbable = flow.GetValue<bool>(GrabbabilityToggle);
+                    break;
+                case TrainARHelperChoices.ToggleInteractable:
+                    trainARObject.gameObject.GetComponent<TrainARObject>().isInteractable = flow.GetValue<bool>(InteractabilityToggle);
+                    break;
+                case TrainARHelperChoices.ToggleCombinable:
+                    trainARObject.gameObject.GetComponent<TrainARObject>().isCombineable = flow.GetValue<bool>(CombinabilityToggle);
+                    break;
+                case TrainARHelperChoices.DestroyObject:
+                    //If the object to be destroyed is currently grabbed, call Release on the InteractionController
+                    if (trainARObject.gameObject.GetComponent<TrainARObject>().isGrabbed)
+                    {
+                        //Yea this is probably not best practise but will be alright
+                        Object.FindObjectOfType<InteractionController>().ReleaseGrabbedObject();
+                    }
+                    Object.Destroy(trainARObject.gameObject);
+                    break;
+                case TrainARHelperChoices.GetObjectReference:
+                    realObjectReference = trainARObject.gameObject;
+                    break;
+                case TrainARHelperChoices.ChangeInteractionText:
+                    trainARObject.gameObject.GetComponent<TrainARObject>().interactableName = flow.GetValue<string>(InteractableText);
+                    break;
+                case TrainARHelperChoices.ChangeLerpingDistance:
+                    trainARObject.gameObject.GetComponent<TrainARObject>().lerpingDistance = flow.GetValue<float>(Lerpingdistance);
+                    break;
+                case TrainARHelperChoices.ReplaceMeshAndTexture:
+                    trainARObject.gameObject.GetComponent<MeshRenderer>().material = flow.GetValue<Material>(ObjectMaterial);
+                    trainARObject.gameObject.GetComponent<MaterialController>().setNewOriginalMaterial(trainARObject.gameObject , flow.GetValue<Material>(ObjectMaterial));
+                    trainARObject.gameObject.GetComponent<MeshFilter>().mesh = flow.GetValue<Mesh>(ObjectMesh);
+                    //trainARObject.gameObject.GetComponent<MeshRenderer>().materials[0] = flow.GetValue<Material>(ObjectMaterial);
+                    break;
+                case TrainARHelperChoices.FuseTwoObjects:
+                    //If the object to be destroyed is currently grabbed, call Release on the InteractionController
+                    if (trainARObject.gameObject.GetComponent<TrainARObject>().isGrabbed)
+                    {
+                        //Yea this is probably not best practise but will be alright
+                        Object.FindObjectOfType<InteractionController>().ReleaseGrabbedObject(true);
+                    }
+                    //Find the secondary trainAR object
+                    foreach (var secondaryTrainARObject in PrefabSpawningController.instantiatedPrefab
+                        .GetComponentsInChildren<Transform>(true))
+                    {
+                        //Search until we get an object matching the one specified in the ValueInput
+                        if (secondaryTrainARObject.gameObject.name != flow.GetValue<string>(ObjectTwo)) continue;
+                        //Fuse the two objects and set the local positional and rotational offsets of the node
+                        trainARObject.GetComponent<TrainARObject>().isGrabbable = false;
+                        trainARObject.SetParent(secondaryTrainARObject);
+                        trainARObject.localPosition = flow.GetValue<Vector3>(FusionOffsetPosition);
+                        trainARObject.localRotation = Quaternion.Euler(flow.GetValue<Vector3>(FusionOffsetRotation));
+                        break;
+                    }
+                    break;
+                case TrainARHelperChoices.ReplaceTrainARObject:
+                    foreach (var secondaryTrainARObject in PrefabSpawningController.instantiatedPrefab
+                        .GetComponentsInChildren<Transform>(true))
+                    {
+                        //Search until we get an object matching the one specified in the ValueInput
+                        if (secondaryTrainARObject.gameObject.name != flow.GetValue<string>(ObjectTwo)) continue;
+                        secondaryTrainARObject.SetParent(trainARObject.transform.parent);
+                        secondaryTrainARObject.transform.localPosition = trainARObject.transform.localPosition;
+                        secondaryTrainARObject.gameObject.SetActive(true);
                         if (trainARObject.gameObject.GetComponent<TrainARObject>().isGrabbed)
                         {
-                            //Yea this is probably not best practise but will be alright
-                            Object.FindObjectOfType<InteractionController>().ReleaseGrabbedObject();
+                            //Again, not best practice, but works...
+                            InteractionController interactionController = Object.FindObjectOfType<InteractionController>();
+                            interactionController.ReleaseGrabbedObject();
+                            interactionController.selectedObject = secondaryTrainARObject.gameObject;
+                            interactionController.GrabObject();
                         }
-                        trainARObject.gameObject.SetActive(flow.GetValue<bool>(VisibilityToggle));
+                        trainARObject.GetComponent<MaterialController>().resetOriginalMaterial();
+                        //Set replaced object inactive
+                        trainARObject.gameObject.SetActive(false);
                         break;
-                    case TrainARHelperChoices.ToggleGrabbable:
-                        //If the object to have grabbing disabled is currently grabbed, call Release on the InteractionController
-                        if (trainARObject.gameObject.GetComponent<TrainARObject>().isGrabbed)
-                        {
-                            //Yea this is probably not best practise but will be alright
-                            Object.FindObjectOfType<InteractionController>().ReleaseGrabbedObject();
-                        }
-                        trainARObject.gameObject.GetComponent<TrainARObject>().isGrabbable = flow.GetValue<bool>(GrabbabilityToggle);
-                        break;
-                    case TrainARHelperChoices.ToggleInteractable:
-                        trainARObject.gameObject.GetComponent<TrainARObject>().isInteractable = flow.GetValue<bool>(InteractabilityToggle);
-                        break;
-                    case TrainARHelperChoices.ToggleCombinable:
-                        trainARObject.gameObject.GetComponent<TrainARObject>().isCombineable = flow.GetValue<bool>(CombinabilityToggle);
-                        break;
-                    case TrainARHelperChoices.DestroyObject:
-                        //If the object to be destroyed is currently grabbed, call Release on the InteractionController
-                        if (trainARObject.gameObject.GetComponent<TrainARObject>().isGrabbed)
-                        {
-                            //Yea this is probably not best practise but will be alright
-                            Object.FindObjectOfType<InteractionController>().ReleaseGrabbedObject();
-                        }
-                        Object.Destroy(trainARObject.gameObject);
-                        break;
-                    case TrainARHelperChoices.GetObjectReference:
-                        realObjectReference = trainARObject.gameObject;
-                        break;
-                    case TrainARHelperChoices.ChangeInteractionText:
-                        trainARObject.gameObject.GetComponent<TrainARObject>().interactableName = flow.GetValue<string>(InteractableText);
-                        break;
-                    case TrainARHelperChoices.ChangeLerpingDistance:
-                        trainARObject.gameObject.GetComponent<TrainARObject>().lerpingDistance = flow.GetValue<float>(Lerpingdistance);
-                        break;
-                    case TrainARHelperChoices.ReplaceMeshAndTexture:
-                        trainARObject.gameObject.GetComponent<MeshRenderer>().material = flow.GetValue<Material>(ObjectMaterial);
-                        trainARObject.gameObject.GetComponent<MaterialController>().setNewOriginalMaterial(trainARObject.gameObject , flow.GetValue<Material>(ObjectMaterial));
-                        trainARObject.gameObject.GetComponent<MeshFilter>().mesh = flow.GetValue<Mesh>(ObjectMesh);
-                        //trainARObject.gameObject.GetComponent<MeshRenderer>().materials[0] = flow.GetValue<Material>(ObjectMaterial);
-                        break;
-                    case TrainARHelperChoices.FuseTwoObjects:
-                        //If the object to be destroyed is currently grabbed, call Release on the InteractionController
-                        if (trainARObject.gameObject.GetComponent<TrainARObject>().isGrabbed)
-                        {
-                            //Yea this is probably not best practise but will be alright
-                            Object.FindObjectOfType<InteractionController>().ReleaseGrabbedObject();
-                        }
-                        //Find the secondary trainAR object
-                        foreach (var secondaryTrainARObject in PrefabSpawningController.instantiatedPrefab
-                            .GetComponentsInChildren<Transform>(true))
-                        {
-                            //Search until we get an object matching the one specified in the ValueInput
-                            if (secondaryTrainARObject.gameObject.name != flow.GetValue<string>(FuseObjectTwo)) continue;
-                            
-                            //Fuse the two objects and set the local positional and rotational offsets of the node
-                            trainARObject.SetParent(secondaryTrainARObject);
-                            trainARObject.localPosition = flow.GetValue<Vector3>(FusionOffsetPosition);
-                            trainARObject.localRotation = Quaternion.Euler(flow.GetValue<Vector3>(FusionOffsetRotation));
-                            
-                            break;
-                        }
-                        
-                        break;
-                    default:
-                        throw new ArgumentOutOfRangeException();
-                }
+                    }
+
+                    break;
+                default:
+                    throw new ArgumentOutOfRangeException();
+            }
                 
-                //Return the outputflow, therefore instantly after triggering its logic continues the graph
-                return OutputFlow;
+            //Return the outputflow, therefore instantly after triggering its logic continues the graph
+            return OutputFlow;
         }
     }
 }
