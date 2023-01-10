@@ -63,12 +63,16 @@ namespace UI
         /// <value>Set in inspector.</value>
         private TMP_Text grabButtonText;
         /// <summary>
+        /// Whether or not the buttonHolder Gameobject was active before prefab respositioning.
+        /// </summary>
+        private bool buttonHolderActiveFlag;
+        /// <summary>
         /// Adds listener to prefabSpawned and reposition events.
         /// </summary>
         private void Awake()
         {
-            PrefabSpawningController.prefabSpawned += ActivateInteractButtons;
-            PrefabSpawningController.RepositionPrefab += DeactivateInteractButtons;
+            PrefabSpawningController.prefabSpawned += SpawnPrefab;
+            PrefabSpawningController.RepositionPrefab += RepositionPrefab;
             grabButtonText = grabButton.GetComponentInChildren<TMP_Text>();
         }
         /// <summary>
@@ -76,8 +80,8 @@ namespace UI
         /// </summary>
         private void OnDestroy()
         {
-            PrefabSpawningController.prefabSpawned -= ActivateInteractButtons;
-            PrefabSpawningController.RepositionPrefab -= DeactivateInteractButtons;
+            PrefabSpawningController.prefabSpawned -= SpawnPrefab;
+            PrefabSpawningController.RepositionPrefab -= RepositionPrefab;
         }
         /// <summary>
         /// Starts updating of the interaction buttons and the rotation.
@@ -93,9 +97,25 @@ namespace UI
         /// </summary>
         public void ActivateInteractButtons()
         {
-                ButtonHolder.gameObject.SetActive(true);
+            ButtonHolder.gameObject.SetActive(true);
+        }
+        
+        /// <summary>
+        /// Deactivates interact-Button-UI, if it is active while reposition via PrefabSpawningController get's get triggered
+        /// Also safes sets a flag, which is used when prefab is later spawned via PrefabSpawningController
+        /// </summary>
+        private void RepositionPrefab()
+        {
+            buttonHolderActiveFlag = ButtonHolder.gameObject.activeSelf;
+            if (ButtonHolder.gameObject.activeSelf)
+                DeactivateInteractButtons();
         }
 
+        private void SpawnPrefab()
+        {
+            ButtonHolder.gameObject.SetActive(buttonHolderActiveFlag);
+        }
+        
         /// <summary>
         /// Deactivates the interaction buttons.
         /// </summary>

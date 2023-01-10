@@ -357,6 +357,7 @@ namespace Others
             instantiatedPrefab.transform.SetPositionAndRotation(new Vector3(0, 0, -2), Quaternion.identity);
 
             //Reset the originalMaterials container and remake the instantiated prefab transparent for placement.
+            ResetMaterialsToOriginal();
             originalMaterials = new Dictionary<GameObject, Material[]>();
             MakeMaterialsInvisibleForPlacement();
             materialsWereReset = false;
