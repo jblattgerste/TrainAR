@@ -89,16 +89,17 @@ namespace Editor.Scripts
                 EditorUtility.DisplayDialog("Unable to convert to TrainAR Object", "The GameObject is selected inside of the Prefab view. Please unpack the Prefab into an active scene before converting it.", "ok");
                 return;
             }
-
+            
+            // If selected object is a part of a prefab instance, unpack it completely.
             if (PrefabUtility.IsPartOfPrefabInstance(selectedObject))
             {
-                EditorUtility.DisplayDialog("Unable to convert to TrainAR Object", "The selected GameObject is part of a prefab. Please unpack the Prefab before converting it.", "ok");
-                return;
+                PrefabUtility.UnpackPrefabInstance(selectedObject, PrefabUnpackMode.Completely, InteractionMode.UserAction);
             }
 
             //Register an undo action so the conversion can be undone
             Undo.RegisterFullObjectHierarchyUndo(selectedObject, "Convert to TrainAR Object");
-
+            
+            
             //Enables the read/write of vertices/indeces of shared meshes 
             EnableReadWriteOnMeshes(selectedObject);
             
