@@ -103,6 +103,9 @@ namespace Editor.Scripts
             //Enables the read/write of vertices/indeces of shared meshes 
             EnableReadWriteOnMeshes(selectedObject);
             
+            // Simplifies the mesh of the TrainAR Object.
+            SimplifyMeshes(selectedObject, 0.5f);
+            
             //Combine all meshes into one
             GameObject newSelectedObject = CombineMeshes(selectedObject);
             Undo.RegisterCreatedObjectUndo(newSelectedObject.gameObject, "Convert to TrainAR Object");
@@ -161,6 +164,35 @@ namespace Editor.Scripts
 
             //Return the new object as the new selectedObject
             return newGameObjectWithCombinedMeshes;
+        }
+
+        ///  <summary>
+        ///  Uses the Meshsimplifier to decimate the mesh of the passed Gameobject as well as all of it's children's meshes.
+        ///  </summary>
+        ///  <param name="trainARObject">
+        /// The TrainAR Object to decimate.
+        ///  </param>
+        ///  <param name="quality">The desired quality of the simplification. Must be between 0 and 1.</param>
+        private static void SimplifyMeshes(GameObject trainARObject, float quality)
+        {
+            var meshSimplifier = new UnityMeshSimplifier.MeshSimplifier();
+            var meshFilters = trainARObject.GetComponentsInChildren<MeshFilter>();
+            foreach (MeshFilter meshFilter in meshFilters)
+            {
+                Mesh sourceMesh = meshFilter.sharedMesh;
+                if (sourceMesh == null) // verify that the mesh filter actually has a mesh
+                    return;
+
+                // Create our mesh simplifier and setup our entire mesh in it
+                
+                meshSimplifier.Initialize(sourceMesh);
+
+                // This is where the magic happens, lets simplify!
+                meshSimplifier.SimplifyMesh(quality);
+
+                // Create our final mesh and apply it back to our mesh filter
+                meshFilter.sharedMesh = meshSimplifier.ToMesh();
+            }
         }
 
         /// <summary>

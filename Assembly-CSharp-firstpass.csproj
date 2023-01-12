@@ -811,6 +811,12 @@
      <Reference Include="Unity.XR.ARFoundation">
      <HintPath>C:\Users\Jan\Desktop\TrainAR-1\Library\ScriptAssemblies\Unity.XR.ARFoundation.dll</HintPath>
      </Reference>
+     <Reference Include="Whinarn.UnityMeshSimplifier.Editor">
+     <HintPath>C:\Users\Jan\Desktop\TrainAR-1\Library\ScriptAssemblies\Whinarn.UnityMeshSimplifier.Editor.dll</HintPath>
+     </Reference>
+     <Reference Include="Whinarn.UnityMeshSimplifier.Runtime">
+     <HintPath>C:\Users\Jan\Desktop\TrainAR-1\Library\ScriptAssemblies\Whinarn.UnityMeshSimplifier.Runtime.dll</HintPath>
+     </Reference>
   </ItemGroup>
   <ItemGroup>
   </ItemGroup>
