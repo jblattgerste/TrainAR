@@ -80,6 +80,7 @@
      <Compile Include="Assets\Unity.VisualScripting.Generated\VisualScripting.Core\Property Providers\PropertyProvider_UnityEngine_UI_FontData.cs" />
      <Compile Include="Assets\Scripts\UI\DirectInfoController.cs" />
      <Compile Include="Assets\Scripts\Visual Scripting\Feedback.cs" />
+     <Compile Include="Assets\Unity.VisualScripting.Generated\VisualScripting.Core\AotStubs.cs" />
      <Compile Include="Assets\Scripts\Interaction\CollisionController.cs" />
      <Compile Include="Assets\Unity.VisualScripting.Generated\VisualScripting.Core\Property Providers\PropertyProvider_UnityEngine_UI_ColorBlock.cs" />
      <Compile Include="Assets\Scripts\Others\ObjectInsideCollider.cs" />
@@ -113,6 +114,7 @@
      <Compile Include="Assets\Scripts\UI\InteractButton.cs" />
      <Compile Include="Assets\Scripts\UI\InteractionButtonController.cs" />
      <Compile Include="Assets\Scripts\Interaction\AudioController.cs" />
+     <None Include="Assets\Unity.VisualScripting.Generated\VisualScripting.Core\link.xml" />
      <None Include="Assets\Shaders\OutlineMask.shader" />
      <None Include="Assets\Shaders\InvisibleOcclusion.shader" />
      <None Include="Assets\Shaders\TransparentShadow.shader" />
@@ -790,6 +792,9 @@
      <Reference Include="Unity.EditorCoroutines.Editor">
      <HintPath>C:\Users\Jan\Desktop\TrainAR-1\Library\ScriptAssemblies\Unity.EditorCoroutines.Editor.dll</HintPath>
      </Reference>
+     <Reference Include="Whinarn.UnityMeshSimplifier.Editor">
+     <HintPath>C:\Users\Jan\Desktop\TrainAR-1\Library\ScriptAssemblies\Whinarn.UnityMeshSimplifier.Editor.dll</HintPath>
+     </Reference>
      <Reference Include="Unity.Postprocessing.Runtime">
      <HintPath>C:\Users\Jan\Desktop\TrainAR-1\Library\ScriptAssemblies\Unity.Postprocessing.Runtime.dll</HintPath>
      </Reference>
@@ -823,17 +828,14 @@
      <Reference Include="UnityEditor.SpatialTracking">
      <HintPath>C:\Users\Jan\Desktop\TrainAR-1\Library\ScriptAssemblies\UnityEditor.SpatialTracking.dll</HintPath>
      </Reference>
+     <Reference Include="Whinarn.UnityMeshSimplifier.Runtime">
+     <HintPath>C:\Users\Jan\Desktop\TrainAR-1\Library\ScriptAssemblies\Whinarn.UnityMeshSimplifier.Runtime.dll</HintPath>
+     </Reference>
      <Reference Include="Unity.VisualScripting.State">
      <HintPath>C:\Users\Jan\Desktop\TrainAR-1\Library\ScriptAssemblies\Unity.VisualScripting.State.dll</HintPath>
      </Reference>
      <Reference Include="Unity.XR.ARFoundation">
      <HintPath>C:\Users\Jan\Desktop\TrainAR-1\Library\ScriptAssemblies\Unity.XR.ARFoundation.dll</HintPath>
-     </Reference>
-     <Reference Include="Whinarn.UnityMeshSimplifier.Editor">
-     <HintPath>C:\Users\Jan\Desktop\TrainAR-1\Library\ScriptAssemblies\Whinarn.UnityMeshSimplifier.Editor.dll</HintPath>
-     </Reference>
-     <Reference Include="Whinarn.UnityMeshSimplifier.Runtime">
-     <HintPath>C:\Users\Jan\Desktop\TrainAR-1\Library\ScriptAssemblies\Whinarn.UnityMeshSimplifier.Runtime.dll</HintPath>
      </Reference>
   </ItemGroup>
   <ItemGroup>
