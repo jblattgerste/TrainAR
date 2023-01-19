@@ -177,14 +177,11 @@ namespace Editor.Scripts
         ///  <summary>
         ///  Uses the Meshsimplifier to decimate the mesh of the passed Gameobject as well as all of it's children's meshes.
         ///  </summary>
-        ///  <param name="trainARObject">
-        /// The TrainAR Object to decimate.
-        ///  </param>
         ///  <param name="currentSelectedObject">The current Gameobject, to which the mesh changes are applied to</param>
         ///  <param name="quality">The desired quality of the simplification. Must be between 0 and 1.</param>
         ///  <param name="originalMeshes">The meshes as they were, when the object was originally selected,
         /// before any mesh changes were applied</param>
-        public static void SimplifyMeshes(List<Mesh> originalMeshes, GameObject currentSelectedObject, float quality)
+        public static void SimplifyMeshes(IEnumerable<Mesh> originalMeshes, GameObject currentSelectedObject, float quality)
         {
             // Create instance of Unity Mesh Simplifier
             var meshSimplifier = new UnityMeshSimplifier.MeshSimplifier();
