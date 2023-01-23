@@ -44,8 +44,8 @@
      <Compile Include="Assets\Editor\Scripts\MeshCombinerEditor.cs" />
      <Compile Include="Assets\Editor\Scripts\TrainAREditorMenu.cs" />
      <Compile Include="Assets\Editor\Scripts\StateRequestSimulatorEditor.cs" />
-     <Compile Include="Assets\Editor\Scripts\TrainARObjectViewer.cs" />
      <Compile Include="Assets\Editor\Scripts\PlayModeButtonOverride.cs" />
+     <Compile Include="Assets\Editor\Scripts\TrainARObjectPositionToolbar.cs" />
      <Compile Include="Assets\Editor\Scripts\ConvertToTrainARObject.cs" />
      <Compile Include="Assets\Editor\Scripts\OpenAuthoringToolOnLoad.cs" />
      <Compile Include="Assets\Editor\Scripts\EditorTrainARObjectToolbar.cs" />
