@@ -176,8 +176,8 @@ namespace Interaction
   void OnDestroy() {
 
     // Destroy material instances
-    Destroy(outlineMaskMaterial);
-    Destroy(outlineFillMaterial);
+    //Destroy(outlineMaskMaterial);
+    //Destroy(outlineFillMaterial);
   }
 
   void Bake() {
@@ -296,6 +296,7 @@ namespace Interaction
 
     // Apply properties according to mode
     outlineFillMaterial.SetColor("_OutlineColor", outlineColor);
+    Debug.Log("After SetColor");
 
     switch (outlineMode) {
       case Mode.OutlineAll:
