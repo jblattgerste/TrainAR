@@ -1,3 +1,5 @@
+using System.Collections.Generic;
+using System.Linq;
 using Interaction;
 using UnityEditor;
 using UnityEditor.SceneManagement;
@@ -19,7 +21,7 @@ namespace Editor.Scripts
         /// </summary>
         [MenuItem("GameObject/Convert to \"TrainAR Object\"", false, -1000)]
         public static void AddConvertionContextItem()
-        { 
+        {
             //Pre-checks to ensure this is something we want to convert
             
             //No object selected
@@ -31,7 +33,7 @@ namespace Editor.Scripts
             
             //Store the selection
             GameObject selectedObject = Selection.activeTransform.gameObject;
-
+            
             //Multiple GameObjects were selected
             if (Selection.gameObjects.Length > 1)
             {
@@ -45,7 +47,7 @@ namespace Editor.Scripts
                 EditorUtility.DisplayDialog("Unable to convert to TrainAR Object", "No GameObject was selected.", "ok");
                 return;
             }
-
+            
             //Seleted object has a SkinnedMeshRenderer, which is not supported
             if (selectedObject.GetComponent<SkinnedMeshRenderer>() != null
                 || selectedObject.GetComponentInChildren<SkinnedMeshRenderer>() != null)
@@ -53,7 +55,7 @@ namespace Editor.Scripts
                 EditorUtility.DisplayDialog("Unable to convert to TrainAR Object", "The selected GameObject (or at least one of its children) contains a SkinnedMeshRenderer. This MeshRenderer is not supported, please use a MeshFilter and MeshRenderer.", "ok");
                 return;
             }
-
+            
             //Selected object has no MeshRenderer
             if (selectedObject.GetComponent<MeshRenderer>() == null
                 && selectedObject.GetComponentInChildren<MeshRenderer>() == null)
@@ -61,7 +63,7 @@ namespace Editor.Scripts
                 EditorUtility.DisplayDialog("Unable to convert to TrainAR Object", "The selected GameObject (or at least one of its children) does not have a MeshRenderer attached.", "ok");
                 return;
             }
-
+            
             //Selected object has no MeshFilter
             if (selectedObject.GetComponent<MeshFilter>() == null
                 && selectedObject.GetComponentInChildren<MeshFilter>() == null)
@@ -69,49 +71,58 @@ namespace Editor.Scripts
                 EditorUtility.DisplayDialog("Unable to convert to TrainAR Object", "The selected GameObject (or at least one of its children) does not have a MeshFilter attached.", "ok");
                 return;
             }
-
+            
             //Selected object is part of the framework itself
             if (selectedObject.CompareTag("AR_Assembly") || selectedObject.CompareTag("TrainAR"))
             {
                 EditorUtility.DisplayDialog("Unable to convert to TrainAR Object", "The TrainAR framework itself can not be converted to a TrainAR object.", "ok");
                 return;
             }
-
+            
             //Selected object is already converted to TrainAR object
             if (selectedObject.GetComponent<TrainARObject>() != null || selectedObject.CompareTag("TrainARObject"))
             {
                 EditorUtility.DisplayDialog("Unable to convert to TrainAR Object", "The selected GameObject was already converted and tagged as a TrainAR object.", "ok");
                 return;
             }
-
+            
+            // Conversion in Prefab-View
             if (PrefabStageUtility.GetCurrentPrefabStage() != null)
             {
                 EditorUtility.DisplayDialog("Unable to convert to TrainAR Object", "The GameObject is selected inside of the Prefab view. Please unpack the Prefab into an active scene before converting it.", "ok");
                 return;
             }
             
+            //Register an undo action so the conversion can be undone
+            Undo.RegisterFullObjectHierarchyUndo(selectedObject, "Convert to TrainAR Object");
+            
+            // Create and show the Modal-Window with options for creating a TraiAR Object
+            if (CreateInstance(typeof(TrainARObjectSettingsModalWindow)) is TrainARObjectSettingsModalWindow settingsModalWindow) settingsModalWindow.Show();
+        }
+
+        public static void InitConversion(GameObject selectedObject, string trainARObjectName)
+        {
             // If selected object is a part of a prefab instance, unpack it completely.
             if (PrefabUtility.IsPartOfPrefabInstance(selectedObject))
             {
                 PrefabUtility.UnpackPrefabInstance(selectedObject, PrefabUnpackMode.Completely, InteractionMode.UserAction);
             }
 
-            //Register an undo action so the conversion can be undone
-            Undo.RegisterFullObjectHierarchyUndo(selectedObject, "Convert to TrainAR Object");
-            
-            
             //Enables the read/write of vertices/indeces of shared meshes 
             EnableReadWriteOnMeshes(selectedObject);
-            
+
             //Combine all meshes into one
             GameObject newSelectedObject = CombineMeshes(selectedObject);
             Undo.RegisterCreatedObjectUndo(newSelectedObject.gameObject, "Convert to TrainAR Object");
-
+            
             //Convert the object to a TrainAR object
             //TrainARObject.cs automatically imports dependencies and all the other necessary scripts when attached
             newSelectedObject.AddComponent<TrainARObject>();
             newSelectedObject.tag = "TrainARObject";
-
+            
+            // Apply the TrainAR Object name
+            newSelectedObject.name = trainARObjectName;
+            
             //Reset the selection to the newly converted GameObject
             Selection.activeTransform = newSelectedObject.transform;
             Selection.selectionChanged.Invoke();
@@ -161,6 +172,45 @@ namespace Editor.Scripts
 
             //Return the new object as the new selectedObject
             return newGameObjectWithCombinedMeshes;
+        }
+
+        ///  <summary>
+        ///  Uses the Meshsimplifier to decimate the mesh of the passed Gameobject as well as all of it's children's meshes.
+        ///  </summary>
+        ///  <param name="currentSelectedObject">The current Gameobject, to which the mesh changes are applied to</param>
+        ///  <param name="quality">The desired quality of the simplification. Must be between 0 and 1.</param>
+        ///  <param name="originalMeshes">The meshes as they were, when the object was originally selected,
+        /// before any mesh changes were applied</param>
+        public static void SimplifyMeshes(IEnumerable<Mesh> originalMeshes, GameObject currentSelectedObject, float quality)
+        {
+            // Create instance of Unity Mesh Simplifier
+            var meshSimplifier = new UnityMeshSimplifier.MeshSimplifier();
+            
+            // Get the current Mesh Filters of the Gameobject
+            var currentSelectedMeshFilters = currentSelectedObject.GetComponentsInChildren<MeshFilter>();
+            
+            // Create a tupel of the original meshes and the current meshes. 
+            var originalAndCurrent = originalMeshes.Zip(currentSelectedMeshFilters,
+                (o, c) => new {Original = o, Current = c});
+            
+            // Iterate over the original and current meshes.
+            foreach (var originalAndCurrenTupel in originalAndCurrent)
+            {
+                // The original mesh
+                Mesh originalMesh = originalAndCurrenTupel.Original;
+                
+                if (originalMesh == null) // verify that the mesh filter actually has a mesh
+                    return;
+
+                // Initialize mesh simplifier with the original mesh
+                meshSimplifier.Initialize(originalMesh);
+
+                // Simplifies the mesh according to quality value
+                meshSimplifier.SimplifyMesh(quality);
+
+                // Apply the simplified mesh to the GameObject
+                originalAndCurrenTupel.Current.mesh = meshSimplifier.ToMesh();
+            }
         }
 
         /// <summary>

@@ -772,6 +772,9 @@
      <Reference Include="Unity.EditorCoroutines.Editor">
      <HintPath>C:\Users\Jan\Desktop\TrainAR-1\Library\ScriptAssemblies\Unity.EditorCoroutines.Editor.dll</HintPath>
      </Reference>
+     <Reference Include="Whinarn.UnityMeshSimplifier.Editor">
+     <HintPath>C:\Users\Jan\Desktop\TrainAR-1\Library\ScriptAssemblies\Whinarn.UnityMeshSimplifier.Editor.dll</HintPath>
+     </Reference>
      <Reference Include="Unity.Postprocessing.Runtime">
      <HintPath>C:\Users\Jan\Desktop\TrainAR-1\Library\ScriptAssemblies\Unity.Postprocessing.Runtime.dll</HintPath>
      </Reference>
@@ -804,6 +807,9 @@
      </Reference>
      <Reference Include="UnityEditor.SpatialTracking">
      <HintPath>C:\Users\Jan\Desktop\TrainAR-1\Library\ScriptAssemblies\UnityEditor.SpatialTracking.dll</HintPath>
+     </Reference>
+     <Reference Include="Whinarn.UnityMeshSimplifier.Runtime">
+     <HintPath>C:\Users\Jan\Desktop\TrainAR-1\Library\ScriptAssemblies\Whinarn.UnityMeshSimplifier.Runtime.dll</HintPath>
      </Reference>
      <Reference Include="Unity.VisualScripting.State">
      <HintPath>C:\Users\Jan\Desktop\TrainAR-1\Library\ScriptAssemblies\Unity.VisualScripting.State.dll</HintPath>
