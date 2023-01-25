@@ -43,12 +43,14 @@
   <ItemGroup>
      <Compile Include="Assets\Editor\Scripts\MeshCombinerEditor.cs" />
      <Compile Include="Assets\Editor\Scripts\TrainAREditorMenu.cs" />
+     <Compile Include="Assets\Tayx\Graphy - Ultimate Stats Monitor\Scripts\Editor\GraphyManagerEditor.cs" />
      <Compile Include="Assets\Editor\Scripts\StateRequestSimulatorEditor.cs" />
+     <Compile Include="Assets\Tayx\Graphy - Ultimate Stats Monitor\Scripts\Editor\GraphyDebuggerEditor.cs" />
      <Compile Include="Assets\Editor\Scripts\PlayModeButtonOverride.cs" />
-     <Compile Include="Assets\Editor\Scripts\TrainARObjectPositionToolbar.cs" />
      <Compile Include="Assets\Editor\Scripts\ConvertToTrainARObject.cs" />
      <Compile Include="Assets\Editor\Scripts\OpenAuthoringToolOnLoad.cs" />
      <Compile Include="Assets\Editor\Scripts\EditorTrainARObjectToolbar.cs" />
+     <Compile Include="Assets\Editor\Scripts\TrainARObjectOffsetToolbar.cs" />
      <Reference Include="UnityEngine">
      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.1.3f1\Editor\Data\Managed\UnityEngine\UnityEngine.dll</HintPath>
      </Reference>

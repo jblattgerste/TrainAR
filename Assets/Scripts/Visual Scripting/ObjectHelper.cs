@@ -302,6 +302,7 @@ namespace Visual_Scripting
                         //Search until we get an object matching the one specified in the ValueInput
                         if (secondaryTrainARObject.gameObject.name != flow.GetValue<string>(ObjectTwo)) continue;
                         //Fuse the two objects and set the local positional and rotational offsets of the node
+                        trainARObject.GetComponent<MaterialController>().resetOriginalMaterial();
                         trainARObject.GetComponent<TrainARObject>().isGrabbable = false;
                         trainARObject.SetParent(secondaryTrainARObject);
                         trainARObject.localPosition = flow.GetValue<Vector3>(FusionOffsetPosition);
