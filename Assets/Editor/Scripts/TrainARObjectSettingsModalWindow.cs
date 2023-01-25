@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEditor;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 namespace Editor.Scripts
 {
@@ -13,10 +14,11 @@ namespace Editor.Scripts
     public class TrainARObjectSettingsModalWindow : EditorWindow
     {
         private string trainARObjectName = "TrainAR Object Name";
-        private float meshQuality = 1.0f;
+        private float changedQuality = 1.0f;
         private List<Mesh> originalMeshes = new List<Mesh>();
         private GameObject trainARObject;
         private UnityEditor.Editor gameObjectEditor;
+
         
         void OnEnable()
         {
@@ -36,6 +38,14 @@ namespace Editor.Scripts
             maxSize = new Vector2(500,450);
         }
 
+        private void OnDisable()
+        {
+            if (gameObjectEditor != null)
+            {
+                DestroyImmediate(gameObjectEditor);
+            }
+        }
+
         void OnGUI()
         {
             // Create the field and pass the to be converted object
@@ -43,31 +53,28 @@ namespace Editor.Scripts
             
             // Set background color of the preview window
             GUIStyle bgColor = new GUIStyle {normal = {background = EditorGUIUtility.whiteTexture}};
-
             // On first pass, create the custom editor with the to be converted TrainAR object
             if (gameObjectEditor == null)
                     gameObjectEditor = UnityEditor.Editor.CreateEditor(trainARObject);
             
             // The interactive preview GUI
             gameObjectEditor.OnInteractivePreviewGUI(GUILayoutUtility.GetRect(256, 256), bgColor);
-
+            
+            EditorGUI.BeginChangeCheck();
             // Set the TrainAR Object name
             GUILayout.Label("TrainAR Object Name: ");
             trainARObjectName = GUILayout.TextField(trainARObjectName, 25);
-            
             //Set the quality based on the slider position
-            GUILayout.Label("Mesh Quality: " + Math.Round(meshQuality*100, 2) + " %");
+            GUILayout.Label("Mesh Quality: " + Math.Round(changedQuality*100, 2) + " %");
             GUILayout.Label("Vertices: " + CountTotalVertices(trainARObject));
             GUILayout.Label("Triangles: " + CountTotalTriangles(trainARObject));
-            float changedQuality = GUILayout.HorizontalSlider(meshQuality, 0f, 1.0f, GUILayout.ExpandHeight(true));
-            
+            changedQuality = GUILayout.HorizontalSlider(changedQuality, 0f, 1.0f, GUILayout.ExpandHeight(true));
+
             // If the mesh-quality slider has been moved.
-            if(Math.Abs(changedQuality - meshQuality) > 0.001)
+            if(EditorGUI.EndChangeCheck())
             {
                 // Apply Mesh simplification on the mesh filters of the original selection
-                meshQuality = changedQuality;
-                ConvertToTrainARObject.SimplifyMeshes(originalMeshes, trainARObject, meshQuality);
-                
+                ConvertToTrainARObject.SimplifyMeshes(originalMeshes, trainARObject, changedQuality);
                 // Reload Preview View with modified object
                 gameObjectEditor.ReloadPreviewInstances();
             }
