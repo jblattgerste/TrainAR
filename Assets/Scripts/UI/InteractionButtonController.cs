@@ -65,7 +65,7 @@ namespace UI
         /// <summary>
         /// Whether or not the buttonHolder Gameobject was active before prefab respositioning.
         /// </summary>
-        private bool buttonHolderActiveFlag;
+        private bool buttonHolderActiveFlag = true;
         /// <summary>
         /// Adds listener to prefabSpawned and reposition events.
         /// </summary>
