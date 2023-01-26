@@ -170,9 +170,10 @@ namespace Interaction
 
             //Utilize the correct hit = the Infinity plane
             RaycastHit hit = hits[hitIndex];
-            if (hit.distance < 0.2f)
+            if (hit.distance < 0.4f)
             {
-                ChangeOffsetToCamera(hit.distance);
+                // Place grabber at impact point of raycast
+                grabber.transform.position = hit.point;
             }
         }
     }

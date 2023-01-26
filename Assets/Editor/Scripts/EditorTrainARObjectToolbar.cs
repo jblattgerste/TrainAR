@@ -14,6 +14,16 @@ namespace Editor.Scripts
     public class EditorTrainARObjectToolbar : ToolbarOverlay
     {
         private EditorTrainARObjectToolbar() : base(ActiveToggle.id, GrabbableToggle.id, InteractableToggle.id, CombinableToggle.id) {}
+
+        public override void OnCreated()
+        {
+            Selection.selectionChanged += UpdateActivityState;
+        }
+
+        void UpdateActivityState()
+        {
+            displayed = Selection.gameObjects.Length < 2;
+        }
     }
     
     [EditorToolbarElement(id, typeof(SceneView))]
