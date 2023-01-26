@@ -4,7 +4,8 @@ using Interaction;
 using UnityEditor;
 using UnityEditor.SceneManagement;
 using UnityEngine;
-using Others;
+using UnityMeshSimplifier;
+using MeshCombiner = Others.MeshCombiner;
 
 namespace Editor.Scripts
 {
@@ -181,7 +182,8 @@ namespace Editor.Scripts
         ///  <param name="quality">The desired quality of the simplification. Must be between 0 and 1.</param>
         ///  <param name="originalMeshes">The meshes as they were, when the object was originally selected,
         /// before any mesh changes were applied</param>
-        public static void SimplifyMeshes(IEnumerable<Mesh> originalMeshes, GameObject currentSelectedObject, float quality)
+        public static void SimplifyMeshes(IEnumerable<Mesh> originalMeshes, GameObject currentSelectedObject, float quality,
+            bool preserveBorderEdges, bool preserveSurfaceCurvature = false, bool preserveUVSeamEdges = false, bool preserveUVFoldoverEdges = false)
         {
             // Create instance of Unity Mesh Simplifier
             var meshSimplifier = new UnityMeshSimplifier.MeshSimplifier();
@@ -204,6 +206,16 @@ namespace Editor.Scripts
 
                 // Initialize mesh simplifier with the original mesh
                 meshSimplifier.Initialize(originalMesh);
+                
+                //Set up custom options for the simplification
+                SimplificationOptions simplificationOptions = new SimplificationOptions();
+                simplificationOptions = SimplificationOptions.Default;
+                simplificationOptions.PreserveBorderEdges = preserveBorderEdges;
+                simplificationOptions.PreserveSurfaceCurvature = preserveSurfaceCurvature;
+                simplificationOptions.PreserveUVSeamEdges = preserveUVSeamEdges;
+                simplificationOptions.PreserveUVFoldoverEdges = preserveUVFoldoverEdges;
+                meshSimplifier.SimplificationOptions = simplificationOptions;
+                
 
                 // Simplifies the mesh according to quality value
                 meshSimplifier.SimplifyMesh(quality);
