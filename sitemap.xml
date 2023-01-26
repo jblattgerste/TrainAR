@@ -2,547 +2,547 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://jblattgerste.github.io/TrainAR/api/Editor.Scripts.ConvertToTrainARObject.html</loc>
-    <lastmod>2023-01-26T01:35:41+00:00</lastmod>
+    <lastmod>2023-01-26T02:00:04+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://jblattgerste.github.io/TrainAR/api/Editor.Scripts.EditorTrainARObjectToolbar.html</loc>
-    <lastmod>2023-01-26T01:35:41+00:00</lastmod>
+    <lastmod>2023-01-26T02:00:04+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://jblattgerste.github.io/TrainAR/api/Editor.Scripts.MeshCombinerEditor.html</loc>
-    <lastmod>2023-01-26T01:35:41+00:00</lastmod>
+    <lastmod>2023-01-26T02:00:04+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://jblattgerste.github.io/TrainAR/api/Editor.Scripts.OpenAuthoringToolOnLoad.html</loc>
-    <lastmod>2023-01-26T01:35:41+00:00</lastmod>
+    <lastmod>2023-01-26T02:00:04+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://jblattgerste.github.io/TrainAR/api/Editor.Scripts.PlayModeButtonOverride.html</loc>
-    <lastmod>2023-01-26T01:35:41+00:00</lastmod>
+    <lastmod>2023-01-26T02:00:04+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://jblattgerste.github.io/TrainAR/api/Editor.Scripts.StateRequestSimulatorEditor.html</loc>
-    <lastmod>2023-01-26T01:35:41+00:00</lastmod>
+    <lastmod>2023-01-26T02:00:04+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://jblattgerste.github.io/TrainAR/api/Editor.Scripts.TrainAREditorMenu.html</loc>
-    <lastmod>2023-01-26T01:35:41+00:00</lastmod>
+    <lastmod>2023-01-26T02:00:04+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://jblattgerste.github.io/TrainAR/api/Editor.Scripts.TrainARObjectOffsetToolbar.html</loc>
-    <lastmod>2023-01-26T01:35:41+00:00</lastmod>
+    <lastmod>2023-01-26T02:00:04+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://jblattgerste.github.io/TrainAR/api/Editor.Scripts.TrainARObjectSettingsModalWindow.html</loc>
-    <lastmod>2023-01-26T01:35:41+00:00</lastmod>
+    <lastmod>2023-01-26T02:00:04+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://jblattgerste.github.io/TrainAR/api/Editor.Scripts.html</loc>
-    <lastmod>2023-01-26T01:35:41+00:00</lastmod>
+    <lastmod>2023-01-26T02:00:04+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://jblattgerste.github.io/TrainAR/api/Interaction.AudioController.html</loc>
-    <lastmod>2023-01-26T01:35:41+00:00</lastmod>
+    <lastmod>2023-01-26T02:00:04+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://jblattgerste.github.io/TrainAR/api/Interaction.CollisionController.Intersection.html</loc>
-    <lastmod>2023-01-26T01:35:41+00:00</lastmod>
+    <lastmod>2023-01-26T02:00:04+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://jblattgerste.github.io/TrainAR/api/Interaction.CollisionController.html</loc>
-    <lastmod>2023-01-26T01:35:41+00:00</lastmod>
+    <lastmod>2023-01-26T02:00:04+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://jblattgerste.github.io/TrainAR/api/Interaction.CrosshairController.html</loc>
-    <lastmod>2023-01-26T01:35:41+00:00</lastmod>
+    <lastmod>2023-01-26T02:00:04+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://jblattgerste.github.io/TrainAR/api/Interaction.InteractionController.html</loc>
-    <lastmod>2023-01-26T01:35:41+00:00</lastmod>
+    <lastmod>2023-01-26T02:00:04+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://jblattgerste.github.io/TrainAR/api/Interaction.MaterialController.html</loc>
-    <lastmod>2023-01-26T01:35:41+00:00</lastmod>
+    <lastmod>2023-01-26T02:00:04+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://jblattgerste.github.io/TrainAR/api/Interaction.ObjectLerpingController.html</loc>
-    <lastmod>2023-01-26T01:35:41+00:00</lastmod>
+    <lastmod>2023-01-26T02:00:04+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://jblattgerste.github.io/TrainAR/api/Interaction.Outline.Mode.html</loc>
-    <lastmod>2023-01-26T01:35:41+00:00</lastmod>
+    <lastmod>2023-01-26T02:00:04+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://jblattgerste.github.io/TrainAR/api/Interaction.Outline.html</loc>
-    <lastmod>2023-01-26T01:35:41+00:00</lastmod>
+    <lastmod>2023-01-26T02:00:04+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://jblattgerste.github.io/TrainAR/api/Interaction.ResetLostObjectController.html</loc>
-    <lastmod>2023-01-26T01:35:41+00:00</lastmod>
+    <lastmod>2023-01-26T02:00:04+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://jblattgerste.github.io/TrainAR/api/Interaction.RigidbodyController.html</loc>
-    <lastmod>2023-01-26T01:35:41+00:00</lastmod>
+    <lastmod>2023-01-26T02:00:04+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://jblattgerste.github.io/TrainAR/api/Interaction.TrainARObject.CustomUnityEvent.html</loc>
-    <lastmod>2023-01-26T01:35:41+00:00</lastmod>
+    <lastmod>2023-01-26T02:00:04+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://jblattgerste.github.io/TrainAR/api/Interaction.TrainARObject.html</loc>
-    <lastmod>2023-01-26T01:35:41+00:00</lastmod>
+    <lastmod>2023-01-26T02:00:04+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://jblattgerste.github.io/TrainAR/api/Interaction.html</loc>
-    <lastmod>2023-01-26T01:35:41+00:00</lastmod>
+    <lastmod>2023-01-26T02:00:04+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://jblattgerste.github.io/TrainAR/api/Others.ApplicationRuntimeManager.html</loc>
-    <lastmod>2023-01-26T01:35:41+00:00</lastmod>
+    <lastmod>2023-01-26T02:00:04+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://jblattgerste.github.io/TrainAR/api/Others.ARSessionIsReady.html</loc>
-    <lastmod>2023-01-26T01:35:41+00:00</lastmod>
+    <lastmod>2023-01-26T02:00:04+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://jblattgerste.github.io/TrainAR/api/Others.LeaveAndResetARScene.html</loc>
-    <lastmod>2023-01-26T01:35:41+00:00</lastmod>
+    <lastmod>2023-01-26T02:00:04+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://jblattgerste.github.io/TrainAR/api/Others.MeshCombiner.html</loc>
-    <lastmod>2023-01-26T01:35:41+00:00</lastmod>
+    <lastmod>2023-01-26T02:00:04+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://jblattgerste.github.io/TrainAR/api/Others.ObjectInsideCollider.html</loc>
-    <lastmod>2023-01-26T01:35:41+00:00</lastmod>
+    <lastmod>2023-01-26T02:00:04+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://jblattgerste.github.io/TrainAR/api/Others.PrefabSpawningController.html</loc>
-    <lastmod>2023-01-26T01:35:41+00:00</lastmod>
+    <lastmod>2023-01-26T02:00:04+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://jblattgerste.github.io/TrainAR/api/Others.ScenarioCompleted.html</loc>
-    <lastmod>2023-01-26T01:35:41+00:00</lastmod>
+    <lastmod>2023-01-26T02:00:04+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://jblattgerste.github.io/TrainAR/api/Others.SelectionBase.html</loc>
-    <lastmod>2023-01-26T01:35:41+00:00</lastmod>
+    <lastmod>2023-01-26T02:00:04+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://jblattgerste.github.io/TrainAR/api/Others.StartARScene.html</loc>
-    <lastmod>2023-01-26T01:35:41+00:00</lastmod>
+    <lastmod>2023-01-26T02:00:04+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://jblattgerste.github.io/TrainAR/api/Others.StateRequestSimulator.html</loc>
-    <lastmod>2023-01-26T01:35:41+00:00</lastmod>
+    <lastmod>2023-01-26T02:00:04+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://jblattgerste.github.io/TrainAR/api/Others.html</loc>
-    <lastmod>2023-01-26T01:35:41+00:00</lastmod>
+    <lastmod>2023-01-26T02:00:04+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://jblattgerste.github.io/TrainAR/api/Static.CustomAction.html</loc>
-    <lastmod>2023-01-26T01:35:41+00:00</lastmod>
+    <lastmod>2023-01-26T02:00:04+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://jblattgerste.github.io/TrainAR/api/Static.InteractionType.html</loc>
-    <lastmod>2023-01-26T01:35:41+00:00</lastmod>
+    <lastmod>2023-01-26T02:00:04+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://jblattgerste.github.io/TrainAR/api/Static.StateInformation.html</loc>
-    <lastmod>2023-01-26T01:35:41+00:00</lastmod>
+    <lastmod>2023-01-26T02:00:04+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://jblattgerste.github.io/TrainAR/api/Static.StatemachineConnector.html</loc>
-    <lastmod>2023-01-26T01:35:41+00:00</lastmod>
+    <lastmod>2023-01-26T02:00:04+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://jblattgerste.github.io/TrainAR/api/Static.html</loc>
-    <lastmod>2023-01-26T01:35:41+00:00</lastmod>
+    <lastmod>2023-01-26T02:00:04+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://jblattgerste.github.io/TrainAR/api/Tracking.FetchAspectRatioFromARCamera.html</loc>
-    <lastmod>2023-01-26T01:35:41+00:00</lastmod>
+    <lastmod>2023-01-26T02:00:04+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://jblattgerste.github.io/TrainAR/api/Tracking.html</loc>
-    <lastmod>2023-01-26T01:35:41+00:00</lastmod>
+    <lastmod>2023-01-26T02:00:04+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://jblattgerste.github.io/TrainAR/api/UI.CrosshairOnOff.html</loc>
-    <lastmod>2023-01-26T01:35:41+00:00</lastmod>
+    <lastmod>2023-01-26T02:00:04+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://jblattgerste.github.io/TrainAR/api/UI.DirectInfoController.html</loc>
-    <lastmod>2023-01-26T01:35:41+00:00</lastmod>
+    <lastmod>2023-01-26T02:00:04+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://jblattgerste.github.io/TrainAR/api/UI.ErrorOverlayController.html</loc>
-    <lastmod>2023-01-26T01:35:41+00:00</lastmod>
+    <lastmod>2023-01-26T02:00:04+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://jblattgerste.github.io/TrainAR/api/UI.InputFieldAdjust.html</loc>
-    <lastmod>2023-01-26T01:35:41+00:00</lastmod>
+    <lastmod>2023-01-26T02:00:04+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://jblattgerste.github.io/TrainAR/api/UI.InteractButton.html</loc>
-    <lastmod>2023-01-26T01:35:41+00:00</lastmod>
+    <lastmod>2023-01-26T02:00:04+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://jblattgerste.github.io/TrainAR/api/UI.InteractionButtonController.html</loc>
-    <lastmod>2023-01-26T01:35:41+00:00</lastmod>
+    <lastmod>2023-01-26T02:00:04+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://jblattgerste.github.io/TrainAR/api/UI.OnBoardingController.html</loc>
-    <lastmod>2023-01-26T01:35:41+00:00</lastmod>
+    <lastmod>2023-01-26T02:00:04+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://jblattgerste.github.io/TrainAR/api/UI.OpenSidePanel.html</loc>
-    <lastmod>2023-01-26T01:35:41+00:00</lastmod>
+    <lastmod>2023-01-26T02:00:04+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://jblattgerste.github.io/TrainAR/api/UI.Question.html</loc>
-    <lastmod>2023-01-26T01:35:41+00:00</lastmod>
+    <lastmod>2023-01-26T02:00:04+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://jblattgerste.github.io/TrainAR/api/UI.QuestionnaireController.Answer.html</loc>
-    <lastmod>2023-01-26T01:35:41+00:00</lastmod>
+    <lastmod>2023-01-26T02:00:04+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://jblattgerste.github.io/TrainAR/api/UI.QuestionnaireController.QuestionUITypes.html</loc>
-    <lastmod>2023-01-26T01:35:41+00:00</lastmod>
+    <lastmod>2023-01-26T02:00:04+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://jblattgerste.github.io/TrainAR/api/UI.QuestionnaireController.html</loc>
-    <lastmod>2023-01-26T01:35:41+00:00</lastmod>
+    <lastmod>2023-01-26T02:00:04+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://jblattgerste.github.io/TrainAR/api/UI.SaveArea.html</loc>
-    <lastmod>2023-01-26T01:35:41+00:00</lastmod>
+    <lastmod>2023-01-26T02:00:04+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://jblattgerste.github.io/TrainAR/api/UI.StreamVideo.html</loc>
-    <lastmod>2023-01-26T01:35:41+00:00</lastmod>
+    <lastmod>2023-01-26T02:00:04+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://jblattgerste.github.io/TrainAR/api/UI.TopPanelController.html</loc>
-    <lastmod>2023-01-26T01:35:41+00:00</lastmod>
+    <lastmod>2023-01-26T02:00:04+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://jblattgerste.github.io/TrainAR/api/UI.html</loc>
-    <lastmod>2023-01-26T01:35:41+00:00</lastmod>
+    <lastmod>2023-01-26T02:00:04+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://jblattgerste.github.io/TrainAR/api/Visual_Scripting.Action.TrainARActionChoices.html</loc>
-    <lastmod>2023-01-26T01:35:41+00:00</lastmod>
+    <lastmod>2023-01-26T02:00:04+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://jblattgerste.github.io/TrainAR/api/Visual_Scripting.Action.html</loc>
-    <lastmod>2023-01-26T01:35:41+00:00</lastmod>
+    <lastmod>2023-01-26T02:00:04+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://jblattgerste.github.io/TrainAR/api/Visual_Scripting.ActionFork.TrainARActionChoices.html</loc>
-    <lastmod>2023-01-26T01:35:41+00:00</lastmod>
+    <lastmod>2023-01-26T02:00:04+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://jblattgerste.github.io/TrainAR/api/Visual_Scripting.ActionFork.html</loc>
-    <lastmod>2023-01-26T01:35:41+00:00</lastmod>
+    <lastmod>2023-01-26T02:00:04+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://jblattgerste.github.io/TrainAR/api/Visual_Scripting.ActionMulti.TrainARActionChoices.html</loc>
-    <lastmod>2023-01-26T01:35:41+00:00</lastmod>
+    <lastmod>2023-01-26T02:00:04+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://jblattgerste.github.io/TrainAR/api/Visual_Scripting.ActionMulti.html</loc>
-    <lastmod>2023-01-26T01:35:41+00:00</lastmod>
+    <lastmod>2023-01-26T02:00:04+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://jblattgerste.github.io/TrainAR/api/Visual_Scripting.ActionUI.TrainARUIActionChoices.html</loc>
-    <lastmod>2023-01-26T01:35:41+00:00</lastmod>
+    <lastmod>2023-01-26T02:00:04+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://jblattgerste.github.io/TrainAR/api/Visual_Scripting.ActionUI.html</loc>
-    <lastmod>2023-01-26T01:35:41+00:00</lastmod>
+    <lastmod>2023-01-26T02:00:04+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://jblattgerste.github.io/TrainAR/api/Visual_Scripting.Conclusion.html</loc>
-    <lastmod>2023-01-26T01:35:41+00:00</lastmod>
+    <lastmod>2023-01-26T02:00:04+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://jblattgerste.github.io/TrainAR/api/Visual_Scripting.Feedback.html</loc>
-    <lastmod>2023-01-26T01:35:41+00:00</lastmod>
+    <lastmod>2023-01-26T02:00:04+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://jblattgerste.github.io/TrainAR/api/Visual_Scripting.Insights.html</loc>
-    <lastmod>2023-01-26T01:35:41+00:00</lastmod>
+    <lastmod>2023-01-26T02:00:04+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://jblattgerste.github.io/TrainAR/api/Visual_Scripting.Instructions.html</loc>
-    <lastmod>2023-01-26T01:35:41+00:00</lastmod>
+    <lastmod>2023-01-26T02:00:04+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://jblattgerste.github.io/TrainAR/api/Visual_Scripting.ObjectHelper.TrainARHelperChoices.html</loc>
-    <lastmod>2023-01-26T01:35:41+00:00</lastmod>
+    <lastmod>2023-01-26T02:00:04+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://jblattgerste.github.io/TrainAR/api/Visual_Scripting.ObjectHelper.html</loc>
-    <lastmod>2023-01-26T01:35:41+00:00</lastmod>
+    <lastmod>2023-01-26T02:00:04+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://jblattgerste.github.io/TrainAR/api/Visual_Scripting.OnboardingSetup.html</loc>
-    <lastmod>2023-01-26T01:35:41+00:00</lastmod>
+    <lastmod>2023-01-26T02:00:04+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://jblattgerste.github.io/TrainAR/api/Visual_Scripting.VisualScriptingEventNames.html</loc>
-    <lastmod>2023-01-26T01:35:41+00:00</lastmod>
+    <lastmod>2023-01-26T02:00:04+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://jblattgerste.github.io/TrainAR/api/Visual_Scripting.html</loc>
-    <lastmod>2023-01-26T01:35:41+00:00</lastmod>
+    <lastmod>2023-01-26T02:00:04+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://jblattgerste.github.io/TrainAR/index.html</loc>
-    <lastmod>2023-01-26T01:35:41+00:00</lastmod>
+    <lastmod>2023-01-26T02:00:04+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://jblattgerste.github.io/TrainAR/manual/ActionNodes.html</loc>
-    <lastmod>2023-01-26T01:35:41+00:00</lastmod>
+    <lastmod>2023-01-26T02:00:04+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://jblattgerste.github.io/TrainAR/manual/FeedbackNode.html</loc>
-    <lastmod>2023-01-26T01:35:41+00:00</lastmod>
+    <lastmod>2023-01-26T02:00:04+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://jblattgerste.github.io/TrainAR/manual/GettingStarted.html</loc>
-    <lastmod>2023-01-26T01:35:41+00:00</lastmod>
+    <lastmod>2023-01-26T02:00:04+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://jblattgerste.github.io/TrainAR/manual/InsightNode.html</loc>
-    <lastmod>2023-01-26T01:35:41+00:00</lastmod>
+    <lastmod>2023-01-26T02:00:04+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://jblattgerste.github.io/TrainAR/manual/InstructionNode.html</loc>
-    <lastmod>2023-01-26T01:35:41+00:00</lastmod>
+    <lastmod>2023-01-26T02:00:04+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://jblattgerste.github.io/TrainAR/manual/NoVisualScripting.html</loc>
-    <lastmod>2023-01-26T01:35:41+00:00</lastmod>
+    <lastmod>2023-01-26T02:00:04+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://jblattgerste.github.io/TrainAR/manual/ObjectHelperNode.html</loc>
-    <lastmod>2023-01-26T01:35:41+00:00</lastmod>
+    <lastmod>2023-01-26T02:00:04+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://jblattgerste.github.io/TrainAR/manual/Setup.html</loc>
-    <lastmod>2023-01-26T01:35:41+00:00</lastmod>
+    <lastmod>2023-01-26T02:00:04+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://jblattgerste.github.io/TrainAR/manual/StartTrainingNode.html</loc>
-    <lastmod>2023-01-26T01:35:41+00:00</lastmod>
+    <lastmod>2023-01-26T02:00:04+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://jblattgerste.github.io/TrainAR/manual/TrainARBasics.html</loc>
-    <lastmod>2023-01-26T01:35:41+00:00</lastmod>
+    <lastmod>2023-01-26T02:00:04+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://jblattgerste.github.io/TrainAR/manual/TrainARNodes.html</loc>
-    <lastmod>2023-01-26T01:35:41+00:00</lastmod>
+    <lastmod>2023-01-26T02:00:04+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://jblattgerste.github.io/TrainAR/manual/TrainArObjects.html</loc>
-    <lastmod>2023-01-26T01:35:41+00:00</lastmod>
+    <lastmod>2023-01-26T02:00:04+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://jblattgerste.github.io/TrainAR/manual/TrainingConclusionNode.html</loc>
-    <lastmod>2023-01-26T01:35:41+00:00</lastmod>
+    <lastmod>2023-01-26T02:00:04+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://jblattgerste.github.io/TrainAR/manual/UIActionNodes.html</loc>
-    <lastmod>2023-01-26T01:35:41+00:00</lastmod>
+    <lastmod>2023-01-26T02:00:04+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://jblattgerste.github.io/TrainAR/manual/VisualScripting.html</loc>
-    <lastmod>2023-01-26T01:35:41+00:00</lastmod>
+    <lastmod>2023-01-26T02:00:04+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
