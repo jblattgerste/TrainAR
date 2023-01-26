@@ -26,12 +26,54 @@ references:
   isSpec: "True"
   fullName: Editor.Scripts.ConvertToTrainARObject.AddConvertionContextItem
   nameWithType: ConvertToTrainARObject.AddConvertionContextItem
+- uid: Editor.Scripts.ConvertToTrainARObject.InitConversion(GameObject,System.String)
+  name: InitConversion(GameObject, String)
+  href: api/Editor.Scripts.ConvertToTrainARObject.html#Editor_Scripts_ConvertToTrainARObject_InitConversion_GameObject_System_String_
+  commentId: M:Editor.Scripts.ConvertToTrainARObject.InitConversion(GameObject,System.String)
+  fullName: Editor.Scripts.ConvertToTrainARObject.InitConversion(GameObject, System.String)
+  nameWithType: ConvertToTrainARObject.InitConversion(GameObject, String)
+- uid: Editor.Scripts.ConvertToTrainARObject.InitConversion*
+  name: InitConversion
+  href: api/Editor.Scripts.ConvertToTrainARObject.html#Editor_Scripts_ConvertToTrainARObject_InitConversion_
+  commentId: Overload:Editor.Scripts.ConvertToTrainARObject.InitConversion
+  isSpec: "True"
+  fullName: Editor.Scripts.ConvertToTrainARObject.InitConversion
+  nameWithType: ConvertToTrainARObject.InitConversion
+- uid: Editor.Scripts.ConvertToTrainARObject.SimplifyMeshes(System.Collections.Generic.IEnumerable{Mesh},GameObject,System.Single)
+  name: SimplifyMeshes(IEnumerable<Mesh>, GameObject, Single)
+  href: api/Editor.Scripts.ConvertToTrainARObject.html#Editor_Scripts_ConvertToTrainARObject_SimplifyMeshes_System_Collections_Generic_IEnumerable_Mesh__GameObject_System_Single_
+  commentId: M:Editor.Scripts.ConvertToTrainARObject.SimplifyMeshes(System.Collections.Generic.IEnumerable{Mesh},GameObject,System.Single)
+  name.vb: SimplifyMeshes(IEnumerable(Of Mesh), GameObject, Single)
+  fullName: Editor.Scripts.ConvertToTrainARObject.SimplifyMeshes(System.Collections.Generic.IEnumerable<Mesh>, GameObject, System.Single)
+  fullName.vb: Editor.Scripts.ConvertToTrainARObject.SimplifyMeshes(System.Collections.Generic.IEnumerable(Of Mesh), GameObject, System.Single)
+  nameWithType: ConvertToTrainARObject.SimplifyMeshes(IEnumerable<Mesh>, GameObject, Single)
+  nameWithType.vb: ConvertToTrainARObject.SimplifyMeshes(IEnumerable(Of Mesh), GameObject, Single)
+- uid: Editor.Scripts.ConvertToTrainARObject.SimplifyMeshes*
+  name: SimplifyMeshes
+  href: api/Editor.Scripts.ConvertToTrainARObject.html#Editor_Scripts_ConvertToTrainARObject_SimplifyMeshes_
+  commentId: Overload:Editor.Scripts.ConvertToTrainARObject.SimplifyMeshes
+  isSpec: "True"
+  fullName: Editor.Scripts.ConvertToTrainARObject.SimplifyMeshes
+  nameWithType: ConvertToTrainARObject.SimplifyMeshes
 - uid: Editor.Scripts.EditorTrainARObjectToolbar
   name: EditorTrainARObjectToolbar
   href: api/Editor.Scripts.EditorTrainARObjectToolbar.html
   commentId: T:Editor.Scripts.EditorTrainARObjectToolbar
   fullName: Editor.Scripts.EditorTrainARObjectToolbar
   nameWithType: EditorTrainARObjectToolbar
+- uid: Editor.Scripts.EditorTrainARObjectToolbar.OnCreated
+  name: OnCreated()
+  href: api/Editor.Scripts.EditorTrainARObjectToolbar.html#Editor_Scripts_EditorTrainARObjectToolbar_OnCreated
+  commentId: M:Editor.Scripts.EditorTrainARObjectToolbar.OnCreated
+  fullName: Editor.Scripts.EditorTrainARObjectToolbar.OnCreated()
+  nameWithType: EditorTrainARObjectToolbar.OnCreated()
+- uid: Editor.Scripts.EditorTrainARObjectToolbar.OnCreated*
+  name: OnCreated
+  href: api/Editor.Scripts.EditorTrainARObjectToolbar.html#Editor_Scripts_EditorTrainARObjectToolbar_OnCreated_
+  commentId: Overload:Editor.Scripts.EditorTrainARObjectToolbar.OnCreated
+  isSpec: "True"
+  fullName: Editor.Scripts.EditorTrainARObjectToolbar.OnCreated
+  nameWithType: EditorTrainARObjectToolbar.OnCreated
 - uid: Editor.Scripts.MeshCombinerEditor
   name: MeshCombinerEditor
   href: api/Editor.Scripts.MeshCombinerEditor.html
@@ -309,6 +351,44 @@ references:
   isSpec: "True"
   fullName: Editor.Scripts.TrainAREditorMenu.SwitchToUnityMode
   nameWithType: TrainAREditorMenu.SwitchToUnityMode
+- uid: Editor.Scripts.TrainARObjectOffsetToolbar
+  name: TrainARObjectOffsetToolbar
+  href: api/Editor.Scripts.TrainARObjectOffsetToolbar.html
+  commentId: T:Editor.Scripts.TrainARObjectOffsetToolbar
+  fullName: Editor.Scripts.TrainARObjectOffsetToolbar
+  nameWithType: TrainARObjectOffsetToolbar
+- uid: Editor.Scripts.TrainARObjectOffsetToolbar.CreatePanelContent
+  name: CreatePanelContent()
+  href: api/Editor.Scripts.TrainARObjectOffsetToolbar.html#Editor_Scripts_TrainARObjectOffsetToolbar_CreatePanelContent
+  commentId: M:Editor.Scripts.TrainARObjectOffsetToolbar.CreatePanelContent
+  fullName: Editor.Scripts.TrainARObjectOffsetToolbar.CreatePanelContent()
+  nameWithType: TrainARObjectOffsetToolbar.CreatePanelContent()
+- uid: Editor.Scripts.TrainARObjectOffsetToolbar.CreatePanelContent*
+  name: CreatePanelContent
+  href: api/Editor.Scripts.TrainARObjectOffsetToolbar.html#Editor_Scripts_TrainARObjectOffsetToolbar_CreatePanelContent_
+  commentId: Overload:Editor.Scripts.TrainARObjectOffsetToolbar.CreatePanelContent
+  isSpec: "True"
+  fullName: Editor.Scripts.TrainARObjectOffsetToolbar.CreatePanelContent
+  nameWithType: TrainARObjectOffsetToolbar.CreatePanelContent
+- uid: Editor.Scripts.TrainARObjectOffsetToolbar.OnCreated
+  name: OnCreated()
+  href: api/Editor.Scripts.TrainARObjectOffsetToolbar.html#Editor_Scripts_TrainARObjectOffsetToolbar_OnCreated
+  commentId: M:Editor.Scripts.TrainARObjectOffsetToolbar.OnCreated
+  fullName: Editor.Scripts.TrainARObjectOffsetToolbar.OnCreated()
+  nameWithType: TrainARObjectOffsetToolbar.OnCreated()
+- uid: Editor.Scripts.TrainARObjectOffsetToolbar.OnCreated*
+  name: OnCreated
+  href: api/Editor.Scripts.TrainARObjectOffsetToolbar.html#Editor_Scripts_TrainARObjectOffsetToolbar_OnCreated_
+  commentId: Overload:Editor.Scripts.TrainARObjectOffsetToolbar.OnCreated
+  isSpec: "True"
+  fullName: Editor.Scripts.TrainARObjectOffsetToolbar.OnCreated
+  nameWithType: TrainARObjectOffsetToolbar.OnCreated
+- uid: Editor.Scripts.TrainARObjectSettingsModalWindow
+  name: TrainARObjectSettingsModalWindow
+  href: api/Editor.Scripts.TrainARObjectSettingsModalWindow.html
+  commentId: T:Editor.Scripts.TrainARObjectSettingsModalWindow
+  fullName: Editor.Scripts.TrainARObjectSettingsModalWindow
+  nameWithType: TrainARObjectSettingsModalWindow
 - uid: Interaction
   name: Interaction
   href: api/Interaction.html

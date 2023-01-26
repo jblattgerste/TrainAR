@@ -107,7 +107,7 @@ is combined an simplyfied.</p>
     <a href="https://github.com/jblattgerste/TrainAR/new/main/apiSpec/new?filename=Editor_Scripts_ConvertToTrainARObject_AddConvertionContextItem.md&amp;value=---%0Auid%3A%20Editor.Scripts.ConvertToTrainARObject.AddConvertionContextItem%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jblattgerste/TrainAR/blob/main/Assets/Editor/Scripts/ConvertToTrainARObject.cs/#L20">View Source</a>
+    <a href="https://github.com/jblattgerste/TrainAR/blob/main/Assets/Editor/Scripts/ConvertToTrainARObject.cs/#L22">View Source</a>
   </span>
   <a id="Editor_Scripts_ConvertToTrainARObject_AddConvertionContextItem_" data-uid="Editor.Scripts.ConvertToTrainARObject.AddConvertionContextItem*"></a>
   <h4 id="Editor_Scripts_ConvertToTrainARObject_AddConvertionContextItem" data-uid="Editor.Scripts.ConvertToTrainARObject.AddConvertionContextItem">AddConvertionContextItem()</h4>
@@ -118,6 +118,90 @@ is combined an simplyfied.</p>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static void AddConvertionContextItem()</code></pre>
   </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jblattgerste/TrainAR/new/main/apiSpec/new?filename=Editor_Scripts_ConvertToTrainARObject_InitConversion_GameObject_System_String_.md&amp;value=---%0Auid%3A%20Editor.Scripts.ConvertToTrainARObject.InitConversion(GameObject%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jblattgerste/TrainAR/blob/main/Assets/Editor/Scripts/ConvertToTrainARObject.cs/#L103">View Source</a>
+  </span>
+  <a id="Editor_Scripts_ConvertToTrainARObject_InitConversion_" data-uid="Editor.Scripts.ConvertToTrainARObject.InitConversion*"></a>
+  <h4 id="Editor_Scripts_ConvertToTrainARObject_InitConversion_GameObject_System_String_" data-uid="Editor.Scripts.ConvertToTrainARObject.InitConversion(GameObject,System.String)">InitConversion(GameObject, String)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void InitConversion(GameObject selectedObject, string trainARObjectName)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">GameObject</span></td>
+        <td><span class="parametername">selectedObject</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">trainARObjectName</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jblattgerste/TrainAR/new/main/apiSpec/new?filename=Editor_Scripts_ConvertToTrainARObject_SimplifyMeshes_System_Collections_Generic_IEnumerable_Mesh__GameObject_System_Single_.md&amp;value=---%0Auid%3A%20Editor.Scripts.ConvertToTrainARObject.SimplifyMeshes(System.Collections.Generic.IEnumerable%7BMesh%7D%2CGameObject%2CSystem.Single)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jblattgerste/TrainAR/blob/main/Assets/Editor/Scripts/ConvertToTrainARObject.cs/#L184">View Source</a>
+  </span>
+  <a id="Editor_Scripts_ConvertToTrainARObject_SimplifyMeshes_" data-uid="Editor.Scripts.ConvertToTrainARObject.SimplifyMeshes*"></a>
+  <h4 id="Editor_Scripts_ConvertToTrainARObject_SimplifyMeshes_System_Collections_Generic_IEnumerable_Mesh__GameObject_System_Single_" data-uid="Editor.Scripts.ConvertToTrainARObject.SimplifyMeshes(System.Collections.Generic.IEnumerable{Mesh},GameObject,System.Single)">SimplifyMeshes(IEnumerable&lt;Mesh&gt;, GameObject, Single)</h4>
+  <div class="markdown level1 summary"><p>Uses the Meshsimplifier to decimate the mesh of the passed Gameobject as well as all of it&apos;s children&apos;s meshes.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void SimplifyMeshes(IEnumerable&lt;Mesh&gt; originalMeshes, GameObject currentSelectedObject, float quality)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<span class="xref">Mesh</span>&gt;</td>
+        <td><span class="parametername">originalMeshes</span></td>
+        <td><p>The meshes as they were, when the object was originally selected,
+before any mesh changes were applied</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">GameObject</span></td>
+        <td><span class="parametername">currentSelectedObject</span></td>
+        <td><p>The current Gameobject, to which the mesh changes are applied to</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">Single</a></td>
+        <td><span class="parametername">quality</span></td>
+        <td><p>The desired quality of the simplification. Must be between 0 and 1.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
 </article>
           </div>
           
@@ -129,7 +213,7 @@ is combined an simplyfied.</p>
                     <a href="https://github.com/jblattgerste/TrainAR/new/main/apiSpec/new?filename=Editor_Scripts_ConvertToTrainARObject.md&amp;value=---%0Auid%3A%20Editor.Scripts.ConvertToTrainARObject%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/jblattgerste/TrainAR/blob/main/Assets/Editor/Scripts/ConvertToTrainARObject.cs/#L15" class="contribution-link">View Source</a>
+                    <a href="https://github.com/jblattgerste/TrainAR/blob/main/Assets/Editor/Scripts/ConvertToTrainARObject.cs/#L17" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

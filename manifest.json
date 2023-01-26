@@ -28,7 +28,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Editor.Scripts.ConvertToTrainARObject.html",
-          "hash": "HCq/1JruDT0xe6ZP83TLDmAnLlkCcZxXsut7OkBQo4U="
+          "hash": "8muhlNyWaB29xaL50Rry7mSON4sCaJgwsWi6WSBWKU0="
         }
       },
       "is_incremental": false,
@@ -40,7 +40,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Editor.Scripts.EditorTrainARObjectToolbar.html",
-          "hash": "bDJIms2LYnvM26gKwiUgE+F6mJvP4/ALi/DoPF893oM="
+          "hash": "eiTJ9u7Jpcx7Kh6+QVCQfWSSwe4ArC8yl4AM9/1QCiA="
         }
       },
       "is_incremental": false,
@@ -108,11 +108,35 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Editor.Scripts.TrainARObjectOffsetToolbar.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Editor.Scripts.TrainARObjectOffsetToolbar.html",
+          "hash": "YMYdZFvWqDZbbF9Uo6E5BTQbZwsfR3x4m7CFxXEzybA="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Editor.Scripts.TrainARObjectSettingsModalWindow.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Editor.Scripts.TrainARObjectSettingsModalWindow.html",
+          "hash": "MfHh3QnS6IA2yEZxGdwjpDr86WLjWIItdV+bN3ZBQbI="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Editor.Scripts.yml",
       "output": {
         ".html": {
           "relative_path": "api/Editor.Scripts.html",
-          "hash": "7SQf/UTX2VwMCGiyDVLo/OnuxAV2ZAfqsxgwqiz6XvE="
+          "hash": "mWoniKD14jUABqP1Vld7kKGvn4P6BFFCpkdBRMknge8="
         }
       },
       "is_incremental": false,
@@ -568,7 +592,7 @@
       "output": {
         ".html": {
           "relative_path": "api/UI.InteractionButtonController.html",
-          "hash": "XYWwegwJakmLs4t8Re/LGRm8J0FEsQdAm3GBFven+G4="
+          "hash": "aRg2lk0q++Gj6Pnadpw4wE32+bNcGy7xd6wyUZZUoIc="
         }
       },
       "is_incremental": false,
@@ -904,7 +928,7 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "m91Qpzg5a0P6iDr6S67L6COb6PoRIyh4WURhkzkye0I="
+          "hash": "AHO86yuNC/8MTXVl+tadIZRTd5YzddLW8iJ+s150Vp4="
         }
       },
       "is_incremental": false,
@@ -2086,7 +2110,7 @@
         "ManagedReferenceDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 73,
+          "total_file_count": 75,
           "skipped_file_count": 0
         },
         "ResourceDocumentProcessor": {
