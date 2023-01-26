@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEditor;
 using UnityEngine;
-using UnityEngine.UIElements;
 
 namespace Editor.Scripts
 {
@@ -56,14 +55,6 @@ namespace Editor.Scripts
 
         void OnGUI()
         {
-            // Shows the explanatory text for the conversion process
-            //GUILayout.Space(20);
-            //EditorGUILayout.LabelField("To convert a 3D Model into a TrainAR Object, specify its unique TrainAR Object name, which is later used to reference it in the TrainAR Stateflow, and choose its level of detail. On conversion, meshes are automatically combined, simplified, and TrainAR Action behaviours are applied.", EditorStyles.wordWrappedLabel);
-            //GUILayout.Space(20);
-            
-            // Create the field and pass the to be converted object
-            //trainARObject = (GameObject) EditorGUILayout.ObjectField(trainARObject, typeof(GameObject), true);
-            
             // Set background color of the preview window
             GUIStyle bgColor = new GUIStyle {normal = {background = EditorGUIUtility.whiteTexture}};
             // On first pass, create the custom editor with the to be converted TrainAR object
@@ -71,7 +62,6 @@ namespace Editor.Scripts
                     gameObjectEditor = UnityEditor.Editor.CreateEditor(trainARObject);
             
             // The interactive preview GUI
-            //EditorGUILayout.LabelField("TrainAR Object Preview:", EditorStyles.boldLabel);
             gameObjectEditor.OnInteractivePreviewGUI(GUILayoutUtility.GetRect(256, 256), bgColor);
             EditorGUI.BeginChangeCheck();
 
@@ -82,12 +72,9 @@ namespace Editor.Scripts
             GUILayout.Space(10);
             EditorGUILayout.HelpBox("The unique TrainAR Object name, which is used to reference the object in the TrainAR Stateflow.", MessageType.Info);
 
-
-
-            // Quality conversion options for the mesh
+            // Quality conversion options for the mesh with information to advise the user on what would be good options
             GUILayout.Space(20);
             GUILayout.Label("Object Quality: ", EditorStyles.boldLabel);
-            
             GUIStyle qualityLabelStyle = new GUIStyle(EditorStyles.label);
             var simplificationPercentage = Math.Round((1 - changedQuality) * 100, 2);
             var verticesCount = CountTotalVertices(trainARObject);
@@ -95,9 +82,10 @@ namespace Editor.Scripts
             if (polygonCount >= 50000) qualityLabelStyle.normal.textColor = Color.red;
             else if (polygonCount >= 10000) qualityLabelStyle.normal.textColor = Color.yellow;
             else qualityLabelStyle.normal.textColor = Color.green;
-            GUILayout.Label("Quality reduction: " + simplificationPercentage + "%, " + "Vertices: " + verticesCount + ", Polygons: " + polygonCount, qualityLabelStyle);
+            GUILayout.Label("Reduction: " + simplificationPercentage + "% = " + "Vertices: " + verticesCount + ", Polygons: " + polygonCount, qualityLabelStyle);
             changedQuality = GUILayout.HorizontalSlider(changedQuality, 0f, 1.0f, GUILayout.ExpandHeight(true));
             
+            // Advanced Quality options which replace the hints if the user wants more control over the conversion process
             GUILayout.Space(20);
             advancedQualityOptionstatus = EditorGUILayout.Foldout(advancedQualityOptionstatus, "Advanced Quality Options");
             if (advancedQualityOptionstatus)
@@ -114,7 +102,7 @@ namespace Editor.Scripts
             }
             else
             {
-                //Show tips and hints instead
+                // If we use the simple overlay without advanced options, show tipts and hints based on the current polygon count
                 GUILayout.Space(10);
                 if (polygonCount > 50000)
                 {
@@ -131,9 +119,11 @@ namespace Editor.Scripts
                 
             if (!Selection.activeTransform)
             {
-                //Set the display status of the advanced options to false
+                // Set the display status of the advanced options to false
                 advancedQualityOptionstatus = false;
             }
+            
+            //Add a flexible space so the layout works on all displays
             GUILayout.FlexibleSpace();
             
             // If the mesh-quality slider has been moved.
@@ -165,8 +155,7 @@ namespace Editor.Scripts
                 // Editors created this way need to be destroyed explicitly
                 DestroyImmediate(gameObjectEditor);
                 // Reapply the meshes with original quality.
-                ConvertToTrainARObject.SimplifyMeshes(originalMeshes, trainARObject, 1.0f,
-                    false, false, false, false);
+                ConvertToTrainARObject.SimplifyMeshes(originalMeshes, trainARObject, 1.0f);
                 Close();
             }
         }

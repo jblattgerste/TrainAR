@@ -182,8 +182,12 @@ namespace Editor.Scripts
         ///  <param name="quality">The desired quality of the simplification. Must be between 0 and 1.</param>
         ///  <param name="originalMeshes">The meshes as they were, when the object was originally selected,
         /// before any mesh changes were applied</param>
+        ///  <param name="preserveBorderEdges">Optional parameter: Should mesh edges be preserved?</param>
+        ///  <param name="preserveSurfaceCurvature">Optional parameter: Should surface curvature be preserved?</param>
+        ///  <param name="preserveUVSeamEdges">Optional parameter: Should UV seam edges be preserved?</param>
+        ///  <param name="preserveUVFoldoverEdges">Optional parameter: Should UV foldover edges be preserved?</param>
         public static void SimplifyMeshes(IEnumerable<Mesh> originalMeshes, GameObject currentSelectedObject, float quality,
-            bool preserveBorderEdges, bool preserveSurfaceCurvature = false, bool preserveUVSeamEdges = false, bool preserveUVFoldoverEdges = false)
+            bool preserveBorderEdges = false, bool preserveSurfaceCurvature = false, bool preserveUVSeamEdges = false, bool preserveUVFoldoverEdges = false)
         {
             // Create instance of Unity Mesh Simplifier
             var meshSimplifier = new UnityMeshSimplifier.MeshSimplifier();
@@ -207,7 +211,7 @@ namespace Editor.Scripts
                 // Initialize mesh simplifier with the original mesh
                 meshSimplifier.Initialize(originalMesh);
                 
-                //Set up custom options for the simplification
+                //Set up custom options for the simplification, apply its defaults and then set the values from the the modal window
                 SimplificationOptions simplificationOptions = new SimplificationOptions();
                 simplificationOptions = SimplificationOptions.Default;
                 simplificationOptions.PreserveBorderEdges = preserveBorderEdges;
