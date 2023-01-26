@@ -39,15 +39,15 @@ references:
   isSpec: "True"
   fullName: Editor.Scripts.ConvertToTrainARObject.InitConversion
   nameWithType: ConvertToTrainARObject.InitConversion
-- uid: Editor.Scripts.ConvertToTrainARObject.SimplifyMeshes(System.Collections.Generic.IEnumerable{Mesh},GameObject,System.Single)
-  name: SimplifyMeshes(IEnumerable<Mesh>, GameObject, Single)
-  href: api/Editor.Scripts.ConvertToTrainARObject.html#Editor_Scripts_ConvertToTrainARObject_SimplifyMeshes_System_Collections_Generic_IEnumerable_Mesh__GameObject_System_Single_
-  commentId: M:Editor.Scripts.ConvertToTrainARObject.SimplifyMeshes(System.Collections.Generic.IEnumerable{Mesh},GameObject,System.Single)
-  name.vb: SimplifyMeshes(IEnumerable(Of Mesh), GameObject, Single)
-  fullName: Editor.Scripts.ConvertToTrainARObject.SimplifyMeshes(System.Collections.Generic.IEnumerable<Mesh>, GameObject, System.Single)
-  fullName.vb: Editor.Scripts.ConvertToTrainARObject.SimplifyMeshes(System.Collections.Generic.IEnumerable(Of Mesh), GameObject, System.Single)
-  nameWithType: ConvertToTrainARObject.SimplifyMeshes(IEnumerable<Mesh>, GameObject, Single)
-  nameWithType.vb: ConvertToTrainARObject.SimplifyMeshes(IEnumerable(Of Mesh), GameObject, Single)
+- uid: Editor.Scripts.ConvertToTrainARObject.SimplifyMeshes(System.Collections.Generic.IEnumerable{Mesh},GameObject,System.Single,System.Boolean,System.Boolean,System.Boolean,System.Boolean)
+  name: SimplifyMeshes(IEnumerable<Mesh>, GameObject, Single, Boolean, Boolean, Boolean, Boolean)
+  href: api/Editor.Scripts.ConvertToTrainARObject.html#Editor_Scripts_ConvertToTrainARObject_SimplifyMeshes_System_Collections_Generic_IEnumerable_Mesh__GameObject_System_Single_System_Boolean_System_Boolean_System_Boolean_System_Boolean_
+  commentId: M:Editor.Scripts.ConvertToTrainARObject.SimplifyMeshes(System.Collections.Generic.IEnumerable{Mesh},GameObject,System.Single,System.Boolean,System.Boolean,System.Boolean,System.Boolean)
+  name.vb: SimplifyMeshes(IEnumerable(Of Mesh), GameObject, Single, Boolean, Boolean, Boolean, Boolean)
+  fullName: Editor.Scripts.ConvertToTrainARObject.SimplifyMeshes(System.Collections.Generic.IEnumerable<Mesh>, GameObject, System.Single, System.Boolean, System.Boolean, System.Boolean, System.Boolean)
+  fullName.vb: Editor.Scripts.ConvertToTrainARObject.SimplifyMeshes(System.Collections.Generic.IEnumerable(Of Mesh), GameObject, System.Single, System.Boolean, System.Boolean, System.Boolean, System.Boolean)
+  nameWithType: ConvertToTrainARObject.SimplifyMeshes(IEnumerable<Mesh>, GameObject, Single, Boolean, Boolean, Boolean, Boolean)
+  nameWithType.vb: ConvertToTrainARObject.SimplifyMeshes(IEnumerable(Of Mesh), GameObject, Single, Boolean, Boolean, Boolean, Boolean)
 - uid: Editor.Scripts.ConvertToTrainARObject.SimplifyMeshes*
   name: SimplifyMeshes
   href: api/Editor.Scripts.ConvertToTrainARObject.html#Editor_Scripts_ConvertToTrainARObject_SimplifyMeshes_
