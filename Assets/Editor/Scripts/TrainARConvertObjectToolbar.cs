@@ -1,6 +1,7 @@
 using NUnit.Framework.Constraints;
 using UnityEditor;
 using UnityEditor.Overlays;
+using UnityEditor.UIElements;
 using UnityEngine;
 using UnityEngine.UIElements;
 
@@ -12,13 +13,13 @@ namespace Editor.Scripts
     /// It displays the positional and rotational offsets between the two selected objects, so the user can use them,
     /// e.g. for the FuseObjects functionality of the object helper. 
     /// </summary>
-    [Overlay(typeof(SceneView), "TrainAR Object Offset", true)]
-    public class TrainARObjectOffsetToolbar : Overlay
+    [Overlay(typeof(SceneView), "Convert to TrainAR Object", true)]
+    public class TrainARConvertObjectToolbar : Overlay
     {
         /// <summary>
         /// the label that contains the positional and rotational offsets
         /// </summary>
-        Label label = new Label("No TrainAR Object Selected");
+        Button convertButton = new ToolbarButton();
 
         /// <summary>
         /// Creates the Panel that displays the toolbar
@@ -26,13 +27,18 @@ namespace Editor.Scripts
         /// <returns></returns>
         public override VisualElement CreatePanelContent()
         {
-            return label;
+            convertButton.text = "Click to Convert";
+            convertButton.clicked += ConvertToTrainARObject.AddConvertionContextItem;
+            convertButton.style.unityTextAlign = new StyleEnum<TextAnchor>(TextAnchor.MiddleCenter);
+            convertButton.style.unityFontStyleAndWeight = new StyleEnum<FontStyle>(FontStyle.Bold);
+            convertButton.style.height = 30;
+            return convertButton;
         }
 
         public override void OnCreated()
         {
             // When selection changes update the offsets
-            Selection.selectionChanged += UpdateOffsets;
+            Selection.selectionChanged += UpdateContent;
             // By default this toolbar is disabled, and instead the EditorTrainARObjectToolbar is shown
             displayed = false;
             Undock();
@@ -43,7 +49,7 @@ namespace Editor.Scripts
         /// Called whenever the selection in the TrainAR Editor is changed. Updates the positional and rotational offset
         /// displayed in the toolbar according to the selected objects.
         /// </summary>
-        void UpdateOffsets()
+        void UpdateContent()
         {
             Undock();
             {
@@ -53,35 +59,20 @@ namespace Editor.Scripts
                     displayed = false;
                     return;
                 }
-                // Only show the Toolbar, when exactly two objects are chosen
-                if (Selection.gameObjects.Length != 2)
+
+                if (Selection.gameObjects.Length != 1)
+                {
+                    displayed = false;
+                    return; 
+                }
+
+                if (Selection.activeTransform.CompareTag("TrainARObject"))
                 {
                     displayed = false;
                     return;
                 }
-                
-                // The two selected objects
-                Transform firstSelectedGameObject = Selection.gameObjects[0].transform;
-                Transform secondSelectedGameObject = Selection.gameObjects[1].transform;
-                
-                // Are the selected objects actually TrainAR Objects?
-                if (!firstSelectedGameObject.CompareTag("TrainARObject") || !secondSelectedGameObject.CompareTag("TrainARObject"))
-                {
-                    label.text = "One of the selected objects is not a TrainAR Object";
-                    return;
-                }
-                
-                // If so, display the toolbar
+
                 displayed = true;
-                // Calculate rotational offset
-                Vector3 rotationOffset = firstSelectedGameObject.eulerAngles - secondSelectedGameObject.eulerAngles;
-                
-                // Calclulate positional offset
-                Vector3 positionOffset = firstSelectedGameObject.position - secondSelectedGameObject.position;
-                
-                // Update the label
-                label.text = $"Position-Offset:\t x: {positionOffset.x} y: {positionOffset.y} z: {positionOffset.z}\n"
-                    + $"Rotation-Offset:\t x: {rotationOffset.x} y: {rotationOffset.y} z:{rotationOffset.z}";
             }
         }
     }

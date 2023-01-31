@@ -22,7 +22,22 @@ namespace Editor.Scripts
 
         void UpdateActivityState()
         {
-            displayed = Selection.gameObjects.Length < 2;
+            if (Selection.activeTransform == null)
+            {
+                displayed = true;
+                return;
+            }
+            if (Selection.gameObjects.Length > 1)
+            {
+                displayed = false;
+                return;
+            }
+            if (!Selection.activeTransform.CompareTag("TrainARObject"))
+            {
+                displayed = false;
+                return;
+            }
+            displayed = true;
         }
     }
     
