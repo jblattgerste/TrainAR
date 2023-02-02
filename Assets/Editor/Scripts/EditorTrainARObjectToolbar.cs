@@ -53,6 +53,7 @@ namespace Editor.Scripts
             }
             // If all of the conditions are met, the toolbar is activated and set an adjusted position (bottom left corner, for now)
             displayed = true;
+            floatingPosition = new Vector2(0f, 0f);
             floatingPosition = new Vector2(10f, 510);
         }
     }

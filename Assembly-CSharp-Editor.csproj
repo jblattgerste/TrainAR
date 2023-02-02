@@ -771,9 +771,6 @@
      <Reference Include="Unity.EditorCoroutines.Editor">
      <HintPath>C:\Users\Jan\Desktop\TrainAR-1\Library\ScriptAssemblies\Unity.EditorCoroutines.Editor.dll</HintPath>
      </Reference>
-     <Reference Include="Whinarn.UnityMeshSimplifier.Editor">
-     <HintPath>C:\Users\Jan\Desktop\TrainAR-1\Library\ScriptAssemblies\Whinarn.UnityMeshSimplifier.Editor.dll</HintPath>
-     </Reference>
      <Reference Include="Unity.Postprocessing.Runtime">
      <HintPath>C:\Users\Jan\Desktop\TrainAR-1\Library\ScriptAssemblies\Unity.Postprocessing.Runtime.dll</HintPath>
      </Reference>
@@ -807,9 +804,6 @@
      <Reference Include="UnityEditor.SpatialTracking">
      <HintPath>C:\Users\Jan\Desktop\TrainAR-1\Library\ScriptAssemblies\UnityEditor.SpatialTracking.dll</HintPath>
      </Reference>
-     <Reference Include="Whinarn.UnityMeshSimplifier.Runtime">
-     <HintPath>C:\Users\Jan\Desktop\TrainAR-1\Library\ScriptAssemblies\Whinarn.UnityMeshSimplifier.Runtime.dll</HintPath>
-     </Reference>
      <Reference Include="Unity.VisualScripting.State">
      <HintPath>C:\Users\Jan\Desktop\TrainAR-1\Library\ScriptAssemblies\Unity.VisualScripting.State.dll</HintPath>
      </Reference>
@@ -825,6 +819,14 @@
     <ProjectReference Include="Assembly-CSharp.csproj">
       <Project>{2a35619d-865f-1003-ab2d-4aaa799e7393}</Project>
       <Name>Assembly-CSharp</Name>
+    </ProjectReference>
+    <ProjectReference Include="Whinarn.UnityMeshSimplifier.Editor.csproj">
+      <Project>{0e446a2b-6ce6-1591-2bed-c8148fc27740}</Project>
+      <Name>Whinarn.UnityMeshSimplifier.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="Whinarn.UnityMeshSimplifier.Runtime.csproj">
+      <Project>{245eb82e-5b3d-459c-bb7e-df2f34fa44c5}</Project>
+      <Name>Whinarn.UnityMeshSimplifier.Runtime</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

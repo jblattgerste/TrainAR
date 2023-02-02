@@ -187,6 +187,7 @@
      <Folder Include="Assets\Tayx\Graphy - Ultimate Stats Monitor\GUI" />
      <Folder Include="Assets\Sounds\Coffeemachine" />
      <Folder Include="Assets\Tayx\Graphy - Ultimate Stats Monitor\Materials" />
+     <None Include="Packages\UnityMeshSimplifier-3.1.0\package.json" />
      <Folder Include="Assets\Scripts\Interaction" />
      <Folder Include="Assets\Unity.VisualScripting.Generated\VisualScripting.Flow" />
      <Folder Include="Assets\Models\CoffeeMachine" />
@@ -226,7 +227,9 @@
      <Folder Include="Assets\Scripts\Others" />
      <Folder Include="Assets\XR\Loaders" />
      <Folder Include="Assets\XR" />
+     <Folder Include="Packages\UnityMeshSimplifier-3.1.0" />
      <Folder Include="Assets\Unity.VisualScripting.Generated\VisualScripting.Core\Property Providers" />
+     <Folder Include="Packages\UnityMeshSimplifier-3.1.0\Tests" />
      <Reference Include="UnityEngine">
      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.1.3f1\Editor\Data\Managed\UnityEngine\UnityEngine.dll</HintPath>
      </Reference>
@@ -899,9 +902,6 @@
      <Reference Include="Unity.EditorCoroutines.Editor">
      <HintPath>C:\Users\Jan\Desktop\TrainAR-1\Library\ScriptAssemblies\Unity.EditorCoroutines.Editor.dll</HintPath>
      </Reference>
-     <Reference Include="Whinarn.UnityMeshSimplifier.Editor">
-     <HintPath>C:\Users\Jan\Desktop\TrainAR-1\Library\ScriptAssemblies\Whinarn.UnityMeshSimplifier.Editor.dll</HintPath>
-     </Reference>
      <Reference Include="Unity.Postprocessing.Runtime">
      <HintPath>C:\Users\Jan\Desktop\TrainAR-1\Library\ScriptAssemblies\Unity.Postprocessing.Runtime.dll</HintPath>
      </Reference>
@@ -935,9 +935,6 @@
      <Reference Include="UnityEditor.SpatialTracking">
      <HintPath>C:\Users\Jan\Desktop\TrainAR-1\Library\ScriptAssemblies\UnityEditor.SpatialTracking.dll</HintPath>
      </Reference>
-     <Reference Include="Whinarn.UnityMeshSimplifier.Runtime">
-     <HintPath>C:\Users\Jan\Desktop\TrainAR-1\Library\ScriptAssemblies\Whinarn.UnityMeshSimplifier.Runtime.dll</HintPath>
-     </Reference>
      <Reference Include="Unity.VisualScripting.State">
      <HintPath>C:\Users\Jan\Desktop\TrainAR-1\Library\ScriptAssemblies\Unity.VisualScripting.State.dll</HintPath>
      </Reference>
@@ -949,6 +946,14 @@
     <ProjectReference Include="Assembly-CSharp-firstpass.csproj">
       <Project>{43adb1a8-42c2-7f42-7de9-350db3bce33f}</Project>
       <Name>Assembly-CSharp-firstpass</Name>
+    </ProjectReference>
+    <ProjectReference Include="Whinarn.UnityMeshSimplifier.Editor.csproj">
+      <Project>{0e446a2b-6ce6-1591-2bed-c8148fc27740}</Project>
+      <Name>Whinarn.UnityMeshSimplifier.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="Whinarn.UnityMeshSimplifier.Runtime.csproj">
+      <Project>{245eb82e-5b3d-459c-bb7e-df2f34fa44c5}</Project>
+      <Name>Whinarn.UnityMeshSimplifier.Runtime</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
