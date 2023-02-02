@@ -13,7 +13,7 @@ namespace Editor.Scripts
     /// It displays the positional and rotational offsets between the two selected objects, so the user can use them,
     /// e.g. for the FuseObjects functionality of the object helper. 
     /// </summary>
-    [Overlay(typeof(SceneView), "Convert to TrainAR Object", true)]
+    [Overlay(typeof(SceneView), "Convert to TrainAR Object", defaultDockZone = DockZone.Floating, defaultLayout = Layout.Panel)]
     public class TrainARConvertObjectToolbar : Overlay
     {
         /// <summary>
@@ -28,7 +28,6 @@ namespace Editor.Scripts
         public override VisualElement CreatePanelContent()
         {
             convertButton.text = "Click to Convert";
-            convertButton.clicked += ConvertToTrainARObject.AddConvertionContextItem;
             convertButton.style.unityTextAlign = new StyleEnum<TextAnchor>(TextAnchor.MiddleCenter);
             convertButton.style.unityFontStyleAndWeight = new StyleEnum<FontStyle>(FontStyle.Bold);
             convertButton.style.height = 30;
@@ -39,41 +38,44 @@ namespace Editor.Scripts
         {
             // When selection changes update the offsets
             Selection.selectionChanged += UpdateContent;
-            // By default this toolbar is disabled, and instead the EditorTrainARObjectToolbar is shown
-            displayed = false;
-            Undock();
-            collapsed = false;
+            // What happens, when the Convert button in the overlay is pressed
+            convertButton.clicked += ConvertToTrainARObject.AddConvertionContextItem;
         }
-        
+
+        public override void OnWillBeDestroyed()
+        {
+            convertButton.clicked -= ConvertToTrainARObject.AddConvertionContextItem;
+            Selection.selectionChanged -= UpdateContent;
+        }
+
         /// <summary>
         /// Called whenever the selection in the TrainAR Editor is changed. Updates the positional and rotational offset
         /// displayed in the toolbar according to the selected objects.
         /// </summary>
         void UpdateContent()
         {
-            Undock();
+            displayed = false;
+            
+            // check if anything is selected at all
+            if (Selection.activeTransform == null)
             {
-                // If nothing is selected, return
-                if (Selection.activeTransform == null)
-                {
-                    displayed = false;
-                    return;
-                }
-
-                if (Selection.gameObjects.Length != 1)
-                {
-                    displayed = false;
-                    return; 
-                }
-
-                if (Selection.activeTransform.CompareTag("TrainARObject"))
-                {
-                    displayed = false;
-                    return;
-                }
-
-                displayed = true;
+                return;
             }
+            
+            // When not exactly one object is selected
+            if (Selection.gameObjects.Length != 1)
+            {
+                return; 
+            }
+            
+            // If the chosen object is not TrainAR Object.
+            if (Selection.activeTransform.CompareTag("TrainARObject"))
+            {
+                return;
+            }
+            // If all of the conditions are met, the toolbar is activated and set an adjusted position (bottom left corner, for now)
+            displayed = true;
+            floatingPosition = new Vector2(10f, 510);
         }
     }
 }

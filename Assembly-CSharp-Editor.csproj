@@ -50,9 +50,9 @@
      <Compile Include="Assets\Editor\Scripts\TrainARObjectOffsetToolbar.cs" />
      <Compile Include="Assets\Editor\Scripts\ConvertToTrainARObject.cs" />
      <Compile Include="Assets\Editor\Scripts\OpenAuthoringToolOnLoad.cs" />
+     <Compile Include="Assets\Editor\Scripts\TrainARConvertObjectToolbar.cs" />
      <Compile Include="Assets\Editor\Scripts\EditorTrainARObjectToolbar.cs" />
      <Compile Include="Assets\Editor\Scripts\TrainARObjectSettingsModalWindow.cs" />
-     <Compile Include="Assets\Editor\Scripts\TrainARConvertObjectToolbar.cs" />
      <Folder Include="Assets\Editor\Layouts" />
      <Folder Include="Assets\Editor\Scripts" />
      <Folder Include="Assets\Tayx\Graphy - Ultimate Stats Monitor\Scripts\Editor" />

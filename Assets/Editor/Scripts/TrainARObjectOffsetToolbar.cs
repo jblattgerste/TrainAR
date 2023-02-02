@@ -12,7 +12,7 @@ namespace Editor.Scripts
     /// It displays the positional and rotational offsets between the two selected objects, so the user can use them,
     /// e.g. for the FuseObjects functionality of the object helper. 
     /// </summary>
-    [Overlay(typeof(SceneView), "TrainAR Object Offset", true)]
+    [Overlay(typeof(SceneView), "TrainAR Object Offset", defaultDockZone = DockZone.Floating, defaultLayout = Layout.Panel)]
     public class TrainARObjectOffsetToolbar : Overlay
     {
         /// <summary>
@@ -33,30 +33,29 @@ namespace Editor.Scripts
         {
             // When selection changes update the offsets
             Selection.selectionChanged += UpdateOffsets;
-            // By default this toolbar is disabled, and instead the EditorTrainARObjectToolbar is shown
-            displayed = false;
-            Undock();
-            collapsed = false;
         }
-        
+
+        public override void OnWillBeDestroyed()
+        {
+            Selection.selectionChanged -= UpdateOffsets;
+        }
+
         /// <summary>
         /// Called whenever the selection in the TrainAR Editor is changed. Updates the positional and rotational offset
         /// displayed in the toolbar according to the selected objects.
         /// </summary>
         void UpdateOffsets()
         {
-            Undock();
             {
+                displayed = false;
                 // If nothing is selected, return
                 if (Selection.activeTransform == null)
                 {
-                    displayed = false;
                     return;
                 }
                 // Only show the Toolbar, when exactly two objects are chosen
                 if (Selection.gameObjects.Length != 2)
                 {
-                    displayed = false;
                     return;
                 }
                 
@@ -67,12 +66,13 @@ namespace Editor.Scripts
                 // Are the selected objects actually TrainAR Objects?
                 if (!firstSelectedGameObject.CompareTag("TrainARObject") || !secondSelectedGameObject.CompareTag("TrainARObject"))
                 {
-                    label.text = "One of the selected objects is not a TrainAR Object";
                     return;
                 }
                 
-                // If so, display the toolbar
+                // // If all of the conditions are met, the toolbar is activated and set an adjusted position (bottom left corner, for now)
                 displayed = true;
+                floatingPosition = new Vector2(10f, 510);
+                
                 // Calculate rotational offset
                 Vector3 rotationOffset = firstSelectedGameObject.eulerAngles - secondSelectedGameObject.eulerAngles;
                 

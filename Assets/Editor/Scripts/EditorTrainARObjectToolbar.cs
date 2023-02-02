@@ -1,7 +1,11 @@
 using Interaction;
+using NUnit.Framework.Constraints;
+using Unity.VisualScripting;
 using UnityEditor;
 using UnityEditor.Overlays;
 using UnityEditor.Toolbars;
+using UnityEngine;
+using UnityEngine.Rendering.PostProcessing;
 using UnityEngine.UIElements;
 
 namespace Editor.Scripts
@@ -10,39 +14,51 @@ namespace Editor.Scripts
     /// The EditorTrainARObjectToolbar is the toolbar in the sceneview when using the TrainAR authoring overlay. It allows
     /// setting TrainAR Object states like active/inactive, grabbable, interactable, or combinable without opening an inspector.
     /// </summary>
-    [Overlay(typeof(SceneView), "TrainAR Object State")]
+    [Overlay(typeof(SceneView), "TrainAR Object State", defaultDockZone = DockZone.Floating, defaultLayout = Layout.Panel)]
     public class EditorTrainARObjectToolbar : ToolbarOverlay
     {
-        private EditorTrainARObjectToolbar() : base(ActiveToggle.id, GrabbableToggle.id, InteractableToggle.id, CombinableToggle.id) {}
+        private EditorTrainARObjectToolbar() : base(ActiveToggle.id, GrabbableToggle.id, InteractableToggle.id,
+            CombinableToggle.id)
+        {
+        }
 
         public override void OnCreated()
         {
             Selection.selectionChanged += UpdateActivityState;
         }
 
+        public override void OnWillBeDestroyed()
+        {
+            Selection.selectionChanged -= UpdateActivityState;
+        }
+
+
         void UpdateActivityState()
         {
+            displayed = false;
+            // If nothing is selected at all
             if (Selection.activeTransform == null)
             {
-                displayed = true;
                 return;
             }
+            // If more then one gameobject is seleted
             if (Selection.gameObjects.Length > 1)
             {
-                displayed = false;
                 return;
             }
+            // If the selected object is not a TrainAR Object
             if (!Selection.activeTransform.CompareTag("TrainARObject"))
             {
-                displayed = false;
                 return;
             }
+            // If all of the conditions are met, the toolbar is activated and set an adjusted position (bottom left corner, for now)
             displayed = true;
+            floatingPosition = new Vector2(10f, 510);
         }
     }
     
     [EditorToolbarElement(id, typeof(SceneView))]
-    internal class ActiveToggle : EditorToolbarToggle, IAccessContainerWindow
+    class ActiveToggle : EditorToolbarToggle, IAccessContainerWindow
     {
         private static string defaultString = "   -";
         private static string activeStateString = "   Visible";
@@ -57,11 +73,25 @@ namespace Editor.Scripts
         {
             text = defaultString;
             tooltip = "Toggles the visibility state of a TrainAR Object. Invisible Objects still exist but are not grabbable/interactable/combinable and do not elicit physics.";
-        
+            
+            // Set the toggle value according to the selected objects activity.
+            if (Selection.activeTransform != null)
+            {
+                if (Selection.gameObjects[0].activeSelf)
+                {
+                    UpdateToggleStatus(activeStateString, true);
+                }
+                else
+                {
+                    UpdateToggleStatus(inactiveStateString, false);
+                }
+            }
+
             //Update this when the selection changed or the user undid/redid actions
             Selection.selectionChanged += HierarchySelectionChangedActiveToggle;
             Undo.undoRedoPerformed += HierarchySelectionChangedActiveToggle;
             
+            // Register callback for pressing the toggle
             this.RegisterValueChangedCallback(ToggleObjectVisibility);
         }
 
@@ -85,6 +115,7 @@ namespace Editor.Scripts
                 if (Selection.gameObjects[0].activeSelf)
                 {
                     UpdateToggleStatus(activeStateString, true);
+                    
                 }
                     
                 else
@@ -157,10 +188,22 @@ namespace Editor.Scripts
             text = defaultString;
             tooltip = "Toggles whether a TrainAR Object is grabbable by the TrainAR interaction concept or not";
         
+            // Set the toggle value according to the selected objects current state.
+            if (Selection.activeTransform != null)
+            {
+                if (Selection.gameObjects[0].GetComponent<TrainARObject>().isGrabbable)
+                {
+                    UpdateToggleStatus(activeStateString, true);
+                }
+                else
+                {
+                    UpdateToggleStatus(inactiveStateString, false);
+                }
+            }
+
             //Update this when the selection changed or the user undid/redid actions
             Selection.selectionChanged += HierarchySelectionChangedGrabbableToggle;
             Undo.undoRedoPerformed += HierarchySelectionChangedGrabbableToggle;
-            
             this.RegisterValueChangedCallback(ToggleObjectVisibility);
         }
 
@@ -257,10 +300,22 @@ namespace Editor.Scripts
             text = defaultString;
             tooltip = "Toggles whether a TrainAR Object is interactable by the TrainAR interaction concept or not";
         
+            // Set the toggle value according to the selected objects current state.
+            if (Selection.activeTransform != null)
+            {
+                if (Selection.gameObjects[0].GetComponent<TrainARObject>().isInteractable)
+                {
+                    UpdateToggleStatus(activeStateString, true);
+                }
+                else
+                {
+                    UpdateToggleStatus(inactiveStateString, false);
+                }
+            }
+
             //Update this when the selection changed or the user undid/redid actions
             Selection.selectionChanged += HierarchySelectionChangedInteractableToggle;
             Undo.undoRedoPerformed += HierarchySelectionChangedInteractableToggle;
-            
             this.RegisterValueChangedCallback(ToggleObjectVisibility);
         }
 
@@ -357,11 +412,22 @@ namespace Editor.Scripts
             text = defaultString;
             tooltip = "Toggles whether a TrainAR Object is combinable by the TrainAR interaction concept or not";
         
+            // Set the toggle value according to the selected objects current state.
+            if (Selection.activeTransform != null)
+            {
+                if (Selection.gameObjects[0].GetComponent<TrainARObject>().isCombineable)
+                {
+                    UpdateToggleStatus(activeStateString, true);
+                }
+                else
+                {
+                    UpdateToggleStatus(inactiveStateString, false);
+                }
+            }
+
             //Update this when the selection changed or the user undid/redid actions
             Selection.selectionChanged += HierarchySelectionChangedCombinableToggle;
             Undo.undoRedoPerformed += HierarchySelectionChangedCombinableToggle;
-            
-            this.RegisterValueChangedCallback(ToggleObjectVisibilityCombinableToggle);
         }
 
         private void HierarchySelectionChangedCombinableToggle()
