@@ -98,7 +98,7 @@ namespace Editor.Scripts
             Undo.RegisterFullObjectHierarchyUndo(selectedObject, "Convert to TrainAR Object");
             
             // Create and show the Modal-Window with options for creating a TraiAR Object
-            if (CreateInstance(typeof(TrainARObjectSettingsModalWindow)) is TrainARObjectSettingsModalWindow settingsModalWindow) settingsModalWindow.Show();
+            if (CreateInstance(typeof(TrainARObjectConversionWindow)) is TrainARObjectConversionWindow settingsModalWindow) settingsModalWindow.Show();
         }
 
         public static void InitConversion(GameObject selectedObject, string trainARObjectName)
