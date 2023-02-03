@@ -43,6 +43,7 @@
   <ItemGroup>
      <Compile Include="Assets\Editor\Scripts\MeshCombinerEditor.cs" />
      <Compile Include="Assets\Editor\Scripts\TrainAREditorMenu.cs" />
+     <Compile Include="Assets\Editor\Scripts\TrainARObjectConversionWindow.cs" />
      <Compile Include="Assets\Tayx\Graphy - Ultimate Stats Monitor\Scripts\Editor\GraphyManagerEditor.cs" />
      <Compile Include="Assets\Editor\Scripts\StateRequestSimulatorEditor.cs" />
      <Compile Include="Assets\Tayx\Graphy - Ultimate Stats Monitor\Scripts\Editor\GraphyDebuggerEditor.cs" />
@@ -52,7 +53,6 @@
      <Compile Include="Assets\Editor\Scripts\OpenAuthoringToolOnLoad.cs" />
      <Compile Include="Assets\Editor\Scripts\TrainARConvertObjectToolbar.cs" />
      <Compile Include="Assets\Editor\Scripts\EditorTrainARObjectToolbar.cs" />
-     <Compile Include="Assets\Editor\Scripts\TrainARObjectConversionWindow.cs" />
      <Folder Include="Assets\Editor\Layouts" />
      <Folder Include="Assets\Editor\Scripts" />
      <Folder Include="Assets\Tayx\Graphy - Ultimate Stats Monitor\Scripts\Editor" />

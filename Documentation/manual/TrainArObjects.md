@@ -2,7 +2,15 @@
 
 To be able to use 3D assets/models for interactions in TrainAR trainings, you need to convert them to **TrainAR Objects** first. This gives them default TrainAR functionality/behaviours and makes them usable in the TrainAR Stateflow.
 
-To convert a 3D model into a **TrainAR Object**, simply drag-and-drop it from the project tab into the hierarchy tab. Then right click on it in the hierarchy tab and select *Convert to TrainAR Object*. If the 3D model you're trying to convert is packed as a so-called "Prefab" (this is the case if they appear blue in the Hierarchy), you'll also have to "Unpack Completely" it first. This is often the case for 3D models from the Unity Assetstore. 3D models from 3D scanners or third-party 3D model libraries are rarely packed as Prefabs.
+To convert a 3D model into a **TrainAR Object**, simply drag-and-drop it from the project tab into the hierarchy tab. To start the conversion either right click on it in the hierarchy tab and select "Convert to TrainAR Object" or select it (in the hierarchy or scene tab) and press the appearing button with the label "Click to Convert". Either way, a preview window displaying the selected object.
+
+This window contains various settings for the conversion process: 
+
+* The **TrainAR Object Name** is used to reference this specific object in the [TrainAR Stateflow](../manual/VisualScripting.html).
+* The **Object Quality** let's you reduce the quality of the object by lowering the polygon count. Sometimes objects may be to detailed to be efficiently used. It is recommended to not exceed 100000 polygons for all the objects in the entire training.
+* The advanced quality setting options let you further customize the quality of the object.
+
+To finalize the conversion simply press the **Convert to TrainAR Object** on the bottom of the preview window. Depending on how complex the object is, this may take a few seconds or even minutes.
 
 ![](../resources/CreateObject.gif)
 
@@ -58,14 +66,14 @@ Add both **TrainAR Objects** in the training setup. Set the **replacing object**
 
 ![](../resources/SwapTrainArObjects_AddObjects.gif)
 
-To open the package, the user is supposed to interact with the packaged syringe. Consequently, add a [*TrainAR Action*](../manuals/ActionNodes.md) node to the script graph, which references the packaged syringe **TrainAR Object**. As a result the packaged syringe is replaced with the syringe itself. Therefore add a [*TrainAR Object Helper*](../manuals/ObjectHelperNode.md) node and choose the option *Replace TrainAR Object*. Then, enter the object names of the packaged syringe and the syringe in the respective fields in the node.
+To open the package, the user is supposed to interact with the packaged syringe. Consequently, add a [*TrainAR Action*](../manuals/ActionNode.html) node to the script graph, which references the packaged syringe **TrainAR Object**. As a result the packaged syringe is replaced with the syringe itself. Therefore add a [*TrainAR Object Helper*](../manual/ObjectHelperNode.html) node and choose the option *Replace TrainAR Object*. Then, enter the object names of the packaged syringe and the syringe in the respective fields in the node.
 
 ![](../resources/SwapTrainArObjects_SwapStateflow.gif)
 
 #### Example 2: Combining two objects to one
-Sometimes you may want to model the attachment of one model to another. This can also be realized with the [*TrainAR Object Helper*](../manuals/ObjectHelperNode.md) node, but with an additional step.
+Sometimes you may want to model the attachment of one model to another. This can also be realized with the [*TrainAR Object Helper*](../manual/ObjectHelperNode.html) node, but with an additional step.
 
-In this example we want to connect a needle to the syringe. For this, three **TrainAR Objects** are needed: the syringe without needle, the syringe with needle and the needle. The syringe with needle needs to be set to invisible at the start of the training. At first, we again add a [*TrainAR Action*](../manuals/ActionNodes.md) node as a trigger for the replacement process, this time set to *combine*. The *grabbed object* in this case is the syringe and the *stationary object* is the needle. Next, the syringe is replaced via a *TrainAR Object Helper* node. Since the needle is now attached to the syringe, the needle model can be set to invisible. This is done as well with a *TrainAR Object Helper* node, but with the option *Toggle Invisible*.
+In this example we want to connect a needle to the syringe. For this, three **TrainAR Objects** are needed: the syringe without needle, the syringe with needle and the needle. The syringe with needle needs to be set to invisible at the start of the training. At first, we again add a [*TrainAR Action*](../manual/ActionNodes.html) node as a trigger for the replacement process, this time set to *combine*. The *grabbed object* in this case is the syringe and the *stationary object* is the needle. Next, the syringe is replaced via a *TrainAR Object Helper* node. Since the needle is now attached to the syringe, the needle model can be set to invisible. This is done as well with a *TrainAR Object Helper* node, but with the option *Toggle Invisible*.
 
 ![](../resources/SwapTrainArObjects_SwapAndToggleInvisibleStateflow.gif)
 
