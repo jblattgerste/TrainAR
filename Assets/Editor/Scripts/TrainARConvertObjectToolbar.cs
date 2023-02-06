@@ -8,10 +8,8 @@ using UnityEngine.UIElements;
 namespace Editor.Scripts
 {
     /// <summary>
-    /// The TrainARObjectOffsetToolbar is a toolbar in the Scene view when using the TrainAR authoring overlay. It is displayed
-    /// instead of the TrainARObjectToolbar when two objects are selected in the editor.
-    /// It displays the positional and rotational offsets between the two selected objects, so the user can use them,
-    /// e.g. for the FuseObjects functionality of the object helper. 
+    /// The TrainARConvertObjectToolbar displays which when pressed initializes the conversion process on the selected
+    /// object.
     /// </summary>
     [Overlay(typeof(SceneView), "Convert to TrainAR Object", defaultDockZone = DockZone.Floating, defaultLayout = Layout.Panel)]
     public class TrainARConvertObjectToolbar : Overlay
@@ -49,8 +47,8 @@ namespace Editor.Scripts
         }
 
         /// <summary>
-        /// Called whenever the selection in the TrainAR Editor is changed. Updates the positional and rotational offset
-        /// displayed in the toolbar according to the selected objects.
+        /// Called whenever the selection in the TrainAR Editor is changed. Displays or hides the Toolbar, depending
+        /// on the Editor-Selection.
         /// </summary>
         void UpdateContent()
         {

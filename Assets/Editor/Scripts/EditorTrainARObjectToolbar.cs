@@ -32,23 +32,22 @@ namespace Editor.Scripts
             Selection.selectionChanged -= UpdateActivityState;
         }
 
-
+        /// <summary>
+        /// Called whenever the selection in the TrainAR Editor is changed. Displays or hides the Toolbar, depending
+        /// on the Editor-Selection.
+        /// </summary>
         void UpdateActivityState()
         {
-            displayed = false;
             // If nothing is selected at all
             if (Selection.activeTransform == null)
             {
+                displayed = false;
                 return;
             }
-            // If more then one gameobject is seleted
-            if (Selection.gameObjects.Length > 1)
+            // If more then one gameobject is selected and this gameobject is not a TrainAR Object.
+            if (Selection.gameObjects.Length > 1 || !Selection.activeTransform.CompareTag("TrainARObject"))
             {
-                return;
-            }
-            // If the selected object is not a TrainAR Object
-            if (!Selection.activeTransform.CompareTag("TrainARObject"))
-            {
+                displayed = false;
                 return;
             }
             // If all of the conditions are met, the toolbar is activated and set an adjusted position (bottom left corner, for now)

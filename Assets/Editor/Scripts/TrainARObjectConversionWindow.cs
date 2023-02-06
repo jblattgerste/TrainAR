@@ -21,7 +21,7 @@ namespace Editor.Scripts
         private List<Mesh> originalMeshes = new List<Mesh>();
         private GameObject trainARObject;
         private UnityEditor.Editor gameObjectEditor;
-        bool advancedQualityOptionstatus = false;
+        private bool advancedQualityOptionstatus = false;
 
         void OnEnable()
         {
