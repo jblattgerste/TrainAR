@@ -184,6 +184,12 @@ namespace Editor.Scripts
             return gameObject.GetComponentsInChildren<MeshFilter>().Sum(mesh => mesh.sharedMesh.triangles.Length / 3);
         }
 
+        /// <summary>
+        /// Checks whether or not a TrainARObjectConversionWindow with the given Gameobject is already active.
+        /// </summary>
+        /// <param name="gameObject">The Gameobject to be checked.</param>
+        /// <returns>True if a TrainARObjectConversionWindow with the given Gameobject already exists.
+        /// </returns>
         public static bool WindowWithObjectAlreadyExists(GameObject gameObject)
         {
             foreach (TrainARObjectConversionWindow window in activeWindows)
