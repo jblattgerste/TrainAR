@@ -13,7 +13,7 @@ namespace Editor.Scripts
     /// It displays the positional and rotational offsets between the two selected objects, so the user can use them,
     /// e.g. for the FuseObjects functionality of the object helper. 
     /// </summary>
-    [Overlay(typeof(SceneView), "Convert to TrainAR Object", defaultDockZone = DockZone.Floating, defaultLayout = Layout.Panel)]
+    [Overlay(typeof(SceneView), "Object Conversion", defaultDockZone = DockZone.Floating, defaultLayout = Layout.Panel)]
     public class TrainARConvertObjectToolbar : Overlay
     {
         /// <summary>
@@ -27,7 +27,7 @@ namespace Editor.Scripts
         /// <returns></returns>
         public override VisualElement CreatePanelContent()
         {
-            convertButton.text = "Click to Convert";
+            convertButton.text = "Convert to TrainAR Object";
             convertButton.style.unityTextAlign = new StyleEnum<TextAnchor>(TextAnchor.MiddleCenter);
             convertButton.style.unityFontStyleAndWeight = new StyleEnum<FontStyle>(FontStyle.Bold);
             convertButton.style.height = 30;
