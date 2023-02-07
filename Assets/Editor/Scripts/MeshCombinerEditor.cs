@@ -7,7 +7,7 @@ using Others;
 namespace Editor.Scripts
 {
 	/// <summary>
-	/// The MeshCombinerEditor is a utility class that helps to combine meshes. It is called by the ConvertToTrainARObject class.
+	/// The MeshCombinerEditor is a utility class that helps to combine meshes.
 	/// </summary>
 	[CustomEditor(typeof(MeshCombiner))]
 	public class MeshCombinerEditor : UnityEditor.Editor

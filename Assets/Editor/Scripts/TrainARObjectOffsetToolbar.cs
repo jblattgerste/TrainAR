@@ -10,7 +10,7 @@ namespace Editor.Scripts
     /// The TrainARObjectOffsetToolbar is a toolbar in the Scene view when using the TrainAR authoring overlay. It is displayed
     /// instead of the TrainARObjectToolbar when two objects are selected in the editor.
     /// It displays the positional and rotational offsets between the two selected objects, so the user can use them,
-    /// e.g. for the FuseObjects functionality of the object helper. 
+    /// e.g. for the FuseObjects functionality of the object helper node. 
     /// </summary>
     [Overlay(typeof(SceneView), "TrainAR Object Offset", defaultDockZone = DockZone.Floating, defaultLayout = Layout.Panel)]
     public class TrainARObjectOffsetToolbar : Overlay

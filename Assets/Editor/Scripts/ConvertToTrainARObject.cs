@@ -10,7 +10,7 @@ using MeshCombiner = Others.MeshCombiner;
 namespace Editor.Scripts
 {
     /// <summary>
-    /// ConvertARInteractable is an Editor script that adds a right-click context menu to GameObjects in the hierarchy named
+    /// ConvertToTrainARObjects is an Editor script that adds a right-click context menu to GameObjects in the hierarchy named
     /// "Convert to TrainAR Object". When the object is eligible (therefore has a transform, MeshFilter and MeshRenderer), this can
     /// be used to convert GameObjects to TrainAR Objects, where behaviours (e.g. TrainAR Object) are automatically added and the mesh
     /// is combined an simplyfied.
@@ -101,6 +101,11 @@ namespace Editor.Scripts
             if (CreateInstance(typeof(TrainARObjectConversionWindow)) is TrainARObjectConversionWindow settingsModalWindow) settingsModalWindow.Show();
         }
 
+        /// <summary>
+        /// Initializes the conversion process for the given object.
+        /// </summary>
+        /// <param name="selectedObject">The object that is to be converted to a TrainAR Object</param>
+        /// <param name="trainARObjectName">The specified name of the TrainAR Object.</param>
         public static void InitConversion(GameObject selectedObject, string trainARObjectName)
         {
             // If selected object is a part of a prefab instance, unpack it completely.

@@ -22,11 +22,17 @@ namespace Editor.Scripts
         {
         }
 
+        /// <summary>
+        /// OnCreated is invoked when an Overlay is instantiated in an Overlay Canvas.
+        /// </summary>
         public override void OnCreated()
         {
             Selection.selectionChanged += UpdateActivityState;
         }
 
+        /// <summary>
+        /// Called when an Overlay is about to be destroyed.
+        /// </summary>
         public override void OnWillBeDestroyed()
         {
             Selection.selectionChanged -= UpdateActivityState;

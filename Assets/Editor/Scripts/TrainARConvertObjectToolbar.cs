@@ -8,8 +8,8 @@ using UnityEngine.UIElements;
 namespace Editor.Scripts
 {
     /// <summary>
-    /// The TrainARConvertObjectToolbar displays which when pressed initializes the conversion process on the selected
-    /// object.
+    /// Displays and initializes the editor toolbar which contains a button that initializes the conversion process
+    /// for a TrainAR Object of the currently selected object.
     /// </summary>
     [Overlay(typeof(SceneView), "Convert to TrainAR Object", defaultDockZone = DockZone.Floating, defaultLayout = Layout.Panel)]
     public class TrainARConvertObjectToolbar : Overlay
@@ -20,7 +20,7 @@ namespace Editor.Scripts
         Button convertButton = new ToolbarButton();
 
         /// <summary>
-        /// Creates the Panel that displays the toolbar
+        /// Creates the Panel that displays the toolbar.
         /// </summary>
         /// <returns></returns>
         public override VisualElement CreatePanelContent()
