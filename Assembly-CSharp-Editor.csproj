@@ -55,6 +55,10 @@
      <Compile Include="Assets\Editor\Scripts\EditorTrainARObjectToolbar.cs" />
      <Folder Include="Assets\Editor\Layouts" />
      <Folder Include="Assets\Editor\Scripts" />
+     <Folder Include="Assets\Editor\Scripts\obj\xdoc\cache" />
+     <Folder Include="Assets\Editor\Scripts\obj\xdoc\cache\obj" />
+     <Folder Include="Assets\Editor\Scripts\obj\xdoc" />
+     <Folder Include="Assets\Editor\Scripts\obj" />
      <Folder Include="Assets\Tayx\Graphy - Ultimate Stats Monitor\Scripts\Editor" />
      <Folder Include="Assets\Editor" />
      <Reference Include="UnityEngine">

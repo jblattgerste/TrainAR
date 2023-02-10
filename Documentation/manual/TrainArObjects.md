@@ -2,7 +2,7 @@
 
 To be able to use 3D assets/models for interactions in TrainAR trainings, you need to convert them to **TrainAR Objects** first. This gives them default TrainAR functionality/behaviours and makes them usable in the TrainAR Stateflow.
 
-To convert a 3D model into a **TrainAR Object**, simply drag-and-drop it from the project tab into the hierarchy tab. To start the conversion either right click on it in the hierarchy tab and select "Convert to TrainAR Object" or select it (in the hierarchy or scene tab) and press the appearing button with the label "Click to Convert". Either way, a preview window displaying the selected object.
+To convert a 3D model into a **TrainAR Object**, simply drag-and-drop it from the project tab into the hierarchy tab. To start the conversion either right click on it in the hierarchy tab and select "Convert to TrainAR Object". Alternatively, while the object is selected, press the appearing button on the bottom left of the scene tab with the label *Convert to TrainAR Object*. Either way, a preview window displaying the selected object will appear.
 
 This window contains various settings for the conversion process: 
 
@@ -10,7 +10,7 @@ This window contains various settings for the conversion process:
 * The **Object Quality** let's you reduce the quality of the object by lowering the polygon count. Sometimes objects may be to detailed to be efficiently used. It is recommended to not exceed 100000 polygons for all the objects in the entire training.
 * The advanced quality setting options let you further customize the quality of the object.
 
-To finalize the conversion simply press the **Convert to TrainAR Object** on the bottom of the preview window. Depending on how complex the object is, this may take a few seconds or even minutes.
+To finalize the conversion simply press the *Convert to TrainAR Object*-button on the bottom of the preview window. Depending on how complex the object is, this may take a few seconds or even minutes.
 
 ![](../resources/CreateObject.gif)
 
@@ -77,11 +77,11 @@ In this example we want to connect a needle to the syringe. For this, three **Tr
 
 ![](../resources/SwapTrainArObjects_SwapAndToggleInvisibleStateflow.gif)
 
-#### Example 3: Combining two objects using the Object Helper Node with the option Fuse Objects
+### Fusing two Objects
 
-Another option is to directly attach one TrainAR Object to another TrainAR Object. This is also possible with the [*TrainAR Object Helper*](../manual/ObjectHelperNode.html) but with the option set to *Fuse Two Objects*. The **Object name** field specifies the object that is fused onto the object, which is specified in the **Fuse to Object** field. In the **Offset Position and Rotation** field the position and rotation relative to the fused with TrainAR Object is specified. To determine the offset position and rotation place the in the desired position and rotation in the scene view. Then select both of these objects (shift-click on each of them). A toolbar should appear on the bottom left of the scene view, which displays the offset position and rotation of the selected objects. These are the offset values you need to enter in the **Object Helper Node** to fuse them in the specified position and rotation. After you're done entering the values, don't forget to reset the objects to their default position and rotation in the scene view.
+Another option is to directly attach one TrainAR Object to another TrainAR Object. This is possible when using[*TrainAR Object Helper*](../manual/ObjectHelperNode.html) with the option set to *Fuse Two Objects*. The **Object name** field specifies the object that is fused onto the object, which is specified in the **Fuse to Object** field. In the **Offset Position and Rotation** field the position and rotation relative to the fused with TrainAR Object is specified. To determine the offset position and rotation place the in the desired position and rotation in the scene view. Then select both of these objects (shift-click on each of them). A toolbar should appear on the bottom left of the scene view, which displays the offset position and rotation of the selected objects. These are the offset values you need to enter in the **Object Helper Node** to fuse them in the specified position and rotation. After you're done entering the values, don't forget to reset the objects to their default position and rotation in the scene view.
 
-Note: You may need to flip the signing of the values when entering them in the **Object Helper node** (i.e. -1.5 becomes 1.5 and vice versa).
+Note: You may need to flip the signing of the values when entering them in the *Object Helper node* (i.e. -1.5 becomes 1.5 and vice versa).
 
 ![](../resources/FuseObject.gif)
 

@@ -93,6 +93,12 @@ namespace Editor.Scripts
                 EditorUtility.DisplayDialog("Unable to convert to TrainAR Object", "The GameObject is selected inside of the Prefab view. Please unpack the Prefab into an active scene before converting it.", "ok");
                 return;
             }
+
+            if (TrainARObjectConversionWindow.WindowWithObjectAlreadyExists(selectedObject))
+            {
+                EditorUtility.DisplayDialog("Unable to convert to TrainAR Object", "A conversion process for this Gameobject is already active.", "ok");
+                return;
+            }
             
             //Register an undo action so the conversion can be undone
             Undo.RegisterFullObjectHierarchyUndo(selectedObject, "Convert to TrainAR Object");

@@ -11,7 +11,7 @@ namespace Editor.Scripts
     /// Displays and initializes the editor toolbar which contains a button that initializes the conversion process
     /// for a TrainAR Object of the currently selected object.
     /// </summary>
-    [Overlay(typeof(SceneView), "Convert to TrainAR Object", defaultDockZone = DockZone.Floating, defaultLayout = Layout.Panel)]
+    [Overlay(typeof(SceneView), "Object Conversion", defaultDockZone = DockZone.Floating, defaultLayout = Layout.Panel)]
     public class TrainARConvertObjectToolbar : Overlay
     {
         /// <summary>
@@ -25,7 +25,7 @@ namespace Editor.Scripts
         /// <returns></returns>
         public override VisualElement CreatePanelContent()
         {
-            convertButton.text = "Click to Convert";
+            convertButton.text = "Convert to TrainAR Object";
             convertButton.style.unityTextAlign = new StyleEnum<TextAnchor>(TextAnchor.MiddleCenter);
             convertButton.style.unityFontStyleAndWeight = new StyleEnum<FontStyle>(FontStyle.Bold);
             convertButton.style.height = 30;

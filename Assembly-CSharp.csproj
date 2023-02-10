@@ -141,6 +141,7 @@
      <Compile Include="Assets\Scripts\UI\InteractButton.cs" />
      <Compile Include="Assets\Scripts\UI\InteractionButtonController.cs" />
      <Compile Include="Assets\Scripts\Interaction\AudioController.cs" />
+     <Compile Include="Assets\Unity.VisualScripting.Generated\VisualScripting.Core\AotStubs.cs" />
      <Folder Include="Assets" />
      <Folder Include="Assets\XR\UserSimulationSettings" />
      <Folder Include="Assets\Models\Avatar" />
@@ -220,6 +221,7 @@
      <None Include="Assets\Tayx\Graphy - Ultimate Stats Monitor\Shaders\GraphStandard.shader" />
      <Folder Include="Assets\Scripts\Visual Scripting" />
      <Folder Include="Assets\XR\Resources" />
+     <None Include="Assets\Unity.VisualScripting.Generated\VisualScripting.Core\link.xml" />
      <Folder Include="Assets\Tayx\Graphy - Ultimate Stats Monitor\Scripts\Shader" />
      <None Include="Assets\Shaders\OutlineFill.shader" />
      <Folder Include="Assets\Scripts\Static" />
