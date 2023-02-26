@@ -687,17 +687,6 @@ MonoBehaviour:
       id: unity-search-toolbar
       index: 1
       layout: 1
-    - dockPosition: 1
-      containerId: overlay-toolbar__top
-      floating: 1
-      collapsed: 0
-      displayed: 1
-      snapOffset: {x: 45.666626, y: -82.333374}
-      snapOffsetDelta: {x: 0, y: 0}
-      snapCorner: 2
-      id: TrainAR Object State
-      index: 2
-      layout: 4
     - dockPosition: 0
       containerId: overlay-container--left
       floating: 1

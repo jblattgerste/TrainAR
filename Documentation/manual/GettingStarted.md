@@ -26,9 +26,9 @@ On the Bottom Left, in the Project Tab open the Prefabs folder. There is a Prefa
 
 Click on this Prefab and drag-and-drop it into the Hierarchy Tab. The spoon should appear on the table.
 
-To interact with this object, you'll need to unpack the prefab and then convert it to a TrainAR Object. You do this by right-clicking on it in the Hierarchy Tab and select *Prefab* and in the submenu *Unpack Completely*. Then right-click on it again and select *Convert to TrainAR Object*. You may then change the name of the object. This step is not necessary if provided models are not Prefabs, therefore they are in black/white Text instead of blue, e.g. if they come from 3D scanning or external 3D asset libraries. Prefabs are mostly used when downloading 3D assets from the Unity Assetstore.
+To interact with this object, you'll have to convert it to a TrainAR Object. To achieve this select the object either in the hierarchy or directly in the scene tab. Press the button with the label *Convert to TrainAR Object* that now appears on the bottom left of the scene tab. A preview window showing the chosen object should appear. This window gives you more specific options before you start the conversion process. For now, just ignore those and click on *Convert to TrainAR Object*". 
 
-You can move the newly created TrainAR object around, rotate it or change its size. To do this, you can switch between different tools in the Tools tab in the Scene View. For now make sure the Move tool is selected and move the object in a fitting position on the reference-table.
+You can move the newly created TrainAR object around, rotate it or change its size. To do this, you can switch between different tools in the Tools Bar in the Scene View. For now make sure the Move tool is selected and move the object in a fitting position on the reference-table.
 
 ![](../resources/GettingStarted_CreateObject.gif)
 

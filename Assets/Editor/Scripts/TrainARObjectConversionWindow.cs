@@ -10,7 +10,7 @@ namespace Editor.Scripts
     /// Instance of the Editor Window with enables the user to specify options for the TrainAR Object and initializes
     /// the conversion process.
     /// </summary>
-    public class TrainARObjectSettingsModalWindow : EditorWindow
+    public class TrainARObjectConversionWindow : EditorWindow
     {
         private string trainARObjectName = "TrainAR Object Name";
         private float changedQuality = 1.0f;
@@ -22,11 +22,14 @@ namespace Editor.Scripts
         private GameObject trainARObject;
         private UnityEditor.Editor gameObjectEditor;
         bool advancedQualityOptionstatus = false;
+        
+        private static List<TrainARObjectConversionWindow> activeWindows = new List<TrainARObjectConversionWindow>();
 
         void OnEnable()
         {
             // Get the selected TrainAR Object when Editor Window is created
             trainARObject = Selection.activeTransform.gameObject;
+            activeWindows.Add(this);
             
             // Safe the original Meshfilters
             foreach(MeshFilter meshFilter in trainARObject.GetComponentsInChildren<MeshFilter>())
@@ -47,6 +50,7 @@ namespace Editor.Scripts
 
         private void OnDisable()
         {
+            activeWindows.Remove(this);
             if (gameObjectEditor != null)
             {
                 DestroyImmediate(gameObjectEditor);
@@ -178,6 +182,24 @@ namespace Editor.Scripts
         private int CountTotalTriangles(GameObject gameObject)
         {
             return gameObject.GetComponentsInChildren<MeshFilter>().Sum(mesh => mesh.sharedMesh.triangles.Length / 3);
+        }
+
+        /// <summary>
+        /// Checks whether or not a TrainARObjectConversionWindow with the given Gameobject is already active.
+        /// </summary>
+        /// <param name="gameObject">The Gameobject to be checked.</param>
+        /// <returns>True if a TrainARObjectConversionWindow with the given Gameobject already exists.
+        /// </returns>
+        public static bool WindowWithObjectAlreadyExists(GameObject gameObject)
+        {
+            foreach (TrainARObjectConversionWindow window in activeWindows)
+            {
+                if(ReferenceEquals(window.trainARObject, gameObject))
+                {
+                    return true;
+                }   
+            }
+            return false;
         }
     }
 }

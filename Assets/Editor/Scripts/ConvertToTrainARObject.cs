@@ -10,7 +10,7 @@ using MeshCombiner = Others.MeshCombiner;
 namespace Editor.Scripts
 {
     /// <summary>
-    /// ConvertARInteractable is an Editor script that adds a right-click context menu to GameObjects in the hierarchy named
+    /// ConvertToTrainARObjects is an Editor script that adds a right-click context menu to GameObjects in the hierarchy named
     /// "Convert to TrainAR Object". When the object is eligible (therefore has a transform, MeshFilter and MeshRenderer), this can
     /// be used to convert GameObjects to TrainAR Objects, where behaviours (e.g. TrainAR Object) are automatically added and the mesh
     /// is combined an simplyfied.
@@ -93,14 +93,25 @@ namespace Editor.Scripts
                 EditorUtility.DisplayDialog("Unable to convert to TrainAR Object", "The GameObject is selected inside of the Prefab view. Please unpack the Prefab into an active scene before converting it.", "ok");
                 return;
             }
+
+            if (TrainARObjectConversionWindow.WindowWithObjectAlreadyExists(selectedObject))
+            {
+                EditorUtility.DisplayDialog("Unable to convert to TrainAR Object", "A conversion process for this Gameobject is already active.", "ok");
+                return;
+            }
             
             //Register an undo action so the conversion can be undone
             Undo.RegisterFullObjectHierarchyUndo(selectedObject, "Convert to TrainAR Object");
             
             // Create and show the Modal-Window with options for creating a TraiAR Object
-            if (CreateInstance(typeof(TrainARObjectSettingsModalWindow)) is TrainARObjectSettingsModalWindow settingsModalWindow) settingsModalWindow.Show();
+            if (CreateInstance(typeof(TrainARObjectConversionWindow)) is TrainARObjectConversionWindow settingsModalWindow) settingsModalWindow.Show();
         }
 
+        /// <summary>
+        /// Initializes the conversion process for the given object.
+        /// </summary>
+        /// <param name="selectedObject">The object that is to be converted to a TrainAR Object</param>
+        /// <param name="trainARObjectName">The specified name of the TrainAR Object.</param>
         public static void InitConversion(GameObject selectedObject, string trainARObjectName)
         {
             // If selected object is a part of a prefab instance, unpack it completely.

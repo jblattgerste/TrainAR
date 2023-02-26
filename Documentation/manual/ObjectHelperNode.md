@@ -42,7 +42,11 @@ This node returns the **Unity GameObject** Reference of the specified **TrainAR 
 
 ## Fuse Two Objects
 
-This attaches one **TrainAR Object** to another, making them one. The **Object name** field specifies the object that is fused onto the object, which is specified in the **Fuse to Object** field. In the **Offset Position and Rotation** field the position and rotation relative to the fused with TrainAR Object is specified.
+The *Fuse-Object*setting  attaches one **TrainAR Object** to another, making them one. The **Object name** field specifies the object that is fused onto the other object. The other object is specified in the **Fuse to Object** field. In the **Offset Position and Rotation** field the position and rotation relative to the fused with TrainAR Object is specified. To determine the offset position and rotation, place the two objects in the desired position and rotation in the scene view. Then select both of these objects (shift-click on each of them). A toolbar should appear on the bottom left of the scene view, which displays the offset position and rotation of the selected objects. These are the offset values you need to enter in the **Object Helper Node**. When you're done entering the values, don't forget to reset the objects to their default position and rotation in the scene view.
+
+Note: You may need to flip the signing of the values when entering them in the *Object Helper node* (i.e.: -1.5 becomes 1.5 and vice versa).
+
+![](../resources/FuseObject.gif)
 
 ## Destroy Object
 
@@ -51,4 +55,4 @@ Destroys and removes the specified TrainAR Object from the scene.
 ## Replace TrainAR Object
 Replaces a to be **replaced TrainAR Object** with another **replacing TrainAR Object**. The replaced **TrainAR Object** is set to invisible. The **replacing TrainAR Object** is also placed at the same position as the **replaced TrainAR Object**.
 
-In case the **replaced TrainAR Object** is **grabbed** during replacement, the **replacing TrainAR Object** is also **grabbed**.
+In case the **replaced TrainAR Object** is **grabbed** during replacement, the **replacing TrainAR Object** is also **grabbed**. For further instructions on how to use this setting, see [here](../manual/TrainArObjects.html#swapping-or-modifying-trainar-objects-during-a-training)

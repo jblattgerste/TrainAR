@@ -74,7 +74,29 @@ MonoBehaviour:
     containerId: overlay-container--left
     floating: 1
     collapsed: 0
-    displayed: 1
+    displayed: 0
+    snapOffset: {x: -252.33325, y: -79.333374}
+    snapOffsetDelta: {x: 0, y: 0}
+    snapCorner: 3
+    id: TrainAR Object Offset
+    index: 2
+    layout: 4
+  - dockPosition: 0
+    containerId: overlay-container--left
+    floating: 1
+    collapsed: 0
+    displayed: 0
+    snapOffset: {x: -252.33325, y: -79.333374}
+    snapOffsetDelta: {x: 0, y: 0}
+    snapCorner: 3
+    id: Convert to TrainAR Object
+    index: 2
+    layout: 4
+  - dockPosition: 0
+    containerId: overlay-container--left
+    floating: 1
+    collapsed: 0
+    displayed: 0
     snapOffset: {x: -252.33325, y: -79.333374}
     snapOffsetDelta: {x: 0, y: 0}
     snapCorner: 3

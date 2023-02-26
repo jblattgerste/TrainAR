@@ -9,7 +9,6 @@
     "com.unity.xr.arfoundation": "4.2.7",
     "com.unity.xr.arkit": "4.2.7",
     "com.unity.xr.arkit-face-tracking": "4.2.7",
-    "com.whinarn.unitymeshsimplifier": "https://github.com/Whinarn/UnityMeshSimplifier.git",
     "com.unity.modules.ai": "1.0.0",
     "com.unity.modules.androidjni": "1.0.0",
     "com.unity.modules.animation": "1.0.0",
