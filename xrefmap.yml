@@ -74,6 +74,19 @@ references:
   isSpec: "True"
   fullName: Editor.Scripts.EditorTrainARObjectToolbar.OnCreated
   nameWithType: EditorTrainARObjectToolbar.OnCreated
+- uid: Editor.Scripts.EditorTrainARObjectToolbar.OnWillBeDestroyed
+  name: OnWillBeDestroyed()
+  href: api/Editor.Scripts.EditorTrainARObjectToolbar.html#Editor_Scripts_EditorTrainARObjectToolbar_OnWillBeDestroyed
+  commentId: M:Editor.Scripts.EditorTrainARObjectToolbar.OnWillBeDestroyed
+  fullName: Editor.Scripts.EditorTrainARObjectToolbar.OnWillBeDestroyed()
+  nameWithType: EditorTrainARObjectToolbar.OnWillBeDestroyed()
+- uid: Editor.Scripts.EditorTrainARObjectToolbar.OnWillBeDestroyed*
+  name: OnWillBeDestroyed
+  href: api/Editor.Scripts.EditorTrainARObjectToolbar.html#Editor_Scripts_EditorTrainARObjectToolbar_OnWillBeDestroyed_
+  commentId: Overload:Editor.Scripts.EditorTrainARObjectToolbar.OnWillBeDestroyed
+  isSpec: "True"
+  fullName: Editor.Scripts.EditorTrainARObjectToolbar.OnWillBeDestroyed
+  nameWithType: EditorTrainARObjectToolbar.OnWillBeDestroyed
 - uid: Editor.Scripts.MeshCombinerEditor
   name: MeshCombinerEditor
   href: api/Editor.Scripts.MeshCombinerEditor.html
@@ -189,6 +202,51 @@ references:
   isSpec: "True"
   fullName: Editor.Scripts.StateRequestSimulatorEditor.OnInspectorGUI
   nameWithType: StateRequestSimulatorEditor.OnInspectorGUI
+- uid: Editor.Scripts.TrainARConvertObjectToolbar
+  name: TrainARConvertObjectToolbar
+  href: api/Editor.Scripts.TrainARConvertObjectToolbar.html
+  commentId: T:Editor.Scripts.TrainARConvertObjectToolbar
+  fullName: Editor.Scripts.TrainARConvertObjectToolbar
+  nameWithType: TrainARConvertObjectToolbar
+- uid: Editor.Scripts.TrainARConvertObjectToolbar.CreatePanelContent
+  name: CreatePanelContent()
+  href: api/Editor.Scripts.TrainARConvertObjectToolbar.html#Editor_Scripts_TrainARConvertObjectToolbar_CreatePanelContent
+  commentId: M:Editor.Scripts.TrainARConvertObjectToolbar.CreatePanelContent
+  fullName: Editor.Scripts.TrainARConvertObjectToolbar.CreatePanelContent()
+  nameWithType: TrainARConvertObjectToolbar.CreatePanelContent()
+- uid: Editor.Scripts.TrainARConvertObjectToolbar.CreatePanelContent*
+  name: CreatePanelContent
+  href: api/Editor.Scripts.TrainARConvertObjectToolbar.html#Editor_Scripts_TrainARConvertObjectToolbar_CreatePanelContent_
+  commentId: Overload:Editor.Scripts.TrainARConvertObjectToolbar.CreatePanelContent
+  isSpec: "True"
+  fullName: Editor.Scripts.TrainARConvertObjectToolbar.CreatePanelContent
+  nameWithType: TrainARConvertObjectToolbar.CreatePanelContent
+- uid: Editor.Scripts.TrainARConvertObjectToolbar.OnCreated
+  name: OnCreated()
+  href: api/Editor.Scripts.TrainARConvertObjectToolbar.html#Editor_Scripts_TrainARConvertObjectToolbar_OnCreated
+  commentId: M:Editor.Scripts.TrainARConvertObjectToolbar.OnCreated
+  fullName: Editor.Scripts.TrainARConvertObjectToolbar.OnCreated()
+  nameWithType: TrainARConvertObjectToolbar.OnCreated()
+- uid: Editor.Scripts.TrainARConvertObjectToolbar.OnCreated*
+  name: OnCreated
+  href: api/Editor.Scripts.TrainARConvertObjectToolbar.html#Editor_Scripts_TrainARConvertObjectToolbar_OnCreated_
+  commentId: Overload:Editor.Scripts.TrainARConvertObjectToolbar.OnCreated
+  isSpec: "True"
+  fullName: Editor.Scripts.TrainARConvertObjectToolbar.OnCreated
+  nameWithType: TrainARConvertObjectToolbar.OnCreated
+- uid: Editor.Scripts.TrainARConvertObjectToolbar.OnWillBeDestroyed
+  name: OnWillBeDestroyed()
+  href: api/Editor.Scripts.TrainARConvertObjectToolbar.html#Editor_Scripts_TrainARConvertObjectToolbar_OnWillBeDestroyed
+  commentId: M:Editor.Scripts.TrainARConvertObjectToolbar.OnWillBeDestroyed
+  fullName: Editor.Scripts.TrainARConvertObjectToolbar.OnWillBeDestroyed()
+  nameWithType: TrainARConvertObjectToolbar.OnWillBeDestroyed()
+- uid: Editor.Scripts.TrainARConvertObjectToolbar.OnWillBeDestroyed*
+  name: OnWillBeDestroyed
+  href: api/Editor.Scripts.TrainARConvertObjectToolbar.html#Editor_Scripts_TrainARConvertObjectToolbar_OnWillBeDestroyed_
+  commentId: Overload:Editor.Scripts.TrainARConvertObjectToolbar.OnWillBeDestroyed
+  isSpec: "True"
+  fullName: Editor.Scripts.TrainARConvertObjectToolbar.OnWillBeDestroyed
+  nameWithType: TrainARConvertObjectToolbar.OnWillBeDestroyed
 - uid: Editor.Scripts.TrainAREditorMenu
   name: TrainAREditorMenu
   href: api/Editor.Scripts.TrainAREditorMenu.html
@@ -351,6 +409,25 @@ references:
   isSpec: "True"
   fullName: Editor.Scripts.TrainAREditorMenu.SwitchToUnityMode
   nameWithType: TrainAREditorMenu.SwitchToUnityMode
+- uid: Editor.Scripts.TrainARObjectConversionWindow
+  name: TrainARObjectConversionWindow
+  href: api/Editor.Scripts.TrainARObjectConversionWindow.html
+  commentId: T:Editor.Scripts.TrainARObjectConversionWindow
+  fullName: Editor.Scripts.TrainARObjectConversionWindow
+  nameWithType: TrainARObjectConversionWindow
+- uid: Editor.Scripts.TrainARObjectConversionWindow.WindowWithObjectAlreadyExists(GameObject)
+  name: WindowWithObjectAlreadyExists(GameObject)
+  href: api/Editor.Scripts.TrainARObjectConversionWindow.html#Editor_Scripts_TrainARObjectConversionWindow_WindowWithObjectAlreadyExists_GameObject_
+  commentId: M:Editor.Scripts.TrainARObjectConversionWindow.WindowWithObjectAlreadyExists(GameObject)
+  fullName: Editor.Scripts.TrainARObjectConversionWindow.WindowWithObjectAlreadyExists(GameObject)
+  nameWithType: TrainARObjectConversionWindow.WindowWithObjectAlreadyExists(GameObject)
+- uid: Editor.Scripts.TrainARObjectConversionWindow.WindowWithObjectAlreadyExists*
+  name: WindowWithObjectAlreadyExists
+  href: api/Editor.Scripts.TrainARObjectConversionWindow.html#Editor_Scripts_TrainARObjectConversionWindow_WindowWithObjectAlreadyExists_
+  commentId: Overload:Editor.Scripts.TrainARObjectConversionWindow.WindowWithObjectAlreadyExists
+  isSpec: "True"
+  fullName: Editor.Scripts.TrainARObjectConversionWindow.WindowWithObjectAlreadyExists
+  nameWithType: TrainARObjectConversionWindow.WindowWithObjectAlreadyExists
 - uid: Editor.Scripts.TrainARObjectOffsetToolbar
   name: TrainARObjectOffsetToolbar
   href: api/Editor.Scripts.TrainARObjectOffsetToolbar.html
@@ -383,12 +460,19 @@ references:
   isSpec: "True"
   fullName: Editor.Scripts.TrainARObjectOffsetToolbar.OnCreated
   nameWithType: TrainARObjectOffsetToolbar.OnCreated
-- uid: Editor.Scripts.TrainARObjectSettingsModalWindow
-  name: TrainARObjectSettingsModalWindow
-  href: api/Editor.Scripts.TrainARObjectSettingsModalWindow.html
-  commentId: T:Editor.Scripts.TrainARObjectSettingsModalWindow
-  fullName: Editor.Scripts.TrainARObjectSettingsModalWindow
-  nameWithType: TrainARObjectSettingsModalWindow
+- uid: Editor.Scripts.TrainARObjectOffsetToolbar.OnWillBeDestroyed
+  name: OnWillBeDestroyed()
+  href: api/Editor.Scripts.TrainARObjectOffsetToolbar.html#Editor_Scripts_TrainARObjectOffsetToolbar_OnWillBeDestroyed
+  commentId: M:Editor.Scripts.TrainARObjectOffsetToolbar.OnWillBeDestroyed
+  fullName: Editor.Scripts.TrainARObjectOffsetToolbar.OnWillBeDestroyed()
+  nameWithType: TrainARObjectOffsetToolbar.OnWillBeDestroyed()
+- uid: Editor.Scripts.TrainARObjectOffsetToolbar.OnWillBeDestroyed*
+  name: OnWillBeDestroyed
+  href: api/Editor.Scripts.TrainARObjectOffsetToolbar.html#Editor_Scripts_TrainARObjectOffsetToolbar_OnWillBeDestroyed_
+  commentId: Overload:Editor.Scripts.TrainARObjectOffsetToolbar.OnWillBeDestroyed
+  isSpec: "True"
+  fullName: Editor.Scripts.TrainARObjectOffsetToolbar.OnWillBeDestroyed
+  nameWithType: TrainARObjectOffsetToolbar.OnWillBeDestroyed
 - uid: Interaction
   name: Interaction
   href: api/Interaction.html

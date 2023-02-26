@@ -88,7 +88,7 @@
     <h3 id="classes">Classes
   </h3>
       <h4><a class="xref" href="Editor.Scripts.ConvertToTrainARObject.html">ConvertToTrainARObject</a></h4>
-      <section><p>ConvertARInteractable is an Editor script that adds a right-click context menu to GameObjects in the hierarchy named
+      <section><p>ConvertToTrainARObjects is an Editor script that adds a right-click context menu to GameObjects in the hierarchy named
 &quot;Convert to TrainAR Object&quot;. When the object is eligible (therefore has a transform, MeshFilter and MeshRenderer), this can
 be used to convert GameObjects to TrainAR Objects, where behaviours (e.g. TrainAR Object) are automatically added and the mesh
 is combined an simplyfied.</p>
@@ -98,7 +98,7 @@ is combined an simplyfied.</p>
 setting TrainAR Object states like active/inactive, grabbable, interactable, or combinable without opening an inspector.</p>
 </section>
       <h4><a class="xref" href="Editor.Scripts.MeshCombinerEditor.html">MeshCombinerEditor</a></h4>
-      <section><p>The MeshCombinerEditor is a utility class that helps to combine meshes. It is called by the ConvertToTrainARObject class.</p>
+      <section><p>The MeshCombinerEditor is a utility class that helps to combine meshes.</p>
 </section>
       <h4><a class="xref" href="Editor.Scripts.OpenAuthoringToolOnLoad.html">OpenAuthoringToolOnLoad</a></h4>
       <section><p>Every time the editor is started, trigger switching to the TrainAR authoring tool.</p>
@@ -114,19 +114,23 @@ currently not supported by the framework.</p>
       <section><p>Adds the GUI to the inspector to simulate stateRequests to test the statemachine in the editor.
 This is an Unity Editor Utility Class for the &quot;StateRequestSimulator&quot; class.</p>
 </section>
+      <h4><a class="xref" href="Editor.Scripts.TrainARConvertObjectToolbar.html">TrainARConvertObjectToolbar</a></h4>
+      <section><p>Displays and initializes the editor toolbar which contains a button that initializes the conversion process
+for a TrainAR Object of the currently selected object.</p>
+</section>
       <h4><a class="xref" href="Editor.Scripts.TrainAREditorMenu.html">TrainAREditorMenu</a></h4>
       <section><p>The TrainAREditorMenu adds a top menu with options called &quot;TrainAR&quot; for trainAR specific funtionallity like
 building, switching plattform, switching the mode (TrainAR/Unity Editor), and other options.</p>
+</section>
+      <h4><a class="xref" href="Editor.Scripts.TrainARObjectConversionWindow.html">TrainARObjectConversionWindow</a></h4>
+      <section><p>Instance of the Editor Window with enables the user to specify options for the TrainAR Object and initializes
+the conversion process.</p>
 </section>
       <h4><a class="xref" href="Editor.Scripts.TrainARObjectOffsetToolbar.html">TrainARObjectOffsetToolbar</a></h4>
       <section><p>The TrainARObjectOffsetToolbar is a toolbar in the Scene view when using the TrainAR authoring overlay. It is displayed
 instead of the TrainARObjectToolbar when two objects are selected in the editor.
 It displays the positional and rotational offsets between the two selected objects, so the user can use them,
-e.g. for the FuseObjects functionality of the object helper. </p>
-</section>
-      <h4><a class="xref" href="Editor.Scripts.TrainARObjectSettingsModalWindow.html">TrainARObjectSettingsModalWindow</a></h4>
-      <section><p>Instance of the Editor Window with enables the user to specify options for the TrainAR Object and initializes
-the conversion process.</p>
+e.g. for the FuseObjects functionality of the object helper node. </p>
 </section>
 </article>
           </div>

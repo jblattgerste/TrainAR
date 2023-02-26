@@ -112,12 +112,14 @@
 <h2 id="get-object-reference">Get Object Reference</h2>
 <p>This node returns the <strong>Unity GameObject</strong> Reference of the specified <strong>TrainAR Object</strong>. For more information about Unity GameObjects, refer to the <a href="https://docs.unity3d.com/ScriptReference/GameObject.html">Unity Documentation</a>. This is mainly useful if you want to utilize Unitys Visual Scripting nodes in the Stateflow as specified in the <a href="https://jblattgerste.github.io/TrainAR/manual/NoVisualScripting.html#unity-visual-scripting-nodes">Advanced Options</a>.</p>
 <h2 id="fuse-two-objects">Fuse Two Objects</h2>
-<p>This attaches one <strong>TrainAR Object</strong> to another, making them one. The <strong>Object name</strong> field specifies the object that is fused onto the object, which is specified in the <strong>Fuse to Object</strong> field. In the <strong>Offset Position and Rotation</strong> field the position and rotation relative to the fused with TrainAR Object is specified.</p>
+<p>The <em>Fuse-Object</em>setting  attaches one <strong>TrainAR Object</strong> to another, making them one. The <strong>Object name</strong> field specifies the object that is fused onto the other object. The other object is specified in the <strong>Fuse to Object</strong> field. In the <strong>Offset Position and Rotation</strong> field the position and rotation relative to the fused with TrainAR Object is specified. To determine the offset position and rotation, place the two objects in the desired position and rotation in the scene view. Then select both of these objects (shift-click on each of them). A toolbar should appear on the bottom left of the scene view, which displays the offset position and rotation of the selected objects. These are the offset values you need to enter in the <strong>Object Helper Node</strong>. When you&#39;re done entering the values, don&#39;t forget to reset the objects to their default position and rotation in the scene view.</p>
+<p>Note: You may need to flip the signing of the values when entering them in the <em>Object Helper node</em> (i.e.: -1.5 becomes 1.5 and vice versa).</p>
+<p><img src="../resources/FuseObject.gif" alt=""></p>
 <h2 id="destroy-object">Destroy Object</h2>
 <p>Destroys and removes the specified TrainAR Object from the scene. </p>
 <h2 id="replace-trainar-object">Replace TrainAR Object</h2>
 <p>Replaces a to be <strong>replaced TrainAR Object</strong> with another <strong>replacing TrainAR Object</strong>. The replaced <strong>TrainAR Object</strong> is set to invisible. The <strong>replacing TrainAR Object</strong> is also placed at the same position as the <strong>replaced TrainAR Object</strong>.</p>
-<p>In case the <strong>replaced TrainAR Object</strong> is <strong>grabbed</strong> during replacement, the <strong>replacing TrainAR Object</strong> is also <strong>grabbed</strong>.</p>
+<p>In case the <strong>replaced TrainAR Object</strong> is <strong>grabbed</strong> during replacement, the <strong>replacing TrainAR Object</strong> is also <strong>grabbed</strong>. For further instructions on how to use this setting, see <a href="../manual/TrainArObjects.html#swapping-or-modifying-trainar-objects-during-a-training">here</a></p>
 </article>
           </div>
           

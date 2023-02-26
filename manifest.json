@@ -28,7 +28,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Editor.Scripts.ConvertToTrainARObject.html",
-          "hash": "GwNMboPaKykHH3OCq5pWP02tjIlc+4wTZga/Ns3fD7M="
+          "hash": "3GSp+aKMtvvd+QgAJ+8LSml4w/rcAHRvqnt5RG6K6cE="
         }
       },
       "is_incremental": false,
@@ -40,7 +40,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Editor.Scripts.EditorTrainARObjectToolbar.html",
-          "hash": "eiTJ9u7Jpcx7Kh6+QVCQfWSSwe4ArC8yl4AM9/1QCiA="
+          "hash": "QAVpiBr3lZ1VsDFnyDWVFGrTHYm4abhH2nX5cX8xMFQ="
         }
       },
       "is_incremental": false,
@@ -52,7 +52,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Editor.Scripts.MeshCombinerEditor.html",
-          "hash": "eYPsUq0ZrEw0oi41JA6ZaTtVMsAgqcZq/YPYdCiTu7k="
+          "hash": "+b2jnZPud0cUXSDUNKIFYJYTxdMC7RdAoGAeb/rEYNk="
         }
       },
       "is_incremental": false,
@@ -96,6 +96,18 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Editor.Scripts.TrainARConvertObjectToolbar.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Editor.Scripts.TrainARConvertObjectToolbar.html",
+          "hash": "toHl2lWbnrKHJC/51lSYEbVtcgVu57ANVxVHSk1FCs4="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Editor.Scripts.TrainAREditorMenu.yml",
       "output": {
         ".html": {
@@ -108,11 +120,11 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/Editor.Scripts.TrainARObjectOffsetToolbar.yml",
+      "source_relative_path": "api/Editor.Scripts.TrainARObjectConversionWindow.yml",
       "output": {
         ".html": {
-          "relative_path": "api/Editor.Scripts.TrainARObjectOffsetToolbar.html",
-          "hash": "YMYdZFvWqDZbbF9Uo6E5BTQbZwsfR3x4m7CFxXEzybA="
+          "relative_path": "api/Editor.Scripts.TrainARObjectConversionWindow.html",
+          "hash": "n0YaUgwfS2qyEfpwBoiOMrOjcNqapyU20Rj6euMeFQE="
         }
       },
       "is_incremental": false,
@@ -120,11 +132,11 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/Editor.Scripts.TrainARObjectSettingsModalWindow.yml",
+      "source_relative_path": "api/Editor.Scripts.TrainARObjectOffsetToolbar.yml",
       "output": {
         ".html": {
-          "relative_path": "api/Editor.Scripts.TrainARObjectSettingsModalWindow.html",
-          "hash": "sXYfp7CLZ9JSQ/cUlVpsBNjI/ggw4Yh9efFtlwYJxX0="
+          "relative_path": "api/Editor.Scripts.TrainARObjectOffsetToolbar.html",
+          "hash": "czQCMUwbBoUJKkwsRE5F12vN3eNHMCiG++CZSPqljoI="
         }
       },
       "is_incremental": false,
@@ -136,7 +148,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Editor.Scripts.html",
-          "hash": "mWoniKD14jUABqP1Vld7kKGvn4P6BFFCpkdBRMknge8="
+          "hash": "Ge4E0g9asqMyrsvuAhrMqvG6t9SAV3vX+U0xI82gqe0="
         }
       },
       "is_incremental": false,
@@ -928,7 +940,7 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "AHO86yuNC/8MTXVl+tadIZRTd5YzddLW8iJ+s150Vp4="
+          "hash": "K7A3ci8q22ipRyQUBBmeGBLbilowPscIzMDJbvE09ag="
         }
       },
       "is_incremental": false,
@@ -979,7 +991,7 @@
       "output": {
         ".html": {
           "relative_path": "manual/GettingStarted.html",
-          "hash": "aV4o/yfnLQP3fFDblO06dfOc10c429rHUdXyBskZfIg="
+          "hash": "XBqKsfGhHLQOXADoUPxjSOEeBPkTRIk1zfceFB0bOlE="
         }
       },
       "is_incremental": false,
@@ -1030,7 +1042,7 @@
       "output": {
         ".html": {
           "relative_path": "manual/ObjectHelperNode.html",
-          "hash": "U1VEPV0WAl21NxFjbrukcA7PPbDISO23UVe9TEp0WJc="
+          "hash": "ZkVEN5LDTQYK0gaRIM6cElDm4X9bRUIB+Sues/h/B3c="
         }
       },
       "is_incremental": false,
@@ -1096,7 +1108,7 @@
       "output": {
         ".html": {
           "relative_path": "manual/TrainArObjects.html",
-          "hash": "0B9atmGv8MASTj7/YNI3E146KuRqMJGstwOLJDKQWPg="
+          "hash": "8XYy29XCE3lmpNFErHXFf1Q6eEM/cEWNA9A/QFgVGOk="
         }
       },
       "is_incremental": false,
@@ -1390,6 +1402,17 @@
       "output": {
         "resource": {
           "relative_path": "resources/FullTraining.gif"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "resources/FuseObject.gif",
+      "output": {
+        "resource": {
+          "relative_path": "resources/FuseObject.gif"
         }
       },
       "is_incremental": false,
@@ -2110,7 +2133,7 @@
         "ManagedReferenceDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 75,
+          "total_file_count": 76,
           "skipped_file_count": 0
         },
         "ResourceDocumentProcessor": {
