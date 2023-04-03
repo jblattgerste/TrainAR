@@ -13,7 +13,7 @@ authors:
 - family-names: "Pfeiffer"
   given-names: "Thies"
   orcid: "https://orcid.org/0000-0001-6619-749X"
-title: "TrainAR: An Open Source Visual Scripting-based Authoring Tool for Procedural Mobile Augmented Reality Trainings"
+title: "TrainAR: An Open-Source Visual Scripting-Based Authoring Tool for Procedural Mobile Augmented Reality Trainings"
 version: 1.0.0
 doi: 
 date-released: 2022-05-01
@@ -24,21 +24,18 @@ preferred-citation:
   - family-names: "Blattgerste"
     given-names: "Jonas"
     orcid:
-  - family-names: "Luksch"
-    given-names: "Kristina"
-    orcid:
-  - family-names: "Lewa"
-    given-names: "Carmen"
+  - family-names: "Behrends"
+    given-names: "Jan"
     orcid:
   - family-names: "Pfeiffer"
     given-names: "Thies"
     orcid: "https://orcid.org/0000-0001-6619-749X"
-  doi: "10.3390/mti5070030"
-  journal: "Multimodal Technologies and Interaction"
-  month: 6
+  doi: "10.3390/info14040219"
+  journal: "Information"
+  month: 4
   start: 1 # First page number
-  end: 27 # Last page number
-  title: "TrainAR: A Scalable Interaction Concept and Didactic Framework for Procedural Trainings Using Handheld Augmented Reality"
-  issue: 7
-  volume: 5
-  year: 2021
+  end: 31 # Last page number
+  title: "TrainAR: An Open-Source Visual Scripting-Based Authoring Tool for Procedural Mobile Augmented Reality Trainings"
+  issue: 4
+  volume: 14
+  year: 2023
