@@ -26,11 +26,10 @@ A key idea behind TrainAR is the retention of the full Unity capabilities while 
 TrainAR is envisioned as a participatory project, continously improving and expanding it's quality and scope. Feel free to contribute to its source code, documentation or conceptual/didactic ideas through [Issues](https://github.com/jblattgerste/TrainAR/issues) or [Discussions](https://github.com/jblattgerste/TrainAR/discussions). You are using TrainAR for an Augmented Reality training or learning game? Show us what you created! You are using TrainAR to explore Augmented Reality trainings in a new context as your scientific research? Feel free to add your publications to our list of publications below so others can use it as a reference.
 
 ## Publication List
-#### TrainAR Framework: 
-- Blattgerste, J., Janßen, S., Behrends, J., & Pfeiffer, T. (Forthcoming). _TrainAR: An Open Source Visual Scripting-based Authoring Tool
-for Procedural Mobile Augmented Reality Trainings_.
+#### TrainAR Framework:
+- Blattgerste, J.; Behrends, J.; Pfeiffer, T. (2023) [TrainAR: An Open-Source Visual Scripting-Based Authoring Tool for Procedural Mobile Augmented Reality Trainings](https://www.mdpi.com/2078-2489/14/4/219). Information, 14 (4), 219.
 - Blattgerste, J., & Pfeiffer, T. (2022). [TrainAR: Ein Augmented Reality Training Autorensystem](https://dl.gi.de/bitstream/handle/20.500.12116/39383/AVRiL2022_Proceedings_06_3182.pdf?sequence=1&isAllowed=y). Wettbewerbsband AVRiL 2022.
-- Blattgerste, J., Luksch, K., Lewa, C., & Pfeiffer, T. (2021). [TrainAR: A Scalable Interaction Concept and Didactic Framework for Procedural Trainings Using Handheld Augmented Reality](https://www.mdpi.com/2414-4088/5/7/30). Multimodal Technologies and Interaction, 5(7), 30.
+- Blattgerste, J., Luksch, K., Lewa, C., & Pfeiffer, T. (2021). [TrainAR: A Scalable Interaction Concept and Didactic Framework for Procedural Trainings Using Handheld Augmented Reality](https://www.mdpi.com/2414-4088/5/7/30). Multimodal Technologies and Interaction, 5 (7), 30.
 
 #### TrainAR Trainings:
 - Blattgerste, J., Franssen, J., Arztmann, M., Pfeiffer, T. (2022). [Motivational benefits and usability of a handheld Augmented Reality game for anatomy learning](https://mixality.de/wp-content/uploads/2022/12/Blattgerste2022Motivational.pdf). 2022 IEEE International Conference on Artificial Intelligence and Virtual Reality (AIVR).
@@ -46,14 +45,16 @@ The research resulting in the open source TrainAR project was partially supporte
 TrainAR is freely accessible for commercial and non-commercial use under the MIT license and does not require acknowledgement in your TrainAR training or App itself. If you use TrainAR in the scientific context though, please acknowledge it by citing our publications on the interaction concept, didactic considerations and the authoring tool itself: 
 
 ```tex
-@article{blattgerste2021trainar,
-  title={TrainAR: A Scalable Interaction Concept and Didactic Framework for Procedural Trainings Using Handheld Augmented Reality},
-  author={Blattgerste, Jonas and Luksch, Kristina and Lewa, Carmen and Pfeiffer, Thies},
-  journal={Multimodal Technologies and Interaction},
-  volume={5},
-  number={7},
-  pages={30},
-  year={2021},
-  publisher={Multidisciplinary Digital Publishing Institute}
+@article{Blattgerste2023TrainAR,
+AUTHOR = {Blattgerste, Jonas and Behrends, Jan and Pfeiffer, Thies},
+TITLE = {TrainAR: An Open-Source Visual Scripting-Based Authoring Tool for Procedural Mobile Augmented Reality Trainings},
+JOURNAL = {Information},
+VOLUME = {14},
+YEAR = {2023},
+NUMBER = {4},
+ARTICLE-NUMBER = {219},
+URL = {https://www.mdpi.com/2078-2489/14/4/219},
+ISSN = {2078-2489},
+DOI = {10.3390/info14040219}
 }
 ```
