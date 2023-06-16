@@ -21,7 +21,7 @@ namespace Editor.Scripts
         //Register an event handler when the class is initialized
         static PlayModeButtonOverride()
         {
-            EditorApplication.playModeStateChanged += OnPlayModeStateChanged;
+            //EditorApplication.playModeStateChanged += OnPlayModeStateChanged;
         }
 
         /// <summary>

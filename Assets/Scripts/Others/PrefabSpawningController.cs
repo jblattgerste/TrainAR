@@ -135,17 +135,28 @@ namespace Others
         /// </summary>
         public static event Action RepositionPrefab;
 
+
+        private bool startPositioning = false;
+
         /// <summary>
-        /// Sets references to the ARRaycastmanager and triggers the creation of the TrainAR setup.
+        /// Sets references to the ARRaycastmanager.
         /// </summary>
         private void Start()
         {
             arRaycastManager = FindObjectOfType<ARRaycastManager>();
+            startPositioning = false;
+        }
+        /// <summary>
+        /// Triggers the creation of the TrainAR setup.
+        /// </summary>
+        public void StartPrefabSpawning()
+        {
             //Instantiate the prefab 2m behind the camera
             instantiatedPrefab = CreateTrainARSetup();
             instantiatedPrefab.transform.position = new Vector3(0, 0, -2.0f);
             MakeMaterialsInvisibleForPlacement();
             Debug.Log("PrefabSpawningController: Starting the positioning of the Prefab.");
+            startPositioning = true;
         }
 
         /// <summary>
@@ -194,6 +205,7 @@ namespace Others
         /// </summary>
         private void Update()
         {
+            if (!startPositioning) return;
             if(!objectWasSpawned)
             {
                 PositionPrefab();

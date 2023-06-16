@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: ed4e701ec4a65f841b8edfbcb6603eb0
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - m_ViewDataDictionary: {instanceID: 0}
+  - test: {instanceID: 0}
+  - stategraph: {fileID: 11400000, guid: 3586e4b8f1562e149abf5603f6634946, type: 2}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

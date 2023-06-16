@@ -17,10 +17,10 @@ namespace Interaction
     [RequireComponent(typeof(SelectionBase))]
     [RequireComponent(typeof(MeshCollider))]
     [RequireComponent(typeof(BoxCollider))]
+    [RequireComponent(typeof(Rigidbody))]
     [RequireComponent(typeof(RigidbodyController))]
     [RequireComponent(typeof(MaterialController))]
     [RequireComponent(typeof(AudioController))]
-    [RequireComponent(typeof(Rigidbody))]
     [RequireComponent(typeof(Outline))]
     [RequireComponent(typeof(CollisionController))]
     public class TrainARObject : MonoBehaviour
@@ -163,12 +163,26 @@ namespace Interaction
             //GetComponent<Outline>().enabled = false;
             //GetComponent<MeshCollider>().convex = true;
             this.gameObject.tag = "TrainARObject";
+            if (OnSelect == null)
+                OnSelect = new UnityEvent();
+            if (OnDeselect == null)
+                OnDeselect = new UnityEvent();
+            if (OnGrabbed == null)
+                OnGrabbed = new UnityEvent();
+            if (OnReleased == null)
+                OnReleased = new UnityEvent();
+            if (OnInteraction == null)
+                OnInteraction = new UnityEvent();
+            if (OnCombination == null)
+                OnCombination = new CustomUnityEvent();
+            if (error == null)
+                error = new UnityEvent();
             if (TrainARObjectDisabled)
             {
                 DisableTrainARObject();
             }
         }
-        
+
         /// <summary>
         /// Invokes the select event of this TrainARObject and sets it's isSelected bool accordingly.
         /// </summary>
@@ -349,6 +363,14 @@ namespace Interaction
             GetComponent<MeshCollider>().enabled = true;
             GetComponent<BoxCollider>().enabled = true;
         }
-        
+
+        public void setObjectValues(bool isGrabbable, bool isInteractable, bool isCombinable, bool disabledOnStart, float LerpingDistance)
+        {
+            this.isGrabbable = isGrabbable;
+            this.isInteractable = isInteractable;
+            this.isCombineable = isCombinable;
+            this.TrainARObjectDisabled = disabledOnStart;
+            this.lerpingDistance = LerpingDistance;
+        }
     }
 }
