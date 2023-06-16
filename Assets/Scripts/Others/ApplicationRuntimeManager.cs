@@ -22,6 +22,14 @@ namespace Others
         Application.Quit();
 #endif
         }
+        /// <summary>
+        /// Switches to scene.
+        /// </summary>
+        /// <param name="scene">Name of the scene.</param>
+        public void SwitchToScene(string scene)
+        {
+            SceneManager.LoadScene(scene, LoadSceneMode.Single);
+        }
 
         /// <summary>
         /// Load tutorial scence of given scenario.

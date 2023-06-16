@@ -3235,7 +3235,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1333949366}
         m_TargetAssemblyTypeName: Others.ApplicationRuntimeManager, Assembly-CSharp
-        m_MethodName: SwitchScene
+        m_MethodName: SwitchToScene
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

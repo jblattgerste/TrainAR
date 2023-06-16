@@ -113,9 +113,21 @@ namespace Interaction
             //outlineFillMaterial = Instantiate(Resources.Load<Material>(@"Materials/OutlineFill"));
 
             if (outlineMaskMaterial != null)
+            {
                 outlineMaskMaterial.name = "OutlineMask (Instance)";
+            }
+            else
+            {
+                outlineMaskMaterial = Instantiate(Resources.Load<Material>(@"Materials/OutlineMask"));
+            }
             if (outlineFillMaterial != null)
+            {
                 outlineFillMaterial.name = "OutlineFill (Instance)";
+            }
+            else
+            {
+                outlineFillMaterial = Instantiate(Resources.Load<Material>(@"Materials/OutlineFill"));
+            }
 
             // Retrieve or generate smooth normals
             LoadSmoothNormals();

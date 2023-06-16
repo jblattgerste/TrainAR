@@ -135,7 +135,9 @@ namespace Others
         /// </summary>
         public static event Action RepositionPrefab;
 
-
+        /// <summary>
+        /// Is true when ARSession and objects loading is done.
+        /// </summary>
         private bool startPositioning = false;
 
         /// <summary>

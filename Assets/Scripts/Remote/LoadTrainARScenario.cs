@@ -154,7 +154,7 @@ namespace Remote {
             result.GetComponent<MeshRenderer>().materials = materials;
             result.AddComponent<TrainARObject>();
             result.GetComponent<TrainARObject>().setObjectValues(trainARObjectValues.isGrabbable, trainARObjectValues.isInteractable, trainARObjectValues.isCombinable, trainARObjectValues.disabledOnStart, trainARObjectValues.LerpingDistance);
-
+            result.GetComponent<MeshCollider>().convex = true;
             await Task.Yield();
             return result;
         }
