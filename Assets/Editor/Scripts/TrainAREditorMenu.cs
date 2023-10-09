@@ -14,12 +14,20 @@ namespace Editor.Scripts
         /// <summary>
         /// Build and Runs the current solution when clicked.
         /// </summary>
-        [MenuItem("TrainAR/Build Project", false, -2005)]
+        [MenuItem("TrainAR/Build Project to Device", false, -2005)]
         public static void BuildToDevice()
         {
             PlayModeButtonOverride.ShowDialogBoxForBuilding();
         }
-    
+
+        /// <summary>
+        /// Creates a file with the current TrainAR scenario.
+        /// </summary>
+        [MenuItem("TrainAR/Build Project to File", false, -2004)]
+        public static void CreateFileForSharing()
+        {
+            if (CreateInstance(typeof(UploadTrainARScenario)) is UploadTrainARScenario uploadWindow) uploadWindow.Show();
+        }
         /// <summary>
         /// Switches the current platform to Android when clicked.
         /// </summary>
@@ -39,9 +47,9 @@ namespace Editor.Scripts
             PlayModeButtonOverride.SwitchBuildTargetToIOS();
             Debug.Log("Successfully switched the platform to iOS. ");
         }
-    
+
         //Layout Options
-        
+
         /// <summary>
         /// Switches the Editor Layout to TrainAR Authoring mode when clicked.
         /// </summary>

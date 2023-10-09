@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.37311953, g: 0.38074014, b: 0.3587274, a: 1}
+  m_IndirectSpecularColor: {r: 0.3708985, g: 0.3783704, b: 0.35722548, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2071,6 +2071,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1333949365}
   - component: {fileID: 1333949364}
+  - component: {fileID: 1333949366}
   m_Layer: 0
   m_Name: MenuManager
   m_TagString: Untagged
@@ -2106,6 +2107,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1333949366
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1333949363}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 470cecb072a0de6438c674cf60743999, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1558504337
 GameObject:
   m_ObjectHideFlags: 0
@@ -3150,7 +3163,7 @@ GameObject:
   - component: {fileID: 2070022629}
   - component: {fileID: 2070022628}
   m_Layer: 5
-  m_Name: QuitApplicationButton
+  m_Name: ReturnToMenu
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3163,14 +3176,14 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2070022625}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: -1, w: 0}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 43933284}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -180}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 143, y: -129}
@@ -3220,16 +3233,16 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1333949364}
-        m_TargetAssemblyTypeName: StartARScene, Assembly-CSharp
-        m_MethodName: QuitApplication
-        m_Mode: 1
+      - m_Target: {fileID: 1333949366}
+        m_TargetAssemblyTypeName: Others.ApplicationRuntimeManager, Assembly-CSharp
+        m_MethodName: SwitchToScene
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: Scenes/Menu
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &2070022629
@@ -3252,7 +3265,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 3e49756ded2b30647a7a73d5081c75fe, type: 3}
+  m_Sprite: {fileID: 21300000, guid: aadb952eef39b734dbf08ae5ceac2e56, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1

@@ -45,7 +45,7 @@ namespace Others
         private IEnumerator StartMenuSceneDelayed()
         {
             yield return new WaitForSeconds(0.1f);
-            SceneManager.LoadScene("Scenes/Tutorial", LoadSceneMode.Single);
+            SceneManager.LoadScene("Scenes/Menu", LoadSceneMode.Single);
         }
         /// <summary>
         /// Resets the static classes and variables defined in this function
