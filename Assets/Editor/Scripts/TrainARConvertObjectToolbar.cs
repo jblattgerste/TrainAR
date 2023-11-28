@@ -28,7 +28,6 @@ namespace Editor.Scripts
             convertButton.text = "Convert to TrainAR Object";
             convertButton.style.unityTextAlign = new StyleEnum<TextAnchor>(TextAnchor.MiddleCenter);
             convertButton.style.unityFontStyleAndWeight = new StyleEnum<FontStyle>(FontStyle.Bold);
-            convertButton.style.height = 30;
             return convertButton;
         }
 
