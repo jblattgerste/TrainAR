@@ -4,7 +4,7 @@
 
 First, [download](https://unity3d.com/de/get-unity/download) and install the [Unity Hub](https://docs.unity3d.com/hub/manual/InstallHub.html). The Unity Hub allows you to easily install the correct Unity Editor version and corresponding packages that are needed for platform specific deployments.
 
-After installing Unity HUB, install **Unity Version 2022.1.3f1** as described in the [Unity Hub Documentation](https://docs.unity3d.com/hub/manual/InstallEditors.html).
+After installing Unity HUB, install **Unity Version 2022.3 (LTS)** as described in the [Unity Hub Documentation](https://docs.unity3d.com/hub/manual/InstallEditors.html).
 When installing Unity, make sure to also indlude the correct modules, depending on which kind of device you want to deploy the TrainAR trainings to: 
 
 For Android choose Android Build Support. Make sure to have also Android SDK & NDK Tools and OpenJDK checked:
@@ -16,7 +16,7 @@ For iOS, choose iOS Build Support:
 
 You can also install both at the same time to deploy to both devices. This works on every operating system (Linux, Windows and macOS), though for iOS, XCode on macOS is necessary to [deploy to iOS devices](https://docs.unity3d.com/Manual/UnityCloudBuildiOS.html) after building the App.
 
-Futhremore, if you do not already have an IDE (Integrated Development Environment) installed and you plan to potentially use C# programming to expand TrainAR, we recommend also installing Microsoft Visual Studio Community 2019 with Unity.
+Futhremore, if you do not already have an IDE (Integrated Development Environment) installed and you plan to potentially use C# programming to expand TrainAR, we recommend also installing Microsoft Visual Studio with Unity.
 
 ## Get the TrainAR Authoring Tool
 
@@ -36,7 +36,7 @@ We strongly recommend using the first approach.
 5. Open the Unity HUB
 6. Add the now cloned repository through clicking "Open" and then selecting the folder that was downloaded in the GitHub client
 
-TrainAR should now appear in the list of projects and "2022.1.0b16" (or an alternative 2022.1.XXXX version) should be selected as the Editor version.
+TrainAR should now appear in the list of projects and "2022.3 (LTS)" (or any 2022.3.XXXf subversion) should be selected as the Editor version.
 
 ![](../resources/TrainARDownloaded.JPG)
 

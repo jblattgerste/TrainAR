@@ -4,7 +4,7 @@ The Getting Started Guide is meant to provide a "quickstart" for your developmen
 
 ## Delete the example TrainAR training
 
-If you started the TrainAR Unity project with Unity Version 2022.1 through the Unity HUB (as described in [Installation & Setup](https://jblattgerste.github.io/TrainAR/manual/Setup.html)) and opened the TrainAR Authoring Tool through the top-panel menu item called "TrainAR" -> "Open TrainAR Authoring Tool". You should now see the TrainAR Authoring Tool roughly like this:
+If you started the TrainAR Unity project with Unity Version 2022.3 (LTS) through the Unity HUB (as described in [Installation & Setup](https://jblattgerste.github.io/TrainAR/manual/Setup.html)) and opened the TrainAR Authoring Tool through the top-panel menu item called "TrainAR" -> "Open TrainAR Authoring Tool". You should now see the TrainAR Authoring Tool roughly like this:
 
 ![](../resources/TrainARBasicsOverview.png)
 
