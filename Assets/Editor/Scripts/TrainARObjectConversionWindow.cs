@@ -34,6 +34,7 @@ namespace Editor.Scripts
         //GUI elements and variables
         private string trainARObjectName = "TrainAR Object Name";
         private float changedQuality = 1.0f;
+        private int targetMeshPolygons = 0;
         private bool preserveBorderEdges = false;
         private bool preserveSurfaceCurvature = false;
         private bool preserveUVSeamEdges = false;
@@ -84,7 +85,6 @@ namespace Editor.Scripts
 
             // Dimensions of window
             minSize = new Vector2(1200, 700);
-
 
             // Focus this window
             this.Focus();
@@ -194,18 +194,30 @@ namespace Editor.Scripts
             
             //Simplification options
             GUILayout.BeginVertical("box"); // Using a box for better visual grouping
-            GUILayout.Space(20);
             if (_selectedObjectSimplificationAlgorithm == 0) //Vcglib Tridecimator
             {
+                //If 0, just put in the meshes current vertice count
+                if(targetMeshPolygons == 0)
+                    targetMeshPolygons = triangleCount;
+                //If the user enters a value, calculate the percentage of the current mesh and display it
+                targetMeshPolygons = EditorGUILayout.IntField("Target polygon count", targetMeshPolygons);
                 
+                //Calculate how much the mesh would be reduced by in percent
+                var simplificationPercentage = Math.Round((1 - (float)targetMeshPolygons / triangleCount) * 100, 2);
+                GUILayout.Label("Reduction: " + simplificationPercentage + "%");
+                
+                //Simplify the mesh
+                if (GUILayout.Button(new GUIContent("Simplify")))
+                {
+                    //...
+                }
             }
             else //Fast Quadric Error Metrics
             {
                 var simplificationPercentage = Math.Round((1 - changedQuality) * 100, 2);
-                GUILayout.Label("Reduction: " + simplificationPercentage + "%");
-                GUILayout.Label("Polygons: ~" + Math.Round(polygonCount*(100-simplificationPercentage)/100));
+                GUILayout.Label("Target mesh quality");
                 changedQuality = GUILayout.HorizontalSlider(changedQuality, 0f, 1.0f, GUILayout.ExpandWidth(true), GUILayout.Height(15)); 
-                
+                GUILayout.Label("Reduction: " + simplificationPercentage + "%");
                 if (GUILayout.Button(new GUIContent("Simplify")))
                 {
                     // Apply Mesh simplification on the mesh filters of the original selection
@@ -216,6 +228,9 @@ namespace Editor.Scripts
                 }
             }
             GUILayout.EndVertical();
+            EditorGUILayout.HelpBox(
+                "Either simplify the mesh by reducing the number of triangles to the specified number (Tridecimator), or by specifying a quality reduction level (Quadric Error Metrics). In most cases, the Tridecimator algorithm should produce better results. Quadric Error Metrics is faster, but can produce artifacts.",
+                MessageType.Info);
             
             /* 
             GUILayout.Space(20);
@@ -240,7 +255,6 @@ namespace Editor.Scripts
             GUILayout.FlexibleSpace();
             
             // Display a warning if the polygon count is too high
-            GUILayout.Space(20);
             if (polygonCount > 50000)
             {
                 EditorGUILayout.HelpBox(
@@ -383,8 +397,10 @@ namespace Editor.Scripts
         /// <param name="previewRect">the rect to paint onto</param>
         private void DrawMeshInfo(Rect previewRect)
         {
-            GUIStyle whiteTextStyle = new GUIStyle(GUI.skin.label) { normal = { textColor = Color.white } };
-
+            //Set the text color to white or black depending on the editor skin
+            GUIStyle whiteTextStyle = new GUIStyle(GUI.skin.label);
+            whiteTextStyle.normal.textColor = EditorGUIUtility.isProSkin ? Color.white : Color.black;
+            
             // Offset from the bottom-left corner for the mesh information
             Vector2 offset = new Vector2(10, 20);
 
