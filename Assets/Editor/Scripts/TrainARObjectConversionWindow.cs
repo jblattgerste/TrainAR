@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEditor;
 using UnityEngine;
+using UnityMeshDecimation;
+using UnityMeshDecimation.Internal;
+using Mesh = UnityEngine.Mesh;
 
 namespace Editor.Scripts
 {
@@ -23,7 +26,7 @@ namespace Editor.Scripts
         private static readonly int WireSmoothness = Shader.PropertyToID("_WireSmoothness");
         private static readonly int MainTex = Shader.PropertyToID("_MainTex");
         private string[] _dropdownObjectSimplificationAlgorithms = new string[] { "Vcglib Tridecimator", "Quadric Error Metrics" };
-        private int _selectedObjectSimplificationAlgorithm = 1;
+        private int _selectedObjectSimplificationAlgorithm = 0;
 
         //Mesh properties
         private int triangleCount;
@@ -217,8 +220,9 @@ namespace Editor.Scripts
                 targetMeshPolygons = EditorGUILayout.IntField("Target polygon count", targetMeshPolygons);
                 
                 //Calculate how much the mesh would be reduced by in percent
-                var simplificationPercentage = Math.Round((1 - (float)targetMeshPolygons / triangleCount) * 100, 2);
                 var originalPolygonCount = originalMeshes.Sum(mesh => mesh.triangles.Length / 3);
+                var simplificationPercentage = Math.Round((1 - (float)targetMeshPolygons / originalPolygonCount) * 100, 2);
+                
                 if (targetMeshPolygons <= 0)
                 {
                     targetMeshPolygons = 1;
@@ -233,7 +237,7 @@ namespace Editor.Scripts
                 //Simplify the mesh
                 if (GUILayout.Button(new GUIContent("Simplify")))
                 {
-                    //simplify "originalMeshes"!
+                    trainARObject.GetComponent<MeshFilter>().sharedMesh = ConvertToTrainARObject.SimplifyMeshesUsingTridecimator(originalMeshes[0], targetMeshPolygons);
                     
                     if(pivotWasCentered) //If the pivot was centered before, center it again
                         trainARObject.GetComponent<MeshFilter>().sharedMesh =
@@ -250,7 +254,7 @@ namespace Editor.Scripts
                 if (GUILayout.Button(new GUIContent("Simplify")))
                 {
                     // Apply Mesh simplification on the mesh filters of the original selection
-                    ConvertToTrainARObject.SimplifyMeshes(originalMeshes, trainARObject, changedQuality,
+                    ConvertToTrainARObject.SimplifyMeshesUsingQuadrics(originalMeshes, trainARObject, changedQuality,
                         preserveBorderEdges, preserveSurfaceCurvature, preserveUVSeamEdges, preserveUVFoldoverEdges);
                     
                     if(pivotWasCentered) //If the pivot was centered before, center it again

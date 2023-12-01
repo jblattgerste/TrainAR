@@ -4,7 +4,10 @@ using Interaction;
 using UnityEditor;
 using UnityEditor.SceneManagement;
 using UnityEngine;
+using UnityMeshDecimation;
+using UnityMeshDecimation.Internal;
 using UnityMeshSimplifier;
+using Mesh = UnityEngine.Mesh;
 using MeshCombiner = Others.MeshCombiner;
 
 namespace Editor.Scripts
@@ -198,8 +201,33 @@ namespace Editor.Scripts
             return newGameObjectWithCombinedMeshes;
         }
 
+        /// <summary>
+        /// Simplifies one given mesh (careful, this is different to the SimplifyMeshesUsingQuadrics method, which simplifies all meshes of a given object)
+        /// to the given target polygon count using the Tridecimator method from the UnityMeshDecimation package.
+        /// </summary>
+        /// <param name="providedMesh">The Mesh to simplify</param>
+        /// <param name="targetMeshPolygons">the target polygon count to simplify to</param>
+        /// <returns>The simplified mesh</returns>
+        public static Mesh SimplifyMeshesUsingTridecimator(Mesh providedMesh, int targetMeshPolygons)
+        {
+            var conditions= new TargetConditions
+            {
+                faceCount = targetMeshPolygons
+            };
+            var parameter = new EdgeCollapseParameter
+            {
+                UsedProperty = VertexProperty.UV0
+            };
+            
+            var meshDecimation = new UnityMeshDecimation.UnityMeshDecimation();
+            meshDecimation.Execute(providedMesh, parameter, conditions);
+            return meshDecimation.ToMesh();
+        }
+
         ///  <summary>
         ///  Uses the Meshsimplifier to decimate the mesh of the passed Gameobject as well as all of it's children's meshes.
+        ///
+        ///  Note: In the current implementation this only simplifies one single mesh but it works so i leave this as it is here.
         ///  </summary>
         ///  <param name="currentSelectedObject">The current Gameobject, to which the mesh changes are applied to</param>
         ///  <param name="quality">The desired quality of the simplification. Must be between 0 and 1.</param>
@@ -209,7 +237,7 @@ namespace Editor.Scripts
         ///  <param name="preserveSurfaceCurvature">Optional parameter: Should surface curvature be preserved?</param>
         ///  <param name="preserveUVSeamEdges">Optional parameter: Should UV seam edges be preserved?</param>
         ///  <param name="preserveUVFoldoverEdges">Optional parameter: Should UV foldover edges be preserved?</param>
-        public static void SimplifyMeshes(IEnumerable<Mesh> originalMeshes, GameObject currentSelectedObject, float quality,
+        public static void SimplifyMeshesUsingQuadrics(IEnumerable<Mesh> originalMeshes, GameObject currentSelectedObject, float quality,
             bool preserveBorderEdges = false, bool preserveSurfaceCurvature = false, bool preserveUVSeamEdges = false, bool preserveUVFoldoverEdges = false)
         {
             // Create instance of Unity Mesh Simplifier
