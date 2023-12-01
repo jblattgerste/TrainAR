@@ -218,12 +218,22 @@ namespace Editor.Scripts
                 
                 //Calculate how much the mesh would be reduced by in percent
                 var simplificationPercentage = Math.Round((1 - (float)targetMeshPolygons / triangleCount) * 100, 2);
-                GUILayout.Label("Reduction: " + simplificationPercentage + "%");
+                var originalPolygonCount = originalMeshes.Sum(mesh => mesh.triangles.Length / 3);
+                if (targetMeshPolygons <= 0)
+                {
+                    targetMeshPolygons = 1;
+                }
+                else if (targetMeshPolygons >= originalPolygonCount)
+                {
+                    targetMeshPolygons = originalPolygonCount;
+                }
+                
+                GUILayout.Label("Reduction: " + simplificationPercentage + "% (" + targetMeshPolygons + "/" + originalPolygonCount +" polygons)" );
                 
                 //Simplify the mesh
                 if (GUILayout.Button(new GUIContent("Simplify")))
                 {
-                    //...
+                    //simplify "originalMeshes"!
                     
                     if(pivotWasCentered) //If the pivot was centered before, center it again
                         trainARObject.GetComponent<MeshFilter>().sharedMesh =
