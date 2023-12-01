@@ -865,6 +865,10 @@
       <Project>{8e530897-0605-6cd4-3bfe-114dbb14bed6}</Project>
       <Name>Whinarn.UnityMeshSimplifier.Runtime</Name>
     </ProjectReference>
+    <ProjectReference Include="UnityMeshDecimation.csproj">
+      <Project>{ff750720-481d-f431-2cbf-6b672d06727f}</Project>
+      <Name>UnityMeshDecimation</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
