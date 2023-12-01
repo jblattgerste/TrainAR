@@ -108,38 +108,39 @@ namespace Editor.Scripts
         }
 
         /// <summary>
-        /// Initializes the conversion process for the given object.
+        /// Finalizes the conversion process for the given object, replacing the original object in the scene.
         /// </summary>
-        /// <param name="selectedObject">The object that is to be converted to a TrainAR Object</param>
+        /// <param name="originalObject">The original GameObject in the scene.</param>
+        /// <param name="instantiatedPreviewObject">The instantiated copy of the GameObject.</param>
         /// <param name="trainARObjectName">The specified name of the TrainAR Object.</param>
-        public static void InitConversion(GameObject selectedObject, string trainARObjectName)
+        /// <param name="pivotPointOffset">The offset of the pivot if it was moved (0,0,0 otherwise)</param>
+        public static void FinalizeConversion(GameObject originalObject, GameObject instantiatedPreviewObject, string trainARObjectName)
         {
-            // If selected object is a part of a prefab instance, unpack it completely.
-            if (PrefabUtility.IsPartOfPrefabInstance(selectedObject))
+            instantiatedPreviewObject = Instantiate(instantiatedPreviewObject);
+            
+            // Convert the instantiated object to a TrainAR object
+            instantiatedPreviewObject.AddComponent<TrainARObject>();
+            instantiatedPreviewObject.tag = "TrainARObject";
+
+            // Apply the TrainAR Object name
+            instantiatedPreviewObject.name = trainARObjectName;
+
+            // Replace original object in the scene with the instantiated object
+            if (originalObject != null)
             {
-                PrefabUtility.UnpackPrefabInstance(selectedObject, PrefabUnpackMode.Completely, InteractionMode.UserAction);
+                instantiatedPreviewObject.transform.position = originalObject.transform.position;
+                instantiatedPreviewObject.transform.rotation = originalObject.transform.rotation;
+                instantiatedPreviewObject.transform.localScale = Vector3.one;
+        
+                GameObject.DestroyImmediate(originalObject);
             }
 
-            //Enables the read/write of vertices/indeces of shared meshes 
-            EnableReadWriteOnMeshes(selectedObject);
-
-            //Combine all meshes into one
-            GameObject newSelectedObject = CombineMeshes(selectedObject);
-            Undo.RegisterCreatedObjectUndo(newSelectedObject.gameObject, "Convert to TrainAR Object");
-            
-            //Convert the object to a TrainAR object
-            //TrainARObject.cs automatically imports dependencies and all the other necessary scripts when attached
-            newSelectedObject.AddComponent<TrainARObject>();
-            newSelectedObject.tag = "TrainARObject";
-            
-            // Apply the TrainAR Object name
-            newSelectedObject.name = trainARObjectName;
-            
-            //Reset the selection to the newly converted GameObject
-            Selection.activeTransform = newSelectedObject.transform;
+            // Reset the selection to the newly converted GameObject
+            Selection.activeTransform = instantiatedPreviewObject.transform;
             Selection.selectionChanged.Invoke();
             Debug.Log("Successfully converted GameObject to TrainAR Object.");
         }
+
 
         /// <summary>
         /// Combines all meshes of the selected object (e.g. all meshes in child structures) into a singular mesh,
@@ -147,8 +148,19 @@ namespace Editor.Scripts
         /// </summary>
         /// <param name="objectToCombineAllMeshesFor">The GameObject which meshes (parent and child) should be combined</param>
         /// <returns></returns>
-        private static GameObject CombineMeshes(GameObject objectToCombineAllMeshesFor)
+        public static GameObject CombineMeshes(GameObject objectToCombineAllMeshesFor)
         {
+            Undo.RegisterCreatedObjectUndo(objectToCombineAllMeshesFor.gameObject, "Convert to TrainAR Object");
+            
+            // If selected object is a part of a prefab instance, unpack it completely.
+            if (PrefabUtility.IsPartOfPrefabInstance(objectToCombineAllMeshesFor))
+            {
+                PrefabUtility.UnpackPrefabInstance(objectToCombineAllMeshesFor, PrefabUnpackMode.Completely, InteractionMode.UserAction);
+            }
+
+            //Enables the read/write of vertices/indeces of shared meshes 
+            EnableReadWriteOnMeshes(objectToCombineAllMeshesFor);
+            
             //Create a new empty parent for the combination
             GameObject newGameObjectWithCombinedMeshes = new GameObject(objectToCombineAllMeshesFor.name, typeof(MeshFilter), typeof(MeshRenderer));
             newGameObjectWithCombinedMeshes.transform.SetPositionAndRotation(objectToCombineAllMeshesFor.transform.position, objectToCombineAllMeshesFor.transform.rotation);

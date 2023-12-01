@@ -33,6 +33,7 @@ namespace Editor.Scripts
 
         //GUI elements and variables
         private string trainARObjectName = "TrainAR Object Name";
+        private bool pivotWasCentered = false;
         private float changedQuality = 1.0f;
         private int targetMeshPolygons = 0;
         private bool preserveBorderEdges = false;
@@ -40,9 +41,9 @@ namespace Editor.Scripts
         private bool preserveUVSeamEdges = false;
         private bool preserveUVFoldoverEdges = false;
         private List<Mesh> originalMeshes = new List<Mesh>();
+        private GameObject originalTrainARObjectReferenceInScene;
         private GameObject trainARObject;
         private UnityEditor.Editor gameObjectEditor;
-        bool advancedQualityOptionstatus = false;
         private PreviewRenderUtility previewRendererUtility;
         private Vector2 currentUserOptionsScrollPosition;
         private Quaternion accumulatedRotation = Quaternion.Euler(0, 0, 0);
@@ -64,22 +65,14 @@ namespace Editor.Scripts
         void OnEnable()
         {
             // Get the selected TrainAR Object when Editor Window is created
-            trainARObject = GameObject.Instantiate(Selection.activeTransform.gameObject);
+            originalTrainARObjectReferenceInScene = Selection.activeTransform.gameObject;
+            trainARObject = GameObject.Instantiate(originalTrainARObjectReferenceInScene);
             trainARObject.transform.position = Vector3.zero;
-            trainARObject.hideFlags = HideFlags.HideAndDontSave;
-
+            trainARObject.hideFlags = HideFlags.None;
+            
             // Add the window to the list of active windows
             activeWindows.Add(this);
-
-            // Safe the original Meshfilters
-            foreach (MeshFilter meshFilter in trainARObject.GetComponentsInChildren<MeshFilter>())
-            {
-                originalMeshes.Add(meshFilter.sharedMesh);
-            }
-
-            // Set the name of the GameObject as the default TrainAR Object name
-            trainARObjectName = trainARObject.gameObject.name;
-
+            
             // Title of the window
             titleContent = new GUIContent("Convert TrainAR Object");
 
@@ -88,6 +81,20 @@ namespace Editor.Scripts
 
             // Focus this window
             this.Focus();
+
+            EditorUtility.DisplayProgressBar("Preparing GameObject", "Unpacking the GameObject and combining all meshes...", 0.99f); //At least this is some indication that something is happening...
+            //Combine all meshes of the TrainAR Object into one mesh
+            trainARObject = ConvertToTrainARObject.CombineMeshes(trainARObject);
+            EditorUtility.ClearProgressBar();
+
+            // Safe the original Meshfilters
+            foreach (MeshFilter meshFilter in trainARObject.GetComponentsInChildren<MeshFilter>())
+            {
+                originalMeshes.Add(meshFilter.sharedMesh);
+            }
+
+            // Set the name of the original GameObject as the default TrainAR Object name
+            trainARObjectName = originalTrainARObjectReferenceInScene.gameObject.name;
 
             // Load the 3D render preview Utility
             previewRendererUtility = new PreviewRenderUtility();
@@ -107,6 +114,12 @@ namespace Editor.Scripts
             if (gameObjectEditor != null)
             {
                 DestroyImmediate(gameObjectEditor);
+            }
+
+            // Destroy the instantiated trainARObject
+            if (trainARObject != null)
+            {
+                DestroyImmediate(trainARObject);
             }
         }
 
@@ -178,6 +191,7 @@ namespace Editor.Scripts
             {
                 trainARObject.GetComponent<MeshFilter>().sharedMesh =
                     CenterPivot(trainARObject.GetComponent<MeshFilter>().sharedMesh);
+                pivotWasCentered = true;
             }
 
             EditorGUILayout.HelpBox(
@@ -210,6 +224,11 @@ namespace Editor.Scripts
                 if (GUILayout.Button(new GUIContent("Simplify")))
                 {
                     //...
+                    
+                    if(pivotWasCentered) //If the pivot was centered before, center it again
+                        trainARObject.GetComponent<MeshFilter>().sharedMesh =
+                            CenterPivot(trainARObject.GetComponent<MeshFilter>().sharedMesh);
+                    ExtractMeshInfo(trainARObject);
                 }
             }
             else //Fast Quadric Error Metrics
@@ -223,6 +242,10 @@ namespace Editor.Scripts
                     // Apply Mesh simplification on the mesh filters of the original selection
                     ConvertToTrainARObject.SimplifyMeshes(originalMeshes, trainARObject, changedQuality,
                         preserveBorderEdges, preserveSurfaceCurvature, preserveUVSeamEdges, preserveUVFoldoverEdges);
+                    
+                    if(pivotWasCentered) //If the pivot was centered before, center it again
+                        trainARObject.GetComponent<MeshFilter>().sharedMesh =
+                            CenterPivot(trainARObject.GetComponent<MeshFilter>().sharedMesh);
 
                     ExtractMeshInfo(trainARObject);
                 }
@@ -267,13 +290,6 @@ namespace Editor.Scripts
                     "This object has more than 10.000 polygons. It might take some time to convert but is ok for large or detailed objects. TrainAR trainings should not exceed 100.000 polygons in total. Consider Simplification.",
                     MessageType.Warning);
             }
-            else
-            {
-                EditorGUILayout.HelpBox(
-                    polygonCount +
-                    " polygons looks good. Note: It is advised to not exceed 100.000 polygons for the entire training. Polygon counts >500.000 will cause performance problems.",
-                    MessageType.Info);
-            }
             
             // Continuously update the preview window
             if (EditorGUI.EndChangeCheck())
@@ -288,7 +304,12 @@ namespace Editor.Scripts
             convertButtonStyle.normal.textColor = Color.green;
             if (GUILayout.Button("Convert to TrainAR Object", convertButtonStyle))
             {
-                ConvertToTrainARObject.InitConversion(trainARObject, trainARObjectName);
+                // Destroy the Axes lines before conversion
+                trainARObject.transform.Cast<Transform>().ToList().ForEach(child => GameObject.DestroyImmediate(child.gameObject));
+                //Apply the standard shader before conversion, regardless of the selected shader for the preview
+                ApplyShaderToTarget("Standard");
+                // Finalize the conversion process
+                ConvertToTrainARObject.FinalizeConversion(originalTrainARObjectReferenceInScene,  trainARObject, trainARObjectName);
                 // Editors created this way need to be destroyed explicitly
                 DestroyImmediate(gameObjectEditor);
                 Close();
