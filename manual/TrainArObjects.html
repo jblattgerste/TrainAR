@@ -81,15 +81,16 @@
 
 <p>To be able to use 3D assets/models for interactions in TrainAR trainings, you need to convert them to <strong>TrainAR Objects</strong> first. This gives them default TrainAR functionality/behaviours and makes them usable in the TrainAR Stateflow.</p>
 <p>To convert a 3D model into a <strong>TrainAR Object</strong>, simply drag-and-drop it from the project tab into the hierarchy tab. To start the conversion either right click on it in the hierarchy tab and select &quot;Convert to TrainAR Object&quot;. Alternatively, while the object is selected, press the appearing button on the bottom left of the scene tab with the label <em>Convert to TrainAR Object</em>. Either way, a preview window displaying the selected object will appear.</p>
-<p>This window contains various settings for the conversion process: </p>
+<p>This window contains various settings for the conversion process:</p>
 <ul>
-<li>The <strong>TrainAR Object Name</strong> is used to reference this specific object in the <a href="../manual/VisualScripting.html">TrainAR Stateflow</a>.</li>
-<li>The <strong>Object Quality</strong> let&#39;s you reduce the quality of the object by lowering the polygon count. Sometimes objects may be to detailed to be efficiently used. It is recommended to not exceed 100000 polygons for all the objects in the entire training.</li>
-<li>The advanced quality setting options let you further customize the quality of the object.</li>
+<li>The optional <strong>Preview Mode</strong>, which lets you choose if you want to see the current object as a mesh, with its texture, or shaded (this is not applied to the converted object).</li>
+<li>The <strong>TrainAR Object Name</strong>, which is used to reference this specific object in the <a href="../manual/VisualScripting.html">TrainAR Stateflow</a>.</li>
+<li>The optional <strong>Move Pivot Point to Center</strong> setting, which automatically moves the point at which TrainAR Objects are grabbed to the objects center.</li>
+<li>The <strong>Object Simplification</strong> settings, which allows to simplify the object by either specifying a target polygon count (Vcglib Tridecimator algorithm, <strong>recommended</strong>) or specify a quality reduction level (Quadric Error Metrics).</li>
 </ul>
 <p>To finalize the conversion simply press the <em>Convert to TrainAR Object</em>-button on the bottom of the preview window. Depending on how complex the object is, this may take a few seconds or even minutes.</p>
 <p><img src="../resources/CreateObject.gif" alt=""></p>
-<p>Note: An object may only be converted to a TrainAR Object, if was not already converted and it has a Transform, MeshFilter and a MeshRenderer applied to it. SkinnedMeshRenderers are currently not supported.</p>
+<p>Note: An object may only be converted to a TrainAR Object, if it was not already converted and it has a Transform, MeshFilter and a MeshRenderer applied to it. SkinnedMeshRenderers are currently not supported.</p>
 <h2 id="object-states">Object States</h2>
 <p>A <strong>TrainAR Object</strong> has certain state attributes with which you can control in which kinds of ways the object can be interacted with. These states are:</p>
 <p><strong>Visible:</strong> Whether or not this TrainAR Object is visible or invisible.</p>

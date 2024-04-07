@@ -28,7 +28,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Editor.Scripts.ConvertToTrainARObject.html",
-          "hash": "3GSp+aKMtvvd+QgAJ+8LSml4w/rcAHRvqnt5RG6K6cE="
+          "hash": "9QxKAab8MqdQga09x0G8SvBjD6ObRSSWDmFjcsduX4U="
         }
       },
       "is_incremental": false,
@@ -112,7 +112,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Editor.Scripts.TrainAREditorMenu.html",
-          "hash": "5iR5/HAc7VcPkYm0wWwQ3Hxfyv3lf+SfUrjX7yrakps="
+          "hash": "Hvj8A47gBNIrWNbuN6ZuzpJFzXaF4R75xviVTHL0dKE="
         }
       },
       "is_incremental": false,
@@ -124,7 +124,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Editor.Scripts.TrainARObjectConversionWindow.html",
-          "hash": "n0YaUgwfS2qyEfpwBoiOMrOjcNqapyU20Rj6euMeFQE="
+          "hash": "ka7pbOXr68jbGv5u1bJS3+BMKobQR2oV6md6T53AcLU="
         }
       },
       "is_incremental": false,
@@ -1108,7 +1108,7 @@
       "output": {
         ".html": {
           "relative_path": "manual/TrainArObjects.html",
-          "hash": "8XYy29XCE3lmpNFErHXFf1Q6eEM/cEWNA9A/QFgVGOk="
+          "hash": "ezicYvhmwjgGTmse/sjw3TQsk9vBb304dUpTrs3PyWs="
         }
       },
       "is_incremental": false,

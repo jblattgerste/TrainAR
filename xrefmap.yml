@@ -26,35 +26,61 @@ references:
   isSpec: "True"
   fullName: Editor.Scripts.ConvertToTrainARObject.AddConvertionContextItem
   nameWithType: ConvertToTrainARObject.AddConvertionContextItem
-- uid: Editor.Scripts.ConvertToTrainARObject.InitConversion(GameObject,System.String)
-  name: InitConversion(GameObject, String)
-  href: api/Editor.Scripts.ConvertToTrainARObject.html#Editor_Scripts_ConvertToTrainARObject_InitConversion_GameObject_System_String_
-  commentId: M:Editor.Scripts.ConvertToTrainARObject.InitConversion(GameObject,System.String)
-  fullName: Editor.Scripts.ConvertToTrainARObject.InitConversion(GameObject, System.String)
-  nameWithType: ConvertToTrainARObject.InitConversion(GameObject, String)
-- uid: Editor.Scripts.ConvertToTrainARObject.InitConversion*
-  name: InitConversion
-  href: api/Editor.Scripts.ConvertToTrainARObject.html#Editor_Scripts_ConvertToTrainARObject_InitConversion_
-  commentId: Overload:Editor.Scripts.ConvertToTrainARObject.InitConversion
+- uid: Editor.Scripts.ConvertToTrainARObject.CombineMeshes(GameObject)
+  name: CombineMeshes(GameObject)
+  href: api/Editor.Scripts.ConvertToTrainARObject.html#Editor_Scripts_ConvertToTrainARObject_CombineMeshes_GameObject_
+  commentId: M:Editor.Scripts.ConvertToTrainARObject.CombineMeshes(GameObject)
+  fullName: Editor.Scripts.ConvertToTrainARObject.CombineMeshes(GameObject)
+  nameWithType: ConvertToTrainARObject.CombineMeshes(GameObject)
+- uid: Editor.Scripts.ConvertToTrainARObject.CombineMeshes*
+  name: CombineMeshes
+  href: api/Editor.Scripts.ConvertToTrainARObject.html#Editor_Scripts_ConvertToTrainARObject_CombineMeshes_
+  commentId: Overload:Editor.Scripts.ConvertToTrainARObject.CombineMeshes
   isSpec: "True"
-  fullName: Editor.Scripts.ConvertToTrainARObject.InitConversion
-  nameWithType: ConvertToTrainARObject.InitConversion
-- uid: Editor.Scripts.ConvertToTrainARObject.SimplifyMeshes(System.Collections.Generic.IEnumerable{Mesh},GameObject,System.Single,System.Boolean,System.Boolean,System.Boolean,System.Boolean)
-  name: SimplifyMeshes(IEnumerable<Mesh>, GameObject, Single, Boolean, Boolean, Boolean, Boolean)
-  href: api/Editor.Scripts.ConvertToTrainARObject.html#Editor_Scripts_ConvertToTrainARObject_SimplifyMeshes_System_Collections_Generic_IEnumerable_Mesh__GameObject_System_Single_System_Boolean_System_Boolean_System_Boolean_System_Boolean_
-  commentId: M:Editor.Scripts.ConvertToTrainARObject.SimplifyMeshes(System.Collections.Generic.IEnumerable{Mesh},GameObject,System.Single,System.Boolean,System.Boolean,System.Boolean,System.Boolean)
-  name.vb: SimplifyMeshes(IEnumerable(Of Mesh), GameObject, Single, Boolean, Boolean, Boolean, Boolean)
-  fullName: Editor.Scripts.ConvertToTrainARObject.SimplifyMeshes(System.Collections.Generic.IEnumerable<Mesh>, GameObject, System.Single, System.Boolean, System.Boolean, System.Boolean, System.Boolean)
-  fullName.vb: Editor.Scripts.ConvertToTrainARObject.SimplifyMeshes(System.Collections.Generic.IEnumerable(Of Mesh), GameObject, System.Single, System.Boolean, System.Boolean, System.Boolean, System.Boolean)
-  nameWithType: ConvertToTrainARObject.SimplifyMeshes(IEnumerable<Mesh>, GameObject, Single, Boolean, Boolean, Boolean, Boolean)
-  nameWithType.vb: ConvertToTrainARObject.SimplifyMeshes(IEnumerable(Of Mesh), GameObject, Single, Boolean, Boolean, Boolean, Boolean)
-- uid: Editor.Scripts.ConvertToTrainARObject.SimplifyMeshes*
-  name: SimplifyMeshes
-  href: api/Editor.Scripts.ConvertToTrainARObject.html#Editor_Scripts_ConvertToTrainARObject_SimplifyMeshes_
-  commentId: Overload:Editor.Scripts.ConvertToTrainARObject.SimplifyMeshes
+  fullName: Editor.Scripts.ConvertToTrainARObject.CombineMeshes
+  nameWithType: ConvertToTrainARObject.CombineMeshes
+- uid: Editor.Scripts.ConvertToTrainARObject.FinalizeConversion(GameObject,GameObject,System.String)
+  name: FinalizeConversion(GameObject, GameObject, String)
+  href: api/Editor.Scripts.ConvertToTrainARObject.html#Editor_Scripts_ConvertToTrainARObject_FinalizeConversion_GameObject_GameObject_System_String_
+  commentId: M:Editor.Scripts.ConvertToTrainARObject.FinalizeConversion(GameObject,GameObject,System.String)
+  fullName: Editor.Scripts.ConvertToTrainARObject.FinalizeConversion(GameObject, GameObject, System.String)
+  nameWithType: ConvertToTrainARObject.FinalizeConversion(GameObject, GameObject, String)
+- uid: Editor.Scripts.ConvertToTrainARObject.FinalizeConversion*
+  name: FinalizeConversion
+  href: api/Editor.Scripts.ConvertToTrainARObject.html#Editor_Scripts_ConvertToTrainARObject_FinalizeConversion_
+  commentId: Overload:Editor.Scripts.ConvertToTrainARObject.FinalizeConversion
   isSpec: "True"
-  fullName: Editor.Scripts.ConvertToTrainARObject.SimplifyMeshes
-  nameWithType: ConvertToTrainARObject.SimplifyMeshes
+  fullName: Editor.Scripts.ConvertToTrainARObject.FinalizeConversion
+  nameWithType: ConvertToTrainARObject.FinalizeConversion
+- uid: Editor.Scripts.ConvertToTrainARObject.SimplifyMeshesUsingQuadrics(System.Collections.Generic.IEnumerable{UnityEngine.Mesh},GameObject,System.Single,System.Boolean,System.Boolean,System.Boolean,System.Boolean)
+  name: SimplifyMeshesUsingQuadrics(IEnumerable<UnityEngine.Mesh>, GameObject, Single, Boolean, Boolean, Boolean, Boolean)
+  href: api/Editor.Scripts.ConvertToTrainARObject.html#Editor_Scripts_ConvertToTrainARObject_SimplifyMeshesUsingQuadrics_System_Collections_Generic_IEnumerable_UnityEngine_Mesh__GameObject_System_Single_System_Boolean_System_Boolean_System_Boolean_System_Boolean_
+  commentId: M:Editor.Scripts.ConvertToTrainARObject.SimplifyMeshesUsingQuadrics(System.Collections.Generic.IEnumerable{UnityEngine.Mesh},GameObject,System.Single,System.Boolean,System.Boolean,System.Boolean,System.Boolean)
+  name.vb: SimplifyMeshesUsingQuadrics(IEnumerable(Of UnityEngine.Mesh), GameObject, Single, Boolean, Boolean, Boolean, Boolean)
+  fullName: Editor.Scripts.ConvertToTrainARObject.SimplifyMeshesUsingQuadrics(System.Collections.Generic.IEnumerable<UnityEngine.Mesh>, GameObject, System.Single, System.Boolean, System.Boolean, System.Boolean, System.Boolean)
+  fullName.vb: Editor.Scripts.ConvertToTrainARObject.SimplifyMeshesUsingQuadrics(System.Collections.Generic.IEnumerable(Of UnityEngine.Mesh), GameObject, System.Single, System.Boolean, System.Boolean, System.Boolean, System.Boolean)
+  nameWithType: ConvertToTrainARObject.SimplifyMeshesUsingQuadrics(IEnumerable<UnityEngine.Mesh>, GameObject, Single, Boolean, Boolean, Boolean, Boolean)
+  nameWithType.vb: ConvertToTrainARObject.SimplifyMeshesUsingQuadrics(IEnumerable(Of UnityEngine.Mesh), GameObject, Single, Boolean, Boolean, Boolean, Boolean)
+- uid: Editor.Scripts.ConvertToTrainARObject.SimplifyMeshesUsingQuadrics*
+  name: SimplifyMeshesUsingQuadrics
+  href: api/Editor.Scripts.ConvertToTrainARObject.html#Editor_Scripts_ConvertToTrainARObject_SimplifyMeshesUsingQuadrics_
+  commentId: Overload:Editor.Scripts.ConvertToTrainARObject.SimplifyMeshesUsingQuadrics
+  isSpec: "True"
+  fullName: Editor.Scripts.ConvertToTrainARObject.SimplifyMeshesUsingQuadrics
+  nameWithType: ConvertToTrainARObject.SimplifyMeshesUsingQuadrics
+- uid: Editor.Scripts.ConvertToTrainARObject.SimplifyMeshesUsingTridecimator(UnityEngine.Mesh,System.Int32)
+  name: SimplifyMeshesUsingTridecimator(UnityEngine.Mesh, Int32)
+  href: api/Editor.Scripts.ConvertToTrainARObject.html#Editor_Scripts_ConvertToTrainARObject_SimplifyMeshesUsingTridecimator_UnityEngine_Mesh_System_Int32_
+  commentId: M:Editor.Scripts.ConvertToTrainARObject.SimplifyMeshesUsingTridecimator(UnityEngine.Mesh,System.Int32)
+  fullName: Editor.Scripts.ConvertToTrainARObject.SimplifyMeshesUsingTridecimator(UnityEngine.Mesh, System.Int32)
+  nameWithType: ConvertToTrainARObject.SimplifyMeshesUsingTridecimator(UnityEngine.Mesh, Int32)
+- uid: Editor.Scripts.ConvertToTrainARObject.SimplifyMeshesUsingTridecimator*
+  name: SimplifyMeshesUsingTridecimator
+  href: api/Editor.Scripts.ConvertToTrainARObject.html#Editor_Scripts_ConvertToTrainARObject_SimplifyMeshesUsingTridecimator_
+  commentId: Overload:Editor.Scripts.ConvertToTrainARObject.SimplifyMeshesUsingTridecimator
+  isSpec: "True"
+  fullName: Editor.Scripts.ConvertToTrainARObject.SimplifyMeshesUsingTridecimator
+  nameWithType: ConvertToTrainARObject.SimplifyMeshesUsingTridecimator
 - uid: Editor.Scripts.EditorTrainARObjectToolbar
   name: EditorTrainARObjectToolbar
   href: api/Editor.Scripts.EditorTrainARObjectToolbar.html
