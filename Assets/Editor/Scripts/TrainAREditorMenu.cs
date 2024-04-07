@@ -64,6 +64,9 @@ namespace Editor.Scripts
 
                 //Force Unity into 3D mode
                 SceneView.lastActiveSceneView.in2DMode = false;
+
+                //Force Unity Scene into Pivot mode
+                Tools.pivotMode = PivotMode.Pivot;
                 
                 Debug.Log("Successfully switched to TrainAR authoring tool. ");
             }

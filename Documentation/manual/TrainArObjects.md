@@ -4,17 +4,18 @@ To be able to use 3D assets/models for interactions in TrainAR trainings, you ne
 
 To convert a 3D model into a **TrainAR Object**, simply drag-and-drop it from the project tab into the hierarchy tab. To start the conversion either right click on it in the hierarchy tab and select "Convert to TrainAR Object". Alternatively, while the object is selected, press the appearing button on the bottom left of the scene tab with the label *Convert to TrainAR Object*. Either way, a preview window displaying the selected object will appear.
 
-This window contains various settings for the conversion process: 
+This window contains various settings for the conversion process:
 
-* The **TrainAR Object Name** is used to reference this specific object in the [TrainAR Stateflow](../manual/VisualScripting.html).
-* The **Object Quality** let's you reduce the quality of the object by lowering the polygon count. Sometimes objects may be to detailed to be efficiently used. It is recommended to not exceed 100000 polygons for all the objects in the entire training.
-* The advanced quality setting options let you further customize the quality of the object.
+* The optional **Preview Mode**, which lets you choose if you want to see the current object as a mesh, with its texture, or shaded (this is not applied to the converted object).
+* The **TrainAR Object Name**, which is used to reference this specific object in the [TrainAR Stateflow](../manual/VisualScripting.html).
+* The optional **Move Pivot Point to Center** setting, which automatically moves the point at which TrainAR Objects are grabbed to the objects center.
+* The **Object Simplification** settings, which allows to simplify the object by either specifying a target polygon count (Vcglib Tridecimator algorithm, **recommended**) or specify a quality reduction level (Quadric Error Metrics).
 
 To finalize the conversion simply press the *Convert to TrainAR Object*-button on the bottom of the preview window. Depending on how complex the object is, this may take a few seconds or even minutes.
 
 ![](../resources/CreateObject.gif)
 
-Note: An object may only be converted to a TrainAR Object, if was not already converted and it has a Transform, MeshFilter and a MeshRenderer applied to it. SkinnedMeshRenderers are currently not supported.
+Note: An object may only be converted to a TrainAR Object, if it was not already converted and it has a Transform, MeshFilter and a MeshRenderer applied to it. SkinnedMeshRenderers are currently not supported.
 
 ## Object States
 

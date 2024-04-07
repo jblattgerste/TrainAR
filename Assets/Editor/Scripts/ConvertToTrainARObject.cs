@@ -4,7 +4,10 @@ using Interaction;
 using UnityEditor;
 using UnityEditor.SceneManagement;
 using UnityEngine;
+using UnityMeshDecimation;
+using UnityMeshDecimation.Internal;
 using UnityMeshSimplifier;
+using Mesh = UnityEngine.Mesh;
 using MeshCombiner = Others.MeshCombiner;
 
 namespace Editor.Scripts
@@ -108,38 +111,49 @@ namespace Editor.Scripts
         }
 
         /// <summary>
-        /// Initializes the conversion process for the given object.
+        /// Finalizes the conversion process for the given object, replacing the original object in the scene.
         /// </summary>
-        /// <param name="selectedObject">The object that is to be converted to a TrainAR Object</param>
+        /// <param name="originalObject">The original GameObject in the scene.</param>
+        /// <param name="instantiatedPreviewObject">The instantiated copy of the GameObject.</param>
         /// <param name="trainARObjectName">The specified name of the TrainAR Object.</param>
-        public static void InitConversion(GameObject selectedObject, string trainARObjectName)
+        /// <param name="pivotPointOffset">The offset of the pivot if it was moved (0,0,0 otherwise)</param>
+        public static void FinalizeConversion(GameObject originalObject, GameObject instantiatedPreviewObject, string trainARObjectName)
         {
-            // If selected object is a part of a prefab instance, unpack it completely.
-            if (PrefabUtility.IsPartOfPrefabInstance(selectedObject))
+            instantiatedPreviewObject = Instantiate(instantiatedPreviewObject);
+            
+            // Assuming both original and instantiated objects have a Renderer component in the same structure
+            Renderer originalRenderer = originalObject.GetComponent<Renderer>();
+            Renderer instantiatedRenderer = instantiatedPreviewObject.GetComponent<Renderer>();
+
+            if (originalRenderer != null && instantiatedRenderer != null)
             {
-                PrefabUtility.UnpackPrefabInstance(selectedObject, PrefabUnpackMode.Completely, InteractionMode.UserAction);
+                // Copy the materials array from the original object to the instantiated object
+                instantiatedRenderer.sharedMaterials = originalRenderer.sharedMaterials;
+            }
+            
+            // Convert the instantiated object to a TrainAR object
+            instantiatedPreviewObject.AddComponent<TrainARObject>();
+            instantiatedPreviewObject.tag = "TrainARObject";
+
+            // Apply the TrainAR Object name
+            instantiatedPreviewObject.name = trainARObjectName;
+
+            // Replace original object in the scene with the instantiated object
+            if (originalObject != null)
+            {
+                instantiatedPreviewObject.transform.position = originalObject.transform.position;
+                instantiatedPreviewObject.transform.rotation = originalObject.transform.rotation;
+                instantiatedPreviewObject.transform.localScale = Vector3.one;
+        
+                GameObject.DestroyImmediate(originalObject);
             }
 
-            //Enables the read/write of vertices/indeces of shared meshes 
-            EnableReadWriteOnMeshes(selectedObject);
-
-            //Combine all meshes into one
-            GameObject newSelectedObject = CombineMeshes(selectedObject);
-            Undo.RegisterCreatedObjectUndo(newSelectedObject.gameObject, "Convert to TrainAR Object");
-            
-            //Convert the object to a TrainAR object
-            //TrainARObject.cs automatically imports dependencies and all the other necessary scripts when attached
-            newSelectedObject.AddComponent<TrainARObject>();
-            newSelectedObject.tag = "TrainARObject";
-            
-            // Apply the TrainAR Object name
-            newSelectedObject.name = trainARObjectName;
-            
-            //Reset the selection to the newly converted GameObject
-            Selection.activeTransform = newSelectedObject.transform;
+            // Reset the selection to the newly converted GameObject
+            Selection.activeTransform = instantiatedPreviewObject.transform;
             Selection.selectionChanged.Invoke();
             Debug.Log("Successfully converted GameObject to TrainAR Object.");
         }
+
 
         /// <summary>
         /// Combines all meshes of the selected object (e.g. all meshes in child structures) into a singular mesh,
@@ -147,8 +161,19 @@ namespace Editor.Scripts
         /// </summary>
         /// <param name="objectToCombineAllMeshesFor">The GameObject which meshes (parent and child) should be combined</param>
         /// <returns></returns>
-        private static GameObject CombineMeshes(GameObject objectToCombineAllMeshesFor)
+        public static GameObject CombineMeshes(GameObject objectToCombineAllMeshesFor)
         {
+            Undo.RegisterCreatedObjectUndo(objectToCombineAllMeshesFor.gameObject, "Convert to TrainAR Object");
+            
+            // If selected object is a part of a prefab instance, unpack it completely.
+            if (PrefabUtility.IsPartOfPrefabInstance(objectToCombineAllMeshesFor))
+            {
+                PrefabUtility.UnpackPrefabInstance(objectToCombineAllMeshesFor, PrefabUnpackMode.Completely, InteractionMode.UserAction);
+            }
+
+            //Enables the read/write of vertices/indeces of shared meshes 
+            EnableReadWriteOnMeshes(objectToCombineAllMeshesFor);
+            
             //Create a new empty parent for the combination
             GameObject newGameObjectWithCombinedMeshes = new GameObject(objectToCombineAllMeshesFor.name, typeof(MeshFilter), typeof(MeshRenderer));
             newGameObjectWithCombinedMeshes.transform.SetPositionAndRotation(objectToCombineAllMeshesFor.transform.position, objectToCombineAllMeshesFor.transform.rotation);
@@ -186,8 +211,33 @@ namespace Editor.Scripts
             return newGameObjectWithCombinedMeshes;
         }
 
+        /// <summary>
+        /// Simplifies one given mesh (careful, this is different to the SimplifyMeshesUsingQuadrics method, which simplifies all meshes of a given object)
+        /// to the given target polygon count using the Tridecimator method from the UnityMeshDecimation package.
+        /// </summary>
+        /// <param name="providedMesh">The Mesh to simplify</param>
+        /// <param name="targetMeshPolygons">the target polygon count to simplify to</param>
+        /// <returns>The simplified mesh</returns>
+        public static Mesh SimplifyMeshesUsingTridecimator(Mesh providedMesh, int targetMeshPolygons)
+        {
+            var conditions= new TargetConditions
+            {
+                faceCount = targetMeshPolygons
+            };
+            var parameter = new EdgeCollapseParameter
+            {
+                UsedProperty = VertexProperty.UV0
+            };
+            
+            var meshDecimation = new UnityMeshDecimation.UnityMeshDecimation();
+            meshDecimation.Execute(providedMesh, parameter, conditions);
+            return meshDecimation.ToMesh();
+        }
+
         ///  <summary>
         ///  Uses the Meshsimplifier to decimate the mesh of the passed Gameobject as well as all of it's children's meshes.
+        ///
+        ///  Note: In the current implementation this only simplifies one single mesh but it works so i leave this as it is here.
         ///  </summary>
         ///  <param name="currentSelectedObject">The current Gameobject, to which the mesh changes are applied to</param>
         ///  <param name="quality">The desired quality of the simplification. Must be between 0 and 1.</param>
@@ -197,7 +247,7 @@ namespace Editor.Scripts
         ///  <param name="preserveSurfaceCurvature">Optional parameter: Should surface curvature be preserved?</param>
         ///  <param name="preserveUVSeamEdges">Optional parameter: Should UV seam edges be preserved?</param>
         ///  <param name="preserveUVFoldoverEdges">Optional parameter: Should UV foldover edges be preserved?</param>
-        public static void SimplifyMeshes(IEnumerable<Mesh> originalMeshes, GameObject currentSelectedObject, float quality,
+        public static void SimplifyMeshesUsingQuadrics(IEnumerable<Mesh> originalMeshes, GameObject currentSelectedObject, float quality,
             bool preserveBorderEdges = false, bool preserveSurfaceCurvature = false, bool preserveUVSeamEdges = false, bool preserveUVFoldoverEdges = false)
         {
             // Create instance of Unity Mesh Simplifier
