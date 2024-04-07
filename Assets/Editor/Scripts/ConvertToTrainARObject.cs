@@ -121,6 +121,16 @@ namespace Editor.Scripts
         {
             instantiatedPreviewObject = Instantiate(instantiatedPreviewObject);
             
+            // Assuming both original and instantiated objects have a Renderer component in the same structure
+            Renderer originalRenderer = originalObject.GetComponent<Renderer>();
+            Renderer instantiatedRenderer = instantiatedPreviewObject.GetComponent<Renderer>();
+
+            if (originalRenderer != null && instantiatedRenderer != null)
+            {
+                // Copy the materials array from the original object to the instantiated object
+                instantiatedRenderer.sharedMaterials = originalRenderer.sharedMaterials;
+            }
+            
             // Convert the instantiated object to a TrainAR object
             instantiatedPreviewObject.AddComponent<TrainARObject>();
             instantiatedPreviewObject.tag = "TrainARObject";
