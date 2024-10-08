@@ -47,9 +47,15 @@ jobs:
         with:
           name: _site
 
+      # List downloaded files
+      - name: List downloaded files
+        run: ls -la _site
+
+      # Deploy to github pages
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_branch: gh-pages
           publish_dir: _site
+          verbose: true
