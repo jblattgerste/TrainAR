@@ -2,6 +2,7 @@
 using Static;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.Serialization;
 
 namespace Interaction
 {
@@ -41,7 +42,7 @@ namespace Interaction
         /// Is the object combineable?
         /// </summary>
         /// <value>If true it is combinable.</value>
-        public bool isCombineable = true;
+        [FormerlySerializedAs("isCombineable")] public bool isCombinable = true;
         /// <summary>
         /// The name of the TrainAR object that is used for the statemachine check.
         /// By default, this is the name of the TrainAR object.
@@ -238,7 +239,7 @@ namespace Interaction
         {
                     if (gameObject.activeSelf)
                     {
-                        if (!isCombineable)
+                        if (!isCombinable)
                         {
                             error.Invoke();
                             if (intersectedObject != null)

@@ -155,7 +155,7 @@ namespace UI
             //interactButton.interactable = interactionController.isSelectingObject;
 
             //When grabbing object, and intersecting with another object or when selecting object make interactbutton interactable.
-            if (interactionController.isIntersecting && interactionController.isGrabbingObject && interactionController.selectedObject.GetComponent<TrainARObject>().isCombineable && interactionController.intersectedObject.GetComponent<TrainARObject>().isCombineable || interactionController.isSelectingObject && interactionController.selectedObject.GetComponent<TrainARObject>().isInteractable && !interactionController.isIntersecting)
+            if (interactionController.isIntersecting && interactionController.isGrabbingObject && interactionController.selectedObject.GetComponent<TrainARObject>().isCombinable && interactionController.intersectedObject.GetComponent<TrainARObject>().isCombinable || interactionController.isSelectingObject && interactionController.selectedObject.GetComponent<TrainARObject>().isInteractable && !interactionController.isIntersecting)
             {
                 interactButton.interactable = true;
                 if (interactionController.isIntersecting)
