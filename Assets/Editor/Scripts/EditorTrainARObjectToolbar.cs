@@ -207,7 +207,7 @@ namespace Editor.Scripts
             //Update this when the selection changed or the user undid/redid actions
             Selection.selectionChanged += HierarchySelectionChangedGrabbableToggle;
             Undo.undoRedoPerformed += HierarchySelectionChangedGrabbableToggle;
-            this.RegisterValueChangedCallback(ToggleObjectVisibility);
+            this.RegisterValueChangedCallback(ToggleObjectGrabbability);
         }
 
         private void HierarchySelectionChangedGrabbableToggle()
@@ -239,7 +239,7 @@ namespace Editor.Scripts
             }
         }
 
-        private void ToggleObjectVisibility(ChangeEvent<bool> newSelectionEvent)
+        private void ToggleObjectGrabbability(ChangeEvent<bool> newSelectionEvent)
         {
             if (Selection.gameObjects.Length <= 0)
             {
@@ -319,7 +319,7 @@ namespace Editor.Scripts
             //Update this when the selection changed or the user undid/redid actions
             Selection.selectionChanged += HierarchySelectionChangedInteractableToggle;
             Undo.undoRedoPerformed += HierarchySelectionChangedInteractableToggle;
-            this.RegisterValueChangedCallback(ToggleObjectVisibility);
+            this.RegisterValueChangedCallback(ToggleObjectInteractablity);
         }
 
         private void HierarchySelectionChangedInteractableToggle()
@@ -351,7 +351,7 @@ namespace Editor.Scripts
             }
         }
 
-        private void ToggleObjectVisibility(ChangeEvent<bool> newSelectionEvent)
+        private void ToggleObjectInteractablity(ChangeEvent<bool> newSelectionEvent)
         {
             if (Selection.gameObjects.Length <= 0)
             {
@@ -418,7 +418,7 @@ namespace Editor.Scripts
             // Set the toggle value according to the selected objects current state.
             if (Selection.activeTransform != null)
             {
-                if (Selection.gameObjects[0].GetComponent<TrainARObject>().isCombineable)
+                if (Selection.gameObjects[0].GetComponent<TrainARObject>().isCombinable)
                 {
                     UpdateToggleStatus(activeStateString, true);
                 }
@@ -431,6 +431,7 @@ namespace Editor.Scripts
             //Update this when the selection changed or the user undid/redid actions
             Selection.selectionChanged += HierarchySelectionChangedCombinableToggle;
             Undo.undoRedoPerformed += HierarchySelectionChangedCombinableToggle;
+            this.RegisterValueChangedCallback(ToggleObjectCombinability);
         }
 
         private void HierarchySelectionChangedCombinableToggle()
@@ -450,7 +451,7 @@ namespace Editor.Scripts
             }
             else
             {
-                if (Selection.gameObjects[0].GetComponent<TrainARObject>().isCombineable)
+                if (Selection.gameObjects[0].GetComponent<TrainARObject>().isCombinable)
                 {
                     UpdateToggleStatus(activeStateString, true);
                 }
@@ -462,7 +463,7 @@ namespace Editor.Scripts
             }
         }
 
-        private void ToggleObjectVisibilityCombinableToggle(ChangeEvent<bool> newSelectionEvent)
+        private void ToggleObjectCombinability(ChangeEvent<bool> newSelectionEvent)
         {
             if (Selection.gameObjects.Length <= 0)
             {
@@ -478,20 +479,20 @@ namespace Editor.Scripts
             }
             else
             {
-                if (newSelectionEvent.newValue &&  !Selection.gameObjects[0].GetComponent<TrainARObject>().isCombineable)
+                if (newSelectionEvent.newValue &&  !Selection.gameObjects[0].GetComponent<TrainARObject>().isCombinable)
                 {
                     //Register changes on the undo stack
                     Undo.RegisterFullObjectHierarchyUndo(Selection.gameObjects[0], "Toggle Combinability");
                     
-                    Selection.gameObjects[0].GetComponent<TrainARObject>().isCombineable = true;
+                    Selection.gameObjects[0].GetComponent<TrainARObject>().isCombinable = true;
                     UpdateToggleStatus(activeStateString, true);
                 }
-                else if(!newSelectionEvent.newValue &&  Selection.gameObjects[0].GetComponent<TrainARObject>().isCombineable)
+                else if(!newSelectionEvent.newValue &&  Selection.gameObjects[0].GetComponent<TrainARObject>().isCombinable)
                 {
                     //Register changes on the undo stack
                     Undo.RegisterFullObjectHierarchyUndo(Selection.gameObjects[0], "Toggle Combinability");
                     
-                    Selection.gameObjects[0].GetComponent<TrainARObject>().isCombineable = false;
+                    Selection.gameObjects[0].GetComponent<TrainARObject>().isCombinable = false;
                     UpdateToggleStatus(inactiveStateString, false);
                 }
                 else

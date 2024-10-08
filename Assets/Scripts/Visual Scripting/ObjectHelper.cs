@@ -262,7 +262,7 @@ namespace Visual_Scripting
                     trainARObject.gameObject.GetComponent<TrainARObject>().isInteractable = flow.GetValue<bool>(InteractabilityToggle);
                     break;
                 case TrainARHelperChoices.ToggleCombinable:
-                    trainARObject.gameObject.GetComponent<TrainARObject>().isCombineable = flow.GetValue<bool>(CombinabilityToggle);
+                    trainARObject.gameObject.GetComponent<TrainARObject>().isCombinable = flow.GetValue<bool>(CombinabilityToggle);
                     break;
                 case TrainARHelperChoices.DestroyObject:
                     //If the object to be destroyed is currently grabbed, call Release on the InteractionController
