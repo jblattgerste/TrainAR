@@ -1,0 +1,171 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Namespace Editor.Scripts
+   | TrainAR Documentation </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Namespace Editor.Scripts
+   | TrainAR Documentation ">
+    <meta name="generator" content="docfx 2.59.4.0">
+    
+    <link rel="shortcut icon" href="../resources/favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../resources/logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list">Search Results for <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Editor.Scripts">
+  
+  <h1 id="Editor_Scripts" data-uid="Editor.Scripts" class="text-break">Namespace Editor.Scripts
+  </h1>
+  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="markdown level0 remarks"></div>
+    <h3 id="classes">Classes
+  </h3>
+      <h4><a class="xref" href="Editor.Scripts.ConvertToTrainARObject.html">ConvertToTrainARObject</a></h4>
+      <section><p>ConvertToTrainARObjects is an Editor script that adds a right-click context menu to GameObjects in the hierarchy named
+&quot;Convert to TrainAR Object&quot;. When the object is eligible (therefore has a transform, MeshFilter and MeshRenderer), this can
+be used to convert GameObjects to TrainAR Objects, where behaviours (e.g. TrainAR Object) are automatically added and the mesh
+is combined an simplyfied.</p>
+</section>
+      <h4><a class="xref" href="Editor.Scripts.EditorTrainARObjectToolbar.html">EditorTrainARObjectToolbar</a></h4>
+      <section><p>The EditorTrainARObjectToolbar is the toolbar in the sceneview when using the TrainAR authoring overlay. It allows
+setting TrainAR Object states like active/inactive, grabbable, interactable, or combinable without opening an inspector.</p>
+</section>
+      <h4><a class="xref" href="Editor.Scripts.MeshCombinerEditor.html">MeshCombinerEditor</a></h4>
+      <section><p>The MeshCombinerEditor is a utility class that helps to combine meshes.</p>
+</section>
+      <h4><a class="xref" href="Editor.Scripts.OpenAuthoringToolOnLoad.html">OpenAuthoringToolOnLoad</a></h4>
+      <section><p>Every time the editor is started, trigger switching to the TrainAR authoring tool.</p>
+</section>
+      <h4><a class="xref" href="Editor.Scripts.PlayModeButtonOverride.html">PlayModeButtonOverride</a></h4>
+      <section><p>The PlayModeButtonOverride editor script implements utility for the unity editor play buttons that overrides
+its functionality with TrainAR specific functionality to either switch the build target if there is an
+unsupported one currently selected or allow building to a device by clicking the play button.</p>
+<p>This is done for convenience of building and also to prevent the playmode execution, as this is
+currently not supported by the framework.</p>
+</section>
+      <h4><a class="xref" href="Editor.Scripts.StateRequestSimulatorEditor.html">StateRequestSimulatorEditor</a></h4>
+      <section><p>Adds the GUI to the inspector to simulate stateRequests to test the statemachine in the editor.
+This is an Unity Editor Utility Class for the &quot;StateRequestSimulator&quot; class.</p>
+</section>
+      <h4><a class="xref" href="Editor.Scripts.TrainARConvertObjectToolbar.html">TrainARConvertObjectToolbar</a></h4>
+      <section><p>Displays and initializes the editor toolbar which contains a button that initializes the conversion process
+for a TrainAR Object of the currently selected object.</p>
+</section>
+      <h4><a class="xref" href="Editor.Scripts.TrainAREditorMenu.html">TrainAREditorMenu</a></h4>
+      <section><p>The TrainAREditorMenu adds a top menu with options called &quot;TrainAR&quot; for trainAR specific funtionallity like
+building, switching plattform, switching the mode (TrainAR/Unity Editor), and other options.</p>
+</section>
+      <h4><a class="xref" href="Editor.Scripts.TrainARObjectConversionWindow.html">TrainARObjectConversionWindow</a></h4>
+      <section><p>Instance of the Editor Window with enables the user to specify options for the TrainAR Object and initializes
+the conversion process.</p>
+</section>
+      <h4><a class="xref" href="Editor.Scripts.TrainARObjectOffsetToolbar.html">TrainARObjectOffsetToolbar</a></h4>
+      <section><p>The TrainARObjectOffsetToolbar is a toolbar in the Scene view when using the TrainAR authoring overlay. It is displayed
+instead of the TrainARObjectToolbar when two objects are selected in the editor.
+It displays the positional and rotational offsets between the two selected objects, so the user can use them,
+e.g. for the FuseObjects functionality of the object helper node. </p>
+</section>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            TrainAR Documentation
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

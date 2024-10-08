@@ -1,0 +1,904 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class TrainARObject
+   | TrainAR Documentation </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class TrainARObject
+   | TrainAR Documentation ">
+    <meta name="generator" content="docfx 2.59.4.0">
+    
+    <link rel="shortcut icon" href="../resources/favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../resources/logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list">Search Results for <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Interaction.TrainARObject">
+  
+  
+  <h1 id="Interaction_TrainARObject" data-uid="Interaction.TrainARObject" class="text-break">Class TrainARObject
+  </h1>
+  <div class="markdown level0 summary"><p>The main behaviour script for a TrainAR object.
+This is automatically added when converting GameObject to TrainAR objects
+After adding this script all following RequiredComponents are added.
+SelectionBase, MeshCollider, BoxCollider, RigidbodyController,
+MaterialController, AudioController, Rigidbody, Outline,
+CollisionController.
+The TrainAR events that are triggered on actions are also defined in this script.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">TrainARObject</span></div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Interaction.html">Interaction</a></h6>
+  <h6><strong>Assembly</strong>: Assembly-CSharp.dll</h6>
+  <h5 id="Interaction_TrainARObject_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class TrainARObject : MonoBehaviour</code></pre>
+  </div>
+  <h3 id="fields">Fields
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jblattgerste/TrainAR/new/main/apiSpec/new?filename=Interaction_TrainARObject_error.md&amp;value=---%0Auid%3A%20Interaction.TrainARObject.error%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jblattgerste/TrainAR/blob/main/Assets/Scripts/Interaction/TrainARObject.cs/#L151">View Source</a>
+  </span>
+  <h4 id="Interaction_TrainARObject_error" data-uid="Interaction.TrainARObject.error">error</h4>
+  <div class="markdown level1 summary"><p>Error event. Triggered when an action is triggered on this TrainAR object that was not accepted by the statemachine.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public UnityEvent error</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">UnityEvent</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jblattgerste/TrainAR/new/main/apiSpec/new?filename=Interaction_TrainARObject_interactableName.md&amp;value=---%0Auid%3A%20Interaction.TrainARObject.interactableName%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jblattgerste/TrainAR/blob/main/Assets/Scripts/Interaction/TrainARObject.cs/#L51">View Source</a>
+  </span>
+  <h4 id="Interaction_TrainARObject_interactableName" data-uid="Interaction.TrainARObject.interactableName">interactableName</h4>
+  <div class="markdown level1 summary"><p>The name of the TrainAR object that is used for the statemachine check.
+By default, this is the name of the TrainAR object.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string interactableName</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><p>String based on the object name.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jblattgerste/TrainAR/new/main/apiSpec/new?filename=Interaction_TrainARObject_Intersection.md&amp;value=---%0Auid%3A%20Interaction.TrainARObject.Intersection%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jblattgerste/TrainAR/blob/main/Assets/Scripts/Interaction/TrainARObject.cs/#L81">View Source</a>
+  </span>
+  <h4 id="Interaction_TrainARObject_Intersection" data-uid="Interaction.TrainARObject.Intersection">Intersection</h4>
+  <div class="markdown level1 summary"><p>The Object this object is currently intersecting with.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public CollisionController.Intersection Intersection</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Interaction.CollisionController.Intersection.html">CollisionController.Intersection</a></td>
+        <td><p>Is set on runtime.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jblattgerste/TrainAR/new/main/apiSpec/new?filename=Interaction_TrainARObject_isCombinable.md&amp;value=---%0Auid%3A%20Interaction.TrainARObject.isCombinable%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jblattgerste/TrainAR/blob/main/Assets/Scripts/Interaction/TrainARObject.cs/#L45">View Source</a>
+  </span>
+  <h4 id="Interaction_TrainARObject_isCombinable" data-uid="Interaction.TrainARObject.isCombinable">isCombinable</h4>
+  <div class="markdown level1 summary"><p>Is the object combineable?</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool isCombinable</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p>If true it is combinable.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jblattgerste/TrainAR/new/main/apiSpec/new?filename=Interaction_TrainARObject_isGrabbable.md&amp;value=---%0Auid%3A%20Interaction.TrainARObject.isGrabbable%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jblattgerste/TrainAR/blob/main/Assets/Scripts/Interaction/TrainARObject.cs/#L35">View Source</a>
+  </span>
+  <h4 id="Interaction_TrainARObject_isGrabbable" data-uid="Interaction.TrainARObject.isGrabbable">isGrabbable</h4>
+  <div class="markdown level1 summary"><p>Is the object grabbable?</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool isGrabbable</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p>If true it is grabbable.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jblattgerste/TrainAR/new/main/apiSpec/new?filename=Interaction_TrainARObject_isGrabbed.md&amp;value=---%0Auid%3A%20Interaction.TrainARObject.isGrabbed%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jblattgerste/TrainAR/blob/main/Assets/Scripts/Interaction/TrainARObject.cs/#L116">View Source</a>
+  </span>
+  <h4 id="Interaction_TrainARObject_isGrabbed" data-uid="Interaction.TrainARObject.isGrabbed">isGrabbed</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool isGrabbed</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jblattgerste/TrainAR/new/main/apiSpec/new?filename=Interaction_TrainARObject_isInteractable.md&amp;value=---%0Auid%3A%20Interaction.TrainARObject.isInteractable%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jblattgerste/TrainAR/blob/main/Assets/Scripts/Interaction/TrainARObject.cs/#L40">View Source</a>
+  </span>
+  <h4 id="Interaction_TrainARObject_isInteractable" data-uid="Interaction.TrainARObject.isInteractable">isInteractable</h4>
+  <div class="markdown level1 summary"><p>Is the object interactable?</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool isInteractable</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p>If true it is interactable.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jblattgerste/TrainAR/new/main/apiSpec/new?filename=Interaction_TrainARObject_isSelected.md&amp;value=---%0Auid%3A%20Interaction.TrainARObject.isSelected%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jblattgerste/TrainAR/blob/main/Assets/Scripts/Interaction/TrainARObject.cs/#L98">View Source</a>
+  </span>
+  <h4 id="Interaction_TrainARObject_isSelected" data-uid="Interaction.TrainARObject.isSelected">isSelected</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool isSelected</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jblattgerste/TrainAR/new/main/apiSpec/new?filename=Interaction_TrainARObject_lerpingDistance.md&amp;value=---%0Auid%3A%20Interaction.TrainARObject.lerpingDistance%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jblattgerste/TrainAR/blob/main/Assets/Scripts/Interaction/TrainARObject.cs/#L63">View Source</a>
+  </span>
+  <h4 id="Interaction_TrainARObject_lerpingDistance" data-uid="Interaction.TrainARObject.lerpingDistance">lerpingDistance</h4>
+  <div class="markdown level1 summary"><p>The distance in front of the camera, where the object is lerped to.
+This can e.g. be useful, if objects are larger than usual.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float lerpingDistance</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><p>Default is 0.2f</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jblattgerste/TrainAR/new/main/apiSpec/new?filename=Interaction_TrainARObject_OnCombination.md&amp;value=---%0Auid%3A%20Interaction.TrainARObject.OnCombination%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jblattgerste/TrainAR/blob/main/Assets/Scripts/Interaction/TrainARObject.cs/#L140">View Source</a>
+  </span>
+  <h4 id="Interaction_TrainARObject_OnCombination" data-uid="Interaction.TrainARObject.OnCombination">OnCombination</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TrainARObject.CustomUnityEvent OnCombination</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Interaction.TrainARObject.CustomUnityEvent.html">TrainARObject.CustomUnityEvent</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jblattgerste/TrainAR/new/main/apiSpec/new?filename=Interaction_TrainARObject_OnDeselect.md&amp;value=---%0Auid%3A%20Interaction.TrainARObject.OnDeselect%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jblattgerste/TrainAR/blob/main/Assets/Scripts/Interaction/TrainARObject.cs/#L95">View Source</a>
+  </span>
+  <h4 id="Interaction_TrainARObject_OnDeselect" data-uid="Interaction.TrainARObject.OnDeselect">OnDeselect</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public UnityEvent OnDeselect</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">UnityEvent</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jblattgerste/TrainAR/new/main/apiSpec/new?filename=Interaction_TrainARObject_OnGrabbed.md&amp;value=---%0Auid%3A%20Interaction.TrainARObject.OnGrabbed%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jblattgerste/TrainAR/blob/main/Assets/Scripts/Interaction/TrainARObject.cs/#L107">View Source</a>
+  </span>
+  <h4 id="Interaction_TrainARObject_OnGrabbed" data-uid="Interaction.TrainARObject.OnGrabbed">OnGrabbed</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public UnityEvent OnGrabbed</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">UnityEvent</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jblattgerste/TrainAR/new/main/apiSpec/new?filename=Interaction_TrainARObject_OnInteraction.md&amp;value=---%0Auid%3A%20Interaction.TrainARObject.OnInteraction%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jblattgerste/TrainAR/blob/main/Assets/Scripts/Interaction/TrainARObject.cs/#L125">View Source</a>
+  </span>
+  <h4 id="Interaction_TrainARObject_OnInteraction" data-uid="Interaction.TrainARObject.OnInteraction">OnInteraction</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public UnityEvent OnInteraction</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">UnityEvent</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jblattgerste/TrainAR/new/main/apiSpec/new?filename=Interaction_TrainARObject_OnReleased.md&amp;value=---%0Auid%3A%20Interaction.TrainARObject.OnReleased%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jblattgerste/TrainAR/blob/main/Assets/Scripts/Interaction/TrainARObject.cs/#L113">View Source</a>
+  </span>
+  <h4 id="Interaction_TrainARObject_OnReleased" data-uid="Interaction.TrainARObject.OnReleased">OnReleased</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public UnityEvent OnReleased</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">UnityEvent</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jblattgerste/TrainAR/new/main/apiSpec/new?filename=Interaction_TrainARObject_OnSelect.md&amp;value=---%0Auid%3A%20Interaction.TrainARObject.OnSelect%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jblattgerste/TrainAR/blob/main/Assets/Scripts/Interaction/TrainARObject.cs/#L89">View Source</a>
+  </span>
+  <h4 id="Interaction_TrainARObject_OnSelect" data-uid="Interaction.TrainARObject.OnSelect">OnSelect</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public UnityEvent OnSelect</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">UnityEvent</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jblattgerste/TrainAR/new/main/apiSpec/new?filename=Interaction_TrainARObject_pivotOffsetPosition.md&amp;value=---%0Auid%3A%20Interaction.TrainARObject.pivotOffsetPosition%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jblattgerste/TrainAR/blob/main/Assets/Scripts/Interaction/TrainARObject.cs/#L69">View Source</a>
+  </span>
+  <h4 id="Interaction_TrainARObject_pivotOffsetPosition" data-uid="Interaction.TrainARObject.pivotOffsetPosition">pivotOffsetPosition</h4>
+  <div class="markdown level1 summary"><p>Offset of the pivot point. Use this, if the given pivot point by the model is weird.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Vector3 pivotOffsetPosition</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Vector3</span></td>
+        <td><p>Default is (0, 0, 0).</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jblattgerste/TrainAR/new/main/apiSpec/new?filename=Interaction_TrainARObject_pivotOffsetRotation.md&amp;value=---%0Auid%3A%20Interaction.TrainARObject.pivotOffsetRotation%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jblattgerste/TrainAR/blob/main/Assets/Scripts/Interaction/TrainARObject.cs/#L75">View Source</a>
+  </span>
+  <h4 id="Interaction_TrainARObject_pivotOffsetRotation" data-uid="Interaction.TrainARObject.pivotOffsetRotation">pivotOffsetRotation</h4>
+  <div class="markdown level1 summary"><p>Offset of the pivot rotation. Use this, if the given pivot point by the model is weird.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Vector3 pivotOffsetRotation</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Vector3</span></td>
+        <td><p>Default is (0, 0, 0).</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jblattgerste/TrainAR/new/main/apiSpec/new?filename=Interaction_TrainARObject_TrainARObjectDisabled.md&amp;value=---%0Auid%3A%20Interaction.TrainARObject.TrainARObjectDisabled%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jblattgerste/TrainAR/blob/main/Assets/Scripts/Interaction/TrainARObject.cs/#L56">View Source</a>
+  </span>
+  <h4 id="Interaction_TrainARObject_TrainARObjectDisabled" data-uid="Interaction.TrainARObject.TrainARObjectDisabled">TrainARObjectDisabled</h4>
+  <div class="markdown level1 summary"><p>If true the object is not selectable, grabbable, interactable, combineable but might be visible.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool TrainARObjectDisabled</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p>Default is false.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jblattgerste/TrainAR/new/main/apiSpec/new?filename=Interaction_TrainARObject_Combine_System_String_GameObject_.md&amp;value=---%0Auid%3A%20Interaction.TrainARObject.Combine(System.String%2CGameObject)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jblattgerste/TrainAR/blob/main/Assets/Scripts/Interaction/TrainARObject.cs/#L238">View Source</a>
+  </span>
+  <a id="Interaction_TrainARObject_Combine_" data-uid="Interaction.TrainARObject.Combine*"></a>
+  <h4 id="Interaction_TrainARObject_Combine_System_String_GameObject_" data-uid="Interaction.TrainARObject.Combine(System.String,GameObject)">Combine(String, GameObject)</h4>
+  <div class="markdown level1 summary"><p>Sends a request to the statemachine to check if this combine was valid.
+If so, the combine event of this TrainARObject is invoked
+otherwise the error event is invoked instead.</p>
+<p>This does NOT physically combine the object, which has to be handled by hand or e.g. the TrainAR Object
+helper in the visual scripting.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Combine(string combinedWithName, GameObject intersectedObject)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">combinedWithName</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">GameObject</span></td>
+        <td><span class="parametername">intersectedObject</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jblattgerste/TrainAR/new/main/apiSpec/new?filename=Interaction_TrainARObject_Deselect.md&amp;value=---%0Auid%3A%20Interaction.TrainARObject.Deselect%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jblattgerste/TrainAR/blob/main/Assets/Scripts/Interaction/TrainARObject.cs/#L189">View Source</a>
+  </span>
+  <a id="Interaction_TrainARObject_Deselect_" data-uid="Interaction.TrainARObject.Deselect*"></a>
+  <h4 id="Interaction_TrainARObject_Deselect" data-uid="Interaction.TrainARObject.Deselect">Deselect()</h4>
+  <div class="markdown level1 summary"><p>Invokes the Deselect event of this TrainARObject and sets it&apos;s isSelected bool accordingly.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Deselect()</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jblattgerste/TrainAR/new/main/apiSpec/new?filename=Interaction_TrainARObject_DisableTrainARObject.md&amp;value=---%0Auid%3A%20Interaction.TrainARObject.DisableTrainARObject%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jblattgerste/TrainAR/blob/main/Assets/Scripts/Interaction/TrainARObject.cs/#L335">View Source</a>
+  </span>
+  <a id="Interaction_TrainARObject_DisableTrainARObject_" data-uid="Interaction.TrainARObject.DisableTrainARObject*"></a>
+  <h4 id="Interaction_TrainARObject_DisableTrainARObject" data-uid="Interaction.TrainARObject.DisableTrainARObject">DisableTrainARObject()</h4>
+  <div class="markdown level1 summary"><p>Disables interactions with this TrainARObject by disabling it&apos;s colliders and Mesh Renderer.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void DisableTrainARObject()</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jblattgerste/TrainAR/new/main/apiSpec/new?filename=Interaction_TrainARObject_EnableTrainARObject.md&amp;value=---%0Auid%3A%20Interaction.TrainARObject.EnableTrainARObject%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jblattgerste/TrainAR/blob/main/Assets/Scripts/Interaction/TrainARObject.cs/#L346">View Source</a>
+  </span>
+  <a id="Interaction_TrainARObject_EnableTrainARObject_" data-uid="Interaction.TrainARObject.EnableTrainARObject*"></a>
+  <h4 id="Interaction_TrainARObject_EnableTrainARObject" data-uid="Interaction.TrainARObject.EnableTrainARObject">EnableTrainARObject()</h4>
+  <div class="markdown level1 summary"><p>Enables interactions with this TrainARObject by disabling it&apos;s colliders and Mesh Renderer.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void EnableTrainARObject()</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jblattgerste/TrainAR/new/main/apiSpec/new?filename=Interaction_TrainARObject_Error.md&amp;value=---%0Auid%3A%20Interaction.TrainARObject.Error%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jblattgerste/TrainAR/blob/main/Assets/Scripts/Interaction/TrainARObject.cs/#L327">View Source</a>
+  </span>
+  <a id="Interaction_TrainARObject_Error_" data-uid="Interaction.TrainARObject.Error*"></a>
+  <h4 id="Interaction_TrainARObject_Error" data-uid="Interaction.TrainARObject.Error">Error()</h4>
+  <div class="markdown level1 summary"><p>Invokes the error event of this TrainARObject.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Error()</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jblattgerste/TrainAR/new/main/apiSpec/new?filename=Interaction_TrainARObject_Grab.md&amp;value=---%0Auid%3A%20Interaction.TrainARObject.Grab%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jblattgerste/TrainAR/blob/main/Assets/Scripts/Interaction/TrainARObject.cs/#L284">View Source</a>
+  </span>
+  <a id="Interaction_TrainARObject_Grab_" data-uid="Interaction.TrainARObject.Grab*"></a>
+  <h4 id="Interaction_TrainARObject_Grab" data-uid="Interaction.TrainARObject.Grab">Grab()</h4>
+  <div class="markdown level1 summary"><p>Sends a request to the statemachine to check if this grab was valid.
+If so, the grab event of this TrainARObject is invoked
+otherwise the error event is invoked instead.</p>
+<p>This does NOT grab the object, which is handled in the InteractionController</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool Grab()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jblattgerste/TrainAR/new/main/apiSpec/new?filename=Interaction_TrainARObject_Interact_System_String_.md&amp;value=---%0Auid%3A%20Interaction.TrainARObject.Interact(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jblattgerste/TrainAR/blob/main/Assets/Scripts/Interaction/TrainARObject.cs/#L205">View Source</a>
+  </span>
+  <a id="Interaction_TrainARObject_Interact_" data-uid="Interaction.TrainARObject.Interact*"></a>
+  <h4 id="Interaction_TrainARObject_Interact_System_String_" data-uid="Interaction.TrainARObject.Interact(System.String)">Interact(String)</h4>
+  <div class="markdown level1 summary"><p>Sends a request to the statemachine to check if this interaction was valid.
+If so, the interact event of this TrainARObject is invoked
+otherwise the error event is invoked instead.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Interact(string parameter = &quot; &quot;)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">parameter</span></td>
+        <td><p>A string parameter which is passed to the statemachine.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jblattgerste/TrainAR/new/main/apiSpec/new?filename=Interaction_TrainARObject_Release.md&amp;value=---%0Auid%3A%20Interaction.TrainARObject.Release%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jblattgerste/TrainAR/blob/main/Assets/Scripts/Interaction/TrainARObject.cs/#L314">View Source</a>
+  </span>
+  <a id="Interaction_TrainARObject_Release_" data-uid="Interaction.TrainARObject.Release*"></a>
+  <h4 id="Interaction_TrainARObject_Release" data-uid="Interaction.TrainARObject.Release">Release()</h4>
+  <div class="markdown level1 summary"><p>Invokes the Release event of this TrainARObject and sets it&apos;s isGrabbed bool accordingly.</p>
+<p>This does NOT release the object, which is handled in the InteractionController</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Release()</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jblattgerste/TrainAR/new/main/apiSpec/new?filename=Interaction_TrainARObject_Select.md&amp;value=---%0Auid%3A%20Interaction.TrainARObject.Select%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jblattgerste/TrainAR/blob/main/Assets/Scripts/Interaction/TrainARObject.cs/#L176">View Source</a>
+  </span>
+  <a id="Interaction_TrainARObject_Select_" data-uid="Interaction.TrainARObject.Select*"></a>
+  <h4 id="Interaction_TrainARObject_Select" data-uid="Interaction.TrainARObject.Select">Select()</h4>
+  <div class="markdown level1 summary"><p>Invokes the select event of this TrainARObject and sets it&apos;s isSelected bool accordingly.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Select()</code></pre>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/jblattgerste/TrainAR/new/main/apiSpec/new?filename=Interaction_TrainARObject.md&amp;value=---%0Auid%3A%20Interaction.TrainARObject%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/jblattgerste/TrainAR/blob/main/Assets/Scripts/Interaction/TrainARObject.cs/#L18" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            TrainAR Documentation
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

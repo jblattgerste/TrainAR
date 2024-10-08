@@ -1,0 +1,988 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class QuestionnaireController
+   | TrainAR Documentation </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class QuestionnaireController
+   | TrainAR Documentation ">
+    <meta name="generator" content="docfx 2.59.4.0">
+    
+    <link rel="shortcut icon" href="../resources/favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../resources/logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list">Search Results for <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="UI.QuestionnaireController">
+  
+  
+  <h1 id="UI_QuestionnaireController" data-uid="UI.QuestionnaireController" class="text-break">Class QuestionnaireController
+  </h1>
+  <div class="markdown level0 summary"><p>The QuestionaireController provides the functionality to control the input field questions, reqular question and question lists.
+The input field question opens the keyboard and recives any given string input from the user.
+The regular question opens a question with up to four possible pre-defined awnsers.
+The question list opens a list with n possible items and continues when all right items were selected.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">QuestionnaireController</span></div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="UI.html">UI</a></h6>
+  <h6><strong>Assembly</strong>: Assembly-CSharp.dll</h6>
+  <h5 id="UI_QuestionnaireController_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class QuestionnaireController : MonoBehaviour</code></pre>
+  </div>
+  <h3 id="fields">Fields
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jblattgerste/TrainAR/new/main/apiSpec/new?filename=UI_QuestionnaireController_ButtonBlueprint.md&amp;value=---%0Auid%3A%20UI.QuestionnaireController.ButtonBlueprint%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jblattgerste/TrainAR/blob/main/Assets/Scripts/UI/QuestionnaireController.cs/#L125">View Source</a>
+  </span>
+  <h4 id="UI_QuestionnaireController_ButtonBlueprint" data-uid="UI.QuestionnaireController.ButtonBlueprint">ButtonBlueprint</h4>
+  <div class="markdown level1 summary"><p>Reference to the AnswerButtonPrefab.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Button ButtonBlueprint</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Button</span></td>
+        <td><p>Set in inspector.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jblattgerste/TrainAR/new/main/apiSpec/new?filename=UI_QuestionnaireController_buttons.md&amp;value=---%0Auid%3A%20UI.QuestionnaireController.buttons%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jblattgerste/TrainAR/blob/main/Assets/Scripts/UI/QuestionnaireController.cs/#L98">View Source</a>
+  </span>
+  <h4 id="UI_QuestionnaireController_buttons" data-uid="UI.QuestionnaireController.buttons">buttons</h4>
+  <div class="markdown level1 summary"><p>References to the Buttons</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public List&lt;Button&gt; buttons</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.List</span>&lt;<span class="xref">Button</span>&gt;</td>
+        <td><p>Set in inspector.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jblattgerste/TrainAR/new/main/apiSpec/new?filename=UI_QuestionnaireController_correctAnswerColor.md&amp;value=---%0Auid%3A%20UI.QuestionnaireController.correctAnswerColor%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jblattgerste/TrainAR/blob/main/Assets/Scripts/UI/QuestionnaireController.cs/#L142">View Source</a>
+  </span>
+  <h4 id="UI_QuestionnaireController_correctAnswerColor" data-uid="UI.QuestionnaireController.correctAnswerColor">correctAnswerColor</h4>
+  <div class="markdown level1 summary"><p>Color for correct answers.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Color correctAnswerColor</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Color</span></td>
+        <td><p>Default set in inspector.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jblattgerste/TrainAR/new/main/apiSpec/new?filename=UI_QuestionnaireController_correctAnswerSound.md&amp;value=---%0Auid%3A%20UI.QuestionnaireController.correctAnswerSound%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jblattgerste/TrainAR/blob/main/Assets/Scripts/UI/QuestionnaireController.cs/#L164">View Source</a>
+  </span>
+  <h4 id="UI_QuestionnaireController_correctAnswerSound" data-uid="UI.QuestionnaireController.correctAnswerSound">correctAnswerSound</h4>
+  <div class="markdown level1 summary"><p>Audioclip that is played when correct answer is pressed.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public AudioClip correctAnswerSound</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">AudioClip</span></td>
+        <td><p>Default is set in inspector.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jblattgerste/TrainAR/new/main/apiSpec/new?filename=UI_QuestionnaireController_defaultUIColor.md&amp;value=---%0Auid%3A%20UI.QuestionnaireController.defaultUIColor%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jblattgerste/TrainAR/blob/main/Assets/Scripts/UI/QuestionnaireController.cs/#L152">View Source</a>
+  </span>
+  <h4 id="UI_QuestionnaireController_defaultUIColor" data-uid="UI.QuestionnaireController.defaultUIColor">defaultUIColor</h4>
+  <div class="markdown level1 summary"><p>Color for unpressed buttons.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Color defaultUIColor</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Color</span></td>
+        <td><p>Default set in inspector.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jblattgerste/TrainAR/new/main/apiSpec/new?filename=UI_QuestionnaireController_duration.md&amp;value=---%0Auid%3A%20UI.QuestionnaireController.duration%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jblattgerste/TrainAR/blob/main/Assets/Scripts/UI/QuestionnaireController.cs/#L33">View Source</a>
+  </span>
+  <h4 id="UI_QuestionnaireController_duration" data-uid="UI.QuestionnaireController.duration">duration</h4>
+  <div class="markdown level1 summary"><p>How long it takes to fade in the UI.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float duration</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><p>Default is 1.0f seconds.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jblattgerste/TrainAR/new/main/apiSpec/new?filename=UI_QuestionnaireController_inputFieldAnswerText.md&amp;value=---%0Auid%3A%20UI.QuestionnaireController.inputFieldAnswerText%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jblattgerste/TrainAR/blob/main/Assets/Scripts/UI/QuestionnaireController.cs/#L60">View Source</a>
+  </span>
+  <h4 id="UI_QuestionnaireController_inputFieldAnswerText" data-uid="UI.QuestionnaireController.inputFieldAnswerText">inputFieldAnswerText</h4>
+  <div class="markdown level1 summary"><p>Reference to the inputFieldAnswerText.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TextMeshProUGUI inputFieldAnswerText</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">TextMeshProUGUI</span></td>
+        <td><p>Set in inspector.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jblattgerste/TrainAR/new/main/apiSpec/new?filename=UI_QuestionnaireController_inputFieldQuestionText.md&amp;value=---%0Auid%3A%20UI.QuestionnaireController.inputFieldQuestionText%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jblattgerste/TrainAR/blob/main/Assets/Scripts/UI/QuestionnaireController.cs/#L55">View Source</a>
+  </span>
+  <h4 id="UI_QuestionnaireController_inputFieldQuestionText" data-uid="UI.QuestionnaireController.inputFieldQuestionText">inputFieldQuestionText</h4>
+  <div class="markdown level1 summary"><p>Reference to the inputFieldQuestionText.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TextMeshProUGUI inputFieldQuestionText</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">TextMeshProUGUI</span></td>
+        <td><p>Set in inspector.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jblattgerste/TrainAR/new/main/apiSpec/new?filename=UI_QuestionnaireController_inputFieldQuestionUI.md&amp;value=---%0Auid%3A%20UI.QuestionnaireController.inputFieldQuestionUI%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jblattgerste/TrainAR/blob/main/Assets/Scripts/UI/QuestionnaireController.cs/#L50">View Source</a>
+  </span>
+  <h4 id="UI_QuestionnaireController_inputFieldQuestionUI" data-uid="UI.QuestionnaireController.inputFieldQuestionUI">inputFieldQuestionUI</h4>
+  <div class="markdown level1 summary"><p>Reference to the root gameObject of the inputFieldUI.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public GameObject inputFieldQuestionUI</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">GameObject</span></td>
+        <td><p>Set in inspector.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jblattgerste/TrainAR/new/main/apiSpec/new?filename=UI_QuestionnaireController_questionList.md&amp;value=---%0Auid%3A%20UI.QuestionnaireController.questionList%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jblattgerste/TrainAR/blob/main/Assets/Scripts/UI/QuestionnaireController.cs/#L115">View Source</a>
+  </span>
+  <h4 id="UI_QuestionnaireController_questionList" data-uid="UI.QuestionnaireController.questionList">questionList</h4>
+  <div class="markdown level1 summary"><p>Reference to the root of the question list UI.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public GameObject questionList</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">GameObject</span></td>
+        <td><p>Set in inspector.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jblattgerste/TrainAR/new/main/apiSpec/new?filename=UI_QuestionnaireController_questionListQuestionText.md&amp;value=---%0Auid%3A%20UI.QuestionnaireController.questionListQuestionText%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jblattgerste/TrainAR/blob/main/Assets/Scripts/UI/QuestionnaireController.cs/#L120">View Source</a>
+  </span>
+  <h4 id="UI_QuestionnaireController_questionListQuestionText" data-uid="UI.QuestionnaireController.questionListQuestionText">questionListQuestionText</h4>
+  <div class="markdown level1 summary"><p>Reference to the QuestionListText.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TextMeshProUGUI questionListQuestionText</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">TextMeshProUGUI</span></td>
+        <td><p>Set in inspector.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jblattgerste/TrainAR/new/main/apiSpec/new?filename=UI_QuestionnaireController_questionnaireUIRectTransform.md&amp;value=---%0Auid%3A%20UI.QuestionnaireController.questionnaireUIRectTransform%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jblattgerste/TrainAR/blob/main/Assets/Scripts/UI/QuestionnaireController.cs/#L88">View Source</a>
+  </span>
+  <h4 id="UI_QuestionnaireController_questionnaireUIRectTransform" data-uid="UI.QuestionnaireController.questionnaireUIRectTransform">questionnaireUIRectTransform</h4>
+  <div class="markdown level1 summary"><p>Reference to the UIRectTransform.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public RectTransform questionnaireUIRectTransform</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">RectTransform</span></td>
+        <td><p>Set in inspector.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jblattgerste/TrainAR/new/main/apiSpec/new?filename=UI_QuestionnaireController_questionText.md&amp;value=---%0Auid%3A%20UI.QuestionnaireController.questionText%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jblattgerste/TrainAR/blob/main/Assets/Scripts/UI/QuestionnaireController.cs/#L103">View Source</a>
+  </span>
+  <h4 id="UI_QuestionnaireController_questionText" data-uid="UI.QuestionnaireController.questionText">questionText</h4>
+  <div class="markdown level1 summary"><p>Reference to the questionText.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TextMeshProUGUI questionText</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">TextMeshProUGUI</span></td>
+        <td><p>Set in inspector.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jblattgerste/TrainAR/new/main/apiSpec/new?filename=UI_QuestionnaireController_questionTextUI.md&amp;value=---%0Auid%3A%20UI.QuestionnaireController.questionTextUI%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jblattgerste/TrainAR/blob/main/Assets/Scripts/UI/QuestionnaireController.cs/#L83">View Source</a>
+  </span>
+  <h4 id="UI_QuestionnaireController_questionTextUI" data-uid="UI.QuestionnaireController.questionTextUI">questionTextUI</h4>
+  <div class="markdown level1 summary"><p>Reference to the questionText.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public GameObject questionTextUI</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">GameObject</span></td>
+        <td><p>Set in inspector.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jblattgerste/TrainAR/new/main/apiSpec/new?filename=UI_QuestionnaireController_regularQuestionUI.md&amp;value=---%0Auid%3A%20UI.QuestionnaireController.regularQuestionUI%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jblattgerste/TrainAR/blob/main/Assets/Scripts/UI/QuestionnaireController.cs/#L78">View Source</a>
+  </span>
+  <h4 id="UI_QuestionnaireController_regularQuestionUI" data-uid="UI.QuestionnaireController.regularQuestionUI">regularQuestionUI</h4>
+  <div class="markdown level1 summary"><p>Reference to the root gameObject of the regularQuestionUI.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public GameObject regularQuestionUI</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">GameObject</span></td>
+        <td><p>Set in inspector.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jblattgerste/TrainAR/new/main/apiSpec/new?filename=UI_QuestionnaireController_responseText.md&amp;value=---%0Auid%3A%20UI.QuestionnaireController.responseText%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jblattgerste/TrainAR/blob/main/Assets/Scripts/UI/QuestionnaireController.cs/#L108">View Source</a>
+  </span>
+  <h4 id="UI_QuestionnaireController_responseText" data-uid="UI.QuestionnaireController.responseText">responseText</h4>
+  <div class="markdown level1 summary"><p>Reference to the ResponseText.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public GameObject responseText</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">GameObject</span></td>
+        <td><p>Set in inspector.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jblattgerste/TrainAR/new/main/apiSpec/new?filename=UI_QuestionnaireController_rightAnswer.md&amp;value=---%0Auid%3A%20UI.QuestionnaireController.rightAnswer%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jblattgerste/TrainAR/blob/main/Assets/Scripts/UI/QuestionnaireController.cs/#L190">View Source</a>
+  </span>
+  <h4 id="UI_QuestionnaireController_rightAnswer" data-uid="UI.QuestionnaireController.rightAnswer">rightAnswer</h4>
+  <div class="markdown level1 summary"><p>Stores right answers for endscreen UI.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public List&lt;string&gt; rightAnswer</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.List</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><p>Set on runtime.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jblattgerste/TrainAR/new/main/apiSpec/new?filename=UI_QuestionnaireController_wrongAnswerColor.md&amp;value=---%0Auid%3A%20UI.QuestionnaireController.wrongAnswerColor%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jblattgerste/TrainAR/blob/main/Assets/Scripts/UI/QuestionnaireController.cs/#L147">View Source</a>
+  </span>
+  <h4 id="UI_QuestionnaireController_wrongAnswerColor" data-uid="UI.QuestionnaireController.wrongAnswerColor">wrongAnswerColor</h4>
+  <div class="markdown level1 summary"><p>Color for wrong answers.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Color wrongAnswerColor</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Color</span></td>
+        <td><p>Default set in inspector.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jblattgerste/TrainAR/new/main/apiSpec/new?filename=UI_QuestionnaireController_wrongAnsweredQuestions.md&amp;value=---%0Auid%3A%20UI.QuestionnaireController.wrongAnsweredQuestions%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jblattgerste/TrainAR/blob/main/Assets/Scripts/UI/QuestionnaireController.cs/#L180">View Source</a>
+  </span>
+  <h4 id="UI_QuestionnaireController_wrongAnsweredQuestions" data-uid="UI.QuestionnaireController.wrongAnsweredQuestions">wrongAnsweredQuestions</h4>
+  <div class="markdown level1 summary"><p>Stores wrong answered questions for endscreen UI.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public List&lt;string&gt; wrongAnsweredQuestions</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.List</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><p>Set on runtime.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jblattgerste/TrainAR/new/main/apiSpec/new?filename=UI_QuestionnaireController_wrongAnswers.md&amp;value=---%0Auid%3A%20UI.QuestionnaireController.wrongAnswers%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jblattgerste/TrainAR/blob/main/Assets/Scripts/UI/QuestionnaireController.cs/#L185">View Source</a>
+  </span>
+  <h4 id="UI_QuestionnaireController_wrongAnswers" data-uid="UI.QuestionnaireController.wrongAnswers">wrongAnswers</h4>
+  <div class="markdown level1 summary"><p>Stores wrong answers for endscreen UI.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public List&lt;string&gt; wrongAnswers</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.List</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><p>Set on runtime.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jblattgerste/TrainAR/new/main/apiSpec/new?filename=UI_QuestionnaireController_wrongAnswerSound.md&amp;value=---%0Auid%3A%20UI.QuestionnaireController.wrongAnswerSound%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jblattgerste/TrainAR/blob/main/Assets/Scripts/UI/QuestionnaireController.cs/#L169">View Source</a>
+  </span>
+  <h4 id="UI_QuestionnaireController_wrongAnswerSound" data-uid="UI.QuestionnaireController.wrongAnswerSound">wrongAnswerSound</h4>
+  <div class="markdown level1 summary"><p>Audioclip that is played when wrong answer is pressed.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public AudioClip wrongAnswerSound</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">AudioClip</span></td>
+        <td><p>Default is set in inspector.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jblattgerste/TrainAR/new/main/apiSpec/new?filename=UI_QuestionnaireController_ContinueButtonOnClick.md&amp;value=---%0Auid%3A%20UI.QuestionnaireController.ContinueButtonOnClick%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jblattgerste/TrainAR/blob/main/Assets/Scripts/UI/QuestionnaireController.cs/#L614">View Source</a>
+  </span>
+  <a id="UI_QuestionnaireController_ContinueButtonOnClick_" data-uid="UI.QuestionnaireController.ContinueButtonOnClick*"></a>
+  <h4 id="UI_QuestionnaireController_ContinueButtonOnClick" data-uid="UI.QuestionnaireController.ContinueButtonOnClick">ContinueButtonOnClick()</h4>
+  <div class="markdown level1 summary"><p>Get&apos;s called when the continue button is pressed.
+When the chosen answer was correct, the statemachine gets notified.
+When the chosen answer was wrong, the question gets displayed again.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void ContinueButtonOnClick()</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jblattgerste/TrainAR/new/main/apiSpec/new?filename=UI_QuestionnaireController_InitInputfield_System_String_.md&amp;value=---%0Auid%3A%20UI.QuestionnaireController.InitInputfield(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jblattgerste/TrainAR/blob/main/Assets/Scripts/UI/QuestionnaireController.cs/#L308">View Source</a>
+  </span>
+  <a id="UI_QuestionnaireController_InitInputfield_" data-uid="UI.QuestionnaireController.InitInputfield*"></a>
+  <h4 id="UI_QuestionnaireController_InitInputfield_System_String_" data-uid="UI.QuestionnaireController.InitInputfield(System.String)">InitInputfield(String)</h4>
+  <div class="markdown level1 summary"><p>Open the inputField question UI.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void InitInputfield(string question)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">question</span></td>
+        <td><p>Text of the question.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jblattgerste/TrainAR/new/main/apiSpec/new?filename=UI_QuestionnaireController_InitQuestion_System_String_System_Collections_Generic_List_UI_QuestionnaireController_Answer__.md&amp;value=---%0Auid%3A%20UI.QuestionnaireController.InitQuestion(System.String%2CSystem.Collections.Generic.List%7BUI.QuestionnaireController.Answer%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jblattgerste/TrainAR/blob/main/Assets/Scripts/UI/QuestionnaireController.cs/#L281">View Source</a>
+  </span>
+  <a id="UI_QuestionnaireController_InitQuestion_" data-uid="UI.QuestionnaireController.InitQuestion*"></a>
+  <h4 id="UI_QuestionnaireController_InitQuestion_System_String_System_Collections_Generic_List_UI_QuestionnaireController_Answer__" data-uid="UI.QuestionnaireController.InitQuestion(System.String,System.Collections.Generic.List{UI.QuestionnaireController.Answer})">InitQuestion(String, List&lt;QuestionnaireController.Answer&gt;)</h4>
+  <div class="markdown level1 summary"><p>Open the regular question UI.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void InitQuestion(string question, List&lt;QuestionnaireController.Answer&gt; answers)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">question</span></td>
+        <td><p>Text of the question.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.List</span>&lt;<a class="xref" href="UI.QuestionnaireController.Answer.html">QuestionnaireController.Answer</a>&gt;</td>
+        <td><span class="parametername">answers</span></td>
+        <td><p>List of all possible answers.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jblattgerste/TrainAR/new/main/apiSpec/new?filename=UI_QuestionnaireController_InitQuestionList_System_String_System_Collections_Generic_List_UI_QuestionnaireController_Answer__.md&amp;value=---%0Auid%3A%20UI.QuestionnaireController.InitQuestionList(System.String%2CSystem.Collections.Generic.List%7BUI.QuestionnaireController.Answer%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jblattgerste/TrainAR/blob/main/Assets/Scripts/UI/QuestionnaireController.cs/#L318">View Source</a>
+  </span>
+  <a id="UI_QuestionnaireController_InitQuestionList_" data-uid="UI.QuestionnaireController.InitQuestionList*"></a>
+  <h4 id="UI_QuestionnaireController_InitQuestionList_System_String_System_Collections_Generic_List_UI_QuestionnaireController_Answer__" data-uid="UI.QuestionnaireController.InitQuestionList(System.String,System.Collections.Generic.List{UI.QuestionnaireController.Answer})">InitQuestionList(String, List&lt;QuestionnaireController.Answer&gt;)</h4>
+  <div class="markdown level1 summary"><p>Open the questionList UI.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void InitQuestionList(string question, List&lt;QuestionnaireController.Answer&gt; answers)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">question</span></td>
+        <td><p>Text of the question.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.List</span>&lt;<a class="xref" href="UI.QuestionnaireController.Answer.html">QuestionnaireController.Answer</a>&gt;</td>
+        <td><span class="parametername">answers</span></td>
+        <td><p>List of all possbile answers.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jblattgerste/TrainAR/new/main/apiSpec/new?filename=UI_QuestionnaireController_NotifyStatemachine_System_String_UI_QuestionnaireController_QuestionUITypes_.md&amp;value=---%0Auid%3A%20UI.QuestionnaireController.NotifyStatemachine(System.String%2CUI.QuestionnaireController.QuestionUITypes)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jblattgerste/TrainAR/blob/main/Assets/Scripts/UI/QuestionnaireController.cs/#L497">View Source</a>
+  </span>
+  <a id="UI_QuestionnaireController_NotifyStatemachine_" data-uid="UI.QuestionnaireController.NotifyStatemachine*"></a>
+  <h4 id="UI_QuestionnaireController_NotifyStatemachine_System_String_UI_QuestionnaireController_QuestionUITypes_" data-uid="UI.QuestionnaireController.NotifyStatemachine(System.String,UI.QuestionnaireController.QuestionUITypes)">NotifyStatemachine(String, QuestionnaireController.QuestionUITypes)</h4>
+  <div class="markdown level1 summary"><p>Notify the statemachine with the result of the question UI.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void NotifyStatemachine(string value, QuestionnaireController.QuestionUITypes type = QuestionnaireController.QuestionUITypes.Question)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">value</span></td>
+        <td><p>Result in text form.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="UI.QuestionnaireController.QuestionUITypes.html">QuestionnaireController.QuestionUITypes</a></td>
+        <td><span class="parametername">type</span></td>
+        <td><p>Type of question.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jblattgerste/TrainAR/new/main/apiSpec/new?filename=UI_QuestionnaireController_QuestionInputValidate.md&amp;value=---%0Auid%3A%20UI.QuestionnaireController.QuestionInputValidate%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jblattgerste/TrainAR/blob/main/Assets/Scripts/UI/QuestionnaireController.cs/#L432">View Source</a>
+  </span>
+  <a id="UI_QuestionnaireController_QuestionInputValidate_" data-uid="UI.QuestionnaireController.QuestionInputValidate*"></a>
+  <h4 id="UI_QuestionnaireController_QuestionInputValidate" data-uid="UI.QuestionnaireController.QuestionInputValidate">QuestionInputValidate()</h4>
+  <div class="markdown level1 summary"><p>Validate if given input of the inputQuestion UI was correct.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void QuestionInputValidate()</code></pre>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/jblattgerste/TrainAR/new/main/apiSpec/new?filename=UI_QuestionnaireController.md&amp;value=---%0Auid%3A%20UI.QuestionnaireController%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/jblattgerste/TrainAR/blob/main/Assets/Scripts/UI/QuestionnaireController.cs/#L22" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            TrainAR Documentation
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

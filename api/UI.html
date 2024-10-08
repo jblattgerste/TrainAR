@@ -1,0 +1,187 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Namespace UI
+   | TrainAR Documentation </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Namespace UI
+   | TrainAR Documentation ">
+    <meta name="generator" content="docfx 2.59.4.0">
+    
+    <link rel="shortcut icon" href="../resources/favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../resources/logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list">Search Results for <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="UI">
+  
+  <h1 id="UI" data-uid="UI" class="text-break">Namespace UI
+  </h1>
+  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="markdown level0 remarks"></div>
+    <h3 id="classes">Classes
+  </h3>
+      <h4><a class="xref" href="UI.CrosshairOnOff.html">CrosshairOnOff</a></h4>
+      <section><p>Controls the dynamic transformations of the crosshair. It activates and deactivates the crosshair
+but also visualizes the distance to a grabbable TrainAR object by converging the crosshairs size until
+the object would be selected (e.g. if the user is too far away from an object to grab it).</p>
+</section>
+      <h4><a class="xref" href="UI.DirectInfoController.html">DirectInfoController</a></h4>
+      <section><p>The DirectInfoBoxController handles the displaying of direct info boxes that are used to display insishgts to the user.
+It is triggerd through invocation of an action in the StatemachineConnector and therefore has no public methods.</p>
+</section>
+      <h4><a class="xref" href="UI.ErrorOverlayController.html">ErrorOverlayController</a></h4>
+      <section><p>The error overlay controller handles the error overlay, triggers it on actions from the statemachine and sets its texts.
+It is triggerd through invocation of an action in the StatemachineConnector and therefore has no public methods.</p>
+</section>
+      <h4><a class="xref" href="UI.InputFieldAdjust.html">InputFieldAdjust</a></h4>
+      <section><p>InputFieldAdjust Adjusts the UI of the Input field when the keyboard is opened.
+This is mostly problematic on Android otherwise.</p>
+</section>
+      <h4><a class="xref" href="UI.InteractButton.html">InteractButton</a></h4>
+      <section><p>Handles interactions with the interact button.</p>
+</section>
+      <h4><a class="xref" href="UI.InteractionButtonController.html">InteractionButtonController</a></h4>
+      <section><p>Handles the behaviour of the interaction buttons, such as enabling and disabling when appropriate
+or highlighting the combine button in orange when a combination would be possible.</p>
+<p>It also allows for grabbed objects to be rotatable.</p>
+</section>
+      <h4><a class="xref" href="UI.OnBoardingController.html">OnBoardingController</a></h4>
+      <section><p>The OnBoardingController handles displaying the onboarding animations for scanning the environment and placing the
+training assembly by automaticaly detecting at which point and where sufficient feature points for a plane were detected.</p>
+</section>
+      <h4><a class="xref" href="UI.OpenSidePanel.html">OpenSidePanel</a></h4>
+      <section><p>Handles opening or closing of the side panel (burger menu) wiht options for help, quitting and replacing the assembly.</p>
+</section>
+      <h4><a class="xref" href="UI.Question.html">Question</a></h4>
+      <section><p>The abstract class for questions to share the same UI functions.</p>
+</section>
+      <h4><a class="xref" href="UI.QuestionnaireController.html">QuestionnaireController</a></h4>
+      <section><p>The QuestionaireController provides the functionality to control the input field questions, reqular question and question lists.
+The input field question opens the keyboard and recives any given string input from the user.
+The regular question opens a question with up to four possible pre-defined awnsers.
+The question list opens a list with n possible items and continues when all right items were selected.</p>
+</section>
+      <h4><a class="xref" href="UI.SaveArea.html">SaveArea</a></h4>
+      <section><p>The SafeArea scripts moves UI components when they would otherwise be occluded by e.g. cutout cameras or speakers
+on some newer smartphone devices. </p>
+</section>
+      <h4><a class="xref" href="UI.StreamVideo.html">StreamVideo</a></h4>
+      <section><p>StreamVideo is a wrapper for the Videoplayer class and handles playing of the onboarding animations.</p>
+</section>
+      <h4><a class="xref" href="UI.TopPanelController.html">TopPanelController</a></h4>
+      <section><p>The TopPanelController handpes updates to the UI panel of the trainign scenario, showing the instructions and progress percentage of the training.</p>
+</section>
+    <h3 id="structs">Structs
+  </h3>
+      <h4><a class="xref" href="UI.QuestionnaireController.Answer.html">QuestionnaireController.Answer</a></h4>
+      <section><p>Holder for information for one answer.</p>
+</section>
+    <h3 id="enums">Enums
+  </h3>
+      <h4><a class="xref" href="UI.QuestionnaireController.QuestionUITypes.html">QuestionnaireController.QuestionUITypes</a></h4>
+      <section><p>The type of the UI custom action/question.</p>
+</section>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            TrainAR Documentation
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>
