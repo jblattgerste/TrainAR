@@ -46,6 +46,7 @@ jobs:
         uses: actions/download-artifact@v4
         with:
           name: _site
+          path: _site
 
       # List downloaded files
       - name: List downloaded files
