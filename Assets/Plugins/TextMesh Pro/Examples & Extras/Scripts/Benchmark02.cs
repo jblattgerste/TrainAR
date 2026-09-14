@@ -35,7 +35,7 @@ namespace TMPro.Examples
 
                     textMeshPro.alignment = TextAlignmentOptions.Bottom;
                     textMeshPro.fontSize = 96;
-                    textMeshPro.enableKerning = false;
+                    textMeshPro.fontFeatures = textMeshPro.fontFeatures.FindAll(feature => feature != UnityEngine.TextCore.OTL_FeatureTag.kern);
 
                     textMeshPro.color = new Color32(255, 255, 0, 255);
                     textMeshPro.text = "!";

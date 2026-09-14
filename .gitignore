@@ -36,6 +36,7 @@ ExportedObj/
 *.csproj
 *.unityproj
 *.sln
+*.slnx
 *.suo
 *.tmp
 *.user
@@ -71,3 +72,6 @@ crashlytics-build.properties
 # Temporary auto-generated Android Assets
 /[Aa]ssets/[Ss]treamingAssets/aa.meta
 /[Aa]ssets/[Ss]treamingAssets/aa/*
+# Regenerated Visual Scripting node database
+/Assets/Unity.VisualScripting.Generated/VisualScripting.Flow/UnitOptions.db
+/Assets/Unity.VisualScripting.Generated/VisualScripting.Flow/UnitOptions.db.meta

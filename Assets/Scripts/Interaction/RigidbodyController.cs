@@ -61,7 +61,7 @@ namespace Interaction
             kinematicFrameCounter = 0;
 
             //Check if the object is currently moving, return if it is still moving
-            if (thisRigidbody.velocity.sqrMagnitude  > 0.001f) return;
+            if (thisRigidbody.linearVelocity.sqrMagnitude  > 0.001f) return;
 
             //Make Object kinematic
             this.thisRigidbody.isKinematic = true;

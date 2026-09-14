@@ -46,7 +46,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d236b7d11115f2143951f1e14045df39, type: 3}
   m_Name: Android Settings
   m_EditorClassIdentifier: 
-  m_LoaderManagerInstance: {fileID: -5106685009187284210}
+  m_Manager: {fileID: -5106685009187284210}
   m_InitManagerOnStart: 1
 --- !u!114 &-1006696172248684236
 MonoBehaviour:
@@ -76,11 +76,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d2dc886499c26824283350fa532d087d, type: 3}
   m_Name: XRGeneralSettings
   m_EditorClassIdentifier: 
-  Keys: 070000000100000004000000
-  Values:
-  - {fileID: -4218992446448960924}
-  - {fileID: 5175691246875394708}
-  - {fileID: 4899749510619718592}
+  Keys: 
+  Values: []
+  m_SettingsPerBuildTarget:
+  - buildTarget: 7
+    settings: {fileID: -4218992446448960924}
+  - buildTarget: 1
+    settings: {fileID: 5175691246875394708}
+  - buildTarget: 4
+    settings: {fileID: 4899749510619718592}
 --- !u!114 &4899749510619718592
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -93,7 +97,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d236b7d11115f2143951f1e14045df39, type: 3}
   m_Name: iPhone Settings
   m_EditorClassIdentifier: 
-  m_LoaderManagerInstance: {fileID: -5460162053535995913}
+  m_Manager: {fileID: -5460162053535995913}
   m_InitManagerOnStart: 1
 --- !u!114 &5175691246875394708
 MonoBehaviour:
@@ -107,5 +111,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d236b7d11115f2143951f1e14045df39, type: 3}
   m_Name: Standalone Settings
   m_EditorClassIdentifier: 
-  m_LoaderManagerInstance: {fileID: -1006696172248684236}
+  m_Manager: {fileID: -1006696172248684236}
   m_InitManagerOnStart: 1
