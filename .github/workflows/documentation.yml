@@ -19,7 +19,7 @@ jobs:
         #   submodules: true
 
       - name: Install DocFX
-        run: dotnet tool update --global docfx
+        run: dotnet tool install --global docfx
 
       - name: Use README.md as index.md
         run: cp README.md Documentation/index.md
