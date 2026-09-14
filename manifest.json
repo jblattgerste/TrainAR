@@ -1065,10 +1065,10 @@
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "manual/TrainArObjects.md",
+      "source_relative_path": "manual/TrainARObjects.md",
       "output": {
         ".html": {
-          "relative_path": "manual/TrainArObjects.html"
+          "relative_path": "manual/TrainARObjects.html"
         }
       },
       "version": ""
@@ -1632,6 +1632,16 @@
       "output": {
         "resource": {
           "relative_path": "resources/TrainARDownloaded.JPG"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "resources/TrainARObjectConversion.png",
+      "output": {
+        "resource": {
+          "relative_path": "resources/TrainARObjectConversion.png"
         }
       },
       "version": ""
