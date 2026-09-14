@@ -770,13 +770,13 @@ namespace UnityMeshSimplifier
                 return;
 
             // We find all texture properties of materials and delete those assets also
-            int propertyCount = UnityEditor.ShaderUtil.GetPropertyCount(shader);
+            int propertyCount = shader.GetPropertyCount();
             for (int propertyIndex = 0; propertyIndex < propertyCount; propertyIndex++)
             {
-                var propertyType = UnityEditor.ShaderUtil.GetPropertyType(shader, propertyIndex);
-                if (propertyType == UnityEditor.ShaderUtil.ShaderPropertyType.TexEnv)
+                var propertyType = shader.GetPropertyType(propertyIndex);
+                if (propertyType == UnityEngine.Rendering.ShaderPropertyType.Texture)
                 {
-                    string propertyName = UnityEditor.ShaderUtil.GetPropertyName(shader, propertyIndex);
+                    string propertyName = shader.GetPropertyName(propertyIndex);
                     var texture = material.GetTexture(propertyName);
                     DestroyLODAsset(texture);
                 }

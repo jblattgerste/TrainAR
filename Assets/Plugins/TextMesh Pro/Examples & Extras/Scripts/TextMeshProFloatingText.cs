@@ -65,7 +65,7 @@ namespace TMPro.Examples
                 m_textMeshPro.fontSize = 24;
                 //m_textMeshPro.enableExtraPadding = true;
                 //m_textMeshPro.enableShadows = false;
-                m_textMeshPro.enableKerning = false;
+                m_textMeshPro.fontFeatures = m_textMeshPro.fontFeatures.FindAll(feature => feature != UnityEngine.TextCore.OTL_FeatureTag.kern);
                 m_textMeshPro.text = string.Empty;
                 m_textMeshPro.isTextObjectScaleStatic = IsTextObjectScaleStatic;
 

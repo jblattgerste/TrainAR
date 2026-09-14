@@ -140,7 +140,7 @@ namespace Others
         /// </summary>
         private void Start()
         {
-            arRaycastManager = FindObjectOfType<ARRaycastManager>();
+            arRaycastManager = FindAnyObjectByType<ARRaycastManager>();
             //Instantiate the prefab 2m behind the camera
             instantiatedPrefab = CreateTrainARSetup();
             instantiatedPrefab.transform.position = new Vector3(0, 0, -2.0f);

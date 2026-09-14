@@ -99,6 +99,7 @@ namespace Interaction
         /// </summary>
         /// <value>Null if no gameObject is hit.</value>
         [Tooltip("Raycast from the center of the screen to detected if a TrainAR object is aimed at.")]
+        [System.NonSerialized]
         public RaycastHit hit;
 
         /// <summary>

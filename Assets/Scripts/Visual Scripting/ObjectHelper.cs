@@ -218,7 +218,7 @@ namespace Visual_Scripting
             Transform trainARObject = null;
 
             //Initially store the name of the currently grabbed object
-            GameObject trainARObjectHolder = Object.FindObjectOfType<InteractionController>().grabbedObject;
+            GameObject trainARObjectHolder = Object.FindAnyObjectByType<InteractionController>().grabbedObject;
            
             //Check if the grabbed object is the one we are searching for, otherwise search all other spawned Objects and override it   
             if (trainARObjectHolder != null && trainARObjectHolder.name == flow.GetValue<string>(TrainARObjectName))
@@ -245,7 +245,7 @@ namespace Visual_Scripting
                     if (trainARObject.gameObject.GetComponent<TrainARObject>().isGrabbed)
                     {
                         //Yea this is probably not best practise but will be alright
-                        Object.FindObjectOfType<InteractionController>().ReleaseGrabbedObject();
+                        Object.FindAnyObjectByType<InteractionController>().ReleaseGrabbedObject();
                     }
                     trainARObject.gameObject.SetActive(flow.GetValue<bool>(VisibilityToggle));
                     break;
@@ -254,7 +254,7 @@ namespace Visual_Scripting
                     if (trainARObject.gameObject.GetComponent<TrainARObject>().isGrabbed)
                     {
                         //Yea this is probably not best practise but will be alright
-                        Object.FindObjectOfType<InteractionController>().ReleaseGrabbedObject();
+                        Object.FindAnyObjectByType<InteractionController>().ReleaseGrabbedObject();
                     }
                     trainARObject.gameObject.GetComponent<TrainARObject>().isGrabbable = flow.GetValue<bool>(GrabbabilityToggle);
                     break;
@@ -269,7 +269,7 @@ namespace Visual_Scripting
                     if (trainARObject.gameObject.GetComponent<TrainARObject>().isGrabbed)
                     {
                         //Yea this is probably not best practise but will be alright
-                        Object.FindObjectOfType<InteractionController>().ReleaseGrabbedObject();
+                        Object.FindAnyObjectByType<InteractionController>().ReleaseGrabbedObject();
                     }
                     Object.Destroy(trainARObject.gameObject);
                     break;
@@ -293,7 +293,7 @@ namespace Visual_Scripting
                     if (trainARObject.gameObject.GetComponent<TrainARObject>().isGrabbed)
                     {
                         //Yea this is probably not best practise but will be alright
-                        Object.FindObjectOfType<InteractionController>().ReleaseGrabbedObject(true);
+                        Object.FindAnyObjectByType<InteractionController>().ReleaseGrabbedObject(true);
                     }
                     //Find the secondary trainAR object
                     foreach (var secondaryTrainARObject in PrefabSpawningController.instantiatedPrefab
@@ -322,7 +322,7 @@ namespace Visual_Scripting
                         if (trainARObject.gameObject.GetComponent<TrainARObject>().isGrabbed)
                         {
                             //Again, not best practice, but works...
-                            InteractionController interactionController = Object.FindObjectOfType<InteractionController>();
+                            InteractionController interactionController = Object.FindAnyObjectByType<InteractionController>();
                             interactionController.ReleaseGrabbedObject();
                             interactionController.selectedObject = secondaryTrainARObject.gameObject;
                             interactionController.GrabObject();
