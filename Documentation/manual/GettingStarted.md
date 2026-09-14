@@ -1,6 +1,6 @@
 # Getting Started Guide
 
-The Getting Started Guide is meant to provide a "quickstart" for your development of TrainAR trainings and guides you through the process of creating a very simple TrainAR training from scratch. This Getting Started Guide presumes that you already completed the [Installation & Setup](https://jblattgerste.github.io/TrainAR/manual/Setup.html) of Unity and TrainAR. There is a training assembly included in the TrainAR repository that can be deployed directly for testing. You can also try to deploy and test this example first and play around with it as we will delete this shortly: For this, directly skip to "[Deploy your training to your phone](https://jblattgerste.github.io/TrainAR/manual/GettingStarted.html#4-deploy-your-training-to-your-phone)".
+The Getting Started Guide is meant to provide a "quickstart" for your development of TrainAR trainings and guides you through the process of creating a very simple TrainAR training from scratch. This Getting Started Guide presumes that you already completed the [Installation & Setup](https://jblattgerste.github.io/TrainAR/manual/Setup.html) of Unity and TrainAR. There is a training assembly included in the TrainAR repository that can be deployed directly for testing. You can also try to deploy and test this example first and play around with it as we will delete this shortly: For this, directly skip to "[Deploy your training to your phone](https://jblattgerste.github.io/TrainAR/manual/GettingStarted.html#deploy-your-training-to-your-phone)".
 
 ## Delete the example TrainAR training
 
