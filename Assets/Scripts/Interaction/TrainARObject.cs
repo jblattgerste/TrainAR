@@ -78,6 +78,7 @@ namespace Interaction
         /// </summary>
         /// <value>Is set on runtime.</value>
         [HideInInspector]
+        [System.NonSerialized]
         public CollisionController.Intersection Intersection = new CollisionController.Intersection(null, false);
         
         /// <summary>

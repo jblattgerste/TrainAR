@@ -171,7 +171,7 @@ namespace UI
         /// Reference to audioSource where audioClips are played.
         /// </summary>
         /// <value>Set in inspector.</value>
-        private AudioSource audioSource;
+        [SerializeField] private AudioSource audioSource;
 
         /// <summary>
         /// Stores wrong answered questions for endscreen UI.
@@ -339,7 +339,8 @@ namespace UI
         /// </summary>
         void Start()
         {
-            audioSource = GameObject.FindObjectOfType<AudioSource>();
+            if (audioSource == null)
+                audioSource = FindAnyObjectByType<AudioSource>();
             InitRegularQuestionButtons();
             questionnaireUIDefaultPosition = questionnaireUIRectTransform.anchoredPosition;
         }

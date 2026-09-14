@@ -8,7 +8,7 @@ Shader "Mixed Reality Toolkit/Standard"
         // Main maps.
         _Color("Color", Color) = (1.0, 1.0, 1.0, 1.0)
         _MainTex("Albedo", 2D) = "white" {}
-        [Enum(AlbedoAlphaMode)] _AlbedoAlphaMode("Albedo Alpha Mode", Float) = 0 // "Transparency"
+        [Enum(Transparency,0,Metallic,1,Smoothness,2)] _AlbedoAlphaMode("Albedo Alpha Mode", Float) = 0 // "Transparency"
         [Toggle] _AlbedoAssignedAtRuntime("Albedo Assigned at Runtime", Float) = 0.0
         _Cutoff("Alpha Cutoff", Range(0.0, 1.0)) = 0.5
         _Metallic("Metallic", Range(0.0, 1.0)) = 0.0
@@ -89,13 +89,13 @@ Shader "Mixed Reality Toolkit/Standard"
         _EnvironmentColorZ("Environment Color Z (RGB)", Color) = (0.0, 0.0, 1.0, 1.0)
 
         // Advanced options.
-        [Enum(RenderingMode)] _Mode("Rendering Mode", Float) = 0                                     // "Opaque"
-        [Enum(CustomRenderingMode)] _CustomMode("Mode", Float) = 0                                   // "Opaque"
+        [Enum(Opaque,0,Cutout,1,Fade,2,Transparent,3,Additive,4,Custom,5)] _Mode("Rendering Mode", Float) = 0                                     // "Opaque"
+        [Enum(Opaque,0,Cutout,1,Fade,2)] _CustomMode("Mode", Float) = 0                                   // "Opaque"
         [Enum(UnityEngine.Rendering.BlendMode)] _SrcBlend("Source Blend", Float) = 1                 // "One"
         [Enum(UnityEngine.Rendering.BlendMode)] _DstBlend("Destination Blend", Float) = 0            // "Zero"
         [Enum(UnityEngine.Rendering.BlendOp)] _BlendOp("Blend Operation", Float) = 0                 // "Add"
         [Enum(UnityEngine.Rendering.CompareFunction)] _ZTest("Depth Test", Float) = 4                // "LessEqual"
-        [Enum(DepthWrite)] _ZWrite("Depth Write", Float) = 1                                         // "On"
+        [Enum(Off,0,On,1)] _ZWrite("Depth Write", Float) = 1                                         // "On"
         _ZOffsetFactor("Depth Offset Factor", Float) = 0                                             // "Zero"
         _ZOffsetUnits("Depth Offset Units", Float) = 0                                               // "Zero"
         [Enum(UnityEngine.Rendering.ColorWriteMask)] _ColorWriteMask("Color Write Mask", Float) = 15 // "All"

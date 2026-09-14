@@ -7022,6 +7022,7 @@ MonoBehaviour:
   wrongAnsweredQuestions: []
   wrongAnswers: []
   rightAnswer: []
+  audioSource: {fileID: 1943579696}
 --- !u!1 &581225487
 GameObject:
   m_ObjectHideFlags: 0
