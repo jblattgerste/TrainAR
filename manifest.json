@@ -1158,16 +1158,6 @@
     },
     {
       "type": "Resource",
-      "source_relative_path": "resources/ActionMulti.png",
-      "output": {
-        "resource": {
-          "relative_path": "resources/ActionMulti.png"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "Resource",
       "source_relative_path": "resources/ActionMulti_2.png",
       "output": {
         "resource": {
@@ -1212,26 +1202,6 @@
       "output": {
         "resource": {
           "relative_path": "resources/BoundingBox.gif"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "resources/ChangeToAndroid.PNG",
-      "output": {
-        "resource": {
-          "relative_path": "resources/ChangeToAndroid.PNG"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "resources/ChooseExamplePrefab.PNG",
-      "output": {
-        "resource": {
-          "relative_path": "resources/ChooseExamplePrefab.PNG"
         }
       },
       "version": ""
@@ -1302,16 +1272,6 @@
       "output": {
         "resource": {
           "relative_path": "resources/ExampleScenarios.png"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "resources/Example_Prefab_InScene.PNG",
-      "output": {
-        "resource": {
-          "relative_path": "resources/Example_Prefab_InScene.PNG"
         }
       },
       "version": ""
@@ -1418,16 +1378,6 @@
     },
     {
       "type": "Resource",
-      "source_relative_path": "resources/Install_Modules_2.PNG",
-      "output": {
-        "resource": {
-          "relative_path": "resources/Install_Modules_2.PNG"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "Resource",
       "source_relative_path": "resources/Install_Modules_Android.PNG",
       "output": {
         "resource": {
@@ -1478,30 +1428,10 @@
     },
     {
       "type": "Resource",
-      "source_relative_path": "resources/MoveObjects.gif",
-      "output": {
-        "resource": {
-          "relative_path": "resources/MoveObjects.gif"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "Resource",
       "source_relative_path": "resources/MoveRotateScale.gif",
       "output": {
         "resource": {
           "relative_path": "resources/MoveRotateScale.gif"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "resources/Move_In_Position.PNG",
-      "output": {
-        "resource": {
-          "relative_path": "resources/Move_In_Position.PNG"
         }
       },
       "version": ""
@@ -1528,40 +1458,10 @@
     },
     {
       "type": "Resource",
-      "source_relative_path": "resources/OpenTrainAR.PNG",
-      "output": {
-        "resource": {
-          "relative_path": "resources/OpenTrainAR.PNG"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "resources/PlayButton.PNG",
-      "output": {
-        "resource": {
-          "relative_path": "resources/PlayButton.PNG"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "Resource",
       "source_relative_path": "resources/ReferenceObjects.gif",
       "output": {
         "resource": {
           "relative_path": "resources/ReferenceObjects.gif"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "resources/RotateObjects.gif",
-      "output": {
-        "resource": {
-          "relative_path": "resources/RotateObjects.gif"
         }
       },
       "version": ""
@@ -1678,16 +1578,6 @@
     },
     {
       "type": "Resource",
-      "source_relative_path": "resources/TrainAR_CreateVisualScripting_ReferenceObjects.PNG",
-      "output": {
-        "resource": {
-          "relative_path": "resources/TrainAR_CreateVisualScripting_ReferenceObjects.PNG"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "Resource",
       "source_relative_path": "resources/TrainAR_Overview.PNG",
       "output": {
         "resource": {
@@ -1718,70 +1608,10 @@
     },
     {
       "type": "Resource",
-      "source_relative_path": "resources/TrainAR_ScriptableGraph_UIAction.PNG",
-      "output": {
-        "resource": {
-          "relative_path": "resources/TrainAR_ScriptableGraph_UIAction.PNG"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "resources/TrainAR_ScriptingGraph_ConnectNodes.PNG",
-      "output": {
-        "resource": {
-          "relative_path": "resources/TrainAR_ScriptingGraph_ConnectNodes.PNG"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "Resource",
       "source_relative_path": "resources/TrainAR_ScriptingGraph_CorrectFeedback.PNG",
       "output": {
         "resource": {
           "relative_path": "resources/TrainAR_ScriptingGraph_CorrectFeedback.PNG"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "resources/TrainAR_ScriptingGraph_CreateCombineNode.PNG",
-      "output": {
-        "resource": {
-          "relative_path": "resources/TrainAR_ScriptingGraph_CreateCombineNode.PNG"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "resources/TrainAR_ScriptingGraph_ErrorFeedback.PNG",
-      "output": {
-        "resource": {
-          "relative_path": "resources/TrainAR_ScriptingGraph_ErrorFeedback.PNG"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "resources/TrainAR_ScriptingGraph_ObjectHelper.PNG",
-      "output": {
-        "resource": {
-          "relative_path": "resources/TrainAR_ScriptingGraph_ObjectHelper.PNG"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "resources/TrainAR_ScriptingGraph_SelectAction.PNG",
-      "output": {
-        "resource": {
-          "relative_path": "resources/TrainAR_ScriptingGraph_SelectAction.PNG"
         }
       },
       "version": ""
@@ -1932,16 +1762,6 @@
       "output": {
         "resource": {
           "relative_path": "resources/TransformTool.gif"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "resources/Type_Spoon.PNG",
-      "output": {
-        "resource": {
-          "relative_path": "resources/Type_Spoon.PNG"
         }
       },
       "version": ""
