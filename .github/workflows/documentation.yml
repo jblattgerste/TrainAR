@@ -5,10 +5,13 @@ on:
     branches:
       - main
 
+permissions:
+  contents: read
+
 jobs:
   # Build the documentation
   build:
-    runs-on: windows-latest # Required by DocFX
+    runs-on: ubuntu-latest # DocFX metadata now compiles the .cs sources directly, so no MSBuild/Windows toolchain is required
     steps:
       - name: Checkout
         uses: actions/checkout@v2
@@ -16,7 +19,10 @@ jobs:
         #   submodules: true
 
       - name: Install DocFX
-        run: choco install -y docfx
+        # Run outside the repo root: it contains multiple Unity-generated .csproj files,
+        # which makes the dotnet CLI fail with "contains more than one project file".
+        run: dotnet tool install --global docfx
+        working-directory: ${{ runner.temp }}
 
       - name: Use README.md as index.md
         run: cp README.md Documentation/index.md
@@ -35,6 +41,8 @@ jobs:
   deploy:
     needs: build
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     steps:
       - name: Checkout
         uses: actions/checkout@v2

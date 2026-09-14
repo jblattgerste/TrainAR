@@ -5,7 +5,6 @@
           {
             "src": "..",
             "files": [
-              "**.csproj",
               "Assets/**/*.cs"
             ],
             "exclude": [
@@ -13,9 +12,9 @@
             ]
           }
         ],
-        "globalNamespaceId": "Global",
         "filter": "filterConfig.yml",
         "dest": "api",
+        "allowCompilationErrors": true,
         "disableGitFeatures": false
       }
     ],
