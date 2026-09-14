@@ -9,8 +9,7 @@
     "baseUrl": "https://jblattgerste.github.io/TrainAR/",
     "changefreq": "weekly"
   },
-  "homepages": [],
-  "source_base_path": "D:/a/TrainAR/TrainAR/Documentation",
+  "source_base_path": "/home/runner/work/TrainAR/TrainAR/Documentation",
   "xrefmap": "xrefmap.yml",
   "files": [
     {
@@ -19,931 +18,929 @@
         "resource": {
           "relative_path": "index.json"
         }
-      },
-      "is_incremental": false
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Editor.Scripts.ConvertToTrainARObject.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Editor.Scripts.ConvertToTrainARObject.html",
-          "hash": "9hXjRDPniu+mJrPdXtMwZ84NL3E5gdvfLkpkWXvR7DA="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Editor.Scripts.EditorTrainARObjectToolbar.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Editor.Scripts.EditorTrainARObjectToolbar.html",
-          "hash": "q/WEX9L4DPcQzXlcxRRLl2YK6cAvs/DwDbv+yXXwV7w="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Editor.Scripts.MeshCombinerEditor.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Editor.Scripts.MeshCombinerEditor.html",
-          "hash": "5FKUstH1x8sjFNr3ecRCdAGCEArlXHZaRHYivO7GKU8="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Editor.Scripts.OpenAuthoringToolOnLoad.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Editor.Scripts.OpenAuthoringToolOnLoad.html",
-          "hash": "C0QxvZa/6eGI3NMxzp/9y6B+TaqIGPWBh1L7H6FH6xw="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Editor.Scripts.PlayModeButtonOverride.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Editor.Scripts.PlayModeButtonOverride.html",
-          "hash": "NNa+AeTzOHPyaMrc8UewR5XEX/g9T5VdMOH6G8wTHfs="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Editor.Scripts.StateRequestSimulatorEditor.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Editor.Scripts.StateRequestSimulatorEditor.html",
-          "hash": "wqbiBVxszM+3biQzY5nW/vdnaY2xVN0hsfP6LxS3imQ="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Editor.Scripts.TrainARConvertObjectToolbar.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Editor.Scripts.TrainARConvertObjectToolbar.html",
-          "hash": "VWMs9hu6Qsb846cUEPTNgbOc2nDvfenbTrdZKIucodY="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Editor.Scripts.TrainAREditorMenu.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Editor.Scripts.TrainAREditorMenu.html",
-          "hash": "+sWRZFlLZanalqV9fk/k7CoigJ3nz5UV/m4pc0XU9Go="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Editor.Scripts.TrainARObjectConversionWindow.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Editor.Scripts.TrainARObjectConversionWindow.html",
-          "hash": "4JAOi2R0QI93+av3ei7/LqPIDtHxAyzO7mUREqy/ROE="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Editor.Scripts.TrainARObjectOffsetToolbar.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Editor.Scripts.TrainARObjectOffsetToolbar.html",
-          "hash": "/kiCm3crxRh/kjV4ArzorHvRD1qk4nxeBvyueqwdaiU="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Editor.Scripts.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Editor.Scripts.html",
-          "hash": "Ge4E0g9asqMyrsvuAhrMqvG6t9SAV3vX+U0xI82gqe0="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
+      }
     },
     {
       "type": "ManagedReference",
       "source_relative_path": "api/Interaction.AudioController.yml",
       "output": {
         ".html": {
-          "relative_path": "api/Interaction.AudioController.html",
-          "hash": "BU29BYi0SzpVwZ9H/kwV7uahdl4oN1iy+NmVD4MzjWc="
+          "relative_path": "api/Interaction.AudioController.html"
         }
       },
-      "is_incremental": false,
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Interaction.AudioController",
+      "Summary": "<p sourcefile=\"api/Interaction.AudioController.yml\" sourcestartlinenumber=\"1\">The AudioController is a behaviour automatically attached to a TrainAR Object on conversion. It triggers\nits sounds for selection, deselection, grabbing, releasing and correct/incorrect interactions/combinations\nspecific to this object.</p>\n<p sourcefile=\"api/Interaction.AudioController.yml\" sourcestartlinenumber=\"5\">When attached, it holds default sounds. Those can be replaced in the Unity Editor Inspector.</p>\n"
     },
     {
       "type": "ManagedReference",
       "source_relative_path": "api/Interaction.CollisionController.Intersection.yml",
       "output": {
         ".html": {
-          "relative_path": "api/Interaction.CollisionController.Intersection.html",
-          "hash": "45WsjB/9jwGufeLbNzfyJSuyJhTsJMIKig1BFh3HVnM="
+          "relative_path": "api/Interaction.CollisionController.Intersection.html"
         }
       },
-      "is_incremental": false,
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Interaction.CollisionController.Intersection",
+      "Summary": "<p sourcefile=\"api/Interaction.CollisionController.Intersection.yml\" sourcestartlinenumber=\"1\">The struct that holds references of intersections.</p>\n"
     },
     {
       "type": "ManagedReference",
       "source_relative_path": "api/Interaction.CollisionController.yml",
       "output": {
         ".html": {
-          "relative_path": "api/Interaction.CollisionController.html",
-          "hash": "TJOf0HJLZdOzSN9YfMJq4fmOanYk1Ycr2pVvGJ9Gts4="
+          "relative_path": "api/Interaction.CollisionController.html"
         }
       },
-      "is_incremental": false,
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Interaction.CollisionController",
+      "Summary": "<p sourcefile=\"api/Interaction.CollisionController.yml\" sourcestartlinenumber=\"1\">Detects and handles collisions of TrainAR Objects. This is e.g. used for combining GameObjects and\nvisualizing interseted states through outlining and shading.</p>\n"
     },
     {
       "type": "ManagedReference",
       "source_relative_path": "api/Interaction.CrosshairController.yml",
       "output": {
         ".html": {
-          "relative_path": "api/Interaction.CrosshairController.html",
-          "hash": "iTBrUDX4/MgMtaZTMsp/4QXDEQe8Bv8XO/8YEEdFnms="
+          "relative_path": "api/Interaction.CrosshairController.html"
         }
       },
-      "is_incremental": false,
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Interaction.CrosshairController",
+      "Summary": "<p sourcefile=\"api/Interaction.CrosshairController.yml\" sourcestartlinenumber=\"1\">The CrosshairController activates/deactivates the crosshair which is positioned in the middle of the screen.\nThis can e.g. happen when an object is grabbed or an overlay is active.</p>\n"
     },
     {
       "type": "ManagedReference",
       "source_relative_path": "api/Interaction.InteractionController.yml",
       "output": {
         ".html": {
-          "relative_path": "api/Interaction.InteractionController.html",
-          "hash": "wy/mH623bMO8NHrur7436H0hoFxXHYU4KHYYyigvsBM="
+          "relative_path": "api/Interaction.InteractionController.html"
         }
       },
-      "is_incremental": false,
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Interaction.InteractionController",
+      "Summary": "<p sourcefile=\"api/Interaction.InteractionController.yml\" sourcestartlinenumber=\"1\">Handles the interactions, i.e. grabbing, releasing, interacting and combining of the TrainARObjects.</p>\n"
     },
     {
       "type": "ManagedReference",
       "source_relative_path": "api/Interaction.MaterialController.yml",
       "output": {
         ".html": {
-          "relative_path": "api/Interaction.MaterialController.html",
-          "hash": "BX658JNZIUr/EuOsZT1ygk7dq3uu2rM5wB1BOppAlE8="
+          "relative_path": "api/Interaction.MaterialController.html"
         }
       },
-      "is_incremental": false,
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Interaction.MaterialController",
+      "Summary": "<p sourcefile=\"api/Interaction.MaterialController.yml\" sourcestartlinenumber=\"1\">Handles material related functionality for TrainAR objects.</p>\n"
     },
     {
       "type": "ManagedReference",
       "source_relative_path": "api/Interaction.ObjectLerpingController.yml",
       "output": {
         ".html": {
-          "relative_path": "api/Interaction.ObjectLerpingController.html",
-          "hash": "BKEwr7y7lCv5hKaAhWHlY6935nU06W7VDHmf6qODabw="
+          "relative_path": "api/Interaction.ObjectLerpingController.html"
         }
       },
-      "is_incremental": false,
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Interaction.ObjectLerpingController",
+      "Summary": "<p sourcefile=\"api/Interaction.ObjectLerpingController.yml\" sourcestartlinenumber=\"1\">When TrainAR objects are grabbed, they lerp towards to correct position attached to the camera instead of appearing there.\nThe ObjectLerpingController handles the lerping towards the camera when the object is grabbed.</p>\n"
     },
     {
       "type": "ManagedReference",
       "source_relative_path": "api/Interaction.Outline.Mode.yml",
       "output": {
         ".html": {
-          "relative_path": "api/Interaction.Outline.Mode.html",
-          "hash": "38yVlRDmNu2DmjpxICPsDiSS/SDquAlgHlg5zvpt/M0="
+          "relative_path": "api/Interaction.Outline.Mode.html"
         }
       },
-      "is_incremental": false,
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Interaction.Outline.Mode",
+      "Summary": "<p sourcefile=\"api/Interaction.Outline.Mode.yml\" sourcestartlinenumber=\"1\">Differentiates the type of the outlines used.</p>\n"
     },
     {
       "type": "ManagedReference",
       "source_relative_path": "api/Interaction.Outline.yml",
       "output": {
         ".html": {
-          "relative_path": "api/Interaction.Outline.html",
-          "hash": "RnF1t4Ege4EwW2y1F95RwKdHTgk/phZ+4FtaMIcuAzc="
+          "relative_path": "api/Interaction.Outline.html"
         }
       },
-      "is_incremental": false,
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Interaction.Outline",
+      "Summary": "<p sourcefile=\"api/Interaction.Outline.yml\" sourcestartlinenumber=\"1\">The Outline script is automatically attached to TrainAR objects on conversion and handles the outlining\nfor e.g. selection, success or failure. It is called and handled by the MaterialController.</p>\n"
     },
     {
       "type": "ManagedReference",
       "source_relative_path": "api/Interaction.ResetLostObjectController.yml",
       "output": {
         ".html": {
-          "relative_path": "api/Interaction.ResetLostObjectController.html",
-          "hash": "04YWApHw7JHB/7mKI3yTbmLOJg1F0mLYZMKHFVkMkA4="
+          "relative_path": "api/Interaction.ResetLostObjectController.html"
         }
       },
-      "is_incremental": false,
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Interaction.ResetLostObjectController",
+      "Summary": "<p sourcefile=\"api/Interaction.ResetLostObjectController.yml\" sourcestartlinenumber=\"1\">The ResetLostObjectController resets TrainAR objects back to the original spawn point when they are released\ntoo far away of the assembly. This is to prevent objects from falling through the infinityPlane or disapearing\nwhen release while the training assembly has tracking problems and &quot;flaots&quot; away.</p>\n"
     },
     {
       "type": "ManagedReference",
       "source_relative_path": "api/Interaction.RigidbodyController.yml",
       "output": {
         ".html": {
-          "relative_path": "api/Interaction.RigidbodyController.html",
-          "hash": "PIf7xKFLcDy5NlVOkyZKVXaqqx7sKsa4c7Ps+W7qKds="
+          "relative_path": "api/Interaction.RigidbodyController.html"
         }
       },
-      "is_incremental": false,
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Interaction.RigidbodyController",
+      "Summary": "<p sourcefile=\"api/Interaction.RigidbodyController.yml\" sourcestartlinenumber=\"1\">The RigidbodyController is attached to TrainAR object on conversion. It handles the activation and\ndeactivation of physics, as we do want TrainAR objects to elicit physics when released but not when\nstationary as this could e.g. cause users to &quot;knock over&quot; the assembly with grabbed objects.</p>\n"
     },
     {
       "type": "ManagedReference",
       "source_relative_path": "api/Interaction.TrainARObject.CustomUnityEvent.yml",
       "output": {
         ".html": {
-          "relative_path": "api/Interaction.TrainARObject.CustomUnityEvent.html",
-          "hash": "cZKEYQEmm2+zvEAf9uRK1EEvVbFJtQ8B0dUy7PK56Nc="
+          "relative_path": "api/Interaction.TrainARObject.CustomUnityEvent.html"
         }
       },
-      "is_incremental": false,
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Interaction.TrainARObject.CustomUnityEvent",
+      "Summary": "<p sourcefile=\"api/Interaction.TrainARObject.CustomUnityEvent.yml\" sourcestartlinenumber=\"1\">The CustomUnityEvent that is used for the OnCombination event. This Event also passes a string with\nits invocation indicating the other to be combined with TrainAR objects name.</p>\n"
     },
     {
       "type": "ManagedReference",
       "source_relative_path": "api/Interaction.TrainARObject.yml",
       "output": {
         ".html": {
-          "relative_path": "api/Interaction.TrainARObject.html",
-          "hash": "gfMl3OU/Bd0wYFKMzfeoo1tnbLVVMu5pzzBAn7eGFX8="
+          "relative_path": "api/Interaction.TrainARObject.html"
         }
       },
-      "is_incremental": false,
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Interaction.TrainARObject",
+      "Summary": "<p sourcefile=\"api/Interaction.TrainARObject.yml\" sourcestartlinenumber=\"1\">The main behaviour script for a TrainAR object.\nThis is automatically added when converting GameObject to TrainAR objects\nAfter adding this script all following RequiredComponents are added.\nSelectionBase, MeshCollider, BoxCollider, RigidbodyController,\nMaterialController, AudioController, Rigidbody, Outline,\nCollisionController.\nThe TrainAR events that are triggered on actions are also defined in this script.</p>\n"
     },
     {
       "type": "ManagedReference",
       "source_relative_path": "api/Interaction.yml",
       "output": {
         ".html": {
-          "relative_path": "api/Interaction.html",
-          "hash": "6Q79kH1SCi6Dxw6xKcPdovjI7HZkDgtQry4NUArtjpc="
+          "relative_path": "api/Interaction.html"
         }
       },
-      "is_incremental": false,
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Interaction",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
       "source_relative_path": "api/Others.ARSessionIsReady.yml",
       "output": {
         ".html": {
-          "relative_path": "api/Others.ARSessionIsReady.html",
-          "hash": "7XT6uRtoSGpr56XuDg0IpR9xylJDx/mww1JUIVvALc0="
+          "relative_path": "api/Others.ARSessionIsReady.html"
         }
       },
-      "is_incremental": false,
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Others.ARSessionIsReady",
+      "Summary": "<p sourcefile=\"api/Others.ARSessionIsReady.yml\" sourcestartlinenumber=\"1\">Detects if the ARSession is loaded and deactivates the loading screen.</p>\n"
     },
     {
       "type": "ManagedReference",
       "source_relative_path": "api/Others.ApplicationRuntimeManager.yml",
       "output": {
         ".html": {
-          "relative_path": "api/Others.ApplicationRuntimeManager.html",
-          "hash": "KERUnoiEBD47atw04JnL3lBfl9SBGXdoKHVxluWnIIM="
+          "relative_path": "api/Others.ApplicationRuntimeManager.html"
         }
       },
-      "is_incremental": false,
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Others.ApplicationRuntimeManager",
+      "Summary": "<p sourcefile=\"api/Others.ApplicationRuntimeManager.yml\" sourcestartlinenumber=\"1\">The ApplicationRuntimeManager handles the TrainAR menu lifecycle. It start and quits Trainings and Application.</p>\n"
     },
     {
       "type": "ManagedReference",
       "source_relative_path": "api/Others.LeaveAndResetARScene.yml",
       "output": {
         ".html": {
-          "relative_path": "api/Others.LeaveAndResetARScene.html",
-          "hash": "AI9Lcl3LKtN2fcrw4g4y8iM5WAPMKAF4neIkM7yX06E="
+          "relative_path": "api/Others.LeaveAndResetARScene.html"
         }
       },
-      "is_incremental": false,
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Others.LeaveAndResetARScene",
+      "Summary": "<p sourcefile=\"api/Others.LeaveAndResetARScene.yml\" sourcestartlinenumber=\"1\">Adds basic functionality like leave and reset application and scenarios.</p>\n"
     },
     {
       "type": "ManagedReference",
       "source_relative_path": "api/Others.MeshCombiner.yml",
       "output": {
         ".html": {
-          "relative_path": "api/Others.MeshCombiner.html",
-          "hash": "hUiyenHwDnaWmWddVs2e6HQkPK5t+KYLpxtdO5T1eGo="
+          "relative_path": "api/Others.MeshCombiner.html"
         }
       },
-      "is_incremental": false,
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Others.MeshCombiner",
+      "Summary": "<p sourcefile=\"api/Others.MeshCombiner.yml\" sourcestartlinenumber=\"1\">The MeshCombiner is a utility class used by ConvertToTrainARObject to combine and simplify meshes before\nconverting them into TrainAR objects and computing their outlines and adding behaviours.</p>\n"
     },
     {
       "type": "ManagedReference",
       "source_relative_path": "api/Others.ObjectInsideCollider.yml",
       "output": {
         ".html": {
-          "relative_path": "api/Others.ObjectInsideCollider.html",
-          "hash": "krGYKH9QYyAGYtSIBFZzVSJcj+wXJtOXjDA9B5zdjy8="
+          "relative_path": "api/Others.ObjectInsideCollider.html"
         }
       },
-      "is_incremental": false,
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Others.ObjectInsideCollider",
+      "Summary": "<p sourcefile=\"api/Others.ObjectInsideCollider.yml\" sourcestartlinenumber=\"1\">Detects collisions of the object it is attached to with other objects\nto enable combination.</p>\n"
     },
     {
       "type": "ManagedReference",
       "source_relative_path": "api/Others.PrefabSpawningController.yml",
       "output": {
         ".html": {
-          "relative_path": "api/Others.PrefabSpawningController.html",
-          "hash": "OoPz1EbE+XsSLSdZCOsGVthNEyrkWsJCmj8ZA42kl1E="
+          "relative_path": "api/Others.PrefabSpawningController.html"
         }
       },
-      "is_incremental": false,
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Others.PrefabSpawningController",
+      "Summary": "<p sourcefile=\"api/Others.PrefabSpawningController.yml\" sourcestartlinenumber=\"1\">Handles the initial spawning and positioning as well as the repositioning of the training assembly.</p>\n"
     },
     {
       "type": "ManagedReference",
       "source_relative_path": "api/Others.ScenarioCompleted.yml",
       "output": {
         ".html": {
-          "relative_path": "api/Others.ScenarioCompleted.html",
-          "hash": "v5g34nv6xhFsVax6ABUin+wQmyL3qzKANXb+3w+B8rc="
+          "relative_path": "api/Others.ScenarioCompleted.html"
         }
       },
-      "is_incremental": false,
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Others.ScenarioCompleted",
+      "Summary": "<p sourcefile=\"api/Others.ScenarioCompleted.yml\" sourcestartlinenumber=\"1\">Handles the completion overlay that is shown at the end of the training.</p>\n"
     },
     {
       "type": "ManagedReference",
       "source_relative_path": "api/Others.SelectionBase.yml",
       "output": {
         ".html": {
-          "relative_path": "api/Others.SelectionBase.html",
-          "hash": "cDH1HJxytahfjKJZLkZDSusR9YWSlXqWYHbwlLSnHh8="
+          "relative_path": "api/Others.SelectionBase.html"
         }
       },
-      "is_incremental": false,
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Others.SelectionBase",
+      "Summary": "<p sourcefile=\"api/Others.SelectionBase.yml\" sourcestartlinenumber=\"1\">Editor utility script that is attached on TrainAR object conversion.\nWith this, authors always select this object when a child is selected in the Scene view.</p>\n"
     },
     {
       "type": "ManagedReference",
       "source_relative_path": "api/Others.StartARScene.yml",
       "output": {
         ".html": {
-          "relative_path": "api/Others.StartARScene.html",
-          "hash": "0Ocqser1VVe31xrHFLcWcuo29vmCJ8VAyuDH2EW8oZg="
+          "relative_path": "api/Others.StartARScene.html"
         }
       },
-      "is_incremental": false,
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Others.StartARScene",
+      "Summary": "<p sourcefile=\"api/Others.StartARScene.yml\" sourcestartlinenumber=\"1\">Starts the ARScene after the tutorial is finished.</p>\n"
     },
     {
       "type": "ManagedReference",
       "source_relative_path": "api/Others.StateRequestSimulator.yml",
       "output": {
         ".html": {
-          "relative_path": "api/Others.StateRequestSimulator.html",
-          "hash": "W82pMY/3eg+ASIVqUgWU4TPJsUbf5VNBwvdByPlmhmk="
+          "relative_path": "api/Others.StateRequestSimulator.html"
         }
       },
-      "is_incremental": false,
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Others.StateRequestSimulator",
+      "Summary": "<p sourcefile=\"api/Others.StateRequestSimulator.yml\" sourcestartlinenumber=\"1\">Developer Utility. The StateRequestSimulator allows to test the visual scripting stateflows in the editor by simulating\nrequests to the statemachine manually. This is attached to the framework but not active by default.\nTo use it, the PlayModeButtonOverride has to be deactivated/deleted so the playmode can be entered. The StateRequestSimulator\nis attached to the root object of the TrainAR framework and can then be used in the Hierarchy.</p>\n"
     },
     {
       "type": "ManagedReference",
       "source_relative_path": "api/Others.yml",
       "output": {
         ".html": {
-          "relative_path": "api/Others.html",
-          "hash": "rt/aymFP8kzAqdlJzuBZ+18hmRA/KRoMCA1B+vRUhzA="
+          "relative_path": "api/Others.html"
         }
       },
-      "is_incremental": false,
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Others",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
       "source_relative_path": "api/Static.CustomAction.yml",
       "output": {
         ".html": {
-          "relative_path": "api/Static.CustomAction.html",
-          "hash": "KeuMwqiHoFjh5MwvtYxDkgiWb4wIk1j7RmAlPliH6ug="
+          "relative_path": "api/Static.CustomAction.html"
         }
       },
-      "is_incremental": false,
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Static.CustomAction",
+      "Summary": "<p sourcefile=\"api/Static.CustomAction.yml\" sourcestartlinenumber=\"1\">Custom actions are actions triggered by events outside of Interacting or combining (e.g. UI quizes) and can send parameters\nthat are then checked against the statemachine.</p>\n<p sourcefile=\"api/Static.CustomAction.yml\" sourcestartlinenumber=\"4\">This class is also what authors can use to trigger actions beyond the scope of TrainAR and can be handled by the statemachine\nby using the Action Node and the &quot;Custom Action&quot; type.</p>\n<p sourcefile=\"api/Static.CustomAction.yml\" sourcestartlinenumber=\"7\">CustomAction can either be triggered form the instantiated or static context.</p>\n"
     },
     {
       "type": "ManagedReference",
       "source_relative_path": "api/Static.InteractionType.yml",
       "output": {
         ".html": {
-          "relative_path": "api/Static.InteractionType.html",
-          "hash": "mQy+6w6oikMk6ScHg5rkRM6OK75iHxk6aOFcu35Togk="
+          "relative_path": "api/Static.InteractionType.html"
         }
       },
-      "is_incremental": false,
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Static.InteractionType",
+      "Summary": "<p sourcefile=\"api/Static.InteractionType.yml\" sourcestartlinenumber=\"1\">The type of interaction that is used in a StateInformation struct through a state change request.</p>\n"
     },
     {
       "type": "ManagedReference",
       "source_relative_path": "api/Static.StateInformation.yml",
       "output": {
         ".html": {
-          "relative_path": "api/Static.StateInformation.html",
-          "hash": "oviep9nlrBvEcQGq+s4gQ4raNbJSNCEP33kYByiMYh0="
+          "relative_path": "api/Static.StateInformation.html"
         }
       },
-      "is_incremental": false,
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Static.StateInformation",
+      "Summary": "<p sourcefile=\"api/Static.StateInformation.yml\" sourcestartlinenumber=\"1\">The StateInformation is a struct created for state change requests. It holds the information of the request to the statemachine.</p>\n"
     },
     {
       "type": "ManagedReference",
       "source_relative_path": "api/Static.StatemachineConnector.yml",
       "output": {
         ".html": {
-          "relative_path": "api/Static.StatemachineConnector.html",
-          "hash": "mn9hzMw+Av77CuNgRWqn2MjVu+Ayjnti7Ct6Hy8XCw4="
+          "relative_path": "api/Static.StatemachineConnector.html"
         }
       },
-      "is_incremental": false,
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Static.StatemachineConnector",
+      "Summary": "<p sourcefile=\"api/Static.StatemachineConnector.yml\" sourcestartlinenumber=\"1\">The StatemachineConnector connects interaction inputs with the visual scripting flow and outputs\nwith the instruction, error and insight controller through events. It therefore functions as a funnel\nbetween the Visual Statemachine and the rest of the logic.</p>\n<p sourcefile=\"api/Static.StatemachineConnector.yml\" sourcestartlinenumber=\"5\">Either the visual statemachien decides whether actions are correct or wrong (default) or the connection\ncan also be commented out and the decisions on wrong/correct actions can be made manually in the\nRequestStateChange method by using C# programming.</p>\n"
     },
     {
       "type": "ManagedReference",
       "source_relative_path": "api/Static.yml",
       "output": {
         ".html": {
-          "relative_path": "api/Static.html",
-          "hash": "1XxAOfzNm7aAb9m/dNpVbmFczcUgQS905TEWmQPz/bM="
+          "relative_path": "api/Static.html"
         }
       },
-      "is_incremental": false,
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Static",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
       "source_relative_path": "api/Tracking.FetchAspectRatioFromARCamera.yml",
       "output": {
         ".html": {
-          "relative_path": "api/Tracking.FetchAspectRatioFromARCamera.html",
-          "hash": "RLNyHlMR9z2RsXVmimfpo8nO1OqdZFc+1h6G+LnS6DU="
+          "relative_path": "api/Tracking.FetchAspectRatioFromARCamera.html"
         }
       },
-      "is_incremental": false,
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Tracking.FetchAspectRatioFromARCamera",
+      "Summary": "<p sourcefile=\"api/Tracking.FetchAspectRatioFromARCamera.yml\" sourcestartlinenumber=\"1\">Fetches the projectionmatrix from one camera and diretly applies it to another one.</p>\n"
     },
     {
       "type": "ManagedReference",
       "source_relative_path": "api/Tracking.yml",
       "output": {
         ".html": {
-          "relative_path": "api/Tracking.html",
-          "hash": "/M8fr9t6udMv9v4fBoW+BenoiEdwb4BZtVmUmvAXA9Y="
+          "relative_path": "api/Tracking.html"
         }
       },
-      "is_incremental": false,
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Tracking",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
       "source_relative_path": "api/UI.CrosshairOnOff.yml",
       "output": {
         ".html": {
-          "relative_path": "api/UI.CrosshairOnOff.html",
-          "hash": "0pIikFM6SoOGJgVXUjyxoAuXzjwy4JuhdHh76A1nGiA="
+          "relative_path": "api/UI.CrosshairOnOff.html"
         }
       },
-      "is_incremental": false,
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "UI.CrosshairOnOff",
+      "Summary": "<p sourcefile=\"api/UI.CrosshairOnOff.yml\" sourcestartlinenumber=\"1\">Controls the dynamic transformations of the crosshair. It activates and deactivates the crosshair\nbut also visualizes the distance to a grabbable TrainAR object by converging the crosshairs size until\nthe object would be selected (e.g. if the user is too far away from an object to grab it).</p>\n"
     },
     {
       "type": "ManagedReference",
       "source_relative_path": "api/UI.DirectInfoController.yml",
       "output": {
         ".html": {
-          "relative_path": "api/UI.DirectInfoController.html",
-          "hash": "m5WDe6VXjF3hziRdbbVkdbsX2ABqkJQXbwNIWGibjq8="
+          "relative_path": "api/UI.DirectInfoController.html"
         }
       },
-      "is_incremental": false,
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "UI.DirectInfoController",
+      "Summary": "<p sourcefile=\"api/UI.DirectInfoController.yml\" sourcestartlinenumber=\"1\">The DirectInfoBoxController handles the displaying of direct info boxes that are used to display insishgts to the user.\nIt is triggerd through invocation of an action in the StatemachineConnector and therefore has no public methods.</p>\n"
     },
     {
       "type": "ManagedReference",
       "source_relative_path": "api/UI.ErrorOverlayController.yml",
       "output": {
         ".html": {
-          "relative_path": "api/UI.ErrorOverlayController.html",
-          "hash": "i3hBYHpQeVvjba1oWPgEhysUSEzw6ZCk96MJJkUC6Yg="
+          "relative_path": "api/UI.ErrorOverlayController.html"
         }
       },
-      "is_incremental": false,
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "UI.ErrorOverlayController",
+      "Summary": "<p sourcefile=\"api/UI.ErrorOverlayController.yml\" sourcestartlinenumber=\"1\">The error overlay controller handles the error overlay, triggers it on actions from the statemachine and sets its texts.\nIt is triggerd through invocation of an action in the StatemachineConnector and therefore has no public methods.</p>\n"
     },
     {
       "type": "ManagedReference",
       "source_relative_path": "api/UI.InputFieldAdjust.yml",
       "output": {
         ".html": {
-          "relative_path": "api/UI.InputFieldAdjust.html",
-          "hash": "X8IrEbDY7fMn2Tum96l07HXXzHEmnRx45jpPscdl12w="
+          "relative_path": "api/UI.InputFieldAdjust.html"
         }
       },
-      "is_incremental": false,
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "UI.InputFieldAdjust",
+      "Summary": "<p sourcefile=\"api/UI.InputFieldAdjust.yml\" sourcestartlinenumber=\"1\">InputFieldAdjust Adjusts the UI of the Input field when the keyboard is opened.\nThis is mostly problematic on Android otherwise.</p>\n"
     },
     {
       "type": "ManagedReference",
       "source_relative_path": "api/UI.InteractButton.yml",
       "output": {
         ".html": {
-          "relative_path": "api/UI.InteractButton.html",
-          "hash": "T7wY2O0SDxQcyr6ddrflEqYd8Dz09f0qrdgLiPCgrbo="
+          "relative_path": "api/UI.InteractButton.html"
         }
       },
-      "is_incremental": false,
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "UI.InteractButton",
+      "Summary": "<p sourcefile=\"api/UI.InteractButton.yml\" sourcestartlinenumber=\"1\">Handles interactions with the interact button.</p>\n"
     },
     {
       "type": "ManagedReference",
       "source_relative_path": "api/UI.InteractionButtonController.yml",
       "output": {
         ".html": {
-          "relative_path": "api/UI.InteractionButtonController.html",
-          "hash": "lq0y+HIXgccC6S4sNX+2J4bOaKUYM7syHCNYZ0SiDfY="
+          "relative_path": "api/UI.InteractionButtonController.html"
         }
       },
-      "is_incremental": false,
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "UI.InteractionButtonController",
+      "Summary": "<p sourcefile=\"api/UI.InteractionButtonController.yml\" sourcestartlinenumber=\"1\">Handles the behaviour of the interaction buttons, such as enabling and disabling when appropriate\nor highlighting the combine button in orange when a combination would be possible.</p>\n<p sourcefile=\"api/UI.InteractionButtonController.yml\" sourcestartlinenumber=\"4\">It also allows for grabbed objects to be rotatable.</p>\n"
     },
     {
       "type": "ManagedReference",
       "source_relative_path": "api/UI.OnBoardingController.yml",
       "output": {
         ".html": {
-          "relative_path": "api/UI.OnBoardingController.html",
-          "hash": "TtzuighEMEnWb2ZPPgUuwGZraNJHX0NudguxFQDdr58="
+          "relative_path": "api/UI.OnBoardingController.html"
         }
       },
-      "is_incremental": false,
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "UI.OnBoardingController",
+      "Summary": "<p sourcefile=\"api/UI.OnBoardingController.yml\" sourcestartlinenumber=\"1\">The OnBoardingController handles displaying the onboarding animations for scanning the environment and placing the\ntraining assembly by automaticaly detecting at which point and where sufficient feature points for a plane were detected.</p>\n"
     },
     {
       "type": "ManagedReference",
       "source_relative_path": "api/UI.OpenSidePanel.yml",
       "output": {
         ".html": {
-          "relative_path": "api/UI.OpenSidePanel.html",
-          "hash": "3QdnMV8OJgGu2xPHBL5R0bTnJ65PxJYVeEjudIkgeCA="
+          "relative_path": "api/UI.OpenSidePanel.html"
         }
       },
-      "is_incremental": false,
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "UI.OpenSidePanel",
+      "Summary": "<p sourcefile=\"api/UI.OpenSidePanel.yml\" sourcestartlinenumber=\"1\">Handles opening or closing of the side panel (burger menu) wiht options for help, quitting and replacing the assembly.</p>\n"
     },
     {
       "type": "ManagedReference",
       "source_relative_path": "api/UI.Question.yml",
       "output": {
         ".html": {
-          "relative_path": "api/UI.Question.html",
-          "hash": "xMjLBXSBeI3O/WDAHK27O7KnY2kknIh2OBXGSMB7ERI="
+          "relative_path": "api/UI.Question.html"
         }
       },
-      "is_incremental": false,
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "UI.Question",
+      "Summary": "<p sourcefile=\"api/UI.Question.yml\" sourcestartlinenumber=\"1\">The abstract class for questions to share the same UI functions.</p>\n"
     },
     {
       "type": "ManagedReference",
       "source_relative_path": "api/UI.QuestionnaireController.Answer.yml",
       "output": {
         ".html": {
-          "relative_path": "api/UI.QuestionnaireController.Answer.html",
-          "hash": "rWD3//gpiMepxTR5o82dYZbM1EEGJLFKjNqXyTfN5Ls="
+          "relative_path": "api/UI.QuestionnaireController.Answer.html"
         }
       },
-      "is_incremental": false,
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "UI.QuestionnaireController.Answer",
+      "Summary": "<p sourcefile=\"api/UI.QuestionnaireController.Answer.yml\" sourcestartlinenumber=\"1\">Holder for information for one answer.</p>\n"
     },
     {
       "type": "ManagedReference",
       "source_relative_path": "api/UI.QuestionnaireController.QuestionUITypes.yml",
       "output": {
         ".html": {
-          "relative_path": "api/UI.QuestionnaireController.QuestionUITypes.html",
-          "hash": "KSAjE6cgAhvuQ6xITenNSdrOCtSQSBBYXPZ/JEA25p8="
+          "relative_path": "api/UI.QuestionnaireController.QuestionUITypes.html"
         }
       },
-      "is_incremental": false,
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "UI.QuestionnaireController.QuestionUITypes",
+      "Summary": "<p sourcefile=\"api/UI.QuestionnaireController.QuestionUITypes.yml\" sourcestartlinenumber=\"1\">The type of the UI custom action/question.</p>\n"
     },
     {
       "type": "ManagedReference",
       "source_relative_path": "api/UI.QuestionnaireController.yml",
       "output": {
         ".html": {
-          "relative_path": "api/UI.QuestionnaireController.html",
-          "hash": "OeTPLDy19ySZ1xel6F1dMfcRHY+F5e6x5+RqPc12obY="
+          "relative_path": "api/UI.QuestionnaireController.html"
         }
       },
-      "is_incremental": false,
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "UI.QuestionnaireController",
+      "Summary": "<p sourcefile=\"api/UI.QuestionnaireController.yml\" sourcestartlinenumber=\"1\">The QuestionaireController provides the functionality to control the input field questions, reqular question and question lists.\nThe input field question opens the keyboard and recives any given string input from the user.\nThe regular question opens a question with up to four possible pre-defined awnsers.\nThe question list opens a list with n possible items and continues when all right items were selected.</p>\n"
     },
     {
       "type": "ManagedReference",
       "source_relative_path": "api/UI.SaveArea.yml",
       "output": {
         ".html": {
-          "relative_path": "api/UI.SaveArea.html",
-          "hash": "kaImC5xyEUFuaqBtNBsCJm4R6nhAbUFQpKiEf35Yq+c="
+          "relative_path": "api/UI.SaveArea.html"
         }
       },
-      "is_incremental": false,
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "UI.SaveArea",
+      "Summary": "<p sourcefile=\"api/UI.SaveArea.yml\" sourcestartlinenumber=\"1\">The SafeArea scripts moves UI components when they would otherwise be occluded by e.g. cutout cameras or speakers\non some newer smartphone devices.</p>\n"
     },
     {
       "type": "ManagedReference",
       "source_relative_path": "api/UI.StreamVideo.yml",
       "output": {
         ".html": {
-          "relative_path": "api/UI.StreamVideo.html",
-          "hash": "f2RfrJWliZnZUTE5ktK7ZTB+XKgB8HqrWwOBxmQu+Kw="
+          "relative_path": "api/UI.StreamVideo.html"
         }
       },
-      "is_incremental": false,
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "UI.StreamVideo",
+      "Summary": "<p sourcefile=\"api/UI.StreamVideo.yml\" sourcestartlinenumber=\"1\">StreamVideo is a wrapper for the Videoplayer class and handles playing of the onboarding animations.</p>\n"
     },
     {
       "type": "ManagedReference",
       "source_relative_path": "api/UI.TopPanelController.yml",
       "output": {
         ".html": {
-          "relative_path": "api/UI.TopPanelController.html",
-          "hash": "pSiqdRNO6RJGNuSmWX6K84kAeJvv2F28A776OjoW0l0="
+          "relative_path": "api/UI.TopPanelController.html"
         }
       },
-      "is_incremental": false,
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "UI.TopPanelController",
+      "Summary": "<p sourcefile=\"api/UI.TopPanelController.yml\" sourcestartlinenumber=\"1\">The TopPanelController handpes updates to the UI panel of the trainign scenario, showing the instructions and progress percentage of the training.</p>\n"
     },
     {
       "type": "ManagedReference",
       "source_relative_path": "api/UI.yml",
       "output": {
         ".html": {
-          "relative_path": "api/UI.html",
-          "hash": "F9uGl+qFpO5KNti3j26Jdc3Ta/q0avwJ6ZMXoMgxCkw="
+          "relative_path": "api/UI.html"
         }
       },
-      "is_incremental": false,
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "UI",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
       "source_relative_path": "api/Visual_Scripting.Action.TrainARActionChoices.yml",
       "output": {
         ".html": {
-          "relative_path": "api/Visual_Scripting.Action.TrainARActionChoices.html",
-          "hash": "X48njssG+xgPvWReaqB02TdeA406gC0yfhmQ3EuJY/4="
+          "relative_path": "api/Visual_Scripting.Action.TrainARActionChoices.html"
         }
       },
-      "is_incremental": false,
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Visual_Scripting.Action.TrainARActionChoices",
+      "Summary": "<p sourcefile=\"api/Visual_Scripting.Action.TrainARActionChoices.yml\" sourcestartlinenumber=\"1\">The type of interaction to check against.</p>\n"
     },
     {
       "type": "ManagedReference",
       "source_relative_path": "api/Visual_Scripting.Action.yml",
       "output": {
         ".html": {
-          "relative_path": "api/Visual_Scripting.Action.html",
-          "hash": "qCbiVMO58mt1C/sUTqyXKodnRybB4pzoVP1yf0IEp28="
+          "relative_path": "api/Visual_Scripting.Action.html"
         }
       },
-      "is_incremental": false,
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Visual_Scripting.Action",
+      "Summary": "<p sourcefile=\"api/Visual_Scripting.Action.yml\" sourcestartlinenumber=\"1\">Implements the &quot;Interacting&quot;, &quot;Combining&quot; and &quot;Custom&quot; Action functionality of the TrainAR Framework,\ntherefore it checks if the  user triggered the &quot;Interact&quot;, &quot;Combine&quot; Buttons or triggered a CustomAction through\nscripts and allows to check this against the stored state in the visual statemachine.</p>\n"
     },
     {
       "type": "ManagedReference",
       "source_relative_path": "api/Visual_Scripting.ActionFork.TrainARActionChoices.yml",
       "output": {
         ".html": {
-          "relative_path": "api/Visual_Scripting.ActionFork.TrainARActionChoices.html",
-          "hash": "+IiIm50G6F0RdKMH5lrS5cPiAOIlATkkfqIxppsIACE="
+          "relative_path": "api/Visual_Scripting.ActionFork.TrainARActionChoices.html"
         }
       },
-      "is_incremental": false,
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Visual_Scripting.ActionFork.TrainARActionChoices",
+      "Summary": "<p sourcefile=\"api/Visual_Scripting.ActionFork.TrainARActionChoices.yml\" sourcestartlinenumber=\"1\">The type of interaction to check against.</p>\n"
     },
     {
       "type": "ManagedReference",
       "source_relative_path": "api/Visual_Scripting.ActionFork.yml",
       "output": {
         ".html": {
-          "relative_path": "api/Visual_Scripting.ActionFork.html",
-          "hash": "v7pIfMEfjDJ1oQfPv26eaGva4QDb2n52wJkqVh1aQkU="
+          "relative_path": "api/Visual_Scripting.ActionFork.html"
         }
       },
-      "is_incremental": false,
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Visual_Scripting.ActionFork",
+      "Summary": "<p sourcefile=\"api/Visual_Scripting.ActionFork.yml\" sourcestartlinenumber=\"1\">Implements the &quot;Interacting&quot;, &quot;Combining&quot; and &quot;Custom&quot; Action functionality of the TrainAR Framework,\ntherefore it checks if the  user triggered the &quot;Interact&quot;, &quot;Combine&quot; Buttons or triggered a CustomAction through\nscripts and allows to check this against the stored state in the visual statemachine.</p>\n<p sourcefile=\"api/Visual_Scripting.ActionFork.yml\" sourcestartlinenumber=\"5\">This is the fork version of the action node. Therefore there are multiple correct answers and the stateflow enters a fork\ndepending on which one is selected.</p>\n"
     },
     {
       "type": "ManagedReference",
       "source_relative_path": "api/Visual_Scripting.ActionMulti.TrainARActionChoices.yml",
       "output": {
         ".html": {
-          "relative_path": "api/Visual_Scripting.ActionMulti.TrainARActionChoices.html",
-          "hash": "9qHIWyPovsFoHxGAdCePr8wyYnhYiiOU80Sirki2r7A="
+          "relative_path": "api/Visual_Scripting.ActionMulti.TrainARActionChoices.html"
         }
       },
-      "is_incremental": false,
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Visual_Scripting.ActionMulti.TrainARActionChoices",
+      "Summary": "<p sourcefile=\"api/Visual_Scripting.ActionMulti.TrainARActionChoices.yml\" sourcestartlinenumber=\"1\">The type of interaction to check against.</p>\n"
     },
     {
       "type": "ManagedReference",
       "source_relative_path": "api/Visual_Scripting.ActionMulti.yml",
       "output": {
         ".html": {
-          "relative_path": "api/Visual_Scripting.ActionMulti.html",
-          "hash": "FGss2DhuXkLAMMU0xmA3HoCd83QASvT8n8gPcl9XvqY="
+          "relative_path": "api/Visual_Scripting.ActionMulti.html"
         }
       },
-      "is_incremental": false,
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Visual_Scripting.ActionMulti",
+      "Summary": "<p sourcefile=\"api/Visual_Scripting.ActionMulti.yml\" sourcestartlinenumber=\"1\">Implements the &quot;Interacting&quot;, &quot;Combining&quot; and &quot;Custom&quot; Action functionality of the TrainAR Framework,\ntherefore it checks if the  user triggered the &quot;Interact&quot;, &quot;Combine&quot; Buttons or triggered a CustomAction through\nscripts and allows to check this against the stored state in the visual statemachine.</p>\n<p sourcefile=\"api/Visual_Scripting.ActionMulti.yml\" sourcestartlinenumber=\"5\">This is the multi version of the action node. Therefore all specified actions in this node have to be completed before advancing.</p>\n"
     },
     {
       "type": "ManagedReference",
       "source_relative_path": "api/Visual_Scripting.ActionUI.TrainARUIActionChoices.yml",
       "output": {
         ".html": {
-          "relative_path": "api/Visual_Scripting.ActionUI.TrainARUIActionChoices.html",
-          "hash": "WQ3f+7LdZR8bRvPfYCUtleUrTCg54DKsRYEONnkd3DU="
+          "relative_path": "api/Visual_Scripting.ActionUI.TrainARUIActionChoices.html"
         }
       },
-      "is_incremental": false,
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Visual_Scripting.ActionUI.TrainARUIActionChoices",
+      "Summary": "<p sourcefile=\"api/Visual_Scripting.ActionUI.TrainARUIActionChoices.yml\" sourcestartlinenumber=\"1\">The type of UI questionnaire triggered and check against.</p>\n"
     },
     {
       "type": "ManagedReference",
       "source_relative_path": "api/Visual_Scripting.ActionUI.yml",
       "output": {
         ".html": {
-          "relative_path": "api/Visual_Scripting.ActionUI.html",
-          "hash": "GxAE4dIRzKu84wUlzbyNSITO5rvBgR2gF3bEnfC8xlg="
+          "relative_path": "api/Visual_Scripting.ActionUI.html"
         }
       },
-      "is_incremental": false,
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Visual_Scripting.ActionUI",
+      "Summary": "<p sourcefile=\"api/Visual_Scripting.ActionUI.yml\" sourcestartlinenumber=\"1\">Implements the UI questionnaire functionality of TrainAR, therefore it triggers and checks against UI questions like\ntext input fields, questionnaires, and question lists.</p>\n"
     },
     {
       "type": "ManagedReference",
       "source_relative_path": "api/Visual_Scripting.Conclusion.yml",
       "output": {
         ".html": {
-          "relative_path": "api/Visual_Scripting.Conclusion.html",
-          "hash": "PtIctW5fkjicY+KbKEWZbVt3XmJXchuoJ85OXA7FmcE="
+          "relative_path": "api/Visual_Scripting.Conclusion.html"
         }
       },
-      "is_incremental": false,
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Visual_Scripting.Conclusion",
+      "Summary": "<p sourcefile=\"api/Visual_Scripting.Conclusion.yml\" sourcestartlinenumber=\"1\">Triggers the Completion overlay that shows the training assessment of the scenario and ends the stateflow/training.</p>\n"
     },
     {
       "type": "ManagedReference",
       "source_relative_path": "api/Visual_Scripting.Feedback.yml",
       "output": {
         ".html": {
-          "relative_path": "api/Visual_Scripting.Feedback.html",
-          "hash": "mf7ETm7b8ms9QsSnbENXthSMH3vymh92JgkqO+b0Yww="
+          "relative_path": "api/Visual_Scripting.Feedback.html"
         }
       },
-      "is_incremental": false,
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Visual_Scripting.Feedback",
+      "Summary": "<p sourcefile=\"api/Visual_Scripting.Feedback.yml\" sourcestartlinenumber=\"1\">Implements the &quot;Feedback&quot; functionality of the TrainAR Framework, therefore it triggers\nthe error overlay modality to show feedback (e.g. for an incorrect important action).</p>\n"
     },
     {
       "type": "ManagedReference",
       "source_relative_path": "api/Visual_Scripting.Insights.yml",
       "output": {
         ".html": {
-          "relative_path": "api/Visual_Scripting.Insights.html",
-          "hash": "kiysLAQX2EXXIVKtiRLhDnSPu//a3mdw05mQEm8Id4Y="
+          "relative_path": "api/Visual_Scripting.Insights.html"
         }
       },
-      "is_incremental": false,
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Visual_Scripting.Insights",
+      "Summary": "<p sourcefile=\"api/Visual_Scripting.Insights.yml\" sourcestartlinenumber=\"1\">Implements the &quot;Insights&quot; functionality of the TrainAR Framework, therefore it triggers\nthe expert input modality to show additional insights and tips and optionally plays audio clips.</p>\n"
     },
     {
       "type": "ManagedReference",
       "source_relative_path": "api/Visual_Scripting.Instructions.yml",
       "output": {
         ".html": {
-          "relative_path": "api/Visual_Scripting.Instructions.html",
-          "hash": "vKO91MxQfDXomNH7b9iOXsdW1M833fdJbqXxCo/8AuM="
+          "relative_path": "api/Visual_Scripting.Instructions.html"
         }
       },
-      "is_incremental": false,
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Visual_Scripting.Instructions",
+      "Summary": "<p sourcefile=\"api/Visual_Scripting.Instructions.yml\" sourcestartlinenumber=\"1\">Implements the &quot;Instruction&quot; functionality of the TrainAR Framework, therefore it updates the isntrutions and progress percentage of the Top panel.</p>\n"
     },
     {
       "type": "ManagedReference",
       "source_relative_path": "api/Visual_Scripting.ObjectHelper.TrainARHelperChoices.yml",
       "output": {
         ".html": {
-          "relative_path": "api/Visual_Scripting.ObjectHelper.TrainARHelperChoices.html",
-          "hash": "M7x2jQ4M8VKLGYXtiW0njXRxE8bAWaEDOoC+b6j1xhQ="
+          "relative_path": "api/Visual_Scripting.ObjectHelper.TrainARHelperChoices.html"
         }
       },
-      "is_incremental": false,
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Visual_Scripting.ObjectHelper.TrainARHelperChoices",
+      "Summary": "<p sourcefile=\"api/Visual_Scripting.ObjectHelper.TrainARHelperChoices.yml\" sourcestartlinenumber=\"1\">The available helper utility to select on the &quot;TrainAR: Object Helper&quot; nodes menu.</p>\n"
     },
     {
       "type": "ManagedReference",
       "source_relative_path": "api/Visual_Scripting.ObjectHelper.yml",
       "output": {
         ".html": {
-          "relative_path": "api/Visual_Scripting.ObjectHelper.html",
-          "hash": "HXPnzyLIgqR2AuL/3Fy7A0oeopr2aFNtK+lZBVZPXOE="
+          "relative_path": "api/Visual_Scripting.ObjectHelper.html"
         }
       },
-      "is_incremental": false,
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Visual_Scripting.ObjectHelper",
+      "Summary": "<p sourcefile=\"api/Visual_Scripting.ObjectHelper.yml\" sourcestartlinenumber=\"1\">The Object helper provides utility methods to toggle visibility, grabbability, interactability, and combinability of TrainAR objects, to destroy them, to get GameObject references to TrainAR object in the stateflow and many other utility functions.</p>\n"
     },
     {
       "type": "ManagedReference",
       "source_relative_path": "api/Visual_Scripting.OnboardingSetup.yml",
       "output": {
         ".html": {
-          "relative_path": "api/Visual_Scripting.OnboardingSetup.html",
-          "hash": "oRTVpGd7FG+nI4wyHRh+I5+xcUrVHTsV/6iK72qRBU8="
+          "relative_path": "api/Visual_Scripting.OnboardingSetup.html"
         }
       },
-      "is_incremental": false,
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Visual_Scripting.OnboardingSetup",
+      "Summary": "<p sourcefile=\"api/Visual_Scripting.OnboardingSetup.yml\" sourcestartlinenumber=\"1\">Adds an EventHook for the onboarding setup that is used to trigger the start of the visual scripting stateflow after the onboarding was completed.</p>\n"
     },
     {
       "type": "ManagedReference",
       "source_relative_path": "api/Visual_Scripting.VisualScriptingEventNames.yml",
       "output": {
         ".html": {
-          "relative_path": "api/Visual_Scripting.VisualScriptingEventNames.html",
-          "hash": "UwR8HbF0i14u7l+VrTo80UgYnoHtJ6JBvuEZNV3Xe5s="
+          "relative_path": "api/Visual_Scripting.VisualScriptingEventNames.html"
         }
       },
-      "is_incremental": false,
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Visual_Scripting.VisualScriptingEventNames",
+      "Summary": "<p sourcefile=\"api/Visual_Scripting.VisualScriptingEventNames.yml\" sourcestartlinenumber=\"1\">Registering a string name for your custom event to hook it to an event. You can save this class in a separated file and add multiple events to it as public static strings.</p>\n"
     },
     {
       "type": "ManagedReference",
       "source_relative_path": "api/Visual_Scripting.yml",
       "output": {
         ".html": {
-          "relative_path": "api/Visual_Scripting.html",
-          "hash": "SFCN31/o/+2TasWkkdw+ejiouUAV8zdTjd+PLf/53Mo="
+          "relative_path": "api/Visual_Scripting.html"
         }
       },
-      "is_incremental": false,
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Visual_Scripting",
+      "Summary": null
     },
     {
       "type": "Toc",
       "source_relative_path": "api/toc.yml",
       "output": {
         ".html": {
-          "relative_path": "api/toc.html",
-          "hash": "K7A3ci8q22ipRyQUBBmeGBLbilowPscIzMDJbvE09ag="
+          "relative_path": "api/toc.html"
+        },
+        ".json": {
+          "relative_path": "api/toc.json"
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
@@ -951,26 +948,19 @@
       "source_relative_path": "index.md",
       "output": {
         ".html": {
-          "relative_path": "index.html",
-          "hash": "Du+hWZZ3gY5mQ8mcDBDIony7QAWLVOMuKU/74YXtxqk="
+          "relative_path": "index.html"
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
-      "log_codes": [
-        "InvalidFileLink"
-      ],
       "type": "Conceptual",
       "source_relative_path": "manual/ActionNodes.md",
       "output": {
         ".html": {
-          "relative_path": "manual/ActionNodes.html",
-          "hash": "6iIUa4NF5/ZWNInKnYxEv3TkHq2KGrGFHUjvTM7VQU8="
+          "relative_path": "manual/ActionNodes.html"
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
@@ -978,11 +968,9 @@
       "source_relative_path": "manual/FeedbackNode.md",
       "output": {
         ".html": {
-          "relative_path": "manual/FeedbackNode.html",
-          "hash": "IPgKqbN8RQg1DySEn3IricjknD3qZo3MvrTMxDgAJf8="
+          "relative_path": "manual/FeedbackNode.html"
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
@@ -990,11 +978,9 @@
       "source_relative_path": "manual/GettingStarted.md",
       "output": {
         ".html": {
-          "relative_path": "manual/GettingStarted.html",
-          "hash": "qFolS3JU6iOATrYWHBPOnlMJLbaXU7C+MRPB2I0EWPY="
+          "relative_path": "manual/GettingStarted.html"
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
@@ -1002,11 +988,9 @@
       "source_relative_path": "manual/InsightNode.md",
       "output": {
         ".html": {
-          "relative_path": "manual/InsightNode.html",
-          "hash": "RQcWPhdmnC40HKphhZ9cFdnokSiGYKrzzanbBsqdWY8="
+          "relative_path": "manual/InsightNode.html"
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
@@ -1014,11 +998,9 @@
       "source_relative_path": "manual/InstructionNode.md",
       "output": {
         ".html": {
-          "relative_path": "manual/InstructionNode.html",
-          "hash": "93lXM8brye6rlRREr5ipTLk5XJHgXQuq1p6aveY2Duo="
+          "relative_path": "manual/InstructionNode.html"
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
@@ -1026,26 +1008,19 @@
       "source_relative_path": "manual/NoVisualScripting.md",
       "output": {
         ".html": {
-          "relative_path": "manual/NoVisualScripting.html",
-          "hash": "6pOfhaaDLVC4QzOIr/OWaxI/g40uxqPtNOpUvGDXAo8="
+          "relative_path": "manual/NoVisualScripting.html"
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
-      "log_codes": [
-        "InvalidFileLink"
-      ],
       "type": "Conceptual",
       "source_relative_path": "manual/ObjectHelperNode.md",
       "output": {
         ".html": {
-          "relative_path": "manual/ObjectHelperNode.html",
-          "hash": "ZkVEN5LDTQYK0gaRIM6cElDm4X9bRUIB+Sues/h/B3c="
+          "relative_path": "manual/ObjectHelperNode.html"
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
@@ -1053,11 +1028,9 @@
       "source_relative_path": "manual/Setup.md",
       "output": {
         ".html": {
-          "relative_path": "manual/Setup.html",
-          "hash": "W82D+Xv+5Dq0bKVSsbZ3X2oOXn2/Ak5exd3Re4n39/8="
+          "relative_path": "manual/Setup.html"
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
@@ -1065,11 +1038,9 @@
       "source_relative_path": "manual/StartTrainingNode.md",
       "output": {
         ".html": {
-          "relative_path": "manual/StartTrainingNode.html",
-          "hash": "a+vpQX1VucuxNufD7PZFCPS9KtuZ0QZ9zuBVJtd7CzQ="
+          "relative_path": "manual/StartTrainingNode.html"
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
@@ -1077,41 +1048,29 @@
       "source_relative_path": "manual/TrainARBasics.md",
       "output": {
         ".html": {
-          "relative_path": "manual/TrainARBasics.html",
-          "hash": "5yq4VgCLmuiLOA4+tWi5VqYHobLqnBTxS4FszW/Vh6A="
+          "relative_path": "manual/TrainARBasics.html"
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
-      "log_codes": [
-        "InvalidFileLink"
-      ],
       "type": "Conceptual",
       "source_relative_path": "manual/TrainARNodes.md",
       "output": {
         ".html": {
-          "relative_path": "manual/TrainARNodes.html",
-          "hash": "+0vAlJylj27GNzm0PuyJ1u7gFVCs+AgvHdWPq3Uys90="
+          "relative_path": "manual/TrainARNodes.html"
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
-      "log_codes": [
-        "InvalidFileLink"
-      ],
       "type": "Conceptual",
       "source_relative_path": "manual/TrainArObjects.md",
       "output": {
         ".html": {
-          "relative_path": "manual/TrainArObjects.html",
-          "hash": "ezicYvhmwjgGTmse/sjw3TQsk9vBb304dUpTrs3PyWs="
+          "relative_path": "manual/TrainArObjects.html"
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
@@ -1119,11 +1078,9 @@
       "source_relative_path": "manual/TrainingConclusionNode.md",
       "output": {
         ".html": {
-          "relative_path": "manual/TrainingConclusionNode.html",
-          "hash": "5D7INKhXYpaFHhEE7Novj0QRX9uE20J7YexA6ncPIWE="
+          "relative_path": "manual/TrainingConclusionNode.html"
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
@@ -1131,26 +1088,19 @@
       "source_relative_path": "manual/UIActionNodes.md",
       "output": {
         ".html": {
-          "relative_path": "manual/UIActionNodes.html",
-          "hash": "81moCR9ZffYuhU0Ms1DQO2emVa/pFI7VOnvl4JzNUSE="
+          "relative_path": "manual/UIActionNodes.html"
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
-      "log_codes": [
-        "InvalidFileLink"
-      ],
       "type": "Conceptual",
       "source_relative_path": "manual/VisualScripting.md",
       "output": {
         ".html": {
-          "relative_path": "manual/VisualScripting.html",
-          "hash": "qmW2pnFmX7Tt3Roc5oEwB/N5yd9L5qV8yqREW+rYSr4="
+          "relative_path": "manual/VisualScripting.html"
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
@@ -1158,11 +1108,12 @@
       "source_relative_path": "manual/toc.yml",
       "output": {
         ".html": {
-          "relative_path": "manual/toc.html",
-          "hash": "r0JFumsXopk1YZaOHifkqTkZxVb7VgfbwhSCsGBLcY4="
+          "relative_path": "manual/toc.html"
+        },
+        ".json": {
+          "relative_path": "manual/toc.json"
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
@@ -1173,7 +1124,6 @@
           "relative_path": "resources/Action.png"
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
@@ -1184,7 +1134,6 @@
           "relative_path": "resources/ActionFork.png"
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
@@ -1195,7 +1144,6 @@
           "relative_path": "resources/ActionFork_2.PNG"
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
@@ -1206,7 +1154,6 @@
           "relative_path": "resources/ActionFork_Combine.PNG"
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
@@ -1217,7 +1164,6 @@
           "relative_path": "resources/ActionMulti.png"
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
@@ -1228,7 +1174,6 @@
           "relative_path": "resources/ActionMulti_2.png"
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
@@ -1239,7 +1184,6 @@
           "relative_path": "resources/ActionUI.png"
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
@@ -1250,7 +1194,6 @@
           "relative_path": "resources/ActionUI_ListSelection.png"
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
@@ -1261,7 +1204,6 @@
           "relative_path": "resources/ActionUI_Questionnaire.PNG"
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
@@ -1272,7 +1214,6 @@
           "relative_path": "resources/BoundingBox.gif"
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
@@ -1283,7 +1224,6 @@
           "relative_path": "resources/ChangeToAndroid.PNG"
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
@@ -1294,7 +1234,6 @@
           "relative_path": "resources/ChooseExamplePrefab.PNG"
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
@@ -1305,7 +1244,6 @@
           "relative_path": "resources/Conditional_Output.PNG"
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
@@ -1316,7 +1254,6 @@
           "relative_path": "resources/ConnectNodes.gif"
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
@@ -1327,7 +1264,6 @@
           "relative_path": "resources/CreateObject.gif"
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
@@ -1338,7 +1274,6 @@
           "relative_path": "resources/CustomAction.PNG"
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
@@ -1349,7 +1284,6 @@
           "relative_path": "resources/DeployedGettingStartedTraining.png"
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
@@ -1360,7 +1294,6 @@
           "relative_path": "resources/ExampleAuthoring.png"
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
@@ -1371,7 +1304,6 @@
           "relative_path": "resources/ExampleScenarios.png"
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
@@ -1382,7 +1314,6 @@
           "relative_path": "resources/Example_Prefab_InScene.PNG"
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
@@ -1393,7 +1324,6 @@
           "relative_path": "resources/Feedback.png"
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
@@ -1404,7 +1334,6 @@
           "relative_path": "resources/FullTraining.gif"
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
@@ -1415,7 +1344,6 @@
           "relative_path": "resources/FuseObject.gif"
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
@@ -1426,7 +1354,6 @@
           "relative_path": "resources/GettingStarted_CombineNode.gif"
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
@@ -1437,7 +1364,6 @@
           "relative_path": "resources/GettingStarted_CreateNodeAndConnect.gif"
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
@@ -1448,7 +1374,6 @@
           "relative_path": "resources/GettingStarted_CreateObject.gif"
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
@@ -1459,7 +1384,6 @@
           "relative_path": "resources/GettingStarted_ObjectHelper.gif"
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
@@ -1470,7 +1394,6 @@
           "relative_path": "resources/GettingStarted_QuestionnaireNode.gif"
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
@@ -1481,7 +1404,6 @@
           "relative_path": "resources/GettingStarted_WrongFeedback.gif"
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
@@ -1492,7 +1414,6 @@
           "relative_path": "resources/Insights.png"
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
@@ -1503,7 +1424,6 @@
           "relative_path": "resources/Install_Modules_2.PNG"
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
@@ -1514,7 +1434,6 @@
           "relative_path": "resources/Install_Modules_Android.PNG"
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
@@ -1525,7 +1444,6 @@
           "relative_path": "resources/Install_Modules_iOS.PNG"
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
@@ -1536,7 +1454,6 @@
           "relative_path": "resources/Instructions.png"
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
@@ -1547,7 +1464,6 @@
           "relative_path": "resources/MacbookTrainARPreviewTool.png"
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
@@ -1558,7 +1474,6 @@
           "relative_path": "resources/ManuallyDownloadTrainAR.JPG"
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
@@ -1569,7 +1484,6 @@
           "relative_path": "resources/MoveObjects.gif"
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
@@ -1580,7 +1494,6 @@
           "relative_path": "resources/MoveRotateScale.gif"
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
@@ -1591,7 +1504,6 @@
           "relative_path": "resources/Move_In_Position.PNG"
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
@@ -1602,7 +1514,6 @@
           "relative_path": "resources/NonTrainARNodes.JPG"
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
@@ -1613,7 +1524,6 @@
           "relative_path": "resources/ObjectHelper.png"
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
@@ -1624,7 +1534,6 @@
           "relative_path": "resources/OpenTrainAR.PNG"
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
@@ -1635,7 +1544,6 @@
           "relative_path": "resources/PlayButton.PNG"
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
@@ -1646,7 +1554,6 @@
           "relative_path": "resources/ReferenceObjects.gif"
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
@@ -1657,7 +1564,6 @@
           "relative_path": "resources/RotateObjects.gif"
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
@@ -1668,7 +1574,6 @@
           "relative_path": "resources/StartEvent.png"
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
@@ -1679,7 +1584,6 @@
           "relative_path": "resources/SwapTrainArObjects_AddObjects.gif"
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
@@ -1690,7 +1594,6 @@
           "relative_path": "resources/SwapTrainArObjects_SwapAndToggleInvisibleStateflow.gif"
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
@@ -1701,7 +1604,6 @@
           "relative_path": "resources/SwapTrainArObjects_SwapStateflow.gif"
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
@@ -1712,7 +1614,6 @@
           "relative_path": "resources/ToggleStates.gif"
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
@@ -1723,7 +1624,6 @@
           "relative_path": "resources/TrainARBasicsOverview.png"
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
@@ -1734,7 +1634,6 @@
           "relative_path": "resources/TrainARDownloaded.JPG"
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
@@ -1745,7 +1644,6 @@
           "relative_path": "resources/TrainARObject_Setup.PNG"
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
@@ -1756,7 +1654,6 @@
           "relative_path": "resources/TrainARTechnicalComponentsVisualization.png"
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
@@ -1767,7 +1664,6 @@
           "relative_path": "resources/TrainAR_Action_Combine.PNG"
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
@@ -1778,7 +1674,6 @@
           "relative_path": "resources/TrainAR_CreateVisualScripting_ReferenceObjects.PNG"
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
@@ -1789,7 +1684,6 @@
           "relative_path": "resources/TrainAR_Overview.PNG"
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
@@ -1800,7 +1694,6 @@
           "relative_path": "resources/TrainAR_Overview_PressPlay.png"
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
@@ -1811,7 +1704,6 @@
           "relative_path": "resources/TrainAR_Overview_ScriptGraphTab.PNG"
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
@@ -1822,7 +1714,6 @@
           "relative_path": "resources/TrainAR_ScriptableGraph_UIAction.PNG"
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
@@ -1833,7 +1724,6 @@
           "relative_path": "resources/TrainAR_ScriptingGraph_ConnectNodes.PNG"
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
@@ -1844,7 +1734,6 @@
           "relative_path": "resources/TrainAR_ScriptingGraph_CorrectFeedback.PNG"
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
@@ -1855,7 +1744,6 @@
           "relative_path": "resources/TrainAR_ScriptingGraph_CreateCombineNode.PNG"
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
@@ -1866,7 +1754,6 @@
           "relative_path": "resources/TrainAR_ScriptingGraph_ErrorFeedback.PNG"
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
@@ -1877,7 +1764,6 @@
           "relative_path": "resources/TrainAR_ScriptingGraph_ObjectHelper.PNG"
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
@@ -1888,7 +1774,6 @@
           "relative_path": "resources/TrainAR_ScriptingGraph_SelectAction.PNG"
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
@@ -1899,7 +1784,6 @@
           "relative_path": "resources/TrainAR_ScriptingGraph_TrainingComplete.PNG"
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
@@ -1910,7 +1794,6 @@
           "relative_path": "resources/TrainAR_Training_Action.png"
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
@@ -1921,7 +1804,6 @@
           "relative_path": "resources/TrainAR_Training_Action2.png"
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
@@ -1932,7 +1814,6 @@
           "relative_path": "resources/TrainAR_Training_Action3.png"
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
@@ -1943,7 +1824,6 @@
           "relative_path": "resources/TrainAR_Training_Feedback.png"
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
@@ -1954,7 +1834,6 @@
           "relative_path": "resources/TrainAR_Training_InputField.png"
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
@@ -1965,7 +1844,6 @@
           "relative_path": "resources/TrainAR_Training_Insights.png"
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
@@ -1976,7 +1854,6 @@
           "relative_path": "resources/TrainAR_Training_Instructions.png"
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
@@ -1987,7 +1864,6 @@
           "relative_path": "resources/TrainAR_Training_ListSelection.png"
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
@@ -1998,7 +1874,6 @@
           "relative_path": "resources/TrainAR_Training_ObjectHelper.png"
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
@@ -2009,7 +1884,6 @@
           "relative_path": "resources/TrainAR_Training_Onboarding.png"
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
@@ -2020,7 +1894,6 @@
           "relative_path": "resources/TrainAR_Training_Questionnaire.png"
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
@@ -2031,7 +1904,6 @@
           "relative_path": "resources/TrainAR_Training_TrainingAssessment.png"
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
@@ -2042,7 +1914,6 @@
           "relative_path": "resources/TrainingConclusion.png"
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
@@ -2053,7 +1924,6 @@
           "relative_path": "resources/TransformTool.gif"
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
@@ -2064,7 +1934,6 @@
           "relative_path": "resources/Type_Spoon.PNG"
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
@@ -2075,7 +1944,6 @@
           "relative_path": "resources/UnityEditor.JPG"
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
@@ -2086,7 +1954,6 @@
           "relative_path": "resources/favicon.ico"
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
@@ -2097,7 +1964,6 @@
           "relative_path": "resources/logo.svg"
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
@@ -2105,65 +1971,15 @@
       "source_relative_path": "toc.yml",
       "output": {
         ".html": {
-          "relative_path": "toc.html",
-          "hash": "x1BiOZoCbWNvtS4CHqWtoAtZHxWsaKTcJ7VidRi5bdo="
+          "relative_path": "toc.html"
+        },
+        ".json": {
+          "relative_path": "toc.json"
         }
       },
-      "is_incremental": false,
       "version": ""
     }
   ],
-  "incremental_info": [
-    {
-      "status": {
-        "can_incremental": false,
-        "details": "Cannot build incrementally because last build info is missing.",
-        "incrementalPhase": "build",
-        "total_file_count": 0,
-        "skipped_file_count": 0,
-        "full_build_reason_code": "NoAvailableBuildCache"
-      },
-      "processors": {
-        "ConceptualDocumentProcessor": {
-          "can_incremental": false,
-          "incrementalPhase": "build",
-          "total_file_count": 16,
-          "skipped_file_count": 0
-        },
-        "ManagedReferenceDocumentProcessor": {
-          "can_incremental": false,
-          "incrementalPhase": "build",
-          "total_file_count": 76,
-          "skipped_file_count": 0
-        },
-        "ResourceDocumentProcessor": {
-          "can_incremental": false,
-          "details": "Processor ResourceDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
-          "incrementalPhase": "build",
-          "total_file_count": 0,
-          "skipped_file_count": 0
-        },
-        "TocDocumentProcessor": {
-          "can_incremental": false,
-          "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
-          "incrementalPhase": "build",
-          "total_file_count": 0,
-          "skipped_file_count": 0
-        }
-      }
-    },
-    {
-      "status": {
-        "can_incremental": false,
-        "details": "Cannot support incremental post processing, the reason is: should not trace intermediate info.",
-        "incrementalPhase": "postProcessing",
-        "total_file_count": 0,
-        "skipped_file_count": 0
-      },
-      "processors": {}
-    }
-  ],
-  "version_info": {},
   "groups": [
     {
       "xrefmap": "xrefmap.yml"

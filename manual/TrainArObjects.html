@@ -1,21 +1,21 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <!--[if IE]><![endif]-->
 <html>
-  
+
   <head>
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Creating and Converting TrainAR Objects | TrainAR Documentation </title>
-    <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Creating and Converting TrainAR Objects | TrainAR Documentation ">
-    <meta name="generator" content="docfx 2.59.4.0">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <title>Creating and Converting TrainAR Objects | TrainAR Documentation </title>
+      <meta name="viewport" content="width=device-width">
+      <meta name="title" content="Creating and Converting TrainAR Objects | TrainAR Documentation ">
     
-    <link rel="shortcut icon" href="../resources/favicon.ico">
-    <link rel="stylesheet" href="../styles/docfx.vendor.css">
-    <link rel="stylesheet" href="../styles/docfx.css">
-    <link rel="stylesheet" href="../styles/main.css">
-    <meta property="docfx:navrel" content="../toc.html">
-    <meta property="docfx:tocrel" content="toc.html">
+    
+      <link rel="shortcut icon" href="../resources/favicon.ico">
+      <link rel="stylesheet" href="../styles/docfx.vendor.min.css">
+      <link rel="stylesheet" href="../styles/docfx.css">
+      <link rel="stylesheet" href="../styles/main.css">
+      <meta property="docfx:navrel" content="../toc.html">
+      <meta property="docfx:tocrel" content="toc.html">
     
     <meta property="docfx:rel" content="../">
     
@@ -23,7 +23,7 @@
   <body data-spy="scroll" data-target="#affix" data-offset="120">
     <div id="wrapper">
       <header>
-        
+
         <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
           <div class="container">
             <div class="navbar-header">
@@ -33,7 +33,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
               </button>
-              
+
               <a class="navbar-brand" href="../index.html">
                 <img id="logo" class="svg" src="../resources/logo.svg" alt="">
               </a>
@@ -47,7 +47,7 @@
             </div>
           </div>
         </nav>
-        
+
         <div class="subnav navbar navbar-default">
           <div class="container hide-when-search" id="breadcrumb">
             <ul class="breadcrumb">
@@ -57,17 +57,17 @@
         </div>
       </header>
       <div class="container body-content">
-        
+
         <div id="search-results">
           <div class="search-list">Search Results for <span></span></div>
           <div class="sr-items">
             <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
           </div>
-          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
+          <ul id="pagination" data-first=First data-prev=Previous data-next=Next data-last=Last></ul>
         </div>
       </div>
       <div role="main" class="container body-content hide-when-search">
-        
+
         <div class="sidenav hide-when-search">
           <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
           <div class="sidetoggle collapse" id="sidetoggle">
@@ -108,9 +108,9 @@
 <p>Tip: Holding alt and clicking pins the center in place and clicking shift makes it possible to scale the bounding box uniformly.</p>
 <p><img src="../resources/BoundingBox.gif" alt=""></p>
 <h2 id="swapping-or-modifying-trainar-objects-during-a-training">Swapping or modifying TrainAR Objects during a training</h2>
-<p>One of the problems you&#39;ll run in quite frequently when creating trainings with <em>TrainAR</em> is that you want to modify <strong>TrainAR Objects</strong> or swap them out <strong>TrainAR Objects</strong> all together, for example as a result of an <em>Interact</em> or <em>Combine</em>. This can be achieved in various ways, some of which are explained in the following examples.</p>
+<p>One of the problems you'll run in quite frequently when creating trainings with <em>TrainAR</em> is that you want to modify <strong>TrainAR Objects</strong> or swap them out <strong>TrainAR Objects</strong> all together, for example as a result of an <em>Interact</em> or <em>Combine</em>. This can be achieved in various ways, some of which are explained in the following examples.</p>
 <h3 id="replacing-the-whole-trainar-object">Replacing the whole TrainAR Object</h3>
-<p>You&#39;ll need to have prepared two 3D models as TrainAR Objects. One <strong>replacing object</strong> and one to be <strong>replaced object</strong>. Both need to be added to the training setup from the beginning, the <strong>replacing object</strong> can be set to invisible if it&#39;s not supposed to be in the training at training startup, from a user perspective.</p>
+<p>You'll need to have prepared two 3D models as TrainAR Objects. One <strong>replacing object</strong> and one to be <strong>replaced object</strong>. Both need to be added to the training setup from the beginning, the <strong>replacing object</strong> can be set to invisible if it's not supposed to be in the training at training startup, from a user perspective.</p>
 <p>To replace one object with another use the <em>TrainAR Node: Object Helper</em> with the option <em>Replace TrainAR Object</em>. In the <em>Object name</em> textfield of the node put in the name of the <strong>replaced object</strong> and in the <em>Replace with</em> text field the name of the <strong>replacing object</strong>.</p>
 <p>The following two examples demonstrate this process.</p>
 <h4 id="example-1-simple-replacement">Example 1: Simple replacement</h4>
@@ -124,33 +124,34 @@
 <p>In this example we want to connect a needle to the syringe. For this, three <strong>TrainAR Objects</strong> are needed: the syringe without needle, the syringe with needle and the needle. The syringe with needle needs to be set to invisible at the start of the training. At first, we again add a <a href="../manual/ActionNodes.html"><em>TrainAR Action</em></a> node as a trigger for the replacement process, this time set to <em>combine</em>. The <em>grabbed object</em> in this case is the syringe and the <em>stationary object</em> is the needle. Next, the syringe is replaced via a <em>TrainAR Object Helper</em> node. Since the needle is now attached to the syringe, the needle model can be set to invisible. This is done as well with a <em>TrainAR Object Helper</em> node, but with the option <em>Toggle Invisible</em>.</p>
 <p><img src="../resources/SwapTrainArObjects_SwapAndToggleInvisibleStateflow.gif" alt=""></p>
 <h3 id="fusing-two-objects">Fusing two Objects</h3>
-<p>Another option is to directly attach one TrainAR Object to another TrainAR Object. This is possible when using<a href="../manual/ObjectHelperNode.html"><em>TrainAR Object Helper</em></a> with the option set to <em>Fuse Two Objects</em>. The <strong>Object name</strong> field specifies the object that is fused onto the object, which is specified in the <strong>Fuse to Object</strong> field. In the <strong>Offset Position and Rotation</strong> field the position and rotation relative to the fused with TrainAR Object is specified. To determine the offset position and rotation place the in the desired position and rotation in the scene view. Then select both of these objects (shift-click on each of them). A toolbar should appear on the bottom left of the scene view, which displays the offset position and rotation of the selected objects. These are the offset values you need to enter in the <strong>Object Helper Node</strong> to fuse them in the specified position and rotation. After you&#39;re done entering the values, don&#39;t forget to reset the objects to their default position and rotation in the scene view.</p>
+<p>Another option is to directly attach one TrainAR Object to another TrainAR Object. This is possible when using<a href="../manual/ObjectHelperNode.html"><em>TrainAR Object Helper</em></a> with the option set to <em>Fuse Two Objects</em>. The <strong>Object name</strong> field specifies the object that is fused onto the object, which is specified in the <strong>Fuse to Object</strong> field. In the <strong>Offset Position and Rotation</strong> field the position and rotation relative to the fused with TrainAR Object is specified. To determine the offset position and rotation place the in the desired position and rotation in the scene view. Then select both of these objects (shift-click on each of them). A toolbar should appear on the bottom left of the scene view, which displays the offset position and rotation of the selected objects. These are the offset values you need to enter in the <strong>Object Helper Node</strong> to fuse them in the specified position and rotation. After you're done entering the values, don't forget to reset the objects to their default position and rotation in the scene view.</p>
 <p>Note: You may need to flip the signing of the values when entering them in the <em>Object Helper node</em> (i.e. -1.5 becomes 1.5 and vice versa).</p>
 <p><img src="../resources/FuseObject.gif" alt=""></p>
 <h2 id="object-level-behaviours">Object-level Behaviours</h2>
-<p>Nothing to do here for now. </p>
+<p>Nothing to do here for now.</p>
 <p>TrainAR Objects automatically inherit all necessary behaviours like physics, collisions, outlining, sounds, shadows, interactions and many more for TrainAR to work consistently. There might be cases where you want more than what is provided. E.g. playing a specific sound on a specific combination of two objects, outlining this specific object on selection in pink (for some reason) or showing a cat GIF when this object is interacted with. How to accomplish these object-level behaviours by listening to TrainAR Object interaction events is described in the <a href="https://jblattgerste.github.io/TrainAR/manual/NoVisualScripting.html#switching-to-the-default-unity-editor">Advanced Options</a>.</p>
+
 </article>
           </div>
-          
+
           <div class="hidden-sm col-md-2" role="complementary">
             <div class="sideaffix">
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/jblattgerste/TrainAR/blob/main/Documentation/manual/TrainArObjects.md/#L1" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/jblattgerste/TrainAR/blob/main/Documentation/manual/TrainArObjects.md/#L1" class="contribution-link">Edit this page</a>
                   </li>
                 </ul>
               </div>
               <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
-                <h5>In This Article</h5>
+                <h5>In this article</h5>
                 <div></div>
               </nav>
             </div>
           </div>
         </div>
       </div>
-      
+
       <footer>
         <div class="grad-bottom"></div>
         <div class="footer">
@@ -158,14 +159,14 @@
             <span class="pull-right">
               <a href="#top">Back to top</a>
             </span>
-            TrainAR Documentation
-            
+      TrainAR Documentation
+      
           </div>
         </div>
       </footer>
     </div>
-    
-    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+
+    <script type="text/javascript" src="../styles/docfx.vendor.min.js"></script>
     <script type="text/javascript" src="../styles/docfx.js"></script>
     <script type="text/javascript" src="../styles/main.js"></script>
   </body>
