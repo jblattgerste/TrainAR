@@ -11,7 +11,7 @@ permissions:
 jobs:
   # Build the documentation
   build:
-    runs-on: windows-2022 # Pin to VS 2022/MSBuild 17 for DocFX metadata extraction compatibility
+    runs-on: ubuntu-latest # DocFX metadata now compiles the .cs sources directly, so no MSBuild/Windows toolchain is required
     steps:
       - name: Checkout
         uses: actions/checkout@v2
@@ -25,8 +25,7 @@ jobs:
         run: cp README.md Documentation/index.md
 
       - name: Build
-        run: |
-          & (Join-Path $env:USERPROFILE '.dotnet\tools\docfx.exe') Documentation/docfx.json
+        run: docfx Documentation/docfx.json
 
       # Upload the generated documentation
       - name: Upload site artifact
