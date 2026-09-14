@@ -25,7 +25,8 @@ jobs:
         run: cp README.md Documentation/index.md
 
       - name: Build
-        run: $env:USERPROFILE\.dotnet\tools\docfx Documentation/docfx.json
+        run: |
+          & (Join-Path $env:USERPROFILE '.dotnet\tools\docfx.exe') Documentation/docfx.json
 
       # Upload the generated documentation
       - name: Upload site artifact
