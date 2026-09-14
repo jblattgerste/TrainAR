@@ -11,6 +11,20 @@
 /[Uu]ser[Ss]ettings/
 /_[Ss]ite/
 
+# DocFX generated API pages, README copy, and build cache
+/Documentation/api/
+/Documentation/index.md
+/Documentation/obj/
+
+# Local IDE settings (including nested workspaces)
+.idea/
+.vscode/
+
+# OS-generated metadata
+.DS_Store
+Thumbs.db
+desktop.ini
+
 # MemoryCaptures can get excessive in size.
 # They also could contain extremely sensitive data
 /[Mm]emoryCaptures/
