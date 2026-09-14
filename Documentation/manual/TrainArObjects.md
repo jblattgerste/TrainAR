@@ -4,16 +4,16 @@ To be able to use 3D assets/models for interactions in TrainAR trainings, you ne
 
 To convert a 3D model into a **TrainAR Object**, simply drag-and-drop it from the project tab into the hierarchy tab. To start the conversion either right click on it in the hierarchy tab and select "Convert to TrainAR Object". Alternatively, while the object is selected, press the appearing button on the bottom left of the scene tab with the label *Convert to TrainAR Object*. Either way, a preview window displaying the selected object will appear.
 
-This window contains various settings for the conversion process:
+This window shows the model preview on the left and various settings for the conversion process on the right:
 
-* The optional **Preview Mode**, which lets you choose if you want to see the current object as a mesh, with its texture, or shaded (this is not applied to the converted object).
+* The optional **Preview Mode**, which lets you choose if you want to see the current object as a mesh, with its texture, or shaded (this is not applied to the converted object). Use **Reset Camera Position** to reset the preview.
 * The **TrainAR Object Name**, which is used to reference this specific object in the [TrainAR Stateflow](../manual/VisualScripting.html).
-* The optional **Move Pivot Point to Center** setting, which automatically moves the point at which TrainAR Objects are grabbed to the objects center.
-* The **Object Simplification** settings, which allows to simplify the object by either specifying a target polygon count (Vcglib Tridecimator algorithm, **recommended**) or specify a quality reduction level (Quadric Error Metrics).
+* The optional **Move Pivot to Center** button under **Grabbing Point**, which automatically moves the point at which TrainAR Objects are grabbed to the objects center.
+* The **Object Simplification** settings, which allows to simplify the object by either specifying a **Target polygon count** (Vcglib Tridecimator algorithm, **recommended**) or specify a quality reduction level (Quadric Error Metrics). Press **Simplify** to apply the selected reduction and inspect the result in the preview.
 
 To finalize the conversion simply press the *Convert to TrainAR Object*-button on the bottom of the preview window. Depending on how complex the object is, this may take a few seconds or even minutes.
 
-![](../resources/CreateObject.gif)
+![TrainAR object conversion window showing the model preview and conversion settings.](../resources/TrainARObjectConversion.png)
 
 Note: An object may only be converted to a TrainAR Object, if it was not already converted and it has a Transform, MeshFilter and a MeshRenderer applied to it. SkinnedMeshRenderers are currently not supported.
 
@@ -67,7 +67,7 @@ Add both **TrainAR Objects** in the training setup. Set the **replacing object**
 
 ![](../resources/SwapTrainArObjects_AddObjects.gif)
 
-To open the package, the user is supposed to interact with the packaged syringe. Consequently, add a [*TrainAR Action*](../manuals/ActionNode.html) node to the script graph, which references the packaged syringe **TrainAR Object**. As a result the packaged syringe is replaced with the syringe itself. Therefore add a [*TrainAR Object Helper*](../manual/ObjectHelperNode.html) node and choose the option *Replace TrainAR Object*. Then, enter the object names of the packaged syringe and the syringe in the respective fields in the node.
+To open the package, the user is supposed to interact with the packaged syringe. Consequently, add a [*TrainAR Action*](ActionNodes.md) node to the script graph, which references the packaged syringe **TrainAR Object**. As a result the packaged syringe is replaced with the syringe itself. Therefore add a [*TrainAR Object Helper*](../manual/ObjectHelperNode.html) node and choose the option *Replace TrainAR Object*. Then, enter the object names of the packaged syringe and the syringe in the respective fields in the node.
 
 ![](../resources/SwapTrainArObjects_SwapStateflow.gif)
 
