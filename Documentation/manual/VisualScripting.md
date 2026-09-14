@@ -18,7 +18,7 @@ TrainAR comes with 10 TrainAR-specific nodes that can be connected with each oth
 
 ## Referencing TrainAR Objects in TrainAR Nodes
 
-With some nodes in TrainAR you want to reference specific [TrainAR Objects](TrainArObjects.html), most notably, [TrainAR: Action](ActionNodes.html) and [TrainAR: Object Helper nodes](ObjectHelperNode.html).
+With some nodes in TrainAR you want to reference specific [TrainAR Objects](TrainARObjects.html), most notably, [TrainAR: Action](ActionNodes.html) and [TrainAR: Object Helper nodes](ObjectHelperNode.html).
 
 Referencing TrainAR Objects in a node is done by using the name of the **TrainAR Object**. This loose coupling between TrainAR Objects and the TrainAR Stateflow is deliberate as it allows to work on both independently but it requires you to use the exact name. So pay attention to upper and lower case letters as referencing by name is case sensitive. Referencing a TrainAR Object by name in the TrainAR Stateflow could for example look something like this:
 

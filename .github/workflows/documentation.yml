@@ -30,6 +30,24 @@ jobs:
       - name: Build
         run: docfx Documentation/docfx.json
 
+      # Linux supports both URL spellings; generate the legacy alias only in CI.
+      - name: Preserve the previous TrainAR Objects URL
+        run: |
+          test -f _site/manual/TrainARObjects.html
+          cat > _site/manual/TrainArObjects.html <<'HTML'
+          <!doctype html>
+          <html lang="en">
+          <head>
+            <meta charset="utf-8">
+            <title>TrainAR Objects</title>
+            <script>location.replace("TrainARObjects.html" + location.search + location.hash);</script>
+            <meta http-equiv="refresh" content="0; url=TrainARObjects.html">
+            <link rel="canonical" href="TrainARObjects.html">
+          </head>
+          <body><a href="TrainARObjects.html">Continue to TrainAR Objects</a></body>
+          </html>
+          HTML
+
       # Upload the generated documentation
       - name: Upload site artifact
         uses: actions/upload-artifact@v4

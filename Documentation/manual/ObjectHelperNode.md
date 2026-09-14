@@ -1,6 +1,6 @@
 # Object Helper Node
 
-As specified in the [TrainAR Objects](TrainArObjects.html) documentation, TrainAR Objects have states and behaviours. The Object Helper nodeprovides various options to access and modify these from within the TrainAR Stateflow at runtime of the TrainAR training. In the **Helper** dropwodn menu you can select from the different options. To specifiy which **TrainAR Object** in the scene you want to modify, specify the exact **Object name** in the node.
+As specified in the [TrainAR Objects](TrainARObjects.html) documentation, TrainAR Objects have states and behaviours. The Object Helper nodeprovides various options to access and modify these from within the TrainAR Stateflow at runtime of the TrainAR training. In the **Helper** dropwodn menu you can select from the different options. To specifiy which **TrainAR Object** in the scene you want to modify, specify the exact **Object name** in the node.
 
 | TrainAR Node | Result |
 | :----------------------: |:-------------------------:|
@@ -55,4 +55,4 @@ Destroys and removes the specified TrainAR Object from the scene.
 ## Replace TrainAR Object
 Replaces a to be **replaced TrainAR Object** with another **replacing TrainAR Object**. The replaced **TrainAR Object** is set to invisible. The **replacing TrainAR Object** is also placed at the same position as the **replaced TrainAR Object**.
 
-In case the **replaced TrainAR Object** is **grabbed** during replacement, the **replacing TrainAR Object** is also **grabbed**. For further instructions on how to use this setting, see [here](../manual/TrainArObjects.html#swapping-or-modifying-trainar-objects-during-a-training)
+In case the **replaced TrainAR Object** is **grabbed** during replacement, the **replacing TrainAR Object** is also **grabbed**. For further instructions on how to use this setting, see [here](../manual/TrainARObjects.html#swapping-or-modifying-trainar-objects-during-a-training)

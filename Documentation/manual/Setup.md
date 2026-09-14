@@ -4,8 +4,8 @@
 
 First, [download](https://unity3d.com/de/get-unity/download) and install the [Unity Hub](https://docs.unity3d.com/hub/manual/InstallHub.html). The Unity Hub allows you to easily install the correct Unity Editor version and corresponding packages that are needed for platform specific deployments.
 
-After installing Unity HUB, install **Unity Version 2022.3 (LTS)** as described in the [Unity Hub Documentation](https://docs.unity3d.com/hub/manual/InstallEditors.html).
-When installing Unity, make sure to also indlude the correct modules, depending on which kind of device you want to deploy the TrainAR trainings to: 
+After installing Unity HUB, install **Unity 6.7 Alpha (`6000.7.0a6`)** as described in the [Unity Hub Documentation](https://docs.unity3d.com/hub/manual/InstallEditors.html).
+Ideally, use this exact Editor version to match the project. When installing Unity, make sure to also include the correct modules, depending on which kind of device you want to deploy the TrainAR trainings to:
 
 For Android choose Android Build Support. Make sure to have also Android SDK & NDK Tools and OpenJDK checked:
 
@@ -36,7 +36,7 @@ We strongly recommend using the first approach.
 5. Open the Unity HUB
 6. Add the now cloned repository through clicking "Open" and then selecting the folder that was downloaded in the GitHub client
 
-TrainAR should now appear in the list of projects and "2022.3 (LTS)" (or any 2022.3.XXXf subversion) should be selected as the Editor version.
+TrainAR should now appear in the list of projects with **Unity 6.7 Alpha (`6000.7.0a6`)** selected as the Editor version.
 
 ![](../resources/TrainARDownloaded.JPG)
 
@@ -50,6 +50,10 @@ While faster, we dont recommend this approach, as [version control](https://ourc
 
 ## Opening the TrainAR Authoring Tool
 
-To now open the TrainAR Authoring Tool, select the "TrainAR" project in the Unity HUB to open it. After Unity is fully loaded, the top-panel menu should show "TrainAR" as an option, click this and then "Open TrainAR Authoring Tool". You should now see the TrainAR Authoring Tool like this:
+Open the "TrainAR" project in Unity Hub and wait for the initial import and compilation to finish. On the first launch, TrainAR automatically opens the authoring scene, applies the authoring layout, and opens the training graph.
+
+If neither Android nor iOS is selected as the active platform and Android Build Support is installed, this first-launch setup also switches the project to Android. An existing Android or iOS selection is preserved. This setup does not reset your platform or layout every time you open the project.
+
+If you need to open the authoring tool manually, choose **TrainAR → Open TrainAR Authoring Tool** from the top menu. You should now see the TrainAR Authoring Tool like this:
 
 ![](../resources/MacbookTrainARPreviewTool.png)
