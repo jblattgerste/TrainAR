@@ -5,10 +5,13 @@ on:
     branches:
       - main
 
+permissions:
+  contents: read
+
 jobs:
   # Build the documentation
   build:
-    runs-on: windows-latest # Required by DocFX
+    runs-on: windows-2022 # Pin to VS 2022/MSBuild 17 for DocFX metadata extraction compatibility
     steps:
       - name: Checkout
         uses: actions/checkout@v2
@@ -35,6 +38,8 @@ jobs:
   deploy:
     needs: build
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     steps:
       - name: Checkout
         uses: actions/checkout@v2
