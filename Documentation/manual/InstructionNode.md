@@ -6,4 +6,4 @@ From the didactic perspective, this is intended to be used to provide instructio
 
 | TrainAR Node | Result |
 | :----------------------: |:-------------------------:|
-|![](../resources/instructions.PNG)|<img src="../resources/TrainAR_Training_Instructions.png" alt="drawing" width="250"/>|
+|![](../resources/Instructions.png)|<img src="../resources/TrainAR_Training_Instructions.png" alt="drawing" width="250"/>|

@@ -6,4 +6,4 @@ There should be only one "TrainAR: Training Conclusion" node present in a TrainA
 
 | TrainAR Node | Result |
 | :----------------------: |:-------------------------:|
-|![](../resources/TrainingConclusion.PNG)|<img src="../resources/TrainAR_Training_TrainingAssessment.png" alt="drawing" width="250"/>|
+|![](../resources/TrainingConclusion.png)|<img src="../resources/TrainAR_Training_TrainingAssessment.png" alt="drawing" width="250"/>|
