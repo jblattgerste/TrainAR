@@ -83,46 +83,59 @@
 <h2 id="delete-the-example-trainar-training">Delete the example TrainAR training</h2>
 <p>Open the TrainAR Unity project with <strong>Unity 6.7 Alpha (<code>6000.7.0a6</code>)</strong> through Unity Hub, as described in <a href="Setup.html">Installation &amp; Setup</a>. The authoring scene, layout, and training graph open automatically on the first launch. If needed, choose <strong>TrainAR → Open TrainAR Authoring Tool</strong> from the top menu. You should now see the TrainAR Authoring Tool roughly like this:</p>
 <p><img src="../resources/TrainARBasicsOverview.png" alt=""></p>
-<p>As you can see, there already is a TrainAR training. But we want to develop a TrainAR training from scratch and therefore have to delete the example training. For this we have to delete all TrainAR Objects and the TrainAR stateflow.</p>
-<p>To accomplish this, we can click somewhere into the Scene (blue) press <code>CTRL</code> + <code>A</code> and then <code>Delete</code>/<code>DEL</code> (<code>Backspace</code> on macOS) to delete all TrainAR Objects.</p>
-<p>Afterwards, click somewhere into the Scripting Graph (red) and then again press <code>CTRL</code> + <code>A</code> to select the complete stateflow in the TrainAR statemachine. <strong>Deselect</strong> the very first node (&quot;TrainAR: Onboarding completed and training assembly placed&quot;), as we need this for each training. Then press <code>Delete</code>/<code>DEL</code> (<code>Backspace</code> on macOS). This deletes the complete TrainAR Stateflow. and the TrainAR Authoring Tool should look roughly like this:</p>
+<p>As you can see, there already is a TrainAR training. But we want to develop a TrainAR training from scratch and therefore have to delete the example training.</p>
+<div class="CAUTION">
+<h5>Caution</h5>
+<p>For this we have to delete all TrainAR Objects and the TrainAR stateflow.</p>
+</div>
+<p>To accomplish this, we can click somewhere into the Scene (blue) press <kbd>CTRL</kbd> + <kbd>A</kbd> and then <kbd>Delete</kbd>/<kbd>DEL</kbd> (<kbd>Backspace</kbd> on macOS) to delete all TrainAR Objects.</p>
+<p>Afterwards, click somewhere into the Scripting Graph (red) and then again press <kbd>CTRL</kbd> + <kbd>A</kbd> to select the complete stateflow in the TrainAR statemachine.</p>
+<div class="IMPORTANT">
+<h5>Important</h5>
+<p><strong>Deselect</strong> the very first node (<strong>TrainAR: Onboarding completed and training assembly placed</strong>), as we need this for each training.</p>
+</div>
+<p>Then press <kbd>Delete</kbd>/<kbd>DEL</kbd> (<kbd>Backspace</kbd> on macOS). This deletes the complete TrainAR Stateflow, and the TrainAR Authoring Tool should look roughly like this:</p>
 <p><img src="../resources/TrainAR_Overview.PNG" alt=""></p>
-<p>In the scene window you should now still see the reference setup of the current Workspace (a room of black tiles, a table and a female character) but no TrainAR Objects in the Hierarchy or Scene and only the very first, green &quot;TrainAR: Onboarding completed and training assembly placed&quot; node. The reference setup should give you an idea of the size of objects in regards to the real world when viewed in the authoring tool and is not deployed with the TrainAR training.</p>
+<p>In the scene window you should now still see the reference setup of the current Workspace (a room of black tiles, a table and a female character) but no TrainAR Objects in the Hierarchy or Scene and only the very first, green <strong>TrainAR: Onboarding completed and training assembly placed</strong> node. The reference setup should give you an idea of the size of objects in regards to the real world when viewed in the authoring tool and is not deployed with the TrainAR training.</p>
 <h2 id="create-trainar-objects">Create TrainAR Objects</h2>
 <p>On the left in the Hierarchy tab is a (currently empty) list of the objects in the scene.</p>
-<p>On the Bottom Left, in the Project Tab open the Prefabs folder. There is a Prefab named <em>Spoon_Prefab</em>.</p>
+<p>On the Bottom Left, in the Project Tab open the Prefabs folder. There is a Prefab named <code>Spoon_Prefab</code>.</p>
 <p>Click on this Prefab and drag-and-drop it into the Hierarchy Tab. The spoon should appear on the table.</p>
-<p>To interact with this object, you'll have to convert it to a TrainAR Object. To achieve this select the object either in the hierarchy or directly in the scene tab. Press the button with the label <em>Convert to TrainAR Object</em> that now appears on the bottom left of the scene tab. A preview window showing the chosen object should appear. This window gives you more specific options before you start the conversion process. For now, just ignore those and click on <em>Convert to TrainAR Object</em>&quot;.</p>
-<p>You can move the newly created TrainAR object around, rotate it or change its size. To do this, you can switch between different tools in the Tools Bar in the Scene View. For now make sure the Move tool is selected and move the object in a fitting position on the reference-table.</p>
+<p>To interact with this object, you'll have to convert it to a TrainAR Object. To achieve this select the object either in the hierarchy or directly in the scene tab. Press the button with the label <strong>Convert to TrainAR Object</strong> that now appears on the bottom left of the scene tab. A preview window showing the chosen object should appear. This window gives you more specific options before you start the conversion process. For now, just ignore those and click on <strong>Convert to TrainAR Object</strong>.</p>
+<p>You can move the newly created TrainAR object around, rotate it or change its size. To do this, you can switch between different tools in the Tools Bar in the Scene View. For now make sure the <strong>Move</strong> tool is selected and move the object in a fitting position on the reference-table.</p>
 <p><img src="../resources/GettingStarted_CreateObject.gif" alt=""></p>
-<p>Now add <em>Coffee_Tin_Prefab</em> from the Prefabs folder, unpack it and convert it to an TrainARObject, then position it. Your setup should now look kind of like this:</p>
+<p>Now add <code>Coffee_Tin_Prefab</code> from the Prefabs folder, unpack it and convert it to a TrainARObject, then position it. Your setup should now look kind of like this:</p>
 <p><img src="../resources/TrainARObject_Setup.PNG" alt=""></p>
-<p>Good! You converted and placed some TrainAR Objects onto the Training Assembly. You could already deploy this training to a device and see your objects in AR but they would not elicit any behaviour or feedback based on the users actions. For this we have to connect the TrainAR Objects in our TrainAR Stateflow.</p>
+<p>Good! You converted and placed some TrainAR Objects onto the Training Assembly. You could already deploy this training to a device and see your objects in AR but they would not elicit any behaviour or feedback based on the user's actions. For this we have to connect the TrainAR Objects in our TrainAR Stateflow.</p>
 <h2 id="create-a-trainar-stateflow">Create a TrainAR Stateflow</h2>
 <p>In the Bottom of the Unity window you should see the window with the Script Graph Tab.</p>
 <p><img src="../resources/TrainAR_Overview_ScriptGraphTab.PNG" alt=""></p>
-<p>Here you can create the flow of your training by creating nodes and connecting them. There already is one node in the Script Graph with the description <em>TrainAR: Onboarding completed and training assembly placed</em>.</p>
-<p>This is the entry point of your training flow and makes sure that when you training starts, TrainAR already handled onboarding and the training assembly was placed into a valid position by the user.</p>
-<p>Right click into the Script Graph Window and select <em>TrainAR</em> from the Node Menu. From there, select <em>TrainAR: Action</em>.</p>
-<p>The <em>TrainAR Action</em> node should appear in the Stateflow. There are two types of action you can define: Interaction and Combination. For now leave the chosen action to Interaction. In the <em>TrainAR: Action</em> node under the <em>Correct Action</em> textfield type in <em>Spoon</em>.</p>
-<p>Now connect the two nodes by clicking on the output of the <em>TrainAR: Onboarding completed and training assembly placed</em> node and connecting the line with the input of the <em>TrainAR: Action</em> node.</p>
+<p>Here you can create the flow of your training by creating nodes and connecting them. There already is one node in the Script Graph with the description <strong>TrainAR: Onboarding completed and training assembly placed</strong>.</p>
+<p>This is the entry point of your training flow and makes sure that when your training starts, TrainAR already handled onboarding and the training assembly was placed into a valid position by the user.</p>
+<p>Right click into the Script Graph Window and select <strong>TrainAR</strong> from the Node Menu. From there, select <strong>TrainAR: Action</strong>.</p>
+<p>The <strong>TrainAR Action</strong> node should appear in the Stateflow. There are two types of action you can define: <strong>Interaction</strong> and <strong>Combination</strong>. For now leave the chosen action to <strong>Interaction</strong>. In the <strong>TrainAR: Action</strong> node under the <strong>Correct Action</strong> textfield type in <code>Spoon</code>.</p>
+<p>Now connect the two nodes by clicking on the output of the <strong>TrainAR: Onboarding completed and training assembly placed</strong> node and connecting the line with the input of the <strong>TrainAR: Action</strong> node.</p>
 <p><img src="../resources/GettingStarted_CreateNodeAndConnect.gif" alt=""></p>
-<p>You have now defined that, at this point in the stateflow (the very start), the correct next step is to trigger an Interaction on the TrainAR Object <em>Spoon</em>.</p>
-<p>Right click again in the Script Graph window to open the node menu and select the <em>TrainAR: Feedback</em> node in the TrainAR nodes folder. This node opens an error overlay. Type a fitting error messages in the textfield and connect the Incorrect output of the <em>TrainAR: Action</em> node with the Input of the <em>TrainAR: Feedback</em> node.</p>
+<p>You have now defined that, at this point in the stateflow (the very start), the correct next step is to trigger an Interaction on the TrainAR Object <code>Spoon</code>.</p>
+<p>Right click again in the Script Graph window to open the node menu and select the <strong>TrainAR: Feedback</strong> node in the TrainAR nodes folder. This node opens an error overlay. Type a fitting error message in the textfield and connect the <strong>Incorrect</strong> output of the <strong>TrainAR: Action</strong> node with the <strong>Input</strong> of the <strong>TrainAR: Feedback</strong> node.</p>
 <p><img src="../resources/GettingStarted_WrongFeedback.gif" alt=""></p>
-<p>You have now defined what happens if an incorrect action is taken at this point in the stateflow. Now define what should happens if the correct action is taken.</p>
-<p>Create another <em>TrainAR: Feedback</em> node and type in feedback for the correct action taken and connect it to the correct output of the <em>TrainAR: Action</em> node. Note: This is for demonstration purposes only, Feedback nodes should normally be used for errors and not positive feedback as described in the didactic considerations of our research paper: <a href="https://www.mdpi.com/2414-4088/5/7/30">TrainAR: A Scalable Interaction Concept and Didactic Framework for Procedural Trainings Using Handheld Augmented Reality</a>.</p>
+<p>You have now defined what happens if an incorrect action is taken at this point in the stateflow. Now define what should happen if the correct action is taken.</p>
+<p>Create another <strong>TrainAR: Feedback</strong> node and type in feedback for the correct action taken and connect it to the <strong>Correct</strong> output of the <strong>TrainAR: Action</strong> node.</p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>This is for demonstration purposes only. Feedback nodes should normally be used for errors and not positive feedback as described in the didactic considerations of our research paper: <a href="https://www.mdpi.com/2414-4088/5/7/30">TrainAR: A Scalable Interaction Concept and Didactic Framework for Procedural Trainings Using Handheld Augmented Reality</a>.</p>
+</div>
 <p><img src="../resources/TrainAR_ScriptingGraph_CorrectFeedback.PNG" alt=""></p>
-<p>Now create another <em>TrainAR: Action</em> node and connect it to the <em>TrainAR Feedback</em> for the correct feedback. Select <em>Combination</em> as an Action in the node. Under <em>Correct Grabbed Object</em> type in <em>Spoon</em> and under <em>Correct stationary Object</em> type in <em>Coffee_Tin</em>. Connect the nodes.</p>
+<p>Now create another <strong>TrainAR: Action</strong> node and connect it to the <strong>TrainAR Feedback</strong> for the correct feedback. Select <strong>Combination</strong> as an Action in the node. Under <strong>Correct Grabbed Object</strong> type in <code>Spoon</code> and under <strong>Correct stationary Object</strong> type in <code>Coffee_Tin</code>. Connect the nodes.</p>
 <p><img src="../resources/GettingStarted_CombineNode.gif" alt=""></p>
 <p>You have now defined, that at this point in the stateflow, the correct step is to combine the spoon with the coffee tin. Next you'll have to define what happens as a result. Let's make the combine fill up the spoon.</p>
-<p>To do this add a <em>TrainAR: Object Helper</em> node to the stateflow. In the node, set the dropdown menu to <em>Replace Mesh</em> and type in the <em>Object Name</em> field <em>Spoon</em>. In the Project Tab navigate to the Meshes folder and drag-and-drop the <em>SpoonFilled</em> mesh into the mesh field of the node. Then, drag-and-drop the <em>SpoonFilled</em> material from the Materials folder into the material field. Finally, connect the stateflow.</p>
+<p>To do this add a <strong>TrainAR: Object Helper</strong> node to the stateflow. In the node, set the dropdown menu to <strong>Replace Mesh</strong> and type in the <strong>Object Name</strong> field <code>Spoon</code>. In the Project Tab navigate to the Meshes folder and drag-and-drop the <code>SpoonFilled</code> mesh into the mesh field of the node. Then, drag-and-drop the <code>SpoonFilled</code> material from the Materials folder into the material field. Finally, connect the stateflow.</p>
 <p><img src="../resources/GettingStarted_ObjectHelper.gif" alt=""></p>
-<p>This basically tells TrainAR, that we want to replace this objects shape and texture as a result of this action (because now there is coffee in it).</p>
-<p>Afterwards, add a <em>TrainAR: Action (UI)</em> node. A node that can trigger UI Custom Actions. Set the dropdown menu in the node you just created to <em>Questionnaire</em>. A UI action node waits for user input on the UI before it continues in a stateflow. In this example, we'll simply ask the user whether or not he want's to finish the training. Therefore write a fitting Questiontext in the <em>Question</em> field of the node and add some chooseable answers.
+<p>This basically tells TrainAR, that we want to replace this object's shape and texture as a result of this action (because now there is coffee in it).</p>
+<p>Afterwards, add a <strong>TrainAR: Action (UI)</strong> node. A node that can trigger UI Custom Actions. Set the dropdown menu in the node you just created to <strong>Questionnaire</strong>. A UI action node waits for user input on the UI before it continues in a stateflow. In this example, we'll simply ask the user whether or not he wants to finish the training. Therefore write a fitting Questiontext in the <strong>Question</strong> field of the node and add some choosable answers.
 Don't forget to connect the stateflow of the previous node.</p>
 <p><img src="../resources/GettingStarted_QuestionnaireNode.gif" alt=""></p>
-<p>Finally, create a <em>TrainAR: Training Conclusion</em> node and connect the node from the previous step with it. This tells TrainAR to show the TrainAR Training Assessment and that we are done with the training.</p>
+<p>Finally, create a <strong>TrainAR: Training Conclusion</strong> node and connect the node from the previous step with it. This tells TrainAR to show the TrainAR Training Assessment and that we are done with the training.</p>
 <p><img src="../resources/TrainAR_ScriptingGraph_TrainingComplete.PNG" alt=""></p>
 <p>Done!</p>
 <h2 id="the-full-process-from-start-to-finish">The full process from start to finish</h2>
@@ -131,13 +144,13 @@ Don't forget to connect the stateflow of the previous node.</p>
 <h2 id="deploy-your-training-to-your-phone">Deploy your training to your phone</h2>
 <p>Connect your (Android) phone to your Computer.</p>
 <p>Make sure you have <a href="https://developer.android.com/studio/debug/dev-options">USB Debugging activated</a> on your phone.</p>
-<p>Press the play button in the Unity Editor to deploy your training to your device.</p>
+<p>Press the <strong>play</strong> button in the Unity Editor to deploy your training to your device.</p>
 <p><img src="../resources/TrainAR_Overview_PressPlay.png" alt=""></p>
 <p>Wait for the process to finish.</p>
 <p>Afterwards, unlock your phone.</p>
 <p>Your Training should now be deployed to your phone and automatically start. It should also appear as a &quot;TrainAR&quot; App, installed on your device in the menu.</p>
 <h2 id="test-your-training">Test your training</h2>
-<p>If it did not open automatically, open the now deployed application on your phone through the menu. Your phone might ask you if the TrainAR app should be allowed to use your phones camera. Confirm this, as we need the camera to use Augmented Reality.</p>
+<p>If it did not open automatically, open the now deployed application on your phone through the menu. Your phone might ask you if the TrainAR app should be allowed to use your phone's camera. Confirm this, as we need the camera to use Augmented Reality.</p>
 <p>A short tutorial that describes the interaction concept of TrainAR should appear. Navigate through the tutorial/onboarding to start your training.</p>
 <p>The camera feed of your device should start and you're asked to find a flat surface to scan. Follow these instructions. This should result in the setup you just created being placed onto a table surface.</p>
 <p>Now you can go through the chain of actions you just defined into the TrainAR Stateflow, which should look roughly like this:</p>

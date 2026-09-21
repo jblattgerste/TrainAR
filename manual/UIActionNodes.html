@@ -79,9 +79,10 @@
             <article class="content wrap" id="_content" data-uid="">
 <h1 id="trainar-ui-action">TrainAR UI Action</h1>
 
-<p><strong>TrainAR: Action (UI)</strong> nodes trigger UI quizes/questionnaires for the user to complete in the TrainAR training. UI Action notes require input of the user on the user interface and the UI Action node includes different types of quizes/questionnaires in form of UI elements. To select which questionnaire type you want to use, you may change via the dropdown menu <strong>UI-Task:</strong> Questionnaire, Input Field or list selection actions.</p>
+<p><strong>TrainAR: Action (UI)</strong> nodes trigger UI quizzes/questionnaires for the user to complete in the TrainAR training. UI Action nodes require input of the user on the user interface and the UI Action node includes different types of quizzes/questionnaires in form of UI elements. To select which questionnaire type you want to use, you may change via the dropdown menu <strong>UI-Task:</strong> <strong>Questionnaire</strong>, <strong>Input Field</strong> or <strong>List Selection</strong> actions.</p>
 <h3 id="ui-task-questionnaire">UI Task: Questionnaire</h3>
-<p>If the UI Task is set to <strong>Questionnaire</strong>, the user will be shown a question and a set of predetermined answers. When the user chooses one of these answers, the user is also shown feedback. The question itself as well as the number of corresponding correct and wrong answers and their feedback have to be specified in the node. The questionnare can have between 2 and 4 possible answers. If the user inputs an answer, the stateflow resumes according to the <strong>Correct</strong> or <strong>Incorrect</strong> outputs of the node. Questionnaire nodes can also fork the Stateflow based on the given answer.</p>
+<p>If the UI Task is set to <strong>Questionnaire</strong>, the user will be shown a question and a set of predetermined answers. When the user chooses one of these answers, the user is also shown feedback. The question itself as well as the number of corresponding correct and wrong answers and their feedback have to be specified in the node. The questionnaire can have between 2 and 4 possible answers. If the user inputs an answer, the stateflow resumes according to the <strong>Correct</strong> or <strong>Incorrect</strong> outputs of the node. Questionnaire nodes can also fork the Stateflow based on the given answer.</p>
+<div class="trainar-node-comparison" role="region" aria-label="TrainAR node and result comparison" tabindex="0">
 <table>
 <thead>
 <tr>
@@ -91,13 +92,15 @@
 </thead>
 <tbody>
 <tr>
-<td style="text-align: center;"><img src="../resources/ActionUI_Questionnaire.PNG" alt=""></td>
-<td style="text-align: center;"><img src="../resources/TrainAR_Training_Questionnaire.png" alt="drawing" width="250"></td>
+<td style="text-align: center;"><img src="../resources/ActionUI_Questionnaire.PNG" alt="TrainAR UI Action node configured as a questionnaire"></td>
+<td style="text-align: center;"><img src="../resources/TrainAR_Training_Questionnaire.png" alt="Phone showing a questionnaire" width="250"></td>
 </tr>
 </tbody>
 </table>
+</div>
 <h3 id="ui-task-input-field">UI Task: Input Field</h3>
-<p>With the UI Task set to <strong>Input Field</strong>, the user has to type in his answer to a question via the smartphones on-screen keyboard. The questions as well as all correct answers have to be specified in the node. If the user inputs an answer, the stateflow resumes according to the <strong>Correct</strong> or <strong>Incorrect</strong> outputs of the node depending on if the users answers is one of the specified correct answers or not.</p>
+<p>With the UI Task set to <strong>Input Field</strong>, the user has to type in his answer to a question via the smartphone's on-screen keyboard. The questions as well as all correct answers have to be specified in the node. If the user inputs an answer, the stateflow resumes according to the <strong>Correct</strong> or <strong>Incorrect</strong> outputs of the node depending on if the user's answer is one of the specified correct answers or not.</p>
+<div class="trainar-node-comparison" role="region" aria-label="TrainAR node and result comparison" tabindex="0">
 <table>
 <thead>
 <tr>
@@ -107,13 +110,15 @@
 </thead>
 <tbody>
 <tr>
-<td style="text-align: center;"><img src="../resources/ActionUI.png" alt=""></td>
-<td style="text-align: center;"><img src="../resources/TrainAR_Training_InputField.png" alt="drawing" width="250"></td>
+<td style="text-align: center;"><img src="../resources/ActionUI.png" alt="TrainAR UI Action node configured as an input field"></td>
+<td style="text-align: center;"><img src="../resources/TrainAR_Training_InputField.png" alt="Phone showing an input field question" width="250"></td>
 </tr>
 </tbody>
 </table>
+</div>
 <h3 id="ui-task-list-selection">UI Task: List Selection</h3>
-<p>With the UI Task set to <strong>List Selection</strong>, the user is presented with a scrollable list of possible anwers, which can be defined, as well as their respective feedback, in the node. If the user chooses all correct items in the list, the <strong>Correct</strong> output is triggered.</p>
+<p>With the UI Task set to <strong>List Selection</strong>, the user is presented with a scrollable list of possible answers, which can be defined, as well as their respective feedback, in the node. If the user chooses all correct items in the list, the <strong>Correct</strong> output is triggered.</p>
+<div class="trainar-node-comparison" role="region" aria-label="TrainAR node and result comparison" tabindex="0">
 <table>
 <thead>
 <tr>
@@ -123,11 +128,12 @@
 </thead>
 <tbody>
 <tr>
-<td style="text-align: center;"><img src="../resources/ActionUI_ListSelection.png" alt=""></td>
-<td style="text-align: center;"><img src="../resources/TrainAR_Training_ListSelection.png" alt="drawing" width="250"></td>
+<td style="text-align: center;"><img src="../resources/ActionUI_ListSelection.png" alt="TrainAR UI Action node configured as a list selection"></td>
+<td style="text-align: center;"><img src="../resources/TrainAR_Training_ListSelection.png" alt="Phone showing a list selection question" width="250"></td>
 </tr>
 </tbody>
 </table>
+</div>
 
 </article>
           </div>
