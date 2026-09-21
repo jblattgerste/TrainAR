@@ -19,6 +19,10 @@
       }
     ],
   "build": {
+    "template": [
+      "default",
+      "templates/trainar"
+    ],
     "globalMetadata": {
       "_appTitle": "TrainAR Documentation",
       "_appFooter": "TrainAR Documentation",

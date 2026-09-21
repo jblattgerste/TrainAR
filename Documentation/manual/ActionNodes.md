@@ -4,15 +4,15 @@
 
 ## AR interactions with Action Nodes
 
-Interacting with TrainAR Objects in the AR context is possible in two ways: **interacting** and **combining**. The node can be set to the type of interaction via the "Action" drop down menu.
+Interacting with TrainAR Objects in the AR context is possible in two ways: **interacting** and **combining**. The node can be set to the type of interaction via the **Action** dropdown menu.
 
 ![](../resources/Action.png)
 
-This node is set to Interaction. If the stateflow reaches this point, the node waits for an action by the user. If the user triggers an interact with the TrainAR Object specified in **Correct object**, the stateflow continues according to the **Correct**-Output of the node. Consequently, if any other action is taken by the user, the stateflow continues according to the **Incorrect**-Output of the node.
+This node is set to **Interaction**. If the stateflow reaches this point, the node waits for an action by the user. If the user triggers an interact with the TrainAR Object specified in **Correct object**, the stateflow continues according to the **Correct**-Output of the node. Consequently, if any other action is taken by the user, the stateflow continues according to the **Incorrect**-Output of the node.
 
 ![](../resources/TrainAR_Action_Combine.PNG)
 
-For **Combinations** the node works similarly, though two objects have to be specfied: the grabbed objects, so the one the user is currently holding, and the object the grabbed object is supposed to be combined with.
+For **Combinations** the node works similarly, though two objects have to be specified: the grabbed objects, so the one the user is currently holding, and the object the grabbed object is supposed to be combined with.
 
 ## Custom Action
 
@@ -20,7 +20,7 @@ With the Action Node set to **Custom Action** it is also possible to control the
 
 ![](../resources/CustomAction.PNG)
 
-In this example the correct parameter is defined as "correctParameter".
+In this example the correct parameter is defined as `correctParameter`.
 
 The following example describes how to request a state change to the StatemachineConnector through C# scripting:
 
@@ -34,7 +34,7 @@ parameterToCheck = "wrongParameter";
 StatemachineConnector.Instance.RequestStateChange(new StateInformation(parameter: parameterToCheck));
 ```
 
-In the first call to the StatemachineConnector the stateflow continues according to the **Correct**-output of the node, since parameterToCheck is set to the the correct parameter. The second call to the StatemachineConnector results in triggering the **Incorrect**-output of the node, since this is not the parameter specified in the node.
+In the first call to the StatemachineConnector the stateflow continues according to the **Correct**-output of the node, since `parameterToCheck` is set to the correct parameter. The second call to the StatemachineConnector results in triggering the **Incorrect**-output of the node, since this is not the parameter specified in the node.
 
 ### TrainAR: Action (Fork)
 
@@ -52,7 +52,7 @@ This of course also works analogous with **Combinations**.
 
 ### TrainAR Action (Multi)
 
-In other cases when creating your training you might run into situations, where multiple actions have to happen, but it doesn't necessarily have to be in in a strict order (e.g. combining multiple TrainAR Objects like vegetables with a soup bowl). These cases can be modeled with the **TrainAR: Action (Multi)** node. 
+In other cases when creating your training you might run into situations, where multiple actions have to happen, but it doesn't necessarily have to be in a strict order (e.g. combining multiple TrainAR Objects like vegetables with a soup bowl). These cases can be modeled with the **TrainAR: Action (Multi)** node.
 
 ![](../resources/ActionMulti_2.png)
 

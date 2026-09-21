@@ -1,0 +1,29 @@
+/* Keep node/result comparisons readable without affecting other documentation tables. */
+.trainar-node-comparison {
+  max-width: 100%;
+  overflow-x: auto;
+}
+
+/* DocFX adds this inner wrapper at runtime; let the focusable outer region scroll. */
+.trainar-node-comparison > .table-responsive {
+  overflow: visible;
+  border: 0;
+}
+
+.trainar-node-comparison table {
+  min-width: 560px;
+}
+
+.trainar-node-comparison table > tbody > tr > td {
+  vertical-align: middle;
+}
+
+/* The default theme otherwise prevents descriptions from wrapping on mobile. */
+.trainar-node-comparison .table-responsive > .table > tbody > tr > td {
+  white-space: normal;
+}
+
+.trainar-node-comparison img {
+  max-width: 100%;
+  height: auto;
+}
