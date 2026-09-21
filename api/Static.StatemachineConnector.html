@@ -1,708 +1,720 @@
 <!DOCTYPE html>
-<!--[if IE]><![endif]-->
 <html>
-
   <head>
     <meta charset="utf-8">
-      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
       <title>Class StatemachineConnector | TrainAR Documentation </title>
-      <meta name="viewport" content="width=device-width">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta name="title" content="Class StatemachineConnector | TrainAR Documentation ">
-    
-    <meta name="description" content="The StatemachineConnector connects interaction inputs with the visual scripting flow and outputs with the instruction, error and insight controller through events. It therefore functions as a funnel between the Visual Statemachine and the rest of the logic. Either the visual statemachien decides whether actions are correct or wrong (default) or the connection can also be commented out and the decisions on wrong/correct actions can be made manually in the RequestStateChange method by using C# programming.">
-      <link rel="shortcut icon" href="../resources/favicon.ico">
-      <link rel="stylesheet" href="../styles/docfx.vendor.min.css">
-      <link rel="stylesheet" href="../styles/docfx.css">
-      <link rel="stylesheet" href="../styles/main.css">
-      <meta property="docfx:navrel" content="../toc.html">
-      <meta property="docfx:tocrel" content="toc.html">
-    
-    <meta property="docfx:rel" content="../">
-    
+      
+      <meta name="description" content="The StatemachineConnector connects interaction inputs with the visual scripting flow and outputs with the instruction, error and insight controller through events. It therefore functions as a funnel between the Visual Statemachine and the rest of the logic. Either the visual statemachien decides whether actions are correct or wrong (default) or the connection can also be commented out and the decisions on wrong/correct actions can be made manually in the RequestStateChange method by using C# programming.">
+      <link rel="icon" href="../resources/favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/jblattgerste/TrainAR/new/main/apiSpec/new?filename=Static_StatemachineConnector.md&amp;value=---%0Auid%3A%20Static.StatemachineConnector%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
   </head>
-  <body data-spy="scroll" data-target="#affix" data-offset="120">
-    <div id="wrapper">
-      <header>
 
-        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
-          <div class="container">
-            <div class="navbar-header">
-              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-              </button>
-
-              <a class="navbar-brand" href="../index.html">
-                <img id="logo" class="svg" src="../resources/logo.svg" alt="">
-              </a>
-            </div>
-            <div class="collapse navbar-collapse" id="navbar">
-              <form class="navbar-form navbar-right" role="search" id="search">
-                <div class="form-group">
-                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
-                </div>
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../resources/logo.svg" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
               </form>
             </div>
           </div>
-        </nav>
-
-        <div class="subnav navbar navbar-default">
-          <div class="container hide-when-search" id="breadcrumb">
-            <ul class="breadcrumb">
-              <li></li>
-            </ul>
-          </div>
         </div>
-      </header>
-      <div class="container body-content">
+      </nav>
+    </header>
 
-        <div id="search-results">
-          <div class="search-list">Search Results for <span></span></div>
-          <div class="sr-items">
-            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
           </div>
-          <ul id="pagination" data-first=First data-prev=Previous data-next=Next data-last=Last></ul>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
         </div>
       </div>
-      <div role="main" class="container body-content hide-when-search">
 
-        <div class="sidenav hide-when-search">
-          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
-          <div class="sidetoggle collapse" id="sidetoggle">
-            <div id="sidetoc"></div>
-          </div>
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
         </div>
-        <div class="article row grid-right">
-          <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="Static.StatemachineConnector">
+
+        <article data-uid="Static.StatemachineConnector">
 
 
 
-  <h1 id="Static_StatemachineConnector" data-uid="Static.StatemachineConnector" class="text-break">Class StatemachineConnector</h1>
-  <div class="markdown level0 summary"><p>The StatemachineConnector connects interaction inputs with the visual scripting flow and outputs
+  <h1 id="Static_StatemachineConnector" data-uid="Static.StatemachineConnector" class="text-break">
+Class StatemachineConnector  <a class="header-action link-secondary" title="View source" href="https://github.com/jblattgerste/TrainAR/blob/main/Assets/Scripts/Static/StatemachineConnector.cs/#L78"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="Static.html">Static</a></dd></dl>
+  
+  </div>
+
+  <div class="markdown summary"><p>The StatemachineConnector connects interaction inputs with the visual scripting flow and outputs
 with the instruction, error and insight controller through events. It therefore functions as a funnel
 between the Visual Statemachine and the rest of the logic.</p>
 <p>Either the visual statemachien decides whether actions are correct or wrong (default) or the connection
 can also be commented out and the decisions on wrong/correct actions can be made manually in the
 RequestStateChange method by using C# programming.</p>
 </div>
-  <div class="markdown level0 conceptual"></div>
-  <div class="inheritance">
-    <h5>Inheritance</h5>
-    <div class="level0"><span class="xref">object</span></div>
-    <div class="level1"><span class="xref">StatemachineConnector</span></div>
-  </div>
-  <h6><strong>Namespace</strong>: <a class="xref" href="Static.html">Static</a></h6>
-  <h6><strong>Assembly</strong>: .dll</h6>
-  <h5 id="Static_StatemachineConnector_syntax">Syntax</h5>
+  <div class="markdown conceptual"></div>
+
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public class StatemachineConnector</code></pre>
   </div>
-  <h3 id="fields">Fields
-</h3>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/jblattgerste/TrainAR/new/main/apiSpec/new?filename=Static_StatemachineConnector_Instance.md&amp;value=---%0Auid%3A%20Static.StatemachineConnector.Instance%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jblattgerste/TrainAR/blob/main/Assets/Scripts/Static/StatemachineConnector.cs/#L83">View Source</a>
-  </span>
-  <h4 id="Static_StatemachineConnector_Instance" data-uid="Static.StatemachineConnector.Instance">Instance</h4>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><span class="xref">object</span></div>
+      <div><span class="xref">StatemachineConnector</span></div>
+    </dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="fields">Fields
+</h2>
+
+
+
+  <h3 id="Static_StatemachineConnector_Instance" data-uid="Static.StatemachineConnector.Instance">
+  Instance
+  <a class="header-action link-secondary" title="View source" href="https://github.com/jblattgerste/TrainAR/blob/main/Assets/Scripts/Static/StatemachineConnector.cs/#L83"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"><p>The static instance of this StatemachineConnector.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
+
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static StatemachineConnector Instance</code></pre>
   </div>
-  <h5 class="fieldValue">Field Value</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Static.StatemachineConnector.html">StatemachineConnector</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/jblattgerste/TrainAR/new/main/apiSpec/new?filename=Static_StatemachineConnector_errorCounter.md&amp;value=---%0Auid%3A%20Static.StatemachineConnector.errorCounter%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jblattgerste/TrainAR/blob/main/Assets/Scripts/Static/StatemachineConnector.cs/#L88">View Source</a>
-  </span>
-  <h4 id="Static_StatemachineConnector_errorCounter" data-uid="Static.StatemachineConnector.errorCounter">errorCounter</h4>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Static.StatemachineConnector.html">StatemachineConnector</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="Static_StatemachineConnector_errorCounter" data-uid="Static.StatemachineConnector.errorCounter">
+  errorCounter
+  <a class="header-action link-secondary" title="View source" href="https://github.com/jblattgerste/TrainAR/blob/main/Assets/Scripts/Static/StatemachineConnector.cs/#L88"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"><p>The amount of errors performed by the user of the training.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
+
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public int errorCounter</code></pre>
   </div>
-  <h5 class="fieldValue">Field Value</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">int</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h3 id="methods">Methods
-</h3>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/jblattgerste/TrainAR/new/main/apiSpec/new?filename=Static_StatemachineConnector_AcceptedStateChange_System_Boolean_.md&amp;value=---%0Auid%3A%20Static.StatemachineConnector.AcceptedStateChange(System.Boolean)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jblattgerste/TrainAR/blob/main/Assets/Scripts/Static/StatemachineConnector.cs/#L231">View Source</a>
-  </span>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">int</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
   <a id="Static_StatemachineConnector_AcceptedStateChange_" data-uid="Static.StatemachineConnector.AcceptedStateChange*"></a>
-  <h4 id="Static_StatemachineConnector_AcceptedStateChange_System_Boolean_" data-uid="Static.StatemachineConnector.AcceptedStateChange(System.Boolean)">AcceptedStateChange(bool)</h4>
+
+  <h3 id="Static_StatemachineConnector_AcceptedStateChange_System_Boolean_" data-uid="Static.StatemachineConnector.AcceptedStateChange(System.Boolean)">
+  AcceptedStateChange(bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/jblattgerste/TrainAR/blob/main/Assets/Scripts/Static/StatemachineConnector.cs/#L231"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"><p>Called by the state machine. Triggers an Action that indicates if the state change was accepted.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
+
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public void AcceptedStateChange(bool stateChangeAccepted)</code></pre>
   </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">bool</span></td>
-        <td><span class="parametername">stateChangeAccepted</span></td>
-        <td><p>Is the statechange accepted</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/jblattgerste/TrainAR/new/main/apiSpec/new?filename=Static_StatemachineConnector_RegisterNewStateChangeTrigger_System_Func_Static_StateInformation_System_Boolean__.md&amp;value=---%0Auid%3A%20Static.StatemachineConnector.RegisterNewStateChangeTrigger(System.Func%7BStatic.StateInformation%2CSystem.Boolean%7D)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jblattgerste/TrainAR/blob/main/Assets/Scripts/Static/StatemachineConnector.cs/#L107">View Source</a>
-  </span>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>stateChangeAccepted</code> <span class="xref">bool</span></dt>
+    <dd><p>Is the statechange accepted</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
   <a id="Static_StatemachineConnector_RegisterNewStateChangeTrigger_" data-uid="Static.StatemachineConnector.RegisterNewStateChangeTrigger*"></a>
-  <h4 id="Static_StatemachineConnector_RegisterNewStateChangeTrigger_System_Func_Static_StateInformation_System_Boolean__" data-uid="Static.StatemachineConnector.RegisterNewStateChangeTrigger(System.Func{Static.StateInformation,System.Boolean})">RegisterNewStateChangeTrigger(Func&lt;StateInformation, bool&gt;)</h4>
+
+  <h3 id="Static_StatemachineConnector_RegisterNewStateChangeTrigger_System_Func_Static_StateInformation_System_Boolean__" data-uid="Static.StatemachineConnector.RegisterNewStateChangeTrigger(System.Func{Static.StateInformation,System.Boolean})">
+  RegisterNewStateChangeTrigger(Func&lt;StateInformation, bool&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/jblattgerste/TrainAR/blob/main/Assets/Scripts/Static/StatemachineConnector.cs/#L107"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"><p>Registers a new state change trigger from the visual state flow. This trigger
 determines which node in the visual scripting graph is handling the state change request.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
+
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static void RegisterNewStateChangeTrigger(Func&lt;StateInformation, bool&gt; action)</code></pre>
   </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">Func</span>&lt;<a class="xref" href="Static.StateInformation.html">StateInformation</a>, <span class="xref">bool</span>&gt;</td>
-        <td><span class="parametername">action</span></td>
-        <td><p>The Func to that is registered.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/jblattgerste/TrainAR/new/main/apiSpec/new?filename=Static_StatemachineConnector_RequestStateChange_Static_StateInformation_.md&amp;value=---%0Auid%3A%20Static.StatemachineConnector.RequestStateChange(Static.StateInformation)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jblattgerste/TrainAR/blob/main/Assets/Scripts/Static/StatemachineConnector.cs/#L118">View Source</a>
-  </span>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>action</code> <span class="xref">Func</span>&lt;<a class="xref" href="Static.StateInformation.html">StateInformation</a>, <span class="xref">bool</span>&gt;</dt>
+    <dd><p>The Func to that is registered.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
   <a id="Static_StatemachineConnector_RequestStateChange_" data-uid="Static.StatemachineConnector.RequestStateChange*"></a>
-  <h4 id="Static_StatemachineConnector_RequestStateChange_Static_StateInformation_" data-uid="Static.StatemachineConnector.RequestStateChange(Static.StateInformation)">RequestStateChange(StateInformation)</h4>
+
+  <h3 id="Static_StatemachineConnector_RequestStateChange_Static_StateInformation_" data-uid="Static.StatemachineConnector.RequestStateChange(Static.StateInformation)">
+  RequestStateChange(StateInformation)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/jblattgerste/TrainAR/blob/main/Assets/Scripts/Static/StatemachineConnector.cs/#L118"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"><p>Request a statechange from the statemachine.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
+
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public bool RequestStateChange(StateInformation stateInformation)</code></pre>
   </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Static.StateInformation.html">StateInformation</a></td>
-        <td><span class="parametername">stateInformation</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">bool</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/jblattgerste/TrainAR/new/main/apiSpec/new?filename=Static_StatemachineConnector_Reset.md&amp;value=---%0Auid%3A%20Static.StatemachineConnector.Reset%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jblattgerste/TrainAR/blob/main/Assets/Scripts/Static/StatemachineConnector.cs/#L285">View Source</a>
-  </span>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>stateInformation</code> <a class="xref" href="Static.StateInformation.html">StateInformation</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">bool</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
   <a id="Static_StatemachineConnector_Reset_" data-uid="Static.StatemachineConnector.Reset*"></a>
-  <h4 id="Static_StatemachineConnector_Reset" data-uid="Static.StatemachineConnector.Reset">Reset()</h4>
+
+  <h3 id="Static_StatemachineConnector_Reset" data-uid="Static.StatemachineConnector.Reset">
+  Reset()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/jblattgerste/TrainAR/blob/main/Assets/Scripts/Static/StatemachineConnector.cs/#L285"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"><p>Resets the instance of this static instance.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
+
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public void Reset()</code></pre>
   </div>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/jblattgerste/TrainAR/new/main/apiSpec/new?filename=Static_StatemachineConnector_ShowCompletionOverlay.md&amp;value=---%0Auid%3A%20Static.StatemachineConnector.ShowCompletionOverlay%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jblattgerste/TrainAR/blob/main/Assets/Scripts/Static/StatemachineConnector.cs/#L263">View Source</a>
-  </span>
+
+
+
+
+
+
+
+
+
+
+
+
+
   <a id="Static_StatemachineConnector_ShowCompletionOverlay_" data-uid="Static.StatemachineConnector.ShowCompletionOverlay*"></a>
-  <h4 id="Static_StatemachineConnector_ShowCompletionOverlay" data-uid="Static.StatemachineConnector.ShowCompletionOverlay">ShowCompletionOverlay()</h4>
+
+  <h3 id="Static_StatemachineConnector_ShowCompletionOverlay" data-uid="Static.StatemachineConnector.ShowCompletionOverlay">
+  ShowCompletionOverlay()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/jblattgerste/TrainAR/blob/main/Assets/Scripts/Static/StatemachineConnector.cs/#L263"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"><p>Triggers the scenario completion overlay.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
+
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public void ShowCompletionOverlay()</code></pre>
   </div>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/jblattgerste/TrainAR/new/main/apiSpec/new?filename=Static_StatemachineConnector_ShowErrorOverlay_System_String_System_String_.md&amp;value=---%0Auid%3A%20Static.StatemachineConnector.ShowErrorOverlay(System.String%2CSystem.String)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jblattgerste/TrainAR/blob/main/Assets/Scripts/Static/StatemachineConnector.cs/#L242">View Source</a>
-  </span>
+
+
+
+
+
+
+
+
+
+
+
+
+
   <a id="Static_StatemachineConnector_ShowErrorOverlay_" data-uid="Static.StatemachineConnector.ShowErrorOverlay*"></a>
-  <h4 id="Static_StatemachineConnector_ShowErrorOverlay_System_String_System_String_" data-uid="Static.StatemachineConnector.ShowErrorOverlay(System.String,System.String)">ShowErrorOverlay(string, string)</h4>
+
+  <h3 id="Static_StatemachineConnector_ShowErrorOverlay_System_String_System_String_" data-uid="Static.StatemachineConnector.ShowErrorOverlay(System.String,System.String)">
+  ShowErrorOverlay(string, string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/jblattgerste/TrainAR/blob/main/Assets/Scripts/Static/StatemachineConnector.cs/#L242"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"><p>Called by the visual state machine. Triggers an Action that shows the error overlay.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
+
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public void ShowErrorOverlay(string headerText, string errorText)</code></pre>
   </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">string</span></td>
-        <td><span class="parametername">headerText</span></td>
-        <td><p>The Header of the error overlay</p>
-</td>
-      </tr>
-      <tr>
-        <td><span class="xref">string</span></td>
-        <td><span class="parametername">errorText</span></td>
-        <td><p>The text body of the error overlay</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/jblattgerste/TrainAR/new/main/apiSpec/new?filename=Static_StatemachineConnector_ShowExpertInsights_AudioClip_Sprite_System_String_.md&amp;value=---%0Auid%3A%20Static.StatemachineConnector.ShowExpertInsights(AudioClip%2CSprite%2CSystem.String)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jblattgerste/TrainAR/blob/main/Assets/Scripts/Static/StatemachineConnector.cs/#L254">View Source</a>
-  </span>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>headerText</code> <span class="xref">string</span></dt>
+    <dd><p>The Header of the error overlay</p>
+</dd>
+    <dt><code>errorText</code> <span class="xref">string</span></dt>
+    <dd><p>The text body of the error overlay</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
   <a id="Static_StatemachineConnector_ShowExpertInsights_" data-uid="Static.StatemachineConnector.ShowExpertInsights*"></a>
-  <h4 id="Static_StatemachineConnector_ShowExpertInsights_AudioClip_Sprite_System_String_" data-uid="Static.StatemachineConnector.ShowExpertInsights(AudioClip,Sprite,System.String)">ShowExpertInsights(AudioClip, Sprite, string)</h4>
+
+  <h3 id="Static_StatemachineConnector_ShowExpertInsights_AudioClip_Sprite_System_String_" data-uid="Static.StatemachineConnector.ShowExpertInsights(AudioClip,Sprite,System.String)">
+  ShowExpertInsights(AudioClip, Sprite, string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/jblattgerste/TrainAR/blob/main/Assets/Scripts/Static/StatemachineConnector.cs/#L254"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"><p>Called by the visual state machine. Triggers an Action that shows the expert insight modality and plays and audio clip.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
+
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public void ShowExpertInsights(AudioClip audio, Sprite image, string text)</code></pre>
   </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">AudioClip</span></td>
-        <td><span class="parametername">audio</span></td>
-        <td><p>The audioclip that is played with the expert insight</p>
-</td>
-      </tr>
-      <tr>
-        <td><span class="xref">Sprite</span></td>
-        <td><span class="parametername">image</span></td>
-        <td><p>The image that is displayed, e.g. the expert providing the insight.</p>
-</td>
-      </tr>
-      <tr>
-        <td><span class="xref">string</span></td>
-        <td><span class="parametername">text</span></td>
-        <td><p>The text displayed at the expert speechbubble</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/jblattgerste/TrainAR/new/main/apiSpec/new?filename=Static_StatemachineConnector_StartQuestionUI_UI_QuestionnaireController_QuestionUITypes_System_String_System_Collections_Generic_List_UI_QuestionnaireController_Answer__.md&amp;value=---%0Auid%3A%20Static.StatemachineConnector.StartQuestionUI(UI.QuestionnaireController.QuestionUITypes%2CSystem.String%2CSystem.Collections.Generic.List%7BUI.QuestionnaireController.Answer%7D)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jblattgerste/TrainAR/blob/main/Assets/Scripts/Static/StatemachineConnector.cs/#L276">View Source</a>
-  </span>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>audio</code> <span class="xref">AudioClip</span></dt>
+    <dd><p>The audioclip that is played with the expert insight</p>
+</dd>
+    <dt><code>image</code> <span class="xref">Sprite</span></dt>
+    <dd><p>The image that is displayed, e.g. the expert providing the insight.</p>
+</dd>
+    <dt><code>text</code> <span class="xref">string</span></dt>
+    <dd><p>The text displayed at the expert speechbubble</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
   <a id="Static_StatemachineConnector_StartQuestionUI_" data-uid="Static.StatemachineConnector.StartQuestionUI*"></a>
-  <h4 id="Static_StatemachineConnector_StartQuestionUI_UI_QuestionnaireController_QuestionUITypes_System_String_System_Collections_Generic_List_UI_QuestionnaireController_Answer__" data-uid="Static.StatemachineConnector.StartQuestionUI(UI.QuestionnaireController.QuestionUITypes,System.String,System.Collections.Generic.List{UI.QuestionnaireController.Answer})">StartQuestionUI(QuestionUITypes, string, List&lt;Answer&gt;)</h4>
+
+  <h3 id="Static_StatemachineConnector_StartQuestionUI_UI_QuestionnaireController_QuestionUITypes_System_String_System_Collections_Generic_List_UI_QuestionnaireController_Answer__" data-uid="Static.StatemachineConnector.StartQuestionUI(UI.QuestionnaireController.QuestionUITypes,System.String,System.Collections.Generic.List{UI.QuestionnaireController.Answer})">
+  StartQuestionUI(QuestionUITypes, string, List&lt;Answer&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/jblattgerste/TrainAR/blob/main/Assets/Scripts/Static/StatemachineConnector.cs/#L276"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"><p>Triggers a new Questionnaire to be answered by the user on the UI.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
+
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public void StartQuestionUI(QuestionnaireController.QuestionUITypes type, string question, List&lt;QuestionnaireController.Answer&gt; answers)</code></pre>
   </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="UI.QuestionnaireController.html">QuestionnaireController</a>.<a class="xref" href="UI.QuestionnaireController.QuestionUITypes.html">QuestionUITypes</a></td>
-        <td><span class="parametername">type</span></td>
-        <td><p>The type of Question(MultipleChoice, List, Input).</p>
-</td>
-      </tr>
-      <tr>
-        <td><span class="xref">string</span></td>
-        <td><span class="parametername">question</span></td>
-        <td><p>The question.</p>
-</td>
-      </tr>
-      <tr>
-        <td><span class="xref">List</span>&lt;<a class="xref" href="UI.QuestionnaireController.html">QuestionnaireController</a>.<a class="xref" href="UI.QuestionnaireController.Answer.html">Answer</a>&gt;</td>
-        <td><span class="parametername">answers</span></td>
-        <td><p>A List of struct with all possible answers.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/jblattgerste/TrainAR/new/main/apiSpec/new?filename=Static_StatemachineConnector_UpdateTopPanel_System_String_System_Int32_.md&amp;value=---%0Auid%3A%20Static.StatemachineConnector.UpdateTopPanel(System.String%2CSystem.Int32)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jblattgerste/TrainAR/blob/main/Assets/Scripts/Static/StatemachineConnector.cs/#L221">View Source</a>
-  </span>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>type</code> <a class="xref" href="UI.QuestionnaireController.html">QuestionnaireController</a>.<a class="xref" href="UI.QuestionnaireController.QuestionUITypes.html">QuestionUITypes</a></dt>
+    <dd><p>The type of Question(MultipleChoice, List, Input).</p>
+</dd>
+    <dt><code>question</code> <span class="xref">string</span></dt>
+    <dd><p>The question.</p>
+</dd>
+    <dt><code>answers</code> <span class="xref">List</span>&lt;<a class="xref" href="UI.QuestionnaireController.html">QuestionnaireController</a>.<a class="xref" href="UI.QuestionnaireController.Answer.html">Answer</a>&gt;</dt>
+    <dd><p>A List of struct with all possible answers.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
   <a id="Static_StatemachineConnector_UpdateTopPanel_" data-uid="Static.StatemachineConnector.UpdateTopPanel*"></a>
-  <h4 id="Static_StatemachineConnector_UpdateTopPanel_System_String_System_Int32_" data-uid="Static.StatemachineConnector.UpdateTopPanel(System.String,System.Int32)">UpdateTopPanel(string, int)</h4>
+
+  <h3 id="Static_StatemachineConnector_UpdateTopPanel_System_String_System_Int32_" data-uid="Static.StatemachineConnector.UpdateTopPanel(System.String,System.Int32)">
+  UpdateTopPanel(string, int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/jblattgerste/TrainAR/blob/main/Assets/Scripts/Static/StatemachineConnector.cs/#L221"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"><p>Called by the visual state machine, triggers an Action that updates the instruction text and completion percentage
 of the top panel.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
+
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public void UpdateTopPanel(string text, int completionPercentage)</code></pre>
   </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">string</span></td>
-        <td><span class="parametername">text</span></td>
-        <td><p>New instruction displayed on the top panel</p>
-</td>
-      </tr>
-      <tr>
-        <td><span class="xref">int</span></td>
-        <td><span class="parametername">completionPercentage</span></td>
-        <td><p>New compeltion percentage displayed</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h3 id="events">Events
-</h3>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/jblattgerste/TrainAR/new/main/apiSpec/new?filename=Static_StatemachineConnector_TriggerAcceptedStateChange.md&amp;value=---%0Auid%3A%20Static.StatemachineConnector.TriggerAcceptedStateChange%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jblattgerste/TrainAR/blob/main/Assets/Scripts/Static/StatemachineConnector.cs/#L91">View Source</a>
-  </span>
-  <h4 id="Static_StatemachineConnector_TriggerAcceptedStateChange" data-uid="Static.StatemachineConnector.TriggerAcceptedStateChange">TriggerAcceptedStateChange</h4>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>text</code> <span class="xref">string</span></dt>
+    <dd><p>New instruction displayed on the top panel</p>
+</dd>
+    <dt><code>completionPercentage</code> <span class="xref">int</span></dt>
+    <dd><p>New compeltion percentage displayed</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="events">Events
+</h2>
+
+
+
+  <h3 id="Static_StatemachineConnector_TriggerAcceptedStateChange" data-uid="Static.StatemachineConnector.TriggerAcceptedStateChange">
+  TriggerAcceptedStateChange
+  <a class="header-action link-secondary" title="View source" href="https://github.com/jblattgerste/TrainAR/blob/main/Assets/Scripts/Static/StatemachineConnector.cs/#L91"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
+
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public event Action&lt;bool&gt; TriggerAcceptedStateChange</code></pre>
   </div>
-  <h5 class="eventType">Event Type</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">Action</span>&lt;<span class="xref">bool</span>&gt;</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/jblattgerste/TrainAR/new/main/apiSpec/new?filename=Static_StatemachineConnector_TriggerErrorOverlay.md&amp;value=---%0Auid%3A%20Static.StatemachineConnector.TriggerErrorOverlay%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jblattgerste/TrainAR/blob/main/Assets/Scripts/Static/StatemachineConnector.cs/#L92">View Source</a>
-  </span>
-  <h4 id="Static_StatemachineConnector_TriggerErrorOverlay" data-uid="Static.StatemachineConnector.TriggerErrorOverlay">TriggerErrorOverlay</h4>
+
+
+
+
+
+
+  <h4 class="section">Event Type</h4>
+  <dl class="parameters">
+    <dt><span class="xref">Action</span>&lt;<span class="xref">bool</span>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h3 id="Static_StatemachineConnector_TriggerErrorOverlay" data-uid="Static.StatemachineConnector.TriggerErrorOverlay">
+  TriggerErrorOverlay
+  <a class="header-action link-secondary" title="View source" href="https://github.com/jblattgerste/TrainAR/blob/main/Assets/Scripts/Static/StatemachineConnector.cs/#L92"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
+
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public event Action&lt;string, string&gt; TriggerErrorOverlay</code></pre>
   </div>
-  <h5 class="eventType">Event Type</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">Action</span>&lt;<span class="xref">string</span>, <span class="xref">string</span>&gt;</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/jblattgerste/TrainAR/new/main/apiSpec/new?filename=Static_StatemachineConnector_TriggerExpertInsights.md&amp;value=---%0Auid%3A%20Static.StatemachineConnector.TriggerExpertInsights%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jblattgerste/TrainAR/blob/main/Assets/Scripts/Static/StatemachineConnector.cs/#L93">View Source</a>
-  </span>
-  <h4 id="Static_StatemachineConnector_TriggerExpertInsights" data-uid="Static.StatemachineConnector.TriggerExpertInsights">TriggerExpertInsights</h4>
+
+
+
+
+
+
+  <h4 class="section">Event Type</h4>
+  <dl class="parameters">
+    <dt><span class="xref">Action</span>&lt;<span class="xref">string</span>, <span class="xref">string</span>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h3 id="Static_StatemachineConnector_TriggerExpertInsights" data-uid="Static.StatemachineConnector.TriggerExpertInsights">
+  TriggerExpertInsights
+  <a class="header-action link-secondary" title="View source" href="https://github.com/jblattgerste/TrainAR/blob/main/Assets/Scripts/Static/StatemachineConnector.cs/#L93"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
+
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public event Action&lt;AudioClip, Sprite, string&gt; TriggerExpertInsights</code></pre>
   </div>
-  <h5 class="eventType">Event Type</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">Action</span>&lt;<span class="xref">AudioClip</span>, <span class="xref">Sprite</span>, <span class="xref">string</span>&gt;</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/jblattgerste/TrainAR/new/main/apiSpec/new?filename=Static_StatemachineConnector_TriggerScenarioCompletionOverlay.md&amp;value=---%0Auid%3A%20Static.StatemachineConnector.TriggerScenarioCompletionOverlay%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jblattgerste/TrainAR/blob/main/Assets/Scripts/Static/StatemachineConnector.cs/#L94">View Source</a>
-  </span>
-  <h4 id="Static_StatemachineConnector_TriggerScenarioCompletionOverlay" data-uid="Static.StatemachineConnector.TriggerScenarioCompletionOverlay">TriggerScenarioCompletionOverlay</h4>
+
+
+
+
+
+
+  <h4 class="section">Event Type</h4>
+  <dl class="parameters">
+    <dt><span class="xref">Action</span>&lt;<span class="xref">AudioClip</span>, <span class="xref">Sprite</span>, <span class="xref">string</span>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h3 id="Static_StatemachineConnector_TriggerScenarioCompletionOverlay" data-uid="Static.StatemachineConnector.TriggerScenarioCompletionOverlay">
+  TriggerScenarioCompletionOverlay
+  <a class="header-action link-secondary" title="View source" href="https://github.com/jblattgerste/TrainAR/blob/main/Assets/Scripts/Static/StatemachineConnector.cs/#L94"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
+
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public event Action TriggerScenarioCompletionOverlay</code></pre>
   </div>
-  <h5 class="eventType">Event Type</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">Action</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/jblattgerste/TrainAR/new/main/apiSpec/new?filename=Static_StatemachineConnector_TriggerTopPanelChange.md&amp;value=---%0Auid%3A%20Static.StatemachineConnector.TriggerTopPanelChange%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jblattgerste/TrainAR/blob/main/Assets/Scripts/Static/StatemachineConnector.cs/#L90">View Source</a>
-  </span>
-  <h4 id="Static_StatemachineConnector_TriggerTopPanelChange" data-uid="Static.StatemachineConnector.TriggerTopPanelChange">TriggerTopPanelChange</h4>
+
+
+
+
+
+
+  <h4 class="section">Event Type</h4>
+  <dl class="parameters">
+    <dt><span class="xref">Action</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h3 id="Static_StatemachineConnector_TriggerTopPanelChange" data-uid="Static.StatemachineConnector.TriggerTopPanelChange">
+  TriggerTopPanelChange
+  <a class="header-action link-secondary" title="View source" href="https://github.com/jblattgerste/TrainAR/blob/main/Assets/Scripts/Static/StatemachineConnector.cs/#L90"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
+
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public event Action&lt;string, int&gt; TriggerTopPanelChange</code></pre>
   </div>
-  <h5 class="eventType">Event Type</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">Action</span>&lt;<span class="xref">string</span>, <span class="xref">int</span>&gt;</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/jblattgerste/TrainAR/new/main/apiSpec/new?filename=Static_StatemachineConnector_TriggerUIQuestion.md&amp;value=---%0Auid%3A%20Static.StatemachineConnector.TriggerUIQuestion%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jblattgerste/TrainAR/blob/main/Assets/Scripts/Static/StatemachineConnector.cs/#L95">View Source</a>
-  </span>
-  <h4 id="Static_StatemachineConnector_TriggerUIQuestion" data-uid="Static.StatemachineConnector.TriggerUIQuestion">TriggerUIQuestion</h4>
+
+
+
+
+
+
+  <h4 class="section">Event Type</h4>
+  <dl class="parameters">
+    <dt><span class="xref">Action</span>&lt;<span class="xref">string</span>, <span class="xref">int</span>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h3 id="Static_StatemachineConnector_TriggerUIQuestion" data-uid="Static.StatemachineConnector.TriggerUIQuestion">
+  TriggerUIQuestion
+  <a class="header-action link-secondary" title="View source" href="https://github.com/jblattgerste/TrainAR/blob/main/Assets/Scripts/Static/StatemachineConnector.cs/#L95"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
+
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public event Action&lt;QuestionnaireController.QuestionUITypes, string, List&lt;QuestionnaireController.Answer&gt;&gt; TriggerUIQuestion</code></pre>
   </div>
-  <h5 class="eventType">Event Type</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">Action</span>&lt;<a class="xref" href="UI.QuestionnaireController.html">QuestionnaireController</a>.<a class="xref" href="UI.QuestionnaireController.QuestionUITypes.html">QuestionUITypes</a>, <span class="xref">string</span>, <span class="xref">List</span>&lt;<a class="xref" href="UI.QuestionnaireController.html">QuestionnaireController</a>.<a class="xref" href="UI.QuestionnaireController.Answer.html">Answer</a>&gt;&gt;</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
+
+
+
+
+
+
+  <h4 class="section">Event Type</h4>
+  <dl class="parameters">
+    <dt><span class="xref">Action</span>&lt;<a class="xref" href="UI.QuestionnaireController.html">QuestionnaireController</a>.<a class="xref" href="UI.QuestionnaireController.QuestionUITypes.html">QuestionUITypes</a>, <span class="xref">string</span>, <span class="xref">List</span>&lt;<a class="xref" href="UI.QuestionnaireController.html">QuestionnaireController</a>.<a class="xref" href="UI.QuestionnaireController.Answer.html">Answer</a>&gt;&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
 
 </article>
-          </div>
 
-          <div class="hidden-sm col-md-2" role="complementary">
-            <div class="sideaffix">
-              <div class="contribution">
-                <ul class="nav">
-                  <li>
-                    <a href="https://github.com/jblattgerste/TrainAR/new/main/apiSpec/new?filename=Static_StatemachineConnector.md&amp;value=---%0Auid%3A%20Static.StatemachineConnector%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Edit this page</a>
-                  </li>
-                  <li>
-                    <a href="https://github.com/jblattgerste/TrainAR/blob/main/Assets/Scripts/Static/StatemachineConnector.cs/#L78" class="contribution-link">View Source</a>
-                  </li>
-                </ul>
-              </div>
-              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
-                <h5>In this article</h5>
-                <div></div>
-              </nav>
-            </div>
-          </div>
+        <div class="contribution d-print-none">
+          <a href="https://github.com/jblattgerste/TrainAR/blob/main/Assets/Scripts/Static/StatemachineConnector.cs/#L78" class="edit-link">Edit this page</a>
         </div>
+
+
       </div>
 
-      <footer>
-        <div class="grad-bottom"></div>
-        <div class="footer">
-          <div class="container">
-            <span class="pull-right">
-              <a href="#top">Back to top</a>
-            </span>
-      TrainAR Documentation
-      
-          </div>
-        </div>
-      </footer>
-    </div>
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
 
-    <script type="text/javascript" src="../styles/docfx.vendor.min.js"></script>
-    <script type="text/javascript" src="../styles/docfx.js"></script>
-    <script type="text/javascript" src="../styles/main.js"></script>
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          TrainAR Documentation
+        </div>
+      </div>
+    </footer>
   </body>
 </html>
