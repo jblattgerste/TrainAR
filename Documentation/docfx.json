@@ -21,6 +21,7 @@
   "build": {
     "template": [
       "default",
+      "modern",
       "templates/trainar"
     ],
     "globalMetadata": {
