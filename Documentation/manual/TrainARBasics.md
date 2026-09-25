@@ -4,8 +4,6 @@ Get a quick introduction to TrainAR and how to create a training in this 90-seco
 
 > [!Video https://www.youtube.com/embed/OjIrRynK67o]
 
-[Watch on YouTube](https://www.youtube.com/watch?v=OjIrRynK67o)
-
 The TrainAR Authoring Tool can be utilized by understanding two basic concepts: The [TrainAR Object](https://jblattgerste.github.io/TrainAR/manual/TrainARObjects.html) and the [TrainAR Stateflow](https://jblattgerste.github.io/TrainAR/manual/VisualScripting.html). If you want to create a TrainAR scenario/training, you have to import 3D models (e.g. from the Assetstore, external websites or from a 3D scanner) and then convert them into TrainAR Objects. Once converted, they automatically inherit TrainAR-specific functionality/behaviours and states (position, rotation, scale, visibility, grabbability, interactability, combinability). TrainAR objects can then be referenced in the TrainAR Stateflow, which determines what action has to be taken next by the user of the TrainAR training and which kind of instruction, insight or feedback should be provided to the user. It additionally can manipulate states of TrainAR Objects during the training.
 
 ![](../resources/TrainARBasicsOverview.png)
