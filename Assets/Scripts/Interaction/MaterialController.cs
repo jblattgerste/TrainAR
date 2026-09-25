@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using Static;
 using UnityEngine;
 
 namespace Interaction
@@ -43,6 +44,11 @@ namespace Interaction
         [Tooltip("Definition of the sucess color.")]
         private Color successColor = Color.green;
         /// <summary>
+        /// Default color of the highlight outline, used to point the user to an object (e.g. through the Object Helper node).
+        /// </summary>
+        /// <value>The TrainAR accent amber (#AD8C11), distinct from the selection, error and success colors.</value>
+        public static readonly Color DefaultHighlightColor = new Color(0.6784314f, 0.54901963f, 0.06666667f, 1f);
+        /// <summary>
         /// Changed when feedbackOutline is active/inactive.
         /// </summary>
         /// <value>True if a feedback outline is active.</value>
@@ -54,6 +60,37 @@ namespace Interaction
         /// <value>Set on Awake.</value>
         [Tooltip("Reference holder for the outlines.")]
         private Outline[] outlines;
+        /// <summary>
+        /// The outline color used for selection, which is the color configured on the Outline component.
+        /// </summary>
+        /// <value>Set on Awake.</value>
+        private Color selectionColor;
+        /// <summary>
+        /// The outline width configured on the Outline component, restored after feedback animations.
+        /// </summary>
+        /// <value>Set on Awake.</value>
+        private float outlineWidth;
+        /// <summary>
+        /// True while the object is selected.
+        /// </summary>
+        private bool isSelected = false;
+        /// <summary>
+        /// True while the object is highlighted.
+        /// </summary>
+        private bool isHighlighted = false;
+        /// <summary>
+        /// The color of the currently active highlight.
+        /// </summary>
+        private Color activeHighlightColor;
+        /// <summary>
+        /// The state change request during which the highlight was set. The highlight is removed once a later request is accepted.
+        /// </summary>
+        private int highlightSetDuringRequest;
+        /// <summary>
+        /// The StatemachineConnector instance that is listened to for accepted state changes.
+        /// </summary>
+        /// <value>Set on Awake.</value>
+        private StatemachineConnector statemachineConnector;
         /// <summary>
         /// Stores the original material.
         /// </summary>
@@ -68,6 +105,32 @@ namespace Interaction
         {
             saveOriginalMaterial();
             outlines = gameObject.GetComponents<Outline>();
+            selectionColor = outlines[0].OutlineColor;
+            outlineWidth = outlines[0].OutlineWidth;
+
+            //Listen for the lifetime of the object so a highlight is also removed while the object is invisible
+            statemachineConnector = StatemachineConnector.Instance;
+            statemachineConnector.TriggerAcceptedStateChange += OnAcceptedStateChange;
+        }
+
+        /// <summary>
+        /// Stops listening to the StatemachineConnector.
+        /// </summary>
+        private void OnDestroy()
+        {
+            statemachineConnector.TriggerAcceptedStateChange -= OnAcceptedStateChange;
+        }
+
+        /// <summary>
+        /// Coroutines are stopped when the object is deactivated, so a running feedback animation would never finish.
+        /// Ends it here instead so the outline doesn't get stuck.
+        /// </summary>
+        private void OnDisable()
+        {
+            if (!feedbackOutlineIsActive) return;
+            feedbackOutlineIsActive = false;
+            ChangeOutLineVisibility(outlineWidth);
+            ApplyOutlineState();
         }
 
         /// <summary>
@@ -83,6 +146,9 @@ namespace Interaction
             GetComponent<Interaction.TrainARObject>().OnCombination.AddListener(ActivateSuccessIndicator);
             GetComponent<Interaction.TrainARObject>().OnCombination.AddListener(RemoveSelectionMaterial);
             GetComponent<Interaction.TrainARObject>().OnInteraction.AddListener(ActivateSuccessIndicator);
+
+            //Show a highlight that was set before the object was active for the first time
+            ApplyOutlineState();
         }
 
 
@@ -91,7 +157,8 @@ namespace Interaction
         /// </summary>
         public void ActivateOutlines()
         {
-            ToggleOutlines(true);
+            isSelected = true;
+            ApplyOutlineState();
         }
 
         /// <summary>
@@ -99,9 +166,61 @@ namespace Interaction
         /// </summary>
         public void DeactivateOutlines()
         {
-            if (feedbackOutlineIsActive == true )
+            isSelected = false;
+            ApplyOutlineState();
+        }
+
+        /// <summary>
+        /// Highlights the object with an outline to point the user to it, e.g. as the object to use in the current step.
+        /// The highlight is removed automatically once the next action is accepted by the statemachine, or manually
+        /// by calling this with false. Selection and feedback outlines take precedence while they are active.
+        /// </summary>
+        /// <param name="highlighted">Whether the object is highlighted.</param>
+        /// <param name="color">The highlight color, <see cref="DefaultHighlightColor"/> if null.</param>
+        public void SetHighlight(bool highlighted, Color? color = null)
+        {
+            isHighlighted = highlighted;
+            activeHighlightColor = color ?? DefaultHighlightColor;
+            highlightSetDuringRequest = StatemachineConnector.Instance.CurrentStateChangeRequest;
+            ApplyOutlineState();
+        }
+
+        /// <summary>
+        /// Updates the outline after a state change, which might have removed the highlight.
+        /// </summary>
+        /// <param name="accepted">Whether the state change was accepted.</param>
+        private void OnAcceptedStateChange(bool accepted)
+        {
+            if (accepted) ApplyOutlineState();
+        }
+
+        /// <summary>
+        /// Shows the outline based on the object's state: Feedback overrides selection, which overrides the highlight.
+        /// </summary>
+        private void ApplyOutlineState()
+        {
+            //The highlight is removed once an action after the one it was set in is accepted. A highlight set while the
+            //accepted action was handled (e.g. by the nodes after "Correct") belongs to the next step and therefore stays.
+            if (isHighlighted && StatemachineConnector.Instance.LastAcceptedStateChangeRequest > highlightSetDuringRequest)
             {
-                StartCoroutine(ToggleOutlinesDelayed(false));
+                isHighlighted = false;
+            }
+
+            //Not initialized yet (object was never active), this is called again on Start
+            if (outlines == null) return;
+
+            //A playing feedback animation owns the outline and calls this when it is done
+            if (feedbackOutlineIsActive) return;
+
+            if (isSelected)
+            {
+                SetOutlineColor(selectionColor);
+                ToggleOutlines(true);
+            }
+            else if (isHighlighted)
+            {
+                SetOutlineColor(activeHighlightColor);
+                ToggleOutlines(true);
             }
             else
             {
@@ -212,14 +331,16 @@ namespace Interaction
         }
 
         /// <summary>
-        /// Toggle the outline delayed if an outline animation is currently playing.
+        /// Sets the color of all outlines.
         /// </summary>
-        /// <param name="toggle"></param>
-        /// <returns></returns>
-        private IEnumerator ToggleOutlinesDelayed(bool toggle)
+        /// <param name="color">The new outline color.</param>
+        private void SetOutlineColor(Color color)
         {
-            yield return new WaitUntil(() => feedbackOutlineIsActive == false);
-            ToggleOutlines(toggle);
+            foreach (var ol in outlines)
+            {
+                //Only set on changes, as this is called e.g. every frame while an object is grabbed
+                if (ol.OutlineColor != color) ol.OutlineColor = color;
+            }
         }
     
         /// <summary>
@@ -253,21 +374,11 @@ namespace Interaction
             //Indicate that the feedback outline animation ist currently playing
             feedbackOutlineIsActive = true;
         
-            //Store the original outline colors
-            Color[] initialColors = new Color[outlines.Length];
-            for (int i = 0; i < initialColors.Length; i++)
-            {
-                initialColors[i] = outlines[i].OutlineColor;
-            }
-
             //Store the original outline width
             float initialOutlineWith = outlines[0].OutlineWidth;
         
             //Change the outline color for the error feedback
-            foreach (var ol in outlines)
-            {
-                ol.OutlineColor = errorColor;
-            }
+            SetOutlineColor(errorColor);
 
             //----Start the animation
             ToggleOutlines(true);
@@ -287,16 +398,9 @@ namespace Interaction
             yield return new WaitForSeconds(0.3f);
             //----End the animation
 
-            //Restore the original outline colors
-            for (int i = 0; i < initialColors.Length; i++)
-            {
-                outlines[i].OutlineColor = initialColors[i];
-            }
-
-            yield return new WaitForSeconds(0.01f);
-            ToggleOutlines(false);
-
+            //Hand the outline back, e.g. to show the selection or highlight again
             feedbackOutlineIsActive = false;
+            ApplyOutlineState();
         }
     
         /// <summary>
@@ -328,21 +432,11 @@ namespace Interaction
             //Indicate that the feedback outline animation ist currently playing
             feedbackOutlineIsActive = true;
         
-            //Store the original outline colors
-            Color[] initialColors = new Color[outlines.Length];
-            for (int i = 0; i < initialColors.Length; i++)
-            {
-                initialColors[i] = outlines[i].OutlineColor;
-            }
-        
             //Store the original outline width
             float initialOutlineWith = outlines[0].OutlineWidth;
         
             //Change the outline color for the success feedback
-            foreach (var ol in outlines)
-            {
-                ol.OutlineColor = successColor;
-            }
+            SetOutlineColor(successColor);
 
             //----Start the animation
             ToggleOutlines(true);
@@ -358,14 +452,9 @@ namespace Interaction
             yield return new WaitForSeconds(0.3f);
             //----End the animation
 
-            //Restore the original outline colors
-            for (int i = 0; i < initialColors.Length; i++)
-            {
-                outlines[i].OutlineColor = initialColors[i];
-            }
-            yield return new WaitForSeconds(0.01f);
-            ToggleOutlines(false);
+            //Hand the outline back, e.g. to show the selection or highlight again
             feedbackOutlineIsActive = false;
+            ApplyOutlineState();
         }
     }
 }
