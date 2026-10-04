@@ -418,15 +418,12 @@ references:
   commentId: F:Interaction.MaterialController.DefaultHighlightColor
   fullName: Interaction.MaterialController.DefaultHighlightColor
   nameWithType: MaterialController.DefaultHighlightColor
-- uid: Interaction.MaterialController.SetHighlight(System.Boolean,System.Nullable{Color})
-  name: SetHighlight(bool, Color?)
-  href: api/Interaction.MaterialController.html#Interaction_MaterialController_SetHighlight_System_Boolean_System_Nullable_Color__
-  commentId: M:Interaction.MaterialController.SetHighlight(System.Boolean,System.Nullable{Color})
-  name.vb: SetHighlight(Boolean, Color?)
-  fullName: Interaction.MaterialController.SetHighlight(bool, Color?)
-  fullName.vb: Interaction.MaterialController.SetHighlight(Boolean, Color?)
-  nameWithType: MaterialController.SetHighlight(bool, Color?)
-  nameWithType.vb: MaterialController.SetHighlight(Boolean, Color?)
+- uid: Interaction.MaterialController.SetHighlight(System.Nullable{Color})
+  name: SetHighlight(Color?)
+  href: api/Interaction.MaterialController.html#Interaction_MaterialController_SetHighlight_System_Nullable_Color__
+  commentId: M:Interaction.MaterialController.SetHighlight(System.Nullable{Color})
+  fullName: Interaction.MaterialController.SetHighlight(Color?)
+  nameWithType: MaterialController.SetHighlight(Color?)
 - uid: Interaction.MaterialController.SetHighlight*
   name: SetHighlight
   href: api/Interaction.MaterialController.html#Interaction_MaterialController_SetHighlight_
@@ -1391,6 +1388,19 @@ references:
   isSpec: "True"
   fullName: Static.StatemachineConnector.LastAcceptedStateChangeRequest
   nameWithType: StatemachineConnector.LastAcceptedStateChangeRequest
+- uid: Static.StatemachineConnector.LastCompletedActionRequest
+  name: LastCompletedActionRequest
+  href: api/Static.StatemachineConnector.html#Static_StatemachineConnector_LastCompletedActionRequest
+  commentId: P:Static.StatemachineConnector.LastCompletedActionRequest
+  fullName: Static.StatemachineConnector.LastCompletedActionRequest
+  nameWithType: StatemachineConnector.LastCompletedActionRequest
+- uid: Static.StatemachineConnector.LastCompletedActionRequest*
+  name: LastCompletedActionRequest
+  href: api/Static.StatemachineConnector.html#Static_StatemachineConnector_LastCompletedActionRequest_
+  commentId: Overload:Static.StatemachineConnector.LastCompletedActionRequest
+  isSpec: "True"
+  fullName: Static.StatemachineConnector.LastCompletedActionRequest
+  nameWithType: StatemachineConnector.LastCompletedActionRequest
 - uid: Static.StatemachineConnector.RegisterNewStateChangeTrigger(System.Func{Static.StateInformation,System.Boolean})
   name: RegisterNewStateChangeTrigger(Func<StateInformation, bool>)
   href: api/Static.StatemachineConnector.html#Static_StatemachineConnector_RegisterNewStateChangeTrigger_System_Func_Static_StateInformation_System_Boolean__
@@ -1400,6 +1410,15 @@ references:
   fullName.vb: Static.StatemachineConnector.RegisterNewStateChangeTrigger(System.Func(Of Static.StateInformation, Boolean))
   nameWithType: StatemachineConnector.RegisterNewStateChangeTrigger(Func<StateInformation, bool>)
   nameWithType.vb: StatemachineConnector.RegisterNewStateChangeTrigger(Func(Of StateInformation, Boolean))
+- uid: Static.StatemachineConnector.RegisterNewStateChangeTrigger(System.Func{Static.StateInformation,System.Boolean},System.Func{System.Boolean})
+  name: RegisterNewStateChangeTrigger(Func<StateInformation, bool>, Func<bool>)
+  href: api/Static.StatemachineConnector.html#Static_StatemachineConnector_RegisterNewStateChangeTrigger_System_Func_Static_StateInformation_System_Boolean__System_Func_System_Boolean__
+  commentId: M:Static.StatemachineConnector.RegisterNewStateChangeTrigger(System.Func{Static.StateInformation,System.Boolean},System.Func{System.Boolean})
+  name.vb: RegisterNewStateChangeTrigger(Func(Of StateInformation, Boolean), Func(Of Boolean))
+  fullName: Static.StatemachineConnector.RegisterNewStateChangeTrigger(System.Func<Static.StateInformation, bool>, System.Func<bool>)
+  fullName.vb: Static.StatemachineConnector.RegisterNewStateChangeTrigger(System.Func(Of Static.StateInformation, Boolean), System.Func(Of Boolean))
+  nameWithType: StatemachineConnector.RegisterNewStateChangeTrigger(Func<StateInformation, bool>, Func<bool>)
+  nameWithType.vb: StatemachineConnector.RegisterNewStateChangeTrigger(Func(Of StateInformation, Boolean), Func(Of Boolean))
 - uid: Static.StatemachineConnector.RegisterNewStateChangeTrigger*
   name: RegisterNewStateChangeTrigger
   href: api/Static.StatemachineConnector.html#Static_StatemachineConnector_RegisterNewStateChangeTrigger_
@@ -3059,19 +3078,6 @@ references:
   isSpec: "True"
   fullName: Visual_Scripting.ObjectHelper.HighlightColor
   nameWithType: ObjectHelper.HighlightColor
-- uid: Visual_Scripting.ObjectHelper.HighlightToggle
-  name: HighlightToggle
-  href: api/Visual_Scripting.ObjectHelper.html#Visual_Scripting_ObjectHelper_HighlightToggle
-  commentId: P:Visual_Scripting.ObjectHelper.HighlightToggle
-  fullName: Visual_Scripting.ObjectHelper.HighlightToggle
-  nameWithType: ObjectHelper.HighlightToggle
-- uid: Visual_Scripting.ObjectHelper.HighlightToggle*
-  name: HighlightToggle
-  href: api/Visual_Scripting.ObjectHelper.html#Visual_Scripting_ObjectHelper_HighlightToggle_
-  commentId: Overload:Visual_Scripting.ObjectHelper.HighlightToggle
-  isSpec: "True"
-  fullName: Visual_Scripting.ObjectHelper.HighlightToggle
-  nameWithType: ObjectHelper.HighlightToggle
 - uid: Visual_Scripting.ObjectHelper.InputFlow
   name: InputFlow
   href: api/Visual_Scripting.ObjectHelper.html#Visual_Scripting_ObjectHelper_InputFlow

@@ -265,6 +265,39 @@ things set up for the next step apart from things set up earlier.</p>
 
 
 
+  <a id="Static_StatemachineConnector_LastCompletedActionRequest_" data-uid="Static.StatemachineConnector.LastCompletedActionRequest*"></a>
+
+  <h3 id="Static_StatemachineConnector_LastCompletedActionRequest" data-uid="Static.StatemachineConnector.LastCompletedActionRequest">
+  LastCompletedActionRequest
+  <a class="header-action link-secondary" title="View source" href="https://github.com/jblattgerste/TrainAR/blob/main/Assets/Scripts/Static/StatemachineConnector.cs/#L113"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Number of the latest request that completed an action node. Accepted sub-actions of an
+unfinished Action (Multi) node do not advance this number.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int LastCompletedActionRequest { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">int</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
   <h2 class="section" id="methods">Methods
 </h2>
 
@@ -273,7 +306,7 @@ things set up for the next step apart from things set up earlier.</p>
 
   <h3 id="Static_StatemachineConnector_AcceptedStateChange_System_Boolean_" data-uid="Static.StatemachineConnector.AcceptedStateChange(System.Boolean)">
   AcceptedStateChange(bool)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/jblattgerste/TrainAR/blob/main/Assets/Scripts/Static/StatemachineConnector.cs/#L248"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/jblattgerste/TrainAR/blob/main/Assets/Scripts/Static/StatemachineConnector.cs/#L274"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Called by the state machine. Triggers an Action that indicates if the state change was accepted.</p>
@@ -306,7 +339,7 @@ things set up for the next step apart from things set up earlier.</p>
 
   <h3 id="Static_StatemachineConnector_RegisterNewStateChangeTrigger_System_Func_Static_StateInformation_System_Boolean__" data-uid="Static.StatemachineConnector.RegisterNewStateChangeTrigger(System.Func{Static.StateInformation,System.Boolean})">
   RegisterNewStateChangeTrigger(Func&lt;StateInformation, bool&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/jblattgerste/TrainAR/blob/main/Assets/Scripts/Static/StatemachineConnector.cs/#L119"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/jblattgerste/TrainAR/blob/main/Assets/Scripts/Static/StatemachineConnector.cs/#L126"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Registers a new state change trigger from the visual state flow. This trigger
@@ -336,11 +369,47 @@ determines which node in the visual scripting graph is handling the state change
 
 
 
+  <a id="Static_StatemachineConnector_RegisterNewStateChangeTrigger_" data-uid="Static.StatemachineConnector.RegisterNewStateChangeTrigger*"></a>
+
+  <h3 id="Static_StatemachineConnector_RegisterNewStateChangeTrigger_System_Func_Static_StateInformation_System_Boolean__System_Func_System_Boolean__" data-uid="Static.StatemachineConnector.RegisterNewStateChangeTrigger(System.Func{Static.StateInformation,System.Boolean},System.Func{System.Boolean})">
+  RegisterNewStateChangeTrigger(Func&lt;StateInformation, bool&gt;, Func&lt;bool&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/jblattgerste/TrainAR/blob/main/Assets/Scripts/Static/StatemachineConnector.cs/#L136"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Registers an action that can accept intermediate progress before the whole node is complete.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void RegisterNewStateChangeTrigger(Func&lt;StateInformation, bool&gt; action, Func&lt;bool&gt; isActionComplete)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>action</code> <span class="xref">Func</span>&lt;<a class="xref" href="Static.StateInformation.html">StateInformation</a>, <span class="xref">bool</span>&gt;</dt>
+    <dd><p>Checks whether the requested action is correct.</p>
+</dd>
+    <dt><code>isActionComplete</code> <span class="xref">Func</span>&lt;<span class="xref">bool</span>&gt;</dt>
+    <dd><p>Checks completion after an accepted request. Null means every accepted request completes the node.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
   <a id="Static_StatemachineConnector_RequestStateChange_" data-uid="Static.StatemachineConnector.RequestStateChange*"></a>
 
   <h3 id="Static_StatemachineConnector_RequestStateChange_Static_StateInformation_" data-uid="Static.StatemachineConnector.RequestStateChange(Static.StateInformation)">
   RequestStateChange(StateInformation)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/jblattgerste/TrainAR/blob/main/Assets/Scripts/Static/StatemachineConnector.cs/#L130"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/jblattgerste/TrainAR/blob/main/Assets/Scripts/Static/StatemachineConnector.cs/#L147"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Request a statechange from the statemachine.</p>
@@ -377,7 +446,7 @@ determines which node in the visual scripting graph is handling the state change
 
   <h3 id="Static_StatemachineConnector_Reset" data-uid="Static.StatemachineConnector.Reset">
   Reset()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/jblattgerste/TrainAR/blob/main/Assets/Scripts/Static/StatemachineConnector.cs/#L302"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/jblattgerste/TrainAR/blob/main/Assets/Scripts/Static/StatemachineConnector.cs/#L328"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Resets the instance of this static instance.</p>
@@ -404,7 +473,7 @@ determines which node in the visual scripting graph is handling the state change
 
   <h3 id="Static_StatemachineConnector_ShowCompletionOverlay" data-uid="Static.StatemachineConnector.ShowCompletionOverlay">
   ShowCompletionOverlay()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/jblattgerste/TrainAR/blob/main/Assets/Scripts/Static/StatemachineConnector.cs/#L280"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/jblattgerste/TrainAR/blob/main/Assets/Scripts/Static/StatemachineConnector.cs/#L306"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Triggers the scenario completion overlay.</p>
@@ -431,7 +500,7 @@ determines which node in the visual scripting graph is handling the state change
 
   <h3 id="Static_StatemachineConnector_ShowErrorOverlay_System_String_System_String_" data-uid="Static.StatemachineConnector.ShowErrorOverlay(System.String,System.String)">
   ShowErrorOverlay(string, string)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/jblattgerste/TrainAR/blob/main/Assets/Scripts/Static/StatemachineConnector.cs/#L259"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/jblattgerste/TrainAR/blob/main/Assets/Scripts/Static/StatemachineConnector.cs/#L285"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Called by the visual state machine. Triggers an Action that shows the error overlay.</p>
@@ -467,7 +536,7 @@ determines which node in the visual scripting graph is handling the state change
 
   <h3 id="Static_StatemachineConnector_ShowExpertInsights_AudioClip_Sprite_System_String_" data-uid="Static.StatemachineConnector.ShowExpertInsights(AudioClip,Sprite,System.String)">
   ShowExpertInsights(AudioClip, Sprite, string)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/jblattgerste/TrainAR/blob/main/Assets/Scripts/Static/StatemachineConnector.cs/#L271"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/jblattgerste/TrainAR/blob/main/Assets/Scripts/Static/StatemachineConnector.cs/#L297"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Called by the visual state machine. Triggers an Action that shows the expert insight modality and plays and audio clip.</p>
@@ -506,7 +575,7 @@ determines which node in the visual scripting graph is handling the state change
 
   <h3 id="Static_StatemachineConnector_StartQuestionUI_UI_QuestionnaireController_QuestionUITypes_System_String_System_Collections_Generic_List_UI_QuestionnaireController_Answer__" data-uid="Static.StatemachineConnector.StartQuestionUI(UI.QuestionnaireController.QuestionUITypes,System.String,System.Collections.Generic.List{UI.QuestionnaireController.Answer})">
   StartQuestionUI(QuestionUITypes, string, List&lt;Answer&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/jblattgerste/TrainAR/blob/main/Assets/Scripts/Static/StatemachineConnector.cs/#L293"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/jblattgerste/TrainAR/blob/main/Assets/Scripts/Static/StatemachineConnector.cs/#L319"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Triggers a new Questionnaire to be answered by the user on the UI.</p>
@@ -545,7 +614,7 @@ determines which node in the visual scripting graph is handling the state change
 
   <h3 id="Static_StatemachineConnector_UpdateTopPanel_System_String_System_Int32_" data-uid="Static.StatemachineConnector.UpdateTopPanel(System.String,System.Int32)">
   UpdateTopPanel(string, int)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/jblattgerste/TrainAR/blob/main/Assets/Scripts/Static/StatemachineConnector.cs/#L238"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/jblattgerste/TrainAR/blob/main/Assets/Scripts/Static/StatemachineConnector.cs/#L264"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Called by the visual state machine, triggers an Action that updates the instruction text and completion percentage

@@ -168,7 +168,7 @@ Class MaterialController  <a class="header-action link-secondary" title="View so
 
   <h3 id="Interaction_MaterialController_ActivateErrorIndicator" data-uid="Interaction.MaterialController.ActivateErrorIndicator">
   ActivateErrorIndicator()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/jblattgerste/TrainAR/blob/main/Assets/Scripts/Interaction/MaterialController.cs/#L375"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/jblattgerste/TrainAR/blob/main/Assets/Scripts/Interaction/MaterialController.cs/#L374"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Play Error outline animation in coroutine.</p>
@@ -222,7 +222,7 @@ Class MaterialController  <a class="header-action link-secondary" title="View so
 
   <h3 id="Interaction_MaterialController_ActivateSuccessIndicator" data-uid="Interaction.MaterialController.ActivateSuccessIndicator">
   ActivateSuccessIndicator()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/jblattgerste/TrainAR/blob/main/Assets/Scripts/Interaction/MaterialController.cs/#L424"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/jblattgerste/TrainAR/blob/main/Assets/Scripts/Interaction/MaterialController.cs/#L423"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Play Success outline animation in coroutine.</p>
@@ -249,7 +249,7 @@ Class MaterialController  <a class="header-action link-secondary" title="View so
 
   <h3 id="Interaction_MaterialController_ActivateSuccessIndicator_System_String_" data-uid="Interaction.MaterialController.ActivateSuccessIndicator(System.String)">
   ActivateSuccessIndicator(string)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/jblattgerste/TrainAR/blob/main/Assets/Scripts/Interaction/MaterialController.cs/#L434"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/jblattgerste/TrainAR/blob/main/Assets/Scripts/Interaction/MaterialController.cs/#L433"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Play Success outline animation in coroutine.</p>
@@ -281,7 +281,7 @@ Class MaterialController  <a class="header-action link-secondary" title="View so
 
   <h3 id="Interaction_MaterialController_ChangeToCombineMaterial" data-uid="Interaction.MaterialController.ChangeToCombineMaterial">
   ChangeToCombineMaterial()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/jblattgerste/TrainAR/blob/main/Assets/Scripts/Interaction/MaterialController.cs/#L288"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/jblattgerste/TrainAR/blob/main/Assets/Scripts/Interaction/MaterialController.cs/#L287"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Replaces all materials on the this Object with a material for combining.</p>
@@ -333,26 +333,23 @@ Class MaterialController  <a class="header-action link-secondary" title="View so
 
   <a id="Interaction_MaterialController_SetHighlight_" data-uid="Interaction.MaterialController.SetHighlight*"></a>
 
-  <h3 id="Interaction_MaterialController_SetHighlight_System_Boolean_System_Nullable_Color__" data-uid="Interaction.MaterialController.SetHighlight(System.Boolean,System.Nullable{Color})">
-  SetHighlight(bool, Color?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/jblattgerste/TrainAR/blob/main/Assets/Scripts/Interaction/MaterialController.cs/#L193"><i class="bi bi-code-slash"></i></a>
+  <h3 id="Interaction_MaterialController_SetHighlight_System_Nullable_Color__" data-uid="Interaction.MaterialController.SetHighlight(System.Nullable{Color})">
+  SetHighlight(Color?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/jblattgerste/TrainAR/blob/main/Assets/Scripts/Interaction/MaterialController.cs/#L192"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Highlights the object with an outline to point the user to it, e.g. as the object to use in the current step.
-The highlight is removed automatically once the next action is accepted by the statemachine, or manually
-by calling this with false. Selection and feedback outlines take precedence while they are active.</p>
+The highlight is removed automatically once the next action node completes successfully.
+Selection and feedback outlines take precedence while they are active.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void SetHighlight(bool highlighted, Color? color = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public void SetHighlight(Color? color = null)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>highlighted</code> <span class="xref">bool</span></dt>
-    <dd><p>Whether the object is highlighted.</p>
-</dd>
     <dt><code>color</code> <span class="xref">Color</span>?</dt>
     <dd><p>The highlight color, <a class="xref" href="Interaction.MaterialController.html#Interaction_MaterialController_DefaultHighlightColor">DefaultHighlightColor</a> if null.</p>
 </dd>
@@ -373,7 +370,7 @@ by calling this with false. Selection and feedback outlines take precedence whil
 
   <h3 id="Interaction_MaterialController_resetOriginalMaterial" data-uid="Interaction.MaterialController.resetOriginalMaterial">
   resetOriginalMaterial()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/jblattgerste/TrainAR/blob/main/Assets/Scripts/Interaction/MaterialController.cs/#L317"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/jblattgerste/TrainAR/blob/main/Assets/Scripts/Interaction/MaterialController.cs/#L316"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Resets the current materials back to original materials of the object.</p>
@@ -400,7 +397,7 @@ by calling this with false. Selection and feedback outlines take precedence whil
 
   <h3 id="Interaction_MaterialController_setNewOriginalMaterial_GameObject_Material_" data-uid="Interaction.MaterialController.setNewOriginalMaterial(GameObject,Material)">
   setNewOriginalMaterial(GameObject, Material)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/jblattgerste/TrainAR/blob/main/Assets/Scripts/Interaction/MaterialController.cs/#L330"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/jblattgerste/TrainAR/blob/main/Assets/Scripts/Interaction/MaterialController.cs/#L329"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Change the original material of the given object with to a new material.</p>
