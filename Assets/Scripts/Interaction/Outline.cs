@@ -112,6 +112,10 @@ namespace Interaction
     //outlineMaskMaterial = Instantiate(Resources.Load<Material>(@"Materials/OutlineMask"));
     //outlineFillMaterial = Instantiate(Resources.Load<Material>(@"Materials/OutlineFill"));
 
+    // Use per-object instances, otherwise color changes (e.g. highlight vs. selection) apply to all TrainAR objects
+    outlineMaskMaterial = Instantiate(outlineMaskMaterial);
+    outlineFillMaterial = Instantiate(outlineFillMaterial);
+
     outlineMaskMaterial.name = "OutlineMask (Instance)";
     outlineFillMaterial.name = "OutlineFill (Instance)";
 
@@ -176,8 +180,8 @@ namespace Interaction
   void OnDestroy() {
 
     // Destroy material instances
-    //Destroy(outlineMaskMaterial);
-    //Destroy(outlineFillMaterial);
+    Destroy(outlineMaskMaterial);
+    Destroy(outlineFillMaterial);
   }
 
   void Bake() {

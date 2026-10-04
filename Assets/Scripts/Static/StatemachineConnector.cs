@@ -93,6 +93,18 @@ namespace Static
         public event Action<AudioClip, Sprite, string> TriggerExpertInsights;
         public event Action TriggerScenarioCompletionOverlay;
         public event Action<QuestionUITypes, string, List<Answer>> TriggerUIQuestion;
+
+        /// <summary>
+        /// Consecutive number of the latest state change request. Everything the stateflow does while a request
+        /// is handled (e.g. the nodes after a "Correct" output) happens under this number, which allows to tell
+        /// things set up for the next step apart from things set up earlier.
+        /// </summary>
+        public int CurrentStateChangeRequest { get; private set; }
+
+        /// <summary>
+        /// Number of the latest accepted (non-grab) state change request, meaning the latest correct action.
+        /// </summary>
+        public int LastAcceptedStateChangeRequest { get; private set; }
  
         private static List<StateInformation> stateHistory = new List<StateInformation>();
         private bool acceptedStateChange;
@@ -128,6 +140,9 @@ namespace Static
                 return acceptedStateChange;
             }*/
             
+            //Number this request, stored locally as the stateflow could trigger further (nested) requests
+            int requestNumber = ++CurrentStateChangeRequest;
+
             //Add the requested statechange to the state history
             stateHistory.Add(stateInformation);
 
@@ -157,6 +172,8 @@ namespace Static
 
             //Print the state change to the debug console
             PrintStateChangeRequest(stateHistory[^1], acceptedStateChange);
+            if(acceptedStateChange && stateInformation.interactionType != InteractionType.Grab)
+                LastAcceptedStateChangeRequest = Math.Max(LastAcceptedStateChangeRequest, requestNumber);
             if(stateInformation.interactionType != InteractionType.Grab) AcceptedStateChange(acceptedStateChange);
             //If this was an incorrect action, increment the error counter
             if (!acceptedStateChange)
