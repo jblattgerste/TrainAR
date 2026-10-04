@@ -226,7 +226,11 @@ namespace Visual_Scripting
 
             //Register an Action and pass it to the TrainAR StateChecker to trigger it when ready
             Func<StateInformation, bool> triggerEvent = ContinueFlow;
-            StatemachineConnector.RegisterNewStateChangeTrigger(triggerEvent);
+            //Capture this activation's progress: AllActionsCorrect may loop back into this same node
+            //and replace actionStorage before the completing request returns.
+            var actionsForThisActivation = actionStorage;
+            StatemachineConnector.RegisterNewStateChangeTrigger(triggerEvent,
+                () => !actionsForThisActivation.ContainsValue(false));
 
             //Return null instead of ControLOutput to pause the graph flow until it is revisited by ContinueFlow
             return null;

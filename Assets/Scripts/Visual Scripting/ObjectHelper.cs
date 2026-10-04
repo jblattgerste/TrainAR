@@ -34,6 +34,8 @@ namespace Visual_Scripting
             DestroyObject,
             ReplaceTrainARObject,
             //New choices are appended at the end to not change the options of existing nodes
+            //Keep the serialized enum name so existing graphs still resolve this helper.
+            [InspectorName("Highlight")]
             ToggleHighlight,
         }
         
@@ -88,13 +90,6 @@ namespace Visual_Scripting
         /// <value>Set in node in the editor.</value>
         [DoNotSerialize]
         public ValueInput CombinabilityToggle { get; private set; }
-
-        /// <summary>
-        /// Toggle for the highlight that is displayed when this helper is selected.
-        /// </summary>
-        /// <value>Set in node in the editor.</value>
-        [DoNotSerialize]
-        public ValueInput HighlightToggle { get; private set; }
 
         /// <summary>
         /// Color of the highlight outline.
@@ -217,7 +212,6 @@ namespace Visual_Scripting
                     ObjectTwo = ValueInput<string>("Replace with", string.Empty);
                     break;
                 case TrainARHelperChoices.ToggleHighlight:
-                    HighlightToggle = ValueInput<bool>("Highlighted", true);
                     HighlightColor = ValueInput<Color>("Color", MaterialController.DefaultHighlightColor);
                     break;
                 default:
@@ -355,8 +349,8 @@ namespace Visual_Scripting
 
                     break;
                 case TrainARHelperChoices.ToggleHighlight:
-                    //Removed automatically once the next action is accepted, selection and feedback outlines take precedence
-                    trainARObject.gameObject.GetComponent<MaterialController>().SetHighlight(flow.GetValue<bool>(HighlightToggle), flow.GetValue<Color>(HighlightColor));
+                    //Removed automatically once the next action node completes; selection and feedback take precedence.
+                    trainARObject.gameObject.GetComponent<MaterialController>().SetHighlight(flow.GetValue<Color>(HighlightColor));
                     break;
                 default:
                     throw new ArgumentOutOfRangeException();

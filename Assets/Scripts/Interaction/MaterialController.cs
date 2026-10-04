@@ -84,7 +84,7 @@ namespace Interaction
         /// </summary>
         private Color activeHighlightColor;
         /// <summary>
-        /// The state change request during which the highlight was set. The highlight is removed once a later request is accepted.
+        /// The state change request during which the highlight was set. The highlight is removed once a later request completes an action node.
         /// </summary>
         private int highlightSetDuringRequest;
         /// <summary>
@@ -185,14 +185,13 @@ namespace Interaction
 
         /// <summary>
         /// Highlights the object with an outline to point the user to it, e.g. as the object to use in the current step.
-        /// The highlight is removed automatically once the next action is accepted by the statemachine, or manually
-        /// by calling this with false. Selection and feedback outlines take precedence while they are active.
+        /// The highlight is removed automatically once the next action node completes successfully.
+        /// Selection and feedback outlines take precedence while they are active.
         /// </summary>
-        /// <param name="highlighted">Whether the object is highlighted.</param>
         /// <param name="color">The highlight color, <see cref="DefaultHighlightColor"/> if null.</param>
-        public void SetHighlight(bool highlighted, Color? color = null)
+        public void SetHighlight(Color? color = null)
         {
-            isHighlighted = highlighted;
+            isHighlighted = true;
             activeHighlightColor = color ?? DefaultHighlightColor;
             highlightSetDuringRequest = StatemachineConnector.Instance.CurrentStateChangeRequest;
             ApplyOutlineState();
@@ -212,9 +211,9 @@ namespace Interaction
         /// </summary>
         private void ApplyOutlineState()
         {
-            //The highlight is removed once an action after the one it was set in is accepted. A highlight set while the
-            //accepted action was handled (e.g. by the nodes after "Correct") belongs to the next step and therefore stays.
-            if (isHighlighted && StatemachineConnector.Instance.LastAcceptedStateChangeRequest > highlightSetDuringRequest)
+            //Only a completed node clears earlier hints; accepted sub-actions of Action (Multi) keep them.
+            //Hints created by the completing request's Correct output belong to the next step and stay.
+            if (isHighlighted && StatemachineConnector.Instance.LastCompletedActionRequest > highlightSetDuringRequest)
             {
                 isHighlighted = false;
             }

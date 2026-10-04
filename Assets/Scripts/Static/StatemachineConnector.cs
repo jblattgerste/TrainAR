@@ -105,10 +105,17 @@ namespace Static
         /// Number of the latest accepted (non-grab) state change request, meaning the latest correct action.
         /// </summary>
         public int LastAcceptedStateChangeRequest { get; private set; }
+
+        /// <summary>
+        /// Number of the latest request that completed an action node. Accepted sub-actions of an
+        /// unfinished Action (Multi) node do not advance this number.
+        /// </summary>
+        public int LastCompletedActionRequest { get; private set; }
  
         private static List<StateInformation> stateHistory = new List<StateInformation>();
         private bool acceptedStateChange;
         private static Func<StateInformation, bool> stateChangeTrigger;
+        private static Func<bool> actionCompletionCheck;
         private StatemachineConnector() {}
         
         /// <summary>
@@ -118,8 +125,18 @@ namespace Static
         /// <param name="action">The Func to that is registered.</param>
         public static void RegisterNewStateChangeTrigger(Func<StateInformation, bool> action)
         {
-            stateChangeTrigger = null;
+            RegisterNewStateChangeTrigger(action, null);
+        }
+
+        /// <summary>
+        /// Registers an action that can accept intermediate progress before the whole node is complete.
+        /// </summary>
+        /// <param name="action">Checks whether the requested action is correct.</param>
+        /// <param name="isActionComplete">Checks completion after an accepted request. Null means every accepted request completes the node.</param>
+        public static void RegisterNewStateChangeTrigger(Func<StateInformation, bool> action, Func<bool> isActionComplete)
+        {
             stateChangeTrigger = action;
+            actionCompletionCheck = isActionComplete;
         }
         
         /// <summary>
@@ -143,6 +160,11 @@ namespace Static
             //Number this request, stored locally as the stateflow could trigger further (nested) requests
             int requestNumber = ++CurrentStateChangeRequest;
 
+            //Correct outputs can register the next node before this request returns. Completion must
+            //be checked against the node that handled this request, not the newly registered one.
+            var requestTrigger = stateChangeTrigger;
+            var requestCompletionCheck = actionCompletionCheck;
+
             //Add the requested statechange to the state history
             stateHistory.Add(stateInformation);
 
@@ -163,9 +185,9 @@ namespace Static
             acceptedStateChange = stateInformation.interactionType switch
             {
                 InteractionType.Grab => true, //For grabbing this is always true, selection, deselection and release are not calling this
-                InteractionType.Combine => stateChangeTrigger.Invoke(stateInformation),
-                InteractionType.Interact => stateChangeTrigger.Invoke(stateInformation),
-                InteractionType.Custom => stateChangeTrigger.Invoke(stateInformation),
+                InteractionType.Combine => requestTrigger.Invoke(stateInformation),
+                InteractionType.Interact => requestTrigger.Invoke(stateInformation),
+                InteractionType.Custom => requestTrigger.Invoke(stateInformation),
                 _ => acceptedStateChange
             };
             ////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -173,7 +195,11 @@ namespace Static
             //Print the state change to the debug console
             PrintStateChangeRequest(stateHistory[^1], acceptedStateChange);
             if(acceptedStateChange && stateInformation.interactionType != InteractionType.Grab)
+            {
                 LastAcceptedStateChangeRequest = Math.Max(LastAcceptedStateChangeRequest, requestNumber);
+                if (requestCompletionCheck == null || requestCompletionCheck())
+                    LastCompletedActionRequest = Math.Max(LastCompletedActionRequest, requestNumber);
+            }
             if(stateInformation.interactionType != InteractionType.Grab) AcceptedStateChange(acceptedStateChange);
             //If this was an incorrect action, increment the error counter
             if (!acceptedStateChange)

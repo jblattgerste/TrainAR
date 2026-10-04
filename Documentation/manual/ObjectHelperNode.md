@@ -62,13 +62,8 @@ Replaces a to be **replaced TrainAR Object** with another **replacing TrainAR Ob
 
 In case the **replaced TrainAR Object** is **grabbed** during replacement, the **replacing TrainAR Object** is also **grabbed**. For further instructions on how to use this setting, see [here](../manual/TrainARObjects.html#swapping-or-modifying-trainar-objects-during-a-training)
 
-## Toggle Highlight
+## Highlight
 
-Highlights the specified **TrainAR Object** with a colored outline to guide the trainee's attention to it, e.g. to show which object should be used in the current step. Check or uncheck the **Highlighted** field to add or remove the highlight. The **Color** field specifies the color of the outline. By default, this is an amber color that differs from the blue selection, red error and green success outlines.
+Highlights the specified **TrainAR Object** in the chosen **Color** until the next **Action** node completes successfully. Place this helper before the Action node that the highlight belongs to. The default color is amber.
 
-The highlight is removed automatically once the trainee performs the next correct action, so you usually place this node right before the **Action** node of the step the object belongs to. Highlights set in the nodes after a **Correct** output stay for the following step. You can also remove a highlight earlier by using this node with **Highlighted** unchecked. To highlight multiple objects at once, use one **Object Helper** node per object.
-
-While a highlighted **TrainAR Object** is selected, the selection outline is shown instead of the highlight. Error and success feedback also temporarily replace the highlight. Afterwards, the highlight is shown again as long as it was not removed.
-
-> [!NOTE]
-> With the **Action (Multi)** node, every correct action counts as the next correct action, so a highlight is removed after the first of the required actions.
+To highlight several objects, use one **Object Helper** node per object. With **Action (Multi)**, all highlights remain until **all required actions** have been completed correctly. They then clear together.
