@@ -102,15 +102,20 @@ namespace Interaction
     private Material outlineFillMaterial;
 
     private bool needsUpdate;
+    private bool initialized;
+    private bool placementSuppressed;
 
   void Awake() {
+    Initialize();
+  }
 
-    // Cache renderers
-    renderers = GetComponentsInChildren<Renderer>();
-
-    // Instantiate outline materials
-    //outlineMaskMaterial = Instantiate(Resources.Load<Material>(@"Materials/OutlineMask"));
-    //outlineFillMaterial = Instantiate(Resources.Load<Material>(@"Materials/OutlineFill"));
+  private void Initialize() {
+    if (initialized) return;
+    renderers = GetComponentsInChildren<Renderer>(true);
+    if (outlineMaskMaterial == null || outlineFillMaterial == null) {
+      Debug.LogError("Outline requires a mask and fill material.", this);
+      return;
+    }
 
     // Use per-object instances, otherwise color changes (e.g. highlight vs. selection) apply to all TrainAR objects
     outlineMaskMaterial = Instantiate(outlineMaskMaterial);
@@ -118,25 +123,67 @@ namespace Interaction
 
     outlineMaskMaterial.name = "OutlineMask (Instance)";
     outlineFillMaterial.name = "OutlineFill (Instance)";
+    initialized = true;
 
     // Retrieve or generate smooth normals
     LoadSmoothNormals();
 
     // Apply material properties immediately
-    needsUpdate = true;
+    UpdateMaterialProperties();
   }
 
   void OnEnable() {
+    Initialize();
+    SynchronizeMaterials();
+  }
+
+  /// <summary>
+  /// Hides only the rendering passes while placement owns the renderer materials.
+  /// Selection, highlights and feedback can continue to update their logical state.
+  /// </summary>
+  public void SetPlacementSuppressed(bool suppressed) {
+    placementSuppressed = suppressed;
+    SynchronizeMaterials();
+  }
+
+  /// <summary>
+  /// Repairs material slots after another system restores or replaces materials.
+  /// Only this component's material instances are removed, so nested outlines and
+  /// selection materials retain their ownership.
+  /// </summary>
+  public void SynchronizeMaterials() {
+    if (!initialized) return;
+    bool visible = isActiveAndEnabled && !placementSuppressed;
     foreach (var renderer in renderers) {
-
-      // Append outline shaders
-      var materials = renderer.sharedMaterials.ToList();
-
-      materials.Add(outlineMaskMaterial);
-      materials.Add(outlineFillMaterial);
-
-      renderer.materials = materials.ToArray();
+      if (renderer == null) continue;
+      var current = renderer.sharedMaterials;
+      int maskCount = 0, fillCount = 0, maskIndex = -1, fillIndex = -1;
+      for (int i = 0; i < current.Length; i++) {
+        if (current[i] == outlineMaskMaterial) { maskCount++; maskIndex = i; }
+        if (current[i] == outlineFillMaterial) { fillCount++; fillIndex = i; }
+      }
+      // An intact pair may sit alongside another object's outline or selection
+      // material. Keep that order stable instead of moving our pair every frame.
+      if (visible && maskCount == 1 && fillCount == 1 && fillIndex == maskIndex + 1) continue;
+      if (!visible && maskCount == 0 && fillCount == 0) continue;
+      var materials = current.Where(material => material != outlineMaskMaterial && material != outlineFillMaterial).ToList();
+      if (visible) {
+        materials.Add(outlineMaskMaterial);
+        materials.Add(outlineFillMaterial);
+      }
+      renderer.sharedMaterials = materials.ToArray();
     }
+  }
+
+  /// <summary>
+  /// Prepares a replacement mesh and refreshes the passes without changing the
+  /// current selection/highlight/feedback state.
+  /// </summary>
+  public void RefreshMesh() {
+    if (!initialized) return; // Awake will prepare a previously inactive object.
+    renderers = GetComponentsInChildren<Renderer>(true);
+    LoadSmoothNormals();
+    SynchronizeMaterials();
   }
 
   void OnValidate() {
@@ -157,7 +204,7 @@ namespace Interaction
   }
 
   void Update() {
-    if (needsUpdate) {
+    if (initialized && needsUpdate) {
       needsUpdate = false;
 
       UpdateMaterialProperties();
@@ -165,23 +212,16 @@ namespace Interaction
   }
 
   void OnDisable() {
-    foreach (var renderer in renderers) {
-
-      // Remove outline shaders
-      var materials = renderer.sharedMaterials.ToList();
-
-      materials.Remove(outlineMaskMaterial);
-      materials.Remove(outlineFillMaterial);
-
-      renderer.materials = materials.ToArray();
-    }
+    SynchronizeMaterials();
   }
 
   void OnDestroy() {
 
     // Destroy material instances
-    Destroy(outlineMaskMaterial);
-    Destroy(outlineFillMaterial);
+    if (initialized) {
+      Destroy(outlineMaskMaterial);
+      Destroy(outlineFillMaterial);
+    }
   }
 
   void Bake() {
@@ -189,7 +229,8 @@ namespace Interaction
     // Generate smooth normals for each mesh
     var bakedMeshes = new HashSet<Mesh>();
 
-    foreach (var meshFilter in GetComponentsInChildren<MeshFilter>()) {
+    foreach (var meshFilter in GetComponentsInChildren<MeshFilter>(true)) {
+      if (meshFilter.sharedMesh == null || !meshFilter.sharedMesh.isReadable) continue;
 
       // Skip duplicates
       if (!bakedMeshes.Add(meshFilter.sharedMesh)) {
@@ -207,7 +248,8 @@ namespace Interaction
   void LoadSmoothNormals() {
 
     // Retrieve or generate smooth normals
-    foreach (var meshFilter in GetComponentsInChildren<MeshFilter>()) {
+    foreach (var meshFilter in GetComponentsInChildren<MeshFilter>(true)) {
+      if (meshFilter.sharedMesh == null || !meshFilter.sharedMesh.isReadable) continue;
 
       // Skip if smooth normals have already been adopted
       if (!registeredMeshes.Add(meshFilter.sharedMesh)) {
@@ -216,7 +258,10 @@ namespace Interaction
 
       // Retrieve or generate smooth normals
       var index = bakeKeys.IndexOf(meshFilter.sharedMesh);
-      var smoothNormals = (index >= 0) ? bakeValues[index].data : SmoothNormals(meshFilter.sharedMesh);
+      var smoothNormals = index >= 0 && index < bakeValues.Count &&
+        bakeValues[index] != null && bakeValues[index].data != null &&
+        bakeValues[index].data.Count == meshFilter.sharedMesh.vertexCount
+        ? bakeValues[index].data : SmoothNormals(meshFilter.sharedMesh);
 
       // Store smooth normals in UV3
       meshFilter.sharedMesh.SetUVs(3, smoothNormals);
@@ -230,7 +275,8 @@ namespace Interaction
     }
 
     // Clear UV3 on skinned mesh renderers
-    foreach (var skinnedMeshRenderer in GetComponentsInChildren<SkinnedMeshRenderer>()) {
+    foreach (var skinnedMeshRenderer in GetComponentsInChildren<SkinnedMeshRenderer>(true)) {
+      if (skinnedMeshRenderer.sharedMesh == null || !skinnedMeshRenderer.sharedMesh.isReadable) continue;
 
       // Skip if UV3 has already been reset
       if (!registeredMeshes.Add(skinnedMeshRenderer.sharedMesh)) {
@@ -246,6 +292,8 @@ namespace Interaction
   }
 
   List<Vector3> SmoothNormals(Mesh mesh) {
+
+    if (mesh.normals.Length != mesh.vertexCount) mesh.RecalculateNormals();
 
     // Group vertices by location
     var groups = mesh.vertices.Select((vertex, index) => new KeyValuePair<Vector3, int>(vertex, index)).GroupBy(pair => pair.Key);
@@ -282,7 +330,7 @@ namespace Interaction
   void CombineSubmeshes(Mesh mesh, Material[] materials) {
 
     // Skip meshes with a single submesh
-    if (mesh.subMeshCount == 1) {
+    if (mesh.subMeshCount <= 1) {
       return;
     }
 
@@ -300,7 +348,6 @@ namespace Interaction
 
     // Apply properties according to mode
     outlineFillMaterial.SetColor("_OutlineColor", outlineColor);
-    Debug.Log("After SetColor");
 
     switch (outlineMode) {
       case Mode.OutlineAll:

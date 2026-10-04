@@ -30,12 +30,12 @@ namespace UI
         /// Trackingstate
         /// </summary>
         /// <value>Depending on the subsystem info.</value>
-        private string stateText;
+        private string stateText = "None";
         /// <summary>
         /// Reason for false tracking.
         /// </summary>
         /// <value>Depending on the subsystem info.</value>
-        private string reasonText;
+        private string reasonText = "None";
         /// <summary>
         /// Reference to the Prefab Spawning Controller.
         /// </summary>
@@ -150,8 +150,14 @@ namespace UI
         /// <summary>
         /// Reference to text field.
         /// </summary>
-        /// <value>Set in inspector.</value>
+        /// <value>Resolved from the fallback tracking panel in Awake.</value>
         private Text otherReasons;
+
+        private void Awake()
+        {
+            if (defaultTracking != null)
+                otherReasons = defaultTracking.GetComponentInChildren<Text>(true);
+        }
 
         /// <summary>
         /// Toggles the MoveDevice animation on and off
@@ -221,6 +227,8 @@ namespace UI
         {
             if (m_CameraManager != null)
                 m_CameraManager.frameReceived += FrameChanged;
+            if (videoPlayerMoveDevice != null)
+                videoPlayerMoveDevice.loopPointReached += EndReached;
 
             PrefabSpawningController.prefabSpawned += PlacedObject;
             PrefabSpawningController.RepositionPrefab += OnRepositionPrefab;
@@ -236,6 +244,8 @@ namespace UI
         {
             if (m_CameraManager != null)
                 m_CameraManager.frameReceived -= FrameChanged;
+            if (videoPlayerMoveDevice != null)
+                videoPlayerMoveDevice.loopPointReached -= EndReached;
 
             PrefabSpawningController.prefabSpawned -= PlacedObject;
             PrefabSpawningController.RepositionPrefab -= OnRepositionPrefab;
@@ -255,7 +265,6 @@ namespace UI
             {
                 ToggleTapToPlaceAnimation(false);
                 ToggleMoveDeviceAnimation(true);
-                videoPlayerMoveDevice.loopPointReached += EndReached;
 
             }
         }
@@ -304,11 +313,18 @@ namespace UI
         /// </summary>
         void TrackingstateDependentOnboarding()
         {
-            if (session.subsystem != null)
+            // A session can temporarily have no subsystem during startup or an
+            // interruption. Clear stale warnings and read this frame's state once.
+            var subsystem = session != null ? session.subsystem : null;
+            if (subsystem == null)
             {
-                stateText = session.subsystem.trackingState.ToString();
-                reasonText = session.subsystem.notTrackingReason.ToString();
+                stateText = "None";
+                reasonText = "None";
+                return;
             }
+
+            stateText = subsystem.trackingState.ToString();
+            reasonText = subsystem.notTrackingReason.ToString();
         }
 
         /// <summary>
@@ -316,41 +332,41 @@ namespace UI
         /// </summary>
         void ShowTrackingInformation()
         {
-            insufficientLight.SetActive(false);
-            insufficientFeatures.SetActive(false);
-            excessiveMotion.SetActive(false);
-            defaultTracking.SetActive(false);
+            bool showTracking = PrefabSpawningController != null && PrefabSpawningController.objectWasSpawned;
+            bool showDefault = showTracking && !string.IsNullOrEmpty(reasonText) && reasonText != "None" &&
+                reasonText != "InsufficientLight" && reasonText != "InsufficientFeatures" && reasonText != "ExcessiveMotion";
 
-            if(!PrefabSpawningController.objectWasSpawned)
-            {
-              return;
+            // The fallback panel uses a legacy UI Text. Keep its existing label,
+            // and tolerate an omitted label without throwing every Update.
+            if (showDefault && otherReasons != null && otherReasons.text != reasonText)
+                otherReasons.text = reasonText;
 
-            }
+            SetTrackingPanelActive(insufficientLight, showTracking && reasonText == "InsufficientLight");
+            SetTrackingPanelActive(insufficientFeatures, showTracking && reasonText == "InsufficientFeatures");
+            SetTrackingPanelActive(excessiveMotion, showTracking && reasonText == "ExcessiveMotion");
+            SetTrackingPanelActive(defaultTracking, showDefault);
+
+            if (!showTracking) return;
 
             switch (reasonText){
               case "InsufficientFeatures":
-                  insufficientFeatures.SetActive(true);
                   if(reasonText != tempTrackingReason)
                     Debug.Log("TrackingController: Lost tracking because of insufficient features");
                   break;
 
               case "InsufficientLight":
-                  insufficientLight.SetActive(true);
                   if(reasonText != tempTrackingReason)
                     Debug.Log("TrackingController: Lost tracking because of insufficient light");
                   break;
 
               case "ExcessiveMotion":
-                  excessiveMotion.SetActive(true);
                   if(reasonText != tempTrackingReason)
                     Debug.Log("TrackingController: Lost tracking because of excessive motion");
                   break;
 
               default:
-                  if(reasonText !="None")
+                  if(showDefault)
                   {
-                    defaultTracking.SetActive(true);
-                    otherReasons.text = session.subsystem.notTrackingReason.ToString();
                     if(reasonText != tempTrackingReason)
                       Debug.Log("TrackingController: Lost tracking because of " + reasonText);
                   }
@@ -364,33 +380,39 @@ namespace UI
         /// </summary>
         void ShowTrackingInformationDuringOnboarding()
         {
-          insufficientLightOb.SetActive(false);
-          insufficientFeaturesOb.SetActive(false);
-          excessiveMotionOb.SetActive(false);
+            bool showOnboarding = PrefabSpawningController != null && !PrefabSpawningController.objectWasSpawned;
+            SetTrackingPanelActive(insufficientLightOb, showOnboarding && reasonText == "InsufficientLight");
+            SetTrackingPanelActive(insufficientFeaturesOb, showOnboarding && reasonText == "InsufficientFeatures");
+            SetTrackingPanelActive(excessiveMotionOb, showOnboarding && reasonText == "ExcessiveMotion");
 
-            if(!PrefabSpawningController.objectWasSpawned)
+            if(showOnboarding)
             {
                 switch (reasonText){
                     case "InsufficientFeatures":
-                        insufficientFeaturesOb.SetActive(true);
                         if(reasonText != tempTrackingReason)
                             Debug.Log("TrackingController: Lost tracking because of insufficient features - during onboarding.");
                         break;
 
                     case "InsufficientLight":
-                        insufficientLightOb.SetActive(true);
                         if(reasonText != tempTrackingReason)
                             Debug.Log("TrackingController: Lost tracking because of insufficient light - during onboarding.");
                         break;
 
                     case "ExcessiveMotion":
-                        excessiveMotionOb.SetActive(true);
                         if(reasonText != tempTrackingReason)
                             Debug.Log("TrackingController: Lost tracking because of excessive motion - during onboarding.");
                         break;
                 }
                 tempTrackingReason = reasonText;
             }
+        }
+
+        private static void SetTrackingPanelActive(GameObject panel, bool active)
+        {
+            // Avoid disabling/re-enabling a visible warning every frame, which
+            // repeatedly rebuilds its UI while tracking is interrupted.
+            if (panel != null && panel.activeSelf != active)
+                panel.SetActive(active);
         }
     }
 }

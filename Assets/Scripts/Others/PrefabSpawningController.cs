@@ -125,7 +125,9 @@ namespace Others
         /// Holder to store all original materials to reset them after placing.
         /// </summary>
         /// <value>Set on runtime.</value>
-        private Dictionary<GameObject, Material[]> originalMaterials = new Dictionary<GameObject, Material[]>();
+        private readonly Dictionary<Renderer, Material[]> originalMaterials = new Dictionary<Renderer, Material[]>();
+        private Outline[] placementOutlines;
+        private readonly WorldTouchGesture placementGesture = new WorldTouchGesture();
         /// <summary>
         /// Event that is triggered after the assembly is spawned.
         /// </summary>
@@ -134,6 +136,26 @@ namespace Others
         /// Event that is triggered after repositioning of the training assembly.
         /// </summary>
         public static event Action RepositionPrefab;
+
+        private void OnEnable()
+        {
+            placementGesture.Enable();
+        }
+
+        private void OnDisable()
+        {
+            placementGesture.Disable();
+        }
+
+        private void OnApplicationFocus(bool hasFocus)
+        {
+            if (!hasFocus) placementGesture.Reset();
+        }
+
+        private void OnApplicationPause(bool paused)
+        {
+            if (paused) placementGesture.Reset();
+        }
 
         /// <summary>
         /// Sets references to the ARRaycastmanager and triggers the creation of the TrainAR setup.
@@ -199,27 +221,28 @@ namespace Others
                 PositionPrefab();
 
                 //Spawn the construction with a touch on the screen
-                if (Input.touchCount < 1) return;
-                Touch touch = Input.GetTouch(0);
+                if (!placementGesture.TryGetTouch(out var touch)) return;
                 //If Touch has been registered and placement pose has been declared valid, spawn the prefab
-                if (touch.phase == TouchPhase.Began && placementPoseIsValid)
+                if (touch.phase == UnityEngine.InputSystem.TouchPhase.Began && placementPoseIsValid)
                 {
                     SpawnPrefab();
                 }
             }
             else if(infinityPlaneWasSpawned && objectWasSpawned && !materialsWereReset)
             {
+                // Restore rendering before callbacks: the first graph step may
+                // immediately highlight an object or replace one of its materials.
+                ResetMaterialsToOriginal();
+                materialsWereReset = true;
+                placementGesture.Reset();
                 //Invoke the Event that the prefab was spawned
                 prefabSpawned?.Invoke();
                 //Let the Visual scripting know that we now positioned the prefab for the first time
                 if (!VisualScriptingFlowWasTriggerd)
                 {
-                    EventBus.Trigger(VisualScriptingEventNames.OnboardingAndSetupCompleted, true);
                     VisualScriptingFlowWasTriggerd = true;
+                    EventBus.Trigger(VisualScriptingEventNames.OnboardingAndSetupCompleted, true);
                 }
-                //Reset the materials back to original
-                ResetMaterialsToOriginal();
-                materialsWereReset = true;
                 var points = aRSessionOrigin.GetComponent<ARPointCloudManager>().trackables;
                 aRSessionOrigin.GetComponent<ARPointCloudManager>().enabled = false;
                 foreach(var pts in points)
@@ -234,8 +257,12 @@ namespace Others
         /// </summary>
         private void PositionPrefab()
         {
-            if (Camera.current == null) return;
-            var screenCenter = Camera.current.ViewportToScreenPoint(new Vector3(0.5f, 0.5f));
+            if (arCamera == null)
+            {
+                placementPoseIsValid = false;
+                return;
+            }
+            var screenCenter = arCamera.ViewportToScreenPoint(new Vector3(0.5f, 0.5f));
             var hits = new List<ARRaycastHit>();
 
             arRaycastManager.Raycast(screenCenter, hits, TrackableType.PlaneWithinBounds);
@@ -245,7 +272,7 @@ namespace Others
             {
                 plane = arPlaneManager.GetPlane(hits[0].trackableId);
 
-                if (plane.size.x * plane.size.y >= minPlanearea && plane.subsumedBy == null && plane.alignment == PlaneAlignment.HorizontalUp)
+                if (plane != null && plane.size.x * plane.size.y >= minPlanearea && plane.subsumedBy == null && plane.alignment == PlaneAlignment.HorizontalUp)
                 {
                     placementPose = hits[0].pose;
                     placementPoseIsValid = true;
@@ -280,6 +307,11 @@ namespace Others
         {
             //Add an anchor attached to this plane for better tracking
             ARAnchor planeAnchor = arAnchorManager.AttachAnchor(plane, placementPose);
+            if (planeAnchor == null)
+            {
+                Debug.LogWarning("PrefabSpawningController: Could not attach an anchor; try placing again.", this);
+                return;
+            }
 
             //Instantiate the infinityPlanePrefab at this position
             instantiatedInfinityPlanePrefab = Instantiate(infinityPlanePrefab, placementPose.position, placementPose.rotation, planeAnchor.gameObject.transform);
@@ -310,21 +342,38 @@ namespace Others
         /// </summary>
         private void MakeMaterialsInvisibleForPlacement()
         {
-            //Get all the renderers in the childs of the spawned prefab
-            Renderer[] objectRenderers = instantiatedPrefab.GetComponentsInChildren<Renderer>();
+            // Take a fresh snapshot for every placement interval. Outline passes
+            // are transient and must never become part of this snapshot.
+            var objectRenderers = new HashSet<Renderer>(instantiatedPrefab.GetComponentsInChildren<Renderer>(true));
+            var outlines = new HashSet<Outline>(instantiatedPrefab.GetComponentsInChildren<Outline>(true));
+            // Grabbing reparents an object to the camera's grabber, outside Setup.
+            // Include its rendering in placement without releasing it or changing
+            // its parent, interaction state, or the training graph.
+            foreach (var interaction in FindObjectsByType<InteractionController>())
+            {
+                if (interaction.gameObject.scene != gameObject.scene || !interaction.isGrabbingObject ||
+                    interaction.grabbedObject == null) continue;
+
+                objectRenderers.UnionWith(interaction.grabbedObject.GetComponentsInChildren<Renderer>(true));
+                outlines.UnionWith(interaction.grabbedObject.GetComponentsInChildren<Outline>(true));
+            }
+            placementOutlines = outlines.ToArray();
+            foreach (var outline in placementOutlines) outline.SetPlacementSuppressed(true);
+            originalMaterials.Clear();
             foreach (Renderer objectRenderer in objectRenderers)
             {
 
                 //Store the reference to the object and its original material to reset them after placement
-                originalMaterials.Add(objectRenderer.gameObject, objectRenderer.materials);
+                Material[] materials = objectRenderer.sharedMaterials;
+                originalMaterials.Add(objectRenderer, materials);
 
                 //Replace all the materials with the transparent spawning material
-                Material[] thisRenderersMaterials = new Material[objectRenderer.materials.Length];
-                for (int j = 0; j < objectRenderer.materials.Length; j++)
+                Material[] thisRenderersMaterials = new Material[materials.Length];
+                for (int j = 0; j < materials.Length; j++)
                 {
                     thisRenderersMaterials[j] = spawningMaterial;
                 }
-                objectRenderer.materials = thisRenderersMaterials;
+                objectRenderer.sharedMaterials = thisRenderersMaterials;
             }
         }
 
@@ -333,10 +382,17 @@ namespace Others
         /// </summary>
         private void ResetMaterialsToOriginal()
         {
-            foreach (KeyValuePair<GameObject, Material[]> obj in originalMaterials)
+            foreach (KeyValuePair<Renderer, Material[]> obj in originalMaterials)
             {
-                obj.Key.GetComponent<Renderer>().materials = obj.Value;
+                if (obj.Key != null) obj.Key.sharedMaterials = obj.Value;
             }
+            originalMaterials.Clear();
+            if (placementOutlines == null) return;
+            foreach (var outline in placementOutlines)
+            {
+                if (outline != null) outline.SetPlacementSuppressed(false);
+            }
+            placementOutlines = null;
         }
 
         /// <summary>
@@ -356,11 +412,12 @@ namespace Others
             instantiatedPrefab.transform.parent = null;
             instantiatedPrefab.transform.SetPositionAndRotation(new Vector3(0, 0, -2), Quaternion.identity);
 
-            //Reset the originalMaterials container and remake the instantiated prefab transparent for placement.
-            ResetMaterialsToOriginal();
-            originalMaterials = new Dictionary<GameObject, Material[]>();
+            // Snapshot the current materials, including any graph-driven changes
+            // made since the previous placement, rather than restoring old ones.
             MakeMaterialsInvisibleForPlacement();
             materialsWereReset = false;
+            placementGesture.Reset();
+            placementPoseIsValid = false;
 
             //Destroy the now unused infinity plane.
             Destroy(instantiatedInfinityPlanePrefab);

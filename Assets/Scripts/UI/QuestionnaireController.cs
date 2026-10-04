@@ -9,7 +9,6 @@ using TMPro;
 using UnityEngine.EventSystems;
 using Static;
 using UI;
-using UnityEditor;
 
 namespace UI
 {
@@ -58,17 +57,13 @@ namespace UI
         /// </summary>
         /// <value>Set in inspector.</value>
         public TextMeshProUGUI inputFieldAnswerText;
+        [SerializeField] private TMP_InputField inputField;
         private bool buttonsFaded = false;
-        /// <summary>
-        /// Reference to the keyboard.
-        /// </summary>
-        /// <value>Set on runtime.</value>
-        private TouchScreenKeyboard keyboard;
-        /// <summary>
-        /// Reference to the inputFieldRect.
-        /// </summary>
-        /// <value>Set on runtime.</value>
-        private RectTransform inputFieldRect;
+        private StatemachineConnector subscribedConnector;
+        private Coroutine pendingInputSubmission;
+        private bool inputSubmissionQueued;
+        private bool inputQuestionActive;
+        private int questionVersion;
 
         /// <summary>
         /// Reference to the root gameObject of the regularQuestionUI.
@@ -233,19 +228,46 @@ namespace UI
             InputQuestion
         }
         /// <summary>
-        /// Sets missing references and adds listener for UIQuestion event.
+        /// Sets the input model reference, including for scenes created before it was serialized.
         /// </summary>
         private void Awake()
         {
-            inputFieldRect = inputFieldQuestionUI.GetComponent<RectTransform>();
-            StatemachineConnector.Instance.TriggerUIQuestion += InitTypeOfQuestion;
+            if (inputField == null && inputFieldQuestionUI != null)
+                inputField = inputFieldQuestionUI.GetComponentInChildren<TMP_InputField>(true);
+        }
+
+        private void OnEnable()
+        {
+            subscribedConnector = StatemachineConnector.Instance;
+            subscribedConnector.TriggerUIQuestion += InitTypeOfQuestion;
         }
         /// <summary>
         /// Removes listener for UIQuestion event.
         /// </summary>
         private void OnDisable()
         {
-            StatemachineConnector.Instance.TriggerUIQuestion -= InitTypeOfQuestion;
+            if (subscribedConnector != null)
+                subscribedConnector.TriggerUIQuestion -= InitTypeOfQuestion;
+            subscribedConnector = null;
+            questionVersion++;
+            CancelPendingInputSubmission();
+        }
+
+        private void CancelPendingInputSubmission()
+        {
+            if (pendingInputSubmission != null)
+                StopCoroutine(pendingInputSubmission);
+            pendingInputSubmission = null;
+            inputSubmissionQueued = false;
+        }
+
+        private void BeginQuestion(bool isInputQuestion)
+        {
+            questionVersion++;
+            CancelPendingInputSubmission();
+            inputQuestionActive = isInputQuestion;
+            if (!isInputQuestion)
+                inputFieldQuestionUI.SetActive(false);
         }
 
         /// <summary>
@@ -280,6 +302,7 @@ namespace UI
         /// <param name="answers">List of all possible answers.</param>
         public void InitQuestion(string question, List<Answer> answers)
         {
+            BeginQuestion(false);
             regularQuestionUI.SetActive(true);
             questionText.text = question;
             questionTextUI.SetActive(true);
@@ -307,8 +330,10 @@ namespace UI
         /// <param name="question">Text of the question.</param>
         public void InitInputfield(string question)
         {
-            inputFieldQuestionUI.SetActive(true);
+            BeginQuestion(true);
+            inputField.SetTextWithoutNotify(string.Empty);
             inputFieldQuestionText.text = question;
+            inputFieldQuestionUI.SetActive(true);
         }
         /// <summary>
         /// Open the questionList UI.
@@ -317,6 +342,7 @@ namespace UI
         /// <param name="answers">List of all possbile answers.</param>
         public void InitQuestionList(string question, List<Answer> answers)
         {
+            BeginQuestion(false);
             listProgressCheck = new List<bool>();
             listOfQuestionListButtons = new List<Button>();
             questionList.SetActive(true);
@@ -428,13 +454,60 @@ namespace UI
             }
         }
         /// <summary>
-        /// Validate if given input of the inputQuestion UI was correct.
+        /// Submit the current input model from an explicit submit button or other caller.
+        /// Do not connect this to End Edit, which also fires for cancellation and focus loss.
         /// </summary>
         public void QuestionInputValidate()
         {
-            inputFieldQuestionUI.SetActive(false);
-            NotifyStatemachine(inputFieldAnswerText.text.Substring(0, inputFieldAnswerText.text.Length - 1), QuestionUITypes.InputQuestion);
-            inputFieldAnswerText.text = "";
+            if (inputField != null)
+                OnInputFieldSubmitted(inputField.text);
+        }
+
+        /// <summary>
+        /// Receives TMP's Submit event (Return or the mobile keyboard's Done action).
+        /// The raw model preserves exact answers, including an explicitly configured empty answer.
+        /// </summary>
+        public void OnInputFieldSubmitted(string answer)
+        {
+            if (!isActiveAndEnabled || !inputQuestionActive || inputSubmissionQueued ||
+                inputField == null || !inputFieldQuestionUI.activeInHierarchy)
+                return;
+
+            inputSubmissionQueued = true;
+            pendingInputSubmission = StartCoroutine(SubmitInputAfterEditing(answer ?? string.Empty, questionVersion));
+        }
+
+        private IEnumerator SubmitInputAfterEditing(string answer, int submittedQuestionVersion)
+        {
+            // TMP sends Submit before closing its keyboard. Let that teardown finish before the graph
+            // can open another question using the same field.
+            yield return null;
+            pendingInputSubmission = null;
+
+            try
+            {
+                if (!isActiveAndEnabled || submittedQuestionVersion != questionVersion ||
+                    !inputQuestionActive || !inputFieldQuestionUI.activeInHierarchy)
+                    yield break;
+
+                inputField.DeactivateInputField();
+                if (EventSystem.current != null && EventSystem.current.currentSelectedGameObject == inputField.gameObject)
+                    EventSystem.current.SetSelectedGameObject(null);
+
+                // Other focus callbacks may also replace the question.
+                if (submittedQuestionVersion != questionVersion || !isActiveAndEnabled)
+                    yield break;
+
+                inputQuestionActive = false;
+                inputFieldQuestionUI.SetActive(false);
+                NotifyStatemachine(answer, QuestionUITypes.InputQuestion);
+            }
+            finally
+            {
+                // A synchronous graph transition can already have queued the next question's answer.
+                if (submittedQuestionVersion == questionVersion)
+                    inputSubmissionQueued = false;
+            }
         }
         /// <summary>
         /// Coroutine to disable pressed button.
@@ -497,14 +570,28 @@ namespace UI
         /// <param name="type">Type of question.</param>
         public void NotifyStatemachine(string value, QuestionUITypes type = QuestionUITypes.Question)
         {
+            int submittedQuestionVersion = questionVersion;
             ARInteractButtons.ActivateInteractButtons();
             bool temp = StatemachineConnector.Instance.RequestStateChange(new StateInformation("", "", InteractionType.Custom, value));
             if (QuestionUITypes.InputQuestion == type)
             {
                 if (temp) PlayCorrectAnswerSound();
+                else PlayWrongAnswerSound();
+
+                // The graph runs synchronously and may have initialized a different question.
+                // Never clear its answer or reopen the previous question after that transition.
+                if (!isActiveAndEnabled || submittedQuestionVersion != questionVersion)
+                    return;
+
+                if (temp)
+                {
+                    inputQuestionActive = false;
+                    inputField.SetTextWithoutNotify(string.Empty);
+                }
                 else
                 {
-                    PlayWrongAnswerSound();
+                    inputQuestionActive = true;
+                    inputField.SetTextWithoutNotify(value);
                     inputFieldQuestionUI.SetActive(true);
                     ARInteractButtons.DeactivateInteractButtons();
                 }

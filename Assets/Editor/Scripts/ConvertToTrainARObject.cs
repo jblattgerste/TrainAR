@@ -119,17 +119,13 @@ namespace Editor.Scripts
         /// <param name="pivotPointOffset">The offset of the pivot if it was moved (0,0,0 otherwise)</param>
         public static void FinalizeConversion(GameObject originalObject, GameObject instantiatedPreviewObject, string trainARObjectName)
         {
+            // Pivot centering and simplification replace the initially saved combined mesh.
+            // Persist the final triangle mesh before replacing the original scene object.
+            PersistFinalMesh(instantiatedPreviewObject.GetComponent<MeshFilter>().sharedMesh);
             instantiatedPreviewObject = Instantiate(instantiatedPreviewObject);
             
-            // Assuming both original and instantiated objects have a Renderer component in the same structure
-            Renderer originalRenderer = originalObject.GetComponent<Renderer>();
-            Renderer instantiatedRenderer = instantiatedPreviewObject.GetComponent<Renderer>();
-
-            if (originalRenderer != null && instantiatedRenderer != null)
-            {
-                // Copy the materials array from the original object to the instantiated object
-                instantiatedRenderer.sharedMaterials = originalRenderer.sharedMaterials;
-            }
+            // The window restores persistent materials in combined-submesh order before this call.
+            // Copying the root renderer's array here discards child materials and any URP conversion.
             
             // Convert the instantiated object to a TrainAR object
             instantiatedPreviewObject.AddComponent<TrainARObject>();
@@ -152,6 +148,24 @@ namespace Editor.Scripts
             Selection.activeTransform = instantiatedPreviewObject.transform;
             Selection.selectionChanged.Invoke();
             Debug.Log("Successfully converted GameObject to TrainAR Object.");
+        }
+
+        private static void PersistFinalMesh(Mesh mesh)
+        {
+            if (mesh == null || mesh.subMeshCount == 0)
+                throw new System.InvalidOperationException("A TrainAR object requires a triangle mesh before conversion.");
+
+            for (int submesh = 0; submesh < mesh.subMeshCount; submesh++)
+            {
+                if (mesh.GetTopology(submesh) != MeshTopology.Triangles)
+                    throw new System.InvalidOperationException("Preview lines cannot be saved as a TrainAR object mesh.");
+            }
+
+            if (AssetDatabase.Contains(mesh)) return;
+            mesh.hideFlags = HideFlags.None;
+            MeshCombinerEditor.SaveCombinedMesh(mesh, "Models");
+            if (!AssetDatabase.Contains(mesh))
+                throw new System.InvalidOperationException("The final TrainAR mesh could not be saved.");
         }
 
 

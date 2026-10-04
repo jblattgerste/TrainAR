@@ -66,6 +66,27 @@ namespace UI
         /// Whether or not the buttonHolder Gameobject was active before prefab respositioning.
         /// </summary>
         private bool buttonHolderActiveFlag = true;
+        private readonly WorldTouchGesture rotationGesture = new WorldTouchGesture();
+
+        private void OnEnable()
+        {
+            rotationGesture.Enable();
+        }
+
+        private void OnDisable()
+        {
+            rotationGesture.Disable();
+        }
+
+        private void OnApplicationFocus(bool hasFocus)
+        {
+            if (!hasFocus) rotationGesture.Reset();
+        }
+
+        private void OnApplicationPause(bool paused)
+        {
+            if (paused) rotationGesture.Reset();
+        }
         /// <summary>
         /// Adds listener to prefabSpawned and reposition events.
         /// </summary>
@@ -214,13 +235,18 @@ namespace UI
         /// </summary>
         private void TouchRotation()
         {
-                if (Input.touchCount < 1)
-                {
-                    return;
-                }
-                Touch touch = Input.GetTouch(0);
-                Quaternion yRotation = Quaternion.Euler(0f, -touch.deltaPosition.x * grabbedObjectRotationSpeed, 0f);
-                interactionController.grabber.transform.rotation =
+            if (!interactionController.isGrabbingObject || !spawningController.objectWasSpawned ||
+                !ButtonHolder.gameObject.activeInHierarchy)
+            {
+                rotationGesture.Reset();
+                return;
+            }
+
+            if (!rotationGesture.TryGetTouch(out var touch) ||
+                touch.phase != UnityEngine.InputSystem.TouchPhase.Moved) return;
+
+            Quaternion yRotation = Quaternion.Euler(0f, -touch.delta.x * grabbedObjectRotationSpeed, 0f);
+            interactionController.grabber.transform.rotation =
                 yRotation * interactionController.grabber.transform.rotation;
         }
 

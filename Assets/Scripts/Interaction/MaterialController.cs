@@ -54,6 +54,7 @@ namespace Interaction
         /// <value>True if a feedback outline is active.</value>
         [Tooltip("True if a feedback outline is active.")]
         private bool feedbackOutlineIsActive = false;
+        private Coroutine feedbackCoroutine;
         /// <summary>
         /// Reference holder for the outlines.
         /// </summary>
@@ -118,7 +119,13 @@ namespace Interaction
         /// </summary>
         private void OnDestroy()
         {
-            statemachineConnector.TriggerAcceptedStateChange -= OnAcceptedStateChange;
+            if (statemachineConnector != null)
+                statemachineConnector.TriggerAcceptedStateChange -= OnAcceptedStateChange;
+        }
+
+        private void OnEnable()
+        {
+            ApplyOutlineState();
         }
 
         /// <summary>
@@ -127,6 +134,12 @@ namespace Interaction
         /// </summary>
         private void OnDisable()
         {
+            // Disabling a MonoBehaviour alone does not stop its coroutines.
+            if (feedbackCoroutine != null)
+            {
+                StopCoroutine(feedbackCoroutine);
+                feedbackCoroutine = null;
+            }
             if (!feedbackOutlineIsActive) return;
             feedbackOutlineIsActive = false;
             ChangeOutLineVisibility(outlineWidth);
@@ -327,6 +340,7 @@ namespace Interaction
             foreach (var ol in outlines)
             {
                 ol.enabled = toggle;
+                ol.SynchronizeMaterials();
             }
         }
 
@@ -360,8 +374,8 @@ namespace Interaction
         /// </summary>
         public void ActivateErrorIndicator()
         {
-            if (feedbackOutlineIsActive == true || !this.gameObject.activeInHierarchy) return;
-            StartCoroutine(playErrorOutlineSequence());
+            if (feedbackOutlineIsActive || !isActiveAndEnabled) return;
+            feedbackCoroutine = StartCoroutine(playErrorOutlineSequence());
         }
 
         /// <summary>
@@ -375,7 +389,7 @@ namespace Interaction
             feedbackOutlineIsActive = true;
         
             //Store the original outline width
-            float initialOutlineWith = outlines[0].OutlineWidth;
+            float initialOutlineWith = outlineWidth;
         
             //Change the outline color for the error feedback
             SetOutlineColor(errorColor);
@@ -400,6 +414,7 @@ namespace Interaction
 
             //Hand the outline back, e.g. to show the selection or highlight again
             feedbackOutlineIsActive = false;
+            feedbackCoroutine = null;
             ApplyOutlineState();
         }
     
@@ -408,8 +423,8 @@ namespace Interaction
         /// </summary>
         public void ActivateSuccessIndicator()
         {
-            if (feedbackOutlineIsActive == true || !this.gameObject.activeInHierarchy) return;
-            StartCoroutine(playSuccessOutlineSequence());
+            if (feedbackOutlineIsActive || !isActiveAndEnabled) return;
+            feedbackCoroutine = StartCoroutine(playSuccessOutlineSequence());
         }
 
         /// <summary>
@@ -418,8 +433,7 @@ namespace Interaction
         /// 
         public void ActivateSuccessIndicator(string CombinedWith)
         {
-            if (feedbackOutlineIsActive == true || !this.gameObject.activeInHierarchy) return;
-            StartCoroutine(playSuccessOutlineSequence());
+            ActivateSuccessIndicator();
         }
 
         /// <summary>
@@ -433,7 +447,7 @@ namespace Interaction
             feedbackOutlineIsActive = true;
         
             //Store the original outline width
-            float initialOutlineWith = outlines[0].OutlineWidth;
+            float initialOutlineWith = outlineWidth;
         
             //Change the outline color for the success feedback
             SetOutlineColor(successColor);
@@ -454,8 +468,8 @@ namespace Interaction
 
             //Hand the outline back, e.g. to show the selection or highlight again
             feedbackOutlineIsActive = false;
+            feedbackCoroutine = null;
             ApplyOutlineState();
         }
     }
 }
-

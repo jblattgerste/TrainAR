@@ -16,15 +16,17 @@ namespace Editor.Scripts
     public class TrainARObjectConversionWindow : EditorWindow
     {
         //Shader Selection dropdown, shaderPath references and properties
-        private Texture storedMainTex;
         private string[] _dropdownShaderOptions = new string[] { "Mesh", "Texture", "Shaded" };
-        private readonly string[] _shaderPaths = { "SuperSystems/Wireframe", "Unlit/Texture", "Standard" };
         private int _selectedDropdownShaderIndex = 1;
-        private static readonly int WireColor = Shader.PropertyToID("_WireColor");
         private static readonly int BaseColor = Shader.PropertyToID("_BaseColor");
-        private static readonly int WireThickness = Shader.PropertyToID("_WireThickness");
-        private static readonly int WireSmoothness = Shader.PropertyToID("_WireSmoothness");
-        private static readonly int MainTex = Shader.PropertyToID("_MainTex");
+        private static readonly int BaseMap = Shader.PropertyToID("_BaseMap");
+        private Material[] sourceMaterials;
+        private Material[] texturePreviewMaterials;
+        private Material[] shadedPreviewMaterials;
+        private Material wirePreviewMaterial;
+        private readonly List<Material> ownedPreviewMaterials = new List<Material>();
+        private Mesh wirePreviewMesh;
+        private Mesh wireSourceMesh;
         private string[] _dropdownObjectSimplificationAlgorithms = new string[] { "Vcglib Tridecimator", "Quadric Error Metrics" };
         private int _selectedObjectSimplificationAlgorithm = 0;
 
@@ -67,6 +69,8 @@ namespace Editor.Scripts
 
         void OnEnable()
         {
+            if (Selection.activeTransform == null) return;
+
             // Get the selected TrainAR Object when Editor Window is created
             originalTrainARObjectReferenceInScene = Selection.activeTransform.gameObject;
             trainARObject = GameObject.Instantiate(originalTrainARObjectReferenceInScene);
@@ -101,6 +105,7 @@ namespace Editor.Scripts
 
             // Load the 3D render preview Utility
             previewRendererUtility = new PreviewRenderUtility();
+            InitializePreviewMaterials();
             CreateAxisLines(trainARObject);
             SetupPreviewScene(trainARObject);
             ExtractMeshInfo(trainARObject);
@@ -109,6 +114,13 @@ namespace Editor.Scripts
 
         private void OnDisable()
         {
+            if (wirePreviewMesh != null) DestroyImmediate(wirePreviewMesh);
+            foreach (Material material in ownedPreviewMaterials)
+            {
+                if (material != null) DestroyImmediate(material);
+            }
+            ownedPreviewMaterials.Clear();
+
             if (previewRendererUtility != null)
                 previewRendererUtility.Cleanup();
 
@@ -128,6 +140,9 @@ namespace Editor.Scripts
 
         void OnGUI()
         {
+            if (trainARObject == null || previewRendererUtility == null) return;
+            EditorGUI.BeginChangeCheck();
+
             // On first pass, create the custom editor with the to be converted TrainAR object
             if (gameObjectEditor == null)
                 gameObjectEditor = UnityEditor.Editor.CreateEditor(trainARObject);
@@ -137,12 +152,10 @@ namespace Editor.Scripts
 
             // Draw the mesh preview onto a black texture on the left side of the preview window
             Rect rect = new Rect(0, 0, base.position.width * 0.75f, base.position.height);
-            previewRendererUtility.BeginPreview(rect, previewBackground: GUIStyle.none);
             trainARObject.transform.rotation = accumulatedRotation;
             previewRendererUtility.camera.transform.position = new Vector3(0f, 0f, zoomDistance);
-            previewRendererUtility.Render();
-            var texture = previewRendererUtility.EndPreview();
-            GUI.DrawTexture(rect, texture);
+            if (Event.current.type == EventType.Repaint)
+                RenderPreview(rect);
 
             // Call the methods to draw overlay information if activated
             if (showPreviewInformation)
@@ -162,7 +175,6 @@ namespace Editor.Scripts
             GUILayout.Space(10);
             _selectedDropdownShaderIndex =
                 EditorGUILayout.Popup("Preview Mode", _selectedDropdownShaderIndex, _dropdownShaderOptions);
-            ApplyShaderToTarget(_shaderPaths[_selectedDropdownShaderIndex]);
             //GUILayout.Space(10);
             //showGizmoLines = GUILayout.Toggle(showGizmoLines, "Show X/Y/Z axes");
             //showPreviewInformation = GUILayout.Toggle(showPreviewInformation, "Show mesh information");
@@ -320,8 +332,8 @@ namespace Editor.Scripts
             {
                 // Destroy the Axes lines before conversion
                 trainARObject.transform.Cast<Transform>().ToList().ForEach(child => GameObject.DestroyImmediate(child.gameObject));
-                //Apply the standard shader before conversion, regardless of the selected shader for the preview
-                ApplyShaderToTarget("Standard");
+                // Preview materials and line topology must never become part of the converted object.
+                trainARObject.GetComponent<Renderer>().sharedMaterials = PrepareMaterialsForConversion();
                 // Finalize the conversion process
                 ConvertToTrainARObject.FinalizeConversion(originalTrainARObjectReferenceInScene,  trainARObject, trainARObjectName);
                 // Editors created this way need to be destroyed explicitly
@@ -344,49 +356,171 @@ namespace Editor.Scripts
         }
 
         /// <summary>
-        /// Applies the shader with the given shaderPath to the targetObject.
+        /// Creates materials once, keeping the source array in the combined mesh's submesh order.
         /// </summary>
-        /// <param name="shaderPath"></param>
-        private void ApplyShaderToTarget(string shaderPath)
+        private void InitializePreviewMaterials()
         {
-            //If the Object doesnt have a renderer, abort
-            if (!trainARObject.TryGetComponent<Renderer>(out Renderer renderer)) return;
-
-            //Search for the shader specified in the shaderPath
-            Shader shader = Shader.Find(shaderPath);
-            if (shader == null)
+            sourceMaterials = trainARObject.GetComponent<Renderer>().sharedMaterials;
+            texturePreviewMaterials = new Material[sourceMaterials.Length];
+            shadedPreviewMaterials = new Material[sourceMaterials.Length];
+            for (int i = 0; i < sourceMaterials.Length; i++)
             {
-                Debug.LogWarning($"Shader '{shaderPath}' not found.");
-                return;
-            }
+                Material source = sourceMaterials[i];
+                Material shaded = source != null
+                    ? new Material(source)
+                    : new Material(Shader.Find("Universal Render Pipeline/Lit"));
+                if (source != null && (source.shader.name == "Standard" || source.shader.name == "Standard (Specular setup)"))
+                {
+                    new UnityEditor.Rendering.Universal.StandardUpgrader(source.shader.name).Upgrade(
+                        shaded, UnityEditor.Rendering.MaterialUpgrader.UpgradeFlags.None);
+                    // URP's Premultiply mode now expects premultiplied source textures. Legacy Standard
+                    // instead premultiplied diffuse in the shader and preserved specular highlights.
+                    int sourceMode = (int)source.GetFloat("_Mode");
+                    if (sourceMode == 2 || sourceMode == 3)
+                    {
+                        shaded.SetFloat("_Blend", 0); // Alpha
+                        shaded.SetFloat("_BlendModePreserveSpecular", sourceMode == 3 ? 1 : 0);
+                    }
+                    UnityEditor.BaseShaderGUI.SetMaterialKeywords(shaded,
+                        UnityEditor.Rendering.Universal.ShaderGUI.LitGUI.SetMaterialKeywords);
+                }
+                else if (source != null && (source.shader.name == "Unlit/Texture" || source.shader.name == "Unlit/Color"))
+                {
+                    shaded.shader = Shader.Find("Universal Render Pipeline/Unlit");
+                    CopyBaseProperties(source, shaded);
+                }
+                shadedPreviewMaterials[i] = OwnPreviewMaterial(shaded);
 
-            if (renderer.sharedMaterial && renderer.sharedMaterial.HasProperty("_MainTex"))
+                Material texture = new Material(Shader.Find("Universal Render Pipeline/Unlit"));
+                CopyBaseProperties(shaded, texture);
+                texturePreviewMaterials[i] = OwnPreviewMaterial(texture);
+            }
+            wirePreviewMaterial = OwnPreviewMaterial(new Material(Shader.Find("Universal Render Pipeline/Unlit")));
+        }
+
+        private Material OwnPreviewMaterial(Material material)
+        {
+            material.hideFlags = HideFlags.HideAndDontSave;
+            ownedPreviewMaterials.Add(material);
+            return material;
+        }
+
+        private static void CopyBaseProperties(Material source, Material destination)
+        {
+            if (source == null) return;
+            string textureProperty = source.HasProperty("_BaseMap") ? "_BaseMap" : "_MainTex";
+            if (source.HasProperty(textureProperty))
             {
-                storedMainTex = renderer.sharedMaterial.mainTexture;
+                destination.SetTexture(BaseMap, source.GetTexture(textureProperty));
+                destination.SetTextureScale("_BaseMap", source.GetTextureScale(textureProperty));
+                destination.SetTextureOffset("_BaseMap", source.GetTextureOffset(textureProperty));
             }
+            string colorProperty = source.HasProperty("_BaseColor") ? "_BaseColor" : "_Color";
+            if (source.HasProperty(colorProperty))
+                destination.SetColor(BaseColor, source.GetColor(colorProperty));
+        }
 
-            //Create a new material which we will use for the preview with the currently selected shader
-            Material mat = new Material(shader);
-
-            //Apply the main texture if the shader has this property (e.g. the wireframe shader doesnt)
-            if (mat.HasProperty("_MainTex")) mat.SetTexture(MainTex, storedMainTex);
-
-            //Properties used by the wireframe shader
-            if (EditorGUIUtility.isProSkin) // If the editor is in dark mode use white wireframe, black otherwise
+        private void RenderPreview(Rect rect)
+        {
+            MeshFilter filter = trainARObject.GetComponent<MeshFilter>();
+            Renderer renderer = trainARObject.GetComponent<Renderer>();
+            Mesh triangleMesh = filter.sharedMesh;
+            Material[] materials = renderer.sharedMaterials;
+            previewRendererUtility.BeginPreview(rect, GUIStyle.none);
+            try
             {
-                if (mat.HasProperty("_WireColor")) mat.SetColor(WireColor, Color.white);
-                if (mat.HasProperty("_BaseColor")) mat.SetColor(BaseColor, Color.black); //This is probably going to break at some point because its a bug in the previewUtility/shader that doesnt display the baseColor correctly
+                if (_selectedDropdownShaderIndex == 0)
+                {
+                    EnsureWirePreviewMesh(triangleMesh);
+                    filter.sharedMesh = wirePreviewMesh;
+                    wirePreviewMaterial.SetColor(BaseColor, EditorGUIUtility.isProSkin ? Color.white : Color.black);
+                    renderer.sharedMaterials = new[] { wirePreviewMaterial };
+                }
+                else
+                {
+                    renderer.sharedMaterials = _selectedDropdownShaderIndex == 1
+                        ? texturePreviewMaterials : shadedPreviewMaterials;
+                }
+                previewRendererUtility.Render(allowScriptableRenderPipeline: true);
             }
-            else
+            finally
             {
-                if (mat.HasProperty("_WireColor")) mat.SetColor(WireColor, Color.black);
-                if (mat.HasProperty("_BaseColor")) mat.SetColor(BaseColor, Color.white);
+                // Mesh statistics, simplification and conversion always operate on triangles.
+                filter.sharedMesh = triangleMesh;
+                renderer.sharedMaterials = materials;
+                GUI.DrawTexture(rect, previewRendererUtility.EndPreview());
             }
-            if (mat.HasProperty("_WireThickness")) mat.SetFloat(WireThickness, 1.0f);
-            if (mat.HasProperty("_WireSmoothness")) mat.SetFloat(WireSmoothness, 3.0f);
+        }
 
-            //Apply the material to the meshs renderer
-            renderer.sharedMaterial = mat;
+        private void EnsureWirePreviewMesh(Mesh source)
+        {
+            if (wireSourceMesh == source && wirePreviewMesh != null) return;
+            if (wirePreviewMesh != null) DestroyImmediate(wirePreviewMesh);
+
+            var edges = new HashSet<ulong>();
+            var indices = new List<int>();
+            int[] triangles = source.triangles;
+            for (int i = 0; i < triangles.Length; i += 3)
+            {
+                AddWireEdge(triangles[i], triangles[i + 1], edges, indices);
+                AddWireEdge(triangles[i + 1], triangles[i + 2], edges, indices);
+                AddWireEdge(triangles[i + 2], triangles[i], edges, indices);
+            }
+            wirePreviewMesh = new Mesh
+            {
+                name = "TrainAR Wire Preview",
+                hideFlags = HideFlags.HideAndDontSave,
+                indexFormat = source.indexFormat,
+                vertices = source.vertices,
+                bounds = source.bounds
+            };
+            wirePreviewMesh.SetIndices(indices, MeshTopology.Lines, 0);
+            wireSourceMesh = source;
+        }
+
+        private static void AddWireEdge(int a, int b, HashSet<ulong> edges, List<int> indices)
+        {
+            ulong key = ((ulong)(uint)Mathf.Min(a, b) << 32) | (uint)Mathf.Max(a, b);
+            if (!edges.Add(key)) return;
+            indices.Add(a);
+            indices.Add(b);
+        }
+
+        private Material[] PrepareMaterialsForConversion()
+        {
+            var result = new Material[sourceMaterials.Length];
+            var converted = new Dictionary<Material, Material>();
+            for (int i = 0; i < result.Length; i++)
+            {
+                Material source = sourceMaterials[i];
+                Material preview = shadedPreviewMaterials[i];
+                if (source != null && source.shader == preview.shader)
+                {
+                    result[i] = source;
+                    continue;
+                }
+                if (source != null && converted.TryGetValue(source, out Material existing))
+                {
+                    result[i] = existing;
+                    continue;
+                }
+
+                // New Standard imports get their own URP asset; source assets remain unchanged.
+                const string folder = "Assets/Materials/TrainAR Objects";
+                if (!AssetDatabase.IsValidFolder(folder))
+                    AssetDatabase.CreateFolder("Assets/Materials", "TrainAR Objects");
+                Material material = new Material(preview) { hideFlags = HideFlags.None };
+                string materialName = source != null ? source.name : "TrainAR Material";
+                foreach (char invalid in System.IO.Path.GetInvalidFileNameChars())
+                    materialName = materialName.Replace(invalid, '_');
+                materialName = materialName.Replace('/', '_').Replace('\\', '_');
+                material.name = materialName + " URP";
+                AssetDatabase.CreateAsset(material, AssetDatabase.GenerateUniqueAssetPath(folder + "/" + material.name + ".mat"));
+                result[i] = material;
+                if (source != null) converted.Add(source, material);
+            }
+            AssetDatabase.SaveAssets();
+            return result;
         }
 
         /// <summary>
@@ -547,9 +681,9 @@ namespace Editor.Scripts
             lineRenderer.SetPosition(1, endPosition);
 
             // Create a basic material and assign it to the LineRenderer
-            Material lineMaterial = new Material(Shader.Find("Unlit/Color"));
-            lineMaterial.color = color;
-            lineRenderer.material = lineMaterial;
+            Material lineMaterial = OwnPreviewMaterial(new Material(Shader.Find("Universal Render Pipeline/Unlit")));
+            lineMaterial.SetColor(BaseColor, color);
+            lineRenderer.sharedMaterial = lineMaterial;
         }
 
         /// <summary>

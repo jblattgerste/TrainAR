@@ -2,7 +2,6 @@ using System;
 using Interaction;
 using Others;
 using Unity.VisualScripting;
-using UnityEditor;
 using UnityEngine;
 using UnityEngine.UIElements;
 using Object = UnityEngine.Object;
@@ -306,6 +305,7 @@ namespace Visual_Scripting
                     trainARObject.gameObject.GetComponent<MeshRenderer>().material = flow.GetValue<Material>(ObjectMaterial);
                     trainARObject.gameObject.GetComponent<MaterialController>().setNewOriginalMaterial(trainARObject.gameObject , flow.GetValue<Material>(ObjectMaterial));
                     trainARObject.gameObject.GetComponent<MeshFilter>().mesh = flow.GetValue<Mesh>(ObjectMesh);
+                    trainARObject.gameObject.GetComponent<Outline>().RefreshMesh();
                     //trainARObject.gameObject.GetComponent<MeshRenderer>().materials[0] = flow.GetValue<Material>(ObjectMaterial);
                     break;
                 case TrainARHelperChoices.FuseTwoObjects:

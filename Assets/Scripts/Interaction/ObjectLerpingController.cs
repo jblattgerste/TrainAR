@@ -121,9 +121,10 @@ namespace Interaction
                     ChangeOffsetToCamera(interactable.lerpingDistance);
                     break;
                 case CameraOffset.dynamicSizeOffset:
-                    break;
                 case CameraOffset.staticOffset:
-                    //nothing. Keep the default static offset
+                    // Dynamic sizing currently uses the static fallback. Restore the
+                    // requested offset each tick so a previous plane clamp can release.
+                    ChangeOffsetToCamera(defaultStaticOffset);
                     break;
                 default:
                     throw new ArgumentOutOfRangeException();
@@ -156,25 +157,30 @@ namespace Interaction
         /// </summary>
         private void ClipIntoPlane()
         {
-            Ray ray = arCamera.ViewportPointToRay(new Vector3(0.5f, 0.5f, 0f));
-            RaycastHit[] hits = Physics.RaycastAll(ray, 2.0F);
+            if (arCamera == null) return;
 
-            //Return if the raycast hit nothing at all
-            if (hits.Length == 0) return;
+            // ViewportPointToRay starts on the near clipping plane, not at the
+            // camera. Comparing that distance with a fixed holding distance could
+            // move the grabber farther away when the plane constraint first activates.
+            Vector3 cameraPosition = arCamera.transform.position;
+            Vector3 requestedOffset = grabber.transform.position - cameraPosition;
+            float closestDistance = requestedOffset.magnitude;
+            if (closestDistance <= Mathf.Epsilon) return;
 
-            //Check which index is the infinityplane
-            int hitIndex = Array.FindIndex(hits, rHit => rHit.transform.CompareTag("AR_InfinityPlane"));
-
-            //Return if the infinityplane was not hit at all
-            if (hitIndex == -1) return;
-
-            //Utilize the correct hit = the Infinity plane
-            RaycastHit hit = hits[hitIndex];
-            if (hit.distance < 0.4f)
+            Ray ray = new Ray(cameraPosition, requestedOffset / closestDistance);
+            RaycastHit[] hits = Physics.RaycastAll(ray, closestDistance);
+            Vector3 constrainedPosition = grabber.transform.position;
+            foreach (RaycastHit hit in hits)
             {
-                // Place grabber at impact point of raycast
-                grabber.transform.position = hit.point;
+                // RaycastAll is unordered. Only shorten the requested holding
+                // distance, using the closest training plane along that segment.
+                if (hit.transform.CompareTag("AR_InfinityPlane") && hit.distance < closestDistance)
+                {
+                    closestDistance = hit.distance;
+                    constrainedPosition = hit.point;
+                }
             }
+            grabber.transform.position = constrainedPosition;
         }
     }
 }
