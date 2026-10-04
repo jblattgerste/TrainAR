@@ -412,6 +412,28 @@ references:
   isSpec: "True"
   fullName: Interaction.MaterialController.DeactivateOutlines
   nameWithType: MaterialController.DeactivateOutlines
+- uid: Interaction.MaterialController.DefaultHighlightColor
+  name: DefaultHighlightColor
+  href: api/Interaction.MaterialController.html#Interaction_MaterialController_DefaultHighlightColor
+  commentId: F:Interaction.MaterialController.DefaultHighlightColor
+  fullName: Interaction.MaterialController.DefaultHighlightColor
+  nameWithType: MaterialController.DefaultHighlightColor
+- uid: Interaction.MaterialController.SetHighlight(System.Boolean,System.Nullable{Color})
+  name: SetHighlight(bool, Color?)
+  href: api/Interaction.MaterialController.html#Interaction_MaterialController_SetHighlight_System_Boolean_System_Nullable_Color__
+  commentId: M:Interaction.MaterialController.SetHighlight(System.Boolean,System.Nullable{Color})
+  name.vb: SetHighlight(Boolean, Color?)
+  fullName: Interaction.MaterialController.SetHighlight(bool, Color?)
+  fullName.vb: Interaction.MaterialController.SetHighlight(Boolean, Color?)
+  nameWithType: MaterialController.SetHighlight(bool, Color?)
+  nameWithType.vb: MaterialController.SetHighlight(Boolean, Color?)
+- uid: Interaction.MaterialController.SetHighlight*
+  name: SetHighlight
+  href: api/Interaction.MaterialController.html#Interaction_MaterialController_SetHighlight_
+  commentId: Overload:Interaction.MaterialController.SetHighlight
+  isSpec: "True"
+  fullName: Interaction.MaterialController.SetHighlight
+  nameWithType: MaterialController.SetHighlight
 - uid: Interaction.MaterialController.resetOriginalMaterial
   name: resetOriginalMaterial()
   href: api/Interaction.MaterialController.html#Interaction_MaterialController_resetOriginalMaterial
@@ -1295,12 +1317,38 @@ references:
   isSpec: "True"
   fullName: Static.StatemachineConnector.AcceptedStateChange
   nameWithType: StatemachineConnector.AcceptedStateChange
+- uid: Static.StatemachineConnector.CurrentStateChangeRequest
+  name: CurrentStateChangeRequest
+  href: api/Static.StatemachineConnector.html#Static_StatemachineConnector_CurrentStateChangeRequest
+  commentId: P:Static.StatemachineConnector.CurrentStateChangeRequest
+  fullName: Static.StatemachineConnector.CurrentStateChangeRequest
+  nameWithType: StatemachineConnector.CurrentStateChangeRequest
+- uid: Static.StatemachineConnector.CurrentStateChangeRequest*
+  name: CurrentStateChangeRequest
+  href: api/Static.StatemachineConnector.html#Static_StatemachineConnector_CurrentStateChangeRequest_
+  commentId: Overload:Static.StatemachineConnector.CurrentStateChangeRequest
+  isSpec: "True"
+  fullName: Static.StatemachineConnector.CurrentStateChangeRequest
+  nameWithType: StatemachineConnector.CurrentStateChangeRequest
 - uid: Static.StatemachineConnector.Instance
   name: Instance
   href: api/Static.StatemachineConnector.html#Static_StatemachineConnector_Instance
   commentId: F:Static.StatemachineConnector.Instance
   fullName: Static.StatemachineConnector.Instance
   nameWithType: StatemachineConnector.Instance
+- uid: Static.StatemachineConnector.LastAcceptedStateChangeRequest
+  name: LastAcceptedStateChangeRequest
+  href: api/Static.StatemachineConnector.html#Static_StatemachineConnector_LastAcceptedStateChangeRequest
+  commentId: P:Static.StatemachineConnector.LastAcceptedStateChangeRequest
+  fullName: Static.StatemachineConnector.LastAcceptedStateChangeRequest
+  nameWithType: StatemachineConnector.LastAcceptedStateChangeRequest
+- uid: Static.StatemachineConnector.LastAcceptedStateChangeRequest*
+  name: LastAcceptedStateChangeRequest
+  href: api/Static.StatemachineConnector.html#Static_StatemachineConnector_LastAcceptedStateChangeRequest_
+  commentId: Overload:Static.StatemachineConnector.LastAcceptedStateChangeRequest
+  isSpec: "True"
+  fullName: Static.StatemachineConnector.LastAcceptedStateChangeRequest
+  nameWithType: StatemachineConnector.LastAcceptedStateChangeRequest
 - uid: Static.StatemachineConnector.RegisterNewStateChangeTrigger(System.Func{Static.StateInformation,System.Boolean})
   name: RegisterNewStateChangeTrigger(Func<StateInformation, bool>)
   href: api/Static.StatemachineConnector.html#Static_StatemachineConnector_RegisterNewStateChangeTrigger_System_Func_Static_StateInformation_System_Boolean__
@@ -2940,6 +2988,32 @@ references:
   isSpec: "True"
   fullName: Visual_Scripting.ObjectHelper.GrabbabilityToggle
   nameWithType: ObjectHelper.GrabbabilityToggle
+- uid: Visual_Scripting.ObjectHelper.HighlightColor
+  name: HighlightColor
+  href: api/Visual_Scripting.ObjectHelper.html#Visual_Scripting_ObjectHelper_HighlightColor
+  commentId: P:Visual_Scripting.ObjectHelper.HighlightColor
+  fullName: Visual_Scripting.ObjectHelper.HighlightColor
+  nameWithType: ObjectHelper.HighlightColor
+- uid: Visual_Scripting.ObjectHelper.HighlightColor*
+  name: HighlightColor
+  href: api/Visual_Scripting.ObjectHelper.html#Visual_Scripting_ObjectHelper_HighlightColor_
+  commentId: Overload:Visual_Scripting.ObjectHelper.HighlightColor
+  isSpec: "True"
+  fullName: Visual_Scripting.ObjectHelper.HighlightColor
+  nameWithType: ObjectHelper.HighlightColor
+- uid: Visual_Scripting.ObjectHelper.HighlightToggle
+  name: HighlightToggle
+  href: api/Visual_Scripting.ObjectHelper.html#Visual_Scripting_ObjectHelper_HighlightToggle
+  commentId: P:Visual_Scripting.ObjectHelper.HighlightToggle
+  fullName: Visual_Scripting.ObjectHelper.HighlightToggle
+  nameWithType: ObjectHelper.HighlightToggle
+- uid: Visual_Scripting.ObjectHelper.HighlightToggle*
+  name: HighlightToggle
+  href: api/Visual_Scripting.ObjectHelper.html#Visual_Scripting_ObjectHelper_HighlightToggle_
+  commentId: Overload:Visual_Scripting.ObjectHelper.HighlightToggle
+  isSpec: "True"
+  fullName: Visual_Scripting.ObjectHelper.HighlightToggle
+  nameWithType: ObjectHelper.HighlightToggle
 - uid: Visual_Scripting.ObjectHelper.InputFlow
   name: InputFlow
   href: api/Visual_Scripting.ObjectHelper.html#Visual_Scripting_ObjectHelper_InputFlow
@@ -3104,6 +3178,12 @@ references:
   commentId: F:Visual_Scripting.ObjectHelper.TrainARHelperChoices.ToggleGrabbable
   fullName: Visual_Scripting.ObjectHelper.TrainARHelperChoices.ToggleGrabbable
   nameWithType: ObjectHelper.TrainARHelperChoices.ToggleGrabbable
+- uid: Visual_Scripting.ObjectHelper.TrainARHelperChoices.ToggleHighlight
+  name: ToggleHighlight
+  href: api/Visual_Scripting.ObjectHelper.TrainARHelperChoices.html#Visual_Scripting_ObjectHelper_TrainARHelperChoices_ToggleHighlight
+  commentId: F:Visual_Scripting.ObjectHelper.TrainARHelperChoices.ToggleHighlight
+  fullName: Visual_Scripting.ObjectHelper.TrainARHelperChoices.ToggleHighlight
+  nameWithType: ObjectHelper.TrainARHelperChoices.ToggleHighlight
 - uid: Visual_Scripting.ObjectHelper.TrainARHelperChoices.ToggleInteractable
   name: ToggleInteractable
   href: api/Visual_Scripting.ObjectHelper.TrainARHelperChoices.html#Visual_Scripting_ObjectHelper_TrainARHelperChoices_ToggleInteractable

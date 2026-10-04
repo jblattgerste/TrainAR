@@ -133,6 +133,14 @@
 <h2 id="replace-trainar-object">Replace TrainAR Object</h2>
 <p>Replaces a to be <strong>replaced TrainAR Object</strong> with another <strong>replacing TrainAR Object</strong>. The replaced <strong>TrainAR Object</strong> is set to invisible. The <strong>replacing TrainAR Object</strong> is also placed at the same position as the <strong>replaced TrainAR Object</strong>.</p>
 <p>In case the <strong>replaced TrainAR Object</strong> is <strong>grabbed</strong> during replacement, the <strong>replacing TrainAR Object</strong> is also <strong>grabbed</strong>. For further instructions on how to use this setting, see <a href="../manual/TrainARObjects.html#swapping-or-modifying-trainar-objects-during-a-training">here</a></p>
+<h2 id="toggle-highlight">Toggle Highlight</h2>
+<p>Highlights the specified <strong>TrainAR Object</strong> with a colored outline to guide the trainee's attention to it, e.g. to show which object should be used in the current step. Check or uncheck the <strong>Highlighted</strong> field to add or remove the highlight. The <strong>Color</strong> field specifies the color of the outline. By default, this is an amber color that differs from the blue selection, red error and green success outlines.</p>
+<p>The highlight is removed automatically once the trainee performs the next correct action, so you usually place this node right before the <strong>Action</strong> node of the step the object belongs to. Highlights set in the nodes after a <strong>Correct</strong> output stay for the following step. You can also remove a highlight earlier by using this node with <strong>Highlighted</strong> unchecked. To highlight multiple objects at once, use one <strong>Object Helper</strong> node per object.</p>
+<p>While a highlighted <strong>TrainAR Object</strong> is selected, the selection outline is shown instead of the highlight. Error and success feedback also temporarily replace the highlight. Afterwards, the highlight is shown again as long as it was not removed.</p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>With the <strong>Action (Multi)</strong> node, every correct action counts as the next correct action, so a highlight is removed after the first of the required actions.</p>
+</div>
 
 </article>
 
