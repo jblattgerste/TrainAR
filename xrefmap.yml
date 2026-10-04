@@ -547,6 +547,48 @@ references:
   isSpec: "True"
   fullName: Interaction.Outline.OutlineWidth
   nameWithType: Outline.OutlineWidth
+- uid: Interaction.Outline.RefreshMesh
+  name: RefreshMesh()
+  href: api/Interaction.Outline.html#Interaction_Outline_RefreshMesh
+  commentId: M:Interaction.Outline.RefreshMesh
+  fullName: Interaction.Outline.RefreshMesh()
+  nameWithType: Outline.RefreshMesh()
+- uid: Interaction.Outline.RefreshMesh*
+  name: RefreshMesh
+  href: api/Interaction.Outline.html#Interaction_Outline_RefreshMesh_
+  commentId: Overload:Interaction.Outline.RefreshMesh
+  isSpec: "True"
+  fullName: Interaction.Outline.RefreshMesh
+  nameWithType: Outline.RefreshMesh
+- uid: Interaction.Outline.SetPlacementSuppressed(System.Boolean)
+  name: SetPlacementSuppressed(bool)
+  href: api/Interaction.Outline.html#Interaction_Outline_SetPlacementSuppressed_System_Boolean_
+  commentId: M:Interaction.Outline.SetPlacementSuppressed(System.Boolean)
+  name.vb: SetPlacementSuppressed(Boolean)
+  fullName: Interaction.Outline.SetPlacementSuppressed(bool)
+  fullName.vb: Interaction.Outline.SetPlacementSuppressed(Boolean)
+  nameWithType: Outline.SetPlacementSuppressed(bool)
+  nameWithType.vb: Outline.SetPlacementSuppressed(Boolean)
+- uid: Interaction.Outline.SetPlacementSuppressed*
+  name: SetPlacementSuppressed
+  href: api/Interaction.Outline.html#Interaction_Outline_SetPlacementSuppressed_
+  commentId: Overload:Interaction.Outline.SetPlacementSuppressed
+  isSpec: "True"
+  fullName: Interaction.Outline.SetPlacementSuppressed
+  nameWithType: Outline.SetPlacementSuppressed
+- uid: Interaction.Outline.SynchronizeMaterials
+  name: SynchronizeMaterials()
+  href: api/Interaction.Outline.html#Interaction_Outline_SynchronizeMaterials
+  commentId: M:Interaction.Outline.SynchronizeMaterials
+  fullName: Interaction.Outline.SynchronizeMaterials()
+  nameWithType: Outline.SynchronizeMaterials()
+- uid: Interaction.Outline.SynchronizeMaterials*
+  name: SynchronizeMaterials
+  href: api/Interaction.Outline.html#Interaction_Outline_SynchronizeMaterials_
+  commentId: Overload:Interaction.Outline.SynchronizeMaterials
+  isSpec: "True"
+  fullName: Interaction.Outline.SynchronizeMaterials
+  nameWithType: Outline.SynchronizeMaterials
 - uid: Interaction.ResetLostObjectController
   name: ResetLostObjectController
   href: api/Interaction.ResetLostObjectController.html
@@ -1804,6 +1846,22 @@ references:
   isSpec: "True"
   fullName: UI.QuestionnaireController.NotifyStatemachine
   nameWithType: QuestionnaireController.NotifyStatemachine
+- uid: UI.QuestionnaireController.OnInputFieldSubmitted(System.String)
+  name: OnInputFieldSubmitted(string)
+  href: api/UI.QuestionnaireController.html#UI_QuestionnaireController_OnInputFieldSubmitted_System_String_
+  commentId: M:UI.QuestionnaireController.OnInputFieldSubmitted(System.String)
+  name.vb: OnInputFieldSubmitted(String)
+  fullName: UI.QuestionnaireController.OnInputFieldSubmitted(string)
+  fullName.vb: UI.QuestionnaireController.OnInputFieldSubmitted(String)
+  nameWithType: QuestionnaireController.OnInputFieldSubmitted(string)
+  nameWithType.vb: QuestionnaireController.OnInputFieldSubmitted(String)
+- uid: UI.QuestionnaireController.OnInputFieldSubmitted*
+  name: OnInputFieldSubmitted
+  href: api/UI.QuestionnaireController.html#UI_QuestionnaireController_OnInputFieldSubmitted_
+  commentId: Overload:UI.QuestionnaireController.OnInputFieldSubmitted
+  isSpec: "True"
+  fullName: UI.QuestionnaireController.OnInputFieldSubmitted
+  nameWithType: QuestionnaireController.OnInputFieldSubmitted
 - uid: UI.QuestionnaireController.QuestionInputValidate
   name: QuestionInputValidate()
   href: api/UI.QuestionnaireController.html#UI_QuestionnaireController_QuestionInputValidate

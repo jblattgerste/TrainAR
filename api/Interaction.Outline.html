@@ -225,6 +225,100 @@ for e.g. selection, success or failure. It is called and handled by the Material
 
 
 
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="Interaction_Outline_RefreshMesh_" data-uid="Interaction.Outline.RefreshMesh*"></a>
+
+  <h3 id="Interaction_Outline_RefreshMesh" data-uid="Interaction.Outline.RefreshMesh">
+  RefreshMesh()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/jblattgerste/TrainAR/blob/main/Assets/Scripts/Interaction/Outline.cs/#L182"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Prepares a replacement mesh and refreshes the passes without changing the
+current selection/highlight/feedback state.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void RefreshMesh()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Interaction_Outline_SetPlacementSuppressed_" data-uid="Interaction.Outline.SetPlacementSuppressed*"></a>
+
+  <h3 id="Interaction_Outline_SetPlacementSuppressed_System_Boolean_" data-uid="Interaction.Outline.SetPlacementSuppressed(System.Boolean)">
+  SetPlacementSuppressed(bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/jblattgerste/TrainAR/blob/main/Assets/Scripts/Interaction/Outline.cs/#L144"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Hides only the rendering passes while placement owns the renderer materials.
+Selection, highlights and feedback can continue to update their logical state.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetPlacementSuppressed(bool suppressed)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>suppressed</code> <span class="xref">bool</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Interaction_Outline_SynchronizeMaterials_" data-uid="Interaction.Outline.SynchronizeMaterials*"></a>
+
+  <h3 id="Interaction_Outline_SynchronizeMaterials" data-uid="Interaction.Outline.SynchronizeMaterials">
+  SynchronizeMaterials()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/jblattgerste/TrainAR/blob/main/Assets/Scripts/Interaction/Outline.cs/#L154"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Repairs material slots after another system restores or replaces materials.
+Only this component's material instances are removed, so nested outlines and
+selection materials retain their ownership.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SynchronizeMaterials()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 </article>
 

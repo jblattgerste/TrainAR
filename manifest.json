@@ -523,7 +523,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "UI.InputFieldAdjust",
-      "Summary": "<p sourcefile=\"api/UI.InputFieldAdjust.yml\" sourcestartlinenumber=\"1\">InputFieldAdjust Adjusts the UI of the Input field when the keyboard is opened.\nThis is mostly problematic on Android otherwise.</p>\n"
+      "Summary": "<p sourcefile=\"api/UI.InputFieldAdjust.yml\" sourcestartlinenumber=\"1\">Keeps the input question above a keyboard whose bounds are reported by Unity.\nNative mobile input remains available when the platform cannot report those bounds.</p>\n"
     },
     {
       "type": "ManagedReference",

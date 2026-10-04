@@ -6,7 +6,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta name="title" content="Class InputFieldAdjust | TrainAR Documentation ">
       
-      <meta name="description" content="InputFieldAdjust Adjusts the UI of the Input field when the keyboard is opened. This is mostly problematic on Android otherwise.">
+      <meta name="description" content="Keeps the input question above a keyboard whose bounds are reported by Unity. Native mobile input remains available when the platform cannot report those bounds.">
       <link rel="icon" href="../resources/favicon.ico">
       <link rel="stylesheet" href="../public/docfx.min.css">
       <link rel="stylesheet" href="../public/main.css">
@@ -97,8 +97,8 @@ Class InputFieldAdjust  <a class="header-action link-secondary" title="View sour
   
   </div>
 
-  <div class="markdown summary"><p>InputFieldAdjust Adjusts the UI of the Input field when the keyboard is opened.
-This is mostly problematic on Android otherwise.</p>
+  <div class="markdown summary"><p>Keeps the input question above a keyboard whose bounds are reported by Unity.
+Native mobile input remains available when the platform cannot report those bounds.</p>
 </div>
   <div class="markdown conceptual"></div>
 
@@ -133,10 +133,11 @@ This is mostly problematic on Android otherwise.</p>
 
   <h3 id="UI_InputFieldAdjust_AdjustInputFieldPosition" data-uid="UI.InputFieldAdjust.AdjustInputFieldPosition">
   AdjustInputFieldPosition()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/jblattgerste/TrainAR/blob/main/Assets/Scripts/UI/InputFieldAdjust.cs/#L114"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/jblattgerste/TrainAR/blob/main/Assets/Scripts/UI/InputFieldAdjust.cs/#L45"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Adjusts the position of the Inputfield UI when the Android or iOS keyboard is opened.</p>
+  <div class="markdown level1 summary"><p>Also called by the input field's Select and Deselect events. LateUpdate follows
+keyboard animation and size changes without starting competing coroutines.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
