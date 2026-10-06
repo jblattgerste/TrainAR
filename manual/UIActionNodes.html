@@ -90,6 +90,10 @@
 <p><strong>TrainAR: Action (UI)</strong> nodes trigger UI quizzes/questionnaires for the user to complete in the TrainAR training. UI Action nodes require input of the user on the user interface and the UI Action node includes different types of quizzes/questionnaires in form of UI elements. To select which questionnaire type you want to use, you may change via the dropdown menu <strong>UI-Task:</strong> <strong>Questionnaire</strong>, <strong>Input Field</strong> or <strong>List Selection</strong> actions.</p>
 <h3 id="ui-task-questionnaire">UI Task: Questionnaire</h3>
 <p>If the UI Task is set to <strong>Questionnaire</strong>, the user will be shown a question and a set of predetermined answers. When the user chooses one of these answers, the user is also shown feedback. The question itself as well as the number of corresponding correct and wrong answers and their feedback have to be specified in the node. The questionnaire can have between 2 and 4 possible answers. If the user inputs an answer, the stateflow resumes according to the <strong>Correct</strong> or <strong>Incorrect</strong> outputs of the node. Questionnaire nodes can also fork the Stateflow based on the given answer.</p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>Choosing an answer closes the questionnaire, and every answer has its own output. Connect the <strong>Incorrect</strong> outputs as well, e.g. to the same next node as the correct answer or this node again to repeat it, so the training continues after the feedback. An unconnected output leaves the training waiting for an answer that can no longer be given.</p>
+</div>
 <div class="trainar-node-comparison" role="region" aria-label="TrainAR node and result comparison" tabindex="0">
 <table>
 <thead>
