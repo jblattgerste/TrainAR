@@ -609,20 +609,18 @@ namespace UI
             }
         }
         /// <summary>
-        /// Play the audioclip for correct answers.
+        /// Play the audioclip for correct answers as a one-shot, so it does not cut off other sounds.
         /// </summary>
         private void PlayCorrectAnswerSound()
         {
-            audioSource.clip = correctAnswerSound;
-            audioSource.Play();
+            audioSource.PlayOneShot(correctAnswerSound);
         }
         /// <summary>
-        /// Play the audioclip for wrong answers.
+        /// Play the audioclip for wrong answers as a one-shot, so it does not cut off other sounds.
         /// </summary>
         private void PlayWrongAnswerSound()
         {
-            audioSource.clip = wrongAnswerSound;
-            audioSource.Play();
+            audioSource.PlayOneShot(wrongAnswerSound);
         }
 
         /// <summary>

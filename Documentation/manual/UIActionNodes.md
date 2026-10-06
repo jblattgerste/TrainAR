@@ -6,6 +6,9 @@
 
 If the UI Task is set to **Questionnaire**, the user will be shown a question and a set of predetermined answers. When the user chooses one of these answers, the user is also shown feedback. The question itself as well as the number of corresponding correct and wrong answers and their feedback have to be specified in the node. The questionnaire can have between 2 and 4 possible answers. If the user inputs an answer, the stateflow resumes according to the **Correct** or **Incorrect** outputs of the node. Questionnaire nodes can also fork the Stateflow based on the given answer.
 
+> [!NOTE]
+> Choosing an answer closes the questionnaire, and every answer has its own output. Connect the **Incorrect** outputs as well, e.g. to the same next node as the correct answer or this node again to repeat it, so the training continues after the feedback. An unconnected output leaves the training waiting for an answer that can no longer be given.
+
 <div class="trainar-node-comparison" role="region" aria-label="TrainAR node and result comparison" tabindex="0">
 
 | TrainAR Node | Result |
