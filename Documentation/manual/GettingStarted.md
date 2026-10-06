@@ -86,7 +86,7 @@ Now create another **TrainAR: Action** node and connect it to the **TrainAR Feed
 
 You have now defined, that at this point in the stateflow, the correct step is to combine the spoon with the coffee tin. Next you'll have to define what happens as a result. Let's make the combine fill up the spoon.
 
-To do this add a **TrainAR: Object Helper** node to the stateflow. In the node, set the dropdown menu to **Replace Mesh** and type in the **Object Name** field `Spoon`. In the Project Tab navigate to the Meshes folder and drag-and-drop the `SpoonFilled` mesh into the mesh field of the node. Then, drag-and-drop the `SpoonFilled` material from the Materials folder into the material field. Finally, connect the stateflow.
+To do this add a **TrainAR: Object Helper** node to the stateflow. In the node, set the dropdown menu to **Replace Mesh** and type in the **Object Name** field `Spoon`. In the Project Tab navigate to the `Models/CoffeeSet/Scoop` folder, unfold the `Scoop_Full` model and drag-and-drop its `Scoop_Full` mesh into the mesh field of the node. Then, drag-and-drop the `Scoop_Full` material from the same folder into the material field. Finally, connect the stateflow.
 
 ![](../resources/GettingStarted_ObjectHelper.gif)
 

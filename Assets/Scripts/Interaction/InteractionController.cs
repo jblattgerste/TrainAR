@@ -1,4 +1,5 @@
-﻿using Others;
+﻿using System.Collections.Generic;
+using Others;
 using UnityEngine;
 
 namespace Interaction
@@ -160,7 +161,7 @@ namespace Interaction
 
             //Check if the ray hits anything at all, return when no hit
             Ray ray = arCamera.ViewportPointToRay(new Vector3(0.5f,0.5f,0f));
-            if (!Physics.Raycast(ray, out hit))
+            if (!RaycastVisible(ray, out hit))
             {
                 //Reset the Selection state
                 if (selectedObject != null)
@@ -210,6 +211,86 @@ namespace Interaction
                 selectedObject.GetComponent<TrainARObject>().Select();
                 lastSelectedObject.GetComponent<TrainARObject>().Deselect();
             }
+        }
+
+        /// <summary>
+        /// Raycast used for selecting TrainAR objects. Convex colliders can enclose other TrainAR objects (e.g. a pot
+        /// standing inside a coffee machine), so when the ray hits more than one TrainAR object, the one whose rendered
+        /// mesh is hit first is selected instead of the one with the nearest collider. Otherwise, or if none of their
+        /// meshes is hit, this is a regular raycast. Other colliders in front still block as before.
+        /// </summary>
+        private bool RaycastVisible(Ray ray, out RaycastHit result)
+        {
+            var count = Physics.RaycastNonAlloc(ray, rayHits);
+            result = default;
+
+            //Find the nearest hit (the regular raycast result) and whether more than one TrainAR object is on the ray.
+            //Each TrainAR object has several colliders, so this compares objects rather than hits.
+            Transform firstObject = null;
+            var ambiguous = false;
+            for (var i = 0; i < count; i++)
+            {
+                if (i == 0 || rayHits[i].distance < result.distance) result = rayHits[i];
+                var hitObject = rayHits[i].transform;
+                if (!hitObject.CompareTag("TrainARObject")) continue;
+                if (firstObject == null) firstObject = hitObject;
+                else if (hitObject != firstObject) ambiguous = true;
+            }
+            if (!ambiguous) return count > 0;
+
+            var visible = result;
+            var meshHit = false;
+            float best = float.MaxValue, bestCollider = float.MaxValue;
+            for (var i = 0; i < count; i++)
+            {
+                var hit = rayHits[i];
+                var distance = hit.distance;
+                if (hit.transform.CompareTag("TrainARObject"))
+                {
+                    //Test each object's mesh only once, even if several of its colliders were hit
+                    var j = 0;
+                    while (rayHits[j].transform != hit.transform) j++;
+                    distance = rayHitDistances[i] = j < i ? rayHitDistances[j] : MeshHitDistance(ray, hit);
+                    meshHit |= distance < float.MaxValue;
+                }
+                //On equal distances (several colliders of one object) the nearest collider wins
+                if (distance > best || (distance == best && hit.distance >= bestCollider)) continue;
+                best = distance;
+                bestCollider = hit.distance;
+                visible = hit;
+            }
+            if (meshHit) result = visible;
+            return true;
+        }
+
+        private readonly RaycastHit[] rayHits = new RaycastHit[32];
+        private readonly float[] rayHitDistances = new float[32];
+        private readonly Dictionary<Mesh, (Vector3[] v, int[] t)> meshCache = new Dictionary<Mesh, (Vector3[] v, int[] t)>();
+
+        /// <summary>
+        /// Distance along the ray to the nearest triangle of the hit object's rendered mesh (Möller–Trumbore test), or
+        /// float.MaxValue if the ray misses it. Falls back to the collider distance if the mesh can't be read.
+        /// </summary>
+        private float MeshHitDistance(Ray ray, RaycastHit hit)
+        {
+            var target = hit.transform;
+            if (!target.TryGetComponent(out MeshFilter meshFilter) || meshFilter.sharedMesh == null || !meshFilter.sharedMesh.isReadable)
+                return hit.distance;
+            var mesh = meshFilter.sharedMesh;
+            if (!meshCache.TryGetValue(mesh, out var m)) meshCache[mesh] = m = (mesh.vertices, mesh.triangles);
+            //The ray is transformed without normalising, so the hit parameter stays in world units
+            Vector3 o = target.worldToLocalMatrix.MultiplyPoint3x4(ray.origin), d = target.worldToLocalMatrix.MultiplyVector(ray.direction);
+            var nearest = float.MaxValue;
+            for (var i = 0; i < m.t.Length; i += 3)
+            {
+                Vector3 a = m.v[m.t[i]], e1 = m.v[m.t[i + 1]] - a, e2 = m.v[m.t[i + 2]] - a, p = Vector3.Cross(d, e2), s = o - a;
+                float inv = 1f / Vector3.Dot(e1, p), u = Vector3.Dot(s, p) * inv;
+                if (u < 0 || u > 1) continue;
+                var q = Vector3.Cross(s, e1);
+                float w = Vector3.Dot(d, q) * inv, t = Vector3.Dot(e2, q) * inv;
+                if (w >= 0 && u + w <= 1 && t > 0 && t < nearest) nearest = t;
+            }
+            return nearest;
         }
 
         /// <summary>
