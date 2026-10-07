@@ -304,6 +304,7 @@ namespace UI
         {
             BeginQuestion(false);
             regularQuestionUI.SetActive(true);
+            ResetAnswerButtons();
             questionText.text = question;
             questionTextUI.SetActive(true);
             EnableAllButtons(buttons);
@@ -723,6 +724,13 @@ namespace UI
             responseText.SetActive(false);
             yield return WaitForAnimDone(anim, "UnextendButton");
 
+            // Make the other buttons fully visible again, otherwise they keep a faded alpha when the UI is reactivated
+            foreach (Button b in buttons)
+            {
+                CanvasGroup group = b.GetComponent<CanvasGroup>();
+                if (group != null) group.alpha = 1f;
+            }
+
             // deactivate the questionnaire UI
             regularQuestionUI.SetActive(false);
             questionTextUI.SetActive(false);
@@ -766,6 +774,26 @@ namespace UI
                 yield return null;
             }
         }
+
+        /// <summary>
+        /// Resets the answer buttons to be fully visible and rebinds their animators,
+        /// so no faded alpha from the previous question is kept.
+        /// </summary>
+        private void ResetAnswerButtons()
+        {
+            foreach (Button b in buttons)
+            {
+                CanvasGroup group = b.GetComponent<CanvasGroup>();
+                if (group != null) group.alpha = 1f;
+                Animator buttonAnimator = b.animator;
+                if (buttonAnimator == null || !buttonAnimator.isActiveAndEnabled) continue;
+                buttonAnimator.SetBool("fade", false);
+                buttonAnimator.SetBool("open", false);
+                buttonAnimator.Rebind();
+                buttonAnimator.Update(0f);
+            }
+        }
+
         /// <summary>
         /// Trigger animation to fadeout of pressed buttons.
         /// </summary>
