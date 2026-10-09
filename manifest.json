@@ -1269,6 +1269,16 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "resources/ExampleCoffeeTraining.webp",
+      "output": {
+        "resource": {
+          "relative_path": "resources/ExampleCoffeeTraining.webp"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "resources/ExampleScenarios.png",
       "output": {
         "resource": {
