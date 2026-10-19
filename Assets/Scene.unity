@@ -21296,9 +21296,9 @@ MonoBehaviour:
   questionList: {fileID: 5384377232557597122}
   questionListQuestionText: {fileID: 5384377232973974837}
   ButtonBlueprint: {fileID: 5384377232184196003}
-  correctAnswerColor: {r: 0, g: 0.49803925, b: 0, a: 0.78039217}
-  wrongAnswerColor: {r: 0.35686275, g: 0, b: 0, a: 0.78039217}
-  defaultUIColor: {r: 0, g: 0.41568628, b: 0.6784314, a: 0.78039217}
+  correctAnswerColor: {r: 0, g: 0.49803925, b: 0, a: 1}
+  wrongAnswerColor: {r: 0.35686275, g: 0, b: 0, a: 1}
+  defaultUIColor: {r: 0, g: 0.41568628, b: 0.6784314, a: 1}
   correctAnswerSound: {fileID: 8300000, guid: 52320e590bf774734a288886eba557ba, type: 3}
   wrongAnswerSound: {fileID: 8300000, guid: 5fdb13d3756c84fecac96f5a2d124370, type: 3}
   audioSource: {fileID: 1943579696}
@@ -22395,7 +22395,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0.41568628, b: 0.6784314, a: 0.78039217}
+  m_Color: {r: 0, g: 0.41568628, b: 0.6784314, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -56042,7 +56042,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0.41568628, b: 0.6784314, a: 0.78039217}
+  m_Color: {r: 0, g: 0.41568628, b: 0.6784314, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -113832,7 +113832,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0.41568628, b: 0.6784314, a: 0.78039217}
+  m_Color: {r: 0, g: 0.41568628, b: 0.6784314, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1

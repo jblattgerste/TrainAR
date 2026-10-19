@@ -145,11 +145,6 @@ namespace UI
         /// </summary>
         /// <value>Default set in inspector.</value>
         public Color defaultUIColor;
-        /// <summary>
-        /// Holder if a correct answer is pressed.
-        /// </summary>
-        /// <value>Set on runtime.</value>
-        private bool correctAnswerChosen;
 
         /// <summary>
         /// Audioclip that is played when correct answer is pressed.
@@ -167,6 +162,40 @@ namespace UI
         /// </summary>
         /// <value>Set in inspector.</value>
         [SerializeField] private AudioSource audioSource;
+
+        /// <summary>
+        /// How long the feedback of a chosen answer stays open before the questionnaire continues on its own.
+        /// Tapping the feedback or the question closes it earlier.
+        /// </summary>
+        /// <value>Default is 5 seconds.</value>
+        [Header("Feedback")]
+        public float feedbackDuration = 5f;
+        /// <summary>
+        /// Color of the bar on top of the question that fills up while the feedback is open.
+        /// </summary>
+        /// <value>Default is the light teal of the TrainAR logo.</value>
+        public Color feedbackTimerColor = new Color(0.5490196f, 0.7686275f, 0.8f, 1f);
+        /// <summary>
+        /// Color of the not yet filled part of the feedback timer bar.
+        /// </summary>
+        /// <value>Default is a dark shade of the UI blue.</value>
+        public Color feedbackTimerBackgroundColor = new Color(0f, 0.2f, 0.33f, 1f);
+        /// <summary>
+        /// Height of the feedback timer bar in canvas units.
+        /// </summary>
+        /// <value>Default is 24.</value>
+        public float feedbackTimerHeight = 24f;
+        private GameObject feedbackTimerBar;
+        private RectTransform feedbackTimerFill;
+        /// <summary>
+        /// True once an answer of the current regular question was chosen.
+        /// </summary>
+        private bool answerChosen;
+        /// <summary>
+        /// True while the feedback of the chosen answer is fully shown and can be closed.
+        /// </summary>
+        private bool feedbackOpen;
+        private Coroutine feedbackCountdown;
 
         /// <summary>
         /// Stores wrong answered questions for endscreen UI.
@@ -251,6 +280,8 @@ namespace UI
             subscribedConnector = null;
             questionVersion++;
             CancelPendingInputSubmission();
+            CancelFeedbackCountdown();
+            feedbackOpen = false;
         }
 
         private void CancelPendingInputSubmission()
@@ -303,6 +334,8 @@ namespace UI
         public void InitQuestion(string question, List<Answer> answers)
         {
             BeginQuestion(false);
+            answerChosen = false;
+            feedbackOpen = false;
             regularQuestionUI.SetActive(true);
             ResetAnswerButtons();
             questionText.text = question;
@@ -369,7 +402,54 @@ namespace UI
             if (audioSource == null)
                 audioSource = FindAnyObjectByType<AudioSource>();
             InitRegularQuestionButtons();
+            InitQuestionTapToContinue();
+            CreateFeedbackTimerBar();
             questionnaireUIDefaultPosition = questionnaireUIRectTransform.anchoredPosition;
+        }
+
+        /// <summary>
+        /// Lets a tap on the question panel close the open feedback as well, so the whole questionnaire UI
+        /// (question and feedback) can be tapped, but not the AR scene behind it.
+        /// </summary>
+        private void InitQuestionTapToContinue()
+        {
+            EventTrigger trigger = questionTextUI.AddComponent<EventTrigger>();
+            EventTrigger.Entry entry = new EventTrigger.Entry { eventID = EventTriggerType.PointerClick };
+            entry.callback.AddListener(_ => ContinueButtonOnClick());
+            trigger.triggers.Add(entry);
+        }
+
+        /// <summary>
+        /// Creates the bar on top of the question panel that fills up from left to right while the feedback is open.
+        /// </summary>
+        private void CreateFeedbackTimerBar()
+        {
+            feedbackTimerBar = new GameObject("Feedback Timer Bar", typeof(RectTransform), typeof(Image));
+            feedbackTimerBar.layer = questionTextUI.layer;
+            RectTransform barRect = feedbackTimerBar.GetComponent<RectTransform>();
+            barRect.SetParent(questionTextUI.transform, false);
+            barRect.anchorMin = new Vector2(0f, 1f);
+            barRect.anchorMax = new Vector2(1f, 1f);
+            barRect.pivot = new Vector2(0.5f, 0f);
+            barRect.anchoredPosition = Vector2.zero;
+            barRect.sizeDelta = new Vector2(0f, feedbackTimerHeight);
+            Image background = feedbackTimerBar.GetComponent<Image>();
+            background.color = feedbackTimerBackgroundColor;
+            background.raycastTarget = false;
+
+            GameObject fill = new GameObject("Fill", typeof(RectTransform), typeof(Image));
+            fill.layer = questionTextUI.layer;
+            feedbackTimerFill = fill.GetComponent<RectTransform>();
+            feedbackTimerFill.SetParent(barRect, false);
+            feedbackTimerFill.anchorMin = Vector2.zero;
+            feedbackTimerFill.anchorMax = new Vector2(0f, 1f);
+            feedbackTimerFill.offsetMin = Vector2.zero;
+            feedbackTimerFill.offsetMax = Vector2.zero;
+            Image fillImage = fill.GetComponent<Image>();
+            fillImage.color = feedbackTimerColor;
+            fillImage.raycastTarget = false;
+
+            feedbackTimerBar.SetActive(false);
         }
 
         /// <summary>
@@ -391,7 +471,16 @@ namespace UI
         /// <param name="i">The index of the pressed button.</param>
         private void ValidateAnswer(int i)
         {
+            // Once an answer was chosen, only its feedback card stays interactable and tapping it closes the feedback.
+            if (answerChosen)
+            {
+                ContinueButtonOnClick();
+                return;
+            }
+            answerChosen = true;
             DisableAllButtons(buttons);
+            // Keep the chosen button interactable, so it can be tapped and is not dimmed by the disabled tint.
+            buttons[i].interactable = true;
             bool currentQ = answers[i].answerCorrect;
             if (currentQ)
             {
@@ -644,16 +733,14 @@ namespace UI
                 // If the pressed button was correct, change the buttons color to green.
                 buttons[buttonIndex].gameObject.GetComponent<Image>().color = correctAnswerColor;
 
-                // Set this global boolean and the pressed button global, the continue button needs this.
-                correctAnswerChosen = true;
+                // Set the pressed button global, the continue button needs this.
                 chosenButtonIndex = buttonIndex;
             }
             else
             {
                 // If the pressed button was wrong, change the buttons color to red.
                 buttons[buttonIndex].gameObject.GetComponent<Image>().color = wrongAnswerColor;
-                // Set this global boolean and the pressed button global, the continue button needs this.
-                correctAnswerChosen = false;
+                // Set the pressed button global, the continue button needs this.
                 chosenButtonIndex = buttonIndex;
             }
 
@@ -700,16 +787,40 @@ namespace UI
         /// </summary>
         public void ContinueButtonOnClick()
         {
-            // Was answer correct?
-            if (correctAnswerChosen)
-            {
-                StartCoroutine(ReverseAnswerButtonAndInitiateNextState());
-            }
-            else
-            {
-                StartCoroutine(ReverseAnswerButtonAndInitiateNextState());
-            }
+            // Ignore taps before the feedback is fully shown and after it was closed (countdown and tap can coincide).
+            if (!feedbackOpen) return;
+            feedbackOpen = false;
+            CancelFeedbackCountdown();
+            StartCoroutine(ReverseAnswerButtonAndInitiateNextState());
             Debug.Log("Feedback: Weiter nach Feedback");
+        }
+
+        /// <summary>
+        /// Fills the timer bar on top of the question while the feedback is open and closes the feedback when it is full.
+        /// </summary>
+        /// <returns></returns>
+        private IEnumerator CloseFeedbackAfterCountdown()
+        {
+            feedbackTimerBar.SetActive(true);
+            for (float elapsed = 0f; elapsed < feedbackDuration; elapsed += Time.deltaTime)
+            {
+                feedbackTimerFill.anchorMax = new Vector2(elapsed / feedbackDuration, 1f);
+                yield return null;
+            }
+            feedbackTimerFill.anchorMax = Vector2.one;
+            feedbackCountdown = null;
+            ContinueButtonOnClick();
+        }
+
+        /// <summary>
+        /// Stops a running feedback countdown and hides the timer bar.
+        /// </summary>
+        private void CancelFeedbackCountdown()
+        {
+            if (feedbackCountdown != null)
+                StopCoroutine(feedbackCountdown);
+            feedbackCountdown = null;
+            if (feedbackTimerBar != null) feedbackTimerBar.SetActive(false);
         }
         /// <summary>
         /// Coroutine to reverse the pressed button and trigger statechange.
@@ -758,6 +869,8 @@ namespace UI
             yield return WaitForAnimDone(anim, "ExtendButton");
             responseText.SetActive(true);
             responseText.GetComponentInChildren<TextMeshProUGUI>().text = answers[buttonIndex].answerFeedback;
+            feedbackOpen = true;
+            feedbackCountdown = StartCoroutine(CloseFeedbackAfterCountdown());
         }
         /// <summary>
         /// Waits and yields a frame, until the given animation is done playing.
@@ -776,13 +889,14 @@ namespace UI
         }
 
         /// <summary>
-        /// Resets the answer buttons to be fully visible and rebinds their animators,
-        /// so no faded alpha from the previous question is kept.
+        /// Resets the answer buttons to be fully visible with the default color and rebinds their animators,
+        /// so no faded alpha or feedback color from the previous question is kept.
         /// </summary>
         private void ResetAnswerButtons()
         {
             foreach (Button b in buttons)
             {
+                b.GetComponent<Image>().color = defaultUIColor;
                 CanvasGroup group = b.GetComponent<CanvasGroup>();
                 if (group != null) group.alpha = 1f;
                 Animator buttonAnimator = b.animator;
