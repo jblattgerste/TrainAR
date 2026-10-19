@@ -182,9 +182,9 @@ PlayerSettings:
   androidMaxAspectRatio: 2.1
   androidMinAspectRatio: 1
   applicationIdentifier:
-    Android: com.Mixality.TrainAR
-    Standalone: com.Mixality.TrainAR
-    iPhone: com.Mixality.TrainAR
+    Android: de.Blattgerste.TrainAR
+    Standalone: de.Blattgerste.TrainAR
+    iPhone: de.Blattgerste.TrainAR
   buildNumber:
     Standalone: 0
     VisionOS: 0
