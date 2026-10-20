@@ -218,15 +218,8 @@ namespace Others
         {
             if(!objectWasSpawned)
             {
+                //The construction is spawned with the place button (PlaceSetup), not by touching the screen
                 PositionPrefab();
-
-                //Spawn the construction with a touch on the screen
-                if (!placementGesture.TryGetTouch(out var touch)) return;
-                //If Touch has been registered and placement pose has been declared valid, spawn the prefab
-                if (touch.phase == UnityEngine.InputSystem.TouchPhase.Began && placementPoseIsValid)
-                {
-                    SpawnPrefab();
-                }
             }
             else if(infinityPlaneWasSpawned && objectWasSpawned && !materialsWereReset)
             {
@@ -298,6 +291,15 @@ namespace Others
                 instantiatedPrefab.transform.SetPositionAndRotation(new Vector3(0, 0, -2), Quaternion.identity);
                 placementPoseIsValid = false;
             }
+        }
+
+        /// <summary>
+        /// Places the training assembly at the current placement pose, if it is valid (used by the place button).
+        /// </summary>
+        public void PlaceSetup()
+        {
+            if (!objectWasSpawned && placementPoseIsValid)
+                SpawnPrefab();
         }
 
         /// <summary>

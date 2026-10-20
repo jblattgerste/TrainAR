@@ -1405,7 +1405,6 @@ MonoBehaviour:
   m_text: 'To grab objects, approach the object, move the white cursor over the object and press the "Grab" button <b>(right)</b>.
 
 
-
     Now the object can be moved. Press the "Drop" button <b>(right)</b> to drop the object.'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1842,7 +1841,6 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_text: 'To use objects, approach the object, move the white cursor over the object and press the "Use" button <b>(left)</b>.
-
 
 
     Objects can be used even if they are already grabbed.'
@@ -2358,8 +2356,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 1440, y: 1440}
+  m_AnchoredPosition: {x: 0, y: -7}
+  m_SizeDelta: {x: 1380, y: 1380}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1578096818
 MonoBehaviour:
@@ -2810,8 +2808,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 1440, y: 1440}
+  m_AnchoredPosition: {x: 0, y: -34}
+  m_SizeDelta: {x: 1380, y: 1380}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1876041799
 MonoBehaviour:
@@ -3187,8 +3185,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 1440, y: 1440}
+  m_AnchoredPosition: {x: 0, y: -19}
+  m_SizeDelta: {x: 1380, y: 1380}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2028736872
 MonoBehaviour:
@@ -3243,7 +3241,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2070022626
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4154,7 +4152,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Done
+  m_text: Start
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}

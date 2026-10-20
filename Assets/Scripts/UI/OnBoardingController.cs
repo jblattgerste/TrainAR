@@ -1,4 +1,5 @@
 ﻿using Others;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.XR.ARFoundation;
@@ -65,19 +66,40 @@ namespace UI
         [Tooltip("The Video Player.")]
         private VideoPlayer videoPlayerMoveDevice;
         /// <summary>
-        /// The Video Frame for the 'Tap to Place'-clip.
+        /// The button that places the training assembly. Shown while placing is possible.
         /// </summary>
         /// <value>Set in inspector.</value>
         [SerializeField]
-        [Tooltip("The Video Frame for the 'Tap to Place'-clip.")]
-        private GameObject videoFrameTapToPlace;
+        [Tooltip("The button that places the training assembly. Shown while placing is possible.")]
+        private Button placeButton;
         /// <summary>
-        /// The Video Frame for the 'Tap to Place'-clip.
+        /// The Interact button. The place button is kept at its height.
         /// </summary>
         /// <value>Set in inspector.</value>
         [SerializeField]
-        [Tooltip("The 'Move Device'-clip.")]
-        private StreamVideo videoClipTapToPlace;
+        [Tooltip("The Interact button. The place button is kept at its height.")]
+        private RectTransform interactButton;
+        /// <summary>
+        /// The top panel. The scanning and placing hints are shown there instead of below the animations.
+        /// </summary>
+        /// <value>Set in inspector.</value>
+        [SerializeField]
+        [Tooltip("The top panel. The scanning and placing hints are shown there instead of below the animations.")]
+        private TopPanelController topPanel;
+        /// <summary>
+        /// The scanning hint (below the 'Move Device'-clip; hidden, its text goes to the top panel).
+        /// </summary>
+        /// <value>Set in inspector.</value>
+        [SerializeField]
+        [Tooltip("The scanning hint (below the 'Move Device'-clip; hidden, its text goes to the top panel).")]
+        private TMP_Text moveDeviceText;
+        /// <summary>
+        /// The placing hint (hidden, its text goes to the top panel).
+        /// </summary>
+        /// <value>Set in inspector.</value>
+        [SerializeField]
+        [Tooltip("The placing hint (hidden, its text goes to the top panel).")]
+        private TMP_Text tapToPlaceText;
         /// <summary>
         /// The Gameobject holding the UI-Elements for the 'Insufficient Light'-screen.
         /// </summary>
@@ -133,11 +155,6 @@ namespace UI
         /// <value>False on start.</value>
         private bool moveDeviceClipWasLoaded = false;
         /// <summary>
-        /// Set to true if the tatpToPlaceClip is loaded and ready to be played.
-        /// </summary>
-        /// <value>False on start.</value>
-        private bool TapToPlaceClipWasLoaded = false;
-        /// <summary>
         /// Holder for trackingReason.
         /// </summary>
         /// <value>"None" on start.</value>
@@ -157,6 +174,23 @@ namespace UI
         {
             if (defaultTracking != null)
                 otherReasons = defaultTracking.GetComponentInChildren<Text>(true);
+
+            // The hints are shown in the top panel; the texts below the animations only provide them.
+            if (topPanel != null)
+            {
+                if (moveDeviceText != null) moveDeviceText.enabled = false;
+                if (tapToPlaceText != null) tapToPlaceText.enabled = false;
+            }
+        }
+
+        /// <summary>
+        /// Shows the hint of the current onboarding animation in the top panel.
+        /// </summary>
+        /// <param name="hint">The text below that animation.</param>
+        private void ShowHint(TMP_Text hint)
+        {
+            if (topPanel != null && hint != null)
+                topPanel.ShowOnboardingText(hint.text);
         }
 
         /// <summary>
@@ -178,6 +212,7 @@ namespace UI
                 {
                     videoFrameMoveDevice.transform.localScale = Vector3.one;
                 }
+                ShowHint(moveDeviceText);
             }
             else // Off
             {
@@ -187,29 +222,41 @@ namespace UI
         }
 
         /// <summary>
-        /// Toggles the TapToPlace animation on and off
+        /// Toggles the placing step on and off: the hint in the top panel and the place button (no animation).
         /// </summary>
         /// <param name="toggleState">whether to toggle on or off</param>
         private void ToggleTapToPlaceAnimation(bool toggleState)
         {
-            if (toggleState) //On
+            if (toggleState)
+                ShowHint(tapToPlaceText);
+
+            if (placeButton != null && placeButton.gameObject.activeSelf != toggleState)
+                placeButton.gameObject.SetActive(toggleState);
+        }
+
+        /// <summary>
+        /// While the place button is shown: blue when the assembly can be placed, grey otherwise, and at the height of
+        /// the interaction buttons (they are anchored to the top of the screen, the onboarding overlay to its centre).
+        /// </summary>
+        private void UpdatePlaceButton()
+        {
+            if (placeButton == null || !placeButton.gameObject.activeSelf) return;
+
+            placeButton.interactable = PrefabSpawningController.placementPoseIsValid;
+            if (interactButton != null)
             {
-                //Initial start, load the clip
-                if (!TapToPlaceClipWasLoaded)
-                {
-                    TapToPlaceClipWasLoaded = true;
-                    videoClipTapToPlace.StartVideo();
-                    videoFrameTapToPlace.transform.localScale = Vector3.one;
-                }
-                else
-                {
-                    videoFrameTapToPlace.transform.localScale = Vector3.one;
-                }
+                var position = placeButton.transform.position;
+                position.y = interactButton.position.y;
+                placeButton.transform.position = position;
             }
-            else // Off
-            {
-                videoFrameTapToPlace.transform.localScale = Vector3.zero;
-            }
+        }
+
+        /// <summary>
+        /// Places the training assembly when the place button is pressed.
+        /// </summary>
+        private void PlaceButtonPressed()
+        {
+            PrefabSpawningController.PlaceSetup();
         }
         /// <summary>
         /// Start different functions.
@@ -219,6 +266,7 @@ namespace UI
             TrackingstateDependentOnboarding();
             ShowTrackingInformation();
             ShowTrackingInformationDuringOnboarding();
+            UpdatePlaceButton();
         }
         /// <summary>
         /// Adds listener to prefabSpawned and repostion.
@@ -229,6 +277,8 @@ namespace UI
                 m_CameraManager.frameReceived += FrameChanged;
             if (videoPlayerMoveDevice != null)
                 videoPlayerMoveDevice.loopPointReached += EndReached;
+            if (placeButton != null)
+                placeButton.onClick.AddListener(PlaceButtonPressed);
 
             PrefabSpawningController.prefabSpawned += PlacedObject;
             PrefabSpawningController.RepositionPrefab += OnRepositionPrefab;
@@ -246,6 +296,8 @@ namespace UI
                 m_CameraManager.frameReceived -= FrameChanged;
             if (videoPlayerMoveDevice != null)
                 videoPlayerMoveDevice.loopPointReached -= EndReached;
+            if (placeButton != null)
+                placeButton.onClick.RemoveListener(PlaceButtonPressed);
 
             PrefabSpawningController.prefabSpawned -= PlacedObject;
             PrefabSpawningController.RepositionPrefab -= OnRepositionPrefab;
@@ -256,7 +308,8 @@ namespace UI
         /// <param name="args"></param>
         void FrameChanged(ARCameraFrameEventArgs args)
         {
-            if (PrefabSpawningController.placementPoseIsValid && moveDeviceLoops>2)
+            //The scanning clip plays at least once in full, then placing starts as soon as a surface is found
+            if (PrefabSpawningController.placementPoseIsValid && moveDeviceLoops > 0)
             {
                 ToggleMoveDeviceAnimation(false);
                 ToggleTapToPlaceAnimation(true);
@@ -286,13 +339,15 @@ namespace UI
             ToggleMoveDeviceAnimation(false);
             ToggleTapToPlaceAnimation(false);
 
-            //Deactivate the videoframes
+            //Deactivate the videoframe
             videoFrameMoveDevice.SetActive(false);
-            videoFrameTapToPlace.SetActive(false);
+
+            //Give the top panel back to the training instructions
+            if (topPanel != null)
+                topPanel.EndOnboardingText();
 
             //Clip onload automatically when the frame is disabled
             moveDeviceClipWasLoaded = false;
-            TapToPlaceClipWasLoaded = false;
         }
 
         /// <summary>
@@ -300,9 +355,8 @@ namespace UI
         /// </summary>
         void OnRepositionPrefab()
         {
-            //Activate the videoframes
+            //Activate the videoframe
             videoFrameMoveDevice.SetActive(true);
-            videoFrameTapToPlace.SetActive(true);
 
             //Toggle the animation on
             ToggleMoveDeviceAnimation(true);

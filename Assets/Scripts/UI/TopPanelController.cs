@@ -38,6 +38,15 @@ namespace UI
         private bool successAnimationPlaying;
         private bool errorAnimationPlaying;
         private readonly Color initialColor = new Color(0.1215686f, 0.1215686f, 0.1215686f, 0.5882353f);
+        /// <summary>
+        /// The instruction text that was shown before the onboarding hints, restored afterwards.
+        /// </summary>
+        /// <value>Null while no onboarding hint is shown.</value>
+        private string instructionBeforeOnboarding;
+        /// <summary>
+        /// Whether the training sent its first instruction; before that the progress shows 0 %.
+        /// </summary>
+        private bool trainingStarted;
 
 
         [SerializeField]
@@ -62,6 +71,7 @@ namespace UI
         
         private void OnTriggerTopPanelChange(string newInstructionText, int newCompletionPercentage)
         {
+            trainingStarted = true;
             UpdateInstructionText(newInstructionText);
             UpdatePercentage(newCompletionPercentage);
         }
@@ -181,6 +191,33 @@ namespace UI
             progressBar.fillAmount = (float)newPercentage/100;
         }
     
+        /// <summary>
+        /// Shows an onboarding hint (scanning, placing) in the instruction text until EndOnboardingText is called.
+        /// </summary>
+        /// <param name="text">The onboarding hint.</param>
+        public void ShowOnboardingText(string text)
+        {
+            if (instructionBeforeOnboarding == null)
+            {
+                instructionBeforeOnboarding = instruction.text;
+                if (!trainingStarted)
+                    UpdatePercentage(0);
+            }
+            if (instruction.text != text)
+                instruction.text = text;
+            instruction.enabled = true;
+        }
+
+        /// <summary>
+        /// Restores the instruction text that was shown before the onboarding hints (e.g. after repositioning).
+        /// </summary>
+        public void EndOnboardingText()
+        {
+            if (instructionBeforeOnboarding == null) return;
+            instruction.text = instructionBeforeOnboarding;
+            instructionBeforeOnboarding = null;
+        }
+
         /// <summary>
         /// Updates the instruction text at the top of the assistance menu
         /// </summary>
