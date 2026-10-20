@@ -2842,10 +2842,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'To grab an object, move your phone close to it until the cursor points at it and it is outlined in blue. Then press the "Grab" button <b>(right)</b>.
+  m_text: 'To grab an object, move your phone close to it until the cursor points at it and it is outlined in blue. Then press the "Grab" button <b>(right)</b>. The object now moves with your phone.
 
 
-    The object now moves with your phone. Press "Release" to put it down.'
+    Press "Release" to put it down.'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
