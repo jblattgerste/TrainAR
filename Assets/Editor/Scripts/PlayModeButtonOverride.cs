@@ -203,6 +203,9 @@ namespace Editor.Scripts
             var outputDirectory = target == BuildTarget.Android ? "Builds/Android" : "Builds/iOS";
             Directory.CreateDirectory(outputDirectory);
 
+            //All trainings into the build, their previews rendered fresh
+            TrainingPreviews.PrepareBuild();
+
             //Create new settings for this build
             BuildPlayerOptions buildPlayerOptions = new BuildPlayerOptions
             {

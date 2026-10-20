@@ -57,8 +57,9 @@ namespace UI
         /// </summary>
         private void Awake()
         {
-            //Store the default sprite for the direct info box
-            defaultDirectInfoPicture = directInfoPicture.sprite;
+            //The default picture of the direct info box is the training's expert (else the one set in the scene)
+            var training = Others.TrainingSelection.Current;
+            defaultDirectInfoPicture = training != null && training.expert != null ? training.expert : directInfoPicture.sprite;
             
             StatemachineConnector.Instance.TriggerExpertInsights += OpenInfobox;
         }

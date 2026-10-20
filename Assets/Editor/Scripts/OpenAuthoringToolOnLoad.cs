@@ -85,7 +85,7 @@ namespace Editor.Scripts
             // Prevent a failing initialization from looping; leave diagnostics visible.
             SessionState.SetBool(AttemptedKey, true);
             TrainAREditorMenu.SwitchToTrainARMode();
-            if (SceneManager.GetActiveScene().path == "Assets/Scene.unity")
+            if (TrainARTrainings.IsTrainingScene(SceneManager.GetActiveScene().path))
                 TrainARStartupState.instance.Complete();
         }
 

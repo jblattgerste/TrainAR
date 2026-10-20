@@ -55,6 +55,13 @@ namespace Others
         [SerializeField]
         [Tooltip("Reference to the Rect transform of the error indicator in the scenario conclusion overlay")]
         private RectTransform errorIndicator;
+        /// <summary>
+        /// The expert's picture in the scenario conclusion overlay; set to the training's expert.
+        /// </summary>
+        /// <value>Once per scene.</value>
+        [SerializeField]
+        [Tooltip("The expert's picture in the scenario conclusion overlay; set to the training's expert.")]
+        private UnityEngine.UI.Image expertImage;
     
         /// <summary>
         /// Stores the real time to calculate the needed time for the scenario.
@@ -94,7 +101,12 @@ namespace Others
         {
             //Position the error indicator.
             PositionErrorIndicator();
-            
+
+            //Show the training's expert
+            var training = TrainingSelection.Current;
+            if (expertImage != null && training != null && training.expert != null)
+                expertImage.sprite = training.expert;
+
             //Activate completion overlay
             completionOverlay.SetActive(true);
             

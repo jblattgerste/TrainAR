@@ -1,30 +1,18 @@
 # Getting Started Guide
 
-The Getting Started Guide is meant to provide a "quickstart" for your development of TrainAR trainings and guides you through the process of creating a very simple TrainAR training from scratch. This Getting Started Guide presumes that you already completed the [Installation & Setup](https://jblattgerste.github.io/TrainAR/manual/Setup.html) of Unity and TrainAR. There is a training assembly included in the TrainAR repository that can be deployed directly for testing. You can also try to deploy and test this example first and play around with it as we will delete this shortly: For this, directly skip to "[Deploy your training to your phone](https://jblattgerste.github.io/TrainAR/manual/GettingStarted.html#deploy-your-training-to-your-phone)".
+The Getting Started Guide is meant to provide a "quickstart" for your development of TrainAR trainings and guides you through the process of creating a very simple TrainAR training from scratch. This Getting Started Guide presumes that you already completed the [Installation & Setup](https://jblattgerste.github.io/TrainAR/manual/Setup.html) of Unity and TrainAR. TrainAR ships with two example trainings, **Coffee** and **Otto Engine**, that can be deployed directly for testing. You can also try to deploy and test them first: For this, directly skip to "[Deploy your training to your phone](https://jblattgerste.github.io/TrainAR/manual/GettingStarted.html#deploy-your-training-to-your-phone)". The examples stay untouched, as we create our own training next to them.
 
-## Delete the example TrainAR training
+## Create a new training
 
 Open the TrainAR Unity project with **Unity 6.7 Alpha (`6000.7.0a6`)** through Unity Hub, as described in [Installation & Setup](Setup.md). The authoring scene, layout, and training graph open automatically on the first launch. If needed, choose **TrainAR → Open TrainAR Authoring Tool** from the top menu. You should now see the TrainAR Authoring Tool roughly like this:
 
 ![](../resources/TrainARBasicsOverview.png)
 
-As you can see, there already is a TrainAR training. But we want to develop a TrainAR training from scratch and therefore have to delete the example training.
-
-> [!CAUTION]
-> For this we have to delete all TrainAR Objects and the TrainAR stateflow.
-
-To accomplish this, we can click somewhere into the Scene (blue) press <kbd>CTRL</kbd> + <kbd>A</kbd> and then <kbd>Delete</kbd>/<kbd>DEL</kbd> (<kbd>Backspace</kbd> on macOS) to delete all TrainAR Objects.
-
-Afterwards, click somewhere into the Scripting Graph (red) and then again press <kbd>CTRL</kbd> + <kbd>A</kbd> to select the complete stateflow in the TrainAR statemachine.
-
-> [!IMPORTANT]
-> **Deselect** the very first node (**TrainAR: Onboarding completed and training assembly placed**), as we need this for each training.
-
-Then press <kbd>Delete</kbd>/<kbd>DEL</kbd> (<kbd>Backspace</kbd> on macOS). This deletes the complete TrainAR Stateflow, and the TrainAR Authoring Tool should look roughly like this:
+As you can see, the Coffee example training is open. Next to the Simulator on the right is the **TrainAR Trainings** tab, which lists all trainings of the project (see [Managing Trainings](Trainings.md)). Click **+ Add new training** at the bottom of the list and give your training a name, for example `My Coffee`. TrainAR creates the new training and opens it in the authoring tool.
 
 ![](../resources/TrainAR_Overview.PNG)
 
-In the scene window you should now still see the reference setup of the current Workspace (a room of black tiles, a table and a female character) but no TrainAR Objects in the Hierarchy or Scene and only the very first, green **TrainAR: Onboarding completed and training assembly placed** node. The reference setup should give you an idea of the size of objects in regards to the real world when viewed in the authoring tool and is not deployed with the TrainAR training.
+In the scene window you should now see the reference setup of the current Workspace (a room of black tiles, a table and a female character) but no TrainAR Objects in the Hierarchy or Scene. The stateflow only contains the green **TrainAR: Onboarding completed and training assembly placed** node, where every training starts, and the **TrainAR: Training Conclusion** node, where it ends. The reference setup should give you an idea of the size of objects in regards to the real world when viewed in the authoring tool and is not deployed with the TrainAR training.
 
 ## Create TrainAR Objects
 
@@ -52,7 +40,7 @@ In the Bottom of the Unity window you should see the window with the Script Grap
 
 ![](../resources/TrainAR_Overview_ScriptGraphTab.PNG)
 
-Here you can create the flow of your training by creating nodes and connecting them. There already is one node in the Script Graph with the description **TrainAR: Onboarding completed and training assembly placed**.
+Here you can create the flow of your training by creating nodes and connecting them. There already are two nodes in the Script Graph: **TrainAR: Onboarding completed and training assembly placed**, where the training starts, and **TrainAR: Training Conclusion**, where it ends.
 
 This is the entry point of your training flow and makes sure that when your training starts, TrainAR already handled onboarding and the training assembly was placed into a valid position by the user.
 
@@ -97,7 +85,7 @@ Don't forget to connect the stateflow of the previous node.
 
 ![](../resources/GettingStarted_QuestionnaireNode.gif)
 
-Finally, create a **TrainAR: Training Conclusion** node and connect the node from the previous step with it. This tells TrainAR to show the TrainAR Training Assessment and that we are done with the training.
+Finally, connect the node from the previous step with the **TrainAR: Training Conclusion** node that is already part of every new training. This tells TrainAR to show the TrainAR Training Assessment and that we are done with the training.
 
 ![](../resources/TrainAR_ScriptingGraph_TrainingComplete.PNG)
 
@@ -122,13 +110,13 @@ Wait for the process to finish.
 
 Afterwards, unlock your phone.
 
-Your Training should now be deployed to your phone and automatically start. It should also appear as a "TrainAR" App, installed on your device in the menu.
+Your training should now be deployed to your phone and the app should start automatically. It should also appear as a "TrainAR" App, installed on your device in the menu. Every training of the project is part of the app: the home screen lists them all.
 
 ## Test your training
 
 If it did not open automatically, open the now deployed application on your phone through the menu. Your phone might ask you if the TrainAR app should be allowed to use your phone's camera. Confirm this, as we need the camera to use Augmented Reality.
 
-A short tutorial that describes the interaction concept of TrainAR should appear. Navigate through the tutorial/onboarding to start your training. 
+The home screen shows all trainings of the project with their name, description, expert and a preview of their setup. Tap your training. A short tutorial that describes the interaction concept of TrainAR should appear. Navigate through the tutorial/onboarding to start your training. When the training is completed, you get back to the home screen. 
 
 The camera feed of your device should start and you're asked to find a flat surface to scan. Follow these instructions. This should result in the setup you just created being placed onto a table surface.
 
