@@ -39,6 +39,6 @@ The preview shows the training's setup as the trainee sees it after placing it, 
 
 ## The home screen
 
-After starting the app, trainees see the home screen with all trainings. Tapping a training starts its onboarding, which first presents the training's name, description, expert and preview. At the end of a training, and with the back button in the onboarding, trainees get back to the home screen.
+After starting the app, trainees see the home screen with all trainings: first the two examples, then all other trainings in the order they were created. Tapping a training starts its onboarding, which first presents the training's name, description, expert and preview. At the end of a training, and with the back button in the onboarding, trainees get back to the home screen.
 
 Below the trainings, the home screen shows a footer with links to GitHub, Mixality and the documentation, information on funding, credits and how to cite TrainAR, and a contact link. If you do not want it in your app, uncheck **Show the TrainAR footer on the home screen** at the bottom of the TrainAR Trainings tab.

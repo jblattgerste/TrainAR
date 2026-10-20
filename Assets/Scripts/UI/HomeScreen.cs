@@ -47,12 +47,13 @@ namespace UI
             if (catalog == null) return;
             if (footer != null) footer.SetActive(catalog.showFooter);
             MoveBelowNotch();
-            var index = entryTemplate.transform.GetSiblingIndex();
             foreach (var training in catalog.trainings)
             {
                 if (training == null) continue;
                 var entry = Instantiate(entryTemplate, list);
-                entry.transform.SetSiblingIndex(++index);           // above the footer
+                // directly above the footer, in the catalog's order (the cards' shadows insert themselves before them)
+                if (footer != null) entry.transform.SetSiblingIndex(footer.transform.GetSiblingIndex());
+                else entry.transform.SetAsLastSibling();
                 entry.SetActive(true);
                 entry.transform.Find("Name").GetComponent<TMP_Text>().text = training.displayName;
                 entry.transform.Find("Description").GetComponent<TMP_Text>().text = training.description;

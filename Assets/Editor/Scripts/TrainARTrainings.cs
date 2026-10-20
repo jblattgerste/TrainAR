@@ -56,6 +56,13 @@ namespace Editor.Scripts
         }
 
         /// <summary>
+        /// All trainings in the order of the home screen: the examples first (Coffee, then the Four-Stroke Engine), then
+        /// every other training in the order it was created (new trainings are added at the end).
+        /// </summary>
+        public static List<string> Ordered() =>
+            All().OrderBy(n => InfoFor(n).created).ThenBy(n => n == DefaultTraining ? 0 : 1).ThenBy(n => n).ToList();
+
+        /// <summary>
         /// Whether a scene path is the scene of a training.
         /// </summary>
         public static bool IsTrainingScene(string scenePath) =>
@@ -116,6 +123,7 @@ namespace Editor.Scripts
             var created = InfoFor(name);
             created.displayName = displayName;
             created.preview = null;
+            created.created = System.DateTime.UtcNow.Ticks;
             Current = name;                                     // its scene is open now
             EditorUtility.SetDirty(created);
             Sync();
@@ -210,7 +218,7 @@ namespace Editor.Scripts
                 catalog = ScriptableObject.CreateInstance<TrainingCatalog>();
                 AssetDatabase.CreateAsset(catalog, CatalogPath);
             }
-            var names = All().OrderBy(n => n == DefaultTraining ? 0 : 1).ThenBy(n => n).ToList();
+            var names = Ordered();
             catalog.trainings = names.Select(InfoFor).ToList();
             EditorUtility.SetDirty(catalog);
 

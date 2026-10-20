@@ -35,5 +35,10 @@ namespace Others
         /// </summary>
         [HideInInspector]
         public string sceneName;
+        /// <summary>
+        /// When the training was created (UTC ticks; 0 for the example trainings): trainings are listed in the order they were created.
+        /// </summary>
+        [HideInInspector]
+        public long created;
     }
 }

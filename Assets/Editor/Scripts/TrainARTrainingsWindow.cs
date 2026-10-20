@@ -49,7 +49,7 @@ namespace Editor.Scripts
             textWidth = Mathf.Max(120, position.width - (ExpertSize * 2 / 3 + PreviewSize) - 44);
             scroll = EditorGUILayout.BeginScrollView(scroll, false, false, GUIStyle.none, GUI.skin.verticalScrollbar,
                 GUIStyle.none);
-            var trainings = TrainARTrainings.All();
+            var trainings = TrainARTrainings.Ordered();
             foreach (var name in trainings) DrawTraining(name, trainings.Count);
             EditorGUILayout.Space();
             if (GUILayout.Button("+ Add new training", GUILayout.Height(30)))
