@@ -8,6 +8,7 @@ namespace UI
     /// the element that follows its position, size and scale. On buttons, it is only shown while they can be used.
     /// </summary>
     [RequireComponent(typeof(RectTransform))]
+    [DefaultExecutionOrder(100)]    // after KeepAtBottom and other scripts that move the element in LateUpdate
     public class SoftShadow : MonoBehaviour
     {
         /// <summary>

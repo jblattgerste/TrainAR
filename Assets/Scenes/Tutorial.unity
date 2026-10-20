@@ -785,6 +785,7 @@ GameObject:
   - component: {fileID: 53249325}
   - component: {fileID: 53249324}
   - component: {fileID: 53249323}
+  - component: {fileID: 53249326}
   m_Layer: 5
   m_Name: Expert
   m_TagString: Untagged
@@ -864,6 +865,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 53249321}
   m_CullTransparentMesh: 1
+--- !u!114 &53249326
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 53249321}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f2413b42663db45ce9080a8a1d3c00da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::UI.SoftShadow
+  shadowSprite: {fileID: 21300000, guid: 5f9ea7bd151ab4127a4f84a0ee5bff70, type: 3}
+  round: 1
+  offset: 10
+  opacity: 0.35
 --- !u!1 &138668728
 GameObject:
   m_ObjectHideFlags: 0
@@ -1464,7 +1481,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Throughout this training, you will always see the very next action to perform at the top of the screen. Afterwards, a sound tells you if it was correct, and the next step is shown.
+  m_text: 'Throughout this training, the blue bar at the top tells you your next action and shows your progress.
+
+
+    After each action, a sound lets you know whether it was correct, and the next instruction appears.'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -2995,10 +3015,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'To grab an object, move your phone close to it until the cursor points at it and it is outlined in blue. Then press the "Grab" button <b>(right)</b>. The object now moves with your phone.
+  m_text: 'To grab an object, point the cursor at it and move your phone close until it is outlined in blue. Then press the "Grab" button <b>(right)</b>. The object now moves with your phone.
 
 
-    Press "Release" to put it down.'
+    Press "Release" to put it down again.'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -5278,7 +5298,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Follow the instructions
+  m_text: Instructions at the top
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -6006,7 +6026,7 @@ MonoBehaviour:
   m_text: 'Sometimes an expert shares insights or tips during the training. They appear at the top and disappear on their own.
 
 
-    For some incorrect actions, an overlay may appear with additional information. Tap "Understood" to continue.'
+    For some incorrect actions, an overlay explains what went wrong. Read it and tap "Understood" to continue.'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -7602,7 +7622,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: To combine two objects, hold one of them and move it into the other one. If they can be combined, the orange "Combine" button appears <b>(left)</b>. Press it to combine them.
+  m_text: To combine two objects, hold one of them and move it into the other one. If they can be combined, the held object turns transparent and the orange "Combine" button appears <b>(left)</b>. Press it to combine them.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -8197,6 +8217,7 @@ GameObject:
   - component: {fileID: 1777391419}
   - component: {fileID: 1777391421}
   - component: {fileID: 1777391420}
+  - component: {fileID: 1777391422}
   m_Layer: 5
   m_Name: Bubble
   m_TagString: Untagged
@@ -8263,6 +8284,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1777391418}
   m_CullTransparentMesh: 1
+--- !u!114 &1777391422
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1777391418}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f2413b42663db45ce9080a8a1d3c00da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::UI.SoftShadow
+  shadowSprite: {fileID: 21300000, guid: ca82269d3213244c783ffc2a9943233f, type: 3}
+  round: 0
+  offset: 10
+  opacity: 0.35
 --- !u!1 &1840857393
 GameObject:
   m_ObjectHideFlags: 0
@@ -9265,7 +9302,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'To interact with an object, really move your phone close to it until the cursor points at it and it is outlined in blue. Then press the "Interact" button <b>(left)</b>.
+  m_text: 'To interact with an object, point the cursor in the middle of your screen at it and move your phone close until the object is outlined in blue. Then press the "Interact" button <b>(left)</b>.
 
 
     Objects can also be interacted with while you hold them.'

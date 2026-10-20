@@ -46,6 +46,7 @@ namespace UI
             var catalog = TrainingCatalog.Instance;
             if (catalog == null) return;
             if (footer != null) footer.SetActive(catalog.showFooter);
+            MoveBelowNotch();
             var index = entryTemplate.transform.GetSiblingIndex();
             foreach (var training in catalog.trainings)
             {
@@ -63,6 +64,19 @@ namespace UI
                 var chosen = training;
                 entry.GetComponent<Button>().onClick.AddListener(() => Choose(chosen));
             }
+        }
+
+        /// <summary>
+        /// Moves the list down by the notch (the part of the screen above the safe area), so the space between the notch
+        /// and the logo stays the same as on phones without one.
+        /// </summary>
+        private void MoveBelowNotch()
+        {
+            var layout = list.GetComponent<VerticalLayoutGroup>();
+            var canvasRect = (RectTransform)GetComponentInParent<Canvas>().rootCanvas.transform;
+            var notch = (Screen.height - Screen.safeArea.yMax) / Screen.height * canvasRect.rect.height;
+            layout.padding.top += Mathf.RoundToInt(notch);
+            LayoutRebuilder.MarkLayoutForRebuild(list);
         }
 
         /// <summary>

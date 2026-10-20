@@ -666,10 +666,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'To grab an object, move your phone close to it until the cursor points at it and it is outlined in blue. Then press the "Grab" button <b>(right)</b>. The object now moves with your phone.
+  m_text: 'To grab an object, point the cursor at it and move your phone close until it is outlined in blue. Then press the "Grab" button <b>(right)</b>. The object now moves with your phone.
 
 
-    Press "Release" to put it down.'
+    Press "Release" to put it down again.'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -3017,7 +3017,7 @@ MonoBehaviour:
   m_text: 'Sometimes an expert shares insights or tips during the training. They appear at the top and disappear on their own.
 
 
-    For some incorrect actions, an overlay may appear with additional information. Tap "Understood" to continue.'
+    For some incorrect actions, an overlay explains what went wrong. Read it and tap "Understood" to continue.'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -10461,7 +10461,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Follow the instructions
+  m_text: Instructions at the top
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -11245,7 +11245,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Throughout this training, you will always see the very next action to perform at the top of the screen. Afterwards, a sound tells you if it was correct, and the next step is shown.
+  m_text: 'Throughout this training, the blue bar at the top tells you your next action and shows your progress.
+
+
+    After each action, a sound lets you know whether it was correct, and the next instruction appears.'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -11560,7 +11563,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'To interact with an object, really move your phone close to it until the cursor points at it and it is outlined in blue. Then press the "Interact" button <b>(left)</b>.
+  m_text: 'To interact with an object, point the cursor in the middle of your screen at it and move your phone close until the object is outlined in blue. Then press the "Interact" button <b>(left)</b>.
 
 
     Objects can also be interacted with while you hold them.'
@@ -15184,7 +15187,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: To combine two objects, hold one of them and move it into the other one. If they can be combined, the orange "Combine" button appears <b>(left)</b>. Press it to combine them.
+  m_text: To combine two objects, hold one of them and move it into the other one. If they can be combined, the held object turns transparent and the orange "Combine" button appears <b>(left)</b>. Press it to combine them.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -16945,15 +16948,15 @@ RectTransform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 12.774847, y: 2.2632837, z: 0.46602044}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1027559957636823669}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 94.23126, y: 399}
-  m_SizeDelta: {x: 100, y: 100}
+  m_AnchoredPosition: {x: 155, y: 400}
+  m_SizeDelta: {x: 1070, y: 380}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1027559956329933777
 GameObject:
@@ -16966,6 +16969,7 @@ GameObject:
   - component: {fileID: 1027559956329933776}
   - component: {fileID: 1027559956329933782}
   - component: {fileID: 1027559956329933783}
+  - component: {fileID: 1027559956329933784}
   m_Layer: 5
   m_Name: Textbox Background
   m_TagString: Untagged
@@ -17001,8 +17005,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
-  m_Type: 0
+  m_Sprite: {fileID: 21300000, guid: 31df632f9d9b4137bdd7b1a790590481, type: 3}
+  m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -17011,6 +17015,22 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &1027559956329933784
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1027559956329933777}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f2413b42663db45ce9080a8a1d3c00da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::UI.SoftShadow
+  shadowSprite: {fileID: 21300000, guid: ca82269d3213244c783ffc2a9943233f, type: 3}
+  round: 0
+  offset: 10
+  opacity: 0.35
 --- !u!224 &1027559956417056512
 RectTransform:
   m_ObjectHideFlags: 0
@@ -17212,7 +17232,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.933, g: 0.933, b: 0.933, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -17369,8 +17389,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -595, y: 400}
-  m_SizeDelta: {x: 416, y: 416}
+  m_AnchoredPosition: {x: -560, y: 400}
+  m_SizeDelta: {x: 300, y: 300}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1027559956524370355
 GameObject:
@@ -17384,6 +17404,7 @@ GameObject:
   - component: {fileID: 1027559956524370352}
   - component: {fileID: 1027559956524370353}
   - component: {fileID: 1027559956524370356}
+  - component: {fileID: 1027559956524370357}
   m_Layer: 5
   m_Name: Expert
   m_TagString: Untagged
@@ -17404,6 +17425,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Mask
   m_ShowMaskGraphic: 1
+--- !u!114 &1027559956524370357
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1027559956524370355}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f2413b42663db45ce9080a8a1d3c00da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::UI.SoftShadow
+  shadowSprite: {fileID: 21300000, guid: 5f9ea7bd151ab4127a4f84a0ee5bff70, type: 3}
+  round: 1
+  offset: 10
+  opacity: 0.35
 --- !u!222 &1027559956640670308
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -18194,8 +18231,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 137, y: 400}
-  m_SizeDelta: {x: 1151.8071, y: 300.27603}
+  m_AnchoredPosition: {x: 155, y: 400}
+  m_SizeDelta: {x: 990, y: 320}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1027559957429514225
 GameObject:
@@ -18275,12 +18312,12 @@ MonoBehaviour:
   m_fontSize: 50
   m_fontSizeBase: 50
   m_fontWeight: 400
-  m_enableAutoSizing: 0
-  m_fontSizeMin: 18
-  m_fontSizeMax: 72
+  m_enableAutoSizing: 1
+  m_fontSizeMin: 28
+  m_fontSizeMax: 46
   m_fontStyle: 0
-  m_HorizontalAlignment: 2
-  m_VerticalAlignment: 512
+  m_HorizontalAlignment: 1
+  m_VerticalAlignment: 4096
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_characterHorizontalScale: 1
