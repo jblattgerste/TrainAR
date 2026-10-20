@@ -13,13 +13,14 @@ namespace Editor.Scripts
     /// </summary>
     public class TrainARTrainingsWindow : EditorWindow
     {
-        private const float PreviewSize = 110, ExpertSize = 58;
+        private const float PreviewSize = 110, ExpertSize = 58, ButtonWidth = 70;
 
         private string editing, editName, editDescription;
         private Sprite editExpert;
         private int pickerId;
         private Vector2 scroll;
         private GUIStyle nameStyle;
+        private float textWidth;
 
         /// <summary>
         /// Shows the trainings tab (docked next to the simulator if it is not part of the layout yet).
@@ -42,8 +43,12 @@ namespace Editor.Scripts
 
         private void OnGUI()
         {
-            nameStyle ??= new GUIStyle(EditorStyles.boldLabel) { fontSize = 14 };
-            scroll = EditorGUILayout.BeginScrollView(scroll);
+            nameStyle ??= new GUIStyle(EditorStyles.boldLabel) { fontSize = 14, wordWrap = true };
+            // the width next to the picture (window minus picture, box paddings and the vertical scrollbar): the text
+            // wraps to it and the buttons go into two rows when it gets narrow, so nothing is cut off
+            textWidth = Mathf.Max(120, position.width - (ExpertSize * 2 / 3 + PreviewSize) - 44);
+            scroll = EditorGUILayout.BeginScrollView(scroll, false, false, GUIStyle.none, GUI.skin.verticalScrollbar,
+                GUIStyle.none);
             var trainings = TrainARTrainings.All();
             foreach (var name in trainings) DrawTraining(name, trainings.Count);
             EditorGUILayout.Space();
@@ -83,7 +88,7 @@ namespace Editor.Scripts
                 DrawRoundExpert(new Rect(art.x, art.center.y - ExpertSize / 2, ExpertSize, ExpertSize), info.expert);
             }
 
-            EditorGUILayout.BeginVertical(GUILayout.MinHeight(PreviewSize));
+            EditorGUILayout.BeginVertical(GUILayout.MinHeight(PreviewSize), GUILayout.Width(textWidth));
             if (editing == name) DrawEditor(info);
             else DrawInfo(name, info, count);
             EditorGUILayout.EndVertical();
@@ -151,20 +156,33 @@ namespace Editor.Scripts
 
         private void DrawInfo(string name, Others.TrainingInfo info, int count)
         {
+            // the note goes below the name if both do not fit into one line
+            var note = name == TrainARTrainings.Current ? "(open in the authoring tool)" : null;
+            var noteFits = note == null || nameStyle.CalcSize(new GUIContent(info.displayName)).x +
+                EditorStyles.miniLabel.CalcSize(new GUIContent(note)).x + 8 <= textWidth;
             EditorGUILayout.BeginHorizontal();
-            GUILayout.Label(info.displayName, nameStyle);
-            if (name == TrainARTrainings.Current) GUILayout.Label("(open in the authoring tool)", EditorStyles.miniLabel);
+            GUILayout.Label(info.displayName, nameStyle, GUILayout.MaxWidth(textWidth));
+            if (note != null && noteFits) GUILayout.Label(note, EditorStyles.miniLabel);
             GUILayout.FlexibleSpace();
             EditorGUILayout.EndHorizontal();
-            EditorGUILayout.LabelField(string.IsNullOrEmpty(info.description) ? "No description yet." : info.description,
-                EditorStyles.wordWrappedLabel);
+            if (note != null && !noteFits) GUILayout.Label(note, EditorStyles.miniLabel);
+            GUILayout.Label(string.IsNullOrEmpty(info.description) ? "No description yet." : info.description,
+                EditorStyles.wordWrappedLabel, GUILayout.Width(textWidth));
             GUILayout.FlexibleSpace();
 
+            // one row of four buttons, or two rows of two when the tab is narrow
+            var oneRow = textWidth >= 4 * ButtonWidth + 12;
+            var width = oneRow ? ButtonWidth : (textWidth - 6) / 2;
             EditorGUILayout.BeginHorizontal();
-            GUILayout.FlexibleSpace();
-            if (GUILayout.Button("Open", GUILayout.Width(70))) OpenInAuthoringTool(name);
-            if (GUILayout.Button("Edit", GUILayout.Width(70))) StartEditing(name);
-            if (GUILayout.Button("Duplicate", GUILayout.Width(70)))
+            if (oneRow) GUILayout.FlexibleSpace();
+            if (GUILayout.Button("Open", GUILayout.Width(width))) OpenInAuthoringTool(name);
+            if (GUILayout.Button("Edit", GUILayout.Width(width))) StartEditing(name);
+            if (!oneRow)
+            {
+                EditorGUILayout.EndHorizontal();
+                EditorGUILayout.BeginHorizontal();
+            }
+            if (GUILayout.Button("Duplicate", GUILayout.Width(width)))
                 NameDialog.Ask("Duplicate training", "Name of the copy:", info.displayName + " Copy", display =>
                 {
                     StartEditing(TrainARTrainings.Duplicate(name, display));
@@ -173,7 +191,7 @@ namespace Editor.Scripts
             using (new EditorGUI.DisabledScope(count <= 1))
             using (new BackgroundColor(new Color(1f, 0.45f, 0.45f)))
                 if (GUILayout.Button(new GUIContent("Delete", count <= 1 ? "The last training cannot be deleted." : ""),
-                        GUILayout.Width(70)) &&
+                        GUILayout.Width(width)) &&
                     EditorUtility.DisplayDialog("Delete training", $"Delete \"{info.displayName}\" with its scene, " +
                         "statemachine and everything in its folder? This cannot be undone.", "Delete", "Cancel"))
                 {
@@ -194,9 +212,11 @@ namespace Editor.Scripts
 
         private void DrawEditor(Others.TrainingInfo info)
         {
-            editName = EditorGUILayout.TextField("Name", editName);
+            EditorGUILayout.LabelField("Name");
+            editName = EditorGUILayout.TextField(editName, GUILayout.Width(textWidth));
             EditorGUILayout.LabelField("Description");
-            editDescription = EditorGUILayout.TextArea(editDescription, EditorStyles.textArea, GUILayout.MinHeight(54));
+            editDescription = EditorGUILayout.TextArea(editDescription, EditorStyles.textArea, GUILayout.MinHeight(54),
+                GUILayout.Width(textWidth));
             GUILayout.FlexibleSpace();
 
             EditorGUILayout.BeginHorizontal();
