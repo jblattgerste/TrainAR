@@ -119,6 +119,21 @@ namespace Editor.Scripts
             Current = name;                                     // its scene is open now
             EditorUtility.SetDirty(created);
             Sync();
+            ShowInProjectWindow(name);
+        }
+
+        /// <summary>
+        /// Shows the training's folder in the Project window (by pinging its scene, which opens the folder and
+        /// highlights the scene without changing the selection).
+        /// </summary>
+        public static void ShowInProjectWindow(string name)
+        {
+            // after a layout change the Project window only exists in the next editor update
+            EditorApplication.delayCall += () =>
+            {
+                var scene = AssetDatabase.LoadAssetAtPath<SceneAsset>(ScenePath(name));
+                if (scene != null) EditorGUIUtility.PingObject(scene);
+            };
         }
 
         /// <summary>

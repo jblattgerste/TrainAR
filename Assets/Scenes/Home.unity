@@ -3477,6 +3477,7 @@ GameObject:
   - component: {fileID: 504964201}
   - component: {fileID: 504964200}
   - component: {fileID: 504964199}
+  - component: {fileID: 504964203}
   m_Layer: 0
   m_Name: GitHub
   m_TagString: Untagged
@@ -3604,7 +3605,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  m_Sprite: {fileID: 21300000, guid: 31df632f9d9b4137bdd7b1a790590481, type: 3}
   m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -3613,7 +3614,7 @@ MonoBehaviour:
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
+  m_PixelsPerUnitMultiplier: 2
 --- !u!222 &504964202
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3622,6 +3623,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 504964197}
   m_CullTransparentMesh: 0
+--- !u!114 &504964203
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 504964197}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f2413b42663db45ce9080a8a1d3c00da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::UI.SoftShadow
+  shadowSprite: {fileID: 21300000, guid: ca82269d3213244c783ffc2a9943233f, type: 3}
+  round: 0
+  offset: 10
+  opacity: 0.35
 --- !u!1 &522834139
 GameObject:
   m_ObjectHideFlags: 0
@@ -4470,6 +4487,7 @@ GameObject:
   - component: {fileID: 705202201}
   - component: {fileID: 705202200}
   - component: {fileID: 705202199}
+  - component: {fileID: 705202203}
   m_Layer: 0
   m_Name: Mixality
   m_TagString: Untagged
@@ -4597,7 +4615,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  m_Sprite: {fileID: 21300000, guid: 31df632f9d9b4137bdd7b1a790590481, type: 3}
   m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -4606,7 +4624,7 @@ MonoBehaviour:
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
+  m_PixelsPerUnitMultiplier: 2
 --- !u!222 &705202202
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -4615,6 +4633,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 705202197}
   m_CullTransparentMesh: 0
+--- !u!114 &705202203
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 705202197}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f2413b42663db45ce9080a8a1d3c00da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::UI.SoftShadow
+  shadowSprite: {fileID: 21300000, guid: ca82269d3213244c783ffc2a9943233f, type: 3}
+  round: 0
+  offset: 10
+  opacity: 0.35
 --- !u!1 &719835315
 GameObject:
   m_ObjectHideFlags: 0
@@ -7200,6 +7234,7 @@ GameObject:
   - component: {fileID: 1152022539}
   - component: {fileID: 1152022538}
   - component: {fileID: 1152022537}
+  - component: {fileID: 1152022541}
   m_Layer: 0
   m_Name: Documentation
   m_TagString: Untagged
@@ -7327,7 +7362,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  m_Sprite: {fileID: 21300000, guid: 31df632f9d9b4137bdd7b1a790590481, type: 3}
   m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -7336,7 +7371,7 @@ MonoBehaviour:
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
+  m_PixelsPerUnitMultiplier: 2
 --- !u!222 &1152022540
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -7345,6 +7380,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1152022535}
   m_CullTransparentMesh: 0
+--- !u!114 &1152022541
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1152022535}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f2413b42663db45ce9080a8a1d3c00da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::UI.SoftShadow
+  shadowSprite: {fileID: 21300000, guid: ca82269d3213244c783ffc2a9943233f, type: 3}
+  round: 0
+  offset: 10
+  opacity: 0.35
 --- !u!1 &1163487772
 GameObject:
   m_ObjectHideFlags: 0

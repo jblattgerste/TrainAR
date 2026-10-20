@@ -27,7 +27,7 @@ Every training lives in its own folder, `Assets/Trainings/<Name>/`:
 - `<Name>_Info.asset`: the name, the description and the expert picture that are shown in the app.
 - `<Name>_Preview.png`: the preview of the training's setup (created automatically, see below).
 
-Put the 3D models, sounds and pictures of a training into its folder as well, so that everything that belongs to it stays together.
+Put the 3D models, sounds and pictures of a training into its folder as well, so that everything that belongs to it stays together. When you open or create a training, the Project window jumps to its folder: drag your files in there. 3D models can be FBX, OBJ, glTF or GLB files.
 
 ## Name, description and expert
 

@@ -208,6 +208,7 @@ namespace Editor.Scripts
             }
             EditorSceneManager.OpenScene(TrainARTrainings.ScenePath(TrainARTrainings.Current));
             Debug.Log($"The TrainAR scene of the training \"{TrainARTrainings.Current}\" was successfully loaded.");
+            TrainARTrainings.ShowInProjectWindow(TrainARTrainings.Current);
         }
 
         /// <summary>
