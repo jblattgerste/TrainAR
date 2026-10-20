@@ -1,6 +1,6 @@
 # Managing Trainings
 
-One TrainAR project can hold any number of trainings. All of them are part of the app: the trainees choose one on the home screen. TrainAR ships with two example trainings, **Coffee** and **Otto Engine**.
+One TrainAR project can hold any number of trainings. All of them are part of the app: the trainees choose one on the home screen. TrainAR ships with two example trainings, **Coffee** and **Four-Stroke Engine**.
 
 ## The TrainAR Trainings tab
 
