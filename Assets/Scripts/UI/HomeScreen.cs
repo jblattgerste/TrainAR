@@ -41,8 +41,18 @@ namespace UI
         [Tooltip("The TrainAR footer below the trainings, shown if the catalog says so.")]
         private GameObject footer;
 
+        /// <summary>
+        /// Phones run Unity apps at 30 frames per second unless told otherwise, which makes scrolling feel sluggish. The
+        /// AR training sets its own rate (the camera's); the menus run at the screen's highest refresh rate, at least 60
+        /// (e.g. 120 on ProMotion iPhones), from the start and after every training.
+        /// </summary>
+        [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.BeforeSceneLoad)]
+        private static void SmoothMenus() =>
+            Application.targetFrameRate = Mathf.Max(60, Mathf.RoundToInt((float)Screen.currentResolution.refreshRateRatio.value));
+
         private void Start()
         {
+            SmoothMenus(); //Ensure high framerate nased on refrech rate
             var catalog = TrainingCatalog.Instance;
             if (catalog == null) return;
             if (footer != null) footer.SetActive(catalog.showFooter);
