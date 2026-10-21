@@ -1721,10 +1721,10 @@
     },
     {
       "type": "Resource",
-      "source_relative_path": "resources/SwapTrainArObjects_SwapStateflow.gif",
+      "source_relative_path": "resources/SwapTrainArObjects_SwapStateflow.webp",
       "output": {
         "resource": {
-          "relative_path": "resources/SwapTrainArObjects_SwapStateflow.gif"
+          "relative_path": "resources/SwapTrainArObjects_SwapStateflow.webp"
         }
       },
       "version": ""
