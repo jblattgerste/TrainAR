@@ -30,7 +30,8 @@
 
 /* Screenshots and animations in the manual fill the text width, so small ones are not narrower than the text on large
    screens (images with an explicit width, e.g. the phone pictures next to the nodes, keep it) */
-article img:not([width]) {
+/* (not badges and other linked or SVG images, which keep their own size) */
+article img:not([width]):not(a img):not([src$=".svg"]) {
   width: 100%;
   height: auto;
 }

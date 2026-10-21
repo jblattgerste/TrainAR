@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class TrainAREditorMenu | TrainAR Documentation </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class TrainAREditorMenu | TrainAR Documentation ">
+      
+      <meta name="description" content="The TrainAREditorMenu adds a top menu with options called &amp;quot;TrainAR&amp;quot; for trainAR specific funtionallity like building, switching plattform, switching the mode (TrainAR/Unity Editor), and other options.">
+      <link rel="icon" href="../resources/favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/jblattgerste/TrainAR/new/main/apiSpec/new?filename=Editor_Scripts_TrainAREditorMenu.md&amp;value=---%0Auid%3A%20Editor.Scripts.TrainAREditorMenu%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../resources/logo.svg" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="Editor.Scripts.TrainAREditorMenu">
+
+
+
+  <h1 id="Editor_Scripts_TrainAREditorMenu" data-uid="Editor.Scripts.TrainAREditorMenu" class="text-break">
+Class TrainAREditorMenu  <a class="header-action link-secondary" title="View source" href="https://github.com/jblattgerste/TrainAR/blob/main/Assets/Editor/Scripts/TrainAREditorMenu.cs/#L12"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><span class="xref">Editor</span>.<a class="xref" href="Editor.Scripts.html">Scripts</a></dd></dl>
+  
+  </div>
+
+  <div class="markdown summary"><p>The TrainAREditorMenu adds a top menu with options called &quot;TrainAR&quot; for trainAR specific funtionallity like
+building, switching plattform, switching the mode (TrainAR/Unity Editor), and other options.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class TrainAREditorMenu : UnityEditor.Editor</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><span class="xref">object</span></div>
+      <div><span class="xref">TrainAREditorMenu</span></div>
+    </dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="Editor_Scripts_TrainAREditorMenu_BuildToDevice_" data-uid="Editor.Scripts.TrainAREditorMenu.BuildToDevice*"></a>
+
+  <h3 id="Editor_Scripts_TrainAREditorMenu_BuildToDevice" data-uid="Editor.Scripts.TrainAREditorMenu.BuildToDevice">
+  BuildToDevice()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/jblattgerste/TrainAR/blob/main/Assets/Editor/Scripts/TrainAREditorMenu.cs/#L17"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Build and Runs the current solution when clicked.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void BuildToDevice()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Editor_Scripts_TrainAREditorMenu_HideFrameworkHierarchy_" data-uid="Editor.Scripts.TrainAREditorMenu.HideFrameworkHierarchy*"></a>
+
+  <h3 id="Editor_Scripts_TrainAREditorMenu_HideFrameworkHierarchy" data-uid="Editor.Scripts.TrainAREditorMenu.HideFrameworkHierarchy">
+  HideFrameworkHierarchy()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/jblattgerste/TrainAR/blob/main/Assets/Editor/Scripts/TrainAREditorMenu.cs/#L236"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Hides the framework GameObject in the hierarchy when clicked.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void HideFrameworkHierarchy()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Editor_Scripts_TrainAREditorMenu_HideTrainARReferenceScene_" data-uid="Editor.Scripts.TrainAREditorMenu.HideTrainARReferenceScene*"></a>
+
+  <h3 id="Editor_Scripts_TrainAREditorMenu_HideTrainARReferenceScene" data-uid="Editor.Scripts.TrainAREditorMenu.HideTrainARReferenceScene">
+  HideTrainARReferenceScene()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/jblattgerste/TrainAR/blob/main/Assets/Editor/Scripts/TrainAREditorMenu.cs/#L175"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Hides the TrainAR reference setup in the scene when clicked.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void HideTrainARReferenceScene()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Editor_Scripts_TrainAREditorMenu_OpenDocumentation_" data-uid="Editor.Scripts.TrainAREditorMenu.OpenDocumentation*"></a>
+
+  <h3 id="Editor_Scripts_TrainAREditorMenu_OpenDocumentation" data-uid="Editor.Scripts.TrainAREditorMenu.OpenDocumentation">
+  OpenDocumentation()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/jblattgerste/TrainAR/blob/main/Assets/Editor/Scripts/TrainAREditorMenu.cs/#L272"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Opens the Documentation when clicked.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void OpenDocumentation()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Editor_Scripts_TrainAREditorMenu_OpenTrainARScene_" data-uid="Editor.Scripts.TrainAREditorMenu.OpenTrainARScene*"></a>
+
+  <h3 id="Editor_Scripts_TrainAREditorMenu_OpenTrainARScene" data-uid="Editor.Scripts.TrainAREditorMenu.OpenTrainARScene">
+  OpenTrainARScene()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/jblattgerste/TrainAR/blob/main/Assets/Editor/Scripts/TrainAREditorMenu.cs/#L201"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Opens the scene of the training that is edited (Assets/Trainings/&lt;Name&gt;/&lt;Name&gt;.unity) when clicked.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void OpenTrainARScene()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Editor_Scripts_TrainAREditorMenu_ResetStatemachineToDefault_" data-uid="Editor.Scripts.TrainAREditorMenu.ResetStatemachineToDefault*"></a>
+
+  <h3 id="Editor_Scripts_TrainAREditorMenu_ResetStatemachineToDefault" data-uid="Editor.Scripts.TrainAREditorMenu.ResetStatemachineToDefault">
+  ResetStatemachineToDefault()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/jblattgerste/TrainAR/blob/main/Assets/Editor/Scripts/TrainAREditorMenu.cs/#L217"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Opens the statemachine of the training that is edited in the visual scripting window when clicked.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void ResetStatemachineToDefault()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Editor_Scripts_TrainAREditorMenu_ResetTrainARSceneToAuthoringToolDefault_" data-uid="Editor.Scripts.TrainAREditorMenu.ResetTrainARSceneToAuthoringToolDefault*"></a>
+
+  <h3 id="Editor_Scripts_TrainAREditorMenu_ResetTrainARSceneToAuthoringToolDefault" data-uid="Editor.Scripts.TrainAREditorMenu.ResetTrainARSceneToAuthoringToolDefault">
+  ResetTrainARSceneToAuthoringToolDefault()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/jblattgerste/TrainAR/blob/main/Assets/Editor/Scripts/TrainAREditorMenu.cs/#L116"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Resets the scene camera to a pivot point, rotation and distance that looks good in the Scene.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void ResetTrainARSceneToAuthoringToolDefault()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Editor_Scripts_TrainAREditorMenu_ShowFrameworkHierarchy_" data-uid="Editor.Scripts.TrainAREditorMenu.ShowFrameworkHierarchy*"></a>
+
+  <h3 id="Editor_Scripts_TrainAREditorMenu_ShowFrameworkHierarchy" data-uid="Editor.Scripts.TrainAREditorMenu.ShowFrameworkHierarchy">
+  ShowFrameworkHierarchy()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/jblattgerste/TrainAR/blob/main/Assets/Editor/Scripts/TrainAREditorMenu.cs/#L254"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Shows the framework GameObject in the hierarchy when clicked.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void ShowFrameworkHierarchy()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Editor_Scripts_TrainAREditorMenu_ShowSimulator_" data-uid="Editor.Scripts.TrainAREditorMenu.ShowSimulator*"></a>
+
+  <h3 id="Editor_Scripts_TrainAREditorMenu_ShowSimulator" data-uid="Editor.Scripts.TrainAREditorMenu.ShowSimulator">
+  ShowSimulator()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/jblattgerste/TrainAR/blob/main/Assets/Editor/Scripts/TrainAREditorMenu.cs/#L105"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Shows the device simulator tab (it shares its place with the TrainAR Trainings tab).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void ShowSimulator()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Editor_Scripts_TrainAREditorMenu_SwitchToAndroid_" data-uid="Editor.Scripts.TrainAREditorMenu.SwitchToAndroid*"></a>
+
+  <h3 id="Editor_Scripts_TrainAREditorMenu_SwitchToAndroid" data-uid="Editor.Scripts.TrainAREditorMenu.SwitchToAndroid">
+  SwitchToAndroid()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/jblattgerste/TrainAR/blob/main/Assets/Editor/Scripts/TrainAREditorMenu.cs/#L26"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Switches the current platform to Android when clicked.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void SwitchToAndroid()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Editor_Scripts_TrainAREditorMenu_SwitchToIOS_" data-uid="Editor.Scripts.TrainAREditorMenu.SwitchToIOS*"></a>
+
+  <h3 id="Editor_Scripts_TrainAREditorMenu_SwitchToIOS" data-uid="Editor.Scripts.TrainAREditorMenu.SwitchToIOS">
+  SwitchToIOS()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/jblattgerste/TrainAR/blob/main/Assets/Editor/Scripts/TrainAREditorMenu.cs/#L36"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Switches the current platform to iOS when clicked.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void SwitchToIOS()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Editor_Scripts_TrainAREditorMenu_SwitchToTrainARMode_" data-uid="Editor.Scripts.TrainAREditorMenu.SwitchToTrainARMode*"></a>
+
+  <h3 id="Editor_Scripts_TrainAREditorMenu_SwitchToTrainARMode" data-uid="Editor.Scripts.TrainAREditorMenu.SwitchToTrainARMode">
+  SwitchToTrainARMode()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/jblattgerste/TrainAR/blob/main/Assets/Editor/Scripts/TrainAREditorMenu.cs/#L48"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Switches the Editor Layout to TrainAR Authoring mode when clicked.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void SwitchToTrainARMode()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Editor_Scripts_TrainAREditorMenu_SwitchToUnityMode_" data-uid="Editor.Scripts.TrainAREditorMenu.SwitchToUnityMode*"></a>
+
+  <h3 id="Editor_Scripts_TrainAREditorMenu_SwitchToUnityMode" data-uid="Editor.Scripts.TrainAREditorMenu.SwitchToUnityMode">
+  SwitchToUnityMode()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/jblattgerste/TrainAR/blob/main/Assets/Editor/Scripts/TrainAREditorMenu.cs/#L82"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Switches the Editor Layout to the default Unity Layout when clicked.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void SwitchToUnityMode()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/jblattgerste/TrainAR/blob/main/Assets/Editor/Scripts/TrainAREditorMenu.cs/#L12" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          TrainAR Documentation
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -23,6 +23,202 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Editor.Scripts.ConvertToTrainARObject.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Editor.Scripts.ConvertToTrainARObject.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Editor.Scripts.ConvertToTrainARObject",
+      "Summary": "<p sourcefile=\"api/Editor.Scripts.ConvertToTrainARObject.yml\" sourcestartlinenumber=\"1\">ConvertToTrainARObjects is an Editor script that adds a right-click context menu to GameObjects in the hierarchy named\n&quot;Convert to TrainAR Object&quot;. When the object is eligible (therefore has a transform, MeshFilter and MeshRenderer), this can\nbe used to convert GameObjects to TrainAR Objects, where behaviours (e.g. TrainAR Object) are automatically added and the mesh\nis combined an simplyfied.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Editor.Scripts.EditorTrainARObjectToolbar.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Editor.Scripts.EditorTrainARObjectToolbar.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Editor.Scripts.EditorTrainARObjectToolbar",
+      "Summary": "<p sourcefile=\"api/Editor.Scripts.EditorTrainARObjectToolbar.yml\" sourcestartlinenumber=\"1\">The EditorTrainARObjectToolbar is the toolbar in the sceneview when using the TrainAR authoring overlay. It allows\nsetting TrainAR Object states like active/inactive, grabbable, interactable, or combinable without opening an inspector.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Editor.Scripts.MeshCombinerEditor.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Editor.Scripts.MeshCombinerEditor.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Editor.Scripts.MeshCombinerEditor",
+      "Summary": "<p sourcefile=\"api/Editor.Scripts.MeshCombinerEditor.yml\" sourcestartlinenumber=\"1\">The MeshCombinerEditor is a utility class that helps to combine meshes.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Editor.Scripts.OpenAuthoringToolOnLoad.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Editor.Scripts.OpenAuthoringToolOnLoad.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Editor.Scripts.OpenAuthoringToolOnLoad",
+      "Summary": "<p sourcefile=\"api/Editor.Scripts.OpenAuthoringToolOnLoad.yml\" sourcestartlinenumber=\"1\">Sets up a new checkout after its assets and Visual Scripting have finished importing.\nSubsequent editor sessions retain the user's scene, layout and build target.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Editor.Scripts.PlayModeButtonOverride.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Editor.Scripts.PlayModeButtonOverride.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Editor.Scripts.PlayModeButtonOverride",
+      "Summary": "<p sourcefile=\"api/Editor.Scripts.PlayModeButtonOverride.yml\" sourcestartlinenumber=\"1\">The PlayModeButtonOverride editor script implements utility for the unity editor play buttons that overrides\nits functionality with TrainAR specific functionality to either switch the build target if there is an\nunsupported one currently selected or allow building to a device by clicking the play button.</p>\n<p sourcefile=\"api/Editor.Scripts.PlayModeButtonOverride.yml\" sourcestartlinenumber=\"5\">This is done for convenience of building and also to prevent the playmode execution, as this is\ncurrently not supported by the framework.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Editor.Scripts.StateRequestSimulatorEditor.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Editor.Scripts.StateRequestSimulatorEditor.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Editor.Scripts.StateRequestSimulatorEditor",
+      "Summary": "<p sourcefile=\"api/Editor.Scripts.StateRequestSimulatorEditor.yml\" sourcestartlinenumber=\"1\">Adds the GUI to the inspector to simulate stateRequests to test the statemachine in the editor.\nThis is an Unity Editor Utility Class for the &quot;StateRequestSimulator&quot; class.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Editor.Scripts.TrainARConvertObjectToolbar.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Editor.Scripts.TrainARConvertObjectToolbar.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Editor.Scripts.TrainARConvertObjectToolbar",
+      "Summary": "<p sourcefile=\"api/Editor.Scripts.TrainARConvertObjectToolbar.yml\" sourcestartlinenumber=\"1\">Displays and initializes the editor toolbar which contains a button that initializes the conversion process\nfor a TrainAR Object of the currently selected object.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Editor.Scripts.TrainAREditorMenu.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Editor.Scripts.TrainAREditorMenu.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Editor.Scripts.TrainAREditorMenu",
+      "Summary": "<p sourcefile=\"api/Editor.Scripts.TrainAREditorMenu.yml\" sourcestartlinenumber=\"1\">The TrainAREditorMenu adds a top menu with options called &quot;TrainAR&quot; for trainAR specific funtionallity like\nbuilding, switching plattform, switching the mode (TrainAR/Unity Editor), and other options.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Editor.Scripts.TrainARObjectConversionWindow.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Editor.Scripts.TrainARObjectConversionWindow.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Editor.Scripts.TrainARObjectConversionWindow",
+      "Summary": "<p sourcefile=\"api/Editor.Scripts.TrainARObjectConversionWindow.yml\" sourcestartlinenumber=\"1\">Instance of the Editor Window with enables the user to specify options for the TrainAR Object and initializes\nthe conversion process.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Editor.Scripts.TrainARObjectOffsetToolbar.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Editor.Scripts.TrainARObjectOffsetToolbar.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Editor.Scripts.TrainARObjectOffsetToolbar",
+      "Summary": "<p sourcefile=\"api/Editor.Scripts.TrainARObjectOffsetToolbar.yml\" sourcestartlinenumber=\"1\">The TrainARObjectOffsetToolbar is a toolbar in the Scene view when using the TrainAR authoring overlay. It is displayed\ninstead of the TrainARObjectToolbar when two objects are selected in the editor.\nIt displays the positional and rotational offsets between the two selected objects, so the user can use them,\ne.g. for the FuseObjects functionality of the object helper node.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Editor.Scripts.TrainARTrainings.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Editor.Scripts.TrainARTrainings.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Editor.Scripts.TrainARTrainings",
+      "Summary": "<p sourcefile=\"api/Editor.Scripts.TrainARTrainings.yml\" sourcestartlinenumber=\"1\">Where the trainings live and which one is edited in the authoring tool. Every training has its own folder\nAssets/Trainings/&lt;Name&gt;/ with &lt;Name&gt;.unity, &lt;Name&gt;_Statemachine.asset and &lt;Name&gt;_Info.asset.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Editor.Scripts.TrainARTrainingsWindow.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Editor.Scripts.TrainARTrainingsWindow.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Editor.Scripts.TrainARTrainingsWindow",
+      "Summary": "<p sourcefile=\"api/Editor.Scripts.TrainARTrainingsWindow.yml\" sourcestartlinenumber=\"1\">The TrainAR Trainings tab (docked next to the simulator): one list with a box per training (preview with the round\nexpert, name, description). Every box can be opened in the authoring tool, edited, duplicated and deleted; new\ntrainings are added at the bottom. All trainings are part of the build and shown on the home screen; previews are\nrendered by every build.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Editor.Scripts.TrainingPreviews.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Editor.Scripts.TrainingPreviews.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Editor.Scripts.TrainingPreviews",
+      "Summary": "<p sourcefile=\"api/Editor.Scripts.TrainingPreviews.yml\" sourcestartlinenumber=\"1\">Renders every training's start setup (its objects as placed in the scene, no table, transparent background, seen\nover the trainee's left shoulder) into &lt;Name&gt;_Preview.png and sets it as the training's preview. Runs before every\nbuild (TrainAR build and Unity's build window).</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Editor.Scripts.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Editor.Scripts.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Editor.Scripts",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Interaction.AudioController.yml",
       "output": {
         ".html": {

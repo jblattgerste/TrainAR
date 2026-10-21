@@ -1,0 +1,877 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class TrainARTrainings | TrainAR Documentation </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class TrainARTrainings | TrainAR Documentation ">
+      
+      <meta name="description" content="Where the trainings live and which one is edited in the authoring tool. Every training has its own folder Assets/Trainings/&amp;lt;Name&amp;gt;/ with &amp;lt;Name&amp;gt;.unity, &amp;lt;Name&amp;gt;_Statemachine.asset and &amp;lt;Name&amp;gt;_Info.asset.">
+      <link rel="icon" href="../resources/favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/jblattgerste/TrainAR/new/main/apiSpec/new?filename=Editor_Scripts_TrainARTrainings.md&amp;value=---%0Auid%3A%20Editor.Scripts.TrainARTrainings%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../resources/logo.svg" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="Editor.Scripts.TrainARTrainings">
+
+
+
+  <h1 id="Editor_Scripts_TrainARTrainings" data-uid="Editor.Scripts.TrainARTrainings" class="text-break">
+Class TrainARTrainings  <a class="header-action link-secondary" title="View source" href="https://github.com/jblattgerste/TrainAR/blob/main/Assets/Editor/Scripts/TrainARTrainings.cs/#L17"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><span class="xref">Editor</span>.<a class="xref" href="Editor.Scripts.html">Scripts</a></dd></dl>
+  
+  </div>
+
+  <div class="markdown summary"><p>Where the trainings live and which one is edited in the authoring tool. Every training has its own folder
+Assets/Trainings/&lt;Name&gt;/ with &lt;Name&gt;.unity, &lt;Name&gt;_Statemachine.asset and &lt;Name&gt;_Info.asset.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static class TrainARTrainings</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><span class="xref">object</span></div>
+      <div><span class="xref">TrainARTrainings</span></div>
+    </dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="fields">Fields
+</h2>
+
+
+
+  <h3 id="Editor_Scripts_TrainARTrainings_DefaultTraining" data-uid="Editor.Scripts.TrainARTrainings.DefaultTraining">
+  DefaultTraining
+  <a class="header-action link-secondary" title="View source" href="https://github.com/jblattgerste/TrainAR/blob/main/Assets/Editor/Scripts/TrainARTrainings.cs/#L26"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The training the authoring tool opens when nothing else was chosen.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string DefaultTraining = &quot;Coffee&quot;</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">string</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="Editor_Scripts_TrainARTrainings_HomeScene" data-uid="Editor.Scripts.TrainARTrainings.HomeScene">
+  HomeScene
+  <a class="header-action link-secondary" title="View source" href="https://github.com/jblattgerste/TrainAR/blob/main/Assets/Editor/Scripts/TrainARTrainings.cs/#L71"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string HomeScene = &quot;Assets/Scenes/Home.unity&quot;</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">string</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="Editor_Scripts_TrainARTrainings_OnboardingScene" data-uid="Editor.Scripts.TrainARTrainings.OnboardingScene">
+  OnboardingScene
+  <a class="header-action link-secondary" title="View source" href="https://github.com/jblattgerste/TrainAR/blob/main/Assets/Editor/Scripts/TrainARTrainings.cs/#L72"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string OnboardingScene = &quot;Assets/Scenes/Tutorial.unity&quot;</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">string</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="Editor_Scripts_TrainARTrainings_Root" data-uid="Editor.Scripts.TrainARTrainings.Root">
+  Root
+  <a class="header-action link-secondary" title="View source" href="https://github.com/jblattgerste/TrainAR/blob/main/Assets/Editor/Scripts/TrainARTrainings.cs/#L22"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The folder that holds one folder per training.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string Root = &quot;Assets/Trainings&quot;</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">string</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="Editor_Scripts_TrainARTrainings_Current_" data-uid="Editor.Scripts.TrainARTrainings.Current*"></a>
+
+  <h3 id="Editor_Scripts_TrainARTrainings_Current" data-uid="Editor.Scripts.TrainARTrainings.Current">
+  Current
+  <a class="header-action link-secondary" title="View source" href="https://github.com/jblattgerste/TrainAR/blob/main/Assets/Editor/Scripts/TrainARTrainings.cs/#L32"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The training that is edited in the authoring tool (remembered per user, falls back to the default).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static string Current { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">string</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Editor_Scripts_TrainARTrainings_ShowHomeFooter_" data-uid="Editor.Scripts.TrainARTrainings.ShowHomeFooter*"></a>
+
+  <h3 id="Editor_Scripts_TrainARTrainings_ShowHomeFooter" data-uid="Editor.Scripts.TrainARTrainings.ShowHomeFooter">
+  ShowHomeFooter
+  <a class="header-action link-secondary" title="View source" href="https://github.com/jblattgerste/TrainAR/blob/main/Assets/Editor/Scripts/TrainARTrainings.cs/#L195"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Whether the home screen shows the TrainAR footer (links, creator, funding, contact) below the trainings.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool ShowHomeFooter { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">bool</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="Editor_Scripts_TrainARTrainings_All_" data-uid="Editor.Scripts.TrainARTrainings.All*"></a>
+
+  <h3 id="Editor_Scripts_TrainARTrainings_All" data-uid="Editor.Scripts.TrainARTrainings.All">
+  All()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/jblattgerste/TrainAR/blob/main/Assets/Editor/Scripts/TrainARTrainings.cs/#L51"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>All trainings: every folder in Assets/Trainings that contains its scene, sorted by name.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static List&lt;string&gt; All()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">List</span>&lt;<span class="xref">string</span>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Editor_Scripts_TrainARTrainings_Create_" data-uid="Editor.Scripts.TrainARTrainings.Create*"></a>
+
+  <h3 id="Editor_Scripts_TrainARTrainings_Create_System_String_" data-uid="Editor.Scripts.TrainARTrainings.Create(System.String)">
+  Create(string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/jblattgerste/TrainAR/blob/main/Assets/Editor/Scripts/TrainARTrainings.cs/#L94"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Creates an empty training: the framework scene without objects and a statemachine with only the start and
+end events.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static string Create(string displayName)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>displayName</code> <span class="xref">string</span></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">string</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Editor_Scripts_TrainARTrainings_Delete_" data-uid="Editor.Scripts.TrainARTrainings.Delete*"></a>
+
+  <h3 id="Editor_Scripts_TrainARTrainings_Delete_System_String_" data-uid="Editor.Scripts.TrainARTrainings.Delete(System.String)">
+  Delete(string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/jblattgerste/TrainAR/blob/main/Assets/Editor/Scripts/TrainARTrainings.cs/#L154"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Deletes a training's folder (scene, statemachine, info and everything else in it).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void Delete(string name)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>name</code> <span class="xref">string</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Editor_Scripts_TrainARTrainings_Duplicate_" data-uid="Editor.Scripts.TrainARTrainings.Duplicate*"></a>
+
+  <h3 id="Editor_Scripts_TrainARTrainings_Duplicate_System_String_System_String_" data-uid="Editor.Scripts.TrainARTrainings.Duplicate(System.String,System.String)">
+  Duplicate(string, string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/jblattgerste/TrainAR/blob/main/Assets/Editor/Scripts/TrainARTrainings.cs/#L104"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Duplicates a training (scene, statemachine and info; the copy keeps using the original's models).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static string Duplicate(string source, string displayName)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>source</code> <span class="xref">string</span></dt>
+    <dd></dd>
+    <dt><code>displayName</code> <span class="xref">string</span></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">string</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Editor_Scripts_TrainARTrainings_Folder_" data-uid="Editor.Scripts.TrainARTrainings.Folder*"></a>
+
+  <h3 id="Editor_Scripts_TrainARTrainings_Folder_System_String_" data-uid="Editor.Scripts.TrainARTrainings.Folder(System.String)">
+  Folder(string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/jblattgerste/TrainAR/blob/main/Assets/Editor/Scripts/TrainARTrainings.cs/#L42"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static string Folder(string name)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>name</code> <span class="xref">string</span></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">string</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Editor_Scripts_TrainARTrainings_FolderNameFor_" data-uid="Editor.Scripts.TrainARTrainings.FolderNameFor*"></a>
+
+  <h3 id="Editor_Scripts_TrainARTrainings_FolderNameFor_System_String_" data-uid="Editor.Scripts.TrainARTrainings.FolderNameFor(System.String)">
+  FolderNameFor(string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/jblattgerste/TrainAR/blob/main/Assets/Editor/Scripts/TrainARTrainings.cs/#L81"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>A free folder name for a training's display name (letters and digits only, numbered if taken).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static string FolderNameFor(string displayName)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>displayName</code> <span class="xref">string</span></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">string</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Editor_Scripts_TrainARTrainings_InfoFor_" data-uid="Editor.Scripts.TrainARTrainings.InfoFor*"></a>
+
+  <h3 id="Editor_Scripts_TrainARTrainings_InfoFor_System_String_" data-uid="Editor.Scripts.TrainARTrainings.InfoFor(System.String)">
+  InfoFor(string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/jblattgerste/TrainAR/blob/main/Assets/Editor/Scripts/TrainARTrainings.cs/#L173"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The training's info asset; created with defaults (name, default expert) if it is missing.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static TrainingInfo InfoFor(string name)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>name</code> <span class="xref">string</span></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Others.TrainingInfo.html">TrainingInfo</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Editor_Scripts_TrainARTrainings_InfoPath_" data-uid="Editor.Scripts.TrainARTrainings.InfoPath*"></a>
+
+  <h3 id="Editor_Scripts_TrainARTrainings_InfoPath_System_String_" data-uid="Editor.Scripts.TrainARTrainings.InfoPath(System.String)">
+  InfoPath(string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/jblattgerste/TrainAR/blob/main/Assets/Editor/Scripts/TrainARTrainings.cs/#L45"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static string InfoPath(string name)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>name</code> <span class="xref">string</span></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">string</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Editor_Scripts_TrainARTrainings_IsTrainingScene_" data-uid="Editor.Scripts.TrainARTrainings.IsTrainingScene*"></a>
+
+  <h3 id="Editor_Scripts_TrainARTrainings_IsTrainingScene_System_String_" data-uid="Editor.Scripts.TrainARTrainings.IsTrainingScene(System.String)">
+  IsTrainingScene(string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/jblattgerste/TrainAR/blob/main/Assets/Editor/Scripts/TrainARTrainings.cs/#L68"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Whether a scene path is the scene of a training.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool IsTrainingScene(string scenePath)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>scenePath</code> <span class="xref">string</span></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">bool</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Editor_Scripts_TrainARTrainings_Ordered_" data-uid="Editor.Scripts.TrainARTrainings.Ordered*"></a>
+
+  <h3 id="Editor_Scripts_TrainARTrainings_Ordered" data-uid="Editor.Scripts.TrainARTrainings.Ordered">
+  Ordered()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/jblattgerste/TrainAR/blob/main/Assets/Editor/Scripts/TrainARTrainings.cs/#L62"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>All trainings in the order of the home screen: the examples first (Coffee, then the Four-Stroke Engine), then
+every other training in the order it was created (new trainings are added at the end).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static List&lt;string&gt; Ordered()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">List</span>&lt;<span class="xref">string</span>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Editor_Scripts_TrainARTrainings_PreviewPath_" data-uid="Editor.Scripts.TrainARTrainings.PreviewPath*"></a>
+
+  <h3 id="Editor_Scripts_TrainARTrainings_PreviewPath_System_String_" data-uid="Editor.Scripts.TrainARTrainings.PreviewPath(System.String)">
+  PreviewPath(string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/jblattgerste/TrainAR/blob/main/Assets/Editor/Scripts/TrainARTrainings.cs/#L46"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static string PreviewPath(string name)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>name</code> <span class="xref">string</span></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">string</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Editor_Scripts_TrainARTrainings_ScenePath_" data-uid="Editor.Scripts.TrainARTrainings.ScenePath*"></a>
+
+  <h3 id="Editor_Scripts_TrainARTrainings_ScenePath_System_String_" data-uid="Editor.Scripts.TrainARTrainings.ScenePath(System.String)">
+  ScenePath(string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/jblattgerste/TrainAR/blob/main/Assets/Editor/Scripts/TrainARTrainings.cs/#L43"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static string ScenePath(string name)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>name</code> <span class="xref">string</span></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">string</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Editor_Scripts_TrainARTrainings_ShowInProjectWindow_" data-uid="Editor.Scripts.TrainARTrainings.ShowInProjectWindow*"></a>
+
+  <h3 id="Editor_Scripts_TrainARTrainings_ShowInProjectWindow_System_String_" data-uid="Editor.Scripts.TrainARTrainings.ShowInProjectWindow(System.String)">
+  ShowInProjectWindow(string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/jblattgerste/TrainAR/blob/main/Assets/Editor/Scripts/TrainARTrainings.cs/#L141"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Shows the training's folder in the Project window (by pinging its scene, which opens the folder and
+highlights the scene without changing the selection).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void ShowInProjectWindow(string name)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>name</code> <span class="xref">string</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Editor_Scripts_TrainARTrainings_StatemachinePath_" data-uid="Editor.Scripts.TrainARTrainings.StatemachinePath*"></a>
+
+  <h3 id="Editor_Scripts_TrainARTrainings_StatemachinePath_System_String_" data-uid="Editor.Scripts.TrainARTrainings.StatemachinePath(System.String)">
+  StatemachinePath(string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/jblattgerste/TrainAR/blob/main/Assets/Editor/Scripts/TrainARTrainings.cs/#L44"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static string StatemachinePath(string name)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>name</code> <span class="xref">string</span></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">string</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Editor_Scripts_TrainARTrainings_Sync_" data-uid="Editor.Scripts.TrainARTrainings.Sync*"></a>
+
+  <h3 id="Editor_Scripts_TrainARTrainings_Sync" data-uid="Editor.Scripts.TrainARTrainings.Sync">
+  Sync()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/jblattgerste/TrainAR/blob/main/Assets/Editor/Scripts/TrainARTrainings.cs/#L216"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Brings the runtime catalog (Resources/TrainARTrainings.asset) and the build scenes (home screen,
+onboarding, every training) in line with the training folders.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void Sync()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/jblattgerste/TrainAR/blob/main/Assets/Editor/Scripts/TrainARTrainings.cs/#L17" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          TrainAR Documentation
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
