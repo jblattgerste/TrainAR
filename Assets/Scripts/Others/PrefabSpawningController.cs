@@ -127,7 +127,6 @@ namespace Others
         /// <value>Set on runtime.</value>
         private readonly Dictionary<Renderer, Material[]> originalMaterials = new Dictionary<Renderer, Material[]>();
         private Outline[] placementOutlines;
-        private readonly WorldTouchGesture placementGesture = new WorldTouchGesture();
         /// <summary>
         /// Event that is triggered after the assembly is spawned.
         /// </summary>
@@ -136,26 +135,6 @@ namespace Others
         /// Event that is triggered after repositioning of the training assembly.
         /// </summary>
         public static event Action RepositionPrefab;
-
-        private void OnEnable()
-        {
-            placementGesture.Enable();
-        }
-
-        private void OnDisable()
-        {
-            placementGesture.Disable();
-        }
-
-        private void OnApplicationFocus(bool hasFocus)
-        {
-            if (!hasFocus) placementGesture.Reset();
-        }
-
-        private void OnApplicationPause(bool paused)
-        {
-            if (paused) placementGesture.Reset();
-        }
 
         /// <summary>
         /// Sets references to the ARRaycastmanager and triggers the creation of the TrainAR setup.
@@ -218,15 +197,8 @@ namespace Others
         {
             if(!objectWasSpawned)
             {
+                //The construction is spawned with the place button (PlaceSetup), not by touching the screen
                 PositionPrefab();
-
-                //Spawn the construction with a touch on the screen
-                if (!placementGesture.TryGetTouch(out var touch)) return;
-                //If Touch has been registered and placement pose has been declared valid, spawn the prefab
-                if (touch.phase == UnityEngine.InputSystem.TouchPhase.Began && placementPoseIsValid)
-                {
-                    SpawnPrefab();
-                }
             }
             else if(infinityPlaneWasSpawned && objectWasSpawned && !materialsWereReset)
             {
@@ -234,7 +206,6 @@ namespace Others
                 // immediately highlight an object or replace one of its materials.
                 ResetMaterialsToOriginal();
                 materialsWereReset = true;
-                placementGesture.Reset();
                 //Invoke the Event that the prefab was spawned
                 prefabSpawned?.Invoke();
                 //Let the Visual scripting know that we now positioned the prefab for the first time
@@ -298,6 +269,15 @@ namespace Others
                 instantiatedPrefab.transform.SetPositionAndRotation(new Vector3(0, 0, -2), Quaternion.identity);
                 placementPoseIsValid = false;
             }
+        }
+
+        /// <summary>
+        /// Places the training assembly at the current placement pose, if it is valid (used by the place button).
+        /// </summary>
+        public void PlaceSetup()
+        {
+            if (!objectWasSpawned && placementPoseIsValid)
+                SpawnPrefab();
         }
 
         /// <summary>
@@ -416,7 +396,6 @@ namespace Others
             // made since the previous placement, rather than restoring old ones.
             MakeMaterialsInvisibleForPlacement();
             materialsWereReset = false;
-            placementGesture.Reset();
             placementPoseIsValid = false;
 
             //Destroy the now unused infinity plane.

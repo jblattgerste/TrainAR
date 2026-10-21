@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76fd887c83d57490da04389926cbf0cf, type: 3}
+  m_Name: OttoEngine_Info
+  m_EditorClassIdentifier: Assembly-CSharp::Others.TrainingInfo
+  displayName: Four-Stroke Engine
+  description: 'In this training, you assemble one cylinder of a four-stroke engine part by part and start it. You learn by doing it yourself: every step gets direct feedback, the mechanic explains what each part does, and questions check what you understood.'
+  expert: {fileID: 21300000, guid: 38c2cdedec7db42d997b375084b9a808, type: 3}
+  preview: {fileID: 21300000, guid: 7a7fb526d4cbe4d8fa8b37b9f16eba73, type: 3}
+  sceneName: OttoEngine
+  created: 0

@@ -6,11 +6,17 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/Home.unity
+    guid: 5126ff122b7ef4353993f747fe4ed479
+  - enabled: 1
     path: Assets/Scenes/Tutorial.unity
     guid: 5458b17d6419e7a4482ba458c6349215
   - enabled: 1
-    path: Assets/Scene.unity
+    path: Assets/Trainings/Coffee/Coffee.unity
     guid: 009ff9117b4d0be4c93baa45ec82372f
+  - enabled: 1
+    path: Assets/Trainings/OttoEngine/OttoEngine.unity
+    guid: b450398e822dc4d8b9a31d4f4c07bedf
   m_configObjects:
     UnityEditor.XR.ARCore.ARCoreSettings: {fileID: 11400000, guid: 6a5c47b55df2e734da35d9af5384ec76, type: 2}
     UnityEditor.XR.ARKit.ARKitSettings: {fileID: 11400000, guid: b65eb27feda535043897271dc21a3dda, type: 2}

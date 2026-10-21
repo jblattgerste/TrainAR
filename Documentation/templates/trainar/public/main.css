@@ -27,3 +27,10 @@
   max-width: 100%;
   height: auto;
 }
+
+/* Screenshots and animations in the manual fill the text width, so small ones are not narrower than the text on large
+   screens (images with an explicit width, e.g. the phone pictures next to the nodes, keep it) */
+article p > img:not([width]) {
+  width: 100%;
+  height: auto;
+}

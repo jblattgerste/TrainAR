@@ -4,7 +4,7 @@
 
 ### UI Task: Questionnaire
 
-If the UI Task is set to **Questionnaire**, the user will be shown a question and a set of predetermined answers. When the user chooses one of these answers, the user is also shown feedback. The question itself as well as the number of corresponding correct and wrong answers and their feedback have to be specified in the node. The questionnaire can have between 2 and 4 possible answers. If the user inputs an answer, the stateflow resumes according to the **Correct** or **Incorrect** outputs of the node. Questionnaire nodes can also fork the Stateflow based on the given answer.
+If the UI Task is set to **Questionnaire**, the user will be shown a question and a set of predetermined answers. When the user chooses one of these answers, the user is also shown feedback. The feedback closes after a few seconds, shown by a bar on top of the question that fills up, or earlier when the user taps the feedback or the question. The question itself as well as the number of corresponding correct and wrong answers and their feedback have to be specified in the node. The questionnaire can have between 2 and 4 possible answers. If the user inputs an answer, the stateflow resumes according to the **Correct** or **Incorrect** outputs of the node. Questionnaire nodes can also fork the Stateflow based on the given answer.
 
 > [!NOTE]
 > Choosing an answer closes the questionnaire, and every answer has its own output. Connect the **Incorrect** outputs as well, e.g. to the same next node as the correct answer or this node again to repeat it, so the training continues after the feedback. An unconnected output leaves the training waiting for an answer that can no longer be given.
@@ -31,7 +31,7 @@ With the UI Task set to **Input Field**, the user has to type in his answer to a
 
 ### UI Task: List Selection
 
-With the UI Task set to **List Selection**, the user is presented with a scrollable list of possible answers, which can be defined, as well as their respective feedback, in the node. If the user chooses all correct items in the list, the **Correct** output is triggered.
+With the UI Task set to **List Selection**, the user is presented with a scrollable list of possible answers, which can be defined, as well as their respective feedback, in the node. If the user chooses all correct items in the list, the **Correct** output is triggered. Choosing an incorrect item shows its feedback inside the list; a tap on the question or the list closes it again.
  
 <div class="trainar-node-comparison" role="region" aria-label="TrainAR node and result comparison" tabindex="0">
 

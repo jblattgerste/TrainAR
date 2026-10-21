@@ -100,6 +100,17 @@ namespace Editor.Scripts
         }
 
         /// <summary>
+        /// Shows the device simulator tab (it shares its place with the TrainAR Trainings tab).
+        /// </summary>
+        [MenuItem("TrainAR/Options/Show Simulator", false, 901)]
+        public static void ShowSimulator()
+        {
+            var simulator = TrainARTrainingsWindow.SimulatorWindowType();
+            if (simulator != null) EditorWindow.GetWindow(simulator).Focus();
+            else Debug.LogError("Unable to show the simulator: the Device Simulator was not found.");
+        }
+
+        /// <summary>
         /// Resets the scene camera to a pivot point, rotation and distance that looks good in the Scene.
         /// </summary>
         [MenuItem("TrainAR/Options/Reset TrainAR Camera + Setup", false, 999)]
@@ -185,7 +196,7 @@ namespace Editor.Scripts
         }
         
         /// <summary>
-        /// Opens the default TrainAR scene when clicked.
+        /// Opens the scene of the training that is edited (Assets/Trainings/&lt;Name&gt;/&lt;Name&gt;.unity) when clicked.
         /// </summary>
         [MenuItem("TrainAR/Options/Open TrainAR Scene", false, 2000)]
         public static void OpenTrainARScene()
@@ -195,25 +206,27 @@ namespace Editor.Scripts
             {
                 EditorSceneManager.SaveOpenScenes();
             }
-            EditorSceneManager.OpenScene("Assets/Scene.unity");
-            Debug.Log("The TrainAR default Scene was successfully loaded.");
+            EditorSceneManager.OpenScene(TrainARTrainings.ScenePath(TrainARTrainings.Current));
+            Debug.Log($"The TrainAR scene of the training \"{TrainARTrainings.Current}\" was successfully loaded.");
+            TrainARTrainings.ShowInProjectWindow(TrainARTrainings.Current);
         }
-        
+
         /// <summary>
-        /// Opens the default statemachine in the visual scripting window when clicked.
+        /// Opens the statemachine of the training that is edited in the visual scripting window when clicked.
         /// </summary>
         [MenuItem("TrainAR/Options/Open TrainAR Statemachine", false, 2001)]
         public static void ResetStatemachineToDefault()
         {
-            var objectReferenceToStatemachine = AssetDatabase.LoadMainAssetAtPath("Assets/Statemachine.asset");
-            
-            if (AssetDatabase.OpenAsset(objectReferenceToStatemachine))
+            var path = TrainARTrainings.StatemachinePath(TrainARTrainings.Current);
+            var objectReferenceToStatemachine = AssetDatabase.LoadMainAssetAtPath(path);
+
+            if (objectReferenceToStatemachine != null && AssetDatabase.OpenAsset(objectReferenceToStatemachine))
             {
-                Debug.Log("The TrainAR default Statemachine was successfully loaded.");
+                Debug.Log($"The TrainAR Statemachine of the training \"{TrainARTrainings.Current}\" was successfully loaded.");
             }
             else
             {
-                Debug.LogError("The TrainAR Statemachine could not be found. Make sure the \"Statemachone.asset\" file is located in the projects root folder. ");
+                Debug.LogError($"The TrainAR Statemachine could not be found. Make sure \"{path}\" exists. ");
             }
         }
         

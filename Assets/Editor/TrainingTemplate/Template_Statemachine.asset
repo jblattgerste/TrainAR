@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95e66c6366d904e98bc83428217d4fd7, type: 3}
+  m_Name: Template_Statemachine
+  m_EditorClassIdentifier: 
+  _data:
+    _json: '{"graph":{"variables":{"Kind":"Flow","collection":{"$content":[],"$version":"A"},"$version":"A"},"controlInputDefinitions":[],"controlOutputDefinitions":[],"valueInputDefinitions":[],"valueOutputDefinitions":[],"title":null,"summary":"\t\t","pan":{"x":300.0,"y":0.0},"zoom":0.73,"elements":[{"coroutine":false,"defaultValues":{},"position":{"x":0.0,"y":0.0},"guid":"d46c6bcf-b0c5-42aa-be8c-aba69c90df42","$version":"A","$type":"Visual_Scripting.OnboardingSetup","$id":"1"},{"defaultValues":{},"position":{"x":600.0,"y":0.0},"guid":"87006541-0613-4e98-8e36-747cc132ed49","$version":"A","$type":"Visual_Scripting.Conclusion","$id":"2"}],"$version":"A"}}'
+    _objectReferences: []

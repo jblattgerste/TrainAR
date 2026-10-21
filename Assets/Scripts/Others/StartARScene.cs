@@ -11,10 +11,11 @@ namespace Others
     public class StartARScene : MonoBehaviour
     {
         /// <summary>
-        /// Name of the scene that should be started
+        /// Name of the scene that is started when no training was chosen (normally the chosen training's scene is
+        /// started, see TrainingSelection).
         /// </summary>
-        /// <value>Default is "Scene"</value>
-        [SerializeField] private string sceneName = "Scene";
+        /// <value>Default is "Coffee"</value>
+        [SerializeField] private string sceneName = "Coffee";
         
         /// <summary>
         /// Loads the (main) AR scene
@@ -30,9 +31,18 @@ namespace Others
         private IEnumerator StartARSceneDelayed()
         {
             yield return new WaitForSeconds(0.1f);
-            SceneManager.LoadScene(sceneName, LoadSceneMode.Single);
+            var training = TrainingSelection.Current;
+            SceneManager.LoadScene(training != null ? training.sceneName : sceneName, LoadSceneMode.Single);
         }
     
+        /// <summary>
+        /// Goes back to the home screen with all trainings.
+        /// </summary>
+        public void LoadHome()
+        {
+            SceneManager.LoadScene("Scenes/Home", LoadSceneMode.Single);
+        }
+
         /// <summary>
         /// Closes the Application.
         /// </summary>

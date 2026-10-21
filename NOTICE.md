@@ -191,3 +191,5 @@ Besides those, this software also includes assets under the CC0 License:
 - Coffee machine sound by Benjifiguried. See https://freesound.org/people/Benjifiguried/sounds/614933/
 - A character created through MakeHuman. See https://github.com/makehumancommunity/makehuman
 - Free PBR materials from ambientCG. See https://ambientcg.com/
+
+The onboarding voice was generated with Kokoro-82M by hexgrad (Apache 2.0 License). See https://huggingface.co/hexgrad/Kokoro-82M

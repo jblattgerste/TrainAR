@@ -1,4 +1,9 @@
-# TrainAR
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="Documentation/resources/TrainARLogoDark.png">
+    <img src="Documentation/resources/TrainARLogo.png" alt="TrainAR" width="420">
+  </picture>
+</p>
 
 [![GitHub license](https://img.shields.io/badge/License-MIT-yellow.svg)](https://github.com/jblattgerste/TrainAR/blob/master/LICENSE) [![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://github.com/jblattgerste/TrainAR/graphs/commit-activity) [![Made with Unity](https://img.shields.io/badge/Made%20with-Unity-57b9d3.svg?style=flat&logo=unity)](https://unity3d.com) [![Documentation](https://github.com/jblattgerste/TrainAR/actions/workflows/documentation.yml/badge.svg)](https://jblattgerste.github.io/TrainAR/)
 
@@ -6,21 +11,36 @@
 
 TrainAR is a holistic threefold combination of an interaction concept, didactic framework and authoring tool for Augmented Reality (AR) trainings on handheld Android and iOS devices ([Blattgerste et al. 2021](https://scholar.google.de/citations?view_op=view_citation&hl=en&user=k2xymcIAAAAJ&citation_for_view=k2xymcIAAAAJ:Y0pCki6q_DkC)). It is completely open source, free and offers non-programmers and programmers without AR-specific expertise aiding in the creation of interactive, engaging, procedural Augmented Reality trainings. This repository contains the technical components of the interaction concept and authoring tool of TrainAR in form of a custom Unity 6.7 Alpha (`6000.7.0a6`) Editor Extension. It can be used with the Unity Windows, macOS (Silicon), macOS (Intel), or Linux Editor and deploy to Android and iOS devices. The authoring tool already offers features like the onboarding animations, tracking solutions, assembly placements, evaluated interaction concepts, layered feedback modalities and training assessments of TrainAR out of the box. This allows authors of AR trainings to focus on the content of the training instead of technical challenges. Authors can simply import 3D models into the tool, convert them to TrainAR objects and reference them in a visual-scripting stateflow (that is inspired by work-process-analyses) to create a procedural flow of instructions, user actions and feedback.
 
-![Example TrainAR Authoring on a laptop with deployment to an android phone](https://raw.githubusercontent.com/jblattgerste/TrainAR/64a9372b05bf0e3656f8e2d8365d9b566a2de37d/Documentation/resources/ExampleAuthoring.png)
+![The TrainAR authoring tool in the Unity editor and the app with its home screen on an iPhone](Documentation/resources/TrainARAuthoringToApp.png)
+*Trainings are created in the Unity editor and deployed as one app: trainees choose a training on its home screen, go through a short onboarding and place the training in their surroundings.*
 
 The idea behind TrainAR is simple: Realistic deployments of head-mounted AR devices still remain a challenge today because of high costs, missing relevant training, and novelty of interactions that require in-depth onboarding. In contrast, smartphone-based AR would be realistically scalable today, while still retaining many of the learning benefits. At least in theory. While possible, most mobile AR learning applications focus on visualisation instead of interactions today, severely limiting their application scope. In line with recent findings that, in terms of training outcome, tangible interactions are not significantly increasing retention or transfer of knowledge compared to purely virtual interaction approaches ([Knierim et al. 2020](https://scholar.google.de/citations?view_op=view_citation&hl=en&user=oHubmTIAAAAJ&cstart=20&pagesize=80&citation_for_view=oHubmTIAAAAJ:RYcK_YlVTxYC)), the idea of TrainAR is a holistic and scalable solution for procedural task training using Augmented Reality on handheld AR devices. Hereby, the idea is not to replace practical trainings but use TrainAR scenarios for concept and procedure understanding in preparation for or retention training after the practical training sessions. In line with [Gagne 1984](https://psycnet.apa.org/record/1985-05816-001), it is envisioned as a novel type of multimedia source to train _intellectual skills_ and _cognitive strategies_ but does not train associated _motor skills_.
 
-## TrainAR Training Scenarios
-Several TrainAR trainings were already developed by us, researchers from partner universities, and students using preliminary versions of the TrainAR authoring tool. They span across the contexts of medical education, nursing education, chemical engineering, science educational, manual assembly, and everyday work tasks. A list of publications for some of the trainings can be found below.
+## Included Example Trainings
+These two trainings are part of this repository: open them in the authoring tool, deploy them right away, or use them as a starting point for your own.
 
-![Example TrainAR scenarios](https://raw.githubusercontent.com/jblattgerste/TrainAR/64a9372b05bf0e3656f8e2d8365d9b566a2de37d/Documentation/resources/ExampleScenarios.png)
+<table>
+<tr>
+<td width="50%" valign="top"><img src="Documentation/resources/ExampleCoffeeTraining.webp" alt="The coffee example training: filter, water and coffee powder go into the machine, the coffee brews and is poured into a mug"/><br><b>Coffee</b>: brew a pot of filter coffee. Everyone knows how to make coffee, so you can focus on how TrainAR works.</td>
+<td width="50%" valign="top"><img src="Documentation/resources/ExampleEngineTraining.webp" alt="The four-stroke engine example training: the parts of one cylinder are assembled step by step"/><br><b>Four-Stroke Engine</b>: assemble one cylinder of a four-stroke engine part by part and start it, while the expert explains every part and questions check what you understood.</td>
+</tr>
+</table>
 
-## Documentation & Getting Started
-If you want to try out already developed TrainAR trainings, here is a list of available Apps that utilize TrainAR:
+Both are part of the app you build from this repository: trainees choose them on its home screen. If you do not need them, delete them in the authoring tool's TrainAR Trainings tab.
+
+
+## Trainings Built with TrainAR (not included)
+These trainings were created with earlier versions of TrainAR by us, researchers from partner universities, and students. They are not part of this repository. They span the contexts of medical education, nursing education, chemical engineering, science education, manual assembly, and everyday work tasks; publications on some of them are listed [below](#publication-list).
+
+![Trainings from research projects, not included in this repository](https://raw.githubusercontent.com/jblattgerste/TrainAR/64a9372b05bf0e3656f8e2d8365d9b566a2de37d/Documentation/resources/ExampleScenarios.png)
+*Trainings from research projects, not included in this repository.*
+
+Some of them can be tried out in apps that use TrainAR:
 - Training scenario "Preparation of a tocolytic injection" in the Heb@AR App [[Youtube](https://www.youtube.com/watch?v=CUyuzIkvvuk), [Android](https://play.google.com/store/apps/details?id=de.Mixality.HebAR) & [iOS](https://apps.apple.com/app/heb-ar/id1621822317)]
 - Training scenario "Pelvis Termini" in the Heb@AR App [[Youtube](https://www.youtube.com/watch?v=arTJ3lrHRkw), [Android](https://play.google.com/store/apps/details?id=de.Mixality.HebAR) & [iOS](https://apps.apple.com/app/heb-ar/id1621822317)]
 
-If you want to get started with creating, deploying and playing with your own TrainAR training, check out our [Getting Started Guide](https://jblattgerste.github.io/TrainAR/manual/GettingStarted.html). You can either use the example scenario that ships with this repository, or create a very simple example scene from the guide in less than half an hour. Beyond the Getting Started Guide, a full documentation is available detailing the available [visual scripting nodes](https://jblattgerste.github.io/TrainAR/manual/TrainARNodes.html), how to [create TrainAR objects](https://jblattgerste.github.io/TrainAR/manual/TrainARObjects.html) and how to [use nodes to implement action flows](https://jblattgerste.github.io/TrainAR/manual/VisualScripting.html). Additionally, a complete documentation of all [API references](https://jblattgerste.github.io/TrainAR/api/Interaction.html) is included.
+## Documentation & Getting Started
+If you want to get started with creating, deploying and playing with your own TrainAR training, check out our [Getting Started Guide](https://jblattgerste.github.io/TrainAR/manual/GettingStarted.html). You can either use the two example trainings that ship with this repository (Coffee and Four-Stroke Engine), or create your own simple training from the guide in less than half an hour. One project can hold any number of trainings: the app shows them all on its home screen. Beyond the Getting Started Guide, a full documentation is available detailing the available [visual scripting nodes](https://jblattgerste.github.io/TrainAR/manual/TrainARNodes.html), how to [create TrainAR objects](https://jblattgerste.github.io/TrainAR/manual/TrainARObjects.html) and how to [use nodes to implement action flows](https://jblattgerste.github.io/TrainAR/manual/VisualScripting.html). Additionally, a complete documentation of all [API references](https://jblattgerste.github.io/TrainAR/api/Interaction.html) is included.
 
 A key idea behind TrainAR is the retention of the full Unity capabilities while offering a higher-level abstraction for non-programmers to get started with AR authoring. Therefore, it can also be utilized without the visual scripting and without the TrainAR authoring overlay, using the standard Unity Editor Overlay and C# programming. This could for example be interesting, if you want to implement non-procedural educational games or you are only interested in the components of the interaction concept and not so much the authoring tool itself. For this, check out the [Advanced Options](https://jblattgerste.github.io/TrainAR/manual/NoVisualScripting.html) documentation.
 

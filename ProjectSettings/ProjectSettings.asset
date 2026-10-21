@@ -43,8 +43,6 @@ PlayerSettings:
   m_SplashScreenLogos:
   - logo: {fileID: 21300000, guid: 34013b0145843184aa1bc92ffe4d384b, type: 3}
     duration: 2
-  - logo: {fileID: 21300000, guid: 36a1505913c5cbb49ae8a421e27169d0, type: 3}
-    duration: 2
   m_VirtualRealitySplashScreen: {fileID: 0}
   defaultScreenWidth: 1024
   defaultScreenHeight: 768
@@ -164,7 +162,10 @@ PlayerSettings:
   visionOSBundleVersion: 1.0
   tvOSBundleVersion: 1.0
   bundleVersion: 1.0.0
-  preloadedAssets: []
+  preloadedAssets:
+  - {fileID: 4899749510619718592, guid: 8d2c2003aa8e67f43ace0d2bb7b77c77, type: 2}
+  - {fileID: 4800000, guid: e7c77f6eaab324a819efdc13b8125a39, type: 3}
+  - {fileID: 4800000, guid: 6743a50a812740be8c0aa3fccc46fae9, type: 3}
   metroInputSource: 0
   wsaTransparentSwapchain: 0
   xboxOneDisableKinectGpuReservation: 1
@@ -184,9 +185,9 @@ PlayerSettings:
   androidMaxAspectRatio: 2.1
   androidMinAspectRatio: 1
   applicationIdentifier:
-    Android: com.Mixality.TrainAR
-    Standalone: com.Mixality.TrainAR
-    iPhone: com.Mixality.TrainAR
+    Android: de.Blattgerste.TrainAR
+    Standalone: de.Blattgerste.TrainAR
+    iPhone: de.Blattgerste.TrainAR
   buildNumber:
     Standalone: 0
     VisionOS: 0

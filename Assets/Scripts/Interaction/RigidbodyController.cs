@@ -22,10 +22,14 @@ namespace Interaction
         /// <value>Is set on Awake.</value>
         private Rigidbody thisRigidbody;
         /// <summary>
-        /// Counter to reset kinematic state.
+        /// Physics steps in a row in which the released object did not move.
         /// </summary>
         /// <value>0 at start.</value>
-        private int kinematicFrameCounter = 0;
+        private int restingSteps = 0;
+        /// <summary>
+        /// Physics steps in a row an object has to rest before it becomes kinematic (0.2 s at the default 50 Hz).
+        /// </summary>
+        private const int StepsToRest = 10;
 
         /// <summary>
         /// Sets needed refernces.
@@ -45,33 +49,39 @@ namespace Interaction
         }
         
         /// <summary>
-        /// Checks for needed changes to kinematic state.
+        /// Checks for needed changes to kinematic state, once per physics step.
         /// </summary>
-        void Update()
+        void FixedUpdate()
         {
-            //Make the object kinematic if it is sleeping right now (therefore not acted on by physics) and didnt last frame 
-            if (!kinematicWhenStatic) return;
+            //Return if the object is not acted on by physics right now
+            if (!kinematicWhenStatic || thisRigidbody.isKinematic)
+            {
+                restingSteps = 0;
+                return;
+            }
 
-            //Return if this rigidbody is currently kinematic
-            if (thisRigidbody.isKinematic == true) return;
-
-            //Use the kinematicFrameCounter to skip the first x frames (1 should be sufficient?!), reset it afterwards
-            kinematicFrameCounter++;
-            if (kinematicFrameCounter < 2) return;
-            kinematicFrameCounter = 0;
-
-            //Check if the object is currently moving, return if it is still moving
-            if (thisRigidbody.linearVelocity.sqrMagnitude  > 0.001f) return;
+            //Only a resting object becomes kinematic: a released or bouncing object is also still for a single moment
+            //(right after the release, at the top of a bounce), so it has to be still for several physics steps in a
+            //row. Counting physics steps instead of frames keeps this independent of the frame rate (e.g. 120 Hz).
+            if (thisRigidbody.linearVelocity.sqrMagnitude > 0.001f || thisRigidbody.angularVelocity.sqrMagnitude > 0.01f)
+            {
+                restingSteps = 0;
+                return;
+            }
+            if (++restingSteps < StepsToRest) return;
+            restingSteps = 0;
 
             //Make Object kinematic
-            this.thisRigidbody.isKinematic = true;
+            thisRigidbody.isKinematic = true;
         }
         /// <summary>
         /// isKinematic is set false.
         /// </summary>
         private void ActivatePhysics()
         {
+            restingSteps = 0;
             thisRigidbody.isKinematic = false;
+            thisRigidbody.WakeUp();
         }
         /// <summary>
         /// isKinematic is set true.
