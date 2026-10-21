@@ -12,7 +12,7 @@ As you can see, the Coffee example training is open. Next to the Simulator on th
 
 ![](../resources/TrainAR_Overview.PNG)
 
-In the scene window you should now see the reference setup of the current Workspace (a room of black tiles, a table and a female character) but no TrainAR Objects in the Hierarchy or Scene. The stateflow only contains the green **TrainAR: Onboarding completed and training assembly placed** node, where every training starts, and the **TrainAR: Training Conclusion** node, where it ends. The reference setup should give you an idea of the size of objects in regards to the real world when viewed in the authoring tool and is not deployed with the TrainAR training.
+In the scene window you should now see the reference setup of the current Workspace (a room of black tiles, a table and a female character) but no TrainAR Objects in the Hierarchy or Scene. The stateflow only contains the green **TrainAR: Onboarding completed and training assembly placed** node, where every training starts, and the **TrainAR: Training Conclusion** node, where it ends. The reference setup should give you an idea of the size of objects in regards to the real world when viewed in the authoring tool and is not deployed with the TrainAR training. The small magenta point in the middle of the table marks the placement point: the training is placed with this point where the trainee puts it down in the app.
 
 ## Create TrainAR Objects
 

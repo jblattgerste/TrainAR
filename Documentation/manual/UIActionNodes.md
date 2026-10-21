@@ -31,7 +31,7 @@ With the UI Task set to **Input Field**, the user has to type in his answer to a
 
 ### UI Task: List Selection
 
-With the UI Task set to **List Selection**, the user is presented with a scrollable list of possible answers, which can be defined, as well as their respective feedback, in the node. If the user chooses all correct items in the list, the **Correct** output is triggered.
+With the UI Task set to **List Selection**, the user is presented with a scrollable list of possible answers, which can be defined, as well as their respective feedback, in the node. If the user chooses all correct items in the list, the **Correct** output is triggered. Choosing an incorrect item shows its feedback inside the list; a tap on the question or the list closes it again.
  
 <div class="trainar-node-comparison" role="region" aria-label="TrainAR node and result comparison" tabindex="0">
 

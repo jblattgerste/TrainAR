@@ -128,6 +128,10 @@ namespace Editor.Scripts
             EditorUtility.SetDirty(created);
             Sync();
             ShowInProjectWindow(name);
+            // like opening a training: its statemachine in the Script Graph, the default view, the framework hidden
+            TrainAREditorMenu.ResetTrainARSceneToAuthoringToolDefault();
+            TrainAREditorMenu.ResetStatemachineToDefault();
+            TrainAREditorMenu.HideFrameworkHierarchy();
         }
 
         /// <summary>

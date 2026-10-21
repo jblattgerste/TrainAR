@@ -6,12 +6,16 @@ One TrainAR project can hold any number of trainings. All of them are part of th
 
 The **TrainAR Trainings** tab sits next to the Simulator in the authoring tool. If it is not visible, choose **TrainAR → Options → Show Trainings List** (and **Show Simulator** to switch back).
 
+<img src="../resources/TrainARTrainingsTab.png" alt="The TrainAR Trainings tab with the Coffee and Four-Stroke Engine trainings" width="480"/>
+
 Every training is shown as a box with its preview, its expert, its name and its description. The buttons in each box:
 
 - **Open** opens the training in the authoring tool: its scene, its stateflow and the default view. The training that is currently open is marked with *(open in the authoring tool)*.
 - **Edit** lets you change the name, the description and the expert picture. Click the round expert (or drop a picture on it) to change it. **Save** applies your changes, **Cancel** discards them.
 - **Duplicate** creates a copy of the training under a new name, for example to start a variation of an existing training. The copy uses the same 3D models as the original.
 - **Delete** removes the training with everything in its folder. This cannot be undone. The last training of a project cannot be deleted.
+
+<img src="../resources/TrainARTrainingsEdit.png" alt="A training in edit mode: expert picture, name and description with Cancel and Save" width="480"/>
 
 **+ Add new training** at the bottom creates a new, empty training: the TrainAR scene without TrainAR Objects and a stateflow with only the **TrainAR: Onboarding completed and training assembly placed** node and the **TrainAR: Training Conclusion** node.
 
