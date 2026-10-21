@@ -34,3 +34,24 @@ article p > img:not([width]) {
   width: 100%;
   height: auto;
 }
+
+/* Smaller figures (images with an explicit width; also when written as plain HTML, which is not wrapped in a paragraph)
+   are centred, except inside tables */
+article img[width] {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  height: auto;
+}
+article td img[width] {
+  display: inline-block;
+}
+
+/* Tables of phone pictures: centred columns */
+.trainar-phones table td {
+  text-align: center;
+  vertical-align: top;
+}
+.trainar-phones img {
+  max-width: 100%;
+}

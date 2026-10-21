@@ -1138,6 +1138,16 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "manual/Onboarding.md",
+      "output": {
+        ".html": {
+          "relative_path": "manual/Onboarding.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "manual/Setup.md",
       "output": {
         ".html": {
@@ -1541,16 +1551,6 @@
     },
     {
       "type": "Resource",
-      "source_relative_path": "resources/MacbookTrainARPreviewTool.png",
-      "output": {
-        "resource": {
-          "relative_path": "resources/MacbookTrainARPreviewTool.png"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "Resource",
       "source_relative_path": "resources/ManuallyDownloadTrainAR.JPG",
       "output": {
         "resource": {
@@ -1591,60 +1591,90 @@
     },
     {
       "type": "Resource",
-      "source_relative_path": "resources/OnboardingCombine.webp",
+      "source_relative_path": "resources/Onboarding_Home.png",
       "output": {
         "resource": {
-          "relative_path": "resources/OnboardingCombine.webp"
+          "relative_path": "resources/Onboarding_Home.png"
         }
       },
       "version": ""
     },
     {
       "type": "Resource",
-      "source_relative_path": "resources/OnboardingGrab.webp",
+      "source_relative_path": "resources/Onboarding_Page_Combine.webp",
       "output": {
         "resource": {
-          "relative_path": "resources/OnboardingGrab.webp"
+          "relative_path": "resources/Onboarding_Page_Combine.webp"
         }
       },
       "version": ""
     },
     {
       "type": "Resource",
-      "source_relative_path": "resources/OnboardingInsights.webp",
+      "source_relative_path": "resources/Onboarding_Page_Grab.webp",
       "output": {
         "resource": {
-          "relative_path": "resources/OnboardingInsights.webp"
+          "relative_path": "resources/Onboarding_Page_Grab.webp"
         }
       },
       "version": ""
     },
     {
       "type": "Resource",
-      "source_relative_path": "resources/OnboardingInstructions.webp",
+      "source_relative_path": "resources/Onboarding_Page_Insights.webp",
       "output": {
         "resource": {
-          "relative_path": "resources/OnboardingInstructions.webp"
+          "relative_path": "resources/Onboarding_Page_Insights.webp"
         }
       },
       "version": ""
     },
     {
       "type": "Resource",
-      "source_relative_path": "resources/OnboardingInteract.webp",
+      "source_relative_path": "resources/Onboarding_Page_Instructions.webp",
       "output": {
         "resource": {
-          "relative_path": "resources/OnboardingInteract.webp"
+          "relative_path": "resources/Onboarding_Page_Instructions.webp"
         }
       },
       "version": ""
     },
     {
       "type": "Resource",
-      "source_relative_path": "resources/OnboardingScan.webp",
+      "source_relative_path": "resources/Onboarding_Page_Interact.webp",
       "output": {
         "resource": {
-          "relative_path": "resources/OnboardingScan.webp"
+          "relative_path": "resources/Onboarding_Page_Interact.webp"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "resources/Onboarding_Place.png",
+      "output": {
+        "resource": {
+          "relative_path": "resources/Onboarding_Place.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "resources/Onboarding_Scan.png",
+      "output": {
+        "resource": {
+          "relative_path": "resources/Onboarding_Scan.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "resources/Onboarding_Start.png",
+      "output": {
+        "resource": {
+          "relative_path": "resources/Onboarding_Start.png"
         }
       },
       "version": ""
@@ -1711,10 +1741,30 @@
     },
     {
       "type": "Resource",
-      "source_relative_path": "resources/TrackingWarnings.png",
+      "source_relative_path": "resources/Tracking_Features.png",
       "output": {
         "resource": {
-          "relative_path": "resources/TrackingWarnings.png"
+          "relative_path": "resources/Tracking_Features.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "resources/Tracking_Light.png",
+      "output": {
+        "resource": {
+          "relative_path": "resources/Tracking_Light.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "resources/Tracking_Motion.png",
+      "output": {
+        "resource": {
+          "relative_path": "resources/Tracking_Motion.png"
         }
       },
       "version": ""
@@ -1805,16 +1855,6 @@
       "output": {
         "resource": {
           "relative_path": "resources/TrainARTrainingsEdit.png"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "resources/TrainARTrainingsTab.png",
-      "output": {
-        "resource": {
-          "relative_path": "resources/TrainARTrainingsTab.png"
         }
       },
       "version": ""
