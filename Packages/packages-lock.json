@@ -30,6 +30,13 @@
         "com.unity.test-framework.performance": "3.2.0"
       }
     },
+    "com.unity.device-simulator.devices": {
+      "version": "1.0.1",
+      "depth": 0,
+      "source": "registry",
+      "dependencies": {},
+      "url": "https://packages.unity.com"
+    },
     "com.unity.editorcoroutines": {
       "version": "6.6.0",
       "depth": 1,

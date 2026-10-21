@@ -196,6 +196,10 @@ namespace UI
         /// </summary>
         private bool feedbackOpen;
         private Coroutine feedbackCountdown;
+        /// <summary>
+        /// Invisible full-screen button that closes the feedback of a wrong list answer on any tap.
+        /// </summary>
+        private GameObject listFeedbackCloser;
 
         /// <summary>
         /// Stores wrong answered questions for endscreen UI.
@@ -541,7 +545,59 @@ namespace UI
                 button.onClick.AddListener(() => button.interactable = false);
                 button.onClick.AddListener(() => button.enabled = false);
                 button.onClick.AddListener(() => EnableAllButtons(listOfQuestionListButtons));
+                ShowListFeedbackCloser(button);
             }
+        }
+
+        /// <summary>
+        /// While a wrong answer of a list question shows its feedback, a tap on the question or the list closes it (like
+        /// tapping the answer itself), as for the feedback of regular questions; the rest of the screen is not affected.
+        /// </summary>
+        /// <param name="openAnswer">The answer that shows its feedback.</param>
+        private void ShowListFeedbackCloser(Button openAnswer)
+        {
+            // the list question's UI: the parent of the answers' scroll view (question and list)
+            var scroll = openAnswer.GetComponentInParent<ScrollRect>();
+            var area = scroll != null && scroll.transform.parent != null ? scroll.transform.parent : scroll.transform;
+            if (listFeedbackCloser == null)
+            {
+                listFeedbackCloser = new GameObject("List Feedback Closer", typeof(RectTransform), typeof(Image), typeof(Button),
+                    typeof(LayoutElement));
+                listFeedbackCloser.layer = area.gameObject.layer;
+                listFeedbackCloser.GetComponent<LayoutElement>().ignoreLayout = true;
+                var rect = (RectTransform)listFeedbackCloser.transform;
+                rect.SetParent(area, false);
+                listFeedbackCloser.GetComponent<Image>().color = Color.clear;
+                listFeedbackCloser.GetComponent<Button>().transition = Selectable.Transition.None;
+            }
+            // cover exactly the question text and the list (the parent itself is only a small anchor)
+            var closerRect = (RectTransform)listFeedbackCloser.transform;
+            var min = new Vector2(float.MaxValue, float.MaxValue);
+            var max = new Vector2(float.MinValue, float.MinValue);
+            var corners = new Vector3[4];
+            foreach (RectTransform child in area)
+            {
+                if (child == closerRect || !child.gameObject.activeSelf) continue;
+                child.GetWorldCorners(corners);
+                foreach (var corner in corners)
+                {
+                    Vector2 local = area.InverseTransformPoint(corner);
+                    min = Vector2.Min(min, local);
+                    max = Vector2.Max(max, local);
+                }
+            }
+            closerRect.anchorMin = closerRect.anchorMax = closerRect.pivot = new Vector2(0.5f, 0.5f);
+            closerRect.anchoredPosition = (min + max) / 2 - ((RectTransform)area).rect.center;
+            closerRect.sizeDelta = max - min;
+            listFeedbackCloser.transform.SetAsLastSibling();
+            var closer = listFeedbackCloser.GetComponent<Button>();
+            closer.onClick.RemoveAllListeners();
+            closer.onClick.AddListener(() =>
+            {
+                listFeedbackCloser.SetActive(false);
+                openAnswer.onClick.Invoke();
+            });
+            listFeedbackCloser.SetActive(true);
         }
         /// <summary>
         /// Submit the current input model from an explicit submit button or other caller.
