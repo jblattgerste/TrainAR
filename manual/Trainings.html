@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Managing Trainings | TrainAR Documentation </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Managing Trainings | TrainAR Documentation ">
+      
+      
+      <link rel="icon" href="../resources/favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/jblattgerste/TrainAR/blob/main/Documentation/manual/Trainings.md/#L1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../resources/logo.svg" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="">
+<h1 id="managing-trainings">Managing Trainings</h1>
+
+<p>One TrainAR project can hold any number of trainings. All of them are part of the app: the trainees choose one on the home screen. TrainAR ships with two example trainings, <strong>Coffee</strong> and <strong>Four-Stroke Engine</strong>.</p>
+<h2 id="the-trainar-trainings-tab">The TrainAR Trainings tab</h2>
+<p>The <strong>TrainAR Trainings</strong> tab sits next to the Simulator in the authoring tool. If it is not visible, choose <strong>TrainAR → Options → Show Trainings List</strong> (and <strong>Show Simulator</strong> to switch back).</p>
+<img src="../resources/TrainARTrainingsTab.png" alt="The TrainAR Trainings tab with the Coffee and Four-Stroke Engine trainings" width="480">
+<p>Every training is shown as a box with its preview, its expert, its name and its description. The buttons in each box:</p>
+<ul>
+<li><strong>Open</strong> opens the training in the authoring tool: its scene, its stateflow and the default view. The training that is currently open is marked with <em>(open in the authoring tool)</em>.</li>
+<li><strong>Edit</strong> lets you change the name, the description and the expert picture. Click the round expert (or drop a picture on it) to change it. <strong>Save</strong> applies your changes, <strong>Cancel</strong> discards them.</li>
+<li><strong>Duplicate</strong> creates a copy of the training under a new name, for example to start a variation of an existing training. The copy uses the same 3D models as the original.</li>
+<li><strong>Delete</strong> removes the training with everything in its folder. This cannot be undone. The last training of a project cannot be deleted.</li>
+</ul>
+<img src="../resources/TrainARTrainingsEdit.png" alt="A training in edit mode: expert picture, name and description with Cancel and Save" width="480">
+<p><strong>+ Add new training</strong> at the bottom creates a new, empty training: the TrainAR scene without TrainAR Objects and a stateflow with only the <strong>TrainAR: Onboarding completed and training assembly placed</strong> node and the <strong>TrainAR: Training Conclusion</strong> node.</p>
+<div class="NOTE">
+<h5>Note</h5>
+<p><strong>TrainAR → Open TrainAR Authoring Tool</strong> always opens the training you opened last on this computer. On the first launch (or if that training was deleted), it opens the Coffee example.</p>
+</div>
+<h2 id="what-belongs-to-a-training">What belongs to a training</h2>
+<p>Every training lives in its own folder, <code>Assets/Trainings/&lt;Name&gt;/</code>:</p>
+<ul>
+<li><code>&lt;Name&gt;.unity</code>: the scene with the TrainAR Objects of the training.</li>
+<li><code>&lt;Name&gt;_Statemachine.asset</code>: the TrainAR stateflow of the training.</li>
+<li><code>&lt;Name&gt;_Info.asset</code>: the name, the description and the expert picture that are shown in the app.</li>
+<li><code>&lt;Name&gt;_Preview.png</code>: the preview of the training's setup (created automatically, see below).</li>
+</ul>
+<p>Put the 3D models, sounds and pictures of a training into its folder as well, so that everything that belongs to it stays together. When you open or create a training, the Project window jumps to its folder: drag your files in there. 3D models can be FBX, OBJ, glTF or GLB files.</p>
+<h2 id="name-description-and-expert">Name, description and expert</h2>
+<p>The <strong>name</strong> and the <strong>description</strong> are shown on the home screen and on the first page of the onboarding. Describe what trainees do and learn in the training, for example &quot;In this training, you assemble …&quot;. The <strong>expert</strong> is a picture of the person who guides the trainees: it is shown as a round picture next to the expert insights, on the home screen and in the final assessment. Pictures with a transparent background get a white circle behind them; other pictures are cut round.</p>
+<h2 id="previews">Previews</h2>
+<p>The preview shows the training's setup as the trainee sees it after placing it, without the table and with a transparent background. You do not have to create it: TrainAR renders the previews of all trainings before every build. Until the first build, a new training shows <em>Preview after the next build</em>.</p>
+<h2 id="the-home-screen">The home screen</h2>
+<p>After starting the app, trainees see the home screen with all trainings: first the two examples, then all other trainings in the order they were created. Tapping a training starts its onboarding, which first presents the training's name, description, expert and preview. At the end of a training, and with the back button in the onboarding, trainees get back to the home screen.</p>
+<p>Below the trainings, the home screen shows a footer with links to GitHub, Mixality and the documentation, information on funding, credits and how to cite TrainAR, and a contact link. If you do not want it in your app, uncheck <strong>Show the TrainAR footer on the home screen</strong> at the bottom of the TrainAR Trainings tab.</p>
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/jblattgerste/TrainAR/blob/main/Documentation/manual/Trainings.md/#L1" class="edit-link">Edit this page</a>
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          TrainAR Documentation
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

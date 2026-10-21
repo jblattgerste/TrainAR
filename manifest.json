@@ -359,6 +359,48 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Others.TrainingCatalog.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Others.TrainingCatalog.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Others.TrainingCatalog",
+      "Summary": "<p sourcefile=\"api/Others.TrainingCatalog.yml\" sourcestartlinenumber=\"1\">All trainings in the build (Resources/TrainARTrainings.asset), kept up to date by the editor tools. The home\nscreen lists them.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Others.TrainingInfo.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Others.TrainingInfo.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Others.TrainingInfo",
+      "Summary": "<p sourcefile=\"api/Others.TrainingInfo.yml\" sourcestartlinenumber=\"1\">Describes one training (Assets/Trainings/&lt;Name&gt;/&lt;Name&gt;_Info.asset): shown on the home screen and the first\nonboarding page, and its expert picture is used for the insights and the end screen.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Others.TrainingSelection.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Others.TrainingSelection.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Others.TrainingSelection",
+      "Summary": "<p sourcefile=\"api/Others.TrainingSelection.yml\" sourcestartlinenumber=\"1\">The training chosen on the home screen. When a training scene is started directly (e.g. in the editor), it is\nthe training of that scene.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Others.yml",
       "output": {
         ".html": {
@@ -513,6 +555,20 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/UI.HomeScreen.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/UI.HomeScreen.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "UI.HomeScreen",
+      "Summary": "<p sourcefile=\"api/UI.HomeScreen.yml\" sourcestartlinenumber=\"1\">The home screen: lists every training of the build (preview, name, description, round expert) and starts the\nchosen one's onboarding. Below the trainings follows the optional TrainAR footer (links, creator, funding, contact).</p>\n"
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/UI.InputFieldAdjust.yml",
       "output": {
         ".html": {
@@ -552,6 +608,20 @@
       "IsMRef": true,
       "Title": "UI.InteractionButtonController",
       "Summary": "<p sourcefile=\"api/UI.InteractionButtonController.yml\" sourcestartlinenumber=\"1\">Handles the behaviour of the interaction buttons, such as enabling and disabling when appropriate\nor highlighting the combine button in orange when a combination would be possible.</p>\n<p sourcefile=\"api/UI.InteractionButtonController.yml\" sourcestartlinenumber=\"4\">It also allows for grabbed objects to be rotatable.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/UI.KeepAtBottom.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/UI.KeepAtBottom.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "UI.KeepAtBottom",
+      "Summary": "<p sourcefile=\"api/UI.KeepAtBottom.yml\" sourcestartlinenumber=\"1\">Keeps a button's lower edge a fixed distance above the bottom of the safe area, on every screen length. With the\ndistance equal to the button row's side margin, the buttons sit symmetrically in the lower corners.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -639,6 +709,20 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/UI.RoundExpertPicture.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/UI.RoundExpertPicture.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "UI.RoundExpertPicture",
+      "Summary": "<p sourcefile=\"api/UI.RoundExpertPicture.yml\" sourcestartlinenumber=\"1\">Shows the expert's picture in its round frame (the parent is a white circle): the picture is cropped to a centred\nsquare and cut round with a smooth edge by the Round Picture shader, so transparent pictures sit on the white circle\nand opaque ones are cut round, whatever the trainer uses. The frame's hard stencil mask is switched off (its edge\nis jagged).</p>\n"
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/UI.SaveArea.yml",
       "output": {
         ".html": {
@@ -650,6 +734,20 @@
       "IsMRef": true,
       "Title": "UI.SaveArea",
       "Summary": "<p sourcefile=\"api/UI.SaveArea.yml\" sourcestartlinenumber=\"1\">The SafeArea scripts moves UI components when they would otherwise be occluded by e.g. cutout cameras or speakers\non some newer smartphone devices.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/UI.SoftShadow.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/UI.SoftShadow.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "UI.SoftShadow",
+      "Summary": "<p sourcefile=\"api/UI.SoftShadow.yml\" sourcestartlinenumber=\"1\">A soft shadow behind a UI element (buttons, the insight bubble, the expert). The shadow is a sibling right before\nthe element that follows its position, size and scale. On buttons, it is only shown while they can be used.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -678,6 +776,20 @@
       "IsMRef": true,
       "Title": "UI.TopPanelController",
       "Summary": "<p sourcefile=\"api/UI.TopPanelController.yml\" sourcestartlinenumber=\"1\">The TopPanelController handpes updates to the UI panel of the trainign scenario, showing the instructions and progress percentage of the training.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/UI.TrainingIntroPage.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/UI.TrainingIntroPage.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "UI.TrainingIntroPage",
+      "Summary": "<p sourcefile=\"api/UI.TrainingIntroPage.yml\" sourcestartlinenumber=\"1\">The first onboarding page: shows the chosen training's name, its expert presenting the description (as on the end\nscreen) and the preview.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -1086,6 +1198,16 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "manual/Trainings.md",
+      "output": {
+        ".html": {
+          "relative_path": "manual/Trainings.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "manual/UIActionNodes.md",
       "output": {
         ".html": {
@@ -1259,20 +1381,20 @@
     },
     {
       "type": "Resource",
-      "source_relative_path": "resources/ExampleAuthoring.png",
+      "source_relative_path": "resources/ExampleCoffeeTraining.webp",
       "output": {
         "resource": {
-          "relative_path": "resources/ExampleAuthoring.png"
+          "relative_path": "resources/ExampleCoffeeTraining.webp"
         }
       },
       "version": ""
     },
     {
       "type": "Resource",
-      "source_relative_path": "resources/ExampleCoffeeTraining.webp",
+      "source_relative_path": "resources/ExampleEngineTraining.webp",
       "output": {
         "resource": {
-          "relative_path": "resources/ExampleCoffeeTraining.webp"
+          "relative_path": "resources/ExampleEngineTraining.webp"
         }
       },
       "version": ""
@@ -1469,6 +1591,66 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "resources/OnboardingCombine.webp",
+      "output": {
+        "resource": {
+          "relative_path": "resources/OnboardingCombine.webp"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "resources/OnboardingGrab.webp",
+      "output": {
+        "resource": {
+          "relative_path": "resources/OnboardingGrab.webp"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "resources/OnboardingInsights.webp",
+      "output": {
+        "resource": {
+          "relative_path": "resources/OnboardingInsights.webp"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "resources/OnboardingInstructions.webp",
+      "output": {
+        "resource": {
+          "relative_path": "resources/OnboardingInstructions.webp"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "resources/OnboardingInteract.webp",
+      "output": {
+        "resource": {
+          "relative_path": "resources/OnboardingInteract.webp"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "resources/OnboardingScan.webp",
+      "output": {
+        "resource": {
+          "relative_path": "resources/OnboardingScan.webp"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "resources/ReferenceObjects.gif",
       "output": {
         "resource": {
@@ -1529,6 +1711,26 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "resources/TrackingWarnings.png",
+      "output": {
+        "resource": {
+          "relative_path": "resources/TrackingWarnings.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "resources/TrainARAuthoringToApp.png",
+      "output": {
+        "resource": {
+          "relative_path": "resources/TrainARAuthoringToApp.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "resources/TrainARBasicsOverview.png",
       "output": {
         "resource": {
@@ -1543,6 +1745,26 @@
       "output": {
         "resource": {
           "relative_path": "resources/TrainARDownloaded.JPG"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "resources/TrainARLogo.png",
+      "output": {
+        "resource": {
+          "relative_path": "resources/TrainARLogo.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "resources/TrainARLogoDark.png",
+      "output": {
+        "resource": {
+          "relative_path": "resources/TrainARLogoDark.png"
         }
       },
       "version": ""
@@ -1573,6 +1795,26 @@
       "output": {
         "resource": {
           "relative_path": "resources/TrainARTechnicalComponentsVisualization.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "resources/TrainARTrainingsEdit.png",
+      "output": {
+        "resource": {
+          "relative_path": "resources/TrainARTrainingsEdit.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "resources/TrainARTrainingsTab.png",
+      "output": {
+        "resource": {
+          "relative_path": "resources/TrainARTrainingsTab.png"
         }
       },
       "version": ""

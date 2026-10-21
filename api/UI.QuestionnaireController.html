@@ -230,7 +230,7 @@ The question list opens a list with n possible items and continues when all righ
 
   <h3 id="UI_QuestionnaireController_correctAnswerSound" data-uid="UI.QuestionnaireController.correctAnswerSound">
   correctAnswerSound
-  <a class="header-action link-secondary" title="View source" href="https://github.com/jblattgerste/TrainAR/blob/main/Assets/Scripts/UI/QuestionnaireController.cs/#L159"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/jblattgerste/TrainAR/blob/main/Assets/Scripts/UI/QuestionnaireController.cs/#L154"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Audioclip that is played when correct answer is pressed.</p>
@@ -312,6 +312,135 @@ The question list opens a list with n possible items and continues when all righ
   <dl class="parameters">
     <dt><span class="xref">float</span></dt>
     <dd><p>Default is 1.0f seconds.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="UI_QuestionnaireController_feedbackDuration" data-uid="UI.QuestionnaireController.feedbackDuration">
+  feedbackDuration
+  <a class="header-action link-secondary" title="View source" href="https://github.com/jblattgerste/TrainAR/blob/main/Assets/Scripts/UI/QuestionnaireController.cs/#L172"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>How long the feedback of a chosen answer stays open before the questionnaire continues on its own.
+Tapping the feedback or the question closes it earlier.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float feedbackDuration</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">float</span></dt>
+    <dd><p>Default is 5 seconds.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="UI_QuestionnaireController_feedbackTimerBackgroundColor" data-uid="UI.QuestionnaireController.feedbackTimerBackgroundColor">
+  feedbackTimerBackgroundColor
+  <a class="header-action link-secondary" title="View source" href="https://github.com/jblattgerste/TrainAR/blob/main/Assets/Scripts/UI/QuestionnaireController.cs/#L182"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Color of the not yet filled part of the feedback timer bar.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Color feedbackTimerBackgroundColor</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">Color</span></dt>
+    <dd><p>Default is a dark shade of the UI blue.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="UI_QuestionnaireController_feedbackTimerColor" data-uid="UI.QuestionnaireController.feedbackTimerColor">
+  feedbackTimerColor
+  <a class="header-action link-secondary" title="View source" href="https://github.com/jblattgerste/TrainAR/blob/main/Assets/Scripts/UI/QuestionnaireController.cs/#L177"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Color of the bar on top of the question that fills up while the feedback is open.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Color feedbackTimerColor</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">Color</span></dt>
+    <dd><p>Default is the light teal of the TrainAR logo.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="UI_QuestionnaireController_feedbackTimerHeight" data-uid="UI.QuestionnaireController.feedbackTimerHeight">
+  feedbackTimerHeight
+  <a class="header-action link-secondary" title="View source" href="https://github.com/jblattgerste/TrainAR/blob/main/Assets/Scripts/UI/QuestionnaireController.cs/#L187"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Height of the feedback timer bar in canvas units.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float feedbackTimerHeight</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">float</span></dt>
+    <dd><p>Default is 24.</p>
 </dd>
   </dl>
 
@@ -646,7 +775,7 @@ The question list opens a list with n possible items and continues when all righ
 
   <h3 id="UI_QuestionnaireController_rightAnswer" data-uid="UI.QuestionnaireController.rightAnswer">
   rightAnswer
-  <a class="header-action link-secondary" title="View source" href="https://github.com/jblattgerste/TrainAR/blob/main/Assets/Scripts/UI/QuestionnaireController.cs/#L185"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/jblattgerste/TrainAR/blob/main/Assets/Scripts/UI/QuestionnaireController.cs/#L218"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Stores right answers for endscreen UI.</p>
@@ -710,7 +839,7 @@ The question list opens a list with n possible items and continues when all righ
 
   <h3 id="UI_QuestionnaireController_wrongAnswerSound" data-uid="UI.QuestionnaireController.wrongAnswerSound">
   wrongAnswerSound
-  <a class="header-action link-secondary" title="View source" href="https://github.com/jblattgerste/TrainAR/blob/main/Assets/Scripts/UI/QuestionnaireController.cs/#L164"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/jblattgerste/TrainAR/blob/main/Assets/Scripts/UI/QuestionnaireController.cs/#L159"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Audioclip that is played when wrong answer is pressed.</p>
@@ -742,7 +871,7 @@ The question list opens a list with n possible items and continues when all righ
 
   <h3 id="UI_QuestionnaireController_wrongAnsweredQuestions" data-uid="UI.QuestionnaireController.wrongAnsweredQuestions">
   wrongAnsweredQuestions
-  <a class="header-action link-secondary" title="View source" href="https://github.com/jblattgerste/TrainAR/blob/main/Assets/Scripts/UI/QuestionnaireController.cs/#L175"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/jblattgerste/TrainAR/blob/main/Assets/Scripts/UI/QuestionnaireController.cs/#L208"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Stores wrong answered questions for endscreen UI.</p>
@@ -774,7 +903,7 @@ The question list opens a list with n possible items and continues when all righ
 
   <h3 id="UI_QuestionnaireController_wrongAnswers" data-uid="UI.QuestionnaireController.wrongAnswers">
   wrongAnswers
-  <a class="header-action link-secondary" title="View source" href="https://github.com/jblattgerste/TrainAR/blob/main/Assets/Scripts/UI/QuestionnaireController.cs/#L180"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/jblattgerste/TrainAR/blob/main/Assets/Scripts/UI/QuestionnaireController.cs/#L213"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Stores wrong answers for endscreen UI.</p>
@@ -811,7 +940,7 @@ The question list opens a list with n possible items and continues when all righ
 
   <h3 id="UI_QuestionnaireController_ContinueButtonOnClick" data-uid="UI.QuestionnaireController.ContinueButtonOnClick">
   ContinueButtonOnClick()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/jblattgerste/TrainAR/blob/main/Assets/Scripts/UI/QuestionnaireController.cs/#L701"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/jblattgerste/TrainAR/blob/main/Assets/Scripts/UI/QuestionnaireController.cs/#L844"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Get's called when the continue button is pressed.
@@ -840,7 +969,7 @@ When the chosen answer was wrong, the question gets displayed again.</p>
 
   <h3 id="UI_QuestionnaireController_InitInputfield_System_String_" data-uid="UI.QuestionnaireController.InitInputfield(System.String)">
   InitInputfield(string)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/jblattgerste/TrainAR/blob/main/Assets/Scripts/UI/QuestionnaireController.cs/#L332"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/jblattgerste/TrainAR/blob/main/Assets/Scripts/UI/QuestionnaireController.cs/#L369"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Open the inputField question UI.</p>
@@ -873,7 +1002,7 @@ When the chosen answer was wrong, the question gets displayed again.</p>
 
   <h3 id="UI_QuestionnaireController_InitQuestion_System_String_System_Collections_Generic_List_UI_QuestionnaireController_Answer__" data-uid="UI.QuestionnaireController.InitQuestion(System.String,System.Collections.Generic.List{UI.QuestionnaireController.Answer})">
   InitQuestion(string, List&lt;Answer&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/jblattgerste/TrainAR/blob/main/Assets/Scripts/UI/QuestionnaireController.cs/#L303"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/jblattgerste/TrainAR/blob/main/Assets/Scripts/UI/QuestionnaireController.cs/#L338"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Open the regular question UI.</p>
@@ -909,7 +1038,7 @@ When the chosen answer was wrong, the question gets displayed again.</p>
 
   <h3 id="UI_QuestionnaireController_InitQuestionList_System_String_System_Collections_Generic_List_UI_QuestionnaireController_Answer__" data-uid="UI.QuestionnaireController.InitQuestionList(System.String,System.Collections.Generic.List{UI.QuestionnaireController.Answer})">
   InitQuestionList(string, List&lt;Answer&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/jblattgerste/TrainAR/blob/main/Assets/Scripts/UI/QuestionnaireController.cs/#L344"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/jblattgerste/TrainAR/blob/main/Assets/Scripts/UI/QuestionnaireController.cs/#L381"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Open the questionList UI.</p>
@@ -945,7 +1074,7 @@ When the chosen answer was wrong, the question gets displayed again.</p>
 
   <h3 id="UI_QuestionnaireController_NotifyStatemachine_System_String_UI_QuestionnaireController_QuestionUITypes_" data-uid="UI.QuestionnaireController.NotifyStatemachine(System.String,UI.QuestionnaireController.QuestionUITypes)">
   NotifyStatemachine(string, QuestionUITypes)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/jblattgerste/TrainAR/blob/main/Assets/Scripts/UI/QuestionnaireController.cs/#L572"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/jblattgerste/TrainAR/blob/main/Assets/Scripts/UI/QuestionnaireController.cs/#L717"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Notify the statemachine with the result of the question UI.</p>
@@ -981,7 +1110,7 @@ When the chosen answer was wrong, the question gets displayed again.</p>
 
   <h3 id="UI_QuestionnaireController_OnInputFieldSubmitted_System_String_" data-uid="UI.QuestionnaireController.OnInputFieldSubmitted(System.String)">
   OnInputFieldSubmitted(string)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/jblattgerste/TrainAR/blob/main/Assets/Scripts/UI/QuestionnaireController.cs/#L471"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/jblattgerste/TrainAR/blob/main/Assets/Scripts/UI/QuestionnaireController.cs/#L616"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Receives TMP's Submit event (Return or the mobile keyboard's Done action).
@@ -1014,7 +1143,7 @@ The raw model preserves exact answers, including an explicitly configured empty 
 
   <h3 id="UI_QuestionnaireController_QuestionInputValidate" data-uid="UI.QuestionnaireController.QuestionInputValidate">
   QuestionInputValidate()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/jblattgerste/TrainAR/blob/main/Assets/Scripts/UI/QuestionnaireController.cs/#L461"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/jblattgerste/TrainAR/blob/main/Assets/Scripts/UI/QuestionnaireController.cs/#L606"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Submit the current input model from an explicit submit button or other caller.

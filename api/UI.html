@@ -114,6 +114,12 @@ It is triggerd through invocation of an action in the StatemachineConnector and 
 </dd>
     </dl>
     <dl class="jumplist">
+      <dt><a class="xref" href="UI.HomeScreen.html">HomeScreen</a></dt>
+      <dd><p>The home screen: lists every training of the build (preview, name, description, round expert) and starts the
+chosen one's onboarding. Below the trainings follows the optional TrainAR footer (links, creator, funding, contact).</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
       <dt><a class="xref" href="UI.InputFieldAdjust.html">InputFieldAdjust</a></dt>
       <dd><p>Keeps the input question above a keyboard whose bounds are reported by Unity.
 Native mobile input remains available when the platform cannot report those bounds.</p>
@@ -129,6 +135,12 @@ Native mobile input remains available when the platform cannot report those boun
       <dd><p>Handles the behaviour of the interaction buttons, such as enabling and disabling when appropriate
 or highlighting the combine button in orange when a combination would be possible.</p>
 <p>It also allows for grabbed objects to be rotatable.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="UI.KeepAtBottom.html">KeepAtBottom</a></dt>
+      <dd><p>Keeps a button's lower edge a fixed distance above the bottom of the safe area, on every screen length. With the
+distance equal to the button row's side margin, the buttons sit symmetrically in the lower corners.</p>
 </dd>
     </dl>
     <dl class="jumplist">
@@ -156,9 +168,23 @@ The question list opens a list with n possible items and continues when all righ
 </dd>
     </dl>
     <dl class="jumplist">
+      <dt><a class="xref" href="UI.RoundExpertPicture.html">RoundExpertPicture</a></dt>
+      <dd><p>Shows the expert's picture in its round frame (the parent is a white circle): the picture is cropped to a centred
+square and cut round with a smooth edge by the Round Picture shader, so transparent pictures sit on the white circle
+and opaque ones are cut round, whatever the trainer uses. The frame's hard stencil mask is switched off (its edge
+is jagged).</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
       <dt><a class="xref" href="UI.SaveArea.html">SaveArea</a></dt>
       <dd><p>The SafeArea scripts moves UI components when they would otherwise be occluded by e.g. cutout cameras or speakers
 on some newer smartphone devices.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="UI.SoftShadow.html">SoftShadow</a></dt>
+      <dd><p>A soft shadow behind a UI element (buttons, the insight bubble, the expert). The shadow is a sibling right before
+the element that follows its position, size and scale. On buttons, it is only shown while they can be used.</p>
 </dd>
     </dl>
     <dl class="jumplist">
@@ -169,6 +195,12 @@ on some newer smartphone devices.</p>
     <dl class="jumplist">
       <dt><a class="xref" href="UI.TopPanelController.html">TopPanelController</a></dt>
       <dd><p>The TopPanelController handpes updates to the UI panel of the trainign scenario, showing the instructions and progress percentage of the training.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="UI.TrainingIntroPage.html">TrainingIntroPage</a></dt>
+      <dd><p>The first onboarding page: shows the chosen training's name, its expert presenting the description (as on the end
+screen) and the preview.</p>
 </dd>
     </dl>
     <h3 id="structs">

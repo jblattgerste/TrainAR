@@ -1064,6 +1064,19 @@ references:
   isSpec: "True"
   fullName: Others.PrefabSpawningController.GetSpawnedObject
   nameWithType: PrefabSpawningController.GetSpawnedObject
+- uid: Others.PrefabSpawningController.PlaceSetup
+  name: PlaceSetup()
+  href: api/Others.PrefabSpawningController.html#Others_PrefabSpawningController_PlaceSetup
+  commentId: M:Others.PrefabSpawningController.PlaceSetup
+  fullName: Others.PrefabSpawningController.PlaceSetup()
+  nameWithType: PrefabSpawningController.PlaceSetup()
+- uid: Others.PrefabSpawningController.PlaceSetup*
+  name: PlaceSetup
+  href: api/Others.PrefabSpawningController.html#Others_PrefabSpawningController_PlaceSetup_
+  commentId: Overload:Others.PrefabSpawningController.PlaceSetup
+  isSpec: "True"
+  fullName: Others.PrefabSpawningController.PlaceSetup
+  nameWithType: PrefabSpawningController.PlaceSetup
 - uid: Others.PrefabSpawningController.Reposition
   name: Reposition()
   href: api/Others.PrefabSpawningController.html#Others_PrefabSpawningController_Reposition
@@ -1138,6 +1151,19 @@ references:
   isSpec: "True"
   fullName: Others.StartARScene.LoadArScene
   nameWithType: StartARScene.LoadArScene
+- uid: Others.StartARScene.LoadHome
+  name: LoadHome()
+  href: api/Others.StartARScene.html#Others_StartARScene_LoadHome
+  commentId: M:Others.StartARScene.LoadHome
+  fullName: Others.StartARScene.LoadHome()
+  nameWithType: StartARScene.LoadHome()
+- uid: Others.StartARScene.LoadHome*
+  name: LoadHome
+  href: api/Others.StartARScene.html#Others_StartARScene_LoadHome_
+  commentId: Overload:Others.StartARScene.LoadHome
+  isSpec: "True"
+  fullName: Others.StartARScene.LoadHome
+  nameWithType: StartARScene.LoadHome
 - uid: Others.StartARScene.QuitApplication
   name: QuitApplication()
   href: api/Others.StartARScene.html#Others_StartARScene_QuitApplication
@@ -1181,6 +1207,114 @@ references:
   commentId: F:Others.StateRequestSimulator.secondaryObjectName
   fullName: Others.StateRequestSimulator.secondaryObjectName
   nameWithType: StateRequestSimulator.secondaryObjectName
+- uid: Others.TrainingCatalog
+  name: TrainingCatalog
+  href: api/Others.TrainingCatalog.html
+  commentId: T:Others.TrainingCatalog
+  fullName: Others.TrainingCatalog
+  nameWithType: TrainingCatalog
+- uid: Others.TrainingCatalog.ForScene(System.String)
+  name: ForScene(string)
+  href: api/Others.TrainingCatalog.html#Others_TrainingCatalog_ForScene_System_String_
+  commentId: M:Others.TrainingCatalog.ForScene(System.String)
+  name.vb: ForScene(String)
+  fullName: Others.TrainingCatalog.ForScene(string)
+  fullName.vb: Others.TrainingCatalog.ForScene(String)
+  nameWithType: TrainingCatalog.ForScene(string)
+  nameWithType.vb: TrainingCatalog.ForScene(String)
+- uid: Others.TrainingCatalog.ForScene*
+  name: ForScene
+  href: api/Others.TrainingCatalog.html#Others_TrainingCatalog_ForScene_
+  commentId: Overload:Others.TrainingCatalog.ForScene
+  isSpec: "True"
+  fullName: Others.TrainingCatalog.ForScene
+  nameWithType: TrainingCatalog.ForScene
+- uid: Others.TrainingCatalog.Instance
+  name: Instance
+  href: api/Others.TrainingCatalog.html#Others_TrainingCatalog_Instance
+  commentId: P:Others.TrainingCatalog.Instance
+  fullName: Others.TrainingCatalog.Instance
+  nameWithType: TrainingCatalog.Instance
+- uid: Others.TrainingCatalog.Instance*
+  name: Instance
+  href: api/Others.TrainingCatalog.html#Others_TrainingCatalog_Instance_
+  commentId: Overload:Others.TrainingCatalog.Instance
+  isSpec: "True"
+  fullName: Others.TrainingCatalog.Instance
+  nameWithType: TrainingCatalog.Instance
+- uid: Others.TrainingCatalog.showFooter
+  name: showFooter
+  href: api/Others.TrainingCatalog.html#Others_TrainingCatalog_showFooter
+  commentId: F:Others.TrainingCatalog.showFooter
+  fullName: Others.TrainingCatalog.showFooter
+  nameWithType: TrainingCatalog.showFooter
+- uid: Others.TrainingCatalog.trainings
+  name: trainings
+  href: api/Others.TrainingCatalog.html#Others_TrainingCatalog_trainings
+  commentId: F:Others.TrainingCatalog.trainings
+  fullName: Others.TrainingCatalog.trainings
+  nameWithType: TrainingCatalog.trainings
+- uid: Others.TrainingInfo
+  name: TrainingInfo
+  href: api/Others.TrainingInfo.html
+  commentId: T:Others.TrainingInfo
+  fullName: Others.TrainingInfo
+  nameWithType: TrainingInfo
+- uid: Others.TrainingInfo.created
+  name: created
+  href: api/Others.TrainingInfo.html#Others_TrainingInfo_created
+  commentId: F:Others.TrainingInfo.created
+  fullName: Others.TrainingInfo.created
+  nameWithType: TrainingInfo.created
+- uid: Others.TrainingInfo.description
+  name: description
+  href: api/Others.TrainingInfo.html#Others_TrainingInfo_description
+  commentId: F:Others.TrainingInfo.description
+  fullName: Others.TrainingInfo.description
+  nameWithType: TrainingInfo.description
+- uid: Others.TrainingInfo.displayName
+  name: displayName
+  href: api/Others.TrainingInfo.html#Others_TrainingInfo_displayName
+  commentId: F:Others.TrainingInfo.displayName
+  fullName: Others.TrainingInfo.displayName
+  nameWithType: TrainingInfo.displayName
+- uid: Others.TrainingInfo.expert
+  name: expert
+  href: api/Others.TrainingInfo.html#Others_TrainingInfo_expert
+  commentId: F:Others.TrainingInfo.expert
+  fullName: Others.TrainingInfo.expert
+  nameWithType: TrainingInfo.expert
+- uid: Others.TrainingInfo.preview
+  name: preview
+  href: api/Others.TrainingInfo.html#Others_TrainingInfo_preview
+  commentId: F:Others.TrainingInfo.preview
+  fullName: Others.TrainingInfo.preview
+  nameWithType: TrainingInfo.preview
+- uid: Others.TrainingInfo.sceneName
+  name: sceneName
+  href: api/Others.TrainingInfo.html#Others_TrainingInfo_sceneName
+  commentId: F:Others.TrainingInfo.sceneName
+  fullName: Others.TrainingInfo.sceneName
+  nameWithType: TrainingInfo.sceneName
+- uid: Others.TrainingSelection
+  name: TrainingSelection
+  href: api/Others.TrainingSelection.html
+  commentId: T:Others.TrainingSelection
+  fullName: Others.TrainingSelection
+  nameWithType: TrainingSelection
+- uid: Others.TrainingSelection.Current
+  name: Current
+  href: api/Others.TrainingSelection.html#Others_TrainingSelection_Current
+  commentId: P:Others.TrainingSelection.Current
+  fullName: Others.TrainingSelection.Current
+  nameWithType: TrainingSelection.Current
+- uid: Others.TrainingSelection.Current*
+  name: Current
+  href: api/Others.TrainingSelection.html#Others_TrainingSelection_Current_
+  commentId: Overload:Others.TrainingSelection.Current
+  isSpec: "True"
+  fullName: Others.TrainingSelection.Current
+  nameWithType: TrainingSelection.Current
 - uid: Static
   name: Static
   href: api/Static.html
@@ -1607,6 +1741,47 @@ references:
   commentId: T:UI.ErrorOverlayController
   fullName: UI.ErrorOverlayController
   nameWithType: ErrorOverlayController
+- uid: UI.ErrorOverlayController.CloseErrorOverlay
+  name: CloseErrorOverlay()
+  href: api/UI.ErrorOverlayController.html#UI_ErrorOverlayController_CloseErrorOverlay
+  commentId: M:UI.ErrorOverlayController.CloseErrorOverlay
+  fullName: UI.ErrorOverlayController.CloseErrorOverlay()
+  nameWithType: ErrorOverlayController.CloseErrorOverlay()
+- uid: UI.ErrorOverlayController.CloseErrorOverlay*
+  name: CloseErrorOverlay
+  href: api/UI.ErrorOverlayController.html#UI_ErrorOverlayController_CloseErrorOverlay_
+  commentId: Overload:UI.ErrorOverlayController.CloseErrorOverlay
+  isSpec: "True"
+  fullName: UI.ErrorOverlayController.CloseErrorOverlay
+  nameWithType: ErrorOverlayController.CloseErrorOverlay
+- uid: UI.ErrorOverlayController.fadeDuration
+  name: fadeDuration
+  href: api/UI.ErrorOverlayController.html#UI_ErrorOverlayController_fadeDuration
+  commentId: F:UI.ErrorOverlayController.fadeDuration
+  fullName: UI.ErrorOverlayController.fadeDuration
+  nameWithType: ErrorOverlayController.fadeDuration
+- uid: UI.HomeScreen
+  name: HomeScreen
+  href: api/UI.HomeScreen.html
+  commentId: T:UI.HomeScreen
+  fullName: UI.HomeScreen
+  nameWithType: HomeScreen
+- uid: UI.HomeScreen.OpenUrl(System.String)
+  name: OpenUrl(string)
+  href: api/UI.HomeScreen.html#UI_HomeScreen_OpenUrl_System_String_
+  commentId: M:UI.HomeScreen.OpenUrl(System.String)
+  name.vb: OpenUrl(String)
+  fullName: UI.HomeScreen.OpenUrl(string)
+  fullName.vb: UI.HomeScreen.OpenUrl(String)
+  nameWithType: HomeScreen.OpenUrl(string)
+  nameWithType.vb: HomeScreen.OpenUrl(String)
+- uid: UI.HomeScreen.OpenUrl*
+  name: OpenUrl
+  href: api/UI.HomeScreen.html#UI_HomeScreen_OpenUrl_
+  commentId: Overload:UI.HomeScreen.OpenUrl
+  isSpec: "True"
+  fullName: UI.HomeScreen.OpenUrl
+  nameWithType: HomeScreen.OpenUrl
 - uid: UI.InputFieldAdjust
   name: InputFieldAdjust
   href: api/UI.InputFieldAdjust.html
@@ -1696,6 +1871,12 @@ references:
   commentId: F:UI.InteractionButtonController.grabbedObjectRotationSpeed
   fullName: UI.InteractionButtonController.grabbedObjectRotationSpeed
   nameWithType: InteractionButtonController.grabbedObjectRotationSpeed
+- uid: UI.KeepAtBottom
+  name: KeepAtBottom
+  href: api/UI.KeepAtBottom.html
+  commentId: T:UI.KeepAtBottom
+  fullName: UI.KeepAtBottom
+  nameWithType: KeepAtBottom
 - uid: UI.OnBoardingController
   name: OnBoardingController
   href: api/UI.OnBoardingController.html
@@ -1948,6 +2129,30 @@ references:
   commentId: F:UI.QuestionnaireController.duration
   fullName: UI.QuestionnaireController.duration
   nameWithType: QuestionnaireController.duration
+- uid: UI.QuestionnaireController.feedbackDuration
+  name: feedbackDuration
+  href: api/UI.QuestionnaireController.html#UI_QuestionnaireController_feedbackDuration
+  commentId: F:UI.QuestionnaireController.feedbackDuration
+  fullName: UI.QuestionnaireController.feedbackDuration
+  nameWithType: QuestionnaireController.feedbackDuration
+- uid: UI.QuestionnaireController.feedbackTimerBackgroundColor
+  name: feedbackTimerBackgroundColor
+  href: api/UI.QuestionnaireController.html#UI_QuestionnaireController_feedbackTimerBackgroundColor
+  commentId: F:UI.QuestionnaireController.feedbackTimerBackgroundColor
+  fullName: UI.QuestionnaireController.feedbackTimerBackgroundColor
+  nameWithType: QuestionnaireController.feedbackTimerBackgroundColor
+- uid: UI.QuestionnaireController.feedbackTimerColor
+  name: feedbackTimerColor
+  href: api/UI.QuestionnaireController.html#UI_QuestionnaireController_feedbackTimerColor
+  commentId: F:UI.QuestionnaireController.feedbackTimerColor
+  fullName: UI.QuestionnaireController.feedbackTimerColor
+  nameWithType: QuestionnaireController.feedbackTimerColor
+- uid: UI.QuestionnaireController.feedbackTimerHeight
+  name: feedbackTimerHeight
+  href: api/UI.QuestionnaireController.html#UI_QuestionnaireController_feedbackTimerHeight
+  commentId: F:UI.QuestionnaireController.feedbackTimerHeight
+  fullName: UI.QuestionnaireController.feedbackTimerHeight
+  nameWithType: QuestionnaireController.feedbackTimerHeight
 - uid: UI.QuestionnaireController.inputFieldAnswerText
   name: inputFieldAnswerText
   href: api/UI.QuestionnaireController.html#UI_QuestionnaireController_inputFieldAnswerText
@@ -2038,12 +2243,24 @@ references:
   commentId: F:UI.QuestionnaireController.wrongAnswers
   fullName: UI.QuestionnaireController.wrongAnswers
   nameWithType: QuestionnaireController.wrongAnswers
+- uid: UI.RoundExpertPicture
+  name: RoundExpertPicture
+  href: api/UI.RoundExpertPicture.html
+  commentId: T:UI.RoundExpertPicture
+  fullName: UI.RoundExpertPicture
+  nameWithType: RoundExpertPicture
 - uid: UI.SaveArea
   name: SaveArea
   href: api/UI.SaveArea.html
   commentId: T:UI.SaveArea
   fullName: UI.SaveArea
   nameWithType: SaveArea
+- uid: UI.SoftShadow
+  name: SoftShadow
+  href: api/UI.SoftShadow.html
+  commentId: T:UI.SoftShadow
+  fullName: UI.SoftShadow
+  nameWithType: SoftShadow
 - uid: UI.StreamVideo
   name: StreamVideo
   href: api/UI.StreamVideo.html
@@ -2069,6 +2286,35 @@ references:
   commentId: T:UI.TopPanelController
   fullName: UI.TopPanelController
   nameWithType: TopPanelController
+- uid: UI.TopPanelController.EndOnboardingText
+  name: EndOnboardingText()
+  href: api/UI.TopPanelController.html#UI_TopPanelController_EndOnboardingText
+  commentId: M:UI.TopPanelController.EndOnboardingText
+  fullName: UI.TopPanelController.EndOnboardingText()
+  nameWithType: TopPanelController.EndOnboardingText()
+- uid: UI.TopPanelController.EndOnboardingText*
+  name: EndOnboardingText
+  href: api/UI.TopPanelController.html#UI_TopPanelController_EndOnboardingText_
+  commentId: Overload:UI.TopPanelController.EndOnboardingText
+  isSpec: "True"
+  fullName: UI.TopPanelController.EndOnboardingText
+  nameWithType: TopPanelController.EndOnboardingText
+- uid: UI.TopPanelController.ShowOnboardingText(System.String)
+  name: ShowOnboardingText(string)
+  href: api/UI.TopPanelController.html#UI_TopPanelController_ShowOnboardingText_System_String_
+  commentId: M:UI.TopPanelController.ShowOnboardingText(System.String)
+  name.vb: ShowOnboardingText(String)
+  fullName: UI.TopPanelController.ShowOnboardingText(string)
+  fullName.vb: UI.TopPanelController.ShowOnboardingText(String)
+  nameWithType: TopPanelController.ShowOnboardingText(string)
+  nameWithType.vb: TopPanelController.ShowOnboardingText(String)
+- uid: UI.TopPanelController.ShowOnboardingText*
+  name: ShowOnboardingText
+  href: api/UI.TopPanelController.html#UI_TopPanelController_ShowOnboardingText_
+  commentId: Overload:UI.TopPanelController.ShowOnboardingText
+  isSpec: "True"
+  fullName: UI.TopPanelController.ShowOnboardingText
+  nameWithType: TopPanelController.ShowOnboardingText
 - uid: UI.TopPanelController.errorColor
   name: errorColor
   href: api/UI.TopPanelController.html#UI_TopPanelController_errorColor
@@ -2081,6 +2327,12 @@ references:
   commentId: F:UI.TopPanelController.successColor
   fullName: UI.TopPanelController.successColor
   nameWithType: TopPanelController.successColor
+- uid: UI.TrainingIntroPage
+  name: TrainingIntroPage
+  href: api/UI.TrainingIntroPage.html
+  commentId: T:UI.TrainingIntroPage
+  fullName: UI.TrainingIntroPage
+  nameWithType: TrainingIntroPage
 - uid: Visual_Scripting
   name: Visual_Scripting
   href: api/Visual_Scripting.html
