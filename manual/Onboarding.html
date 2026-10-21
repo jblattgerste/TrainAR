@@ -87,93 +87,57 @@
         <article data-uid="">
 <h1 id="onboarding">Onboarding</h1>
 
-<p>Before the stateflow of a training starts, TrainAR takes the trainee through the same steps in every training: choosing the training, an introduction to it, a short onboarding on the interaction concept, and placing the training in the surroundings. Authors do not have to build any of this. It is part of the framework and uses the name, description, expert and preview of the training (see <a href="Trainings.html">Managing Trainings</a>). When the trainee has placed the training, the <a href="StartTrainingNode.html">Start Training Node</a> starts the stateflow.</p>
-<h2 id="1-home-screen-and-introduction">1. Home screen and introduction</h2>
-<div class="trainar-phones">
+<p>Before the stateflow of a training starts, TrainAR takes the trainee through the same steps in every training, from choosing the training to placing it in the surroundings. Authors do not have to build any of this. It is part of the framework and uses the name, description, expert and preview of the training (see <a href="Trainings.html">Managing Trainings</a>).</p>
+<h2 id="the-flow">The flow</h2>
+<div class="trainar-flow">
 <table>
 <thead>
 <tr>
-<th style="text-align: center;">Home screen</th>
-<th style="text-align: center;">Introduction of the training</th>
+<th style="text-align: center;">Step</th>
+<th style="text-align: left;">What happens</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td style="text-align: center;"><img src="../resources/Onboarding_Home.png" alt="The home screen with the Coffee and Four-Stroke Engine trainings" width="260"></td>
-<td style="text-align: center;"><img src="../resources/Onboarding_Start.png" alt="The introduction of the Coffee training: the expert presents the description, below it the preview of the setup" width="260"></td>
+<td style="text-align: center;"><img src="../resources/Onboarding_Home.png" alt="The home screen with the Coffee and Four-Stroke Engine trainings" width="220"></td>
+<td style="text-align: left;"><strong>1. Home screen.</strong> After starting the app, the trainee sees all trainings of the project with their name, description, expert and preview, and chooses one.</td>
 </tr>
 <tr>
-<td style="text-align: center;">The trainee chooses a training.</td>
-<td style="text-align: center;">The expert introduces the training with its description; below is the preview of its setup, rendered automatically before every build.</td>
+<td style="text-align: center;"><img src="../resources/Onboarding_Start.png" alt="The introduction of the Coffee training" width="220"></td>
+<td style="text-align: left;"><strong>2. Introduction.</strong> The expert introduces the training with its description. Below is the preview of the training's setup, which TrainAR renders automatically before every build. <strong>Exit</strong> leads back to the home screen.</td>
+</tr>
+<tr>
+<td style="text-align: center;"><img src="../resources/Onboarding_Page_Instructions.webp" alt="Onboarding page: instructions and progress in the blue bar at the top" width="220"></td>
+<td style="text-align: left;"><strong>3. Instructions at the top.</strong> Five short pages now explain the interaction concept, each with an animation, and every page is read aloud. The first one shows that the blue bar at the top tells the trainee the next action and shows the progress, and that a sound tells whether an action was correct. Trainees can skip the onboarding here.</td>
+</tr>
+<tr>
+<td style="text-align: center;"><img src="../resources/Onboarding_Page_Interact.webp" alt="Onboarding page: point at an object, move closer and press Interact" width="220"></td>
+<td style="text-align: left;"><strong>4. Interact.</strong> Point the cursor in the middle of the screen at an object and move the phone close until the object is outlined in blue, then press <strong>Interact</strong>.</td>
+</tr>
+<tr>
+<td style="text-align: center;"><img src="../resources/Onboarding_Page_Grab.webp" alt="Onboarding page: grab an object and release it again" width="220"></td>
+<td style="text-align: left;"><strong>5. Grab.</strong> The same, then press <strong>Grab</strong>: the object moves with the phone until <strong>Release</strong> is pressed.</td>
+</tr>
+<tr>
+<td style="text-align: center;"><img src="../resources/Onboarding_Page_Combine.webp" alt="Onboarding page: move a held object into another one and press Combine" width="220"></td>
+<td style="text-align: left;"><strong>6. Combine.</strong> Move a held object into another one: if they can be combined, the held object turns transparent and <strong>Combine</strong> appears.</td>
+</tr>
+<tr>
+<td style="text-align: center;"><img src="../resources/Onboarding_Page_Insights.webp" alt="Onboarding page: an insight of the expert and the feedback overlay" width="220"></td>
+<td style="text-align: left;"><strong>7. Insights and feedback.</strong> The expert shares insights at the top, and for some incorrect actions an overlay explains what went wrong until <strong>Understood</strong> is tapped. <strong>Start</strong> begins the training.</td>
+</tr>
+<tr>
+<td style="text-align: center;"><img src="../resources/Onboarding_Scan.png" alt="Scanning: an animation shows how to move the phone over the table" width="220"></td>
+<td style="text-align: left;"><strong>8. Scanning.</strong> The camera starts, and an animation shows the trainee how to move the phone over a table until a surface is detected.</td>
+</tr>
+<tr>
+<td style="text-align: center;"><img src="../resources/Onboarding_Place.png" alt="Placing: a preview of the setup follows the phone, the Place button places it" width="220"></td>
+<td style="text-align: left;"><strong>9. Placing.</strong> A see-through preview of the training's setup follows the phone. <strong>Place</strong> puts it down, and the stateflow of the training starts with the <a href="StartTrainingNode.html">Start Training Node</a>.</td>
 </tr>
 </tbody>
 </table>
 </div>
-<h2 id="2-the-interaction-concept">2. The interaction concept</h2>
-<p>Five short pages explain how trainees interact with TrainAR trainings, each with an animation, and every page is read aloud. Trainees can skip them on the first of these pages.</p>
-<div class="trainar-phones">
-<table>
-<thead>
-<tr>
-<th style="text-align: center;">Instructions at the top</th>
-<th style="text-align: center;">Interact</th>
-<th style="text-align: center;">Grab</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: center;"><img src="../resources/Onboarding_Page_Instructions.webp" alt="Onboarding page: instructions and progress in the blue bar at the top" width="240"></td>
-<td style="text-align: center;"><img src="../resources/Onboarding_Page_Interact.webp" alt="Onboarding page: point at an object, move closer and press Interact" width="240"></td>
-<td style="text-align: center;"><img src="../resources/Onboarding_Page_Grab.webp" alt="Onboarding page: grab an object and release it again" width="240"></td>
-</tr>
-<tr>
-<td style="text-align: center;">The blue bar at the top tells the trainee the next action and shows the progress. A sound tells whether an action was correct.</td>
-<td style="text-align: center;">Point the cursor at an object and move the phone close until it is outlined in blue, then press <strong>Interact</strong>.</td>
-<td style="text-align: center;">The same, then press <strong>Grab</strong>: the object moves with the phone until <strong>Release</strong> is pressed.</td>
-</tr>
-</tbody>
-</table>
-<table>
-<thead>
-<tr>
-<th style="text-align: center;">Combine</th>
-<th style="text-align: center;">Insights and feedback</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: center;"><img src="../resources/Onboarding_Page_Combine.webp" alt="Onboarding page: move a held object into another one and press Combine" width="240"></td>
-<td style="text-align: center;"><img src="../resources/Onboarding_Page_Insights.webp" alt="Onboarding page: an insight of the expert and the feedback overlay" width="240"></td>
-</tr>
-<tr>
-<td style="text-align: center;">Move a held object into another one: if they can be combined, it turns transparent and <strong>Combine</strong> appears.</td>
-<td style="text-align: center;">The expert shares insights at the top, and for some incorrect actions an overlay explains what went wrong until <strong>Understood</strong> is tapped.</td>
-</tr>
-</tbody>
-</table>
-</div>
-<h2 id="3-scanning-and-placing">3. Scanning and placing</h2>
-<div class="trainar-phones">
-<table>
-<thead>
-<tr>
-<th style="text-align: center;">Scanning</th>
-<th style="text-align: center;">Placing</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: center;"><img src="../resources/Onboarding_Scan.png" alt="Scanning: an animation shows how to move the phone over the table" width="260"></td>
-<td style="text-align: center;"><img src="../resources/Onboarding_Place.png" alt="Placing: a preview of the setup follows the phone, the Place button places it" width="260"></td>
-</tr>
-<tr>
-<td style="text-align: center;">The trainee moves the phone over a table until a surface is detected.</td>
-<td style="text-align: center;">A see-through preview of the setup follows the phone; <strong>Place</strong> puts it down. Now the stateflow of the training starts.</td>
-</tr>
-</tbody>
-</table>
-</div>
-<h2 id="4-during-the-training-tracking-warnings">4. During the training: tracking warnings</h2>
+<h2 id="during-the-training-tracking-warnings">During the training: tracking warnings</h2>
 <p>If the phone loses track of its surroundings during the training, TrainAR dims the screen and shows what the trainee can do about it. This happens automatically, and the training continues as soon as tracking works again.</p>
 <div class="trainar-phones">
 <table>
@@ -186,9 +150,9 @@
 </thead>
 <tbody>
 <tr>
-<td style="text-align: center;"><img src="../resources/Tracking_Light.png" alt="Tracking warning: ensure sufficient lighting" width="240"></td>
-<td style="text-align: center;"><img src="../resources/Tracking_Features.png" alt="Tracking warning: try a more textured surface" width="240"></td>
-<td style="text-align: center;"><img src="../resources/Tracking_Motion.png" alt="Tracking warning: avoid excessive motion" width="240"></td>
+<td style="text-align: center;"><img src="../resources/Tracking_Light.png" alt="Tracking warning: ensure sufficient lighting" width="220"></td>
+<td style="text-align: center;"><img src="../resources/Tracking_Features.png" alt="Tracking warning: try a more textured surface" width="220"></td>
+<td style="text-align: center;"><img src="../resources/Tracking_Motion.png" alt="Tracking warning: avoid excessive motion" width="220"></td>
 </tr>
 </tbody>
 </table>
