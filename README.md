@@ -1,7 +1,7 @@
 <p align="center">
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="Documentation/resources/TrainARLogoDark.png">
-    <img src="Documentation/resources/TrainARLogo.png" alt="TrainAR" width="420">
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/jblattgerste/TrainAR/main/Documentation/resources/TrainARLogoDark.png">
+    <img src="https://raw.githubusercontent.com/jblattgerste/TrainAR/main/Documentation/resources/TrainARLogo.png" alt="TrainAR" width="420">
   </picture>
 </p>
 
@@ -11,7 +11,7 @@
 
 TrainAR is a holistic threefold combination of an interaction concept, didactic framework and authoring tool for Augmented Reality (AR) trainings on handheld Android and iOS devices ([Blattgerste et al. 2021](https://scholar.google.de/citations?view_op=view_citation&hl=en&user=k2xymcIAAAAJ&citation_for_view=k2xymcIAAAAJ:Y0pCki6q_DkC)). It is completely open source, free and offers non-programmers and programmers without AR-specific expertise aiding in the creation of interactive, engaging, procedural Augmented Reality trainings. This repository contains the technical components of the interaction concept and authoring tool of TrainAR in form of a custom Unity 6.7 Alpha (`6000.7.0a6`) Editor Extension. It can be used with the Unity Windows, macOS (Silicon), macOS (Intel), or Linux Editor and deploy to Android and iOS devices. The authoring tool already offers features like the onboarding animations, tracking solutions, assembly placements, evaluated interaction concepts, layered feedback modalities and training assessments of TrainAR out of the box. This allows authors of AR trainings to focus on the content of the training instead of technical challenges. Authors can simply import 3D models into the tool, convert them to TrainAR objects and reference them in a visual-scripting stateflow (that is inspired by work-process-analyses) to create a procedural flow of instructions, user actions and feedback.
 
-![The TrainAR authoring tool in the Unity editor and the app with its home screen on an iPhone](Documentation/resources/TrainARAuthoringToApp.png)
+![The TrainAR authoring tool in the Unity editor and the app with its home screen on an iPhone](https://raw.githubusercontent.com/jblattgerste/TrainAR/main/Documentation/resources/TrainARAuthoringToApp.png)
 *Trainings are created in the Unity editor and deployed as one app: trainees choose a training on its home screen, go through a short onboarding and place the training in their surroundings.*
 
 The idea behind TrainAR is simple: Realistic deployments of head-mounted AR devices still remain a challenge today because of high costs, missing relevant training, and novelty of interactions that require in-depth onboarding. In contrast, smartphone-based AR would be realistically scalable today, while still retaining many of the learning benefits. At least in theory. While possible, most mobile AR learning applications focus on visualisation instead of interactions today, severely limiting their application scope. In line with recent findings that, in terms of training outcome, tangible interactions are not significantly increasing retention or transfer of knowledge compared to purely virtual interaction approaches ([Knierim et al. 2020](https://scholar.google.de/citations?view_op=view_citation&hl=en&user=oHubmTIAAAAJ&cstart=20&pagesize=80&citation_for_view=oHubmTIAAAAJ:RYcK_YlVTxYC)), the idea of TrainAR is a holistic and scalable solution for procedural task training using Augmented Reality on handheld AR devices. Hereby, the idea is not to replace practical trainings but use TrainAR scenarios for concept and procedure understanding in preparation for or retention training after the practical training sessions. In line with [Gagne 1984](https://psycnet.apa.org/record/1985-05816-001), it is envisioned as a novel type of multimedia source to train _intellectual skills_ and _cognitive strategies_ but does not train associated _motor skills_.
@@ -21,8 +21,8 @@ These two trainings are part of this repository: open them in the authoring tool
 
 <table>
 <tr>
-<td width="50%" valign="top"><img src="Documentation/resources/ExampleCoffeeTraining.webp" alt="The coffee example training: filter, water and coffee powder go into the machine, the coffee brews and is poured into a mug"/><br><b>Coffee</b>: brew a pot of filter coffee. Everyone knows how to make coffee, so you can focus on how TrainAR works.</td>
-<td width="50%" valign="top"><img src="Documentation/resources/ExampleEngineTraining.webp" alt="The four-stroke engine example training: the parts of one cylinder are assembled step by step"/><br><b>Four-Stroke Engine</b>: assemble one cylinder of a four-stroke engine part by part and start it, while the expert explains every part and questions check what you understood.</td>
+<td width="50%" valign="top"><img src="https://raw.githubusercontent.com/jblattgerste/TrainAR/main/Documentation/resources/ExampleCoffeeTraining.webp" alt="The coffee example training: filter, water and coffee powder go into the machine, the coffee brews and is poured into a mug"/><br><b>Coffee</b>: brew a pot of filter coffee. Everyone knows how to make coffee, so you can focus on how TrainAR works.</td>
+<td width="50%" valign="top"><img src="https://raw.githubusercontent.com/jblattgerste/TrainAR/main/Documentation/resources/ExampleEngineTraining.webp" alt="The four-stroke engine example training: the parts of one cylinder are assembled step by step"/><br><b>Four-Stroke Engine</b>: assemble one cylinder of a four-stroke engine part by part and start it, while the expert explains every part and questions check what you understood.</td>
 </tr>
 </table>
 

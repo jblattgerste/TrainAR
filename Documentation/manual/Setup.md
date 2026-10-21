@@ -13,10 +13,10 @@ When installing Unity, make sure to also include the correct modules, depending 
 
 For Android choose **Android Build Support**. Make sure to have also **Android SDK & NDK Tools** and **OpenJDK** checked:
 
-![](../resources/Install_Modules_Android.PNG)
+<img src="../resources/Install_Modules_Android.PNG" alt="Unity Hub: adding the Android Build Support module" width="560"/>
 
 For iOS, choose **iOS Build Support**:
-![](../resources/Install_Modules_iOS.PNG)
+<img src="../resources/Install_Modules_iOS.PNG" alt="Unity Hub: adding the iOS Build Support module" width="560"/>
 
 You can also install both at the same time to deploy to both devices. This works on every operating system (Linux, Windows and macOS), though for iOS, XCode on macOS is necessary to [deploy to iOS devices](https://docs.unity3d.com/Manual/UnityCloudBuildiOS.html) after building the App.
 
@@ -61,4 +61,4 @@ If neither Android nor iOS is selected as the active platform and Android Build 
 
 If you need to open the authoring tool manually, choose **TrainAR → Open TrainAR Authoring Tool** from the top menu. You should now see the TrainAR Authoring Tool like this:
 
-![](../resources/MacbookTrainARPreviewTool.png)
+![The TrainAR authoring tool in the Unity editor and the app with its home screen on an iPhone](../resources/TrainARAuthoringToApp.png)

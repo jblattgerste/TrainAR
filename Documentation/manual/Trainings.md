@@ -6,7 +6,7 @@ One TrainAR project can hold any number of trainings. All of them are part of th
 
 The **TrainAR Trainings** tab sits next to the Simulator in the authoring tool. If it is not visible, choose **TrainAR → Options → Show Trainings List** (and **Show Simulator** to switch back).
 
-<img src="../resources/TrainARTrainingsTab.png" alt="The TrainAR Trainings tab with the Coffee and Four-Stroke Engine trainings" width="480"/>
+![The authoring tool: the TrainAR Trainings tab (green) on the right, next to the Scene (blue) and the TrainAR Stateflow (red)](../resources/TrainARBasicsOverview.png)
 
 Every training is shown as a box with its preview, its expert, its name and its description. The buttons in each box:
 

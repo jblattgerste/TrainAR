@@ -6,6 +6,8 @@
   href: GettingStarted.md
 - name: Managing Trainings
   href: Trainings.md
+- name: Onboarding
+  href: Onboarding.md
 - name: TrainAR Objects
   href: TrainARObjects.md
 - name: TrainAR Stateflow
