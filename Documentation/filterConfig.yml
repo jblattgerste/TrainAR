@@ -21,7 +21,7 @@ apiRules:
     uidRegex: ^Visual_Scripting
     type: Namespace
 - include:
-    uidRegex: ^Editor.Scripts
+    uidRegex: ^Editor
     type: Namespace
 - exclude:
     uidRegex: .*
