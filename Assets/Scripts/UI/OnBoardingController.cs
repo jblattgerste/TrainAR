@@ -387,8 +387,9 @@ namespace UI
         void ShowTrackingInformation()
         {
             bool showTracking = PrefabSpawningController != null && PrefabSpawningController.objectWasSpawned;
-            bool showDefault = showTracking && !string.IsNullOrEmpty(reasonText) && reasonText != "None" &&
-                reasonText != "InsufficientLight" && reasonText != "InsufficientFeatures" && reasonText != "ExcessiveMotion";
+            // Only the three reasons trainees can do something about get a panel. Others (Initializing, Relocalizing, ...)
+            // resolve themselves and are not shown.
+            bool showDefault = false;
 
             // The fallback panel uses a legacy UI Text. Keep its existing label,
             // and tolerate an omitted label without throwing every Update.
@@ -434,7 +435,9 @@ namespace UI
         /// </summary>
         void ShowTrackingInformationDuringOnboarding()
         {
-            bool showOnboarding = PrefabSpawningController != null && !PrefabSpawningController.objectWasSpawned;
+            // Not shown while scanning and placing: the scanning animation and the place preview already guide the trainee,
+            // and the warnings would only overlap them. Warnings are shown during the training (ShowTrackingInformation).
+            bool showOnboarding = false;
             SetTrackingPanelActive(insufficientLightOb, showOnboarding && reasonText == "InsufficientLight");
             SetTrackingPanelActive(insufficientFeaturesOb, showOnboarding && reasonText == "InsufficientFeatures");
             SetTrackingPanelActive(excessiveMotionOb, showOnboarding && reasonText == "ExcessiveMotion");

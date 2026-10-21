@@ -41,3 +41,9 @@ Five short pages explain the interaction concept, each with an animation, and ev
 <img src="../resources/OnboardingScan.webp" alt="Scanning animation" width="320"/>
 
 The trainee moves the phone over a table until it is detected, then places the training's setup with the **Place** button. Now this node is executed and the stateflow of the training starts.
+
+### 4. During the training: tracking warnings
+
+If the phone loses track of its surroundings during the training, TrainAR dims the screen and shows what the trainee can do about it. This happens automatically, and the training continues as soon as tracking works again.
+
+![The three tracking warnings: ensure sufficient lighting, try a more textured surface, avoid excessive motion](../resources/TrackingWarnings.png)
