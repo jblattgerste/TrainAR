@@ -30,9 +30,12 @@
 
 /* Screenshots and animations in the manual fill the text width, so small ones are not narrower than the text on large
    screens (images with an explicit width, e.g. the phone pictures next to the nodes, keep it) */
-article p > img:not([width]) {
+article img:not([width]) {
   width: 100%;
   height: auto;
+}
+article td img:not([width]) {
+  width: auto;
 }
 
 /* Smaller figures (images with an explicit width; also when written as plain HTML, which is not wrapped in a paragraph)
@@ -52,6 +55,18 @@ article td img[width] {
   text-align: center;
   vertical-align: top;
 }
+
+/* The onboarding flow: phone left (fixed width, all the same size), explanation right */
+.trainar-flow table td:first-child {
+  width: 240px;
+  min-width: 240px;
+  text-align: center;
+}
+.trainar-flow table td {
+  vertical-align: middle;
+}
+.trainar-flow img,
 .trainar-phones img {
+  width: 220px;
   max-width: 100%;
 }

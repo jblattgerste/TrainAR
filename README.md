@@ -21,8 +21,12 @@ These two trainings are part of this repository: open them in the authoring tool
 
 <table>
 <tr>
-<td width="50%" valign="top"><img src="https://raw.githubusercontent.com/jblattgerste/TrainAR/main/Documentation/resources/ExampleCoffeeTraining.webp" alt="The coffee example training: filter, water and coffee powder go into the machine, the coffee brews and is poured into a mug"/><br><b>Coffee</b>: brew a pot of filter coffee. Everyone knows how to make coffee, so you can focus on how TrainAR works.</td>
-<td width="50%" valign="top"><img src="https://raw.githubusercontent.com/jblattgerste/TrainAR/main/Documentation/resources/ExampleEngineTraining.webp" alt="The four-stroke engine example training: the parts of one cylinder are assembled step by step"/><br><b>Four-Stroke Engine</b>: assemble one cylinder of a four-stroke engine part by part and start it, while the expert explains every part and questions check what you understood.</td>
+<td width="50%" align="center" valign="middle"><img src="https://raw.githubusercontent.com/jblattgerste/TrainAR/main/Documentation/resources/ExampleCoffeeTraining.webp" alt="The coffee example training: filter, water and coffee powder go into the machine, the coffee brews and is poured into a mug"/></td>
+<td width="50%" align="center" valign="middle"><img src="https://raw.githubusercontent.com/jblattgerste/TrainAR/main/Documentation/resources/ExampleEngineTraining.webp" alt="The four-stroke engine example training: the parts of one cylinder are assembled step by step"/></td>
+</tr>
+<tr>
+<td valign="top"><b>Coffee</b>: brew a pot of filter coffee. Everyone knows how to make coffee, so you can focus on how TrainAR works.</td>
+<td valign="top"><b>Four-Stroke Engine</b>: assemble one cylinder of a four-stroke engine part by part and start it, while the expert explains every part and questions check what you understood.</td>
 </tr>
 </table>
 
