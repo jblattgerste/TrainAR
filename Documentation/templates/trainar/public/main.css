@@ -28,15 +28,14 @@
   height: auto;
 }
 
-/* Screenshots and animations in the manual fill the text width, so small ones are not narrower than the text on large
-   screens (images with an explicit width, e.g. the phone pictures next to the nodes, keep it) */
-/* (not badges and other linked or SVG images, which keep their own size) */
-article img:not([width]):not(a img):not([src$=".svg"]) {
-  width: 100%;
+/* Images keep their natural size (at most the text width) and are centred. The theme wraps every image in a link after
+   loading, so this must not depend on the image being a direct child of the paragraph. Badges (SVG) stay inline. */
+article p img:not([src*=".svg"]) {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 100%;
   height: auto;
-}
-article td img:not([width]) {
-  width: auto;
 }
 
 /* Smaller figures (images with an explicit width; also when written as plain HTML, which is not wrapped in a paragraph)

@@ -70,18 +70,18 @@ In this example consisting of a packaged syringe that is supposed to be "unpacke
 
 Add both **TrainAR Objects** in the training setup. Set the **replacing object**, in this case the syringe, to invisible.
 
-![](../resources/SwapTrainArObjects_AddObjects.gif)
+<img src="../resources/SwapTrainArObjects_AddObjects.gif" alt="Adding both TrainAR Objects, the replacing one invisible" width="100%"/>
 
 To open the package, the user is supposed to interact with the packaged syringe. Consequently, add a [**TrainAR Action**](ActionNodes.md) node to the script graph, which references the packaged syringe **TrainAR Object**. As a result the packaged syringe is replaced with the syringe itself. Therefore add a [**TrainAR Object Helper**](../manual/ObjectHelperNode.html) node and choose the option **Replace TrainAR Object**. Then, enter the object names of the packaged syringe and the syringe in the respective fields in the node.
 
-![](../resources/SwapTrainArObjects_SwapStateflow.webp)
+<img src="../resources/SwapTrainArObjects_SwapStateflow.webp" alt="The stateflow replacing the packaged syringe" width="100%"/>
 
 #### Example 2: Combining two objects to one
 Sometimes you may want to model the attachment of one model to another. This can also be realized with the [**TrainAR Object Helper**](../manual/ObjectHelperNode.html) node, but with an additional step.
 
 In this example we want to connect a needle to the syringe. For this, three **TrainAR Objects** are needed: the syringe without needle, the syringe with needle and the needle. The syringe with needle needs to be set to invisible at the start of the training. At first, we again add a [**TrainAR Action**](../manual/ActionNodes.html) node as a trigger for the replacement process, this time set to **combine**. The *grabbed object* in this case is the syringe and the *stationary object* is the needle. Next, the syringe is replaced via a **TrainAR Object Helper** node. Since the needle is now attached to the syringe, the needle model can be set to invisible. This is done as well with a **TrainAR Object Helper** node, but with the option **Toggle Invisible**.
 
-![](../resources/SwapTrainArObjects_SwapAndToggleInvisibleStateflow.gif)
+<img src="../resources/SwapTrainArObjects_SwapAndToggleInvisibleStateflow.gif" alt="The stateflow replacing the syringe and hiding the needle" width="100%"/>
 
 ### Fusing two Objects
 
