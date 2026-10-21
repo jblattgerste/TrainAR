@@ -28,7 +28,15 @@ jobs:
         run: cp README.md Documentation/index.md
 
       - name: Build
-        run: docfx Documentation/docfx.json
+        # Editor.Scripts last in the API list (else it opens first), "Visual Scripting" without underscore
+        run: |
+          docfx metadata Documentation/docfx.json
+          python3 - <<'PY'
+          import re; p = 'Documentation/api/toc.yml'; t = open(p).read().replace('name: Visual_Scripting\n', 'name: Visual Scripting\n', 1)
+          e = re.search(r'(?ms)^- uid: Editor\.Scripts\n.*?(?=^\S)', t).group(0); t = t.replace(e, '')
+          open(p, 'w').write(t.replace('memberLayout:', e + 'memberLayout:') if 'memberLayout:' in t else t + e)
+          PY
+          docfx build Documentation/docfx.json
 
       # Linux supports both URL spellings; generate the legacy alias only in CI.
       - name: Preserve the previous TrainAR Objects URL
