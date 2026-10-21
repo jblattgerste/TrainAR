@@ -74,7 +74,7 @@ Add both **TrainAR Objects** in the training setup. Set the **replacing object**
 
 To open the package, the user is supposed to interact with the packaged syringe. Consequently, add a [**TrainAR Action**](ActionNodes.md) node to the script graph, which references the packaged syringe **TrainAR Object**. As a result the packaged syringe is replaced with the syringe itself. Therefore add a [**TrainAR Object Helper**](../manual/ObjectHelperNode.html) node and choose the option **Replace TrainAR Object**. Then, enter the object names of the packaged syringe and the syringe in the respective fields in the node.
 
-![](../resources/SwapTrainArObjects_SwapStateflow.gif)
+![](../resources/SwapTrainArObjects_SwapStateflow.webp)
 
 #### Example 2: Combining two objects to one
 Sometimes you may want to model the attachment of one model to another. This can also be realized with the [**TrainAR Object Helper**](../manual/ObjectHelperNode.html) node, but with an additional step.

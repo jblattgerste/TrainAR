@@ -110,6 +110,9 @@ Wait for the process to finish.
 
 Afterwards, unlock your phone.
 
+> [!NOTE]
+> **Deploying to an iPhone:** with iOS as the active platform (see [Installation & Setup](Setup.md)), the **play** button does not install the app directly. It exports an Xcode project to `Builds/iOS` and builds and runs it through Xcode on macOS. In Xcode, select your Apple developer team once under **Signing & Capabilities**, connect your iPhone and allow it as a developer device.
+
 Your training should now be deployed to your phone and the app should start automatically. It should also appear as a "TrainAR" App, installed on your device in the menu. Every training of the project is part of the app: the home screen lists them all.
 
 ## Test your training

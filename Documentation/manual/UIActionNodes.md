@@ -19,7 +19,7 @@ If the UI Task is set to **Questionnaire**, the user will be shown a question an
 
 ### UI Task: Input Field
 
-With the UI Task set to **Input Field**, the user has to type in his answer to a question via the smartphone's on-screen keyboard. The questions as well as all correct answers have to be specified in the node. If the user inputs an answer, the stateflow resumes according to the **Correct** or **Incorrect** outputs of the node depending on if the user's answer is one of the specified correct answers or not.
+With the UI Task set to **Input Field**, the user has to type in their answer to a question via the smartphone's on-screen keyboard. The questions as well as all correct answers have to be specified in the node. If the user inputs an answer, the stateflow resumes according to the **Correct** or **Incorrect** outputs of the node depending on if the user's answer is one of the specified correct answers or not.
 
 <div class="trainar-node-comparison" role="region" aria-label="TrainAR node and result comparison" tabindex="0">
 
