@@ -26,8 +26,8 @@ The following reference video shows the coffee example training shipped with the
 <td width="50%" align="center" valign="middle"><img src="../resources/ExampleEngineTraining.webp" alt="The four-stroke engine example training: the parts of one cylinder are assembled step by step"/></td>
 </tr>
 <tr>
-<td valign="top"><b>Coffee</b>: brew a pot of filter coffee. Everyone knows how to make coffee, so you can focus on how TrainAR works.</td>
-<td valign="top"><b>Four-Stroke Engine</b>: assemble one cylinder of a four-stroke engine part by part and start it, while the expert explains every part and questions check what you understood.</td>
+<td valign="top"><b>Coffee</b>: brew a pot of filter coffee. Everyone knows how to make coffee, so you can focus on how TrainAR works. (<a href="https://www.youtube.com/watch?v=t5Y15_SaoJs">reference video on YouTube</a>)</td>
+<td valign="top"><b>Four-Stroke Engine</b>: assemble one cylinder of a four-stroke engine part by part and start it, while the expert explains every part and questions check what you understood. (<a href="https://www.youtube.com/watch?v=Uu5NNHQhMZI">reference video on YouTube</a>)</td>
 </tr>
 </table>
 
